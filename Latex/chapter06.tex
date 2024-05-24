@@ -1,0 +1,1257 @@
+\section{System Design II: Behavior
+Models}\label{system-design-ii-behavior-models}
+
+Genius is 1\% inspiration and 99\% perspiration.---Thomas Edison
+
+The functional decomposition technique examined in Chapter 5 is a
+powerful modeling tool for system design that is applicable for
+describing input, output, and transform behavior. However, that approach
+by itself is limited in its descriptive ability. This was apparent in
+the digital stopwatch example that required the use of state diagrams,
+in addition to functional decomposition, to fully articulate the design.
+A state diagram is an example of a model, a standardized abstraction of
+a system. Models allow systems to be described without having to
+determine all of the implementation details. All models are not the
+same---they come in a variety of forms and each serves a different
+intention.
+
+This chapter provides an overview of other design tools for describing
+system behavior, with an emphasis on computing systems. The first tool
+examined is the state diagram. This is followed by the flowchart, which
+describes algorithmic processes and logical behavior. Two modeling
+languages for information and data handling---data flow diagrams and
+entity relationship diagrams---are then examined. The final is the
+Unified Modeling Language, which is a collection of system views for
+describing behavior.
+
+Learning Objectives
+
+By the end of this chapter, the reader should:
+
+\begin{itemize}
+\item
+  Be familiar with the following modeling tools for describing system
+  behavior: state diagrams, flowcharts, data flow diagrams, entity
+  relationship diagrams, and the Unified Modeling Language.
+\item
+  Understand the intention and expressive power of the different models.
+\item
+  Understand the domains in which the models apply.
+\item
+  Be able to conduct analysis and design with the models.
+\item
+  Understand what model types to choose for a given design problem.
+\end{itemize}
+
+\subsection{Models}\label{models}
+
+From the previous chapter we know that the top-down design process
+starts with an abstraction of the system to be built. This initial
+design is called an abstraction because it captures the essential
+characteristics of the system without specifying the underlying physical
+realization. An abstraction that is expressed in a standardized and
+accepted language is called a model. In other words a model is a
+standardized representation of a system, process, or object which
+captures its essential details without specifying the physical
+realization. A modeling language does not have to be formed from letters
+and words---often the words are graphical symbols. You are already
+familiar with many different models from everyday life such as
+blueprints, a diagram of a football play, knitting instructions,
+electrical schematics, and mathematical formulas to name a few. In order
+to be effective, a model should meet the following properties
+{[}Sat02{]}:
+
+\begin{itemize}
+\item
+  \emph{Be abstract.} This means that the model should be independent of
+  final implementation and that there should be multiple ways of
+  implementing the design based upon it.
+\item
+  \emph{Be unambiguous.} A model should have a single clear meaning in
+  terms of describing the intended behavior.
+\item
+  \emph{Allow for innovation.} Models should encourage exploration of
+  alternative system implementations and behaviors.
+\item
+  \emph{Be standardized.} Standardization provides a common language
+  that can be understood by all. Designers should be wary of developing
+  their own models that are ill-defined and not commonly understood.
+\item
+  \emph{Provide a means for communication.} A model should facilitate
+  communication within the design team and with non-technical
+  stakeholders.
+\item
+  \emph{Be modifiable.} A model should make design modifications
+  relatively easy.
+\item
+  \emph{Remove unnecessary details and emphasize important features.}
+  The intent is to simplify the design for ease of understanding. The
+  most highly detailed information is typically identified in the
+  detailed design.
+\item
+  \emph{Break the overall problem into sub-problems.} Most problems are
+  too complex to be handled directly and must be decomposed into
+  subsystems. This produces the design hierarchy.
+\item
+  \emph{Substitute a sequence of actions by a single action.} This
+  allows understanding of the overall larger behavior, which can then be
+  examined at other levels. This supports the ability to break a design
+  into sub-problems.
+\item
+  \emph{Assist in verification.} A model should aid in demonstrating
+  that the design meets the engineering requirements.
+\item
+  \emph{Assist in validation.} Validation is the process of
+  demonstrating that the needs of the user are being met and the right
+  system is being designed. The model should facilitate discussion with
+  all stakeholders to ensure it meets everyone's expectations.
+\end{itemize}
+
+In order to meet these properties, most models have an
+\emph{\textbf{object type,}} which is capable of encapsulating the
+actual components used to construct the target system. In order to
+capture the dependence of objects on one another models typically have a
+\emph{\textbf{relationship type}}. Finally, models have an
+\emph{\textbf{intention,}} which is the intended class of behavior that
+it describes. For example, the intention of a circuit schematic and the
+schematic of a football play are entirely different. Since models are
+built with different intentions, it possible to choose the wrong model
+for a particular system---it would surprise a football team to see a
+play represented with resistors and capacitors!
+
+Since models capture the essential details of a system in a standardized
+way then they are an ideal way to describe the functionality of a system
+at all levels of detail. In Chapter 5 the predominate method of
+describing functionality was with words. However, there are languages
+that describe system behavior. We start by examining state diagrams.
+
+\subsection{State Diagrams}\label{state-diagrams}
+
+\emph{\textbf{State diagrams}} describe the behavior of systems with
+memory. A system with memory is able to modify its response to inputs
+based on the state of the system. The \emph{\textbf{state}} of a system
+represents the net effect of all previous inputs to the system. Since
+the state characterizes the history of previous inputs, it is often
+synonymous with the word memory. Intuitively, a state corresponds to an
+operating mode of a system, and inputs are associated with transitions
+between states. To determine if a system has memory, ask the following
+question--- ``\emph{Can the same input produce different outputs?}'' If
+the answer to this question is yes, then the system has memory and can
+be modeled with a state diagram.
+
+A state diagram is a drawing that consists of states and transition arcs
+as shown in Figure 6.1. Each state is represented as a rectangle with
+rounded edges with the name of the state written inside. Whenever
+possible, states should be given meaningful names. When there exists the
+possibility for ambiguity in the names, a table should be created that
+identifies the state names and their associated meanings. There are
+special circle symbols for both initial and final states. Transitions
+are drawn as arrows from a source state to a destination state. Since
+inputs cause the transitions between states, the arrows are labeled with
+their associated inputs. The outputs are listed directly in the state
+since it is assumed that the outputs are associated with states.
+
+\includegraphics[width=3.28125in,height=0.98958in]{media/image1.emf}
+
+\textbf{Figure 6.1} Symbols used in state diagrams.
+
+As an example, consider a vending machine that accepts nickels and dimes
+and dispenses a piece of candy when 25 cents has been deposited. This
+vending machine can be modeled using a state diagram because the
+response of the machine to a coin depends on how much money has been
+deposited so far.
+
+In order to give a more complete description of the vending machine the
+state diagram is embedded into the function table template introduce in
+Chapter 5as shown in Figure 6.2. This table lists the inputs and outputs
+of the vending machine along with the behavior represented by a state
+diagram.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1966}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8034}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\emph{Module}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Vending Machine Control Unit
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\emph{Inputs} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{itemize}
+\item
+  Nickel: Signals that a nickel has been deposited.
+\item
+  Dime: Signals that a dime has been deposited.
+\end{itemize}
+\end{minipage} \\
+\emph{Outputs} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{itemize}
+\item
+  Reset: Signals the FSM to return to the Initial/Reset state.
+\item
+  Vend: Signal to dispense candy.
+\end{itemize}
+\end{minipage} \\
+\emph{Functionality} &
+\includegraphics[width=2.04167in,height=2.97917in]{media/image2.emf} \\
+\end{longtable}
+
+\textbf{Figure 6.2} A state diagram for a simple vending machine.
+
+The initialization/reset state is labeled \$0.00, while the action of
+the machine (dispense or not dispense candy) is associated with the
+states---the only state that dispenses candy is \$0.25. There are three
+types of transitions shown in this state diagram. The two labeled nickel
+and dime are associated with depositing those coins. The unlabeled
+transition from state \$0.25 to state \$0.00 is called an unconditional
+transition. A system with an unconditional transition between two states
+is assumed to remain in the first state for a defined time period before
+automatically moving to the second state. In this case it ensures that
+the machine dispenses a single candy before going on to the next
+transaction. It is common practice in state diagrams to assume that any
+unspecified input conditions cause the system to remain in the current
+state. For example, if no coin is inserted while in state \$0.20 the
+system remains in state \$0.20. Finally, note that since this machine
+does not dispense change, it can overcharge a customer for candy. This
+would not be a popular vending machine with users!
+
+\subsection{Flowcharts}\label{flowcharts}
+
+The intention of a \emph{\textbf{flowchart}} is to visually describe a
+process or algorithm, including its steps and control. Flowcharts are
+often scoffed at as being old-fashioned and overly simple---these
+criticisms are actually strengths. Since flowcharts have been around for
+a long time, they are easily recognized and understood. Furthermore,
+being simple makes them accessible to a wide audience. Due to their
+simplicity, they are applied in a great number of applications,
+including non-technical ones such as the description of business
+processes.
+
+Some of the primary symbols used in flowcharts are shown in Figure 6.3.
+The names of the starting and ending steps of a flowchart are
+represented by ovals known as terminators. Individual processing steps
+are written inside of rectangles, while a process step that is
+elaborated by another flowchart is drawn as a rectangle with double
+sides. Elaborated processes allow the representation of hierarchy in the
+design. Certain points in a flowchart can lead to alternative
+destinations as represented by a decision or conditional symbol
+(diamond). The condition that determines the next step is written inside
+the diamond and the possible values of the condition are written on the
+arcs leaving the conditional step. As shown in Figure 6.3 there are
+multiple ways to indicate data stores for retrieving or saving data.
+
+\includegraphics[width=4.90625in,height=1.5625in]{media/image3.emf}
+
+\textbf{Figure 6.3} Basic flowchart symbols.
+
+As an application, consider an embedded computer system that monitors
+the light level of its environment as described by the flowchart in
+Figure 6.4. The algorithmic process of the flowchart is easy and
+intuitive to understand. The system reads the current light value,
+stores it into an array, and then computes an average. In a complete
+system description, there would be a second flowchart describing how the
+system determines the average of the values of the light samples, since
+this is identified as an elaborated process. The system then waits 1ms,
+writes the average to a terminal (display device), and then checks for a
+key-press. Light levels continue to be monitored in the absence of a
+key-press, otherwise the light monitoring process halts.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.0867}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.9133}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\emph{Module}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Light level data logger
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\emph{Inputs} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{itemize}
+\item
+  Light intensity: Ambient light intensity from environment.
+\item
+  Key-press: User request to abort data logging.
+\end{itemize}
+\end{minipage} \\
+\emph{Outputs} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{itemize}
+\item
+  Terminal: Displays the average light intensity.
+\item
+  Disk: Stores a record of light intensities through time.
+\end{itemize}
+\end{minipage} \\
+\emph{Functionality} &
+\includegraphics[width=4.69792in,height=0.73958in]{media/image4.emf} \\
+\end{longtable}
+
+\textbf{Figure 6.4} A flowchart for an embedded system.
+
+Flowcharts are an intuitive way to describe algorithmic processes.
+Limiting the complexity of a flowchart to between 10 and 20 steps
+enables the sequence of actions to be quickly comprehended while
+eliminating unnecessary details. Flowcharts are not able to represent
+the structure of data being manipulated and they are not particularly
+good at representing concurrent processes. For this we need data flow
+diagrams.
+
+\subsection{Data Flow Diagrams}\label{data-flow-diagrams}
+
+The intention of a \emph{\textbf{data flow diagram}} (DFD) is to model
+the processing and flow of data inside a system. It is a
+function-oriented approach that is similar to functional
+decomposition---the processes inside a DFD accept data inputs, transform
+them in some way, and produce output data. A DFD is often used for the
+analysis of information systems due to its data emphasis, but can be
+broadly applied to ECE systems. It differs from functional decomposition
+in that functional decomposition is often closer to the implementation
+of the design, whereas the DFD models the system from a data point of
+view. A DFD is fundamentally different from a flowchart in that it does
+not encapsulate control and sequencing information, but allows multiple
+processes running concurrently. There are four symbols, shown in Figure
+6.5, that are used in a DFD:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \emph{Processes.} A rectangle with rounded corners that describes a
+  useful task or function. They perform a transformation on the data.
+\item
+  \emph{Data flows.} An arrow representing a data relationship between
+  two processes.
+\item
+  \emph{Data stores.} An open rectangle representing a data repository.
+\item
+  \emph{Interfaces.} A square describing external agents or entities
+  that use the system. They are also referred to as sources and sinks.
+\end{enumerate}
+
+\includegraphics[width=4.60417in,height=0.70833in]{media/image5.emf}
+
+\textbf{Figure 6.5} Data flow diagram symbols.
+
+Like the general design process, DFDs are successively refined from the
+top-down. That is, there is a single top level (or Level 0) DFD
+describing the entire system and the interfaces and data stores that it
+interacts with. The rules for constructing a DFD are fairly intuitive. A
+process must have at least one input and one output. The refinement of a
+process at level N must have the same inputs and outputs as the process
+at level N-1. Data must be transformed in some way by a process. This
+process of refinement continues until a satisfactory level of detail is
+reached.
+
+An example of a Level 1 DFD for a video browsing system is shown in
+Figure 6.6. Video databases are typically very large; due to their size,
+it is usually cumbersome to preview videos and extract important
+information. A solution to this problem is to apply image analysis
+techniques to identify shots (continuous scenes without a break) in a
+video and store both the location of the shot boundaries in the video
+and key frames that summarize each shot. The collection of key frames is
+known as a storyboard. The storyboards are stored in an annotation
+database that is much smaller in size than the original video database.
+Typically the user of a video browsing system has the ability to preview
+the storyboard and select shots from it to view. This example shows the
+data flow for such a system.
+
+The data processing is readily apparent from the DFD. Videos in the
+database are processed to extract shot boundaries and key frames, which
+are stored in the annotation database. The user can submit requests to
+view a storyboard, which is retrieved from the annotation database. When
+a shot is selected from the storyboard, the users can preview the
+original shot, which is retrieved from the video database.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.0832}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.9168}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\emph{Module}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Video Browsing System
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\emph{Inputs} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{itemize}
+\item
+  Video: External video to the system that is entered into the video
+  database.
+\item
+  Browse Request: User request to browse a particular video.
+\item
+  Shot Preview Request: User request to preview a particular short from
+  a video.
+\end{itemize}
+\end{minipage} \\
+\emph{Outputs} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{itemize}
+\item
+  Story Board: A sequence of frames summarizing the entire video.
+\item
+  Shot: The complete video corresponding to the still image in the story
+  board.
+\end{itemize}
+\end{minipage} \\
+\emph{Functionality} &
+\includegraphics[width=4.875in,height=3.14583in]{media/image6.emf} \\
+\end{longtable}
+
+\textbf{Figure 6.6} Level 1 data flow diagram for a video browsing
+system.
+
+There are a few important points to note about DFDs. They are solution
+independent, specifying the behavior based upon data flow. Specific
+information on the data flows is defined in a formal language known as a
+\emph{\textbf{data dictionary}} (it is not covered here). There can be
+concurrent processes represented in a DFD. In the video browsing
+example, multiple people can use the system simultaneously, and there is
+no implied sequencing between when the shot boundary detection process
+is run and the storyboards are previewed. It is clear that the video
+must undergo shot detection prior to viewing its storyboard. This
+information is listed in something known as an \emph{\textbf{event
+table}}. The event table for this example is shown in Table 6.1.
+
+\textbf{Table 6.1} Event table for the video browsing system.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2399}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2526}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2571}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2504}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Event}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Trigger}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Process}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Source}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Annotate Video & New Video Arrival & Shot Boundary Detection & System \\
+View Storyboard & Browse Request & Storyboard Preview & User \\
+View Shot & Shot Preview Request & Shot Preview & User \\
+\end{longtable}
+
+An \emph{\textbf{event}} is an occurrence at a specific time and place
+that needs to be remembered. Events can be classified into temporal,
+external, and state. A \emph{temporal event} is one which happens
+because the system has reached some critical time. In this example, the
+generation of shot boundaries could occur for all new videos in the
+database at a specified time each day, but in this case it occurs
+whenever a new video is added to the database. An \emph{external event}
+occurs outside the system boundary by a system user, in this case
+requesting either a storyboard or a video preview. A \emph{state event}
+is the result of something changing within the system. Associated with
+each event is a \emph{trigger}, the cause of the event. Each event has a
+process that is associated with it. Finally, associated with each event
+is a \emph{source}, the entity responsible for triggering it.
+
+\subsection{Entity Relationship
+Diagrams}\label{entity-relationship-diagrams}
+
+A database is a system that stores and retrieves data, and it is modeled
+by an \emph{\textbf{entity relationship diagram}} (ERD). The intention
+of an ERD is to catalog a set of related objects (entities), their
+attributes, and the relationships between them. The entities and their
+relationships are real distinct things that have characteristics that
+need to be captured. The design of a database starts by describing the
+entities, their attributes, and the relationship between entities in an
+ERD. In order to ask meaningful questions about the data, the entities
+need to be related to one another. For example, a list of students and a
+list of courses by themselves have limited utility. However, by
+introducing a relationship between these two entities we can ask
+questions such as ``\emph{How many students are taking the
+Microelectronics course?}'' The three elements used in the ERD modeling
+language are:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \emph{Entities.} They are generally in the form of tangible objects,
+  roles played, organizational units, devices, and locations. An
+  instance is the manifestation of a particular entity. For example, an
+  entity could be Student while an instance would be Kristen.
+\item
+  \emph{Relationships.} They are descriptors for the relationships
+  between entities.
+\item
+  \emph{Attributes.} They are features that are used to differentiate
+  between instances of the entities.
+\end{enumerate}
+
+Lets consider an ERDs describing academic life at a college . The
+process typically starts by interviewing the end-users and identifying
+the entities and their attributes. Assume that the result of this
+process is that the college wants to store data about three entities:
+Students, Courses, and Departments. The process of building an ERD
+starts by determining the relationships between entities. One way to do
+this is to build an \emph{\textbf{entity relationship matrix}} as shown
+in Table 6.2. The entities constitute both the row and column headings,
+and the matrix entries represent the relationship, if any, that exists
+between entities. This is similar to the pairwise comparison matrix in
+Chapter 2 where user needs were systematically compared. Relationships
+are bi-directional because they have two participating entities.
+
+\textbf{Table 6.2} Entity relationship matrix.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2296}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2461}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2646}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2597}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Student}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Course}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Department}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Student} & & takes many & majors in one \\
+\textbf{Course} & has many & can require many / can be the prerequisite
+for many & is offered by one \\
+\textbf{Department} & enrolls many & offers many & \\
+\end{longtable}
+
+From Table 6.2 we can see that a Student can take many courses and a
+Course has many students in the Student-Course relationship. A
+\emph{\textbf{cardinality ratio}}, associated with each relationship,
+describes the multiplicity of the entities in a relationship. For
+example, the Student-Course relationship is many-to-many, or M:M,
+because one student can take \ul{many} courses and one course is taken
+by \ul{many} students. The relationship between Student and Department
+is M:1 since a Department enrolls \ul{many} students, but a student can
+major in only \ul{one} Department. A recursive relationship,
+prerequisite, exists between the Course entity and itself because a
+course may have \ul{many} other courses as prerequisites and may be the
+prerequisite for \ul{many} other courses. Thus the prerequisite
+relationship has an M:M cardinality. It needs to be noted that in this
+example the needs of the college required relationships between all
+pairs of entities. If, for example, the college did not need to keep
+track of the students' majors, then the relationship between Student and
+Department would be left blank in the entity relationship matrix.
+
+The resulting ERD is shown in Figure 6.7. The relationships are
+identified by the diamonds shaped symbols; the entities are denoted by
+the rectangles with their name at the top. The cardinality ratio is
+labeled on the links between the relationships and entities. Another
+piece of information shown in the ERD is the attributes associated with
+each entity. An attribute is a feature or characteristic of an entity
+that needs to be remembered. There are many different types of
+attributes; however, the most important are \textbf{\emph{key
+attributes}} (which are underlined) which uniquely identify instances.
+For example, the identification number (ID) attribute of a Student is a
+key attribute.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1181}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8819}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\emph{Module}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Grade Database
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\emph{Inputs} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{itemize}
+\item
+  Students: Data about students.
+\item
+  Departments: Data about departments.
+\item
+  Courses: Data about courses.
+\end{itemize}
+\end{minipage} \\
+\emph{Outputs} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{itemize}
+\item
+  Relationship between departments and their enrolled students.
+\item
+  Relationship between students and the courses that they take.
+\item
+  Relationship between departments and the courses they offer.
+\item
+  Relationship between course and their prerequisite courses.
+\end{itemize}
+\end{minipage} \\
+\emph{Functionality} &
+\includegraphics[width=4.53125in,height=3.08333in]{media/image7.emf} \\
+\end{longtable}
+
+\textbf{Figure 6.7} ERD for the college database system.
+
+The ERD allows for an easy interpretation of the relationships between
+entities as well as their attributes. Although beyond the scope of the
+discussion here, the ERD is a formal language that can be used to
+automatically generate the database structure. The relationships in the
+ERD allow queries to be asked of the resulting database. For example,
+the college could derive a student's course schedule from the database
+from the relationship between Student and Course.
+
+\subsection{The Unified Modeling
+Language}\label{the-unified-modeling-language}
+
+The \emph{\textbf{Unified Modeling Language}} (UML) was created to
+capture the best practices of the object-oriented software development
+process. However, it has valuable modeling tools that can be applied
+more generally to ECE systems. The objective of this section is to
+provide an overview of UML and the six different system views that it
+encompasses. A caveat for the reader---UML is complex, and complete
+coverage is beyond the scope of this book. In order to fully understand
+its subtleties and nuances, the reader is advised to consult the
+references provided in Section 6.8.
+
+In order to aid in the explanation of the different views we will create
+a UML model of a system called the Virtual Grocer, or v-Grocer for
+short. The v-Grocer enables a user to order groceries from home and have
+them delivered. The concept is to provide users with a barcode scanner
+that is connected to their home computer along with application
+software. When the user runs out of an item, he/she scans in the
+Universal Product Code (UPC). When users want to order groceries, they
+connect to the Internet, log into the grocery store web server, enter
+the quantity for the scanned items, and place their order. Once the
+order is completed, they are billed and the groceries are delivered to
+their houses at a prearranged time.
+
+\subsubsection{Static View}\label{static-view}
+
+Object-oriented design (OOD) is fundamentally different from functional
+software design in that it emphasizes objects instead of functions.
+\emph{\textbf{Objects}} represent both data (attributes) and the methods
+(functions) that can act upon the data. An object represents a
+particular instance of something known as a \emph{\textbf{class}}, which
+defines the attributes and methods. An object encapsulates all of this
+information. The data and methods that an object encapsulates are
+available only to that object by default. Thus, other objects cannot
+change that state of an object unless given specific permission to do
+so. This improves the reliability and maintainability of software
+systems, because changes made to the internal representation of a class
+are not seen by methods outside of the class.
+
+The intention of the \emph{\textbf{static view}} is to show the classes
+in a system and their relationships. The static view is characterized by
+a \emph{class diagram}. A very simple class diagram with a single class
+is shown in Figure 6.8. The specification of a class has three parts, a
+name, a list of attributes, and a set of methods. The name of the class
+for this example is Customer and it has three attributes: Name, Address,
+and CustId. It has one method associated with it, ChangeAddr(), which
+can change the Address attribute. A class, just like an entity in an
+ERD, is a generalization of a set of a particular thing or instance. For
+example, the Customer class could have a particular instance called Ms.
+Robinson.
+
+\includegraphics[width=1.19792in,height=0.8125in]{media/image8.emf}
+
+\textbf{Figure 6.8} Class diagram notation. The class has a label
+(Customer), attributes (Name, Address, and CustId), and methods
+(ChangeAddr()).
+
+Classes are related to one another by relationships that define how
+classes interact with each other. For example, if a class is a subset of
+another class (a kind of relation) then the subclass inherits all the
+attributes and methods of the \emph{superclass}. In UML, there are a
+host of relationships; among these are generalization, composition, and
+associations. Two classes are related by a \emph{generalization
+relationship} when one is a subset of the other. Two classes are related
+by a \emph{composition relationship} when one is composed of members of
+the other. Two classes are related by an \emph{association relationship}
+whenever they need to send messages to one another. Relationships are
+drawn as lines connecting the two participant classes. The terminals of
+the line have different shapes depending on the type of relationship.
+Just like an ERD, the relationships between classes have cardinality
+defined by the rule base. In order to illustrate these points, Figure
+6.9 shows the class diagram for a portion of the v-Grocer system.
+
+\includegraphics[width=3.5625in,height=2.59375in]{media/image9.emf}
+
+\textbf{Figure 6.9} Class diagram for the v-Grocer.
+
+The class diagram has five classes---Customer, Delivery, Order, Item,
+and GroceryCart. The GroceryCart class is derived from the many-to-many
+relationship which exists between the Order and Item classes. Just like
+the rules for an ERD, the cardinality of a relationship is read at the
+end of the association in which it is involved. The only difference is
+that the many cardinality in a class diagram is denoted by a * symbol.
+For example, a delivery is sent to one customer, while a customer may
+receive many deliveries.
+
+\subsubsection{Use-Case View}\label{use-case-view}
+
+The intention of the \emph{\textbf{use-case view}} is to capture the
+overall behavior of the system from the user's point of view and to
+describe cases in which the system will be used. It is characterized by
+a \emph{use-case diagram}, and an example for the v-Grocer is shown in
+Figure 6.10. There are only two symbols employed in a use-case diagram,
+actors and use-cases. Actors, drawn as stick figure people, are
+idealized people or systems that interact with the system. For this
+example the actors are customers, delivery people, the database, clerks,
+and the web server. Use-cases are drawn as ovals in the diagram, and in
+this example, they are WebOrder, DeliverOrder, and AssembleOrder. A
+use-case is a particular situation when actors use the system and is
+usually represented by a sequence of actions that will be performed by
+the system. This sequence of actions typically represents a high level
+of functionality. Every actor that interacts with a particular use-case
+is connected to it with a line. Finally, the entire collection of
+use-cases is enclosed in a rectangle with the actors outside. This
+rectangle represents the system boundary and consequently is labeled
+with the name of the system.
+
+\includegraphics[width=3.88542in,height=2.69792in]{media/image10.emf}
+
+\textbf{Figure 6.10} Use-case diagram for the v-Grocer.
+
+From Figure 6.10 it is apparent that a Customer, the WebServer, and
+Database interact when creating a WebOrder. Use-cases are often
+described in a table as shown for this particular example in Table 6.3.
+
+\textbf{Table 6.3} WebOrder use-case description.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2296}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7704}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Use-Case}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+WebOrder
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Actors} & Customer, Database, and WebServer \\
+\textbf{Description} & This use-case occurs when a customer submits an
+order via the WebServer. If it is a new customer, the WebServer prompts
+them to establish an account and their customer information is stored in
+the Database as a new entry. If they are an existing customer, they have
+the opportunity to update their personal information. \\
+\textbf{Stimulus} & Customer order via the GroceryCart. \\
+\textbf{Response} & Verify payment, availability of order items, and if
+successful trigger the AssembleOrder use-case. \\
+\end{longtable}
+
+Use-cases focus on a very high level of functionality and describe who
+will interact with the system and how they will interact. Given their
+high level of abstraction, they can easily be incorporated into a
+variety of ECE projects. They are also simple and easy to understand and
+thus can be incorporated into presentations to non-technical audiences.
+Finally, use-cases are simply not busy work---they are fundamental to
+the development of other UML models.
+
+\subsubsection{State Machine View}\label{state-machine-view}
+
+The \emph{\textbf{state machine}} \emph{\textbf{view}} is characterized
+by a \emph{state diagram} as was discussed in Section 6.2. Again, the
+intention of a state diagram is to describe systems with memory. Figure
+6.11 shows the state view of a customer logging into the v-Grocer web
+server.
+
+\includegraphics[width=2.02083in,height=2.05208in]{media/image11.emf}
+
+\textbf{Figure 6.11} State diagram for the v-Grocer customer login.
+
+\subsubsection{Activity View}\label{activity-view}
+
+The intention of the \emph{\textbf{activity view}}, characterized by an
+\emph{activity diagram}, is to describe the sequencing of processes
+required to complete a task. In UML, the tasks elaborated are the
+individual use-cases identified in a use-case diagram. Since more than
+one actor may be involved in completing a task, an activity diagram can
+express the concurrent nature of tasks. An activity diagram is composed
+of states, transitions, forks, and joins. Figure 6.12 contains an
+activity diagram for the v-Grocer order delivery system. The diagram
+gives a clear visual picture for the activities that need to be
+completed for an order to be packed and delivered. After a complete
+order is placed, the flow is forked into two concurrent processing
+branches. One of these branches is for completion of the order, while
+the other addresses its scheduling, delivery, and coordination with
+other deliveries. When both of those processes are completed, they are
+joined together and then the delivery run is made.
+
+\includegraphics[width=5.48958in,height=0.88542in]{media/image12.emf}
+
+\textbf{Figure 6.12} Activity diagram for order processing and delivery
+for the v-Grocer.
+
+\subsubsection{Interaction View}\label{interaction-view}
+
+The intention of the \emph{\textbf{interaction view}} is to show the
+interaction between objects. It is characterized by collaboration and
+sequence diagrams. In an object-oriented system, tasks are completed by
+passing messages between objects. The interaction view shows how
+messages are exchanged in order to accomplish a task. These tasks are
+usually the use-cases. Since messages are sent through time, the
+interaction view must be able to express the concept of order. We start
+by examining collaboration diagrams.
+
+Two objects collaborate together in order to produce some meaningful
+result. A \emph{collaboration diagram} shows the sequencing of messages
+that are exchanged between classes in order to complete a task. It
+consists of the classes that participate in the realization of the task
+and the messages exchanged. The messages are drawn as arrows from the
+sending object to the receiving object. The message arrows are labeled
+with the name of the message and its numerical position in the sequence
+of messages exchanged to realize the task. For example, Figure 6.13
+shows how the WebOrder use-case is realized using the Customer,
+WebServer, and Database classes. Note, WebServer and Database are
+introduced as new classes and are not shown as part of the class diagram
+in Figure 6.9.
+
+\includegraphics[width=4in,height=1.16667in]{media/image13.emf}
+
+\textbf{Figure 6.13} Collaboration diagram for the WebOrder use-case.
+
+The collaboration diagram is similar in form to the class diagram, the
+difference being that the relationships are annotated with the messages
+that are exchanged. Consequently, the collaboration diagram aides the
+developers in understanding and implementing the methods used between
+classes. In order to emphasize the order in which messages are
+exchanged, a developer can also use a sequence diagram.
+
+A \emph{sequence diagram} contains the same information as the
+corresponding collaboration diagram. Where the collaboration diagram
+emphasizes the objects that interact to produce a behavior, a sequence
+diagram emphasizes the message order that produces a behavior. As shown
+in Figure 6.14, the classes that participate in the behavior are listed
+in a row at the top of the diagram. From each class a dotted vertical
+line is drawn downward that represents the lifeline of its class (the
+vertical axis represents time). When an object is actively requesting or
+waiting for information from another object, a rectangle is drawn over
+the dotted lifeline of the object. The message is drawn as an arrow from
+the sending object to the receiving object and labeled with the name of
+the message. The activity diagrams can be applied generally to ECE
+systems to show the interaction between entities, particularly the
+sequencing of messages.
+
+\includegraphics[width=2.60417in,height=2.40625in]{media/image14.emf}
+
+\textbf{Figure 6.14} Sequence diagram for the WebOrder use-case.
+
+\subsubsection{Physical View}\label{physical-view}
+
+The intention of the \emph{\textbf{physical view}} is to demonstrate the
+physical components of the system and how the logical views map to them.
+The physical view is characterized by a component and deployment
+diagram. A \emph{component diagram} shows the software files and the
+interrelationships that make up the system. Software files are shown in
+rectangles. Lines connect together files that need to communicate. A
+\emph{deployment diagram} shows the hardware and communications
+components that will be used to realize the system. The hardware
+components are drawn as cubes and labeled with their names. Figure 6.15
+shows a combined component and deployment diagram for the v-Grocer
+system. The software files are the Browser, v-Grocer, Apache, and
+Oracle, while the hardware components are the Customer, WebServer, and
+Database.
+
+\includegraphics[width=4.82292in,height=1.41667in]{media/image15.emf}
+
+\textbf{Figure 6.15} The combined component and deployment diagram for
+the v-Grocer. The software files are the Browser, v-Grocer, Apache, and
+Oracle, while the hardware components are the Customer, WebServer, and
+Database.
+
+\subsection{Project Application: Selecting
+Models}\label{project-application-selecting-models}
+
+Chapters 5 and 6 have presented a variety of models for representing the
+behavior of systems. The design team needs to select the correct
+combination of tools to properly describe a design for its eventual
+implementation. Table 6.4 provides a summary of the models and their
+different intentions.
+
+\textbf{\hfill\break
+Table 6.4} Guidance for model selection.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1802}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8198}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Model}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Intention}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Functional Decomposition} & To describe the input, output, and
+functional transformations applied to information (electrical signals,
+bits, energy, etc.) in a system. It is broad in application. This often
+provides a view that is close to the actual system implementation. See
+Chapter 5. \\
+\textbf{State Diagram} & To describe the behavior of systems with
+memory. They are very flexible when it comes to application. They are
+often applied to digital design, but state diagrams can also be used to
+describe the high level behavior of complex systems. The only
+prerequisite on their use is that the system has memory. See Section
+6.2. \\
+\textbf{Flowchart} & To describe a process or algorithm, including its
+steps and control. They are applicable to many problem domains from
+software to describing business practices. See Section 6.3. \\
+\textbf{Data Flow}
+
+\textbf{Diagram} & To model the processing, transformation, and flow of
+data inside a system. They are typically supplemented by an event table
+describing all possible events and the resulting actions. Creating a DFD
+requires the designer to carefully think about the uses of the system
+and how the system is to react to external users and events. See Section
+6.4. \\
+\textbf{Entity}
+
+\textbf{Relationship}
+
+\textbf{Diagram} & To catalog a set of related objects (entities), their
+attributes, and the relationships between them. ERDs capture the
+entities and relationships of a portion of the world into a formal data
+model. The graphical language describes the attributes of the entities
+and the cardinality of the relationships. ERDs are formal enough to be
+unambiguously translated into a complete description of a database
+system. See Section 6.5. \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{1.0000} + 2\tabcolsep}@{}}{%
+\textbf{The Unified Modeling Language.} The intention of UML is to
+describe complex software systems. However, certain views are well
+suited to describing systems at a high level and are applicable to many
+domains. The process of viewing a system from the six perspectives
+listed below decreases the chances that crucial details of the design
+will be overlooked.} \\
+\textbf{Class Diagram} & To describe classes and their relationship in
+an object-oriented software system. Class diagrams are primarily for
+software design and are not easily accessible to a non-technical
+audience. See Section 6.6.1. \\
+\textbf{Use-Case}
+
+\textbf{Diagram} & To capture the overall behavior of the system from
+the user's point of view and describe cases in which the system will be
+used. See Section 6.6.2. \\
+\textbf{State Machine} & This is essentially the same as the state
+diagram, but is also a formal UML view. See Sections 6.2 and 6.6.3. \\
+\textbf{Activity}
+
+\textbf{Diagram} & To describe the sequencing of processes required to
+complete a task. Composed of states, transitions, forks, and joins. Can
+show concurrent processes. See Section 6.6.4. \\
+\textbf{Interaction}
+
+\textbf{Diagram} & To show the interaction and passing of messages
+between entities in a system. Characterized by both collaboration and
+sequence diagrams. See Section 6.6.5. \\
+\textbf{Physical}
+
+\textbf{Diagram} & To describe the arrangement and connections of the
+physical components that constitute a system. In the case of UML, it is
+characterized by a component and deployment diagram. See Section
+6.6.6. \\
+\end{longtable}
+
+\subsection{Summary and Further
+Reading}\label{summary-and-further-reading}
+
+Models provide a convenient method of describing a system at a high
+level of abstraction. This allows a system to be described without
+having to determine all of the implementation details. All models are
+not the same---they come in a variety of forms and each is designed to
+serve a different intention. The properties of effective models were
+presented, and we saw that they are similar to those of an engineering
+requirement. Models should encourage innovation by allowing the
+exploration of alternative implementations. Since models are built from
+abstractions of the actual system components, they are an effective
+means for communicating with non-technical stakeholders. Finally, models
+provide an excellent means of documenting the development of a design
+from the highest level down to the detailed design.
+
+This chapter presented a variety of models for describing system
+behavior that included state diagrams, flowcharts, data flow diagrams,
+entity relationship diagrams, and the Unified Modeling Language. Table
+6.4 provides a quick reference that describes the intention and
+application of the models examined in both Chapters 5 and 6.
+
+Flowcharts have been around for quite some time and an early work
+describing them is \ul{Flowcharts} by Chapin {[}Cha71{]}. The book
+\ul{Programming Logic and Design} {[}Far02{]} covers flowcharts
+extensively and their application in programming. State diagrams are
+fundamental to the ECE field and further information on them is
+available in virtually any introductory digital design textbook. Data
+flow diagrams and entity relationship diagrams are common tools used in
+information systems analysis and design and can be further explored in
+\ul{Systems Analysis and Design} {[}Sat02{]} and \ul{Fundamentals of
+Database Systems} {[}Elm94{]}. Two references for UML are \ul{The
+Unified Modeling Language Reference Manual} {[}Rum98{]} and \ul{Schaum's
+Outline of UML} {[}Ben01{]}.
+
+\subsection{Problems}\label{problems}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Why is it important for a model to separate the design of a system
+  from its realization?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Classify each of the following as either a model, not a model, or
+  sometimes a model. Justify your answer based on the definition and
+  properties of a model.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  A diagram of a subway system, b) a computer program, c) a football
+  play, d) a drivers license, e) a floor plan of the local shopping mall
+  (a ``you are here'' diagram)., f) an equation, g) A scratch n' sniff
+  perfume advertisement in a fashion magazine, h) The 1812 overture, i)
+  a braille sign reading ``second floor'', j) sheet music for the
+  Brandenburg Concerto, k) the United States Constitution, l) a set of
+  car keys, m) the ASCII encoding of an email message.
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    Which of the following systems has memory? Justify your answer using
+    the concepts of input, output, and state.
+  \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  an ink pen, b) a resistor, c) a capacitor, d) a motorized garage door,
+  e) an analog wrist watch, f) the air pressure in an air compressor, g)
+  the thermostat which controls the furnace in a house, h) a light
+  switch, i) a political system, j) the temperature of a large lake, k)
+  a book, l) a computer's hard drive.
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    A can of soda has memory. Your objective is to figure out what
+    characteristic of the can is the state variable and what input
+    causes it to change. Based upon this, draw a state diagram for a can
+    of soda. Label the transition arcs with the input responsible for
+    the transition. Hint: no special equipment is needed to elicit the
+    change of state.
+  \item
+    Consider the state diagram for the vending machine shown in Figure
+    6.2. Now assume that the system accepts nickels, dimes, and
+    quarters. Also assume that it is capable of returning change to the
+    user after a purchase. Create a state diagram that represents this
+    new system. Make sure to define the output signals and their value
+    for each state.
+  \item
+    Use a state diagram to describe the high level operation of the
+    ChipMunk Recorder (CMR). The CMR records sounds and then plays them
+    back at a variety of speeds, making a recorded voice sound like a
+    high pitched chipmunk. The CMR receives user input from a keyboard
+    and an audio source. The behavior of the system is described as
+    follows:
+  \end{enumerate}
+\end{enumerate}
+
+\begin{itemize}
+\item
+  When powered up, the CMR enters a wait state.
+\item
+  If \textquotesingle R\textquotesingle{} is pressed the recorder begins
+  recording.
+\item
+  Any key-press will put the CMR back into the wait state.
+\item
+  If \textquotesingle S\textquotesingle{} is pressed, the CMR is ready
+  to change the playback speed. A subsequent numerical input between 1
+  and 5 will cause the playback speed to be changed to that value.
+\item
+  Pressing the \textquotesingle R\textquotesingle{} key when in the
+  adjust playback speed mode will cause the CMR to go to the wait state.
+\item
+  Pressing a \textquotesingle P\textquotesingle{} key will cause the CMR
+  to playback the recorded sounds. When done playing the entire
+  recording, the CMR will loop back and start playing at the beginning.
+\item
+  Any key-press while in the playback mode will cause the CMR to go back
+  into the wait state.
+
+  Draw a state diagram describing the behavior of the CMR. Create a
+  table which lists every state and its associated output.
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \item
+    Build a state diagram to describe the state of the tape cartridges
+    used to backup a company's network drives. When new
+    \textbf{unformatted} cartridges are received they are immediately
+    labeled with a unique ID. Before a tape is used it is formatted
+    turning it into a \textbf{blank} tape. On the first day of the week
+    a complete backup is made of the network drives, transforming blank
+    tapes into \textbf{active} tapes. The active tapes, made every
+    fourth week, are moved off site making them \textbf{archival} tapes.
+    Active tapes older than 3 months are assumed to have out of date
+    information and are reformatted into blank tapes. Archival tapes
+    more than 2 years old are reformatted and put back into circulation.
+  \item
+    Build a flowchart to describe the operation of a microcontroller
+    (MCU) based temperature regulating system. The system monitors the
+    temperature of a heated environment using thermistors and regulates
+    the temperature by turning fans on to cool the environment. The MCU
+    periodically reads the temperature from each of the 64 different
+    thermistors (each is driven by its own constant current source) by
+    selecting each through an analog multiplexor. The voltage is
+    converted into an 8-bit digital value using the MCU's
+    analog-to-digital converter. If any of the 64 thermistors exceeds a
+    high temperature threshold, the MCU uses a complex algorithm to
+    determine the number of fans to turn on, otherwise all the fans are
+    turned off.
+  \item
+    Write an algorithmic description for each of the flow charts below
+    using while, if, or do statements.
+  \end{enumerate}
+\end{itemize}
+
+\includegraphics[width=1.39583in,height=1.19792in]{media/image16.emf}
+\includegraphics[width=0.83333in,height=1.51042in]{media/image17.emf}
+\includegraphics[width=2.35417in,height=1.45833in]{media/image18.emf}
+
+(a) (b) (c)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Create a flowchart that outlines how to crochet a two-tone blanket
+  with a diagonal stripe across it as shown below. A blanket is
+  crocheted by linking together a sequence of basic stitches. For the
+  purposes of the flowchart assume that a basic stitch is an elaborate
+  process. Basic stitches are made from either dark or light yarn. The
+  blanket should be 100 stitches wide by 150 stitches high. The diagonal
+  stripe runs at a 45 degree angle from the horizontal.
+\end{enumerate}
+
+\includegraphics[width=1.03125in,height=1.34375in]{media/image19.emf}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\item
+  Build a data flow diagram and event table to represent an image
+  archiving system for an art museum. The art museum maintains a
+  database of digital images of paintings from museums all over the
+  world. The following information is known about the image database
+  system:
+\end{enumerate}
+
+\begin{itemize}
+\item
+  Images are shared among museums in a participating network. Whenever a
+  participating museum posts a new image, it sends a broadcast email to
+  all participating museums in the network with the image attached as an
+  email. It provides the name of the painting and artist in the body of
+  the email. All new images received are added directly to the museum's
+  own image database.
+\item
+  When inserted into the museum's database, each image is provided with
+  a tag identifying the name of the painting and the artist.
+  Furthermore, this triggers an image analysis routine that classifies
+  the image based into predefined categories such as portrait, natural
+  scene, and modern. Furthermore, it stores key features that are
+  extracted from the image.
+\item
+  The key features are used to identify and retrieve visually similar
+  images from the museum's database. Another image processing algorithm
+  is run that compares the visual similarity of the new image to all
+  images in the database. This process produces a matching score of 0 to
+  100 that is stored.
+\item
+  The museum's image database is available to visitors via computer
+  kiosks placed throughout the museum. Kiosk users can retrieve and view
+  images in one of three ways. First, they can specify the name of the
+  artist or painting. Second, they can retrieve a class of images, such
+  as modern. Third, once they have received a painting, they can submit
+  a request to view visually similar images. The visually similar images
+  are retrieved for viewing based upon the matching score.
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \item
+    Build an ERD to keep track of the bicycle frames manufactured at a
+    local company. The following are notes from an interview with the
+    owner.
+  \end{enumerate}
+\end{itemize}
+
+\begin{quote}
+\emph{We custom build bike frames to the dimension of each individual
+customer. When a customer comes in we take measurements in their height,
+leg length, arm length, torso length, weight, and waist measurement.
+Since we have high customer satisfaction our customers order new frames
+every several year. Hence we would like to date these measurements in
+order to track how a customer's body changes through time .Each frame is
+built on one set of measurements. Clearly, we need to keep track of our
+customer's contact information like name, address, phone number, and
+email address. We would like to know which employee built which frame.
+We would like to store basic information like name, address, phone, and
+SSN for each employee. Each frame is built by one employee using a
+variety of different titanium tubing. We have strict inventory control
+on all of our tubing and need to keep track of its grade, lot \#, Outer
+Diameter (OD), Inner Diameter (ID), and manufacturer. Tubing is uniquely
+identified by its lot \#. Finally we need to keep information on the
+frame. Each frame is given a unique serial number, and has a color,
+type, and dimensions.}
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  Extend Problem 6.7 to create an ERD that captures data about the tape
+  cartridges used in the backup system. Every Sunday night a full backup
+  is made of all network drives. A full backup creates an identical copy
+  of the network drives on the tape cartridges. Due to the large amount
+  of information, a full backup requires many tapes. On the other nights
+  of the week an incremental backup is made. An incremental backup
+  stores only files modified since the last backup (either full or
+  incremental). Incremental backups are much smaller than a full backup,
+  and consequently many incremental backups fit on a single tape. A tape
+  contains only full or incremental backup information -- the unused
+  portion of the last tape used for a full backup is never used to store
+  incremental backups. Your company wants to keep track of tapes, full
+  backups, and incremental backups. An ID and state should be tracked
+  for each tape. For full backups, the system needs to track the
+  creation date and the number of tapes used. For an incremental backup
+  it should track the date it was made. The relationships between the
+  backup type and the tape will capture which tapes participated in
+  which backup. (Hint: the state of a tape should be an attribute of the
+  tape entity - unformatted, blank, etc. They are not attributes and are
+  possible values for the state attribute.)
+\item
+  \textbf{Project Application.} Develop behavior models that are
+  applicable for describing your system. Table 6.4 is provided to help
+  in making the determination as to which models are applicable
+\end{enumerate}
+
+\textbf{Concept Generation}
