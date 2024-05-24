@@ -1,0 +1,1187 @@
+\section{System Reliability}\label{system-reliability}
+
+Quality is never an accident. It is always the result of intelligent
+effort.---John Ruskin
+
+A typical design project in your academic career may never leave the
+confines of a laboratory. However, in industry, engineers develop
+systems that are used by the public at large, and issues beyond the
+functionality, such as reliability, safety, and maintainability become
+important factors in the success of the design. Over the past 20 years,
+industry has made a great shift to address reliability through the
+adoption of processes such as Quality Functional Deployment (QFD),
+Six-Sigma, and Robust Design. While other chapters have addressed some
+elements of these processes, the objective of this chapter is to examine
+system reliability. Reliability attempts to answer the question of how
+long a system will operate without failing. Answering this question has
+inherent uncertainty and requires the use of probability and statistics.
+This chapter presents a review of basic probability theory and applies
+it to estimate the behavior of real-world devices. Reliability at the
+component and system levels is considered.
+
+Learning Objectives
+
+By the end of this chapter, the reader should:
+
+\begin{itemize}
+\item
+  Have a familiarity with the basic principles of probability and
+  understand how they apply to reliability theory.
+\item
+  Understand the mathematical definition and meaning of failure rate,
+  reliability, and mean time to failure.
+\item
+  Understand how to determine the reliability of a component.
+\item
+  Understand how to derate the power of electronic components for use
+  under different operating temperatures.
+\item
+  Understand how to determine the reliability of different system
+  configurations.
+\end{itemize}
+
+\textbf{\hfill\break
+DILBERT\textsuperscript{®} by Scott Adams}
+
+\includegraphics[width=5.5in,height=1.77083in]{media/image1.jpeg}
+
+\subsubsection*{Figure 8.1 Dogbert's Six Sigma Program. (Dilbert ©
+United Feature Syndicate. Reprinted by
+permission.)}\label{figure-8.1-dogberts-six-sigma-program.-dilbert-united-feature-syndicate.-reprinted-by-permission.}
+\addcontentsline{toc}{subsubsection}{Figure 8.1 Dogbert's Six Sigma
+Program. (Dilbert © United Feature Syndicate. Reprinted by permission.)}
+
+\subsection{Probability Theory Review}\label{probability-theory-review}
+
+Probability theory provides a formal framework to study chance events.
+It is a powerful tool for modeling engineering systems and is a
+requisite for reliability estimation. Although this section provides a
+review of some important concepts from probability, it is assumed that
+the reader is versed in the basics of probability theory.
+
+In order to apply probability, some general definitions are examined
+first. An \emph{experiment} is the process of measuring or quantifying
+the state of the world. The particular outcome of an experiment is an
+\emph{event} (\includegraphics{media/image2.wmf}),while the \emph{event
+space} (\emph{E}) is the set of all possible outcomes of the experiment.
+For example, consider an experiment where a six-sided die is rolled. The
+experiment is rolling the die and observing the outcome, the event is
+the particular outcome observed, and the event space for the experiment
+is the set \emph{E} = \{1,2,3,4,5,6\}. The outcomes do not have to be
+numerical values. Another example experiment is tossing a coin, in which
+case the event space is \emph{E} = \{Heads, Tails\}. Both are examples
+of a discrete event space because there are a finite number of
+experimental outcomes. In a discrete event space, the union of all the
+possible experimental outcomes defines the event space. If
+\includegraphics{media/image3.wmf} is the i\textsuperscript{th} event in
+a discrete event space, then the event space is given by the union
+
+\includegraphics{media/image4.wmf}. (1)
+
+The probability of an event indicates how likely it is for an event to
+occur. This is quantified by the probability operator, \emph{P()}, that
+assigns to each event a real number between 0 and 1. The probability is
+the percentage of times that an event would occur if the experiment were
+repeated an infinite number of times (the Law of Large Numbers). Two of
+the three fundamental axioms on which probability theory is built are
+
+\includegraphics{media/image5.wmf} (2)
+
+\includegraphics{media/image6.wmf}. (3)
+
+The first axiom indicates that all probabilities are non-negative, while
+the second is a restatement of the event space definition---the outcome
+of an experiment must be an element of the event space. Armed with these
+definitions and axioms, some important concepts from probability are now
+examined.
+
+\subsubsection{Probability Density
+Functions}\label{probability-density-functions}
+
+Not all event spaces are discrete as in the case of rolling a die or
+flipping a coin. Consider an experiment where the objective is to
+measure temperature. Clearly, such a measurement requires a variable
+having a continuous range of possible values. A random variable is
+defined as the outcome of an experiment that has a continuum of possible
+values. Random variables have a mathematical function known as the
+\emph{probability density function} (PDF) associated with them, which
+when integrated, yields the probability of a range of events. A PDF is
+typically denoted as \includegraphics{media/image7.wmf}, where \emph{X}
+takes values over the event space. Standard notation identifies random
+variables using upper case variables as the subscript for the PDF. The
+variable inside the parentheses is a lowercase dummy variable that does
+not have to match the random variable, but typically does. A question
+that the PDF allows us to ask is ``\emph{What is the probability that a
+random variable is in some range?}'' Consider the case where the
+objective is to determine the probability that the random variable
+\emph{X} lies between two values \emph{a} and \emph{b}. Written using
+the probability operator, this is indicated as
+\includegraphics{media/image8.wmf}. It is determined from the PDF as
+follows
+
+\includegraphics{media/image9.wmf}. (4)
+
+Conceptually, this probability represents the area under the PDF between
+the two limits of integration as shown in Figure 8.2.
+
+\includegraphics[width=3.5in,height=1.53125in]{media/image10.emf}
+
+\textbf{Figure 8.2} A probability density function. The area under the
+curve represents the probability that the random variable \emph{X} lies
+in the interval {[}\emph{a,b}{]}.
+
+Let's examine a few more important properties of probability density
+functions. The first, which is analogous to (3), indicates that the
+probability of the event space occurring is equal to one. This is known
+as the normalization property and it is expressed as
+
+\includegraphics{media/image11.wmf}. (5)
+
+Another interesting result is obtained by trying to determine the
+probability that a random variable takes on an exact value, for example
+\includegraphics{media/image12.wmf}. That is determined from the
+integral
+
+\includegraphics{media/image13.wmf}. (6)
+
+This is a somewhat counterintuitive result---it indicates that the
+probability a random variable can take on a particular value is zero.
+Does this make any sense? Consider an experiment where the objective is
+to measure a voltage value for a random variable \emph{V}. Now consider
+the question, ``\emph{What is the probability that the result of a
+voltage measurement equals π (the irrational number) volts?}'' In
+practice, this question is impossible to answer because the precision
+required of the meter is infinite and contrary to its construction. So
+the mathematical and practical results are in harmony. There is a way
+around this dilemma, which is to determine the probability that the
+random variable is within a small range about the target value as
+follows
+
+\includegraphics{media/image14.wmf}. (7)
+
+This means that the probability a random variable is within a small
+range about a given value is approximated by the product of the PDF
+evaluated at the value and the size of the range.
+
+\subsubsection{Mean and Variance}\label{mean-and-variance}
+
+Two useful and well-known statistics that are determined from the PDF
+are the mean (\includegraphics{media/image15.wmf}) and variance
+(\includegraphics{media/image16.wmf}). They are found from the PDF as
+follows
+
+\includegraphics{media/image17.wmf} (8)
+
+\includegraphics{media/image18.wmf}. (9)
+
+The \emph{mean} is analogous to the center of mass of the PDF; it is
+also known as the average value. The \emph{variance} is the average of
+the squared difference between the mean and the values of the PDF, where
+the squared term ensures that a positive difference is taken. The square
+root of the variance is known as the standard deviation
+(\includegraphics{media/image19.wmf}).
+
+\subsubsection{Common Probability Density
+Functions}\label{common-probability-density-functions}
+
+There are many PDFs available for describing the seemingly random
+variations in the behavior of observed systems and phenomena. In this
+section, three common PDFs (normal, exponential, and uniform) are
+presented.
+
+\subsubsection*{The Normal Density}\label{the-normal-density}
+\addcontentsline{toc}{subsubsection}{The Normal Density}
+
+The most common density function encountered in the physical sciences
+and engineering is the normal density\emph{\textbf{.}} Many population
+variations can be described by a normal density. For example, the
+resistance values of a large batch of 2.2k ohm resistors would likely
+follow a normal density. The normal density is defined as
+
+\includegraphics{media/image20.wmf}. (10)
+
+The mean, \emph{µ}, and standard deviation, \emph{σ}, are part of the
+definition of the PDF and used to alter the shape of the density to suit
+the particular need. The normal PDF is plotted in Figure 8.3. Varying
+\emph{µ} allows the overall function to be shifted along the x-axis,
+while increasing \emph{σ} spreads (or flattens) the function out.
+Calculating probabilities from the normal density can be done (although
+it takes a bit of work mathematically) so they are usually computed from
+something known as the Cumulative Distribution Function that is
+presented shortly.
+
+\includegraphics[width=2.92708in,height=1.36458in]{media/image21.emf}
+
+\textbf{Figure 8.3} A normal density function with the mean (\emph{µ})
+and standard deviation (\emph{σ}) shown.
+
+\subsubsection*{The Uniform Density}\label{the-uniform-density}
+\addcontentsline{toc}{subsubsection}{The Uniform Density}
+
+The uniform density, plotted in Figure 8.4, models the outcome of an
+experiment where all outcomes are equally likely. Mathematically, the
+PDF for a uniform density is given by
+
+\includegraphics{media/image22.wmf}, (11)
+
+where \emph{a} and \emph{b} are selected to meet the demands of a
+particular problem.
+
+\includegraphics[width=3in,height=1.22917in]{media/image23.emf}
+
+\textbf{Figure 8.4} The uniform density on the interval
+{[}\emph{a,b}{]}.
+
+\subsubsection*{The Exponential Density}\label{the-exponential-density}
+\addcontentsline{toc}{subsubsection}{The Exponential Density}
+
+Exponential densities are often utilized to model time dependent
+functions, such as inter-arrival times between data packets in
+communication systems. As shown later, the exponential density also
+describes the behavior of component failures as a function of time. The
+mathematical description of an exponential density is
+
+\includegraphics{media/image24.wmf}. (12)
+
+The PDF is characterized by the parameter \emph{λ,} which affects the
+shape of the curve as demonstrated in Figure 8.5.
+
+\includegraphics[width=3in,height=2.09375in]{media/image25.emf}
+
+\textbf{Figure 8.5} The exponential density for two different \emph{λ}
+values.
+
+\subsubsection{Cumulative Distribution
+Functions}\label{cumulative-distribution-functions}
+
+An important class of questions can be phrased as, ``\emph{What is the
+probability that a random variable X is less than value a?"} For
+example, the objective might be to determine the probability that an
+electronic component will malfunction within two years. Returning to the
+first question, it is clear that the goal is to determine the
+probability \includegraphics{media/image26.wmf}, which is found by
+integrating the PDF. This result is generalized by allowing the upper
+limit of integration to take on an arbitrary value that spans the range
+of the random variable. This produces a new function, known as the
+\emph{Cumulative Distribution Function} (CDF), which is the integral
+function of the PDF and is defined as
+
+\includegraphics{media/image27.wmf}. (13)
+
+\subsection{Reliability Prediction}\label{reliability-prediction}
+
+Our main interest in the study of probability stems from the desire to
+quantify the reliability of a system. The following is a formal
+mathematical definition of \emph{\textbf{reliability}}.
+
+\begin{quote}
+\textbf{Definition}: Reliability, \emph{R(t)}, is the probability that a
+device is functioning properly (has not failed) at time \emph{t}.
+\end{quote}
+
+In order to determine \emph{R(t),} it is necessary to first introduce
+some related mathematical entities and their meanings. The
+\emph{\textbf{failure rate}}, \emph{λ(t),} of a device is the expected
+number of failures per unit time. The failure rate is measured by
+operating a batch of devices for a given time interval and noting how
+many fail during that interval. A typical graph of failure rate versus
+time has the bathtub shape shown in Figure 8.6. The high initial failure
+rate is a result of manufacturing defects often referred to as infant
+mortality. Consequently, many manufactures will ``burn-in'' devices at
+the factory, so that if they fail, they do so before being sold. After
+the infant mortality phase, devices enter a phase of constant failure
+rate, where\emph{~λ(t)=~λ}, known as the service life. Estimates for
+\emph{λ} are determined empirically by testing a large number of
+components. They are usually expressed as a unit failure per a given
+number of hours, for example \includegraphics{media/image28.wmf}. After
+some period of time, devices start to wear-out and the failure rate
+increases. This usually happens as a result of mechanical wearing with
+age and use. Properly designed electronic devices will not have a
+wear-out region, instead continuing on at a constant failure rate. This
+applies only to the electronic devices themselves, not necessarily to
+complete systems that will likely contain mechanical devices.
+
+\includegraphics[width=5.48958in,height=1.69792in]{media/image29.emf}
+
+\textbf{Figure 8.6} Failure rate as a function of time, also known as
+the bathtub curve.
+
+In addition to failure rate, a PDF for the \emph{failure time} of the
+device, \includegraphics{media/image30.wmf}, is defined, where the
+random variable is time \emph{T}. This function allows the question to
+be asked ``\emph{What is the probability that a device will fail between
+time t\textsubscript{1} and t\textsubscript{2}?}'' It is important to
+note the difference between \emph{λ(t)} and
+\includegraphics{media/image30.wmf}. The failure rate tells us the
+average rate that a collection of identical devices will fail at a given
+time \emph{t}, while \includegraphics{media/image30.wmf} is a PDF used
+to determine the probability that a given device will fail within a
+specified time period. A CDF for \includegraphics{media/image30.wmf} is
+determined as
+
+\includegraphics{media/image31.wmf}. (14)
+
+\emph{F(t)} answers the question ``\emph{What is the probability that
+the device has failed by time t?}'' and it is also known as the
+\emph{\textbf{failure function}}. Take a few seconds to go back and
+review the definition of \emph{R(t)}. It is clear that \emph{R(t)} is
+directly related to \emph{F(t)} and is its complement. The relationship
+between the two is
+
+\includegraphics{media/image32.wmf}. (15)
+
+Since \emph{F(t)} is a CDF, it increases monotonically from an initial
+value of 0 to a maximum value of 1 as time goes to ∞ as shown in Figure
+8.7. Conversely, \emph{R(t)} starts at a value of 1 at time zero and
+decreases monotonically to a value of 0.
+
+\includegraphics[width=2.76042in,height=1.5625in]{media/image33.emf}
+
+\textbf{Figure 8.7} Example reliability and failure functions.
+
+Since \emph{λ(t)} represents data that is measured empirically, it is
+useful to establish a relationship between \emph{λ(t)} and the ultimate
+goal of reliability, \emph{R(t)}. To do so, a relationship between
+\emph{λ(t)}, \emph{R(t)}, and \includegraphics{media/image30.wmf} is
+established as follows. Consider a small period of time between \emph{t}
+and \includegraphics{media/image34.wmf}, and determine the probability
+of device failure during this period. From the approximation developed
+in (7), this probability is given by
+
+\includegraphics{media/image35.wmf}. (16)
+
+How is this probability related to \emph{R(t)} and \emph{λ(t)}?
+\emph{R(t)} provides the probability that the device is working at time
+\emph{t} and \emph{λ(t)~}gives the probability that the device will fail
+at time \emph{t}. The product of \emph{R(t), λ(t)}, and ∆\emph{t} gives
+the same probability of failure in (16)
+
+\includegraphics{media/image36.wmf}. (17)
+
+Equating (16) and (17) provides the desired relationship between the
+three quantities
+
+\includegraphics{media/image37.wmf}, (18)
+
+that is fundamental in establishing the connection between \emph{R(t)}
+and \emph{λ(t)}. However, the PDF \includegraphics{media/image30.wmf}
+needs to be eliminated from (18). This is accomplished through its
+relationship to the CDF \emph{F(t)}, and thus \emph{R(t)}, as follows
+
+\includegraphics{media/image38.wmf}. (19)
+
+Equating this result with (18) produces
+
+\includegraphics{media/image39.wmf}. (20)
+
+Integrating both sides gives
+
+\includegraphics{media/image40.wmf} (21)
+
+and solving for \emph{R(t)} produces the final result for reliability as
+a function of\emph{λ(t)}
+
+\includegraphics{media/image41.wmf}. (22)
+
+During the service lifetime phase, the failure rate is constant, which
+simplifies to
+
+\includegraphics{media/image42.wmf}. (23)
+
+This important result is now applied in Example 8.1.
+
+\emph{\textbf{\ul{Problem:}}} Consider a transistor with a constant
+failure rate of \includegraphics{media/image43.wmf}. What is the
+probability that the transistor will be operable in 5 years?
+
+\emph{\textbf{\ul{Solution:}}} This solution is found using the
+reliability function for a constant failure rate in (23) as follows.
+
+\includegraphics{media/image44.wmf}
+
+= \ul{95.7\%}.
+
+\subsubsection{\texorpdfstring{\hfill\break
+Mean Time to
+Failure}{ Mean Time to Failure}}\label{mean-time-to-failure}
+
+The \emph{\textbf{mean time to failure}} (MTTF) is a quantity which
+answers the question, ``\emph{On average how long does it take for a
+device to fail?}'' From its definition, it is apparent that the MTTF is
+the mean value of the random variable \emph{T} (failure time). It is
+determined from the PDF and the definition of the mean in (8) as follows
+
+\includegraphics{media/image45.wmf}. (24)
+
+At this point the form of the PDF for
+\includegraphics{media/image30.wmf} is not known, but it can be found
+from (19) since it is the negative derivative of \emph{R(t).} Assuming
+the form of \emph{R(t)} found in (23) for a constant failure rate gives
+
+\includegraphics{media/image46.wmf}. (25)
+
+This means that under the condition of a constant failure rate, the
+failure PDF follows an exponential density. The MTTF is found from
+\includegraphics{media/image30.wmf} via integration by parts to be
+
+\includegraphics{media/image47.wmf}. (26)
+
+This makes intuitive sense because \emph{λ} is the expected number of
+failures per unit time for a device. Consequently, the reciprocal of
+\emph{λ} is the expected time between failures or MTTF. Let's consider a
+few examples.
+
+\emph{\textbf{\ul{Problem:}}} Consider the transistor in Example 8.1.
+(a) Determine the MTTF, and (b) the reliability at the MTTF.
+
+\emph{\textbf{\ul{Solution:}}}
+
+(a) From (26) the MTTF = \includegraphics{media/image48.wmf}
+
+= \ul{114 years}.
+
+(b) From (23) the reliability at 114 years is
+
+\includegraphics{media/image49.wmf}
+
+= \ul{36.8\%}.
+
+This is a bit counterintuitive. Although the average time between
+transistor failures is 114 years, an individual transistor has only a
+36.8\% chance of surviving to 114 years. It would seem logical that the
+reliability at 114 years should be 50\% and that the transistor would
+have a 50-50 chance of failing. This would be true if
+\includegraphics{media/image30.wmf}were symmetric about its mean, but
+that is not the case for the exponential density.
+
+\textbf{Example 8.3} Human lifespan estimation.
+
+\emph{\textbf{\ul{Problem:}}} Data shows that for a 30 year old
+population, the failure (death) rate is constant with approximately 1.1
+deaths per 1000 people per year. Given this data, estimate the MTTF of
+humans.
+
+\emph{\textbf{\ul{Solution:}}} In order to find MTTF, λ is needed. From
+the information given it is
+
+\includegraphics{media/image50.wmf}
+
+From this MTTF is computed as
+
+\includegraphics{media/image51.wmf} = \ul{909 years}!
+
+While great news for those of us seeking longevity, this calculation is
+clearly wrong since the upper limit on human lifespan is empirically
+known to be about 120 years. Why is this so? Serious problems arise if
+\emph{R(t)} is used in situations where the underlying assumption is
+invalid. The results in (23) and (26) apply only if the failure rate is
+constant. Although that is nearly true for people in their 20s and 30s,
+it is not true as people age. People do wear out and the failure rate
+increases with age.
+
+\subsubsection{Failure Rate Estimates}\label{failure-rate-estimates}
+
+The overriding objective of this chapter is to estimate the future
+behavior of devices that are used in electrical and computer systems.
+The particular behavior of interest is the state of a device's
+functionality---the reliability, is it working or has it failed?
+Equation (23) indicates that it is fairly straightforward to determine
+reliability, if the failure rate (\emph{λ}) is known and is constant.
+One question to consider is what factors influence the failure rate of a
+device. Many of us probably have had experiences in the laboratory where
+we have caused devices to fail by subjecting them to conditions outside
+of the normal operating bounds, notably excessive current, power, or
+heat. In those cases the devices probably failed, or burned up, due to
+the operating conditions outside of the allowed bounds for the device.
+However, even when operated within the allowable norms of a device's
+operating conditions, variations in factors such as power, operating
+voltages, and temperatures impact \emph{λ}.
+
+The United States Military has kept copious records of device failures
+in the field and the conditions under which they operated. These records
+are synthesized in a handbook entitled \ul{Reliability Prediction of
+Electronic Equipment} {[}MIL-HDBK-217F{]} that provides failure rates
+for various analog and digital components, along with adjustment factors
+to account for operating conditions, the environment, and device
+quality. Categories of devices included in the handbook are switches,
+fuses, diodes, optoelectronic devices, and microelectronic devices (op
+amps, logic devices, microcontrollers, microprocessors). The handbook
+was last published in 1991 and has been discontinued, but it is still
+widely accepted and used. Bellcore (subsequently Telcordia) has
+developed newer models {[}Tel96{]} based upon MIL-HDBK-217F that were
+updated to better predict the reliability of components. MIL-HDBK-217F
+is used here since it is freely available in the public domain.
+
+Failure rates for resistors, capacitors, transistors, and integrated
+circuits from MIL-HDBK-217F are included in Appendix C. For each device,
+a base failure rate is given, \emph{λ\textsubscript{b}}, and multiplied
+by a number of adjustment factors, denoted by the symbol
+\includegraphics{media/image52.wmf}, to estimate the device failure rate
+\emph{λ}. Each adjustment factor has a unique subscript and their values
+are found from tables or equations in the handbook.
+
+For example, consider the low frequency field effect transistor in
+Appendix C. The overall failure rate is given by the equation
+\includegraphics{media/image53.wmf}. \includegraphics{media/image54.wmf}
+is the base failure rate that is directly read from a table,
+\includegraphics{media/image55.wmf}is a temperature factor which is
+computed from an exponential equation (be careful to use the junction
+temperature as indicated in Appendix C),
+\includegraphics{media/image56.wmf} is an application factor that
+depends upon how the device will be used,
+\includegraphics{media/image57.wmf} is a quality factor, and
+\includegraphics{media/image58.wmf} is an environmental factor. The
+quality factor table lists some strange names and values from 0.7 to
+8.0. The quality factor describes the level of burn-in and screening
+each device receives before leaving the factory. Joint Army/Navy (JAN,
+JANTX, and JANTXV) quality factors are the highest standard, and are
+usually required only for space vehicles. That individual attention to
+burn-in means that JAN parts are expensive and most JAN devices have
+passed their infant mortality phase before leaving the factory. When
+determining failure rate for a device from a table, it is common
+practice to always round parameters or values pessimistically so that
+the evaluation is a worst case analysis of its performance. That way the
+device should perform with a higher reliability when embedded into a
+system, hopefully causing only pleasant surprises in operation. Finally,
+the factor \includegraphics{media/image59.wmf} is based upon the
+different operating environments that are identified in Appendix C.
+Example 8.4 demonstrates the application of the MIL-HDBK-217F standard
+for reliability estimation.
+
+In summary, it is possible to estimate the reliability of devices if the
+failure rate is known and it is constant. The US Military and Telecordia
+handbooks provide guidance for estimating failure rates, and thus the
+component reliability. It must be kept in mind that they are estimates
+and not guaranteed to predict the exact performance. It is also apparent
+that this can become a rather time-consuming process if there are many
+components in a system, and thus the use of reliability software
+packages may be warranted.
+
+\textbf{\hfill\break
+Example 8.4} Reliability estimation using the MIL-HDBK 217F.
+
+\emph{\textbf{\ul{Problem:}}} Consider the circuit below that contains a
+bipolar junction transistor (BJT). This electronic circuit is a simple
+digital logic inverter. When the input voltage
+\includegraphics{media/image60.wmf} is 0, the BJT is off, no current
+flows through any branches of the device, and the output voltage,
+\includegraphics{media/image61.wmf}, is 5V. When the input is 5V (high)
+the BJT goes into saturation due to the high base current (low
+\includegraphics{media/image62.wmf}), producing a 50mA collector
+current, a large voltage drop across R\textsubscript{C}, and an output
+voltage close to 0V. The average collector current for the two states is
+25mA, producing an average power of 125mW (25mA×5V). Assume that the
+circuit is used in a missile launcher, the ambient temperature is 25°C,
+and that JANTX quality parts are used. Determine the MTTF and
+reliability for the 2N3904 BJT (a low power, low frequency BJT) in 20
+years.
+
+\includegraphics[width=4.25in,height=1.73958in]{media/image63.emf}
+
+\emph{\textbf{\ul{Solution:}}} The objective of this problem is to
+determine the failure rate, from which the MTTF and reliability are
+estimated. From the MIL-HDBK-217F data in Appendix C, the failure rate
+is
+
+\includegraphics{media/image64.wmf}
+
+The base failure rate is given directly as
+\includegraphics{media/image65.wmf}. \includegraphics{media/image55.wmf}
+is the temperature factor and its value is determined from the
+relationship
+
+\includegraphics{media/image66.wmf}.
+
+where \emph{T\textsubscript{J}} is the junction temperature. As
+indicated in Appendix C, it is computed as
+
+\includegraphics{media/image67.wmf}
+
+The thermal resistance, \includegraphics{media/image68.wmf}, is read
+from the 2N3904 datasheet (Appendix D) and will be examined in more
+detail shortly. The temperature factor is
+
+\includegraphics{media/image69.wmf}
+
+\includegraphics{media/image70.wmf} is an application factor (switched
+or linear amplification), and the value for the switched logic inverter
+is \includegraphics{media/image71.wmf}.
+\includegraphics{media/image72.wmf} is a power rating factor that is
+computed based upon the maximum rated power dissipation of the 2N3904
+(625mW from the component datasheet in Appendix D) as follows
+
+\includegraphics{media/image73.wmf}.
+
+\includegraphics{media/image74.wmf} is a stress factor that is computed
+from the ratio of the maximum collector-emitter voltage over the maximum
+rated value of the device. In this circuit, the maximum value of
+\includegraphics{media/image75.wmf} is 5V (when the device is off and no
+current flows), while the maximum rated value of
+\includegraphics{media/image76.wmf} from the 2N3904 datasheet is 40V.
+
+\includegraphics{media/image77.wmf}
+
+\includegraphics{media/image78.wmf} is the quality factor, and based
+upon the fact that a JANTX part is used
+\includegraphics{media/image79.wmf}. \includegraphics{media/image80.wmf}
+is the environmental factor, and for the missile launch application,
+\includegraphics{media/image81.wmf}.
+
+All of this is brought together to compute the failure rate. The product
+of the adjustment factors is computed as
+
+\includegraphics{media/image82.wmf}
+
+This allows estimation of the MTTF and requested reliability
+
+\includegraphics{media/image83.wmf} = \ul{71,804 years.}
+
+\includegraphics{media/image84.wmf}
+
+= \ul{99.97\%}.
+
+In conclusion, the BJT is estimated to be highly reliable in 20 years.
+
+\subsubsection{Thermal Management and Power
+Derating}\label{thermal-management-and-power-derating}
+
+One of the quantities computed in Example 8.4 was the junction
+temperature, \emph{T\textsubscript{J}}, which was computed from the
+power dissipated in the device and a quantity known as thermal
+resistance, \emph{θ}. It is important to understand this in more detail,
+since it impacts the reliability of microelectronic devices.
+Furthermore, if the junction temperature exceeds a certain value, the
+device will fail. Thus, thermal management issues need to be taken into
+account. We start with a physical model in Figure 8.8 (a), which has a
+junction (the integrated circuit or device), enclosed by a case (the
+packaging of the device), surrounded by ambient environmental
+conditions. In part (b) a heat sink is included which aids in thermal
+transfer. Each element has associated with it a quantity known as
+thermal resistance that measures the ability of that particular element
+to transfer heat to another element. A result from heat transfer for
+electronics is that changes in temperature (∆\emph{T}) are proportional
+to the product of power dissipation
+(\includegraphics{media/image85.wmf}) and the thermal resistance. This
+relationship is
+
+\includegraphics{media/image86.wmf}. (27)
+
+It is similar to Ohm's Law where the change in temperature, power, and
+thermal resistance (units = °C/W) are analogous to voltage, current, and
+electrical resistance respectively. The total thermal resistance between
+two elements, such as between ambient and the junction, is the sum of
+all thermal resistances between them. In the case with no heat sink,
+this produces a junction to ambient resistance of
+\includegraphics{media/image87.wmf}, while in the case with a heat sink,
+\includegraphics{media/image88.wmf}. In the case of the heat sink,
+\includegraphics{media/image89.wmf} is replaced by the sum
+\includegraphics{media/image90.wmf}, which has a lower combined thermal
+resistance and greater ability to dissipate heat.
+
+\includegraphics[width=2.09375in,height=1.29167in]{media/image91.emf}
+\includegraphics[width=3.01042in,height=1.5625in]{media/image92.emf}
+
+\textbf{Figure 8.8} Physical model of microelectronic devices with
+thermal junctions and temperatures indicated. (a) Device inside casing.
+(b) Device inside casing with a heat sink added.
+
+This Ohm's Law type of relationship means that thermal transfer can be
+modeled using familiar resistive circuits as shown in Figure 8.9. Based
+upon this circuit model, the temperature can be found at different
+points from the thermal resistance and power dissipation. Most
+importantly the junction temperature is found as
+
+\includegraphics{media/image93.wmf}. (28)
+
+\includegraphics[width=1.84375in,height=1.46875in]{media/image94.emf}
+\includegraphics[width=1.83333in,height=1.47917in]{media/image95.emf}
+
+\textbf{Figure 8.9} Resistive models for thermal transfer in
+microelectronic devices. (a) Device with no heat sink. (b) Device with a
+heat sink added.
+
+Let's now apply these results. Manufacturer datasheets typically
+identify the absolute maximum power dissipation and note that the device
+should be derated if operated at ambient conditions above room
+temperature (\includegraphics{media/image96.wmf}). The datasheets also
+supply a maximum junction temperature for the device. It is clear from
+the resistive model that, for a fixed power dissipation, the junction
+temperature increases along with ambient temperature. If the maximum
+junction temperature is exceeded, the device will be destroyed. Another
+way to look at this is that as ambient temperature increases, the
+maximum amount of power a device can dissipate decreases. This decrease
+in maximum power dissipation is known as \emph{\textbf{derating}}. From
+(28) the maximum power that can be dissipated in a device at a given
+ambient temperature is
+
+\includegraphics{media/image97.wmf} . (29)
+
+From this relationship, a power derating curve is plotted in Figure 8.10
+showing the maximum power versus ambient temperature. Example 8.5
+demonstrates the application of this to the inverter in Example 8.4.
+
+\includegraphics[width=3.36458in,height=2.09375in]{media/image98.emf}
+
+\textbf{Figure 8.10} Typical power derating curves.
+
+\textbf{Example 8.5} Power Derating for the Inverter Circuit.
+
+\emph{\textbf{\ul{Problem:}}} Assume the circuit in Example 8.4 is
+operating at an ambient temperature \includegraphics{media/image99.wmf}
+and that no heat sink is used. (a) Determine the derated power and if
+the design is within the manufacturer's limits for power dissipation at
+this temperature and, (b) re-compute the reliability at 20 years based
+upon this elevated operating temperature.
+
+\emph{\textbf{\ul{Solution:}}}
+
+(a) From the manufacturer datasheet in Appendix D, the 2N3904 BJT has a
+thermal resistance of \includegraphics{media/image100.wmf} and a maximum
+junction temperature of 150°C. From this the maximum power is computed
+from (29) as
+
+\includegraphics{media/image101.wmf}.
+
+The derated, or maximum, power at this temperature is \ul{150mW}.
+Clearly, the 125mW of power dissipated as determined in Example 8.4 for
+the BJT is within this derated limit.
+
+(b) To compute the failure rate the junction temperature and
+\includegraphics{media/image102.wmf}are re-computed.
+
+\includegraphics{media/image103.wmf}\includegraphics{media/image104.wmf}
+
+With this new value, the value of \includegraphics{media/image105.wmf},
+and the reliability is reduced slightly to \ul{99.88\%}. Note, however,
+the junction temperature is quite high at 145°C and further increases in
+temperature would likely destroy the device.
+
+\subsubsection{Limits of Reliability
+Estimation}\label{limits-of-reliability-estimation}
+
+It must be kept in mind that the reliability estimates are just that,
+estimates, and there are limitations in their use. First, realize that
+the failure rate data comes from accelerated stress tests, where devices
+are put under stress beyond normal operating conditions, and from these
+the failure rates are estimated. (Nobody sits around waiting 20 years
+for the devices to fail!) The tests are based upon mathematical models
+for the failure rate and the device lifetime. Secondly, there are other
+factors that influence reliability that are not addressed by \emph{λ},
+such as the manufacturing processes used, the quality of manufacturing
+technologies, shock, and corrosion. Part of the value of reliability
+estimation is for comparative purposes when evaluating different design
+options. Applying these methods forces the designer to consider the
+operating conditions and factor them into the design.
+
+\subsection{System Reliability}\label{system-reliability-1}
+
+The previous section focused on determining the reliability of a single
+device. It is natural to ask, ``\emph{How can the reliability of a
+system consisting of many devices be determined?}'' In order to derive
+the overall reliability of a multi-component system, it is necessary to
+take into account the overall system structure.
+
+\subsubsection{Series Systems}\label{series-systems}
+
+Consider the inverter circuit in Example 8.4---failure of any one
+component in the circuit would lead to the failure of the overall system
+or circuit. Conceptually, a system in which the failure of a single
+component (or subsystem) leads to failure of the overall system is known
+as a \emph{\textbf{series system}}. Figure 8.11 shows a block diagram of
+a series system composed of boxes \includegraphics{media/image106.wmf},
+\includegraphics{media/image107.wmf}, ...,
+\includegraphics{media/image108.wmf} that represent the components, or
+the subsystems, of a larger system.
+
+\includegraphics[width=3.20833in,height=0.44792in]{media/image109.emf}
+
+\textbf{Figure 8.11} A series system consisting of components, or
+subsystems \includegraphics{media/image106.wmf},
+\includegraphics{media/image107.wmf}, \ldots,
+\includegraphics{media/image108.wmf}.
+
+To compute the overall reliability of a series system,
+\includegraphics{media/image110.wmf}, it is assumed that the failure of
+subsystems or components are independent events. The system is operable
+only if subsystems \includegraphics{media/image106.wmf} and
+\includegraphics{media/image107.wmf} \ldots{} and
+\includegraphics{media/image108.wmf} are all simultaneously operating.
+Therefore, the probability of the overall system operating is given by
+the product of reliabilities for all of the subsystems as follows
+
+\includegraphics{media/image111.wmf}. (30)
+
+It is important to remember that failures are assumed to be independent
+events, just as flipping a coin twice is considered two independent
+events. The overall system reliability is less than or equal to that of
+any single subsystem, since all reliability values are ≤1. Thus
+\includegraphics{media/image112.wmf} decreases as the number of
+subsystems increases. Assuming a constant failure rate for all system
+components gives the following result for the overall system reliability
+
+\includegraphics{media/image113.wmf}. (31)
+
+This leads to a series system failure rate and MTTF of
+
+\includegraphics{media/image114.wmf}. (32)
+
+Example 8.6 revisits the inverter problem where the failure rates of all
+components are considered for system reliability estimation.
+
+\textbf{\hfill\break
+Example 8.6} Inverter circuit reliability.
+
+\emph{\textbf{\ul{Problem:}}} For the system in Example 8.4 estimate (a)
+the overall system reliability in 20 years, and (b) the MTTF. Assume
+room temperature and that ¼ watt fixed composition resistors are used.
+
+\emph{\textbf{\ul{Solution:}}}
+
+(a) Conceptually this is a series system---if any of the individual
+components fail, then the overall system will fail. That means that
+failure rates for the two resistors are needed in addition to the value
+previously computed for the transistor. They depend upon the power
+dissipated in each resistor, which is 125mW and 0.9mW for the collector
+and base resistors respectively. The failure rate for a fixed
+composition resistor from MIL-HDBK-217F is
+
+\includegraphics{media/image115.wmf}
+
+For the collector resistor, R\textsubscript{C}, the base failure rate is
+computed as
+
+\includegraphics{media/image116.wmf}
+
+The \emph{S} term is the ratio of power dissipated to the maximum power
+rating. The values \includegraphics{media/image117.wmf},
+\includegraphics{media/image118.wmf}, and
+\includegraphics{media/image119.wmf} are directly read from tables. Thus
+the overall failure rate for the collector resistor is
+
+\includegraphics{media/image120.wmf}\includegraphics{media/image121.wmf}.
+
+The process for the base resistor, R\textsubscript{B}, is similar, and
+results in
+
+\includegraphics{media/image122.wmf}\includegraphics{media/image123.wmf}.
+
+The total failure rate is given from (32) as
+
+\includegraphics{media/image124.wmf}
+
+\includegraphics{media/image125.wmf}
+
+= \ul{96.3\%}.
+
+Since resistors are pretty reliable devices, the overall system
+reliability decreases only a small amount relative to that of the BJT
+itself.
+
+(b) The MTTF is given by \includegraphics{media/image126.wmf} which in
+this case is \ul{531 years}.
+
+\subsubsection{Parallel Systems}\label{parallel-systems}
+
+From (30) it is clear that as more components are added to a series
+system, the reliability decreases. It is natural to ask if the
+reliability can be increased. The use of redundancy gives us a method to
+answer in the affirmative. A design has \emph{\textbf{redundancy}} if it
+contains multiple modules performing the same function where a single
+module would suffice. By its very nature redundancy allows improperly
+functioning modules to be switched out of the system without affecting
+its behavior. With redundancy the overall system functions correctly
+when any one of the submodules is functioning. Figure 8.12 shows a
+simplified view of a \emph{\textbf{parallel system}} with subsystems
+\includegraphics{media/image127.wmf},
+\includegraphics{media/image107.wmf}, \ldots,
+\includegraphics{media/image128.wmf}.
+
+\includegraphics[width=1.51042in,height=2.03125in]{media/image129.emf}
+
+\textbf{Figure 8.12} A parallel, or redundant, system consisting of
+subsystems \includegraphics{media/image106.wmf},
+\includegraphics{media/image130.wmf}, \ldots,
+\includegraphics{media/image108.wmf}
+
+In order to compute the reliability of a parallel system, note that a
+parallel system functions correctly when
+\includegraphics{media/image131.wmf} is functioning correctly, or
+\includegraphics{media/image132.wmf} is functioning correctly, \ldots{}
+or \includegraphics{media/image133.wmf} is functioning correctly. It
+would be nice if it were possible to write an equation stating that
+\includegraphics{media/image134.wmf}\emph{,} where + is the logical OR
+operator. Unfortunately, there is no direct way to realize the OR
+operation in probability theory. This is resolved by working with
+failure function, \emph{F(t)}, instead. The probability that the system
+will fail by time \emph{t}, \includegraphics{media/image135.wmf}, is
+equal to the probability that subsystem
+\includegraphics{media/image136.wmf} will fail and
+\includegraphics{media/image137.wmf} will fail and \ldots{}
+\includegraphics{media/image138.wmf} will fail. This probability is
+expressed mathematically as
+
+\includegraphics[width=2.77083in,height=0.33333in]{media/image139.wmf}.
+(33)
+
+The overall system reliability of the parallel system is found from this
+as
+
+\includegraphics{media/image140.wmf} . (34)
+
+As more redundant components are added to a parallel system, additional
+\includegraphics{media/image141.wmf} terms are introduced into the
+product term. This decreases the value of the product, hence the overall
+system reliability is increased as more redundant systems are added.
+
+In order for a parallel system to work, a mechanism must be in place to
+monitor each of the subsystems to make sure that they are operating
+correctly. Developing circuits to detect failures and control the
+switching between subsystems can be complex and is not considered here.
+Special care must be paid to the switching circuit itself, as
+malfunction of this circuit could lead to an overall system failure. An
+example of parallel system reliability is given in Example 8.7.
+
+\textbf{Example 8.7} Reliability of a Redundant Array of Independent
+Disks (RAID).
+
+\emph{\textbf{\ul{Problem:}}} In a RAID, multiple hard drives are used
+to store the same data, thus achieving redundancy and increased
+reliability. One or more of the disks in the system can fail and the
+data can still be recovered. However, if all disks fail, then the data
+is lost. For this problem, assume that the individual disk drives have a
+failure rate of \includegraphics{media/image142.wmf}. How many disks
+must the system have to achieve a reliability of 98\% in 10 years?
+
+\emph{\textbf{\ul{Solution:}}} The reliability of a parallel system with
+redundancy is given by (34). Since all of the disks are identical, the
+expression simplifies to
+
+\includegraphics{media/image143.wmf}.
+
+In order to achieve this reliability, \ul{n=8} disks are required. The
+reliability of each individual disk is low at 42\%, but using
+redundancy, the overall system reliability is quite high.
+
+\subsubsection{Combination Systems}\label{combination-systems}
+
+Many real systems do not fit neatly into either parallel or series
+reliability models as shown in Figure 8.13. Rather, they may be a
+combination of the two, and such systems will be referred to as
+combination systems. One way to determine the reliability of a
+combination system is to utilize the results obtained for series and
+parallel systems in (30) and (34). The system network is reduced by
+combining parallel subsystems into a single block, whose reliability is
+given by (34), while series subsystems are reduced to a single block
+whose reliability is given by (30). This is conceptually analogous to
+combining series and parallel resistances in electrical circuits. The
+network is continually reduced until only a single block remains whose
+reliability is known from all of the subsystem combinations.
+
+To illustrate this, consider the system in Figure 8.13. To determine the
+reliability, start by combining the three parallel systems
+\includegraphics{media/image144.wmf},
+\includegraphics{media/image145.wmf}, and
+\includegraphics{media/image146.wmf}\textsubscript{,} whose reliability
+is determined by application of (34) to be
+\includegraphics{media/image147.wmf}. The result is then combined with
+\includegraphics{media/image106.wmf} in series to give the overall
+system reliability, \includegraphics{media/image148.wmf}. The chapter
+concludes with Example 8.8 that addresses combination system
+reliability.
+
+\includegraphics[width=2.35417in,height=1.71875in]{media/image149.emf}
+
+\textbf{Figure 8.13} A combination series-parallel system.
+S\textsubscript{2}, S\textsubscript{3}, and S\textsubscript{4} are
+redundant parallel systems.
+
+\textbf{Example 8.8} Combination system reliability.
+
+\emph{\textbf{\ul{Problem:}}} Consider the system shown below with the
+following reliabilities at a fixed time \emph{t},
+\includegraphics{media/image150.wmf}. Determine the reliability that
+subsystems \includegraphics{media/image151.wmf} and
+\includegraphics{media/image152.wmf} must have so that the overall
+system reliability is greater than 95\%.
+
+\includegraphics[width=2.78125in,height=1.08333in]{media/image153.emf}
+
+\emph{\textbf{\ul{Solution:}}} The parallel systems can combined into
+single systems whose reliabilities are
+
+\includegraphics{media/image154.wmf}
+
+They are combined in series to give the overall system reliability
+
+\includegraphics{media/image155.wmf}.
+
+Substituting values and assuming \includegraphics{media/image156.wmf}
+gives
+
+\includegraphics{media/image157.wmf}.
+
+Solving for the reliabilities gives the final result
+
+\includegraphics{media/image158.wmf}.
+
+This example demonstrates the power of redundant systems.
+\includegraphics{media/image106.wmf} and
+\includegraphics{media/image159.wmf} have somewhat low reliabilities
+relative to the overall system goal, but the reliability of the parallel
+combination of \includegraphics{media/image106.wmf} and
+\includegraphics{media/image160.wmf} is 96\%. It requires a reliability
+for systems 3 and 4 of \includegraphics{media/image161.wmf}\ul{90\%},
+while the combined reliability of systems 3 and 4 is 99\%.
+
+\subsection{Summary and Further
+Reading}\label{summary-and-further-reading}
+
+This chapter presented the basics of probability theory and methods for
+estimating the reliability of components and systems. Failure rate is an
+important quantity that is determined empirically and provides the rate
+of failure over the lifetime of a component or system. A mathematical
+definition of reliability was derived from this quantity, which takes a
+simple exponential form in the case of a constant failure rate. This was
+applied to estimate the reliability of single components, particularly
+using failure rates from MIL-HDBK-217F. Issues of thermal transfer and
+power derating were considered. Reliability estimation was extended to
+more realistic systems consisting of multiple components in series and
+parallel forms. The use of redundancy with parallel systems to increase
+the overall system reliability was addressed.
+
+There are plenty of good textbooks available on the probability theory,
+if it is necessary to study probability theory further. The book
+\ul{Practical Reliability of Electronic Equipment and Products}
+{[}Hna03{]} provides detailed coverage for electrical systems
+reliability. It includes factors not considered here such as thermal
+management on printed circuit boards, procurement practices, and
+electromagnetic interference. Two excellent articles that demonstrate
+the application of design for reliability and redundancy for an embedded
+system application are by George Novacek in \ul{Circuit Cellar} magazine
+{[}Nov00, Nov01{]}.
+
+\subsection{Problems}\label{problems}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Consider a random variable that obeys a uniform density and varies
+  from 2 to 5. (a) Determine the mean and variance of the random
+  variable. (b) What is the probability that the random variable is
+  between 2 and 3? (c) Plot the CDF.
+\item
+  In Figure 8.7 it was assumed that the CDF function is monotonically
+  increasing. That is, \includegraphics{media/image162.wmf}. Show why
+  this is so using equation (13).
+\item
+  Describe what is meant by \emph{failure rate}, \emph{failure
+  function}, and \emph{reliability}.
+\item
+  Consider an integrated circuit that has
+  \includegraphics{media/image163.wmf}. (a) Determine the mean time to
+  failure. (b) Determine the reliability in 5, 10, 15, and 20 years.
+\item
+  Consider a CD4001BC 2-Input Quad NOR gate (datasheet available in
+  Appendix D). Also assume it is a glass-sealed dual inline package, 15
+  years in production, \includegraphics{media/image164.wmf}, the power
+  dissipated in the application averages 10mW, it has B-1 quality, and
+  that it is to be operated in laboratory equipment at an ambient
+  temperature of 25°C. Use the MIL-HDBK-217F data in Appendix C to
+  determine the MTTF and estimate its reliability in 25 years.
+\item
+  Use the MIL-HDBK-217F data in Appendix C to estimate the reliability
+  of a 32 bit CMOS microprocessor. Assume that it is used in a missile
+  launcher, the ambient temperature is 120°C, that it has 64 pins, that
+  it has been in production for 6 months, B-1 quality parts are used,
+  and it is a non-hermetic DIP. Determine the MTTF and reliability for
+  the microprocessor in 20 years. (Note: this is the same operating
+  environment used for the BJT in Example 8.5.)
+\item
+  Consider a 1N4001 diode (datasheet in Appendix D) that is to be
+  operated in the switching circuit shown below. Also assume that the
+  part quality is Lower, it is metallurgically bonded, and that it is to
+  be used in an airborne inhabited cargo environment at an ambient
+  temperature of 50°C. Use the MIL-HDBK-217F data in Appendix C to
+  determine the MTTF and estimate its reliability in 25 years.
+\end{enumerate}
+
+\includegraphics[width=2.5in,height=1.51042in]{media/image165.emf}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\item
+  Use the MIL-HDBK-217F data in Appendix C to determine the reliability
+  of the inverting op amp circuit, shown below, in 15 years. Assume that
+  it is used in an automotive application (environmental factor =
+  G\textsubscript{M}), the ambient operating temperature is
+  80\textsuperscript{O}C, industrial quality parts are employed, and ¼
+  watt fixed composition resistors of the lowest quality are used. The
+  datasheet for the LM741 op amp is in Appendix D. The LM741 is
+  considered to be a linear microcircuit, comes in a dual inline package
+  (DIP), contains 25 bipolar transistors, has S quality, and has been in
+  production for well over 20 years.
+\end{enumerate}
+
+\includegraphics[width=2.8125in,height=1.77083in]{media/image166.emf}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\item
+  Consider the circuit in Example 8.4. Assume that a heat sink is
+  attached to the 2N3904 BJT (datasheet in Appendix D) and it has the
+  following thermal resistance values
+  \includegraphics{media/image167.wmf} and
+  \includegraphics{media/image168.wmf}. If the device is operated at an
+  ambient temperature of 130°C, determine the maximum power dissipation
+  of the BJT and its reliability in 50 years.
+\item
+  Your company intends to design, manufacture, and market a new RAID
+  (Redundant Array of Independent Disks) for network servers. The system
+  must be able to store a total of 500GB of user data and must have a
+  reliability of at least 95\% in 10 years. In order to develop the RAID
+  system, 20GB drives will be designed and utilized. To meet the
+  requirement, you have decided to use a bank of 25 disks
+  (25x20GB=500GB) and utilize a system redundancy of 4 (each of the 25
+  disks has a redundancy of 4). What must the reliability of the 20GB
+  drive be in 10 years in order to meet the overall system reliability
+  requirement?
+\item
+  \includegraphics{media/image106.wmf} has a failure probability of 2\%
+  and \includegraphics{media/image169.wmf} has a failure probability of
+  3\%. \includegraphics{media/image170.wmf},
+  \includegraphics{media/image171.wmf},
+  \includegraphics{media/image172.wmf}, and
+  \includegraphics{media/image173.wmf} are identical redundant systems.
+  Determine the required reliability of the redundant systems necessary
+  for the overall system to have a reliability of 94\%.
+\end{enumerate}
+
+\includegraphics[width=2.0625in,height=1.96875in]{media/image174.emf}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\item
+  Consider the design of a triply-redundant majority voting system, with
+  three binary inputs a, b, and c shown below. The inputs represent data
+  from 3 independent sources from which the objective is to determine if
+  the majority of the input bit values are logic level 0 or 1. Each
+  majority circuit outputs the bit value that is in the majority of the
+  inputs. The output of each majority circuit is fed into a resistor and
+  LED (light emitting diode) network. The LEDs are lit if the output of
+  the majority circuit is a logic 1, otherwise the LED is off. Ideally,
+  all three LEDs are lit if the majority of inputs is 1, else they are
+  all off. However, if part of the system fails, the LED readings may
+  not be reliable, so a majority rules decision is used on the LEDs. The
+  criterion used is that if two or more LEDs are on, then the majority
+  of inputs are considered to be high, otherwise, the majority of inputs
+  are considered to be low. Determine the probability of a false reading
+  based upon this criterion if each component in the system (gate,
+  resistor, or LED) has a reliability of 90\%.
+\end{enumerate}
+
+\begin{quote}
+\includegraphics[width=4.1875in,height=2.48958in]{media/image175.emf}
+\end{quote}
