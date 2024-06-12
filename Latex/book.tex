@@ -1,0 +1,41 @@
+%%------------------------------------
+%%------------------------------------
+
+%%------------------------------------------------------
+%% Document formatting standards.
+%%
+%%------------------------------------------------------
+
+
+%%\documentclass[11pt,psfig]{book}
+\documentclass[11pt]{book}
+%%\usepackage{makeidx, graphics, textcomp, setspace}
+\usepackage{makeidx, graphics, textcomp, setspace}
+\makeindex
+
+\begin{document}
+
+
+
+\frontmatter
+\title{{\Huge Design for Electrical and Computer Engineers} \\
+				A Datapath and Control Approach}
+\author{Ralph Ford and Christopher Coulston}
+\date{}
+\maketitle
+
+\begin{titlepage}
+\center
+%%\includegraphics{./Fig/cover}
+\end{titlepage}
+
+\include{copyright}
+\include{dedication}
+\tableofcontents
+
+\mainmatter
+\include{./chapter01/chapter1}
+\appendix
+\include{appendix}
+\printindex
+\end{document} 
