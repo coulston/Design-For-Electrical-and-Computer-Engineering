@@ -1,5 +1,6 @@
-%%------------------------------------
-%%------------------------------------
+%%------------------------------------------------------
+%% Conversion of Ford and Coulston to LaTEX
+%%------------------------------------------------------
 
 %%------------------------------------------------------
 %% Document formatting standards.
@@ -7,35 +8,28 @@
 %%------------------------------------------------------
 
 
-%%\documentclass[11pt,psfig]{book}
 \documentclass[11pt]{book}
-%%\usepackage{makeidx, graphics, textcomp, setspace}
-\usepackage{makeidx, graphics, textcomp, setspace}
+\usepackage{graphicx}
+\usepackage{imakeidx}
 \makeindex
 
 \begin{document}
 
-
-
 \frontmatter
 \title{{\Huge Design for Electrical and Computer Engineers} \\
-				A Datapath and Control Approach}
-\author{Ralph Ford and Christopher Coulston}
+				Theory, Concepts, and Practice}
+\author{Ralph M. Ford and Christopher S. Coulston}
 \date{}
 \maketitle
 
-\begin{titlepage}
-\center
-%%\includegraphics{./Fig/cover}
-\end{titlepage}
 
 \include{copyright}
-\include{dedication}
 \tableofcontents
 
-\mainmatter
-\include{./chapter01/chapter1}
-\appendix
-\include{appendix}
+\mainmatter 					% Now Use Arabic numerals for page numbers
+
+\include{./chapter01/chapter01}
+
 \printindex
+
 \end{document} 
