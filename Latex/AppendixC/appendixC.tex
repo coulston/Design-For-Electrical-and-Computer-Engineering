@@ -1,0 +1,1469 @@
+\section{\texorpdfstring{Component Failure Rate Data
+}{Component Failure Rate Data }}\label{component-failure-rate-data}
+
+This appendix contains failure rate data for selected electronic
+components in support of Chapter 8. The information was abstracted from
+the \ul{Military Handbook for Reliability Prediction}
+{[}MIL-HDBK-217F{]} and contains information for devices that are
+relevant to this book. The information is a close facsimile to
+MIL-HDBK-217F, but in some instances comments are added to help
+interpret the information. Furthermore, MIL-HDBK-217F tends to present
+both empirical estimation formulas and tabular data computed from the
+formulas. The tabular data is generally not included here for simplicity
+of presentation, and is readily obtained from the formulas supplied.
+Data is presented for the following devices:
+
+\begin{itemize}
+\item
+  Analog components: resistors and capacitors.
+\item
+  Discrete semiconductors: diodes, bipolar transistors, and field effect
+  transistors.
+\item
+  Microcircuits: gate/logic arrays and microprocessors.
+\end{itemize}
+
+\subsection{Environmental Use}\label{environmental-use}
+
+All of the devices presented in this appendix have an environmental
+factor that is used to estimate the failure rate. The environmental
+factors are based on the 14 categories in Table C.1.
+
+\textbf{Table C.1} Environmental symbols and descriptions taken directly
+from MIL-HDBK-217F.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2477}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7523}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Environment}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Description}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G\textsubscript{B} -- Ground, Benign & Nonmobile, temperature and
+humidity controlled environments readily accessible to maintenance;
+includes laboratory instruments and test equipment, medical electronic
+equipment, business and scientific computer complexes, and missile and
+support equipment in ground silos. \\
+G\textsubscript{F} -- Ground, Fixed & Moderately controlled environments
+such as installation in permanent racks with adequate cooling air and
+possible installation in unheated buildings; includes permanent
+installation of air traffic control radar and communication
+facilities. \\
+G\textsubscript{M} -- Ground, Mobile & Equipment installed in wheeled or
+tracked vehicles and equipment manually transported; includes tactical
+missile ground support equipment, mobile communication equipment,
+tactical fire direction systems, handheld communications equipment,
+laser designations and range finders. \\
+\end{longtable}
+
+\textbf{Table C.1} Environmental symbols and descriptions taken directly
+from MIL-HDBK-217F, cont'd.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2477}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7523}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Environment}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Description}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+N\textsubscript{S} -- Naval, Sheltered & Includes sheltered or below
+deck conditions on surface ships and equipment installed in
+submarines. \\
+N\textsubscript{U} -- Naval, Unsheltered & Unprotected surface shipborne
+equipment exposed to weather conditions and equipment immersed in salt
+water. Includes sonar equipment and equipment installed on hydrofoil
+vessels. \\
+A\textsubscript{IC} -- Airborne, Inhabited Cargo & Typical conditions in
+cargo compartments that can be occupied by an aircrew. Environment
+extremes of pressure, temperature, shock, and vibration are minimal.
+Examples include long mission aircraft such as the C130, C5, B52, and
+C141. This category also applies to inhabited areas in lower performance
+smaller aircraft such as the T38. \\
+A\textsubscript{IF} -- Airborne, Inhabited Fighter & Same as
+A\textsubscript{IC} but installed on high performance aircraft such as
+fighters and interceptors. Examples include the F15, F16, F111, F/A 18
+and A10 aircraft. \\
+A\textsubscript{UC} - Airborne, Uninhabited Cargo & Environmentally
+uncontrolled areas that cannot be inhabited by crew during flight.
+Environmental extremes of pressure, temperature, and shock may be
+severe. Examples include uninhabited areas of long aircraft such as the
+C130, C5, B52, and C141. This category also applies to uninhabited areas
+in lower performance smaller aircraft such as the T38. \\
+A\textsubscript{UF} - Airborne, Uninhabited Fighter & Same as
+A\textsubscript{UC} but installed on high performance aircraft such as
+fighters and interceptors. Examples include the F15, F16, F111, and A10
+aircraft. \\
+A\textsubscript{RW} -- Airborne, Rotary Winged & Equipment installed on
+helicopters. Applies to both internally and externally mounted equipment
+such as laser designators, fire control systems, and communications
+equipment. \\
+S\textsubscript{F} -- Space, Flight & Earth orbital. Approaches benign
+ground conditions. Vehicle neither under powered flight nor in
+atmospheric re-entry; includes satellites and shuttles. \\
+M\textsubscript{F} -- Missile, Flight & Conditions related to powered
+flight of air breathing missiles, cruise missiles, and missiles in
+unpowered free flight. \\
+M\textsubscript{L} -- Missile, Launch & Severe conditions related to
+missile launch (air, ground, and sea), space vehicle boost into orbit,
+and vehicle re-entry and landing by parachute. Also applies to solid
+rocket motor propulsion powered flight, and torpedo and missile launch
+from submarines. \\
+C\textsubscript{L} -- Cannon, Launch & Extremely severe conditions
+related to cannon launching of 155 mm and 5 inch guided projectiles.
+Conditions apply to the projectile from launch to target impact. \\
+\end{longtable}
+
+\subsection{Analog Components: Resistors and
+Capacitors}\label{analog-components-resistors-and-capacitors}
+
+This section contains failure rate data for resistors and capacitors.
+
+\subsubsection{Resistors: Fixed Composition, Fixed Film, and
+Wirewound}\label{resistors-fixed-composition-fixed-film-and-wirewound}
+
+The failure rate is given by the following relationship
+
+\includegraphics{Fig/media/image1.wmf}.
+
+\includegraphics{Fig/media/image2.wmf} \textbf{- Base Failure Rate}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2913}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7087}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Resistor Type}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image3.wmf}
+
+\includegraphics{Fig/media/image4.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Fixed Composition & \includegraphics{Fig/media/image5.wmf} \\
+Fixed Film & \includegraphics{Fig/media/image6.wmf} \\
+Wirewound & \includegraphics{Fig/media/image7.wmf} \\
+\end{longtable}
+
+\textbf{Resistance Factor -} \includegraphics{Fig/media/image8.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2684}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2332}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2653}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2332}}@{}}
+\toprule\noalign{}
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.5015} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Fixed Composition or Fixed Film Resistors}
+\end{minipage}} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.4985} + 2\tabcolsep}@{}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Wirewound Resistors}
+\end{minipage}} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Resistance Range} & \includegraphics{Fig/media/image9.wmf} &
+\textbf{Resistance Range} & \includegraphics{Fig/media/image10.wmf} \\
+\includegraphics{Fig/media/image11.wmf} & 1.0 &
+\includegraphics{Fig/media/image12.wmf} & 1.0 \\
+\includegraphics{Fig/media/image13.wmf} & 1.1 &
+\includegraphics{Fig/media/image14.wmf} & 1.7 \\
+\includegraphics{Fig/media/image15.wmf} & 1.6 &
+\includegraphics{Fig/media/image16.wmf} & 3.0 \\
+\includegraphics{Fig/media/image17.wmf} & 2.5 &
+\includegraphics{Fig/media/image18.wmf} & 5.0 \\
+\end{longtable}
+
+\textbf{\hfill\break
+Quality Factor -} \includegraphics{Fig/media/image19.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Quality}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image20.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+S & 0.03 \\
+R & 0.1 \\
+P & 0.3 \\
+M & 1.0 \\
+MIL-R & 5.0 \\
+Lower & 15 \\
+\end{longtable}
+
+\textbf{Environmental factor -} \includegraphics{Fig/media/image21.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2144}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3119}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2423}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2315}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Environment}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image22.wmf}\textbf{-}
+
+\textbf{Fixed Composition}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image23.wmf}\textbf{-}
+
+\textbf{Fixed Film}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image24.wmf}\textbf{-}
+
+\textbf{Wirewound}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G\textsubscript{B} & 1 & 1 & 1 \\
+G\textsubscript{F} & 3 & 2 & 2 \\
+G\textsubscript{M} & 8 & 8 & 11 \\
+N\textsubscript{S} & 5 & 4 & 5 \\
+N\textsubscript{U} & 13 & 14 & 18 \\
+A\textsubscript{IC} & 4 & 4 & 15 \\
+A\textsubscript{IF} & 5 & 8 & 18 \\
+A\textsubscript{UC} & 7 & 10 & 28 \\
+A\textsubscript{UF} & 11 & 18 & 35 \\
+A\textsubscript{RW} & 19 & 19 & 27 \\
+S\textsubscript{F} & 0.50 & 0.20 & 0.80 \\
+M\textsubscript{F} & 11 & 10 & 14 \\
+M\textsubscript{L} & 27 & 28 & 38 \\
+C\textsubscript{L} & 490 & 510 & 610 \\
+\end{longtable}
+
+\subsubsection{Capacitors: Fixed, Ceramic, and General
+Purpose}\label{capacitors-fixed-ceramic-and-general-purpose}
+
+The failure rate is given by the following relationship
+
+\includegraphics{Fig/media/image25.wmf} .
+
+For all factors \includegraphics{Fig/media/image26.wmf}ambient
+temperature (°C) and \includegraphics{Fig/media/image27.wmf}, where the
+operating voltage is the sum of the DC and peak AC voltage.
+
+\textbf{Base Failure Rate -} \includegraphics{Fig/media/image28.wmf}
+
+\includegraphics{Fig/media/image29.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4619}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0807}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4574}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Capacitance Factor -} \includegraphics{Fig/media/image30.wmf}
+
+\includegraphics{Fig/media/image31.wmf}
+
+\textbf{Quality Factor -} \includegraphics{Fig/media/image32.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5574}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4426}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Quality}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image33.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+S & 0.030 \\
+R & 0.10 \\
+P & 0.30 \\
+M & 1.0 \\
+L & 3.0 \\
+MIL & 3.0 \\
+Lower & 10 \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Environmental Factor -} \includegraphics{Fig/media/image34.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6519}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3481}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Environment}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image35.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G\textsubscript{B} & 1 \\
+G\textsubscript{F} & 2 \\
+G\textsubscript{M} & 9 \\
+N\textsubscript{S} & 5 \\
+N\textsubscript{U} & 15 \\
+A\textsubscript{IC} & 4 \\
+A\textsubscript{IF} & 4 \\
+A\textsubscript{UC} & 8 \\
+A\textsubscript{UF} & 12 \\
+A\textsubscript{RW} & 20 \\
+S\textsubscript{F} & 0.40 \\
+M\textsubscript{F} & 13 \\
+M\textsubscript{L} & 34 \\
+C\textsubscript{L} & 610 \\
+\end{longtable}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\subsection{\texorpdfstring{\hfill\break
+Microelectronic
+Devices}{ Microelectronic Devices}}\label{microelectronic-devices}
+
+For all microelectronic devices it is necessary to compute the junction
+temperature (\includegraphics{Fig/media/image36.wmf}) of the silicon in
+order to determine the temperature factor. The junction temperature is
+determined as follows:
+
+\includegraphics{Fig/media/image37.wmf}
+
+\textbf{Author's Note:} The equations above are slightly different than
+those found in MIL-HDBK-217F. The junction to ambient thermal resistance
+is used here, instead of junction to case as in the original. In
+addition, the ambient temperature is used in place of the case
+temperature. This is more general and is consistent with the
+presentation in Chapter 8. The junction to case resistance could be
+used, along with the case temperature. See Section 8.2 for more detailed
+coverage of this thermal model.
+
+The part quality descriptors in Table C.2 are used to find the quality
+factors.
+
+\textbf{Table C.2} Part quality descriptors for microelectronic devices.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2140}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7860}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{JANTXV}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Full device testing as specified by the MIL-S-19500 specification,
+including Screening and Groups A, B, and C.
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{JANTX} & Identical to JANTXV, except does not include the 100\%
+precap visual inspection contained in Screening. \\
+\textbf{JAN} & Testing as defined by MIL-S-19500, including Groups A, B,
+and C, but not including Screening. \\
+\textbf{Lower} & All hermetically packaged devices. \\
+\textbf{Plastic} & All devices encapsulated with organic materials. \\
+\end{longtable}
+
+\subsubsection{\texorpdfstring{\hfill\break
+Diodes: Low
+Frequency}{ Diodes: Low Frequency}}\label{diodes-low-frequency}
+
+The failure rate is given by the following relationship
+
+\includegraphics{Fig/media/image38.wmf}.
+
+\textbf{Base Failure Rate -} \includegraphics{Fig/media/image39.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6494}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3506}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Diode Type/Application}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image40.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+General purpose analog & 0.0038 \\
+Switching & 0.0010 \\
+Power rectifier, fast recovery & 0.069 \\
+Power rectifier, Schottky power diode & 0.0030 \\
+Power rectifier with high voltage stacks & 0.0050/Junction \\
+Transient suppressor/varistor & 0.0013 \\
+Current regulator & 0.0034 \\
+Voltage regulator and voltage reference (avalanche and zener) &
+0.0020 \\
+\end{longtable}
+
+\textbf{Temperature Factor -} \includegraphics{Fig/media/image41.wmf}
+
+For general purpose analog, switching, fast recovery, power rectifier,
+and transient suppressor applications
+
+\includegraphics{Fig/media/image42.wmf}.
+
+For voltage regulator, voltage reference, and current regulator
+applications
+
+\includegraphics{Fig/media/image43.wmf}.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5899}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0590}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3510}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Electrical Stress Factor -}
+\includegraphics{Fig/media/image44.wmf}
+
+\includegraphics{Fig/media/image45.wmf}
+
+\textbf{Quality Factor -} \includegraphics{Fig/media/image46.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5574}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4426}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Quality}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image47.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+JANTXV & 0.7 \\
+JANTX & 1.0 \\
+JAN & 2.4 \\
+Lower & 5.5 \\
+Plastic & 8.0 \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Contact Construction Factor -}
+\includegraphics{Fig/media/image48.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6690}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3310}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Contact Construction}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image49.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Metallurgically bonded & 1.0 \\
+Non-metallurgically bonded and spring loaded contacts & 2.0 \\
+\end{longtable}
+
+\textbf{Environmental Factor -} \includegraphics{Fig/media/image50.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6519}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3481}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Environment}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image51.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G\textsubscript{B} & 1 \\
+G\textsubscript{F} & 6 \\
+G\textsubscript{M} & 9 \\
+N\textsubscript{S} & 9 \\
+N\textsubscript{U} & 19 \\
+A\textsubscript{IC} & 13 \\
+A\textsubscript{IF} & 29 \\
+A\textsubscript{UC} & 20 \\
+A\textsubscript{UF} & 43 \\
+A\textsubscript{RW} & 24 \\
+S\textsubscript{F} & 0.50 \\
+M\textsubscript{F} & 14 \\
+M\textsubscript{L} & 32 \\
+C\textsubscript{L} & 320 \\
+\end{longtable}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\subsubsection{\texorpdfstring{\hfill\break
+Diodes: High Frequency (microwave,
+RF)}{ Diodes: High Frequency (microwave, RF)}}\label{diodes-high-frequency-microwave-rf}
+
+The failure rate is given by the following relationship
+
+\includegraphics{Fig/media/image52.wmf}.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4766}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0720}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4514}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Base Failure Rate -} \includegraphics{Fig/media/image53.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6964}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3036}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Diode Type}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image54.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Si IMPATT (\includegraphics{Fig/media/image55.wmf}GHz) & 0.22 \\
+Gunn/Bulk Effect & 0.18 \\
+Tunnel and Back & 0.0023 \\
+PIN & 0.0081 \\
+Schottky Barrier & 0.027 \\
+Varactor and Step Recovery & 0.0025 \\
+\end{longtable}
+
+\textbf{Application Factor -} \includegraphics{Fig/media/image56.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6865}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3135}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Application}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image57.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Varactor, voltage control & 0.50 \\
+Varactor, multiplier & 2.5 \\
+All other diodes & 1.0 \\
+\end{longtable}
+
+\textbf{Quality Factor -} \includegraphics{Fig/media/image58.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3200}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3800}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Quality}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image59.wmf}
+
+\textbf{Not Shottky}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image60.wmf}
+
+\textbf{Shottky}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+JANTXV & 0.5 & 0.5 \\
+JANTX & 1.0 & 1.0 \\
+JAN & 5.0 & 1.8 \\
+Lower & 25.0 & 2.5 \\
+Plastic & 50.0 & - \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Temperature Factor -} \includegraphics{Fig/media/image61.wmf}
+
+All types except IMPATT
+
+\includegraphics{Fig/media/image62.wmf},
+
+and for IMPATT
+
+\includegraphics{Fig/media/image63.wmf}.
+
+\textbf{Power Rating Factor -} \includegraphics{Fig/media/image64.wmf}
+
+\includegraphics{Fig/media/image65.wmf}
+
+\textbf{Environmental Factor -} \includegraphics{Fig/media/image66.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6675}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3325}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Environment}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image67.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G\textsubscript{B} & 1 \\
+G\textsubscript{F} & 2 \\
+G\textsubscript{M} & 5 \\
+N\textsubscript{S} & 4 \\
+N\textsubscript{U} & 11 \\
+A\textsubscript{IC} & 4 \\
+A\textsubscript{IF} & 5 \\
+A\textsubscript{UC} & 7 \\
+A\textsubscript{UF} & 12 \\
+A\textsubscript{RW} & 16 \\
+S\textsubscript{F} & 0.5 \\
+M\textsubscript{F} & 9 \\
+M\textsubscript{L} & 24 \\
+C\textsubscript{L} & 250 \\
+\end{longtable}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\subsubsection{\texorpdfstring{\hfill\break
+Transistors: Bipolar Junction, Low Frequency (≤
+200MHz)}{ Transistors: Bipolar Junction, Low Frequency (≤ 200MHz)}}\label{transistors-bipolar-junction-low-frequency-200mhz}
+
+The failure rate is given by the following relationship
+
+\includegraphics{Fig/media/image68.wmf}.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5301}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0689}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4010}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Base Failure Rate -} \includegraphics{Fig/media/image69.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6164}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3836}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Type}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image70.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+NPN or PNP & 0.00074 \\
+\end{longtable}
+
+\textbf{Temperature Factor -} \includegraphics{Fig/media/image71.wmf}
+
+\includegraphics{Fig/media/image72.wmf}
+
+\textbf{Application Factor -} \includegraphics{Fig/media/image73.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7360}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2640}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Application}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image74.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Linear Amplification & 1.50 \\
+Switching & 0.70 \\
+\end{longtable}
+
+\textbf{Power Rating Factor -} \includegraphics{Fig/media/image75.wmf}
+
+\includegraphics{Fig/media/image76.wmf}
+
+\textbf{Voltage Stress Factor -} \includegraphics{Fig/media/image77.wmf}
+
+\includegraphics{Fig/media/image78.wmf}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Part Quality Factor -} \includegraphics{Fig/media/image79.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6364}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3636}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Quality}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image80.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+JANTXV & 0.7 \\
+JANTX & 1.0 \\
+JAN & 2.4 \\
+Lower & 5.5 \\
+Plastic & 8.0 \\
+\end{longtable}
+
+\textbf{Environmental Factor -} \includegraphics{Fig/media/image81.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7079}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2921}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Environment}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image82.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G\textsubscript{B} & 1 \\
+G\textsubscript{F} & 6 \\
+G\textsubscript{M} & 9 \\
+N\textsubscript{S} & 9 \\
+N\textsubscript{U} & 19 \\
+A\textsubscript{IC} & 13 \\
+A\textsubscript{IF} & 29 \\
+A\textsubscript{UC} & 20 \\
+A\textsubscript{UF} & 43 \\
+A\textsubscript{RW} & 24 \\
+S\textsubscript{F} & 0.50 \\
+M\textsubscript{F} & 14 \\
+M\textsubscript{L} & 32 \\
+C\textsubscript{L} & 320 \\
+\end{longtable}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\subsubsection{\texorpdfstring{\hfill\break
+Transistors: Bipolar Junction, High Frequency (\textgreater{} 200MHz),
+Low Noise (Power ≤
+1W)}{ Transistors: Bipolar Junction, High Frequency (\textgreater{} 200MHz), Low Noise (Power ≤ 1W)}}\label{transistors-bipolar-junction-high-frequency-200mhz-low-noise-power-1w}
+
+The failure rate is given by the following relationship
+
+\includegraphics{Fig/media/image83.wmf}.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4076}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0623}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5301}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Base Failure Rate -} \includegraphics{Fig/media/image69.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6196}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3804}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Type}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image84.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+All types & 0.18 \\
+\end{longtable}
+
+\textbf{Power Rating Factor -} \includegraphics{Fig/media/image75.wmf}
+
+\includegraphics{Fig/media/image85.wmf}
+
+\textbf{Part Quality Factor -} \includegraphics{Fig/media/image79.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6364}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3636}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Quality}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image80.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+JANTXV & 0.5 \\
+JANTX & 1.0 \\
+JAN & 2.0 \\
+Lower & 5.0 \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Temperature Factor -} \includegraphics{Fig/media/image86.wmf}
+
+\includegraphics{Fig/media/image87.wmf}
+
+\textbf{Voltage Stress Factor -} \includegraphics{Fig/media/image77.wmf}
+
+\includegraphics{Fig/media/image88.wmf}
+
+\textbf{Environmental Factor -} \includegraphics{Fig/media/image89.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7079}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2921}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Environment}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image90.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G\textsubscript{B} & 1 \\
+G\textsubscript{F} & 2 \\
+G\textsubscript{M} & 5 \\
+N\textsubscript{S} & 4 \\
+N\textsubscript{U} & 11 \\
+A\textsubscript{IC} & 4 \\
+A\textsubscript{IF} & 5 \\
+A\textsubscript{UC} & 7 \\
+A\textsubscript{UF} & 12 \\
+A\textsubscript{RW} & 16 \\
+S\textsubscript{F} & 0.50 \\
+M\textsubscript{F} & 9 \\
+M\textsubscript{L} & 24 \\
+C\textsubscript{L} & 250 \\
+\end{longtable}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\subsubsection{\texorpdfstring{\hfill\break
+Transistors: Field Effect, Low Frequency (≤
+400MHz)}{ Transistors: Field Effect, Low Frequency (≤ 400MHz)}}\label{transistors-field-effect-low-frequency-400mhz}
+
+The failure rate is given by the following relationship
+
+\includegraphics{Fig/media/image91.wmf}.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4619}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0807}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4574}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Base Failure Rate -} \includegraphics{Fig/media/image92.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5528}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4472}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Type}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image93.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+MOSFET & 0.012 \\
+JFET & 0.0045 \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Temperature Factor -} \includegraphics{Fig/media/image94.wmf}
+
+\includegraphics{Fig/media/image95.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3743}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2665}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3592}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Application Factor -} \includegraphics{Fig/media/image96.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6948}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3052}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Application (}\includegraphics{Fig/media/image97.wmf}rated
+output power)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image98.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Linear Amplification (\includegraphics{Fig/media/image99.wmf}\textbf{)}
+
+Small Signal
+
+Switching & 1.50
+
+0.70 \\
+Power FETs
+
+(Non-linear, \includegraphics{Fig/media/image100.wmf}\textbf{)}
+
+\includegraphics{Fig/media/image101.wmf} &
+\includegraphics{Fig/media/image102.wmf} \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Part Quality Factor -} \includegraphics{Fig/media/image103.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6539}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3461}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Quality}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image104.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+JANTXV & 0.7 \\
+JANTX & 1.0 \\
+JAN & 2.4 \\
+Lower & 5.5 \\
+Plastic & 8.0 \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Environmental Factor -} \includegraphics{Fig/media/image105.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7079}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2921}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Environment}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image106.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G\textsubscript{B} & 1 \\
+G\textsubscript{F} & 6 \\
+G\textsubscript{M} & 9 \\
+N\textsubscript{S} & 9 \\
+N\textsubscript{U} & 19 \\
+A\textsubscript{IC} & 13 \\
+A\textsubscript{IF} & 29 \\
+A\textsubscript{UC} & 20 \\
+A\textsubscript{UF} & 43 \\
+A\textsubscript{RW} & 24 \\
+S\textsubscript{F} & 0.50 \\
+M\textsubscript{F} & 14 \\
+M\textsubscript{L} & 32 \\
+C\textsubscript{L} & 320 \\
+\end{longtable}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\subsubsection{\texorpdfstring{\hfill\break
+Transistors: Field Effect, High Frequency (\textgreater{} 400MHz), Low
+Power (≤
+300mW)}{ Transistors: Field Effect, High Frequency (\textgreater{} 400MHz), Low Power (≤ 300mW)}}\label{transistors-field-effect-high-frequency-400mhz-low-power-300mw}
+
+The failure rate is given by the following relationship
+
+\includegraphics{Fig/media/image107.wmf}.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4619}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0807}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4574}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Base Failure Rate -} \includegraphics{Fig/media/image108.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7071}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2929}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Type}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image109.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+MOSFET & 0.060 \\
+JFET & 0.023 \\
+\end{longtable}
+
+\textbf{Temperature Factor -} \includegraphics{Fig/media/image110.wmf}
+
+\includegraphics{Fig/media/image111.wmf}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Part Quality Factor -} \includegraphics{Fig/media/image112.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6488}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3512}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Quality}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image113.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+JANTXV & 0.5 \\
+JANTX & 1.0 \\
+JAN & 2.0 \\
+Lower & 5.0 \\
+\end{longtable}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\textbf{Environmental Factor -} \includegraphics{Fig/media/image114.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7079}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2921}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Environment}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image115.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G\textsubscript{B} & 1 \\
+G\textsubscript{F} & 2 \\
+G\textsubscript{M} & 5 \\
+N\textsubscript{S} & 4 \\
+N\textsubscript{U} & 11 \\
+A\textsubscript{IC} & 4 \\
+A\textsubscript{IF} & 5 \\
+A\textsubscript{UC} & 7 \\
+A\textsubscript{UF} & 12 \\
+A\textsubscript{RW} & 16 \\
+S\textsubscript{F} & 0.50 \\
+M\textsubscript{F} & 9 \\
+M\textsubscript{L} & 24 \\
+C\textsubscript{L} & 250 \\
+\end{longtable}
+
+\subsubsection{Microcircuits: Gate/Logic Arrays and
+Microprocessors}\label{microcircuits-gatelogic-arrays-and-microprocessors}
+
+Includes the following devices:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Bipolar devices, Digital and Linear Gate/Logic Arrays
+\item
+  MOS Devices, Digital and Linear Gate/Logic Arrays
+\item
+  Field Programmable Logic Array (PLA) and Programmable Array Logic
+  (PAL)
+\item
+  Microprocessors
+\end{enumerate}
+
+The failure rate is given by the following relationship
+
+\includegraphics{Fig/media/image116.wmf} .
+
+\includegraphics{Fig/media/image117.wmf} = \textbf{Complexity Failure
+Rate for Bipolar Devices (Digital and Linear Gate/Logic)}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2212}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1152}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1935}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1106}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1843}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1751}}@{}}
+\toprule\noalign{}
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3364} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Digital}
+\end{minipage}} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3041} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Linear}
+\end{minipage}} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3594} + 2\tabcolsep}@{}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{PLA/PAL}
+\end{minipage}} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+No. Gates & \includegraphics{Fig/media/image118.wmf} & No. Transistors &
+\includegraphics{Fig/media/image119.wmf} & No. Gates &
+\includegraphics{Fig/media/image120.wmf} \\
+1 to 100
+
+101 to 1,000
+
+1,001 to 3,000
+
+3,001 to 10,000
+
+10,001 to 30,000
+
+30,001 to 60,000 & 0.0025
+
+0.0050
+
+0.010
+
+0.020
+
+0.040
+
+0.080 & 1 to 100
+
+101 to 300
+
+301 to 1,000
+
+1,001 to 10,000 & 0.010
+
+0.020
+
+0.040
+
+0.060 & Up to 200
+
+201 to 1,000
+
+1,001 to 5,000 & 0.010
+
+0.021
+
+0.042 \\
+\end{longtable}
+
+\includegraphics{Fig/media/image121.wmf} = \textbf{Complexity Failure
+Rate for MOS Devices (Digital and Linear Gate/Logic)}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2192}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1142}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1918}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1096}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1826}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1826}}@{}}
+\toprule\noalign{}
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3333} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Digital}
+\end{minipage}} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3014} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Linear}
+\end{minipage}} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3653} + 2\tabcolsep}@{}}{%
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{MOS}
+\end{minipage}} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+No. Gates & \includegraphics{Fig/media/image122.wmf} & No. Transistors &
+\includegraphics{Fig/media/image122.wmf} & No. Gates &
+\includegraphics{Fig/media/image122.wmf} \\
+1 to 100
+
+101 to 1,000
+
+1,001 to 3,000
+
+3,001 to 10,000
+
+10,001 to 30,000
+
+30,001 to 60,000 & 0.010
+
+0.020
+
+0.040
+
+0.080
+
+0.16
+
+0.29 & 1 to 100
+
+101 to 300
+
+301 to 1,000
+
+1,001 to 10,000 & 0.010
+
+0.020
+
+0.040
+
+0.060 & Up to 500
+
+501 to 1,000
+
+1,001 to 5,000
+
+5,001 to 20,000 & 0.00085
+
+0.0017
+
+0.0034
+
+0.0068 \\
+\end{longtable}
+
+\includegraphics{Fig/media/image123.wmf} = \textbf{Complexity Failure
+Rate for Microprocessors}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3354}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3165}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3481}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Number of Bits}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image123.wmf} \textbf{- Bipolar}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image123.wmf} \textbf{- MOS}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Up to 8
+
+Up to 16
+
+Up to 32 & 0.060
+
+0.12
+
+0.24 & 0.14
+
+0.28
+
+0.56 \\
+\end{longtable}
+
+\includegraphics{Fig/media/image124.wmf} = \textbf{Package Failure Rate
+for all microcircuits.} \includegraphics{Fig/media/image125.wmf}
+\textbf{= number of pins on package.}
+
+\includegraphics{Fig/media/image126.wmf}
+
+\textbf{Temperature Factor -} \includegraphics{Fig/media/image127.wmf}
+
+\includegraphics{Fig/media/image128.wmf}
+
+The activation energy (\includegraphics{Fig/media/image129.wmf}) for
+different technologies are given in the table below.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1461}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1545}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1385}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1392}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1295}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1497}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1425}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Technology}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{TTL, ASTLL, CML, HTTL, FTLL, DTL, ECL, ALSTTL}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{F, LTTL, STTL}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{BiCMOS LSTTL}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Digital MOS, VHSIC CMOS}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Linear (Bipolar and MOS)}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Memories (Bipolar and MOS), NMOS}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\includegraphics{Fig/media/image130.wmf} & 0.4 & 0.45 & 0.5 & 0.35 &
+0.65 & 0.6 \\
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4619}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0807}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4574}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Learning Factor -} \includegraphics{Fig/media/image131.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6944}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3056}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Years in Production}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image132.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\includegraphics{Fig/media/image133.wmf}.1 & 2.0 \\
+0.5 & 1.8 \\
+1.0 & 1.5 \\
+1.5 & 1.2 \\
+\includegraphics{Fig/media/image134.wmf} & 1.0 \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Part Quality Factor -} \includegraphics{Fig/media/image135.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6050}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3950}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Quality}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image136.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+S & 0.25 \\
+B & 1.0 \\
+B-1 & 2.0 \\
+\end{longtable}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\textbf{Environmental Factor -} \includegraphics{Fig/media/image137.wmf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7079}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2921}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Environment}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics{Fig/media/image138.wmf}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G\textsubscript{B} & 0.50 \\
+G\textsubscript{F} & 2 \\
+G\textsubscript{M} & 4 \\
+N\textsubscript{S} & 4 \\
+N\textsubscript{U} & 6 \\
+A\textsubscript{IC} & 4 \\
+A\textsubscript{IF} & 5 \\
+A\textsubscript{UC} & 5 \\
+A\textsubscript{UF} & 8 \\
+A\textsubscript{RW} & 8 \\
+S\textsubscript{F} & 0.50 \\
+M\textsubscript{F} & 5 \\
+M\textsubscript{L} & 12 \\
+C\textsubscript{L} & 220 \\
+\end{longtable}

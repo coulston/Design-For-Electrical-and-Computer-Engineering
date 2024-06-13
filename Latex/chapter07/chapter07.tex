@@ -60,7 +60,7 @@ An acceptance test plan should be written with the Requirements
 Specification, integration tests defined and written during the system
 design, and so forth.
 
-\includegraphics[width=2.88542in,height=2.39583in]{media/image1.emf}
+\includegraphics[width=2.88542in,height=2.39583in]{Fig/media/image1.emf}
 
 \textbf{Figure 7.1} The Test Vee. Design stages are on the left and
 corresponding tests are on the right.
@@ -152,14 +152,15 @@ controllability and observability may be higher depending on the design.
 Let's examine this further via the example of a simple transistor
 amplifier shown in Figure 7.2. The purpose of this circuit, known as the
 common-emitter amplifier, is to amplify the input signal,
-\includegraphics{media/image2.wmf}, to produce a linearly proportional
-output signal, \includegraphics{media/image3.wmf}. The rectangular
-boundary in the figure represents a black box view of the system. In
-this view, the system power, \includegraphics{media/image4.wmf}, and
-ground would be applied to activate the circuit. The black box testing
-would consist of checking supply and ground voltages, varying the input
-signal, and observing the output signal. Again, this is a low
-controllability and low observability situation.
+\includegraphics{Fig/media/image2.wmf}, to produce a linearly
+proportional output signal, \includegraphics{Fig/media/image3.wmf}. The
+rectangular boundary in the figure represents a black box view of the
+system. In this view, the system power,
+\includegraphics{Fig/media/image4.wmf}, and ground would be applied to
+activate the circuit. The black box testing would consist of checking
+supply and ground voltages, varying the input signal, and observing the
+output signal. Again, this is a low controllability and low
+observability situation.
 
 White box testing utilizes knowledge of the internal workings of the
 design. When designing a transistor amplifier, there are two major
@@ -170,14 +171,14 @@ During detailed circuit design, the expected DC voltages for different
 nodes in the circuit would be determined. Thus, a white box test would
 consist of first checking the power supply and ground voltages as was
 done in the black box case. The next step would be different in that the
-node voltages (\includegraphics{media/image5.wmf}) would be checked to
-see if they meet the expected design values. This indicates a high
+node voltages (\includegraphics{Fig/media/image5.wmf}) would be checked
+to see if they meet the expected design values. This indicates a high
 degree of observability. However, the controllability is not
 significantly better than in the black box case. This is because the
 internal DC node voltages in the circuit cannot arbitrarily be changed
 without negatively changing the operation of the circuit.
 
-\includegraphics{media/image6.wmf}
+\includegraphics{Fig/media/image6.wmf}
 
 \textbf{Figure 7.2} Transistor amplifier design.
 
@@ -204,7 +205,7 @@ resistor and capacitor that models the expected characteristics of the
 final system. The stub on the output side is simply a resistor, whose
 value can be varied over the expected load.
 
-\includegraphics[width=3.79167in,height=1.76042in]{media/image7.emf}
+\includegraphics[width=3.79167in,height=1.76042in]{Fig/media/image7.emf}
 
 \textbf{Figure 7.3} The use of stubs for testing a transistor amplifier
 circuit. The function generator, resistor (R), and capacitor (C) model
@@ -803,7 +804,7 @@ design architecture that can meet the requirements. The design they
 create is shown in Figure 7.4, the Level 1 architecture of the
 autonomous robot.
 
-\includegraphics[width=4.86458in,height=2.07292in]{media/image8.emf}
+\includegraphics[width=4.86458in,height=2.07292in]{Fig/media/image8.emf}
 
 \textbf{Figure 7.4} Level 1 design architecture for the mobile robot.
 

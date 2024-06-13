@@ -118,12 +118,12 @@ the mathematical concept of a function, for example, \emph{y=f(x)}. In
 this function there is an input, \emph{x}, an output, \emph{y}, and a
 transformation between the input and output, \emph{f()}. This is easily
 extended to the case of multiple inputs and outputs where the inputs and
-outputs are vectors, \includegraphics{media/image1.wmf}. In functional
-decomposition, the same items are defined as in the mathematical
-analogy---the inputs, the outputs, and the transformation between the
-inputs and outputs (the functionality). Those three items constitute
-what is known as the \emph{\textbf{functional specification}} or
-\emph{\textbf{functional requirement}­---}the requirement that a
+outputs are vectors, \includegraphics{Fig/media/image1.wmf}. In
+functional decomposition, the same items are defined as in the
+mathematical analogy---the inputs, the outputs, and the transformation
+between the inputs and outputs (the functionality). Those three items
+constitute what is known as the \emph{\textbf{functional specification}}
+or \emph{\textbf{functional requirement}­---}the requirement that a
 functional module should meet. A \emph{\textbf{module}} is a block, or
 subsystem, that performs a function. Functional decomposition has a
 strong top-down flavor, due to the fact that the highest level
@@ -148,7 +148,7 @@ identification of elements such as circuit components, logic gates, or
 software code takes place. The number of levels in the design hierarchy
 depends upon the complexity of the problem.
 
-\includegraphics[width=5.47917in,height=1.69792in]{media/image2.emf}
+\includegraphics[width=5.47917in,height=1.69792in]{Fig/media/image2.emf}
 
 \textbf{Figure 5.1} A process for developing designs using functional
 decomposition.
@@ -284,7 +284,7 @@ The Level 0 functionality for the amplifier is shown in Figure 5.2,
 which is fairly simple---the inputs are an audio signal, volume control,
 and wall outlet power, and the output is an amplified audio signal.
 
-\includegraphics[width=4.14583in,height=0.8125in]{media/image3.emf}
+\includegraphics[width=4.14583in,height=0.8125in]{Fig/media/image3.emf}
 
 \textbf{Figure 5.2} Level 0 audio power amplifier functionality.
 
@@ -332,8 +332,8 @@ indicated in the guidelines. Underlined items represent values that need
 to be determined or refined as the design proceeds. In this case, the
 peak value of the audio output voltage is determined from the system
 requirements on power gain. Knowing that the maximum power is given by
-\includegraphics{media/image4.wmf}, allows the maximum output voltage to
-be computed as \includegraphics{media/image5.wmf}20V.
+\includegraphics{Fig/media/image4.wmf}, allows the maximum output
+voltage to be computed as \includegraphics{Fig/media/image5.wmf}20V.
 
 \subsubsection*{Level 1}\label{level-1}
 \addcontentsline{toc}{subsubsection}{Level 1}
@@ -351,7 +351,7 @@ The last stage in the cascade is the \emph{power output stage}, which
 provides the current needed to drive the speakers, but has no voltage
 amplification.
 
-\includegraphics[width=5.47917in,height=2.53125in]{media/image6.emf}
+\includegraphics[width=5.47917in,height=2.53125in]{Fig/media/image6.emf}
 
 \textbf{Figure 5.3} Level 1 audio amplifier design.
 
@@ -477,7 +477,7 @@ resistance \textgreater{}\ul{1M}Ω and output resistance
 For the power output stage, it is clear that 20V peak needs to be
 delivered, but how was the requirement on current determined? The
 current needed to drive the speaker is determined from Ohm's Law as
-\includegraphics{media/image7.wmf}.
+\includegraphics{Fig/media/image7.wmf}.
 
 The last module to examine at this level is the power supply.
 
@@ -523,7 +523,7 @@ amplifier stages, the overall voltage gain is given by the product of
 gains multiplied by the voltage divider losses between stages
 {[}Sed04{]}. In this case the overall gain is
 
-\includegraphics{media/image8.wmf}. (1)
+\includegraphics{Fig/media/image8.wmf}. (1)
 
 So the resistance values selected in the functional requirements satisfy
 the overall system requirements. If not, it would be necessary to go
@@ -540,7 +540,7 @@ Functional decomposition stops at this point---all levels of the
 hierarchy are defined and the next step is the detailed design, where
 the actual circuit components are determined.
 
-\includegraphics[width=5.48958in,height=0.85417in]{media/image9.emf}
+\includegraphics[width=5.48958in,height=0.85417in]{Fig/media/image9.emf}
 
 \textbf{Figure 5.4} Level 2 design of the power supply.
 
@@ -571,7 +571,7 @@ The system must
 
 The Level 0 diagram and functional requirements are shown below.
 
-\includegraphics[width=2.6875in,height=0.95833in]{media/image10.emf}
+\includegraphics[width=2.6875in,height=0.95833in]{Fig/media/image10.emf}
 
 \textbf{Figure 5.5} Level 0 digital stopwatch functionality.
 
@@ -624,7 +624,7 @@ seconds counter. The FSM responds to the button press stimuli and
 produces the appropriate control signals for the seconds counter. The
 system clock is included to clock both the FSM and the clock divider.
 
-\includegraphics[width=5.5in,height=2.94792in]{media/image11.emf}
+\includegraphics[width=5.5in,height=2.94792in]{Fig/media/image11.emf}
 
 \textbf{Figure 5.6} Level 1 design for the digital stopwatch.
 
@@ -663,7 +663,7 @@ Finite State Machine
 \end{itemize}
 \end{minipage} \\
 \emph{Functionality} &
-\includegraphics[width=1.98958in,height=1.1875in]{media/image12.emf} \\
+\includegraphics[width=1.98958in,height=1.1875in]{Fig/media/image12.emf} \\
 \end{longtable}
 
 The functionality of the finite state machine is described with a tool
@@ -787,7 +787,7 @@ information passed between modules. Five basic modules are utilized:
 This approach to software design, also known as \emph{structured
 design}, was formalized in the 1970's by IBM researchers {[}Ste99{]}.
 
-\includegraphics[width=5.5in,height=1.40625in]{media/image13.emf}
+\includegraphics[width=5.5in,height=1.40625in]{Fig/media/image13.emf}
 
 \textbf{Figure 5.7} Module types for functional software design. The
 larger arrows indicate connections between modules and the smaller
@@ -832,7 +832,7 @@ and returns the sorted values in the same array. Finally, ComputeMean is
 executed, which accepts the sorted array and the number of elements,
 computes the mean value, and returns it to main.
 
-\includegraphics[width=4.13542in,height=1.89583in]{media/image14.emf}
+\includegraphics[width=4.13542in,height=1.89583in]{Fig/media/image14.emf}
 
 \textbf{Figure 5.8} Structure chart design of sorting and mean
 computation program.
@@ -1015,7 +1015,7 @@ the array. \\
 The overall goal is to convert a sensed temperature to a digital
 temperature reading. The Level 0 description is as follows.
 
-\includegraphics[width=3.39583in,height=0.875in]{media/image15.emf}
+\includegraphics[width=3.39583in,height=0.875in]{Fig/media/image15.emf}
 
 \textbf{Figure 5.9} Level 0 digital thermometer functionality.
 
@@ -1078,7 +1078,7 @@ digital components. The overall accuracy that the system must achieve is
 0.4\%, and that translates into 0.8°C of allowable error for the 200°C
 range. Let's now examine the modules.
 
-\includegraphics[width=5.47917in,height=1.83333in]{media/image16.emf}
+\includegraphics[width=5.47917in,height=1.83333in]{Fig/media/image16.emf}
 
 \textbf{Figure 5.10} Level 1 design of the digital thermometer.
 
@@ -1171,7 +1171,7 @@ the accuracy. The number of bits needed for the converter is calculated
 from the maximum allowable error that the A/D can introduce (0.2°C), the
 number of discrete intervals, and the temperate range as
 
-\includegraphics{media/image17.wmf}. (2)
+\includegraphics{Fig/media/image17.wmf}. (2)
 
 So the A/D converter needs to have at least 10 bits. How is the voltage
 range selected? It is typically fixed for a particular integrated
@@ -1340,7 +1340,7 @@ with the number of modules in the system. The relationship between the
 maximum possible connections and number of modules (\emph{n}) is given
 by
 
-\includegraphics{media/image18.wmf}. (3)
+\includegraphics{Fig/media/image18.wmf}. (3)
 
 Modules are coupled if they depend upon each other in some way to
 operate properly. \emph{\textbf{Coupling}} is the extent to which

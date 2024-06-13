@@ -329,11 +329,11 @@ the 1950s. Empirical studies show that durations typically follow a Beta
 probability density. Based upon this model, the duration of an activity
 is estimated as
 
-\includegraphics{media/image1.wmf}, (1)
+\includegraphics{Fig/media/image1.wmf}, (1)
 
-where \includegraphics{media/image2.wmf} is the most optimistic time
-estimate, \includegraphics{media/image3.wmf} is the most pessimistic
-time estimate, and \includegraphics{media/image4.wmf} is the most
+where \includegraphics{Fig/media/image2.wmf} is the most optimistic time
+estimate, \includegraphics{Fig/media/image3.wmf} is the most pessimistic
+time estimate, and \includegraphics{Fig/media/image4.wmf} is the most
 realistic time estimate. The advantage of this is that it forces one to
 consider best and worst-case scenarios in the plan.
 
@@ -371,7 +371,7 @@ represented by nodes and the dependencies by arrows. Examples of the
 basic connections allowed in the AON representation are shown in Figure
 10.1.
 
-\includegraphics[width=1.27083in,height=0.97917in]{media/image5.emf}\includegraphics[width=1.17708in,height=0.97917in]{media/image6.emf}\includegraphics[width=1.2in,height=0.4125in]{media/image7.emf}
+\includegraphics[width=1.27083in,height=0.97917in]{Fig/media/image5.emf}\includegraphics[width=1.17708in,height=0.97917in]{Fig/media/image6.emf}\includegraphics[width=1.2in,height=0.4125in]{Fig/media/image7.emf}
 
 (a) (b) (c)
 
@@ -388,16 +388,16 @@ inside each node. A given network diagram will have multiple paths from
 the start to the end of the project. A path is any connected sequence of
 activities from the start node to the end node. In this example, there
 are four paths to completion:
-\includegraphics{media/image8.wmf}=\{1,4\},
-\includegraphics[width=0.17708in,height=0.20833in]{media/image9.wmf}=\{1,5\},
-\includegraphics[width=0.17708in,height=0.20833in]{media/image10.wmf}=\{2,3,4\},
+\includegraphics{Fig/media/image8.wmf}=\{1,4\},
+\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image9.wmf}=\{1,5\},
+\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image10.wmf}=\{2,3,4\},
 and
-\includegraphics[width=0.17708in,height=0.20833in]{media/image11.wmf}=\{2,3,5\}.
+\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image11.wmf}=\{2,3,5\}.
 The completion of an individual path does not result in completion of
 the project---all paths (and consequently all activities) must be
 completed for the entire project to finish.
 
-\includegraphics[width=3.41667in,height=0.95833in]{media/image12.emf}
+\includegraphics[width=3.41667in,height=0.95833in]{Fig/media/image12.emf}
 
 \textbf{Figure 10.2} Example network diagram. Each activity contains the
 activity ID and the estimated duration in days.
@@ -405,12 +405,13 @@ activity ID and the estimated duration in days.
 The duration of each path is determined by summing the duration of all
 activities on the path, which in this case is 20, 26, 28, and 34 days
 for paths
-\includegraphics[width=0.16667in,height=0.20833in]{media/image13.wmf} to
-\includegraphics[width=0.17708in,height=0.20833in]{media/image11.wmf}
+\includegraphics[width=0.16667in,height=0.20833in]{Fig/media/image13.wmf}
+to
+\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image11.wmf}
 respectively. The path with the longest duration is known as the
 \emph{\textbf{critical path}} since it represents the minimum time
 required to complete the project. In this example the critical path is
-\includegraphics[width=0.17708in,height=0.20833in]{media/image11.wmf}.
+\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image11.wmf}.
 Activities on the critical path are of particular interest, since, if
 they fall behind schedule, or experience \emph{\textbf{slippage}}, the
 overall completion time of the project is delayed. The other paths can
@@ -429,17 +430,17 @@ following method is utilized to determine the float for activities:
 \item
   The path with the longest duration is the critical path. Label the
   critical path duration as
-  \includegraphics[width=0.17708in,height=0.22917in]{media/image14.wmf}.
+  \includegraphics[width=0.17708in,height=0.22917in]{Fig/media/image14.wmf}.
   All activities on the critical path have zero float.
 \item
   To determine the float for an activity that is not on the critical
   path, find all paths that the activity lies on and identify the one
   with the longest duration. Label this as
-  \includegraphics{media/image15.wmf}\emph{.} The float for the activity
-  is calculated as
+  \includegraphics{Fig/media/image15.wmf}\emph{.} The float for the
+  activity is calculated as
 \end{enumerate}
 
-\includegraphics[width=0.875in,height=0.23958in]{media/image16.wmf}\emph{.}
+\includegraphics[width=0.875in,height=0.23958in]{Fig/media/image16.wmf}\emph{.}
 (2)
 
 Examples 10.1 and 10.2 examine float time computation.
@@ -452,39 +453,39 @@ network diagram shown in Figure 10.2.
 \emph{\textbf{\ul{Solution:}}} The first two steps of the process have
 already been completed, which are the identification of the paths, their
 duration, and the critical path. To summarize, the paths are
-\includegraphics[width=0.16667in,height=0.20833in]{media/image13.wmf}=\{1,4\},
-\includegraphics[width=0.17708in,height=0.20833in]{media/image9.wmf}=\{1,5\},
-\includegraphics[width=0.17708in,height=0.20833in]{media/image10.wmf}=\{2,3,4\},
+\includegraphics[width=0.16667in,height=0.20833in]{Fig/media/image13.wmf}=\{1,4\},
+\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image9.wmf}=\{1,5\},
+\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image10.wmf}=\{2,3,4\},
 and
-\includegraphics[width=0.17708in,height=0.20833in]{media/image11.wmf}=\{2,3,5\}
+\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image11.wmf}=\{2,3,5\}
 with durations of 20, 26, 28, and 34 days. The critical path is
-\includegraphics[width=0.17708in,height=0.20833in]{media/image11.wmf}
+\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image11.wmf}
 and
-\includegraphics[width=0.17708in,height=0.22917in]{media/image14.wmf}=34
+\includegraphics[width=0.17708in,height=0.22917in]{Fig/media/image14.wmf}=34
 days, so activities 2, 3, and 5 have zero float. Thus
 
-\includegraphics[width=0.53125in,height=0.21875in]{media/image17.wmf} =
-\ul{0 days}.
+\includegraphics[width=0.53125in,height=0.21875in]{Fig/media/image17.wmf}
+= \ul{0 days}.
 
 The only two activities that are not on the critical path are 1 and 4.
 Let's examine activity 1 first. It lies on paths
-\includegraphics[width=0.16667in,height=0.20833in]{media/image13.wmf}
+\includegraphics[width=0.16667in,height=0.20833in]{Fig/media/image13.wmf}
 and
-\includegraphics[width=0.17708in,height=0.20833in]{media/image9.wmf}with
+\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image9.wmf}with
 durations 20 and 26 days, thus the longest path to completion,
-\includegraphics[width=0.20833in,height=0.23958in]{media/image18.wmf},
+\includegraphics[width=0.20833in,height=0.23958in]{Fig/media/image18.wmf},
 for activity 1 is 26 days. The float is calculated from (2) as
 
-\includegraphics[width=0.96875in,height=0.23958in]{media/image19.wmf}=
+\includegraphics[width=0.96875in,height=0.23958in]{Fig/media/image19.wmf}=
 34-26 days = \ul{8 days}.
 
 Activity 4 lies on
-\includegraphics[width=0.16667in,height=0.20833in]{media/image13.wmf}
+\includegraphics[width=0.16667in,height=0.20833in]{Fig/media/image13.wmf}
 and
-\includegraphics[width=0.17708in,height=0.20833in]{media/image10.wmf},
-so \includegraphics{media/image20.wmf} = 28 days and the float is
+\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image10.wmf},
+so \includegraphics{Fig/media/image20.wmf} = 28 days and the float is
 
-\includegraphics{media/image21.wmf}= 34-28 days = \ul{6 days}.
+\includegraphics{Fig/media/image21.wmf}= 34-28 days = \ul{6 days}.
 
 This means that activity 1 can slip by 8 days and activity 4 can slip by
 6 days without impacting the time to complete the project.
@@ -502,26 +503,26 @@ the critical path.
 (a) The network diagram is constructed from the dependencies identified
 in Table 10.1 and is shown below.
 
-\includegraphics[width=4.20833in,height=1.73958in]{media/image22.emf}
+\includegraphics[width=4.20833in,height=1.73958in]{Fig/media/image22.emf}
 
 (b) The three paths from start to end are:
-\includegraphics{media/image23.wmf}= \{1.1, 1.2, 1.3.1, 1.3.3, 3\},
-\includegraphics{media/image24.wmf} = \{1.1, 1.2, 1.3.2, 1.3.3, 3\}, and
-\includegraphics{media/image25.wmf} = \{2.1, 2.2, 2.3, 2.4, 3\} which
-have durations of 38, 39, and 30 days respectively. Thus the
+\includegraphics{Fig/media/image23.wmf}= \{1.1, 1.2, 1.3.1, 1.3.3, 3\},
+\includegraphics{Fig/media/image24.wmf} = \{1.1, 1.2, 1.3.2, 1.3.3, 3\},
+and \includegraphics{Fig/media/image25.wmf} = \{2.1, 2.2, 2.3, 2.4, 3\}
+which have durations of 38, 39, and 30 days respectively. Thus the
 \ul{critical path is \emph{P\textsubscript{2,}}} and its duration is
 
-\includegraphics[width=0.17708in,height=0.22917in]{media/image14.wmf}\emph{=}\ul{39
+\includegraphics[width=0.17708in,height=0.22917in]{Fig/media/image14.wmf}\emph{=}\ul{39
 days}.
 
 (c) All activities on path \emph{P\textsubscript{1}} are also part of
 the critical path, with the exception of activity 1.3.2, which has
 
-\includegraphics{media/image26.wmf}\emph{=}39-38 days = \ul{1 day}.
+\includegraphics{Fig/media/image26.wmf}\emph{=}39-38 days = \ul{1 day}.
 
 Activities 2.1-2.4 have the collective float
 
-\includegraphics{media/image27.wmf}= 39-30 days = \ul{9 days}.
+\includegraphics{Fig/media/image27.wmf}= 39-30 days = \ul{9 days}.
 
 The strength of the network diagram is that it provides an intuitive
 graphical representation of activities and their dependencies on one
@@ -544,7 +545,7 @@ activities. However, as seen in this example, this has been remedied by
 modern project management software where the dependencies are indicated
 by the connecting arrows between tasks.
 
-\includegraphics[width=5.52083in,height=3.80208in]{media/image28.emf}
+\includegraphics[width=5.52083in,height=3.80208in]{Fig/media/image28.emf}
 
 \textbf{Figure 10.3} Gantt chart for the temperature display project
 created using Microsoft Visio\textsuperscript{TM}.
@@ -580,16 +581,16 @@ from the total costs and revenue. The total cost required to produce a
 product is the sum of fixed and variable costs. Assuming \emph{n} units
 are sold, the total cost is
 
-\includegraphics{media/image29.wmf}. (3)
+\includegraphics{Fig/media/image29.wmf}. (3)
 
 The total revenue generated by the sale of the \emph{n} units is
 directly related to the sale price
 
-\includegraphics{media/image30.wmf}. (4)
+\includegraphics{Fig/media/image30.wmf}. (4)
 
 The break-even point is where the revenue and total costs are equal
 
-\includegraphics{media/image31.wmf}. (5)
+\includegraphics{Fig/media/image31.wmf}. (5)
 
 The break-even analysis is shown graphically in Figure 10.4 with the
 costs and revenue plotted as a function of units sold. Equation (5)
@@ -600,7 +601,7 @@ projected number of units sold, a target sales price can be selected.
 Example 10.3 demonstrates the application of break-even analysis for the
 development of the Hewlett-Packard (HP) DeskJet printer.
 
-\includegraphics[width=4.80208in,height=3.36458in]{media/image32.emf}
+\includegraphics[width=4.80208in,height=3.36458in]{Fig/media/image32.emf}
 
 \textbf{Figure 10.4} Graphical representation of the break-even
 analysis.
@@ -626,16 +627,16 @@ fixed costs = \$(50+25) million = \$75 million.
 
 This leads to a total cost for \emph{n} units sold of
 
-\includegraphics{media/image33.wmf}.
+\includegraphics{Fig/media/image33.wmf}.
 
 The revenue is
 
-\includegraphics[width=1.14583in,height=0.1875in]{media/image34.wmf}.
+\includegraphics[width=1.14583in,height=0.1875in]{Fig/media/image34.wmf}.
 
 Setting the revenue and total cost each equal at the break-even point
 produces
 
-\includegraphics{media/image35.wmf}.
+\includegraphics{Fig/media/image35.wmf}.
 
 Solving for the final number of units gives
 
@@ -648,7 +649,7 @@ profit = total revenue -- total costs.
 
 For an expected volume of 4 million units per year over 2 years
 
-\includegraphics{media/image36.wmf}
+\includegraphics{Fig/media/image36.wmf}
 
 profit = \ul{\$525 million}.
 
@@ -674,12 +675,12 @@ expert opinion. This means asking others to estimate the cost and use it
 as a guide. The estimation formula in (1) for activity duration can be
 applied for costs as
 
-\includegraphics{media/image37.wmf}, (6)
+\includegraphics{Fig/media/image37.wmf}, (6)
 
-where \includegraphics{media/image38.wmf} is the most optimistic cost
-estimate, \includegraphics{media/image39.wmf} is the most likely cost
-estimate, and \includegraphics{media/image40.wmf} is the most
-pessimistic cost estimate.
+where \includegraphics{Fig/media/image38.wmf} is the most optimistic
+cost estimate, \includegraphics{Fig/media/image39.wmf} is the most
+likely cost estimate, and \includegraphics{Fig/media/image40.wmf} is the
+most pessimistic cost estimate.
 
 A more formal approach for estimating labor costs is to use empirical
 models that represent a quantification of past experience. The models
@@ -697,7 +698,7 @@ output \emph{y} (cost or person-hours) based upon an input \emph{x}. For
 example, IBM modeled software development project costs using the number
 of lines of code as the input {[}Jal97{]} as
 
-\includegraphics{media/image41.wmf}. (7)
+\includegraphics{Fig/media/image41.wmf}. (7)
 
 The output is an estimate of the effort in person-months and the input
 is the projected number of lines of code, KLOC. KLOC, pronounced
@@ -706,7 +707,7 @@ was found to work well for relatively small development projects with
 between 4 and 10 KLOC. As the complexity increased, an exponential model
 was found to be more realistic where
 
-\includegraphics{media/image42.wmf}. (8)
+\includegraphics{Fig/media/image42.wmf}. (8)
 
 By observation of 60 software development projects at IBM, the
 exponential model was fit to observed data and the parameters were
@@ -728,7 +729,7 @@ overhead. Estimate (a) the time required to the complete the project and
 (a) Based upon the projected value KLOC, the exponential model in (8) is
 most appropriate
 
-\includegraphics{media/image43.wmf}.
+\includegraphics{Fig/media/image43.wmf}.
 
 Since there are 10 developers on the project, the estimated time is
 determined by dividing the effort by 10, to produce an estimated time of
@@ -738,7 +739,7 @@ determined by dividing the effort by 10, to produce an estimated time of
 person-months and the average monthly salary of a development engineer
 as
 
-\includegraphics{media/image44.wmf}
+\includegraphics{Fig/media/image44.wmf}
 
 labor cost = \ul{\$1.53 million}.
 
