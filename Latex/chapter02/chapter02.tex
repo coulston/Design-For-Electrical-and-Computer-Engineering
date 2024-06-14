@@ -42,7 +42,8 @@ By the end of this chapter, the reader should:
   Have selected a project concept and developed a Problem Statement.
 \end{itemize}
 
-\section{Engineering Design Projects}\label{engineering-design-projects}
+\section{Engineering Design Projects}
+\label{section:engineering-design-projects}
 
 This section provides a classification of design and describes some of
 the types of projects undertaken by practicing engineers and those
@@ -121,7 +122,8 @@ emphasizes the discovery of new scientific principles without
 necessarily having an intended application. Fundamental research is very
 valuable, but not typically a part of design projects.
 
-\section{Sources of Project Ideas}\label{sources-of-project-ideas}
+\section{Sources of Project Ideas}
+\label{section:sources-of-project-ideas}
 
 Depending upon your situation, you may have the opportunity to identify
 and select your project. The list below provides some places to search
@@ -157,8 +159,8 @@ for project ideas:
   problems that need solutions.
 \end{itemize}
 
-\section{Project Feasibility and Selection
-Criteria}\label{project-feasibility-and-selection-criteria}
+\section{Project Feasibility and Selection Criteria}
+\label{section:project-feasibility-and-selection-criteria}
 
 This section provides questions to consider when examining the
 feasibility of a project. George H. Heilmeier (an electrical engineer
@@ -279,9 +281,11 @@ Again, details of pairwise comparison are outlined in Appendix B and the
 results are below.
 
 
-
-\begin{tabular}{ |c|c|c|c|c|c|c|} 
+\begin{table}
+\centering
+\begin{tabular}{ |> {\columncolor{Gray}} c  |c|c|c|c|c|c|} 
 \hline
+\rowcolor{Gray}
 Criteria & A & B & C & D & E & Weight \\ 
 \hline
 A & 1 & 5 & 5 & 3 & 3 & 0.52 \\
@@ -295,6 +299,9 @@ D & 1/3 & 3 & 1 & 1 & 5 & 0.18 \\
 E & 1/3 & 3 & 1/3 & 1/5 & 1 & 0.09 \\
 \hline
 \end{tabular}
+\caption{Weighting for selection criteria.}
+\label{table:criteriaWeighting}
+\end{table}
 
 This is an important step and one often overlooked -- the team has
 identified what is important to it in project selection. It is clear
@@ -316,9 +323,14 @@ next step.
 The decision matrix below is constructed and the scores for the
 alternatives determined.
 
+\begin{table}
+\centering
 \begin{tabular}{|l|c|c|c|c|}
 \hline
-Selection Criteria & Weights & \multicolumn{3} {|c|} Alternatives \\
+\rowcolor{Gray}
+\multirow{2}{5em}{Selection Criteria} & \multirow{2}{5em}{Weights} & \multicolumn{3} {|c|} {Alternatives} \\
+
+\rowcolor{Gray}
                            &                & Project 1 & Project 2 & Project 3 \\
 \hline
 A (Match to skills) & 0.52 & 0.40 & 0.20 & 0.40 \\
@@ -334,6 +346,9 @@ E (Industry sponsorship) & 0.09 & 0.00 & 1.0 & 0.00 \\
 Score & & 0.31 & 0.31 & 0.38 \\
 \hline
 \end{tabular}
+\caption{Weighted score for the selection criteria.}
+\label{table:weightedScoreSelectionCriteria}
+\end{table}
 
 \ul{Step 5: Review the decision}
 
@@ -343,7 +358,8 @@ match to the team skills, but also matches their desire to solve a
 problem with good market potential. The remaining two projects are rated
 about equal.
 
-\section{Needs Identification}\label{needs-identification}
+\section{Needs Identification}
+\label{section:needs-identification}
 
 Often a customer, client, or supervisor comes to you with a problem to
 solve and you must determine the needs or requirements for the solution
@@ -396,22 +412,17 @@ Determine the relative importance of the needs; and 5) Review the
 outcomes and the process. Each of these steps is described in the
 following sections.
 
-\subsection*{\texorpdfstring{\hfill\break
-Step 1: Gather Raw Data from
-Users}{ Step 1: Gather Raw Data from Users}}\label{step-1-gather-raw-data-from-users}
-\addcontentsline{toc}{subsection}{\hfill\break
-Step 1: Gather Raw Data from Users}
+\subsection*{ Step 1: Gather Raw Data from Users}
 
 \textbf{DILBERT\textsuperscript{®} by Scott Adams}
 
+\begin{figure}
 \includegraphics[width=5.5in,height=1.9in]{image1.png}
+\caption{ The difficulties of communicating with the customer. (Dilbert © United Feature Syndicate. Reprinted by
+permission.)}
+\label{figure:dilbertCommunication}
+\end{figure}
 
-\subsection*{Figure 2.1 The difficulties of communicating with the
-customer. (Dilbert © United Feature Syndicate. Reprinted by
-permission.)}\label{figure-2.1-the-difficulties-of-communicating-with-the-customer.-dilbert-united-feature-syndicate.-reprinted-by-permission.}
-\addcontentsline{toc}{subsection}{Figure 2.1 The difficulties of
-communicating with the customer. (Dilbert © United Feature Syndicate.
-Reprinted by permission.)}
 
 This is often accomplished via interviews with supervisors, key users,
 or people from the client organization. In cases where new products are
@@ -453,10 +464,8 @@ interview:
   What improvements would you make to the product?
 \end{itemize}
 
-\subsection*{Step 2: Interpret the Raw Data in Terms of
-Needs}\label{step-2-interpret-the-raw-data-in-terms-of-needs}
-\addcontentsline{toc}{subsection}{Step 2: Interpret the Raw Data in
-Terms of Needs}
+\subsection*{Step 2: Interpret the Raw Data in Terms of Needs}
+
 
 In this step the raw data is translated into customer needs. The needs
 are expressed in terms of what the system must do (a requirement) as
@@ -472,10 +481,7 @@ Other examples of marketing requirements are, ``\emph{The system should
 be easy-to-use,}'' and ``\emph{The system should be able survive a drop
 from the runner's height.}''
 
-\subsection*{Step 3: Organize Needs into a
-Hierarchy}\label{step-3-organize-needs-into-a-hierarchy}
-\addcontentsline{toc}{subsection}{Step 3: Organize Needs into a
-Hierarchy}
+\subsection*{Step 3: Organize Needs into a Hierarchy}
 
 The marketing requirements are organized into a hierarchy of needs
 arranged from the most general to the most specific in successive levels
@@ -483,7 +489,7 @@ of detail as required by the problem. It is organized by functional
 similarity, not as hierarchy of importance (that is the next step). This
 hierarchy is referred to as an \emph{\textbf{objective tree}}. An
 example objective tree for a portable audio device intended for use by
-runners is shown in Figure 2.2. The three high-level objectives
+runners is shown in Figure~\ref{figure:audioPortable}. The three high-level objectives
 determined were high-quality audio, portable, and easy-to-use. Each of
 these is further sub-divided into the characteristics that support the
 higher level. For example, portability is divided into the needs of
@@ -493,16 +499,15 @@ support it.
 
 \begin{figure}
 \includegraphics[width=5.2in,height=5.6in]{image2}
-\caption{Figure 2.2 Objective tree for a portable audio device to be
+\caption{Objective tree for a portable audio device to be
 used by runners. The weights reflect the relative importance of needs at
 each level in the hierarchy as determined in Step 4 of the
 process.}
-\label{fig:audioPortable}
+\label{figure:audioPortable}
 \end{figure}
 
 \subsection*{Step 4: Determine the Relative Importance of the Needs}
-\label{step-4-determine-the-relative-importance-of-the-needs}
-\addcontentsline{toc}{subsection}{Step 4: Determine the Relative Importance of the Needs}
+
 
 The relative importance of the needs is determined based upon the user
 needs. As we saw in Example 2.1 and as presented in Appendix B, the
@@ -510,29 +515,37 @@ pairwise comparison is a good technique for determining relative
 importance and weighting of needs. In pairwise comparison, all needs are
 systematically compared to all other needs at the same level in the
 hierarchy. An example pairwise comparison table for this problem is
-shown in Table 2.1 with the resulting weights for each need indicated.
+shown in Table~\ref{table:highQualityAudio} 
+with the resulting weights for each need indicated.
 This shows that portability is the most important need, followed by
 audio quality and ease-of-use. The weights are also reflected in the
-objective tree in Figure 2.2. In addition, the needs at each sublevel in
-the hierarchy are compared, the results of which are reflected in Figure
-2.2. The rankings are used in later chapters to compare design
+objective tree in Figure~\ref{figure:audioPortable}. In addition, the needs at each sublevel in
+the hierarchy are compared, the results of which are reflected in 
+Figure~\ref{figure:audioPortable}. The rankings are used in later chapters to compare design
 alternatives.
 
-\textbf{Table 2.1} Pairwise comparison matrix for ranking the
-highest-level needs of the portable audio device. This comparison should
-be carried out for all levels of the objective tree.
-
-\begin{tabular} {c c c c c}
+\begin{table}
+\centering
+\begin{tabular} {|> {\columncolor{Gray}} l|c|c|c||c|}
+\hline
+\rowcolor{Gray}
                              & High-Quality Audio & Portable & Easy-to-Use & Weight \\
+\hline
 High-Quality Audio & 1 & 1/3 & 2 & 0.24 \\
+\hline
 Portable & 3 & 1 & 4 & 0.62 \\
+\hline
 Easy-to-Use & 1/2 & 1/4 & 1 & 0.14 \\
+\hline
 \end{tabular}
+\caption{Pairwise comparison matrix for ranking the
+highest-level needs of the portable audio device. This comparison should
+be carried out for all levels of the objective tree.}
+\label{table:highQualityAudio}
+\end{table}
 
-\subsection*{Step 5: Review the Outcomes and the
-Process}\label{step-5-review-the-outcomes-and-the-process}
-\addcontentsline{toc}{subsection}{Step 5: Review the Outcomes and the
-Process}
+
+\subsection*{Step 5: Review the Outcomes and the Process}
 
 The design process and all of its sub-processes are methods for making
 good decisions, and this technique for needs identification is no
@@ -553,7 +566,8 @@ friends and co-workers who are potential users of the system, focus
 groups can be formed, surveys administered, and Internet bulletin boards
 and discussion groups employed to gather this information.
 
-\section{The Research Survey}\label{the-research-survey}
+\section{The Research Survey}
+\label{section:the-research-survey}
 
 It is important to conduct a thorough research survey while defining the
 project concept. Failure to do so may translate into time and money
@@ -725,8 +739,8 @@ detailed information on the latest theory or applications is needed.
   1988. Abstracts for all IEEE standards are publicly available.
 \end{itemize}
 
-\section{Needs and Objectives
-Statements}\label{needs-and-objectives-statements}
+\section{Needs and Objectives Statements}
+\label{section:needs-and-objectives-statements}
 
 Two parts of the Problem Statement are the needs and objectives
 statements. The \emph{needs statement} identifies and motivates the need
@@ -847,8 +861,8 @@ rapidly and record and log video. The camera will also include pan and
 zoom functionality to make identification of victims and suspects
 easier.
 
-\section{\texorpdfstring{Project Application: The Problem Statement
-}{Project Application: The Problem Statement }}\label{project-application-the-problem-statement}
+\section{Project Application: The Problem Statement}
+\label{section:project-application-the-problem-statement}
 
 A format for a Problem Statement that integrates the elements of this
 chapter is as follows:
@@ -862,7 +876,8 @@ chapter is as follows:
 \item
   \emph{Background.} A summary of the research survey on the relevant
   technologies and systems. The objective is to provide an introduction
-  answer the questions posed in Section 2.5. The length and content of
+  answer the questions posed in Section~\ref{section:needs-identification}. 
+  The length and content of
   this section varies depending upon the project.
 \item
   \emph{Marketing Requirements.} Short statements describe the user
@@ -873,8 +888,8 @@ chapter is as follows:
   identified.
 \end{itemize}
 
-\section{\texorpdfstring{Summary and Further Reading
-}{Summary and Further Reading }}\label{summary-and-further-reading}
+\section{Summary and Further Reading}
+\label{section:summary-and-further-reading}
 
 This chapter addressed the types of projects that are often undertaken
 by engineers and provides guidance in terms of questions to ask when
@@ -899,8 +914,9 @@ product development known as iNPD (integrated new product development)
 and provide methods for navigating what they refer to as ``the fuzzy
 front end of project definition.''
 
-\section*{Problems}\label{problems}
-\addcontentsline{toc}{section}{Problems}
+\section{Problems}
+\label{section:problems}
+
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -949,12 +965,11 @@ front end of project definition.''
   objective tree, and a ranking of the needs.
 \item
   \textbf{Project Application.} Conduct a research survey for your
-  project using the guidance presented in Section 2.5. The result should
+  project using the guidance presented in Section~\ref{section:needs-identification}. The result should
   be a report summarizing the results of the survey.
 \item
   \textbf{Project Application.} Develop a Problem Statement for your
-  project concept as outlined in Section 2.7. Apply the processes
+  project concept as outlined in Section~\ref{section:project-application-the-problem-statement}. 
+  Apply the processes
   presented in the chapter as appropriate.
 \end{enumerate}
-
-\textbf{Concept Generation}

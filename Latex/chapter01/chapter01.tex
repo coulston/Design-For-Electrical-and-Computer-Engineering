@@ -50,7 +50,6 @@ successful engineers, and an overview of the book.
 \underline{Learning Objectives} \\
 By the end of this chapter, the reader should:
 \begin{itemize}
-\itemsep0em 
 \item Understand what is meant by engineering design.
 \item  Understand the phases of the engineering design process.
 \item  Be familiar with the attributes of successful engineers.
@@ -119,7 +118,8 @@ processes---prescriptive and descriptive. As the name implies,
 or systematic recipe, for realizing a system. Prescriptive design
 processes are often algorithmic in nature and expressed using flow
 charts with decision logic. An example of a prescriptive process is
-shown in Figure 1.1, which describes the front end of the design process
+shown in Figure~\ref{figure:prescriptiveDesign}, 
+which describes the front end of the design process
 where the problem and requirements are determined. A decision block is
 included where the requirements are examined to determine if they
 satisfy the needs of the problem. \emph{\textbf{Descriptive processes}}
@@ -135,13 +135,16 @@ practices are followed, leading to better and more innovative solutions,
 and 2) they keep all members of the team synchronized in terms of
 understanding where they are in the design process.
 
+\begin{figure}
 \includegraphics[width=3.8in,height=1.27in]{image1}
-
-\textbf{Figure 1.1} A prescriptive design process for problem
-identification and requirements selection.
+\caption{A prescriptive design process for problem
+identification and requirements selection.}
+\label{figure:prescriptiveDesign}
+\end{figure}
 
 A descriptive process that is widely applicable to design problems is
-shown in Figure 1.2. In a perfect world, the process starts with the
+shown in Figure~\ref{figure:overviewDesignProcess}. 
+In a perfect world, the process starts with the
 identification of the problem, proceeds clockwise to research, followed
 the requirements phase, and so on until the system or device is
 delivered and goes into service (maintenance phase). This scenario is
@@ -150,9 +153,11 @@ team alternates between different phases as necessary. Consequently,
 links are inserted that allow transitions between all the different
 phases of the
 
+\begin{figure}
 \includegraphics[width=5in,height=4.7in]{image2}
-
-\textbf{Figure 1.2} A descriptive overview of the design process.
+\caption{ A descriptive overview of the design process.}
+\label{figure:overviewDesignProcess}
+\end{figure}
 
 design process. Of course, transitions between certain phases are
 unreasonable or very costly. It is virtually impossible to move directly
@@ -166,17 +171,18 @@ while in the design phase, necessitating re-evaluation of the needs,
 correction of the requirements specification, and system redesign---all
 at a substantial cost in time and money. Studies have shown that the
 cost required to correct errors or make changes increases exponentially
-as the project lifetime increases, as presented in Figure 1.3.
+as the project lifetime increases, as presented in Figure~\ref{figure:costVsLife}.
 
+\begin{figure}
 \includegraphics[width=3in,height=2in]{image3}
-
-\textbf{Figure 1.3} The cost to implement design changes increases
-exponentially with project lifetime.
+\caption{The cost to implement design changes increases exponentially with project lifetime.}
+\label{figure:costVsLife}
+\end{figure}
 
 \subsection{Elements of the Design Process}
 
-Nearly all the phases of the design process in Figure 1.2 are covered in
-this book, with the exception of the maintenance phase. The objective of
+Nearly all the phases of the design process in Figure~\ref{figure:overviewDesignProcess} 
+are covered in this book, with the exception of the maintenance phase. The objective of
 the first phase, \emph{\textbf{problem identification}}, is to identify
 the problem and customer needs. This occurs in a variety of ways, from
 someone conceiving a new idea to a client coming to you with a problem
@@ -257,8 +263,8 @@ flexibility and a willingness to change the design are necessary.
 
 Different application domains have developed specialized processes for
 technology-specific design. One such example is VLSI (Very Large Scale
-Integration) design. A typical VLSI design process is shown in Figure
-1.4 {[}Wol02{]}. In this model the system specification is used to
+Integration) design. A typical VLSI design process is shown in Figure~\ref{figure:VLSIdesign}
+ {[}Wol02{]}. In this model the system specification is used to
 develop the system architecture. The system architecture is composed of
 the major functional units that constitute an integrated circuit. Each
 functional unit is then designed at the gate logic level, which is
@@ -268,13 +274,15 @@ demonstration of the divide-and-conquer approach to design, where a
 complex system is broken down into lower levels of abstraction and each
 of these is further broken down until the design objectives are met.
 
+\begin{figure}
  \includegraphics[width=5.5in,height=0.60417in]{image4}
-
-\textbf{Figure 1.4} A process for integrated circuit (VLSI) design
-{[}Wol02{]}.
+\caption{A process for integrated circuit (VLSI) design {[}Wol02{]}.}
+\label{figure:VLSIdesign}
+\end{figure}
 
 Next, consider the design process for embedded computer systems shown in
-Figure 1.5. Embedded systems are combined hardware/software systems
+Figure~\ref{figure:embedded DesignProcess}. 
+Embedded systems are combined hardware/software systems
 embedded into a larger system to perform dedicated application specific
 operations. Embedded systems are employed in automobiles, DVD players,
 and digital cameras to name a few applications. Performance issues
@@ -285,9 +293,11 @@ gathering, specifications, and architectural design. The process
 reflects the unique nature of embedded systems with separate software
 and hardware design blocks, married together by the interface design.
 
+\begin{figure}
 \includegraphics[width=3.8in,height=3.8in]{image5}
-
-\textbf{Figure 1.5} An embedded system design process {[}Ern97{]}.
+\caption{An embedded system design process {[}Ern97{]}.}
+\label{figure:embedded DesignProcess}
+\end{figure}
 
 The field of software engineering is one in which the development of
 different design process models is still under considerable flux today.
@@ -301,7 +311,8 @@ difficulty is in designing for upgrade and reuse of software. What if
 the needs change after the millions of lines of code are developed and
 one of the fundamental structures or objects needs to be upgraded?
 
-The \emph{waterfall model} shown in Figure 1.6 is one of the first
+The \emph{waterfall model} shown in Figure~\ref{figure:waterfallDesignProcess} 
+is one of the first
 proposed and most well-known software design processes. This is a
 prescriptive model since the development proceeds linearly from the
 first step where the user's needs are analyzed through the phases of
@@ -316,11 +327,13 @@ small teams of software developers rapidly develop software following
 some strict rules. Both the spiral model and Extreme Programming are
 examined in more detail in the end of chapter problems.
 
+\begin{figure}
  \includegraphics[width=4.6in,height=3.1in]{image6}
-
-\textbf{Figure 1.6} Waterfall software development process. In this
+\caption{Waterfall software development process. In this
 model, development proceeds linearly from requirements analysis, through
-each subsequent phase, terminating with maintenance.
+each subsequent phase, terminating with maintenance.}
+\label{figure:waterfallDesignProcess}
+\end{figure}
 
 \section{The World-Class Engineer}\label{the-world-class-engineer}
 
@@ -330,8 +343,8 @@ this ability in itself is not enough to become an effective practicing
 engineer. The Pennsylvania State University Leonhard Center for the
 Advancement of Engineering Education, in consultation with a number of
 industries, developed a description of what is referred to as a
-``World-Class Engineer'' {[}Leo95{]}. Shown in Table 1.1, the
-description identifies the characteristics of successful engineers, and
+``World-Class Engineer'' {[}Leo95{]}. Shown in Table~\ref{table:worldClassEngineer},
+ the description identifies the characteristics of successful engineers, and
 contains six major elements: 1) Aware of the World, 2) Solidly Grounded,
 3) Technically Broad, 4) Effective in Group Operations, 5) Versatile,
 and 6) Customer-Oriented. The description recognizes that engineers must
@@ -372,85 +385,76 @@ complete space shuttles by the end of this design course, you can expect
 to apply design principles that allow you to design and integrate a
 relatively complex system, maybe even a part of the space shuttle.
 
-\textbf{Table 1.1} \underline{The World-Class Engineer} (Copyright the Leonhard
+\begin{longtable}[c]{|l|}
+\caption{The World-Class Engineer (Copyright the Leonhard
 Center for the Advancement of Engineering Education, The Pennsylvania
-State University. Reprinted by permission.)
+State University. Reprinted by permission.) \label{table:worldClassEngineer}}\\
 
-I. Aware of the World
+\hline
+{Characteristics of the World-Class Engineer}\\
+\hline
+\endfirsthead
 
+\hline
+{Characteristics of the World-Class Engineer}\\
+\hline
+\endhead
+
+\hline
+\endfoot
+\hline
+\endlastfoot
+
+I. Aware of the World \\
 \begin{itemize}
-\item
-  sensitive to cultural differences, environmental concerns, and ethical
-  principles
-\item
-  alert to market opportunities (both high- and low-tech)
-\item
-  cognizant of competitive talents, work ethic, and motivation
+\item  sensitive to cultural differences, environmental concerns, and ethical  principles
+\item  alert to market opportunities (both high- and low-tech)
+\item  cognizant of competitive talents, work ethic, and motivation
 \end{itemize}
 
-II. Solidly Grounded
-
+II. Solidly Grounded\\
 \begin{itemize}
-\item
-  thoroughly trained in the fundamentals of a selected engineering
+\item  thoroughly trained in the fundamentals of a selected engineering
   discipline
-\item
-  has a historical perspective and remains aware of advances in science
+\item  has a historical perspective and remains aware of advances in science
   that can impact engineering
-\item
-  realizes that knowledge doubles at breakneck speed and is prepared to
+\item  realizes that knowledge doubles at breakneck speed and is prepared to
   continue learning throughout a career
 \end{itemize}
 
-III. Technically Broad
-
+III. Technically Broad\\
 \begin{itemize}
-\item
-  understands that real-life problems are multidisciplinary
-\item
-  thinks broadly, seeing an issue in a rich context of various
+\item  understands that real-life problems are multidisciplinary
+\item  thinks broadly, seeing an issue in a rich context of various
   alternatives, probabilities, etc., rather than a narrow quest to find
   a single answer
-\item
-  is conversant in several disciplines
-\item
-  is trained in systems modeling and the identification of critical
+\item  is conversant in several disciplines
+\item  is trained in systems modeling and the identification of critical
   elements. Understands the need to design experiments to verify or
   extend analysis, as well as meet specification requirements
-\item
-  is psychologically prepared to embrace any field necessary to solve
+\item  is psychologically prepared to embrace any field necessary to solve
   the problem at hand
 \end{itemize}
 
-IV. Effective in Group Operations
-
+IV. Effective in Group Operations \\
 \begin{itemize}
-\item
-  cooperative in an organization of individuals working toward a common
+\item  cooperative in an organization of individuals working toward a common
   creative goal that is often multidisciplinary and multifunctional in
   nature
-\item
-  effective in written and oral communication
-\item
-  willing to seek and use expert advice
-\item
-  cognizant of the value of time and the need to make efficient use of
+\item  effective in written and oral communication
+\item   willing to seek and use expert advice
+\item  cognizant of the value of time and the need to make efficient use of
   the time in all phases of an endeavor
-\item
-  understanding and respectful of the many facets of business operation
+\item   understanding and respectful of the many facets of business operation
   -\/- general management, marketing, finance, law, human resources,
   manufacturing, service, and especially quality
 \end{itemize}
 
-V. Versatile
-
+V. Versatile \\
 \begin{itemize}
-\item
-  innovative in the development of products and services
-\item
-  sees engineering as applicable to problem solving in general
-\item
-  considers applying engineering beyond the typical employment focus of
+\item  innovative in the development of products and services
+\item  sees engineering as applicable to problem solving in general
+\item  considers applying engineering beyond the typical employment focus of
   engineering graduates in the manufacturing industries, to the much
   broader economy (financial services, health care, transportation,
   etc.) where engineering skills could make a dramatic improvement in
@@ -458,23 +462,31 @@ V. Versatile
   percent of the U.S. population
 \end{itemize}
 
-VI. Customer Oriented
-
+VI. Customer Oriented \\
 \begin{itemize}
-\item
-  realizes that finding and satisfying customers is the only guarantee
+\item  realizes that finding and satisfying customers is the only guarantee
   of business success
-\item
-  understands that products and services must excel in the test of
+\item  understands that products and services must excel in the test of
   cost-effectiveness in the global marketplace
 \end{itemize}
+\end{longtable}
 
+
+
+\begin{figure}
 \includegraphics[width=2.875in,height=2.625in]{image7}
-
-\textbf{Figure 1.7} The guiding philosophy of this book. In order to
+\caption{The guiding philosophy of this book. In order to
 achieve success in executing engineering and design projects, it takes
 an understanding of the design process, strong technical design tools,
-and professional skills.
+and professional skills.}
+\label{table:bookPhilosophy}
+\end{figure}
+
+
+
+
+
+
 
 The intention is to teach the application of design principles to
 computer and electrical engineers and to help prepare students for a
@@ -487,8 +499,8 @@ innovation, ethical principles, teamwork, and strong communication
 skills.
 
 The book is divided into three parts: I--Design Process, II--Design
-Tools, and III--Professional Skills. This is shown in Figure 1.7 as
-three separate, but related components that play a key role in achieving
+Tools, and III--Professional Skills. This is shown in Figure~\ref{table:bookPhilosophy}
+ as three separate, but related components that play a key role in achieving
 Project Excellence---the ability to complete a project, in an ethical
 manner that meets the customer's need, satisfies the constraints, and is
 clearly communicated to all involved. The chapters are decoupled as much

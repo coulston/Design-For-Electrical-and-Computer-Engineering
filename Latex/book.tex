@@ -4,15 +4,24 @@
 
 %%------------------------------------------------------
 %% Document formatting standards.
-%%
+%% references labels		figure:<camelCase>
+%%						table:<camelCase>
+%%						section:<dash seperated>
 %%------------------------------------------------------
 
 
 \documentclass[11pt]{book}
 \usepackage{graphicx}
-\usepackage{imakeidx}
-\usepackage{hyperref}
+\usepackage{imakeidx}			% Enables Index functionality
+\usepackage{hyperref}			% Enable hyperlinks to email and URLs
+
+%% Lots of packages needed for tables
+\usepackage{xcolor,colortbl}	% Enable colors in tables
+\usepackage{multirow}
+\usepackage{longtable}		%Enables multiplage tables
+
 \newcommand{\ul}{\underline}
+\definecolor{Gray}{gray}{0.85}
 
 \makeindex
 
