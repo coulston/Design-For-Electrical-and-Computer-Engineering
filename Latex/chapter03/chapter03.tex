@@ -1,5 +1,5 @@
-\section{The Requirements
-Specification}\label{the-requirements-specification}
+\chapter{The Requirements Specification}
+\graphicspath{ {./chapter03/Fig} }
 
 Specification • (n) A detailed and exact statement of particulars, a
 statement fully describing something to be built.---American Heritage
@@ -56,8 +56,8 @@ By the end of this chapter, the reader should:
   tradeoffs.
 \end{itemize}
 
-\subsection{Overview of the Requirements Setting
-Process}\label{overview-of-the-requirements-setting-process}
+\section{Overview of the Requirements Setting Process}
+\label{section':overview-of-the-requirements-setting-process}
 
 The \emph{\textbf{Requirements Specification}}, which is the focus of
 this chapter, is a collection of engineering and marketing requirements
@@ -75,13 +75,16 @@ based upon the knowledge of engineers who are primarily responsible for
 design, implementation, testing, manufacturing, and maintenance of the
 system.
 
-\includegraphics[width=4.625in,height=1.71875in]{Fig/media/image1.emf}
-
-\textbf{Figure 3.1} Requirements Specification development processes
+\begin{figure}
+\includegraphics[width=4.6in,height=1.7in]{image1.pdf}
+\caption{Requirements Specification development processes
 from IEEE Std. 1233-1998. The three input sources to the process are the
-customer, environment, and technical community.
+customer, environment, and technical community.}
+\label{figure: }
+\end{figure}
 
-\subsection{Engineering Requirements}\label{engineering-requirements}
+\section{Engineering Requirements}
+\label{section:engineering-requirements}
 
 Before developing the complete Requirements Specification, designers
 need to first determine individual engineering requirements.
@@ -91,8 +94,8 @@ system should be able to supply 50 watts of power.}'' This section
 identifies the desirable properties of engineering requirements, methods
 of identifying requirements, and provides numerous examples.
 
-\subsubsection{Properties of an Engineering
-Requirement}\label{properties-of-an-engineering-requirement}
+\subsection{Properties of an Engineering Requirement}
+\label{section:properties-of-an-engineering-requirement}
 
 Each engineering requirement should meet the four properties below
 {[}IEEE Std. 1233-1998{]}:
@@ -180,8 +183,8 @@ capability is autonomous navigation. Conditions are measurable or
 testable attributes of the capability and are critical for verification.
 \end{quote}
 
-\subsubsection{A Fifth Property --
-Realism}\label{a-fifth-property-realism}
+\subsection{A Fifth Property -- Realism}
+\label{section:a-fifth-property-realism}
 
 In addition to meeting the four properties, requirements should be
 realistic or justified. This is not defined in the IEEE standard as a
@@ -219,7 +222,8 @@ technical feasibility of requirements. In such cases, the requirements
 should have a certain amount of tolerance built into them and be updated
 as development proceeds.
 
-\subsubsection{Constraints}\label{constraints}
+\subsection{Constraints}
+\label{section:constraints}
 
 One of the inputs to the requirements process in Figure 3.1 is the
 environment, serving as the source of both constraints and standards. In
@@ -244,7 +248,8 @@ with non-functional requirements (usually indicated as items that are
 not specifically functions). However, that terminology is avoided here
 since it is not well defined nor universally accepted.
 
-\subsubsection{Standards}\label{standards}
+\subsection{Standards}
+\label{section:standards}
 
 \emph{\textbf{Standards}} are exactly what the name implies, a standard
 or established way of doing things that ensure interoperability. Without
@@ -364,8 +369,8 @@ employed in a project and included in the requirements.
   communicate.
 \end{itemize}
 
-\subsubsection{Identifying Engineering
-Requirements}\label{identifying-engineering-requirements}
+\subsection{Identifying Engineering Requirements}
+\label{section:identifying-engineering-requirements}
 
 There are many techniques for identifying requirements listed below
 {[}IEEE Std. 1233-1998{]}:
@@ -397,7 +402,8 @@ to carefully determine those that are applicable to the particular
 situation. Careful attention must be given to the verifiability of
 requirements for the particular application.}
 
-\subsubsection*{Performance}\label{performance}
+\subsection*{Performance}
+\label{section:performance}
 \addcontentsline{toc}{subsubsection}{Performance}
 
 These requirements reflect a critical aspect of the performance of the
@@ -450,7 +456,8 @@ verified using laboratory instrumentation to measure the harmonic
 distortion in the output signal.
 \end{quote}
 
-\subsubsection*{Functionality}\label{functionality}
+\subsection*{Functionality}
+\label{section:functionality}
 \addcontentsline{toc}{subsubsection}{Functionality}
 
 These requirements describe the type of functions that a system should
@@ -480,7 +487,8 @@ The system will protect the user's identity with 128-bit encryption.
 Note that in these last two cases, verification would be by inspection.
 \end{quote}
 
-\subsubsection*{Economic}\label{economic}
+\subsection*{Economic}
+\label{section:economic}
 \addcontentsline{toc}{subsubsection}{Economic}
 
 Economic requirements include the costs associated with the development
@@ -496,7 +504,8 @@ The costs for developing the system (labor and parts) should not exceed
 The total parts and manufacturing costs cannot exceed \$500 per unit.
 \end{quote}
 
-\subsubsection*{Energy}\label{energy}
+\subsection*{Energy}
+\label{section:energy}
 \addcontentsline{toc}{subsubsection}{Energy}
 
 Virtually all systems consume and/or produce energy and thus have energy
@@ -533,7 +542,8 @@ The system will operate from a 12V source that supplies a maximum
 current of 300mA.
 \end{quote}
 
-\subsubsection*{Environmental}\label{environmental}
+\subsection*{Environmental}
+\label{section:environmental}
 \addcontentsline{toc}{subsubsection}{Environmental}
 
 These requirements address the impact of the design on the external
@@ -554,7 +564,8 @@ service life is over. An example requirement is as follows
 in similar products.
 \end{quote}
 
-\subsubsection*{Health and Safety}\label{health-and-safety}
+\subsection*{Health and Safety}
+\label{section:health-and-safety}
 \addcontentsline{toc}{subsubsection}{Health and Safety}
 
 The health and safety of anyone affected by the final product is an
@@ -591,7 +602,8 @@ The final system will be meet UL and CE standards and be tested at an
 independent laboratory for approval.
 \end{quote}
 
-\subsubsection*{Legal}\label{legal}
+\subsection*{Legal}
+\label{section:legal}
 \addcontentsline{toc}{subsubsection}{Legal}
 
 Designs should not infringe upon existing patents, copyrights, and
@@ -620,7 +632,8 @@ The system will protect the user's identity with 128-bit encryption as
 required by law.
 \end{quote}
 
-\subsubsection*{Maintainability}\label{maintainability}
+\subsection*{Maintainability}
+\label{section:maintainability}
 \addcontentsline{toc}{subsubsection}{Maintainability}
 
 The maintenance of the system being developed and compatibility with
@@ -1005,97 +1018,55 @@ will be expanded upon later.
 \textbf{Table 3.1} Requirements Specification for an audio amplifier for
 use in an automobile.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1727}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3909}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4364}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Marketing Requirements}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Engineering Requirements}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Justification}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-1, 2, 4 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  The \emph{total harmonic distortion} should be \textless0.1\%.
-\end{enumerate}
-\end{minipage} & Based upon competitive benchmarking and existing
+\begin{table}
+\centering
+\begin{tabular}{ |c|l|l|} 
+\hline
+\rowcolor{Gray}
+Marketing Requirements & Engineering Requirements & Justification \\
+                           
+1, 2, 4 &
+1.  The \emph{total harmonic distortion} should be \textless0.1\%. &
+Based upon competitive benchmarking and existing
 amplifier technology. Class A, B, and AB amplifiers are able to obtain
 this level of THD. \\
-1--4 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\item
-  Should be able to sustain an \emph{output power} that averages ≥ 35
-  watts with a peak value of ≥ 70 watts.
-\end{enumerate}
-\end{minipage} & This power range provides more than adequate sound
+
+1--4 & 
+2.   Should be able to sustain an \emph{output power} that averages $\ge 35$
+  watts with a peak value of $\ge 70$ watts. & 
+This power range provides more than adequate sound
 throughout the automobile compartment. It is a sustainable output power
 for projected amplifier complexity. \\
-2, 4 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\item
-  Should have an \emph{efficiency (η)} \textgreater40 \%.
-\end{enumerate}
-\end{minipage} & Achievable with several different classes of power
-amplifiers. \\
-3 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\item
-  \emph{Average installation time} for the power and audio connections
-  should not exceed 5 minutes.
-\end{enumerate}
-\end{minipage} & Past trials using standard audio and power jacks
+
+2, 4 & 
+3. Should have an efficiency $> 40\%$. &
+Achievable with several different classes of power amplifiers. \\
+
+3 & 
+4.   \emph{Average installation time} for the power and audio connections
+  should not exceed 5 minutes. &
+Past trials using standard audio and power jacks
 demonstrate that this is a reasonable installation time. \\
-1--4 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{4}
-\item
-  The \emph{dimensions} should not exceed 6'' x 8''x 3''.
-\end{enumerate}
-\end{minipage} & Fits under a typical car seat. Prior models and
+
+1--4 & 
+5.  The \emph{dimensions} should not exceed 6'' x 8''x 3''. &
+Fits under a typical car seat. Prior models and
 estimates show that all components should fit within this package
 size. \\
-1--4 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{5}
-\item
-  \emph{Production cost} should not exceed \$100.
-\end{enumerate}
-\end{minipage} & This is based upon competitive market analysis and
-previous system designs. \\
-\multicolumn{3}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{1.0000} + 4\tabcolsep}@{}}{%
-\begin{minipage}[t]{\linewidth}\raggedright
-\textbf{Marketing Requirements}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  The system should have excellent sound quality.
-\item
-  The system should have high output power.
-\item
-  The system should be easy to install.
-\item
-  The system should have low cost.
-\end{enumerate}
-\end{minipage}} \\
-\end{longtable}
+1--4 & 
+6.  \emph{Production cost} should not exceed \$100. &
+This is based upon competitive market analysis and previous system designs. \\
+
+\multicolumn{3}{l}{
+\textbf{Marketing Requirements}
+1.  The system should have excellent sound quality.
+2.  The system should have high output power.
+3.  The system should be easy to install.
+4.   The system should have low cost.
+}
+\end{tabular}
+\end{table}
 
 Audio power amplifiers are widely available devices, so the requirements
 were determined through competitive benchmarks and knowledge of
@@ -1123,114 +1094,73 @@ time provides the condition for verification. The fifth requirement
 addresses the physical size of the device, and is important as it will
 need to be installed somewhere in the vehicle.
 
-\subsubsection{\texorpdfstring{Case Study: iPod\textsuperscript{TM}
-Hands-Free
-Device}{Case Study: iPodTM Hands-Free Device}}\label{case-study-ipodtm-hands-free-device}
+\subsubsection{Case Study: iPod\textsuperscript{TM} Hands-Free Device}
+\label{subsection:case-study-ipodtm-hands-free-device}
 
 Table 3.2 presents the Requirements Specification for a hands-free
 device whose intent is to allow a driver to communicate with an
 iPod\textsuperscript{TM} audio player while driving. The Problem
 Statement was presented in Chapter 2 (Section 2.6).
 
-\textbf{Table 3.2} Requirements Specification for the
-iPod\textsuperscript{TM} Hands-Free Device.
+\begin{table}
+\centering
+\caption{Requirements Specification for the
+iPod\textsuperscript{TM} Hands-Free Device.}
+\label{table:ipod}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1727}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3909}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4364}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Marketing Requirements}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Engineering Requirements}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Justification}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-4, 6 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  System will i\emph{mplement nine voice command} functions ( menu,
+\begin{tabular}{ |c|l|l|} 
+\hline
+\rowcolor{Gray}
+Marketing Requirements & Engineering Requirements & Justification \\
+
+4, 6 & 
+1.  System will i\emph{mplement nine voice command} functions ( menu,
   play/pause, previous, next, up, down, left, right and select) and
-  respond appropriately according to each command.
-\end{enumerate}
-\end{minipage} & These are the basic nine commands that are used to
+  respond appropriately according to each command. &
+  hese are the basic nine commands that are used to
 control an iPod and will provide all functionality needed. \\
-1, 3, 4, 7 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\item
-  The \emph{time to respond} to voice commands and provide audio
-  feedback should not exceed 3 seconds.
-\end{enumerate}
-\end{minipage} & The system needs to provide convenient use by
+
+1, 3, 4, 7 & 
+2.   The \emph{time to respond} to voice commands and provide audio
+  feedback should not exceed 3 seconds. &
+The system needs to provide convenient use by
 responding to the user inputs within a short time period. Based on
 research it was determined that the response time for the iPod is less
 than 1 second and an average voice recognition system requires 2 seconds
 to recognize commands. \\
-4, 6 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\item
-  The \emph{accuracy} of the system in accepting voice commands will be
-  between 95\% and 98\%.
-\end{enumerate}
-\end{minipage} & Research demonstrates that this is a typical accuracy
+
+4, 6 & 
+3.   The \emph{accuracy} of the system in accepting voice commands will be
+  between 95\% and 98\%. &
+Research demonstrates that this is a typical accuracy
 of voice recognition chips. Speaker independent systems can achieve 95\%
 and speaker-dependent up to 98\%. \\
-5, 6 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\item
-  The system should be able to \emph{operate} from a 12 V source and
-  will draw a maximum of 150 mA.
-\end{enumerate}
-\end{minipage} & The automobile provides 12V DC. A current draw budget
+
+5, 6 & 
+4.   The system should be able to \emph{operate} from a 12 V source and
+  will draw a maximum of 150 mA. &
+The automobile provides 12V DC. A current draw budget
 estimate was developed with potential components and 150mA was an upper
 limit of current estimated. \\
-5, 6, 7 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{4}
-\item
-  The \emph{dimensions} of the prototype should not exceed 6'' x 4'' x
-  1.5''.
-\end{enumerate}
-\end{minipage} & This system must be able to fit in a car compartment,
+
+5, 6, 7 & 
+5.  The \emph{dimensions} of the prototype should not exceed 6'' x 4'' x  1.5''. &
+This system must be able to fit in a car compartment,
 somewhere between the seats. Estimate is based upon a size budget
 calculation using typical parts. \\
-\multicolumn{3}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{1.0000} + 4\tabcolsep}@{}}{%
-\begin{minipage}[t]{\linewidth}\raggedright
-\textbf{Marketing Requirements}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Should not minimize or slow down the functional quality of the iPod.
-\item
-  User should be able to search for songs and artists and receive
-  feedback on selection.
-\item
-  System should provide clear understandable speech.
-\item
-  System should be able to understand voice commands from user.
-\item
-  Should be able to fit and operate in an automobile.
-\item
-  Should be easy to use.
-\item
-  Should be portable.
-\end{enumerate}
-\end{minipage}} \\
-\end{longtable}
+\multicolumn{3}{l}{
+\textbf{Marketing Requirements}
+1. Should not minimize or slow down the functional quality of the iPod.
+2.  User should be able to search for songs and artists and receive feedback on selection.
+3.  System should provide clear understandable speech.
+4.  System should be able to understand voice commands from user.
+5.  Should be able to fit and operate in an automobile.
+6.  Should be easy to use.
+7.  Should be portable.
+}
+\end{tabular}
+\end{table}
 
 To develop the marketing requirements, this team conducted an informal
 survey of students on campus, asking the target group what their desires
@@ -1244,8 +1174,8 @@ the types of components that might be used in the design. The last two
 requirements are operational requirements, ensuring that the device will
 work in its intended environment.
 
-\subsubsection{Case Study: Gigabit Ethernet Card
-Testing}\label{case-study-gigabit-ethernet-card-testing}
+\subsubsection{Case Study: Gigabit Ethernet Card Testing}
+\label{case-study-gigabit-ethernet-card-testing}
 
 Table 3.3 presents an example Requirements Specification developed for
 the design of an experimental test setup {[}Ese03{]}. The Problem
@@ -1256,25 +1186,17 @@ temperature and vibration variations on the optical power margin, both
 of which impact the bit-error rate and the system performance, were
 determined.
 
-\textbf{Table 3.3} System Requirements for a Gigabit Ethernet card
-testing project.
+\begin{table}
+\centering
+\caption{System Requirements for a Gigabit Ethernet card
+testing project.}
+\label{table:gigabit}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1727}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3909}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4364}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Marketing Requirements}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Engineering Requirements}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Justification}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+\begin{tabular}{ |c|l|l|} 
+\hline
+\rowcolor{Gray}
+Marketing Requirements & Engineering Requirements & Justification \\
+
 1 & Must be able to measure the \emph{optical power output} with an
 \emph{accuracy} of ± 0.5dB. & This is based upon commercially available
 optical power measurement instruments. \\
@@ -1299,23 +1221,17 @@ variation due to vibration. \\
 3 & The experiment should determine \emph{resonant frequency} to an
 accuracy of ± 0.5Hz. & This will provide data on worst case vibration at
 the resonant frequency. \\
-\multicolumn{3}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{1.0000} + 4\tabcolsep}@{}}{%
-\begin{minipage}[t]{\linewidth}\raggedright
+
+\multicolumn{3}{l}{
 \textbf{Marketing Requirements}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  The measurement of the optical power should be accurate.
-\item
-  It should measure the effects of temperature variations on optical
+1.  The measurement of the optical power should be accurate.
+2.  It should measure the effects of temperature variations on optical
   power.
-\item
-  It should measure effects of vibration on the fiber optic connector
-  and optical power output.
-\end{enumerate}
-\end{minipage}} \\
-\end{longtable}
+3.  It should measure effects of vibration on the fiber optic connector
+  and optical power output.}
+\end{tabular}
+\end{table}
 
 The marketing requirements were quite brief and direct, and not
 surprising due to the fact the customer in this case was group of
@@ -1338,131 +1254,81 @@ System (Problem Statement presented in Chapter 2) is shown in Table 3.4.
 This system is intended to provide police and emergency responders with
 a low-cost easy to deploy aerial surveillance system.
 
-\textbf{Table 3.4} System Requirements for the Portable Aerial
-Surveillance System.
+\begin{table}
+\centering
+\caption{System Requirements for the Portable Aerial
+Surveillance System.}
+\label{table:portableAerial}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1727}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3909}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4364}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Marketing Requirements}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Engineering Requirements}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Justification}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-6 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  System will provide visual recognition of license plate text from a
-  minimum distance of 150 feet during daytime and nighttime use.
-\end{enumerate}
-\end{minipage} & Recorded images and video will be used as trial
-evidence. The device\textquotesingle s maximum height is 150 feet, so
+\begin{tabular}{ |c|l|l|} 
+\hline
+\rowcolor{Gray}
+Marketing Requirements & Engineering Requirements & Justification \\
+
+6 & 
+ System will provide visual recognition of license plate text from a
+  minimum distance of 150 feet during daytime and nighttime use. &
+  
+ Recorded images and video will be used as trial
+evidence. The device's maximum height is 150 feet, so
 the device should allow text recognition at an absolute minimum of that
-distance. The device must be also usable during nighttime.  \\
-4, 9 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\item
-  The device must be operable by a single person.
-\end{enumerate}
-\end{minipage} & A police officer dispatched alone in his or her cruiser
+distance. The device must be also usable during nighttime.\\
+
+4, 9 & 
+   The device must be operable by a single person. &
+ A police officer dispatched alone in his or her cruiser
 should be able to launch and operate the device with no assistance. \\
-2 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\item
-  This device must remain airborne for a minimum of two hours.
-\end{enumerate}
-\end{minipage} & Based upon interviews with law enforcement users. This
+
+2 & 
+ This device must remain airborne for a minimum of two hours. &
+Based upon interviews with law enforcement users. This
 is a time period that covers most emergency situations. \\
-7, 8 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\item
-  The device will be able to be used in at least 14 mph winds.
-\end{enumerate}
-\end{minipage} & Device will be used outdoors and in non-ideal
+
+7, 8 & 
+ The device will be able to be used in at least 14 mph winds.&
+ Device will be used outdoors and in non-ideal
 conditions in Erie, PA, where there is a 95\% chance that winds will be
 at or below 14 mph. \\
-7 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{4}
-\item
+
+7 & 
   The device must not exceed a height of 150 feet above ground level
-  when in use.
-\end{enumerate}
-\end{minipage} & This device must comply with FAA regulation 101.15 \\
-3 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{5}
-\item
+  when in use. &
+  This device must comply with FAA regulation 101.15 \\
+  
+3 & 
+
   Must fit into the trunk of a police cruiser. The Chevrolet Impala has
-  a trunk measuring 54 inches wide by 38 inches deep by 16 inches high.
-\end{enumerate}
-\end{minipage} & Will be transported in a police cruiser and must fit
+  a trunk measuring 54 inches wide by 38 inches deep by 16 inches high. &
+ Will be transported in a police cruiser and must fit
 into the trunk of the vehicle. \\
-1 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{6}
-\item
-  The device will cost less than \$3000 per year to operate.
-\end{enumerate}
-\end{minipage} & The budget allotted to Erie county police departments
+
+1 & 
+  The device will cost less than \$3000 per year to operate. &
+ The budget allotted to Erie county police departments
 was \$16.7 million. 0.85\% of Erie\textquotesingle s annual budget would
 allow for \$140,280 to be used for a helicopter. A device having less
 than 2\% of the annual operating costs of a helicopter, and having many
 of the same surveillance capabilities would be considered a reasonable
 expense. \\
-\multicolumn{3}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{1.0000} + 4\tabcolsep}@{}}{%
-\begin{minipage}[t]{\linewidth}\raggedright
-\textbf{Marketing Requirements}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  The device should be able to be held stationary in the air, meaning
+\multicolumn{3}{l}{
+\textbf{Marketing Requirements}
+1.  The device should be able to be held stationary in the air, meaning
   providing enough stability to provide functionality.
-\item
-  Should be capable of being deployed for a long period of time.
-\item
-  Should be able to be deployed by one person in 3-5 minutes.
-\item
-  Should record video with enough quality to be used as evidence.
-\item
-  Should be useful at night.
-\item
-  Should fit in the trunk of a car and withstand the stresses of
+2.  Should be capable of being deployed for a long period of time.
+3.   Should be able to be deployed by one person in 3-5 minutes.
+4.  Should record video with enough quality to be used as evidence.
+5.  Should be useful at night.
+6.  Should fit in the trunk of a car and withstand the stresses of
   transportation.
-\item
-  Should be repairable and reusable.
-\item
-  Should require minimal training to be operated by one person.
-\item
-  Should be relatively inexpensive compared to that of a helicopter.
-\item
-  Should be able to operate at an altitude above most buildings.
-\item
-  Should meet any applicable governmental regulations (such as FAA).
-\item
-  Should be able to operate in typical winter conditions.
-\end{enumerate}
-\end{minipage}} \\
-\end{longtable}
+7.  Should be repairable and reusable.
+8.  Should require minimal training to be operated by one person.
+9.  Should be relatively inexpensive compared to that of a helicopter.
+10.  Should be able to operate at an altitude above most buildings.
+11.  Should meet any applicable governmental regulations (such as FAA).
+12.  Should be able to operate in typical winter conditions.}
+\end{tabular}
+\end{table}
 
 This project was developed in conjunction with Penn State Behrend and
 the Mercyhurst College's Institute for Intelligence Studies to meet a
@@ -1497,71 +1363,27 @@ automobile audio amplifier example from Table 3.1. The tradeoff matrix
 is shown in Table 3.5, where the marketing requirements constitute the
 row headings and the engineering requirements the column headings.
 
-\textbf{Table 3.5} Engineering-marketing tradeoff matrix for the audio
+\textbf{Table 3.5} 
+
+\begin{table}
+\centering
+\caption{Engineering-marketing tradeoff matrix for the audio
 amplifier. ↑=positive correlation, ↑↑=strong positive correlation,
-↓=negative correlation, ↓↓=strong negative correlation.
+↓=negative correlation, ↓↓=strong negative correlation.}
+\label{table:engMarketingMatrix}
 
-Engineering
+\begin{tabular}{ |l|l|l|l|l|l|l|l|} 
+\hline
+\rowcolor{Gray}
+  &   & THD & Output Power & Efficiency & Install Time & Dimensions & Cost \\ 
+  &   &  -      &  +                     & +               & -                   & -                    &  - \\
 
-Requirements
-
-Correlations between
-
-Requirements
-
-Marketing
-
-Requirements
-
-Polarity
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.3010}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0894}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1016}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1016}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1016}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1016}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1016}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1016}}@{}}
-\toprule\noalign{}
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.3904} + 2\tabcolsep}}{%
-\multirow{2}{=}{\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage}}} & \begin{minipage}[b]{\linewidth}\raggedright
-THD
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Output Power
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-η, Efficiency
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Install Time
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Dimensions
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Cost
-\end{minipage} \\
-& & \begin{minipage}[b]{\linewidth}\raggedright
--
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-+
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-+
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
--
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
--
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
--
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
 1) Sound Quality & + & ↑↑ & ↓ & & & ↓↓ & ↓↓ \\
 2) High Power & + & ↓ & ↑↑ & ↑ & & ↓↓ & ↓ \\
 3) Install Ease & + & & ↓ & & ↑↑ & ↑ & ↓ \\
 4) Cost & - & ↓↓ & ↓ & ↓ & & ↓ & ↑↑ \\
-\end{longtable}
+\end{tabular}
+\end{table}
 
 One of the first things to note is that each requirement has an
 associated polarity. A requirement with a positive/negative polarity,
@@ -1636,58 +1458,26 @@ greater surface area aid in dissipating more power. Finally, there is a
 negative correlation between the output power and cost because of the
 greater size and number of parts needed to achieve higher power.
 
-\textbf{Table 3.6} The engineering tradeoff matrix for the audio
-amplifier. ↑=positive correlation, ↓=negative correlation.
+\begin{table}
+\centering
+\caption{The engineering tradeoff matrix for the audio
+amplifier. ↑=positive correlation, ↓=negative correlation.}
+\label{table:engTradeOff}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2793}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1030}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1030}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1030}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1030}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1030}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1030}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1030}}@{}}
-\toprule\noalign{}
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.3823} + 2\tabcolsep}}{%
-\multirow{2}{=}{\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage}}} & \begin{minipage}[b]{\linewidth}\raggedright
-THD
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Output Power
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-η, Efficiency
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Install Time
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Dimensions
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Cost
-\end{minipage} \\
-& & \begin{minipage}[b]{\linewidth}\raggedright
--
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-+
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-+
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
--
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
--
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
--
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+\begin{tabular}{ |l|l|l|l|l|l|l|l|} 
+\hline
+\rowcolor{Gray}
+  &   & THD & Output Power & Efficiency & Install Time & Dimensions & Cost \\ 
+ \rowcolor{Gray}
+  &   &  -      &  +                     & +               & -                   & -                    &  - \\
 THD & - & & ↓ & & & ↓ & ↓ \\
 Output Power & + & & & ↑ & & ↓ & ↓ \\
-η, Efficiency & + & & & & & ↑ & ↓ \\
+Efficiency & + & & & & & ↑ & ↓ \\
 Install Time & - & & & & & ↓ & \\
 Dimensions & - & & & & & & ↓ \\
 Cost & - & & & & & & \\
-\end{longtable}
+\end{tabular}
+\end{table}
 
 \subsubsection{Competitive Benchmarks}\label{competitive-benchmarks}
 
@@ -1698,31 +1488,21 @@ outperform the competition. The benchmark table lists the requirements
 in the row headings and the competitors in the column headings as shown
 in Table 3.7.
 
-\textbf{Table 3.7} Competitive benchmarks for the audio amplifier.
+\begin{table}
+\centering
+\caption{Competitive benchmarks for the audio amplifier.}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1527}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2748}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2831}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2894}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Apex Audio}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Monster Amps}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Our Design}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+\label{table:benchmarkAudio}
+\begin{tabular}{ |> {\columncolor{Gray}} c  |l|l|l||} 
+\hline
+\rowcolor{Gray}
+\textbf{Apex Audio} & \\textbf{Monster Amps} & \\textbf{Our Design}
 \textbf{THD} & 0.05\% & 0.15\% & 0.1\% \\
 \textbf{Power} & 30W & 50W & 35W \\
 \textbf{Efficiency} & 70\% & 30\% & 40\% \\
 \textbf{Cost} & \$250 & \$120 & \$100 \\
-\end{longtable}
+\end{tabular}
+\end{table}
 
 \subsubsection{The House of Quality}\label{the-house-of-quality}
 
@@ -1877,23 +1657,17 @@ integrates the Problem Statement from Chapter 2.
   Specification.
 \end{itemize}
 
-\textbf{Table 3.8} Self-assessment checklist for the Requirements
+\begin{table}
+\centering
+\caption{Self-assessment checklist for the Requirements
 Specification. 1 = Strongly Disagree, 2 = Disagree, 3 = Neutral, 4 =
-Agree, 5 = Strongly Agree.
+Agree, 5 = Strongly Agree.}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8727}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1273}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Engineering Requirements}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Score}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+\label{table:benchmarkAudio}
+\begin{tabular}{ |l|l|} 
+\hline
+\rowcolor{Gray}
+\textbf{Engineering Requirements} & \textbf{Score}\\
 Each engineering requirement is abstract. & \\
 Each engineering requirement is verifiable. & \\
 Each engineering requirement is unambiguous and written as a concise
@@ -1945,86 +1719,3 @@ automobile door seals as implemented by Toyota Motor Corporation.
 Ullrich and Eppinger {[}Ull03{]} present a good perspective on
 developing specifications employing the QFD techniques and the HOQ with
 an emphasis on the voice of the customer.
-
-\subsection{Problems}\label{problems}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Briefly describe the four properties of an engineering requirement.
-\item
-  Identify the three levels of standards usage and what is meant by each
-  one.
-\item
-  For each of the engineering requirements below, determine if it meets
-  the properties of abstractness, unambiguous, verifiable, and
-  realistic. If a requirement does not satisfy the properties, restate
-  it so that it does:
-\end{enumerate}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi})}
-\item
-  The TV remote control will be easy to use.
-\item
-  The robot will identify objects in its path using ultrasonic sensors.
-\item
-  The car audio amplifier will be encased in aluminum and will operate
-  in the automobile environment.
-\item
-  The audio amplifier will have a total harmonic distortion that is less
-  than 2\%.
-\item
-  The robot will be able to move at speed of 1 foot/sec in any
-  direction.
-\item
-  The system will employ smart power monitoring technology to achieve
-  ultra-low power consumption.
-\item
-  The system shall be easy to use by a 12 year old.
-\item
-  The robot must remain operational for 50 years.
-
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \item
-    Provide three example engineering requirements that are technically
-    verifiable, but not realistic.
-  \item
-    Describe the difference between \emph{verification} and
-    \emph{validation}.
-  \item
-    Explain how \emph{validation} is performed for a Requirements
-    Specification.
-  \item
-    Provide an example of a project (real or fictitious) where
-    verification is successful, but validation is unsuccessful.
-  \item
-    Consider the design of a common device such as an audio CD player,
-    an electric toothbrush, or a laptop computer (or another device that
-    you select). Identify potential marketing and engineering
-    requirements. Consider those categories presented in Section 3.2, as
-    well as any others that are applicable to the problem. You do not
-    need to select the target values, but should identify the measures
-    and units. Present the requirements in a table format as in Table
-    3.1.
-  \item
-    Develop a marketing-engineering tradeoff matrix for the device
-    selected in Problem 3.8.
-  \item
-    Develop an engineering tradeoff matrix for the device selected in
-    Problem 3.8.
-  \item
-    Develop a list of potential standards that would apply to one of the
-    devices proposed in Problem 3.8, and for each indicate how it would
-    apply to the design.
-  \item
-    \textbf{Project Application.} Develop a complete requirements
-    document for your project as outlined in Section 3.6. Make sure that
-    the engineering requirements meet the five properties identified in
-    the chapter. The team should complete the self-assessment checklist
-    in Table 3.8.
-  \end{enumerate}
-\end{enumerate}
-
-\textbf{Concept Generation}
