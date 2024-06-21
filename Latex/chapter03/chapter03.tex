@@ -37,8 +37,8 @@ number of case study examples. The chapter concludes with advanced
 methods of analyzing and refining requirements, utilizing tools such as
 the House of Quality.
 
-Learning Objectives
-
+\section*{Learning Objectives}
+\noindent\rule{\linewidth}{1pt}
 By the end of this chapter, the reader should:
 
 \begin{itemize}
@@ -62,7 +62,8 @@ By the end of this chapter, the reader should:
 The \emph{\textbf{Requirements Specification}}, which is the focus of
 this chapter, is a collection of engineering and marketing requirements
 that a system must satisfy in order for it to meet the needs of the
-customer or end-user. Figure 3.1 illustrates a process for developing a
+customer or end-user. Figure~\ref{figure: ieeeRequirements} 
+illustrates a process for developing a
 Requirements Specification that is from the \ul{IEEE Guide for
 Developing System Requirements Specifications} {[}IEEE Std.
 1233-1998{]}. This process is the focus of this chapter and there are
@@ -80,7 +81,7 @@ system.
 \caption{Requirements Specification development processes
 from IEEE Std. 1233-1998. The three input sources to the process are the
 customer, environment, and technical community.}
-\label{figure: }
+\label{figure: ieeeRequirements}
 \end{figure}
 
 \section{Engineering Requirements}
@@ -139,11 +140,11 @@ Let's examine an example requirement for a robot whose objective is to
 navigate autonomously within a specified environment. Consider the
 following requirement
 
-\begin{quote}
+\begin{itquote}
 The robot must have an average forward speed of 0.5 feet/sec, a top
 speed of at least one foot/sec, and the ability to accelerate from
 standstill to the average speed in under one second.
-\end{quote}
+\end{itquote}
 
 Are the four properties for an engineering requirement met? In terms of
 the abstractness property, the answer is yes; it states what the system
@@ -157,10 +158,10 @@ and is addressed later.
 Now we analyze a second example requirement for the robot to see if it
 meets the properties
 
-\begin{quote}
+\begin{itquote}
 The robot must employ IR sensors to sense its external environment and
 navigate autonomously with a battery life of one hour.
-\end{quote}
+\end{itquote}
 
 This requirement is not abstract since it identifies part of the
 solution in terms of the sensor type and the fact that batteries must be
@@ -172,16 +173,17 @@ the marketing requirements. This requirement would be hard to verify
 without a good definition of what autonomous navigation in this context
 means. A better requirement would be
 
-\begin{quote}
+\begin{itquote}
 The robot must navigate autonomously, with the aid of only landmarks in
 the specified environment, for a period of least one hour.
+\end{itquote}
 
 Realize that good requirements typically have two key elements in the
 statement -- a description capability and condition. Capability
 describes what the system must do and in the above requirement, that
 capability is autonomous navigation. Conditions are measurable or
 testable attributes of the capability and are critical for verification.
-\end{quote}
+
 
 \subsection{A Fifth Property -- Realism}
 \label{section:a-fifth-property-realism}
@@ -203,8 +205,9 @@ based upon these characteristics could be developed to predict
 performance and estimate realistic requirements. Alternatively, target
 requirements can be based upon an actual prototype, where a model or
 experimental system is developed to show that a particular requirement
-is feasible. This is how the technical community in Figure 3.1 feeds
-into the requirements process.
+is feasible. This is how the technical community in 
+Figure~\ref{figure: ieeeRequirements}
+feeds into the requirements process.
 
 The use of benchmarking to identify similar systems and their
 performance provides a reference for realistic targets. It is generally
@@ -225,8 +228,8 @@ as development proceeds.
 \subsection{Constraints}
 \label{section:constraints}
 
-One of the inputs to the requirements process in Figure 3.1 is the
-environment, serving as the source of both constraints and standards. In
+One of the inputs to the requirements process in Figure~\ref{figure: ieeeRequirements}
+is the environment, serving as the source of both constraints and standards. In
 reality, all engineering requirements impose some sort of constraint on
 a design, but in design a constraint is a special type of requirement. A
 \emph{\textbf{constraint}} is a design decision imposed by the
@@ -234,10 +237,10 @@ environment or a stakeholder that impacts or limits the design.
 Constraint requirements often violate the abstractness property. For
 example, a constraint requirement is
 
-\begin{quote}
-\emph{The system must use a PIC18F52 microcontroller to implement
-processing functions.}
-\end{quote}
+\begin{itquote}
+The system must use a PIC18F52 microcontroller to implement
+processing functions.
+\end{itquote}
 
 This constraint requirement specifies how the system will be
 implemented. This could be because the project sponsor has developed a
@@ -403,17 +406,16 @@ situation. Careful attention must be given to the verifiability of
 requirements for the particular application.}
 
 \subsection*{Performance}
-\label{section:performance}
-\addcontentsline{toc}{subsubsection}{Performance}
+\label{subsection:performance}
 
 These requirements reflect a critical aspect of the performance of the
 system or device. They often are characterized by time, accuracy,
 throughput, or percentage error. The following is an example requirement
 that might be used in a security application with camera surveillance.
 
-\begin{quote}
-\emph{The system should detect 90\% of all human faces in an image.}
-\end{quote}
+\begin{itquote}
+The system should detect 90\% of all human faces in an image.
+\end{itquote}
 
 In order to verify this, a test might be constructed where the system is
 presented with a large database of face images that the system was not
@@ -421,26 +423,28 @@ developed or trained with. The number of faces correctly detected would
 then be determined. Here is another example performance requirement for
 a system that measure part location
 
-\begin{quote}
+\begin{itquote}
 The system should be able to measure part location to within ± 1mm.
-\end{quote}
+\end{itquote}
 
 One way to verify this would be to take independent measurements of the
 system's ability to measure part location and compare them to the result
 of the system. The following is an example that could apply to software
 response time.
 
-\begin{quote}
+\begin{itquote}
 The system should retrieve the user data no less than three seconds for
 90\% of requests and in a maximum of six seconds for all requests.
+\end{itquote}
 
 This could be verified by constructing a test where a large number of
 queries for user data are presented to the software under a variety of
 operating conditions and the response time measured. Yet another example
-is
-
+is:
+\begin{itquote}
 The system should be able to process video data at a rate of 30 frames
 per second.
+\end{itquote}
 
 This could be verified by providing an input video stream at the frame
 rate and testing to ensure that proper processing occurs. The test
@@ -448,17 +452,18 @@ procedure would need to specify length and number of videos to test,
 issues that are addressed in Chapter 7. A final example of performance
 is one that could apply to electrical audio amplification
 
+\begin{itquote}
 The amplifier will have total harmonic distortion of less than 1\%.
+\end{itquote}
 
 Total harmonic distortion is a measure that quantifies how closely an
 amplifier is able to replicate the original signal. This would likely be
 verified using laboratory instrumentation to measure the harmonic
 distortion in the output signal.
-\end{quote}
+
 
 \subsection*{Functionality}
-\label{section:functionality}
-\addcontentsline{toc}{subsubsection}{Functionality}
+\label{subsection:functionality}
 
 These requirements describe the type of functions that a system should
 perform. Often, they provide inputs, outputs, and the transformation
@@ -468,28 +473,31 @@ an example, where the input is ambient air temperature is converted to a
 digital readout. It also has a performance aspect in that the accuracy
 is specified.
 
-\begin{quote}
+\begin{itquote}
 The system will convert ambient temperature to a digital readout of
 temperature with an accuracy of 1\% over the measurement range.
+\end{itquote}
 
 The following is an example from a real capstone project to develop a
 wireless mouse that is worn by the user and integrated into a glove.
 
+\begin{itquote}
 The system will implement the left and right button functions of a
 standard mouse.
+\end{itquote}
 
 The following are several functional examples for software systems.
 
-The user shall be able to search all five company internal databases.
-
+\begin{itquote}
+The user shall be able to search all five company internal databases. \\ \\
 The system will protect the user's identity with 128-bit encryption.
+\end{itquote}
 
 Note that in these last two cases, verification would be by inspection.
-\end{quote}
+
 
 \subsection*{Economic}
-\label{section:economic}
-\addcontentsline{toc}{subsubsection}{Economic}
+\label{subsection:economic}
 
 Economic requirements include the costs associated with the development
 (design, production, maintenance) and sale of a system. They may also
@@ -497,62 +505,60 @@ include the economic impact of the final system, such as how it will to
 contribute to profits or save the user money. Two example economic
 requirements are below.
 
-\begin{quote}
+\begin{itquote}
 The costs for developing the system (labor and parts) should not exceed
-\$50,000.
-
+\$50,000. \\ \\
 The total parts and manufacturing costs cannot exceed \$500 per unit.
-\end{quote}
+\end{itquote}
 
 \subsection*{Energy}
-\label{section:energy}
-\addcontentsline{toc}{subsubsection}{Energy}
+\label{subsection:energy}
 
 Virtually all systems consume and/or produce energy and thus have energy
 requirements. Energy consumption is the amount of power that a system
 consumes, and may be specified in terms of maximum, minimum, or average
 values. Example requirements are
 
-\begin{quote}
-The system will have an average power consumption of 500mW.
-
+\begin{itquote}
+The system will have an average power consumption of 500mW. \\ \\
 The system will have a peak current draw of 1A.
+\end{itquote}
 
 These requirements could be verified by measuring current and voltage
 draws under the different operating conditions, or by estimating the
 power drawn by all components in the system.
-\end{quote}
+
 
 Operating lifetime addresses how long the system will operate from a
 given power source. For battery-powered devices, operating time is
 critical, and the lifetime for a given source may be an important
 requirement. An example of such a requirement is
 
-\begin{quote}
+\begin{itquote}
 The system will operate for a minimum of three hours without needing to
 be recharged.
-\end{quote}
+\end{itquote}
 
 Source characteristics refer to the characteristics of the input and/or
 output sources, such as voltage, current, impedance, frequency, number
 of phases, and power requirements. An example requirement is
 
-\begin{quote}
+\begin{itquote}
 The system will operate from a 12V source that supplies a maximum
 current of 300mA.
-\end{quote}
+\end{itquote}
 
 \subsection*{Environmental}
-\label{section:environmental}
-\addcontentsline{toc}{subsubsection}{Environmental}
+\label{subsection:environmental}
 
 These requirements address the impact of the design on the external
 environment and usage of the earth's resources. For example, energy
 usage is an important factor and example requirement is as follows
 
-\begin{quote}
+\begin{itquote}
 The system will use 20\% less energy than the industry average for
 similar products and qualify for US Energy Star certification.
+\end{itquote}
 
 Recyclability is the ability to dismantle a product into its constituent
 materials for reuse in other products. European countries have
@@ -560,34 +566,34 @@ regulations on the recyclability of consumer products. In many cases,
 the producer of a product is responsible for its safe disposal once its
 service life is over. An example requirement is as follows
 
+\begin{itquote}
 50\% of the modular components will be able to be repaired and re-used
 in similar products.
-\end{quote}
+\end{itquote}
 
 \subsection*{Health and Safety}
-\label{section:health-and-safety}
-\addcontentsline{toc}{subsubsection}{Health and Safety}
+\label{subsection:health-and-safety}
 
 The health and safety of anyone affected by the final product is an
 especially important consideration. For example, IEEE and ANSI standards
 provide guidance on safe levels for exposure to radio frequency electric
 fields.
 
-\begin{quote}
-\emph{The system will not expose humans to unhealthy levels of
+\begin{itquote}
+The system will not expose humans to unhealthy levels of
 electromagnetic radiation and will meet conditions for safe operation
-identified in ANSI Std. C95.1.}
-\end{quote}
+identified in ANSI Std. C95.1.
+\end{itquote}
 
 There is a tendency to think that physical harm is not an issue in
 electrical and computer systems, but many electronic systems control
 mechanically moving parts. Consider the design of an automatic garage
 door system. An example constraint could be that
 
-\begin{quote}
+\begin{itquote}
 The door should stop moving if a person or object is detected in the
 door path.
-\end{quote}
+\end{itquote}
 
 This could also translate into further engineering requirements on the
 amount of force on the door required to trigger it to stop. There are
@@ -595,16 +601,14 @@ many safety standards, and two that are widely applied for consumer
 products are the UL (Underwriters Laboratory) and CE (Common European)
 standards. Examples are
 
-\begin{quote}
-The system will use only UL approved components.
-
+\begin{itquote}
+The system will use only UL approved components.\\ \\
 The final system will be meet UL and CE standards and be tested at an
 independent laboratory for approval.
-\end{quote}
+\end{itquote}
 
 \subsection*{Legal}
-\label{section:legal}
-\addcontentsline{toc}{subsubsection}{Legal}
+\label{subsection:legal}
 
 Designs should not infringe upon existing patents, copyrights, and
 trademarks, particularly if the intention is to sell the product. Patent
@@ -612,14 +616,13 @@ searches should be conducted, and search capabilities are available at
 the United States Patent Office website
 (\href{http://www.uspto.gov}{www.uspto.gov}). An example is
 
-\begin{quote}
+\begin{itquote}
 An intellectual property search will be conducted to ensure that there
-is no infringement on prior patents.
-
+is no infringement on prior patents.\\ \\
 This could be verified by having an external firm will conduct the
 patent search and evaluate the design against existing intellectual
 property.
-\end{quote}
+\end{itquote}
 
 Security and privacy constraints apply to systems that handle sensitive
 data or personal communications. The ability of computing systems to
@@ -627,14 +630,13 @@ withstand malicious attacks by hackers is another consideration, and the
 use of firewalls or other protective measures may be warranted. Examples
 are
 
-\begin{quote}
+\begin{itquote}
 The system will protect the user's identity with 128-bit encryption as
 required by law.
-\end{quote}
+\end{itquote}
 
 \subsection*{Maintainability}
 \label{section:maintainability}
-\addcontentsline{toc}{subsubsection}{Maintainability}
 
 The maintenance of the system being developed and compatibility with
 other systems are often considerations. Will the system be designed so
@@ -644,10 +646,10 @@ and flexible enough to be used in other applications. It is also a
 consideration in terms of the reusability of electronic or digital
 components in future system upgrades. An example reuse constraint is
 
-\begin{quote}
+\begin{itquote}
 The software should maintain downward capability and be able to use
 version 2 object libraries.
-\end{quote}
+\end{itquote}
 
 After a product goes into service, it enters the maintenance phase,
 where it is maintained and upgraded. In software designs this is an
@@ -656,25 +658,24 @@ maintained. On the hardware side, maintenance can be facilitated by the
 use of plug-in modules that are easily removed and replaced. Examples
 are
 
-\begin{quote}
+\begin{itquote}
 The system will initially be available to 100 users at five field
 locations, and within one year must be expanded to address usage by
-5,000 users company-wide.
-
+5,000 users company-wide.\\ \\
 The system should have a modular design such that failed components can
 be replaced by a technician in under 15 minutes.
-\end{quote}
+\end{itquote}
 
 There may be internal restrictions on system development imposed by the
 company based on their internal expertise and ability to maintain the
 system, such as the following constraint requirement.
 
-\begin{quote}
+\begin{itquote}
 The system will use only PIC microcontrollers.
-\end{quote}
+\end{itquote}
 
-\subsubsection*{Manufacturability}\label{manufacturability}
-\addcontentsline{toc}{subsubsection}{Manufacturability}
+\subsubsection*{Manufacturability}
+\label{subsection:manufacturability}
 
 A prevalent product development paradigm that used to be employed in
 many engineering organizations was to ``\emph{throw the design over the
@@ -693,10 +694,10 @@ Size is a consideration in terms of the amount of space the final design
 will occupy, particularly if it has to be physically integrated with
 other components. An example constraint requirement is
 
-\begin{quote}
+\begin{itquote}
 The system must be manufactured on a circuit board with dimensions of no
 greater than 1''x2''.
-\end{quote}
+\end{itquote}
 
 The realization and portability of the system is a consideration. For
 example, with electronics, will it be built on a printed circuit board?
@@ -706,23 +707,22 @@ foundry may require that integrated circuit layouts utilize certain file
 formats. Examples are below, which again are clear constraints on the
 design.
 
-\begin{quote}
+\begin{itquote}
 The system will be manufactured using three layer printed circuit board
-technology.
-
+technology.\\ \\
 The product should be run on the Linux operating system.
-\end{quote}
+\end{itquote}
 
 The use of readily available parts, instead of low volume or hard to
 find components, improves manufacturability, and an example is
 
-\begin{quote}
+\begin{itquote}
 The design shall only incorporate components that can be purchased
 through two of our main suppliers.
-\end{quote}
+\end{itquote}
 
-\subsubsection*{Operational}\label{operational}
-\addcontentsline{toc}{subsubsection}{Operational}
+\subsubsection*{Operational}
+\label{subsection:operational}
 
 Operational requirements address the physical environment in which the
 system will operate. Characteristics could be temperature, humidity,
@@ -730,16 +730,17 @@ electromagnetic radiation, shock, and vibration. Note, that these can
 often be quite difficult to verify and may require specialized equipment
 to do so. An example temperature operational requirement is
 
-\begin{quote}
+\begin{itquote}
 The system should be able to operate in the temperature range of 0°C to
 75°C.
+\end{itquote}
 
 This could be tested via test in an environmental chamber which the
 operation of the system is tested over the complete temperature range.
 Alternatively, indirect verification is a possibility. For example, in
 the design, only components that are known to meet this operational
 requirement, as specified in their product datasheet, could be used.
-\end{quote}
+
 
 Depending upon the customer needs, the system may be tested in an
 environmental chamber to verify that the requirement is met. Humidity is
@@ -748,23 +749,24 @@ required ambient humidity range. A system may also need to be
 water-resistant (withstand rain and snow) or waterproof (be submersible
 in water). An example requirement is
 
-\begin{quote}
+\begin{itquote}
 The system must be waterproof and operate while submersed in water.
+\end{itquote}
 
 Be careful with the differences between waterproof (submersible in
 water) and water-resistant, which indicates the ability to withstand
 outdoor elements such as rain and snow. For example, outdoor decorative
 lights are water-resistant, but not waterproof.
-\end{quote}
+
 
 Depending upon the environment, the system may need to withstand
 vibrations. Bounds are typically specified in terms of frequency,
 magnitude, and duration of the vibration. An example requirement is
 
-\begin{quote}
+\begin{itquote}
 The system must be able to withstand vibrations of up to 60Hz with a
 peak magnitude of 1mm for a period of 1 minute.
-\end{quote}
+\end{itquote}
 
 Electromagnetic Interference \emph{(EMI)} results from any
 electromagnetic energy that interferes or disturbs the operation of an
@@ -778,29 +780,27 @@ The system may need to withstand a specified amount of shock and still
 operate. This may be measured in G-force or via heuristics. An example
 requirement is
 
-\begin{quote}
+\begin{itquote}
 The system should withstand a drop from a height of six feet and still
 operate.
-\end{quote}
+\end{itquote}
 
-\subsubsection*{Political}\label{political}
-\addcontentsline{toc}{subsubsection}{Political}
+\subsubsection*{Political}
+\label{subsection:political}
 
 Political constraints address relationships to political, governmental,
 or union organizations. Examples include obtaining governmental
 approvals, resolving trade barriers, and determining the acceptance of
 systems for use in unionized environments. Examples are below.
 
-\begin{quote}
+\begin{itquote}
 The system will need to obtain FDA approval before it can be sold to
-medical users.
-
+medical users.\\ \\
 The software will comply with the Digital Millennium Copyright Act.
-\end{quote}
+\end{itquote}
 
-\subsubsection*{Reliability and
-Availability}\label{reliability-and-availability}
-\addcontentsline{toc}{subsubsection}{Reliability and Availability}
+\subsubsection*{Reliability and Availability}
+\label{subsection:reliability-and-availability}
 
 This refers to the expected period of time that a system will operate
 properly. Measures of r\emph{eliability} include failure rates and mean
@@ -808,9 +808,9 @@ time to failure. Estimation of system reliability is given detailed
 coverage in Chapter 8. The following is an example of a reliability
 requirement.
 
-\begin{quote}
+\begin{itquote}
 The system will have a reliability of 95\% in five years.
-\end{quote}
+\end{itquote}
 
 This requirement means that 95\% of the systems should be properly
 operating (have not failed) in five years. Direct measurement of
@@ -823,18 +823,18 @@ estimate the system reliability.
 of time that a system is available for operation. Example availability
 requirements are
 
-\begin{quote}
-The system will be operational 99\% of the time.
-
+\begin{itquote}
+The system will be operational 99\% of the time.\\ \\
 The system will be operational from 4AM to 10PM, 365 days a year.
+\end{itquote}
 
 These might be hard to verify this since it is only determined for sure
 once the system is deployed. Verification would have to address under
 which conditions the system would be tested to ensure this occurs.
-\end{quote}
 
-\subsubsection*{Social and Cultural}\label{social-and-cultural}
-\addcontentsline{toc}{subsubsection}{Social and Cultural}
+
+\subsubsection*{Social and Cultural}
+\label{subsection:social-and-cultural}
 
 This addresses aspects such as benefits, risks, and acceptance of
 products by the intended user or by society at large. For example,
@@ -863,19 +863,17 @@ lawyers, or the general public? Each group has its own culture,
 educational background, and willingness to accept innovations. Example
 requirements are
 
-\begin{quote}
+\begin{itquote}
 The product shall provide help menus to the user in either English or
-Spanish.
-
+Spanish. \\ \\
 The software will be designed to easily be used by operators on the
 manufacturing floor. The software will be tested by a group of 25
 operators and the average time to learn the basic functionality of the
 software will not exceed 8 hours.
-\end{quote}
+\end{itquote}
 
-\subsubsection*{\texorpdfstring{Usability
-}{Usability }}\label{usability}
-\addcontentsline{toc}{subsubsection}{Usability }
+\subsubsection*{Usability }
+\label{subsection:usability}
 
 \emph{Usability requirements} address the ease of use of a system.
 Although they are quite common, they are often difficult to verify.
@@ -885,21 +883,23 @@ conditions can be placed on the number of menus in the system, an
 estimated learning time, and number and types of errors the user is
 allowed to make. An example requirement is that
 
-\begin{quote}
+\begin{itquote}
 Users of the system should be able to learn 80\% of its functionality
 within two hours.
+\end{itquote}
 
 The method of verification would need to be clearly specified, such as,
 a group of 25 test users who have never used the product will be
 provided two hours to learn the product. Another example of a usability
 requirement is
 
+\begin{itquote}
 The system will have a maximum of 20 functions and a maximum of two
 menus of depth.
-\end{quote}
+\end{itquote}
 
-\subsection{Developing the Requirements
-Specification}\label{developing-the-requirements-specification}
+\section{Developing the Requirements Specification}
+\label{section:developing-the-requirements-specification}
 
 The Requirements Specification is the complete set of all system
 requirements. The steps in developing the Requirements Specification are
@@ -923,8 +923,8 @@ to:
   stakeholders.
 \end{itemize}
 
-\subsubsection{Properties of the Requirements
-Specification}\label{properties-of-the-requirements-specification}
+\subsection{Properties of the Requirements Specification}
+\label{subsection:properties-of-the-requirements-specification}
 
 The desirable properties of the Requirements Specification are as
 follows {[}IEEE Std.1233-1998{]}:
@@ -963,7 +963,8 @@ follows {[}IEEE Std.1233-1998{]}:
   take place.
 \end{enumerate}
 
-\subsubsection{Requirements Validation}\label{requirements-validation}
+\subsection{Requirements Validation}
+\label{subsection:requirements-validation}
 
 An important property of an engineering requirement that we saw earlier
 was verifiability. Verifiability seeks to answer the question of whether
@@ -986,6 +987,7 @@ affirmative {[}Som01{]}:
 \item
   For the Requirements Specification, are the properties of
   orthogonality, completeness, and consistency met?
+\end{itemize}
 
   A complete Requirements Specification includes all the requirements,
   both marketing and engineering, along with the relationships between
@@ -996,9 +998,10 @@ affirmative {[}Som01{]}:
   because, like a mathematical mapping, it defines which elements of the
   domain (marketing requirements) are associated with which elements of
   the range (engineering requirements).
-\end{itemize}
 
-\subsection{Requirements Case Studies}\label{requirements-case-studies}
+
+\section{Requirements Case Studies}
+\label{section:requirements-case-studies}
 
 This section presents case study examples of Requirements Specification,
 most of which are from real capstone design projects. They are presented
@@ -1007,64 +1010,64 @@ marketing requirements (supporting the traceability property), and the
 justification for each requirement. The marketing requirements are
 summarized at the end of the table.
 
-\subsubsection{Case Study: Car Audio
-Amplifier}\label{case-study-car-audio-amplifier}
+\subsection{Case Study: Car Audio Amplifier}
+\label{subsection:case-study-car-audio-amplifier}
 
-Table 3.1 presents the Requirements Specification for a car audio
+Table~\ref{table:audioRequireSpec} presents the Requirements Specification for a car audio
 amplifier. This simple example was selected because of the relative ease
 of understanding, broad familiarity with this type of device, and it
 will be expanded upon later.
 
-\textbf{Table 3.1} Requirements Specification for an audio amplifier for
-use in an automobile.
-
 \begin{table}
 \centering
-\begin{tabular}{ |c|l|l|} 
+\caption{Requirements Specification for an audio amplifier for
+use in an automobile.}
+\label{table:audioRequireSpec}
+\begin{tabular}{ |p{2cm}|p{5cm}|p{5cm}|} 
 \hline
 \rowcolor{Gray}
-Marketing Requirements & Engineering Requirements & Justification \\
+\textbf{Marketing Requirements} & \textbf{Engineering Requirements} & \textbf{Justification} \\ \hline
                            
 1, 2, 4 &
 1.  The \emph{total harmonic distortion} should be \textless0.1\%. &
 Based upon competitive benchmarking and existing
 amplifier technology. Class A, B, and AB amplifiers are able to obtain
-this level of THD. \\
+this level of THD. \\ \hline
 
 1--4 & 
 2.   Should be able to sustain an \emph{output power} that averages $\ge 35$
   watts with a peak value of $\ge 70$ watts. & 
 This power range provides more than adequate sound
 throughout the automobile compartment. It is a sustainable output power
-for projected amplifier complexity. \\
+for projected amplifier complexity. \\ \hline
 
 2, 4 & 
-3. Should have an efficiency $> 40\%$. &
-Achievable with several different classes of power amplifiers. \\
+3. Should have an efficiency $\eta > 40\%$. &
+Achievable with several different classes of power amplifiers. \\ \hline
 
 3 & 
 4.   \emph{Average installation time} for the power and audio connections
   should not exceed 5 minutes. &
 Past trials using standard audio and power jacks
-demonstrate that this is a reasonable installation time. \\
+demonstrate that this is a reasonable installation time. \\ \hline
 
 1--4 & 
 5.  The \emph{dimensions} should not exceed 6'' x 8''x 3''. &
 Fits under a typical car seat. Prior models and
 estimates show that all components should fit within this package
-size. \\
+size. \\ \hline
 
 1--4 & 
 6.  \emph{Production cost} should not exceed \$100. &
-This is based upon competitive market analysis and previous system designs. \\
+This is based upon competitive market analysis and previous system designs. \\ \hline
 
-\multicolumn{3}{l}{
-\textbf{Marketing Requirements}
-1.  The system should have excellent sound quality.
-2.  The system should have high output power.
-3.  The system should be easy to install.
+\multicolumn{3}{|p{12cm}|}{
+\textbf{Marketing Requirements}\newline
+1.  The system should have excellent sound quality.\newline
+2.  The system should have high output power.\newline
+3.  The system should be easy to install.\newline
 4.   The system should have low cost.
-}
+} \\ \hline
 \end{tabular}
 \end{table}
 
@@ -1094,10 +1097,10 @@ time provides the condition for verification. The fifth requirement
 addresses the physical size of the device, and is important as it will
 need to be installed somewhere in the vehicle.
 
-\subsubsection{Case Study: iPod\textsuperscript{TM} Hands-Free Device}
+\subsection{Case Study: iPod\textsuperscript{TM} Hands-Free Device}
 \label{subsection:case-study-ipodtm-hands-free-device}
 
-Table 3.2 presents the Requirements Specification for a hands-free
+Table~\ref{table:ipod} presents the Requirements Specification for a hands-free
 device whose intent is to allow a driver to communicate with an
 iPod\textsuperscript{TM} audio player while driving. The Problem
 Statement was presented in Chapter 2 (Section 2.6).
@@ -1108,17 +1111,17 @@ Statement was presented in Chapter 2 (Section 2.6).
 iPod\textsuperscript{TM} Hands-Free Device.}
 \label{table:ipod}
 
-\begin{tabular}{ |c|l|l|} 
+\begin{tabular}{ |p{2cm}|p{5cm}|p{5cm}|} 
 \hline
 \rowcolor{Gray}
-Marketing Requirements & Engineering Requirements & Justification \\
+\textbf{Marketing Requirements} & \textbf{Engineering Requirements} & \textbf{Justification} \\ \hline
 
 4, 6 & 
 1.  System will i\emph{mplement nine voice command} functions ( menu,
   play/pause, previous, next, up, down, left, right and select) and
   respond appropriately according to each command. &
   hese are the basic nine commands that are used to
-control an iPod and will provide all functionality needed. \\
+control an iPod and will provide all functionality needed. \\ \hline
 
 1, 3, 4, 7 & 
 2.   The \emph{time to respond} to voice commands and provide audio
@@ -1127,38 +1130,38 @@ The system needs to provide convenient use by
 responding to the user inputs within a short time period. Based on
 research it was determined that the response time for the iPod is less
 than 1 second and an average voice recognition system requires 2 seconds
-to recognize commands. \\
+to recognize commands. \\ \hline
 
 4, 6 & 
 3.   The \emph{accuracy} of the system in accepting voice commands will be
   between 95\% and 98\%. &
 Research demonstrates that this is a typical accuracy
 of voice recognition chips. Speaker independent systems can achieve 95\%
-and speaker-dependent up to 98\%. \\
+and speaker-dependent up to 98\%. \\ \hline
 
 5, 6 & 
 4.   The system should be able to \emph{operate} from a 12 V source and
   will draw a maximum of 150 mA. &
 The automobile provides 12V DC. A current draw budget
 estimate was developed with potential components and 150mA was an upper
-limit of current estimated. \\
+limit of current estimated. \\ \hline
 
 5, 6, 7 & 
 5.  The \emph{dimensions} of the prototype should not exceed 6'' x 4'' x  1.5''. &
 This system must be able to fit in a car compartment,
 somewhere between the seats. Estimate is based upon a size budget
-calculation using typical parts. \\
+calculation using typical parts. \\ \hline
 
-\multicolumn{3}{l}{
-\textbf{Marketing Requirements}
-1. Should not minimize or slow down the functional quality of the iPod.
-2.  User should be able to search for songs and artists and receive feedback on selection.
-3.  System should provide clear understandable speech.
-4.  System should be able to understand voice commands from user.
-5.  Should be able to fit and operate in an automobile.
-6.  Should be easy to use.
+\multicolumn{3}{|p{12cm}|}{
+\textbf{Marketing Requirements}\newline
+1. Should not minimize or slow down the functional quality of the iPod.\newline
+2.  User should be able to search for songs and artists and receive feedback on selection.\newline
+3.  System should provide clear understandable speech.\newline
+4.  System should be able to understand voice commands from user.\newline
+5.  Should be able to fit and operate in an automobile.\newline
+6.  Should be easy to use.\newline
 7.  Should be portable.
-}
+} \\ \hline
 \end{tabular}
 \end{table}
 
@@ -1174,10 +1177,10 @@ the types of components that might be used in the design. The last two
 requirements are operational requirements, ensuring that the device will
 work in its intended environment.
 
-\subsubsection{Case Study: Gigabit Ethernet Card Testing}
-\label{case-study-gigabit-ethernet-card-testing}
+\subsection{Case Study: Gigabit Ethernet Card Testing}
+\label{subsection:case-study-gigabit-ethernet-card-testing}
 
-Table 3.3 presents an example Requirements Specification developed for
+Table~\ref{table:gigabit} presents an example Requirements Specification developed for
 the design of an experimental test setup {[}Ese03{]}. The Problem
 Statement for this example was presented in Chapter 2, where the
 objective was to design a system to test a gigabit Ethernet card for use
@@ -1192,44 +1195,42 @@ determined.
 testing project.}
 \label{table:gigabit}
 
-\begin{tabular}{ |c|l|l|} 
+\begin{tabular}{ |p{2cm}|p{5cm}|p{5cm}|} 
 \hline
 \rowcolor{Gray}
-Marketing Requirements & Engineering Requirements & Justification \\
+\textbf{Marketing Requirements} & \textbf{Engineering Requirements} & \textbf{Justification} \\ \hline
 
 1 & Must be able to measure the \emph{optical power output} with an
 \emph{accuracy} of ± 0.5dB. & This is based upon commercially available
-optical power measurement instruments. \\
+optical power measurement instruments. \\ \hline
 2 & Must be able to measure the \emph{optical power output} from 10°C to
 55°C. & This range simulates the operating environment, and 55°C is the
-maximum operating temperature of the card. \\
+maximum operating temperature of the card. \\ \hline
 2 & The system must maintain \emph{temperature accuracy} to within ± 1°C
 during all tests. & Based upon accuracy of commercially available test
-chambers. \\
+chambers. \\ \hline
 3 & Must be able to measure optical power over a \emph{frequency range}
 from 4Hz to 33Hz in increments of 1Hz. & The frequencies encountered in
-actual operation will not exceed this range. \\
+actual operation will not exceed this range. \\ \hline
 3 & The \emph{peak vibration amplitude} should be 0.01 inches. & The
-amplitude in the operating environment will not exceed this value. \\
+amplitude in the operating environment will not exceed this value. \\ \hline
 3 & The card should be tested at a given frequency for a \emph{duration}
 of 1 minute. & This exceeds the expected duration of vibration at given
-frequency that the system will encounter. \\
+frequency that the system will encounter. \\ \hline
 3 & The vibration effects should be tested in x, y, and z
 \emph{directions}. & The system will encounter vibrations in multiple
 directions. This will provide data on differences in directional
-variation due to vibration. \\
+variation due to vibration. \\ \hline
 3 & The experiment should determine \emph{resonant frequency} to an
 accuracy of ± 0.5Hz. & This will provide data on worst case vibration at
-the resonant frequency. \\
+the resonant frequency. \\ \hline
 
-\multicolumn{3}{l}{
-\textbf{Marketing Requirements}
-
-1.  The measurement of the optical power should be accurate.
-2.  It should measure the effects of temperature variations on optical
-  power.
+\multicolumn{3}{|p{12cm}|}{
+\textbf{Marketing Requirements} \newline
+1.  The measurement of the optical power should be accurate.\newline
+2.  It should measure the effects of temperature variations on optical power.\newline
 3.  It should measure effects of vibration on the fiber optic connector
-  and optical power output.}
+  and optical power output.}  \\ \hline
 \end{tabular}
 \end{table}
 
@@ -1246,11 +1247,11 @@ equipment. The requirements also address the vibration testing
 requirements, including the vibration frequency range, amplitude, and
 resonant frequency.
 
-\subsubsection{Case Study: Portable Aerial Surveillance
-System}\label{case-study-portable-aerial-surveillance-system}
+\subsection{Case Study: Portable Aerial Surveillance System}
+\label{subsection:case-study-portable-aerial-surveillance-system}
 
 The Requirements Specification for the Portable Aerial Surveillance
-System (Problem Statement presented in Chapter 2) is shown in Table 3.4.
+System (Problem Statement presented in Chapter 2) is shown in Table~\ref{table:portableAerial}.
 This system is intended to provide police and emergency responders with
 a low-cost easy to deploy aerial surveillance system.
 
@@ -1260,47 +1261,46 @@ a low-cost easy to deploy aerial surveillance system.
 Surveillance System.}
 \label{table:portableAerial}
 
-\begin{tabular}{ |c|l|l|} 
+\begin{tabular}{ |p{2cm}|p{5cm}|p{5cm}|} 
 \hline
 \rowcolor{Gray}
-Marketing Requirements & Engineering Requirements & Justification \\
+\textbf{Marketing Requirements} & \textbf{Engineering Requirements} & \textbf{Justification} \\ \hline
 
 6 & 
  System will provide visual recognition of license plate text from a
   minimum distance of 150 feet during daytime and nighttime use. &
-  
- Recorded images and video will be used as trial
+   Recorded images and video will be used as trial
 evidence. The device's maximum height is 150 feet, so
 the device should allow text recognition at an absolute minimum of that
-distance. The device must be also usable during nighttime.\\
+distance. The device must be also usable during nighttime.\\ \hline
 
 4, 9 & 
    The device must be operable by a single person. &
  A police officer dispatched alone in his or her cruiser
-should be able to launch and operate the device with no assistance. \\
+should be able to launch and operate the device with no assistance. \\ \hline
 
 2 & 
  This device must remain airborne for a minimum of two hours. &
 Based upon interviews with law enforcement users. This
-is a time period that covers most emergency situations. \\
+is a time period that covers most emergency situations. \\ \hline
 
 7, 8 & 
  The device will be able to be used in at least 14 mph winds.&
  Device will be used outdoors and in non-ideal
 conditions in Erie, PA, where there is a 95\% chance that winds will be
-at or below 14 mph. \\
+at or below 14 mph. \\ \hline
 
 7 & 
   The device must not exceed a height of 150 feet above ground level
   when in use. &
-  This device must comply with FAA regulation 101.15 \\
+  This device must comply with FAA regulation 101.15 \\ \hline
   
 3 & 
 
   Must fit into the trunk of a police cruiser. The Chevrolet Impala has
   a trunk measuring 54 inches wide by 38 inches deep by 16 inches high. &
  Will be transported in a police cruiser and must fit
-into the trunk of the vehicle. \\
+into the trunk of the vehicle. \\ \hline
 
 1 & 
   The device will cost less than \$3000 per year to operate. &
@@ -1309,24 +1309,24 @@ was \$16.7 million. 0.85\% of Erie\textquotesingle s annual budget would
 allow for \$140,280 to be used for a helicopter. A device having less
 than 2\% of the annual operating costs of a helicopter, and having many
 of the same surveillance capabilities would be considered a reasonable
-expense. \\
+expense. \\ \hline
 
-\multicolumn{3}{l}{
-\textbf{Marketing Requirements}
+\multicolumn{3}{|p{12cm}|}{
+\textbf{Marketing Requirements}\newline
 1.  The device should be able to be held stationary in the air, meaning
-  providing enough stability to provide functionality.
-2.  Should be capable of being deployed for a long period of time.
-3.   Should be able to be deployed by one person in 3-5 minutes.
-4.  Should record video with enough quality to be used as evidence.
-5.  Should be useful at night.
+  providing enough stability to provide functionality.\newline
+2.  Should be capable of being deployed for a long period of time.\newline
+3.   Should be able to be deployed by one person in 3-5 minutes.\newline
+4.  Should record video with enough quality to be used as evidence.\newline
+5.  Should be useful at night.\newline
 6.  Should fit in the trunk of a car and withstand the stresses of
-  transportation.
-7.  Should be repairable and reusable.
-8.  Should require minimal training to be operated by one person.
-9.  Should be relatively inexpensive compared to that of a helicopter.
-10.  Should be able to operate at an altitude above most buildings.
-11.  Should meet any applicable governmental regulations (such as FAA).
-12.  Should be able to operate in typical winter conditions.}
+  transportation.\newline
+7.  Should be repairable and reusable.\newline
+8.  Should require minimal training to be operated by one person.\newline
+9.  Should be relatively inexpensive compared to that of a helicopter.\newline
+10.  Should be able to operate at an altitude above most buildings.\newline
+11.  Should meet any applicable governmental regulations (such as FAA).\newline
+12.  Should be able to operate in typical winter conditions.}  \\ \hline
 \end{tabular}
 \end{table}
 
@@ -1342,8 +1342,8 @@ maximum deployment height of the device. Requirement 7 addresses the
 cost, which can often be difficult to justify in student projects, but
 in this case the team has developed a clear justification.
 
-\subsection{Advanced Requirements
-Analysis}\label{advanced-requirements-analysis}
+\section{Advanced Requirements Analysis}
+\label{section:advanced-requirements-analysis}
 
 This section examines more advanced methods that are used to analyze and
 refine requirements. There are tradeoffs between the different
@@ -1354,16 +1354,16 @@ tradeoffs between engineering requirements themselves, and benchmarking.
 At the conclusion, all of this is integrated in to the well-known House
 of Quality.
 
-\subsubsection{The Engineering-Marketing Tradeoff
-Matrix}\label{the-engineering-marketing-tradeoff-matrix}
+\subsection{The Engineering-Marketing Tradeoff Matrix}
+\label{subsection:the-engineering-marketing-tradeoff-matrix}
 
 This matrix identifies how engineering and marketing requirements impact
 each other. To demonstrate its construction, we continue to examine the
-automobile audio amplifier example from Table 3.1. The tradeoff matrix
-is shown in Table 3.5, where the marketing requirements constitute the
+automobile audio amplifier example from Table~\ref{table:audioRequireSpec}. 
+The tradeoff matrix
+is shown in Table~\ref{table:engMarketingMatrix}, where the marketing 
+requirements constitute the
 row headings and the engineering requirements the column headings.
-
-\textbf{Table 3.5} 
 
 \begin{table}
 \centering
@@ -1372,16 +1372,23 @@ amplifier. ↑=positive correlation, ↑↑=strong positive correlation,
 ↓=negative correlation, ↓↓=strong negative correlation.}
 \label{table:engMarketingMatrix}
 
-\begin{tabular}{ |l|l|l|l|l|l|l|l|} 
+\begin{tabular}{|l|l|l|l|l|l|l|l|} 
 \hline
 \rowcolor{Gray}
-  &   & THD & Output Power & Efficiency & Install Time & Dimensions & Cost \\ 
-  &   &  -      &  +                     & +               & -                   & -                    &  - \\
+  &   & \rotatebox[origin=c]{90}{THD} & 
+  			\rotatebox[origin=c]{90}{Output Power} & 
+  			\rotatebox[origin=c]{90}{$\eta$, Efficiency} & 
+  			\rotatebox[origin=c]{90}{Install Time} & 
+  			\rotatebox[origin=c]{90}{Dimensions} & 
+  			\rotatebox[origin=c]{90}{Cost} \\ \hline
+  
+  \rowcolor{Gray}
+  &   &  -      &  +                     & +               & -                   & -                    &  - \\ \hline
 
-1) Sound Quality & + & ↑↑ & ↓ & & & ↓↓ & ↓↓ \\
-2) High Power & + & ↓ & ↑↑ & ↑ & & ↓↓ & ↓ \\
-3) Install Ease & + & & ↓ & & ↑↑ & ↑ & ↓ \\
-4) Cost & - & ↓↓ & ↓ & ↓ & & ↓ & ↑↑ \\
+1) Sound Quality & + & ↑↑ & ↓ & & & ↓↓ & ↓↓ \\ \hline
+2) High Power & + & ↓ & ↑↑ & ↑ & & ↓↓ & ↓ \\ \hline
+3) Install Ease & + & & ↓ & & ↑↑ & ↑ & ↓ \\ \hline
+4) Cost & - & ↓↓ & ↓ & ↓ & & ↓ & ↑↑ \\ \hline
 \end{tabular}
 \end{table}
 
@@ -1407,22 +1414,22 @@ associated with sound quality. The relationship between THD and sound
 quality is denoted by the double positive arrow. This relationship is
 interpreted as
 
-\begin{quote}
+\begin{itquote}
 The goal is to increase sound quality and decrease THD. There is a
 strong positive correlation between them since decreasing THD increases
 sound quality.
-\end{quote}
+\end{itquote}
 
 What wasn't so clear in the 1-to-1 mapping is that there is a link
 between the goal of maximizing output power and the goal of maximizing
 sound quality (second entry in the top row). This entry is interpreted
 as
 
-\begin{quote}
+\begin{itquote}
 The goal is to increase sound quality, to increase output power, and
 there is negative correlation between them since increasing output power
 will decrease sound quality.
-\end{quote}
+\end{itquote}
 
 That is because electronics can be designed to achieve larger output
 power at the expense of sound quality. However, it gets a little more
@@ -1437,12 +1444,12 @@ between engineering and marketing requirements. This example
 demonstrates the complex nature of a seemingly simple device, and
 provides a much clearer picture of the design tradeoffs involved.
 
-\subsubsection{The Engineering Tradeoff
-Matrix}\label{the-engineering-tradeoff-matrix}
+\subsection{The Engineering Tradeoff Matrix}
+\label{subsection:the-engineering-tradeoff-matrix}
 
 The example of output power in the previous section illustrates the need
 to examine the tradeoffs between the engineering requirements, which are
-shown in Table 3.6. In this table the engineering requirements
+shown in Table~\ref{table:engTradeOff}. In this table the engineering requirements
 constitute the headings for both the row and column entries. Only the
 entries above the upper diagonal elements are filled in due to the
 redundancy of the lower diagonal elements. Again, positive and negative
@@ -1467,44 +1474,51 @@ amplifier. ↑=positive correlation, ↓=negative correlation.}
 \begin{tabular}{ |l|l|l|l|l|l|l|l|} 
 \hline
 \rowcolor{Gray}
-  &   & THD & Output Power & Efficiency & Install Time & Dimensions & Cost \\ 
+      &   & \rotatebox[origin=c]{90}{THD} & 
+  			\rotatebox[origin=c]{90}{Output Power} & 
+  			\rotatebox[origin=c]{90}{$\eta$, Efficiency} & 
+  			\rotatebox[origin=c]{90}{Install Time} & 
+  			\rotatebox[origin=c]{90}{Dimensions} & 
+  			\rotatebox[origin=c]{90}{Cost} \\ \hline
+  
  \rowcolor{Gray}
-  &   &  -      &  +                     & +               & -                   & -                    &  - \\
-THD & - & & ↓ & & & ↓ & ↓ \\
-Output Power & + & & & ↑ & & ↓ & ↓ \\
-Efficiency & + & & & & & ↑ & ↓ \\
-Install Time & - & & & & & ↓ & \\
-Dimensions & - & & & & & & ↓ \\
-Cost & - & & & & & & \\
+  &   &  -      &  +                     & +               & -                   & -                    &  - \\ \hline
+THD 			& - 		& \cellcolor{blue!25}& ↓ & & & ↓ & ↓ \\ \hline
+Output Power 	& + 	& \cellcolor{blue!25}& \cellcolor{blue!25}& ↑ & & ↓ & ↓ \\ \hline
+$\eta$, Efficiency 		& + 	& \cellcolor{blue!25}& \cellcolor{blue!25}& \cellcolor{blue!25}& & ↑ & ↓ \\ \hline
+Install Time		& - 		& \cellcolor{blue!25}& \cellcolor{blue!25}& \cellcolor{blue!25}& \cellcolor{blue!25}& ↓ & \\ \hline
+Dimensions 		& - 		& \cellcolor{blue!25}& \cellcolor{blue!25}&\cellcolor{blue!25} & \cellcolor{blue!25}& \cellcolor{blue!25}& ↓ \\ \hline
+Cost 			& - 		& \cellcolor{blue!25}& \cellcolor{blue!25}& \cellcolor{blue!25}& \cellcolor{blue!25}& \cellcolor{blue!25}& \cellcolor{blue!25} \\ \hline
 \end{tabular}
 \end{table}
 
-\subsubsection{Competitive Benchmarks}\label{competitive-benchmarks}
+\subsection{Competitive Benchmarks}
+\label{subsection:competitive-benchmarks}
 
 Competitive benchmarking helps to select targets for the engineering
 requirements. By analyzing competing systems, a better understanding is
 gained of what is realistic and where the design may potentially
 outperform the competition. The benchmark table lists the requirements
 in the row headings and the competitors in the column headings as shown
-in Table 3.7.
+in Table~\ref{table:benchmarkAudio}.
 
 \begin{table}
 \centering
 \caption{Competitive benchmarks for the audio amplifier.}
-
 \label{table:benchmarkAudio}
-\begin{tabular}{ |> {\columncolor{Gray}} c  |l|l|l||} 
+\begin{tabular}{ |> {\columncolor{Gray}} c  |l|l|l|} 
 \hline
 \rowcolor{Gray}
-\textbf{Apex Audio} & \\textbf{Monster Amps} & \\textbf{Our Design}
-\textbf{THD} & 0.05\% & 0.15\% & 0.1\% \\
-\textbf{Power} & 30W & 50W & 35W \\
-\textbf{Efficiency} & 70\% & 30\% & 40\% \\
-\textbf{Cost} & \$250 & \$120 & \$100 \\
+  & \textbf{Apex Audio} & \textbf{Monster Amps} & \textbf{Our Design}\\ \hline
+\textbf{THD} & 0.05\% & 0.15\% & 0.1\% \\ \hline
+\textbf{Power} & 30W & 50W & 35W \\ \hline
+\textbf{Efficiency} & 70\% & 30\% & 40\% \\ \hline
+\textbf{Cost} & \$250 & \$120 & \$100 \\ \hline
 \end{tabular}
 \end{table}
 
-\subsubsection{The House of Quality}\label{the-house-of-quality}
+\subsection{The House of Quality}
+\label{subsection:the-house-of-quality}
 
 A well-known tool for developing requirements is the House of Quality
 (HOQ). The HOQ is part of a product development process known as Quality
@@ -1517,128 +1531,51 @@ matrices relate different aspects of the development process and are
 effective for communicating between different units in an organization.
 There are houses for different phases of product development, but here
 the focus is on using the HOQ for the Requirements Specification. A HOQ
-for the audio amplifier example is shown in Figure 3.2. It contains all
+for the audio amplifier example is shown in Figure~\ref{figure:houseOfQuality}. 
+It contains all
 of the elements that we have addressed so far---marketing requirements,
 engineering requirements, engineering-marketing tradeoffs, engineering
 tradeoffs, and the target values for the engineering requirements. The
 HOQ is presented for completeness, but is redundant since it contains
-all of the information already presented in Tables 3.5--3.7. The HOQ
+all of the information already presented in Tables \ref{table:engMarketingMatrix}--\ref{table:benchmarkAudio}. The HOQ
 also becomes visually overwhelming and hard to read as problem
 complexity grows.
 
-↓
 
-↓
+\begin{figure}
+\centering
+\caption{The complete House of Quality for the audio
+amplifier example. This integrates the information in Tables 
+\ref{table:engMarketingMatrix}, \ref{table:engTradeOff}, and \ref{table:benchmarkAudio}.}
+\label{figure:houseOfQuality}
 
-↓
+\begin{tabular}{ |p{5cm}|l|l|l|l|l|l|l|} 
+\hline
+\rowcolor{Gray}
+      &   & \rotatebox[origin=c]{90}{THD} & 
+  			\rotatebox[origin=c]{90}{Output Power} & 
+  			\rotatebox[origin=c]{90}{$\eta$, Efficiency} & 
+  			\rotatebox[origin=c]{90}{Install Time} & 
+  			\rotatebox[origin=c]{90}{Dimensions} & 
+  			\rotatebox[origin=c]{90}{Cost} \\ \hline
+ \rowcolor{Gray}
+  &   &  -      &  +                     & +               & -                   & -                    &  - \\ \hline
+1) Sound Quality & + & ↑↑ & ↓ & & & ↓↓ & ↓↓ \\ \hline
+2) High Power & + & ↓ & ↑ & ↑↑ & & ↓↓ & ↓ \\ \hline
+3) Install Ease & + & & ↓ & & ↑↑ & ↑ & ↓ \\ \hline
+4) Cost & - & ↓↓ & ↓ & ↓ & & ↓ & ↑↑ \\ \hline
+\multicolumn{2}{|c|}{\textbf{Targets for Engineering Requirements}} &
+		\rotatebox[origin=c]{90}{\textless0.1\%} &
+		\rotatebox[origin=c]{90}{35 Watts} &
+		\rotatebox[origin=c]{90}{\textgreater{} 40\%} &
+		\rotatebox[origin=c]{90}{$\leq 5$ minutes} &
+		\rotatebox[origin=c]{90}{6 x 8 x 3 inches} &
+		\rotatebox[origin=c]{90}{$\leq \$100$} \\  \hline
+\end{tabular}
+\end{figure}
 
-↓
-
-↓
-
-↑
-
-↑
-
-↓
-
-↓
-
-↓
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.3269}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0962}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0962}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0962}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0962}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0962}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0962}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0962}}@{}}
-\toprule\noalign{}
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.4231} + 2\tabcolsep}}{%
-\multirow{2}{=}{\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage}}} & \begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-THD
-\end{quote}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-Output Power
-\end{quote}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-η, Efficiency
-\end{quote}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-Install Time
-\end{quote}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-Dimensions
-\end{quote}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-Cost
-\end{quote}
-\end{minipage} \\
-& & \begin{minipage}[b]{\linewidth}\raggedright
--
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-+
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-+
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
--
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
--
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
--
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-1) Sound Quality & + & ↑↑ & ↓ & & & ↓↓ & ↓↓ \\
-2) High Power & + & ↓ & ↑ & ↑↑ & & ↓↓ & ↓ \\
-3) Install Ease & + & & ↓ & & ↑↑ & ↑ & ↓ \\
-4) Cost & - & ↓↓ & ↓ & ↓ & & ↓ & ↑↑ \\
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.4231} + 2\tabcolsep}}{%
-\textbf{Targets for Engineering Requirements}} &
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-\textless0.1\%
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-35 Watts
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-\textgreater{} 40\%
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-≤ 5 minutes
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-6 x 8 x 3 inches
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-≤ \$100
-\end{quote}
-\end{minipage} \\
-\end{longtable}
-
-\textbf{Figure 3.2} The complete House of Quality for the audio
-amplifier example. This integrates the information in Tables 3.5, 3.6,
-and 3.7.
-
-\subsection{Project Application: The Requirements
-Specification}\label{project-application-the-requirements-specification}
+\section{Project Application: The Requirement Specification}
+\label{section:project-application-the-requirements-specification}
 
 The following is a recommended format for a Requirements document that
 integrates the Problem Statement from Chapter 2.
@@ -1649,46 +1586,49 @@ integrates the Problem Statement from Chapter 2.
   the Problem Statement in Chapter 2.
 \item
   \emph{Requirements}. Identify the marketing requirements, engineering
-  requirements, and justification in a table format (see Tables 3.1 --
-  3.4). Supplement this with tradeoff matrices and competitive
+  requirements, and justification in a table format (see Tables~\ref{table:audioRequireSpec} --
+  \ref{table:portableAerial}). Supplement this with tradeoff matrices and competitive
   benchmarks as necessary.
-
-  Table 3.8 presents a self-assessment checklist for the Requirements
-  Specification.
 \end{itemize}
 
+Table~\ref{table:benchmarkAudio} presents a self-assessment checklist for the Requirements
+ Specification.
+  
 \begin{table}
 \centering
 \caption{Self-assessment checklist for the Requirements
 Specification. 1 = Strongly Disagree, 2 = Disagree, 3 = Neutral, 4 =
 Agree, 5 = Strongly Agree.}
 
-\label{table:benchmarkAudio}
-\begin{tabular}{ |l|l|} 
+\label{table:requirementsCheckList}
+\begin{tabular}{ |p{10cm}|l|} 
 \hline
 \rowcolor{Gray}
-\textbf{Engineering Requirements} & \textbf{Score}\\
-Each engineering requirement is abstract. & \\
-Each engineering requirement is verifiable. & \\
+\textbf{Engineering Requirements} & \textbf{Score}\\ \hline
+Each engineering requirement is abstract. & \\ \hline
+Each engineering requirement is verifiable. & \\ \hline
 Each engineering requirement is unambiguous and written as a concise
-statement. & \\
-Each engineering requirement can be traced to a user need. & \\
+statement. & \\ \hline
+Each engineering requirement can be traced to a user need. & \\ \hline
 Each engineering requirement is realistic and has a justification
-provided. & \\
+provided. & \\ \hline
 Standards and constraints applicable to the project have been identified
-and included. & \\
-\textbf{The Requirements Specification} & \\
-The requirements are normalized, with minimal redundancy and overlap.
-& \\
-The engineering requirements are organized by similarity. & \\
-The requirements are complete, addressing all needs. & \\
-The requirements are bounded (not over-specified). & \\
-The requirements have been validated and agreed upon by all
-stakeholders. & \\
-\end{longtable}
+and included. & \\ \hline
 
-\subsection{\texorpdfstring{Summary and Further Reading
-}{Summary and Further Reading }}\label{summary-and-further-reading}
+\rowcolor{Gray}
+\textbf{The Requirements Specification} & \\ \hline
+The requirements are normalized, with minimal redundancy and overlap.
+& \\ \hline
+The engineering requirements are organized by similarity. & \\ \hline
+The requirements are complete, addressing all needs. & \\ \hline
+The requirements are bounded (not over-specified). & \\ \hline
+The requirements have been validated and agreed upon by all
+stakeholders. & \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Summary and Further Reading }
+\label{section:summary-and-further-reading}
 
 This chapter presented a process for developing the Requirements
 Specification, which consists of identifying the requirements from the
