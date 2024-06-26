@@ -1,0 +1,110 @@
+\section{Problems}
+\label{section:problems}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Describe the differences between \emph{bottom-up} and \emph{top-down}
+  design.
+\item
+  Develop a functional design for an audio graphic equalizer. A graphic
+  equalizer decomposes an audio signal into component frequencies bands,
+  allows the user to apply amplification to each individual band, and
+  recombines the component signals. The design can employ either analog
+  or digital processing. Be sure to clearly identify the design levels,
+  functional requirements, and theory of operation for the different
+  levels in the architecture.
+
+The system must
+\begin{itemize}
+\item
+  Accept an audio input signal source, with a source resistance of 1000Ω
+  and a maximum input voltage of 1V peak-to-peak.
+\item
+  Have an adjustable volume control.
+\item
+  Deliver a maximum of 40W to an 8Ω speaker.
+\item
+  Have four frequency bands into which the audio is decomposed (you
+  select the frequency ranges).
+\item
+  Operate from standard wall outlet power, 120V rms.
+  \end{itemize}
+  
+  \item
+    Develop a functional design for a system that measures and displays
+    the speed of a bicycle. Be sure to clearly identify the design
+    levels, functional requirements, and theory of operation for each
+    level.\\
+  The system must
+
+\begin{itemize}
+\item
+  Measure instantaneous velocities between zero and 75 miles per hour
+  with an accuracy of 1\% of full scale.
+\item
+  Display the velocity digitally and include one digit beyond the
+  decimal point.
+\item
+  Operate with bicycle tires that have 19, 24, 26, and 27 inch
+  diameters.
+\end{itemize}
+
+  \item
+    Draw a structure chart for the following C++ program:
+\begin{verbatim}
+void IncBy5(int \&a, int \&b);
+int Multiply(int a, int b);
+void Print(int a, int b);
+
+main() {
+    int x=y=z=0;
+    IncBy5(x,y);
+    z=Mult(x,y);
+    Print(x,z);
+}
+
+void IncBy5(int \&a, int \&b) {
+    a+=5;
+    b+=5;
+    Print(a,b);
+}
+
+int Multiply(int a, int b) {
+    return (a*b);
+}
+
+void Print(int a, int b) {
+    cout  << a << ``, `` << b;
+}
+\end{verbatim}
+
+\item
+  Develop a functional design for software that meets the following
+  requirements. \\
+The system must
+
+\begin{itemize}
+\item
+  Read an array of floating point numbers from an ASCII file on disk.
+\item
+  Compute the average, median, and standard deviation of the numbers.
+\item
+  Store the average, median, and standard deviation values on disk.
+\end{itemize}
+
+The design should have multiple modules and include the following
+elements: (a) a structure chart, and (b) a functional description of
+each module.
+
+
+
+\item
+  Describe in your own words what is meant by coupling in design.
+  Describe the advantages of both loosely and tightly coupled designs.
+\item
+  \textbf{Project Application.} Develop a functional design for your
+  project. Follow the presentation guidelines in Section 5.9 for
+  communicating the results of the design.
+\end{enumerate}
+
