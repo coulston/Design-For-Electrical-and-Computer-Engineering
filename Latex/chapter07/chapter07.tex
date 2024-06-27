@@ -1,6 +1,10 @@
-\section{Testing}\label{testing}
+\chapter{Testing}
+\graphicspath{ {./chapter07/Fig} }
 
+\begin{itquote}
 A stitch in time saves nine.---Anonymous
+\end{itquote}
+
 
 Most systems undergo testing throughout their development and before
 they are delivered to the customer. Clearly, systems should be tested to
@@ -23,8 +27,8 @@ explored. Approaches to debugging systems are provided, followed by
 templates for building unit tests, integration tests, and acceptance
 tests.
 
-Learning Objectives
-
+\section*{Learning Objectives}
+\noindent\rule{\linewidth}{1pt}
 By the end of this chapter, the reader should:
 
 \begin{itemize}
@@ -41,13 +45,15 @@ By the end of this chapter, the reader should:
   Understand when an acceptance test is used and how it is constructed.
 \end{itemize}
 
-\subsection{Testing Principles}\label{testing-principles}
+\section{Testing Principles}
+\label{section:testing-principles}
 
 The design process is really a continual increase in specificity from
 engineering requirements to the detailed design. We now consider the
 question of how to test that the resulting system meets the design
 requirements. One answer is based on a common testing model, the ``test
-vee'', shown in Figure 7.1. This model starts with the engineering
+vee'', shown in Figure~\ref{figure:testVee}. 
+This model starts with the engineering
 requirements, proceeds to the implementation, and then onto testing. It
 emphasizes that every level of design has a corresponding level of test.
 What is not so clear from this model is that the testing process is
@@ -60,10 +66,12 @@ An acceptance test plan should be written with the Requirements
 Specification, integration tests defined and written during the system
 design, and so forth.
 
-\includegraphics[width=2.88542in,height=2.39583in]{Fig/media/image1.emf}
-
-\textbf{Figure 7.1} The Test Vee. Design stages are on the left and
-corresponding tests are on the right.
+\begin{figure}
+\includegraphics[width=2.9in,height=2.4in]{./image1}
+\caption{The Test Vee. Design stages are on the left and
+corresponding tests are on the right.}
+\label{figure:testVee}
+\end{figure}
 
 In our enthusiasm to complete a project many of us all too often rely on
 a ``smoke test'' -- turn on a system to see if it works. The name of
@@ -106,8 +114,8 @@ While in some cases this might be possible, in general it would take an
 unreasonable amount of time to perform such a test. Instead, tests are
 crafted in order to maximize the likelihood of finding errors.
 
-\subsubsection{Types of Testing, Observability, and
-Controllability}\label{types-of-testing-observability-and-controllability}
+\subsection{Types of Testing, Observability, and Controllability}
+\label{subsection:types-of-testing-observability-and-controllability}
 
 Tests fall into two general types---black box and white box tests.
 \emph{\textbf{Black box tests}} are those that are performed without any
@@ -150,13 +158,14 @@ both controllability and observability are low. In white box testing,
 controllability and observability may be higher depending on the design.
 
 Let's examine this further via the example of a simple transistor
-amplifier shown in Figure 7.2. The purpose of this circuit, known as the
+amplifier shown in Figure~\ref{figure:transAmpDesign}. 
+The purpose of this circuit, known as the
 common-emitter amplifier, is to amplify the input signal,
-\includegraphics{Fig/media/image2.wmf}, to produce a linearly
-proportional output signal, \includegraphics{Fig/media/image3.wmf}. The
+$v_i$, to produce a linearly
+proportional output signal, $v_o = A x v_i$. The
 rectangular boundary in the figure represents a black box view of the
 system. In this view, the system power,
-\includegraphics{Fig/media/image4.wmf}, and ground would be applied to
+$V_{cc}$, and ground would be applied to
 activate the circuit. The black box testing would consist of checking
 supply and ground voltages, varying the input signal, and observing the
 output signal. Again, this is a low controllability and low
@@ -171,18 +180,21 @@ During detailed circuit design, the expected DC voltages for different
 nodes in the circuit would be determined. Thus, a white box test would
 consist of first checking the power supply and ground voltages as was
 done in the black box case. The next step would be different in that the
-node voltages (\includegraphics{Fig/media/image5.wmf}) would be checked
+node voltages ($V_B, V_C, V_E$) would be checked
 to see if they meet the expected design values. This indicates a high
 degree of observability. However, the controllability is not
 significantly better than in the black box case. This is because the
 internal DC node voltages in the circuit cannot arbitrarily be changed
 without negatively changing the operation of the circuit.
 
-\includegraphics{Fig/media/image6.wmf}
+\begin{figure}
+\includegraphics{./image6}
+\caption{Transistor amplifier design.}
+\label{figure:transAmpDesign}
+\end{figure}
 
-\textbf{Figure 7.2} Transistor amplifier design.
-
-\subsubsection{Stubs}\label{stubs}
+\subsection{Stubs}
+\label{subsection:stubs}
 
 A \emph{\textbf{stub}} is a device that is used to simulate a
 subcomponent of a system. This might be done for two reasons, either the
@@ -194,26 +206,32 @@ designing a system. In software testing stub routines are developed to
 either call other functions or act as those to be called by the unit
 under test.
 
-Consider a hardware example, the transistor amplifier in Figure 7.2.
+Consider a hardware example, the transistor amplifier in 
+Figure~\ref{figure:transAmpDesign}.
 Assume that the circuit is ultimately to be integrated into a larger
 system. The input to this system is a time-varying source with certain
 resistive and capacitive characteristics, while the output is connected
 to another system with a known input resistance range. The stubs used
-for testing in this system are shown in Figure 7.3. On the input side is
+for testing in this system are shown in Figure~\ref{figure:usingStubs}. 
+On the input side is
 a function generator, an off-the-shelf component, connected to a
 resistor and capacitor that models the expected characteristics of the
 final system. The stub on the output side is simply a resistor, whose
 value can be varied over the expected load.
 
-\includegraphics[width=3.79167in,height=1.76042in]{Fig/media/image7.emf}
-
-\textbf{Figure 7.3} The use of stubs for testing a transistor amplifier
+\begin{figure}
+\includegraphics[width=3.8in,height=1.76in]{./image7}
+\caption{The use of stubs for testing a transistor amplifier
 circuit. The function generator, resistor (R), and capacitor (C) model
 the expected behavior of the input source in the final system
 implementation. The variable resistance (R\textsubscript{L}) models the
-load that would be attached to the output.
+load that would be attached to the output.}
+\label{figure:usingStubs}
+\end{figure}
 
-\subsubsection{Test Case Properties}\label{test-case-properties}
+
+\subsection{Test Case Properties}
+\label{subsection:test-case-properties}
 
 As we go through the different levels of testing we will need to build
 effective test cases. Effective test cases share some common attributes
@@ -246,7 +264,8 @@ following properties for effective test cases:
   after the test is complete.
 \end{itemize}
 
-\subsection{Constructing Tests}\label{constructing-tests}
+\section{Constructing Tests}
+\label{section:constructing-tests}
 
 This section presents the four different types of test shown in Figure
 7.1 - debugging, unit testing, integration testing, and acceptance
@@ -257,7 +276,8 @@ most familiar to the more abstract. The next section presents a case
 study that proceeds in the opposite direction from acceptance testing to
 unit testing.
 
-\subsubsection{Debugging}\label{debugging}
+\subsection{Debugging}
+\label{subsection:debugging}
 
 At some point in the design process, the implementation level must be
 reached, where tasks such as constructing circuits, wiring integrated
@@ -328,7 +348,8 @@ correct before moving to higher levels of functionality. The reason for
 this heuristic is obvious---the higher level of functionality cannot
 operate correctly unless all the lower levels are working.
 
-\subsubsection{Unit Testing}\label{unit-testing}
+\subsection{Unit Testing}
+\label{subsection:unit-testing}
 
 A \emph{\textbf{unit test}} is a complete test of a module's
 functionality. In order to be a complete check, a unit test consists of
@@ -339,15 +360,12 @@ example, consider a hardware module which converts an input Celsius
 temperature into an output Fahrenheit temperature. Let the operation of
 the module be represented by the following pseudo-code.
 
-\begin{quote}
-if (16 \textless{} input \textless{} 32)
-
-output = ROM{[}input -16{]};
-
+\begin{verbatim}
+if (16 < input < 32)
+        output = ROM[input -16];
 else
-
-output = (2 * input) + 32;
-\end{quote}
+        output = (2 * input) + 32;
+\end{verbatim}
 
 When the input temperature is between 16 and 32, the output is
 determined by a lookup operation in a ROM, otherwise the input is
@@ -384,8 +402,8 @@ cases are generally written by one person or group and performed by a
 separate group. In order to organize the test cases they can be
 organized as matrices, step-by-step tests or automated scripts.
 
-\subsubsection*{Matrix Tests}\label{matrix-tests}
-\addcontentsline{toc}{subsubsection}{Matrix Tests}
+\subsection*{Matrix Tests}
+\label{subsection:matrix-tests}
 
 A \emph{\textbf{matrix test}} is a test that is best suited to cases
 where the inputs submitted are structurally the same and differ only in
@@ -412,73 +430,58 @@ tests might accidentally damage the ADC.
 \textbf{\hfill\break
 Table 7.1} A matrix test for an analog-to-digital converter.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0375}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1961}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2540}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2273}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0446}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0446}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0356}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1604}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{1.0000} + 14\tabcolsep}@{}}{%
-\textbf{Test Writer:} Sue L. Engineer} \\
-~ & \textbf{Test Case Name:} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.4812} + 2\tabcolsep}}{%
-ADC unit test} &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1248} + 4\tabcolsep}}{%
-\textbf{Test ID \#:}} & ADC-UT-01 \\
-~ & \textbf{Description:} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.4812} + 2\tabcolsep}}{%
-Verify that each bit of the output can be set independently of the other
-outputs.} &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1248} + 4\tabcolsep}}{%
-\textbf{Type:}} & □white box
+\begin{table}
+\caption{}
+\label{table:<context>}
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{2cm}|}
+\hline
 
-🗹 black box \\
-\multicolumn{8}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{1.0000} + 14\tabcolsep}@{}}{%
-\textbf{Tester Information}} \\
-\textbf{~} & \textbf{Name of Tester:} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.4812} + 2\tabcolsep}}{%
-} &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1248} + 4\tabcolsep}}{%
-\textbf{Date:}} & \\
-\textbf{~} & \textbf{Hardware Ver:} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.4812} + 2\tabcolsep}}{%
-1.0} &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1248} + 4\tabcolsep}}{%
-\textbf{Time:}} & \\
-& \textbf{Setup:} &
-\multicolumn{6}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.7664} + 10\tabcolsep}@{}}{%
-Isolate the ADC from the system by removing configuration jumpers.
+\multicolumn{8}{l} {\textbf{Test Writer:} Sue L. Engineer}\\ \hline
+
+\multicolumn{2}{l} {\textbf{Test Case Name:}} &
+\multicolumn{2}{l} {ADC unit test} &
+\multicolumn{3}{l}{\textbf{Test ID \#:}} & ADC-UT-01 \\ \hline
+
+\multicolumn{2}{l} {\textbf{Description:}}&
+\multicolumn{2}{l} {Verify that each bit of the output can be set independently of the other outputs.} &
+\multicolumn{3}{l}{\textbf{Type:}} &  white box or black box \\ \hline
+
+\multicolumn{8}{l} {\textbf{Tester Information}} \\ \hline
+
+\multicolumn{2}{l} {\textbf{Name of Tester:}} &
+\multicolumn{2}{l} { } &
+\multicolumn{3}{l}{\textbf{Date:}} &  \\ \hline
+
+\multicolumn{2}{l} {\textbf{Hardware Ver:}} &
+\multicolumn{2}{l} { 1.0} &
+\multicolumn{3}{l}{\textbf{Time:}} &  \\ \hline
+
+\multicolumn{2}{l} {\textbf{Setup:}}&
+\multicolumn{6}{l} {Isolate the ADC from the system by removing configuration jumpers.
 Connect the clk input to a 10 KHz clock source and the Din input to a
 high precision voltage course. Connect the output from the ADC to a
-logic analyzer.} \\
-\multirow{2}{=}{\textbf{Test}} &
-\multirow{2}{=}{\textbf{V\textsubscript{T}}} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.4812} + 2\tabcolsep}}{%
-\textbf{Expected output}} & \multirow{2}{=}{\textbf{Pass}} &
-\multirow{2}{=}{\textbf{Fail}} & \multirow{2}{=}{\textbf{N/A}} &
-\multirow{2}{=}{\textbf{Comments}} \\
-& & \textbf{Decimal} & \textbf{Hexadecimal} \\
-1 & 0.000 V & 0 & 0x000 & & & & \\
-2 & 0.004887 V & 1 & 0x001 & & & & \\
-3 & 0.00977 V & 2 & 0x002 & & & & \\
-4 & 0.01955 V & 4 & 0x004 & & & & \\
-\ldots{} & \ldots{} & \ldots{} & \ldots{} & & & & \\
-10 & 2.502 V & 512 & 0x200 & & & & \\
-~ &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.6773} + 4\tabcolsep}}{%
-\textbf{Overall test result:}} & \textbf{~} & \textbf{~} & \textbf{~} &
-~ \\
-\end{longtable}
+logic analyzer.}   \\ \hline
 
-\subsubsection*{Step-by-Step Tests}\label{step-by-step-tests}
-\addcontentsline{toc}{subsubsection}{Step-by-Step Tests}
+
+\textbf{Test} & $V_T$ & 
+\multicolumn{2}{l}{\textbf{Expected output}} & 
+\textbf{Pass} &
+\textbf{Fail} & 
+\textbf{Comments} \\  \hline
+
+1 & 0.000 V & 0 & 0x000 & & & & \\ \hline
+2 & 0.004887 V & 1 & 0x001 & & & & \\ \hline
+3 & 0.00977 V & 2 & 0x002 & & & & \\ \hline
+4 & 0.01955 V & 4 & 0x004 & & & & \\ \hline
+\ldots{} & \ldots{} & \ldots{} & \ldots{} & & & & \\ \hline
+10 & 2.502 V & 512 & 0x200 & & & & \\ \hline
+
+\multicolumn{3}{l}{\textbf{Overall test result:}} &   &  &  & \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection*{Step-by-Step Tests}
+\label{subsection:step-by-step-tests}
 
 A \emph{\textbf{step-by-step test}} case is a prescription for
 generating the test and checking the results. These descriptions are
@@ -567,9 +570,8 @@ Make sure that the system was reset sometime prior and is in state
 ~} \\
 \end{longtable}
 
-\subsubsection*{\texorpdfstring{Automated Test Scripts
-}{Automated Test Scripts }}\label{automated-test-scripts}
-\addcontentsline{toc}{subsubsection}{Automated Test Scripts }
+\subsection*{\texorpdfstring{Automated Test Scripts}
+\label{subsection:automated-test-scripts}
 
 An \emph{\textbf{automated test}} \emph{\textbf{script}} is a sequence
 of commands provided to the UUT without user intervention. The outputs
@@ -597,7 +599,8 @@ in hardware description languages the stimulus and responses of the UUT
 are processed by a test bench. The test bench is itself a piece of
 hardware coded in the same hardware language used to describe the UUT.
 
-\subsubsection{Integration Testing}\label{integration-testing}
+\subsection{Integration Testing}
+\label{subsection:integration-testing}
 
 After the individual subsystems have undergone their unit tests, they
 are then integrated into large subcomponents leading eventually to the
@@ -624,7 +627,8 @@ integration can be derived from the following questions:
 The integration tests themselves can be documented using either the
 matrix or step-by-step template outlined for unit tests.
 
-\subsubsection{Acceptance Testing}\label{acceptance-testing}
+\subsection{Acceptance Testing}
+\label{subsection:acceptance-testing}
 
 An \emph{\textbf{acceptance test}} is a formal document stipulating the
 conditions under which the customer will accept the system. It generally
@@ -675,8 +679,8 @@ procedures and results for a system which has yet to be implemented of
 the system. This can often lead to revisions of the acceptance test plan
 later in the design cycle.
 
-\subsection{Case Study: Security Robot
-Design}\label{case-study-security-robot-design}
+\section{Case Study: Security Robot Design}
+\label{section:case-study-security-robot-design}
 
 In order to demonstrate the concepts involved in testing lets consider
 the design of a security system which monitors an office complex looking
@@ -704,8 +708,9 @@ in Figure 7.1. That means acceptance tests are developing in conjunction
 with the requirements, integration tests are constructed during the
 system design, and unit tests during the system build.
 
-\subsubsection*{Acceptance Testing}\label{acceptance-testing-1}
-\addcontentsline{toc}{subsubsection}{Acceptance Testing}
+\subsection*{Acceptance Testing}
+\label{subsection:acceptance-testing-1}
+
 
 We start by constructing an acceptance test case to verify that the
 robot can achieve the stated requirements. A number of tests would need
@@ -794,19 +799,23 @@ should be within 12 -- 18 cm 90\% of the time. & & & &
 } \\
 \end{longtable}
 
-\subsubsection*{Integration Testing}\label{integration-testing-1}
-\addcontentsline{toc}{subsubsection}{Integration Testing}
+\subsection*{Integration Testing}
+\label{subsection:integration-testing-1}
 
 The team, in consultation with the customer, has gone through the
 requirements and created a complete set of acceptance tests in addition
 to the test in Table 7.3. They next turn to developing a high level
 design architecture that can meet the requirements. The design they
-create is shown in Figure 7.4, the Level 1 architecture of the
+create is shown in 
+Figure~\ref{figure:level1mobileRobot}, the Level 1 architecture of the
 autonomous robot.
 
-\includegraphics[width=4.86458in,height=2.07292in]{Fig/media/image8.emf}
 
-\textbf{Figure 7.4} Level 1 design architecture for the mobile robot.
+\begin{figure}
+\includegraphics[width=4.9in,height=2.1in]{./image8}
+\caption{Level 1 design architecture for the mobile robot.}
+\label{figure:level1mobileRobot}
+\end{figure}
 
 The heart of the design is a microcontroller (MCU) which reads the
 sensor values, makes decisions, and controls the speed of the two drive
@@ -917,8 +926,9 @@ the compass readings deviate no more than 10 degrees is based on the
 engineering requirement that the robot deviate no more than 10 degrees
 from the walls axis while navigating down the hallway.
 
-\subsubsection*{Unit Testing}\label{unit-testing-1}
-\addcontentsline{toc}{subsubsection}{Unit Testing}
+\subsection*{Unit Testing}
+\label{subsection:unit-testing-1}
+
 
 Once the Level 1 architecture is developed and the test cases written to
 ensure that the architecture is capable of meeting the design
@@ -1064,7 +1074,8 @@ display 315 degrees +/- 10 degrees. & & & &
 } \\
 \end{longtable}
 
-\subsection{Guidance}\label{guidance}
+\section{Guidance}
+\label{section:guidance}
 
 Tests have a lifetime beyond the obvious need to check proper operation
 of the subsystems, their integration, and the overall performance of the
@@ -1124,8 +1135,8 @@ testing:
   suite or one without?
 \end{itemize}
 
-\subsection{Summary and Further
-Reading}\label{summary-and-further-reading}
+\section{Summary and Further Reading}
+\label{section:summary-and-further-reading}
 
 Testing is an important part of the design process that helps to ensure
 systems will operate properly. This chapter examined basic principles of
