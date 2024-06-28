@@ -1,7 +1,11 @@
-\section{System Reliability}\label{system-reliability}
+\section{System Reliability}
+\graphicspath{ {./chapter08/Fig} }
 
+\begin{itquote}
 Quality is never an accident. It is always the result of intelligent
 effort.---John Ruskin
+\end{itquote}
+
 
 A typical design project in your academic career may never leave the
 confines of a laboratory. However, in industry, engineers develop
@@ -19,9 +23,10 @@ This chapter presents a review of basic probability theory and applies
 it to estimate the behavior of real-world devices. Reliability at the
 component and system levels is considered.
 
-Learning Objectives
-
+\section*{Learning Objectives}
+\noindent\rule{\linewidth}{1pt}
 By the end of this chapter, the reader should:
+
 
 \begin{itemize}
 \item
@@ -43,15 +48,16 @@ By the end of this chapter, the reader should:
 \textbf{\hfill\break
 DILBERT\textsuperscript{®} by Scott Adams}
 
-\includegraphics[width=5.5in,height=1.77083in]{Fig/media/image1.jpeg}
+\begin{figure}
+\includegraphics[width=5.5in,height=1.77in]{./image1.jpeg}
+\caption{Dogbert's Six Sigma Program. (Dilbert © United Feature Syndicate. Reprinted by
+permission.)}
+\label{figure:dilbert6sigma}
+\end{figure}
 
-\subsubsection*{Figure 8.1 Dogbert's Six Sigma Program. (Dilbert ©
-United Feature Syndicate. Reprinted by
-permission.)}\label{figure-8.1-dogberts-six-sigma-program.-dilbert-united-feature-syndicate.-reprinted-by-permission.}
-\addcontentsline{toc}{subsubsection}{Figure 8.1 Dogbert's Six Sigma
-Program. (Dilbert © United Feature Syndicate. Reprinted by permission.)}
 
-\subsection{Probability Theory Review}\label{probability-theory-review}
+\section{Probability Theory Review}
+\label{section:probability-theory-review}
 
 Probability theory provides a formal framework to study chance events.
 It is a powerful tool for modeling engineering systems and is a
@@ -62,33 +68,42 @@ the reader is versed in the basics of probability theory.
 In order to apply probability, some general definitions are examined
 first. An \emph{experiment} is the process of measuring or quantifying
 the state of the world. The particular outcome of an experiment is an
-\emph{event} (\includegraphics{Fig/media/image2.wmf}),while the
-\emph{event space} (\emph{E}) is the set of all possible outcomes of the
+\emph{event} ($e_i$),while the
+\emph{event space} ($E$) is the set of all possible outcomes of the
 experiment. For example, consider an experiment where a six-sided die is
 rolled. The experiment is rolling the die and observing the outcome, the
 event is the particular outcome observed, and the event space for the
-experiment is the set \emph{E} = \{1,2,3,4,5,6\}. The outcomes do not
+experiment is the set $E = \{1,2,3,3,4,5,6\}$. The outcomes do not
 have to be numerical values. Another example experiment is tossing a
-coin, in which case the event space is \emph{E} = \{Heads, Tails\}. Both
+coin, in which case the event space is $E=\{Heads, Tails\}$. Both
 are examples of a discrete event space because there are a finite number
 of experimental outcomes. In a discrete event space, the union of all
 the possible experimental outcomes defines the event space. If
-\includegraphics{Fig/media/image3.wmf} is the i\textsuperscript{th}
+$e_i$ is the $i^{th}$
 event in a discrete event space, then the event space is given by the
 union
 
-\includegraphics{Fig/media/image4.wmf}. (1)
+\begin{equation}
+\label{eventSpaceUnion}
+E = \cup e_i
+\end{equation}
 
 The probability of an event indicates how likely it is for an event to
-occur. This is quantified by the probability operator, \emph{P()}, that
+occur. This is quantified by the probability operator, $P$, that
 assigns to each event a real number between 0 and 1. The probability is
 the percentage of times that an event would occur if the experiment were
 repeated an infinite number of times (the Law of Large Numbers). Two of
 the three fundamental axioms on which probability theory is built are
 
-\includegraphics{Fig/media/image5.wmf} (2)
+\begin{equation}
+\label{equ:probabbilityGreaterEqualZero}
+P(e_i)  \geq 0
+\end{equation}
 
-\includegraphics{Fig/media/image6.wmf}. (3)
+\begin{equation}
+\label{equ:totalProbabilityEqualOne}
+P(E)  = 1
+\end{equation}
 
 The first axiom indicates that all probabilities are non-negative, while
 the second is a restatement of the event space definition---the outcome
@@ -96,8 +111,8 @@ of an experiment must be an element of the event space. Armed with these
 definitions and axioms, some important concepts from probability are now
 examined.
 
-\subsubsection{Probability Density
-Functions}\label{probability-density-functions}
+\subsection{Probability Density Functions}
+\label{subsection:probability-density-functions}
 
 Not all event spaces are discrete as in the case of rolling a die or
 flipping a coin. Consider an experiment where the objective is to
@@ -107,48 +122,61 @@ defined as the outcome of an experiment that has a continuum of possible
 values. Random variables have a mathematical function known as the
 \emph{probability density function} (PDF) associated with them, which
 when integrated, yields the probability of a range of events. A PDF is
-typically denoted as \includegraphics{Fig/media/image7.wmf}, where
-\emph{X} takes values over the event space. Standard notation identifies
+typically denoted as $p_X(x)$, where
+$X$ takes values over the event space. Standard notation identifies
 random variables using upper case variables as the subscript for the
 PDF. The variable inside the parentheses is a lowercase dummy variable
 that does not have to match the random variable, but typically does. A
 question that the PDF allows us to ask is ``\emph{What is the
 probability that a random variable is in some range?}'' Consider the
 case where the objective is to determine the probability that the random
-variable \emph{X} lies between two values \emph{a} and \emph{b}. Written
+variable $X$ lies between two values $a$ and $b$. Written
 using the probability operator, this is indicated as
-\includegraphics{Fig/media/image8.wmf}. It is determined from the PDF as
+$P(a \leq X \leq b)$. It is determined from the PDF as
 follows
 
-\includegraphics{Fig/media/image9.wmf}. (4)
+\begin{equation}
+\label{probabilityDensityFunction}
+P(a \leq X \leq b) = \int^b_a p_x(s)dx
+\end{equation}
 
 Conceptually, this probability represents the area under the PDF between
-the two limits of integration as shown in Figure 8.2.
+the two limits of integration as shown in 
+Figure~\ref{figure:probabilityDensityFunction}.
 
-\includegraphics[width=3.5in,height=1.53125in]{Fig/media/image10.emf}
-
-\textbf{Figure 8.2} A probability density function. The area under the
-curve represents the probability that the random variable \emph{X} lies
-in the interval {[}\emph{a,b}{]}.
+\begin{figure}
+\includegraphics[width=3.5in,height=1.53in]{./image10}
+\caption{ A probability density function. The area under the
+curve represents the probability that the random variable $X$ lies
+in the interval $\[ a,b \]$.
+\label{figure:probabilityDensityFunction}
+\end{figure}
 
 Let's examine a few more important properties of probability density
-functions. The first, which is analogous to (3), indicates that the
+functions. The first, which is analogous to
+equation~\ref{equ:totalProbabilityEqualOne}, indicates that the
 probability of the event space occurring is equal to one. This is known
 as the normalization property and it is expressed as
 
-\includegraphics{Fig/media/image11.wmf}. (5)
+\begin{equation}
+\label{equ:integralPDFequals1}
+\int^{\infty}_{-\infty} p_x(x)dx = 1
+\end{equation}
 
 Another interesting result is obtained by trying to determine the
 probability that a random variable takes on an exact value, for example
-\includegraphics{Fig/media/image12.wmf}. That is determined from the
+$P(X=a)$. That is determined from the
 integral
 
-\includegraphics{Fig/media/image13.wmf}. (6)
+\begin{equation}
+\label{equ:integralSliceOfPDFequals0}
+P(X=a) = \int^{a}_{a} p_x(x)dx = 0
+\end{equation}
 
 This is a somewhat counterintuitive result---it indicates that the
 probability a random variable can take on a particular value is zero.
 Does this make any sense? Consider an experiment where the objective is
-to measure a voltage value for a random variable \emph{V}. Now consider
+to measure a voltage value for a random variable $V$. Now consider
 the question, ``\emph{What is the probability that the result of a
 voltage measurement equals π (the irrational number) volts?}'' In
 practice, this question is impossible to answer because the precision
@@ -158,83 +186,107 @@ around this dilemma, which is to determine the probability that the
 random variable is within a small range about the target value as
 follows
 
-\includegraphics{Fig/media/image14.wmf}. (7)
+\begin{equation}
+\label{equ:integralDeltaSliceOfPDF}
+P(\pi \lt V \lt \pi+\Delta v) = \int^{\pi+\Delta v}_{\pi} p_V dv \approx p_V(\pi) \Delta v
+\end{equation}
 
 This means that the probability a random variable is within a small
 range about a given value is approximated by the product of the PDF
 evaluated at the value and the size of the range.
 
-\subsubsection{Mean and Variance}\label{mean-and-variance}
+\subsection{Mean and Variance}
+\label{subsection:mean-and-variance}
 
 Two useful and well-known statistics that are determined from the PDF
-are the mean (\includegraphics{Fig/media/image15.wmf}) and variance
-(\includegraphics{Fig/media/image16.wmf}). They are found from the PDF
-as follows
+are the mean ($\mu$) and variance ($\sigma^2$). 
+They are found from the PDF as follows
 
-\includegraphics{Fig/media/image17.wmf} (8)
+\begin{equation}
+\label{equ:integralDeltaSliceOfPDF}
+\mu_x = \int^{\infty}_{-\infty}xp_X(x)dx
+\end{equation}
 
-\includegraphics{Fig/media/image18.wmf}. (9)
+\begin{equation}
+\label{equ:integralDeltaSliceOfPDF}
+\sigma^2_x = \int^{\infty}_{-\infty}(x-\mu)^2 p_X(x)dx
+\end{equation}
 
 The \emph{mean} is analogous to the center of mass of the PDF; it is
 also known as the average value. The \emph{variance} is the average of
 the squared difference between the mean and the values of the PDF, where
 the squared term ensures that a positive difference is taken. The square
-root of the variance is known as the standard deviation
-(\includegraphics{Fig/media/image19.wmf}).
+root of the variance is known as the standard deviation $\sigma$.
 
-\subsubsection{Common Probability Density
-Functions}\label{common-probability-density-functions}
+\subsection{Common Probability Density Functions}
+\label{subsection:common-probability-density-functions}
 
 There are many PDFs available for describing the seemingly random
 variations in the behavior of observed systems and phenomena. In this
 section, three common PDFs (normal, exponential, and uniform) are
 presented.
 
-\subsubsection*{The Normal Density}\label{the-normal-density}
-\addcontentsline{toc}{subsubsection}{The Normal Density}
+\subsection*{The Normal Density}
+\label{subsection:the-normal-density}
+
 
 The most common density function encountered in the physical sciences
-and engineering is the normal density\emph{\textbf{.}} Many population
+and engineering is the normal density. Many population
 variations can be described by a normal density. For example, the
 resistance values of a large batch of 2.2k ohm resistors would likely
 follow a normal density. The normal density is defined as
 
-\includegraphics{Fig/media/image20.wmf}. (10)
+\begin{equation}
+\label{equ:normalDensity}
+p_X(x) = \frac{1}{\sqrt{2\pi\sigma} e^1\frac{1}{2} \ frac{(x-\mu)^2}{\sigma}
+\end{equation}
 
-The mean, \emph{µ}, and standard deviation, \emph{σ}, are part of the
+The mean, $\mu$, and standard deviation, $\sigma$, are part of the
 definition of the PDF and used to alter the shape of the density to suit
-the particular need. The normal PDF is plotted in Figure 8.3. Varying
-\emph{µ} allows the overall function to be shifted along the x-axis,
-while increasing \emph{σ} spreads (or flattens) the function out.
+the particular need. The normal PDF is plotted in 
+Figure~\ref{figure:normalDensityFunction}. Varying
+$\mu$ allows the overall function to be shifted along the x-axis,
+while increasing $\sigma$ spreads (or flattens) the function out.
 Calculating probabilities from the normal density can be done (although
 it takes a bit of work mathematically) so they are usually computed from
 something known as the Cumulative Distribution Function that is
 presented shortly.
 
-\includegraphics[width=2.92708in,height=1.36458in]{Fig/media/image21.emf}
+\begin{figure}
+%\includegraphics[width=2.92708in,height=1.36458in]{Fig/media/image21.emf}
+\caption{A normal density function with the mean ($\mu$})
+and standard deviation ($\sigma$) shown.}
+\label{figure:normalDensityFunction}
+\end{figure}
 
-\textbf{Figure 8.3} A normal density function with the mean (\emph{µ})
-and standard deviation (\emph{σ}) shown.
 
-\subsubsection*{The Uniform Density}\label{the-uniform-density}
-\addcontentsline{toc}{subsubsection}{The Uniform Density}
+\subsection*{The Uniform Density}
+\label{subsection:the-uniform-density}
 
-The uniform density, plotted in Figure 8.4, models the outcome of an
+
+The uniform density, plotted in 
+Figure~\ref{figure:normalDensityFunction}, models the outcome of an
 experiment where all outcomes are equally likely. Mathematically, the
 PDF for a uniform density is given by
 
-\includegraphics{Fig/media/image22.wmf}, (11)
+\begin{equation}
+\label{equ:uniformDensity}
+p_X(x) = \frac{1}{b-a}, a \leq x \leq b,
+\end{equation}
 
-where \emph{a} and \emph{b} are selected to meet the demands of a
-particular problem.
+where $a$, $b$ are selected to meet the demands of a particular problem.
 
-\includegraphics[width=3in,height=1.22917in]{Fig/media/image23.emf}
 
-\textbf{Figure 8.4} The uniform density on the interval
-{[}\emph{a,b}{]}.
+\begin{figure}
+%\includegraphics[width=3in,height=1.22917in]{Fig/media/image23.emf}
+\caption{The uniform density on the interval $\[ a,b \]$.}
+\label{figure:uniformDensityFunction}
+\end{figure}
 
-\subsubsection*{The Exponential Density}\label{the-exponential-density}
-\addcontentsline{toc}{subsubsection}{The Exponential Density}
+
+\subsection*{The Exponential Density}
+\label{subsection:the-exponential-density}
+
 
 Exponential densities are often utilized to model time dependent
 functions, such as inter-arrival times between data packets in
@@ -242,47 +294,58 @@ communication systems. As shown later, the exponential density also
 describes the behavior of component failures as a function of time. The
 mathematical description of an exponential density is
 
-\includegraphics{Fig/media/image24.wmf}. (12)
+\begin{equation}
+\label{equ:exponentialDensity}
+p_X(x) = \lambda e^{-\lambda x} , x \geq 0, \lambda \geq 0.
+\end{equation}
 
 The PDF is characterized by the parameter \emph{λ,} which affects the
-shape of the curve as demonstrated in Figure 8.5.
+shape of the curve as demonstrated in 
+Figure~\ref{figure:exponentialDensityFunction}.
 
-\includegraphics[width=3in,height=2.09375in]{Fig/media/image25.emf}
 
-\textbf{Figure 8.5} The exponential density for two different \emph{λ}
-values.
+\begin{figure}
+%\includegraphics[width=3in,height=2.09375in]{Fig/media/image25.emf}
+\caption{The exponential density for two different $\lambda$ values.}
+\label{figure:exponentialDensityFunction}
+\end{figure}
 
-\subsubsection{Cumulative Distribution
-Functions}\label{cumulative-distribution-functions}
+
+\subsection{Cumulative Distribution Functions}
+\label{cumulative-distribution-functions}
 
 An important class of questions can be phrased as, ``\emph{What is the
-probability that a random variable X is less than value a?"} For
+probability that a random variable $X$ is less than value a?"} For
 example, the objective might be to determine the probability that an
 electronic component will malfunction within two years. Returning to the
 first question, it is clear that the goal is to determine the
-probability \includegraphics{Fig/media/image26.wmf}, which is found by
+probability $P(X<a)$, which is found by
 integrating the PDF. This result is generalized by allowing the upper
 limit of integration to take on an arbitrary value that spans the range
 of the random variable. This produces a new function, known as the
 \emph{Cumulative Distribution Function} (CDF), which is the integral
 function of the PDF and is defined as
 
-\includegraphics{Fig/media/image27.wmf}. (13)
+\begin{equation}
+\label{equ:exponentialDensity}
+CDF(x) = \int^x_{-\infty} p_X(y)dy.
+\end{equation}
 
-\subsection{Reliability Prediction}\label{reliability-prediction}
+\section{Reliability Prediction}
+\label{section:reliability-prediction}
 
 Our main interest in the study of probability stems from the desire to
 quantify the reliability of a system. The following is a formal
 mathematical definition of \emph{\textbf{reliability}}.
 
-\begin{quote}
-\textbf{Definition}: Reliability, \emph{R(t)}, is the probability that a
-device is functioning properly (has not failed) at time \emph{t}.
-\end{quote}
+\begin{itquote}
+\textbf{Definition}: Reliability, $R(t)$, is the probability that a
+device is functioning properly (has not failed) at time $t$.
+\end{itquote}
 
-In order to determine \emph{R(t),} it is necessary to first introduce
+In order to determine $R(t)$, it is necessary to first introduce
 some related mathematical entities and their meanings. The
-\emph{\textbf{failure rate}}, \emph{λ(t),} of a device is the expected
+\emph{\textbf{failure rate}}, $\lambda(t)$, of a device is the expected
 number of failures per unit time. The failure rate is measured by
 operating a batch of devices for a given time interval and noting how
 many fail during that interval. A typical graph of failure rate versus
@@ -403,7 +466,7 @@ reliability function for a constant failure rate in (23) as follows.
 
 = \ul{95.7\%}.
 
-\subsubsection{\texorpdfstring{\hfill\break
+\subsection{\texorpdfstring{\hfill\break
 Mean Time to
 Failure}{ Mean Time to Failure}}\label{mean-time-to-failure}
 
@@ -482,7 +545,7 @@ constant. Although that is nearly true for people in their 20s and 30s,
 it is not true as people age. People do wear out and the failure rate
 increases with age.
 
-\subsubsection{Failure Rate Estimates}\label{failure-rate-estimates}
+\subsection{Failure Rate Estimates}\label{failure-rate-estimates}
 
 The overriding objective of this chapter is to estimate the future
 behavior of devices that are used in electrical and computer systems.
@@ -647,7 +710,7 @@ This allows estimation of the MTTF and requested reliability
 
 In conclusion, the BJT is estimated to be highly reliable in 20 years.
 
-\subsubsection{Thermal Management and Power
+\subsection{Thermal Management and Power
 Derating}\label{thermal-management-and-power-derating}
 
 One of the quantities computed in Example 8.4 was the junction
@@ -763,7 +826,7 @@ slightly to \ul{99.88\%}. Note, however, the junction temperature is
 quite high at 145°C and further increases in temperature would likely
 destroy the device.
 
-\subsubsection{Limits of Reliability
+\subsection{Limits of Reliability
 Estimation}\label{limits-of-reliability-estimation}
 
 It must be kept in mind that the reliability estimates are just that,
@@ -780,7 +843,7 @@ estimation is for comparative purposes when evaluating different design
 options. Applying these methods forces the designer to consider the
 operating conditions and factor them into the design.
 
-\subsection{System Reliability}\label{system-reliability-1}
+\section{System Reliability}\label{system-reliability-1}
 
 The previous section focused on determining the reliability of a single
 device. It is natural to ask, ``\emph{How can the reliability of a
@@ -788,7 +851,7 @@ system consisting of many devices be determined?}'' In order to derive
 the overall reliability of a multi-component system, it is necessary to
 take into account the overall system structure.
 
-\subsubsection{Series Systems}\label{series-systems}
+\subsection{Series Systems}\label{series-systems}
 
 Consider the inverter circuit in Example 8.4---failure of any one
 component in the circuit would lead to the failure of the overall system
@@ -889,7 +952,7 @@ itself.
 (b) The MTTF is given by \includegraphics{Fig/media/image126.wmf} which
 in this case is \ul{531 years}.
 
-\subsubsection{Parallel Systems}\label{parallel-systems}
+\subsection{Parallel Systems}\label{parallel-systems}
 
 From (30) it is clear that as more components are added to a series
 system, the reliability decreases. It is natural to ask if the
@@ -971,7 +1034,7 @@ In order to achieve this reliability, \ul{n=8} disks are required. The
 reliability of each individual disk is low at 42\%, but using
 redundancy, the overall system reliability is quite high.
 
-\subsubsection{Combination Systems}\label{combination-systems}
+\subsection{Combination Systems}\label{combination-systems}
 
 Many real systems do not fit neatly into either parallel or series
 reliability models as shown in Figure 8.13. Rather, they may be a
@@ -1043,7 +1106,7 @@ reliability for systems 3 and 4 of
 \includegraphics{Fig/media/image161.wmf}\ul{90\%}, while the combined
 reliability of systems 3 and 4 is 99\%.
 
-\subsection{Summary and Further
+\section{Summary and Further
 Reading}\label{summary-and-further-reading}
 
 This chapter presented the basics of probability theory and methods for
