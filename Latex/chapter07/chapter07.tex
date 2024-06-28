@@ -496,81 +496,55 @@ Chapter 6 (Figure 6.2) that accepts nickels and dimes and dispenses
 candy when a total of \$0.25 (or more) is submitted. The state machine
 has different processing paths, depending upon the combination and order
 of coins deposited. Test cases can be written for each of the processing
-paths through the system, and an example is shown in Table 7.2 for one
+paths through the system, and an example is shown in 
+Table~\ref{table:stepByStepTest} for one
 particular processing path.
 
-\textbf{\hfill\break
-Table 7.2} A step-by-step test for a vending machine.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0385}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.2014}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3252}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0319}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0366}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0275}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0733}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1282}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1374}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\multicolumn{9}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{1.0000} + 16\tabcolsep}@{}}{%
-\textbf{Test Writer:} Sue L. Engineer} \\
-~ & \textbf{Test Case Name:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-Finite State Machine Path Test \#1} & \textbf{Test ID \#:} &
-FSM-Path-01 \\
-~ & \textbf{Description:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-Simulate insertion of money with a mix of nickels and dimes. Verifies
+\begin{table}
+\caption{A step-by-step test for a vending machine.}
+\label{table:stepByStepTest}
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{2cm}|m{2cm}|}
+\hline
+
+\multicolumn{8}{l} {\textbf{Test Writer:} Sue L. Engineer}\\ \hline
+
+\multicolumn{2}{l} {\textbf{Test Case Name:}} &
+\multicolumn{4}{l} {Finite State Machine Path Test \#1} &
+\multicolumn{1}{l}{\textbf{Test ID \#:}} & FSM-Path-01 \\ \hline
+
+\multicolumn{2}{l} {\textbf{Description:}}&
+\multicolumn{4}{l} {Simulate insertion of money with a mix of nickels and dimes. Verifies
 FSM outputs candy in response to a total deposit of \$0.30.} &
-\textbf{Type:} & 🗹white box
+\multicolumn{1}{l}{\textbf{Type:}} &  white box or black box \\ \hline
 
-□black box \\
-\multicolumn{9}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{1.0000} + 16\tabcolsep}@{}}{%
-\textbf{Tester Information}} \\
-\textbf{~} & \textbf{Name of Tester:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-} & \textbf{Date:} & \\
-\textbf{~} & \textbf{Hardware Ver:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-1.0} & \textbf{Time:} & \\
-& \textbf{Setup:} &
-\multicolumn{7}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.7600} + 12\tabcolsep}@{}}{%
-Make sure that the system was reset sometime prior and is in state
-\$0.00.} \\
-\textbf{Step} & \textbf{Action} & \textbf{Expected Result} &
-\textbf{Pass} & \textbf{Fail} & \textbf{N/A} &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-\textbf{Comments}} \\
-1 & Strobe Nickel & State should go to \$0.05 & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
-2 & Strobe Dime & State should go to \$0.15 & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
-3 & Wait & State should remain \$0.15 & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
-4 & Strobe Nickel & State should go to \$0.20 & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
-5 & Strobe Dime & State should go to \$0.25 & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
-6 & Nothing & State should go to \$0.00 & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
-~ &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.5266} + 2\tabcolsep}}{%
-\textbf{Overall test result:}} & \textbf{~} & \textbf{~} & \textbf{~} &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-~} \\
-\end{longtable}
+\multicolumn{8}{l} {\textbf{Tester Information}} \\ \hline
 
-\subsection*{\texorpdfstring{Automated Test Scripts}
+\multicolumn{2}{l} {\textbf{Name of Tester:}} &
+\multicolumn{4}{l} { } &
+\multicolumn{1}{l}{\textbf{Date:}} &  \\ \hline
+
+\multicolumn{2}{l} {\textbf{Hardware Ver:}} &
+\multicolumn{4}{l} { 1.0} &
+\multicolumn{1}{l}{\textbf{Time:}} &  \\ \hline
+
+\multicolumn{2}{l} {\textbf{Setup:}}&
+\multicolumn{6}{l} {Make sure that the system was reset sometime prior and is in state \$0.00}   \\ \hline
+
+\textbf{Step} & \textbf{Action} &  \textbf{Expected Result} & 
+\textbf{Pass} & \textbf{Fail} &  \multicolumn{2}{l}{\textbf{Comments}} \\  \hline
+1 & Strobe Nickel & State should go to \$0.05 & & & & \multicolumn{2}{l}{} \\ \hline
+2 & Strobe Dime & State should go to \$0.15 & & & & \multicolumn{2}{l}{}\\ \hline
+3 & Wait & State should remain \$0.15 & & & & \multicolumn{2}{l}{}\\ \hline
+4 & Strobe Nickel & State should go to \$0.20 & & & & \multicolumn{2}{l}{}\\ \hline
+5 & Strobe Dime & State should go to \$0.25 & & & & \multicolumn{2}{l}{}\\ \hline
+6 & Nothing & State should go to \$0.00 & & & & \multicolumn{2}{l}{}\\ \hline
+\multicolumn{3}{l}{\textbf{Overall test result:}} &   &  &  & \multicolumn{2}{l}{}\\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection*{Automated Test Scripts}
 \label{subsection:automated-test-scripts}
 
 An \emph{\textbf{automated test}} \emph{\textbf{script}} is a sequence
@@ -726,78 +700,57 @@ results making it difficult for the customer to actually verify the test
 was passed. A way to address these problems is to have the robot monitor
 its own distance from the wall. This is done in this case by a program
 written to monitor the position of the robot over time and store these
-values. From the specifications for a step-by-step acceptance in Table
-7.3 it is clear what the test program must configure the robot to log
+values. From the specifications for a step-by-step acceptance in 
+Table~\ref{table:stepByStepAcceptanceTestRobot}
+it is clear what the test program must configure the robot to log
 the distance data while traversing the wall. After this data is
 downloaded from the robot it can be analyzed in a spreadsheet program to
 determine the needed metrics and archived for future reference.
 
-\textbf{Table 7.3} A step-by-step acceptance test case for the
-autonomous robot.
+\begin{table}
+\caption{A step-by-step acceptance test case for the autonomous robot.}
+\label{table:stepByStepAcceptanceTestRobot}
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{2cm}|m{2cm}}
+\hline
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0385}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.2014}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3252}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0319}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0366}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0275}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0733}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1282}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1374}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\multicolumn{9}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{1.0000} + 16\tabcolsep}@{}}{%
-\textbf{Test Writer:} Sue L. Engineer} \\
-~ & \textbf{Test Case Name:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-Robot acceptance test \#1} & \textbf{Test ID \#:} & Robot-AT-01 \\
-~ & \textbf{Description:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-Checks the engineering requirement: \emph{The robot's center must stay
+\multicolumn{8}{l} {\textbf{Test Writer:} Sue L. Engineer}\\ \hline
+
+\multicolumn{2}{l} {\textbf{Test Case Name:}} &
+\multicolumn{4}{l} {Robot Acceptance Test \#1} &
+\multicolumn{1}{l}{\textbf{Test ID \#:}} & Robot-AT-01 \\ \hline
+
+\multicolumn{2}{l} {\textbf{Description:}}&
+\multicolumn{4}{l} {The robot's center must stay
 within 12 to 18 centimeters of the wall over 90\% of the course, while
-traveling parallel to a wall over a 3 meter course.}} & \textbf{Type:} &
-□white box
+traveling parallel to a wall over a 3 meter course.} &
+\multicolumn{1}{l}{\textbf{Type:}} &  white box or black box \\ \hline
 
-🗹black box \\
-\multicolumn{9}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{1.0000} + 16\tabcolsep}@{}}{%
-\textbf{Tester Information}} \\
-\textbf{~} & \textbf{Name of Tester:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-} & \textbf{Date:} & \\
-\textbf{~} & \textbf{Hardware Ver:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-Robot 1.0} & \textbf{Time:} & \\
-& \textbf{Setup:} &
-\multicolumn{7}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.7600} + 12\tabcolsep}@{}}{%
-Completed robot should be fully charged and placed on 3 meter test
-track.} \\
-\textbf{Step} & \textbf{Action} & \textbf{Expected Result} &
-\textbf{Pass} & \textbf{Fail} & \textbf{N/A} &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-\textbf{Comments}} \\
+\multicolumn{8}{l} {\textbf{Tester Information}} \\ \hline
+
+\multicolumn{2}{l} {\textbf{Name of Tester:}} &
+\multicolumn{4}{l} { } &
+\multicolumn{1}{l}{\textbf{Date:}} &  \\ \hline
+
+\multicolumn{2}{l} {\textbf{Hardware Ver:}} &
+\multicolumn{4}{l} {Robot 1.0} &
+\multicolumn{1}{l}{\textbf{Time:}} &  \\ \hline
+
+\multicolumn{2}{l} {\textbf{Setup:}}&
+\multicolumn{6}{l} {Completed robot should be fully charged and placed on 3 meter test track.}   \\ \hline
+
+\textbf{Step} & \textbf{Action} &  \textbf{Expected Result} & 
+\textbf{Pass} & \textbf{Fail} & \multicolumn{2}{l}{ \textbf{Comments}} \\  \hline
 1 & Write a program to monitor the robots position from the wall. &
 Program should be statically tested to verify accuracy. Should sample
-wall at a sufficient rate depending on speed. & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
+wall at a sufficient rate depending on speed. & & & &\multicolumn{2}{l}{}\\ \hline
 2 & Put robot on test track, run test, and download data. & The robot
 should travel down the entire length of the test track and then stop. &
-& & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
+& & &\multicolumn{2}{l}{}\\ \hline
 3 & Plot test data in a spreadsheet program. & Plot of position vs. time
-should be within 12 -- 18 cm 90\% of the time. & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
-~ &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.5266} + 2\tabcolsep}}{%
-\textbf{Overall test result:}} & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
-\end{longtable}
+should be within 12 -- 18 cm 90\% of the time. & & & &\\ \hline
+\multicolumn{3}{l}{\textbf{Overall test result:}} &   &  &  & \multicolumn{2}{l}{}\\ \hline
+\end{tabular}
+\end{table}
 
 \subsection*{Integration Testing}
 \label{subsection:integration-testing-1}
@@ -846,78 +799,60 @@ molding expectations. For example, the magnetic field created by the
 windings in the DC motor can affect the reading generated by the
 compass. This interaction could potentially affect the headings read by
 the MCU and cause the robot to go off course by more than the allowable
-10 degrees. Thus a step-by-step integration test is created in Table 7.4
+10 degrees. Thus a step-by-step integration test is created in 
+Table~\ref{table:stepByStepIntegrationTestRobot}
 to test the operation of the motors with the magnetic compass.
 
-\textbf{\hfill\break
-Table 7.4} A step-by-step integration test case for the compass and
-motors.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0385}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.2014}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3252}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0319}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0366}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0275}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0733}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1282}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1374}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\multicolumn{9}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{1.0000} + 16\tabcolsep}@{}}{%
-\textbf{Test Writer:} Sue L. Engineer} \\
-~ & \textbf{Test Case Name:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-Robot integration test \#1} & \textbf{Test ID \#:} & Robot-IT-01 \\
-~ & \textbf{Description:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-Checks interaction of DC motors on the magnetic compass.} &
-\textbf{Type:} & □white box
+\begin{table}
+\caption{A step-by-step integration test case for the compass and motors.}
+\label{table:stepByStepIntegrationTestRobot}
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{2cm}|m{2cm}|}
+\hline
 
-🗹black box \\
-\multicolumn{9}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{1.0000} + 16\tabcolsep}@{}}{%
-\textbf{Tester Information}} \\
-\textbf{~} & \textbf{Name of Tester:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-} & \textbf{Date:} & \\
-\textbf{~} & \textbf{Hardware Ver:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-Robot 1.0} & \textbf{Time:} & \\
-& \textbf{Setup:} &
-\multicolumn{7}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.7600} + 12\tabcolsep}@{}}{%
-A wooden turn-table should be placed on top of the cardinal direction
+\multicolumn{8}{l} {\textbf{Test Writer:} Sue L. Engineer}\\ \hline
+
+\multicolumn{2}{l} {\textbf{Test Case Name:}} &
+\multicolumn{4}{l} {Robot Integration Test \#1} &
+\multicolumn{1}{l}{\textbf{Test ID \#:}} & Robot-IT-01 \\ \hline
+
+\multicolumn{2}{l} {\textbf{Description:}}&
+\multicolumn{4}{l} {Checks interaction of DC motors on the magnetic compass.} &
+\multicolumn{1}{l}{\textbf{Type:}} &  white box or black box \\ \hline
+
+\multicolumn{8}{l} {\textbf{Tester Information}} \\ \hline
+
+\multicolumn{2}{l} {\textbf{Name of Tester:}} &
+\multicolumn{4}{l} { } &
+\multicolumn{1}{l}{\textbf{Date:}} &  \\ \hline
+
+\multicolumn{2}{l} {\textbf{Hardware Ver:}} &
+\multicolumn{4}{l} {Robot 1.0} &
+\multicolumn{1}{l}{\textbf{Time:}} &  \\ \hline
+
+\multicolumn{2}{l} {\textbf{Setup:}}&
+\multicolumn{6}{l} {A wooden turn-table should be placed on top of the cardinal direction
 map. This map should be aligned with a magnetic compass. There should be
 no metal present while the alignment is being performed. Next, the
 partially assembled robot should be placed on the turn-table. The MCU
-should be connected to a terminal to observe and record data.} \\
-\textbf{Step} & \textbf{Action} & \textbf{Expected Result} &
-\textbf{Pass} & \textbf{Fail} & \textbf{N/A} &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-\textbf{Comments}} \\
+should be connected to a terminal to observe and record data.}   \\ \hline
+
+\textbf{Step} & \textbf{Action} &  \textbf{Expected Result} & 
+\textbf{Pass} & \textbf{Fail} & \multicolumn{2}{l}{ \textbf{Comments}} \\  \hline
+
 1 & Write program to spool compass readings while simultaneously driving
 motors. & Program should be statically tested to verify accuracy. Should
-sample compass at a sufficient rate depending on speed. & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
+sample compass at a sufficient rate depending on speed. & & & & \multicolumn{2}{l}{} \\ \hline
 2 & Run acceptance test & Test program should prompt user to turn the
 robot to an orientation and then spin the motors will then spin up and
-down. & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
+down. & & & & \multicolumn{2}{l}{}\\ \hline
 3 & Plot spooled data in spreadsheet program. & Plots should be analyzed
 to see if compass deviated any more than 10 degrees from set point. & &
-& &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
-~ &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.5266} + 2\tabcolsep}}{%
-\textbf{Overall test result:}} & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
-\end{longtable}
+& &\multicolumn{2}{l}{}\\ \hline
+
+\multicolumn{3}{l}{\textbf{Overall test result:}} &   &  &  & \multicolumn{2}{l}{}\\ \hline
+\end{tabular}
+\end{table}
 
 It is clear from this test case that a testing program needs to be
 written in order to prompt the user to align the robot, capture compass
@@ -935,28 +870,22 @@ ensure that the architecture is capable of meeting the design
 requirements, the design team moves on to selecting components to use in
 the design. The design team must select the units so that the resulting
 system can meet the engineering requirements. Each of the individual
-components Figure 7.5 needs to be considered as a candidate for unit
+components Figure~\ref{figure:level1mobileRobot}
+needs to be considered as a candidate for unit
 testing. In general each functional unit might have several test cases
 comprising its unit test. A unit test for the digital compass component
 will illustrate this. Prior to presenting the test case, the functional
-design requirements for the unit are given in Table 7.5.
+design requirements for the unit are given in 
+Table~\ref{table:functionalDigitalCompass}.
 
-\textbf{Table 7.5} The functional requirements for the digital compass.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2034}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7966}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\emph{Module}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Digital Compass -- Geosensor version 2.3
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\emph{Inputs} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{table}
+\caption{The functional requirements for the digital compass.}
+\label{table:functionalDigitalCompass}
+\begin{tabular}{|l|m{10cm}|}
+\hline
+\emph{Module} & Digital Compass -- Geosensor version 2.3 \\ \hline
+\emph{Inputs} & 
 \begin{itemize}
 \item
   Earth's magnetic field: An orientated field of magnetic force
@@ -967,112 +896,92 @@ Digital Compass -- Geosensor version 2.3
 \item
   SDIn -- Serial data input to send data into the compass module. Date
   is valid on positive SClk edges.
-\end{itemize}
-\end{minipage} \\
-\emph{Outputs} & \begin{minipage}[t]{\linewidth}\raggedright
+\end{itemize}\\ \hline
+\emph{Outputs} & 
 \begin{itemize}
 \item
   SDOut -- Serial data output from the compass module. Data is valid on
   negative clock edges.
-\end{itemize}
-\end{minipage} \\
+\end{itemize}\\ \hline
 \emph{Functionality} & Senses the earth's magnetic field and determines
 the orientation of the compass with respect to the field. This
 orientation is stored in an internal register and can be retrieved
-through the SPI interface. \\
-\emph{Test} & Comp-UT-01 \\
-\end{longtable}
+through the SPI interface. \\ \hline
+\emph{Test} & Comp-UT-01 \\  \hline
+\end{tabular}
+\end{table}
 
 In order to be useful in the overall design the compass module must be
 able to accurately report the robot's heading. The requirements place an
 upper bound of 10 degrees on the error in the heading of the robot.
-Thus, the matrix test case is Table 7.6 is constructed to configure the
+Thus, the matrix test case is Table~\ref{table:matrixTestDigitalCompass}
+is constructed to configure the
 compass and then reads heading data from it. This unit test looks for
 heading errors greater than 10 degrees.
 
-\textbf{Table 7.6} Matrix unit test for the digital compass.
+\textbf{Table 7.6} 
+\begin{table}
+\caption{Matrix unit test for the digital compass.}
+\label{table:matrixTestDigitalCompass}
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{2cm}|m{2cm}|}
+\hline
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0385}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.2014}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3252}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0319}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0366}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0275}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0733}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1282}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1374}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\multicolumn{9}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{1.0000} + 16\tabcolsep}@{}}{%
-\textbf{Test Writer:} Sue L. Engineer} \\
-~ & \textbf{Test Case Name:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-Compass unit test \#1} & \textbf{Test ID \#:} & Comp-UT-01 \\
-~ & \textbf{Description:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-Checks that the compass returns correct angular measurements to the MCU.
-Test program is in ./test/compass\_unit\_test\_1.c} & \textbf{Type:} &
-□white box
+\multicolumn{8}{l} {\textbf{Test Writer:} Sue L. Engineer}\\ \hline
 
-🗹black box \\
-\multicolumn{9}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{1.0000} + 16\tabcolsep}@{}}{%
-\textbf{Tester Information}} \\
-\textbf{~} & \textbf{Name of Tester:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-} & \textbf{Date:} & \\
-\textbf{~} & \textbf{Hardware Ver:} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4945} + 8\tabcolsep}}{%
-Compass Module - Geosensor version 2.3} & \textbf{Time:} & \\
-& \textbf{Setup:} &
-\multicolumn{7}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.7600} + 12\tabcolsep}@{}}{%
-Compass module should be wired to the MCU through the SPI interface
+\multicolumn{2}{l} {\textbf{Test Case Name:}} &
+\multicolumn{4}{l} {Compass Unit Test \#1} &
+\multicolumn{1}{l}{\textbf{Test ID \#:}} & Comp-UT-01 \\ \hline
+
+\multicolumn{2}{l} {\textbf{Description:}}&
+\multicolumn{4}{l} {Checks that the compass returns correct angular measurements to the MCU.
+Test program is in ./test/compass\_unit\_test\_1.c} &
+\multicolumn{1}{l}{\textbf{Type:}} &  white box or black box \\ \hline
+
+\multicolumn{8}{l} {\textbf{Tester Information}} \\ \hline
+
+\multicolumn{2}{l} {\textbf{Name of Tester:}} &
+\multicolumn{4}{l} { } &
+\multicolumn{1}{l}{\textbf{Date:}} &  \\ \hline
+
+\multicolumn{2}{l} {\textbf{Hardware Ver:}} &
+\multicolumn{4}{l} {Compass Module - Geosensor version 2.3} &
+\multicolumn{1}{l}{\textbf{Time:}} &  \\ \hline
+
+\multicolumn{2}{l} {\textbf{Setup:}}&
+\multicolumn{6}{l} {Compass module should be wired to the MCU through the SPI interface
 pins. The MCU should be connected to an RS232 terminal through its SCI
 interface. The terminal should be configured to run at 9600 baud.
 Cardinal directions map should be aligned using the magnetic
-compass.} \\
-\textbf{Step} & \textbf{Action} & \textbf{Expected Result} &
-\textbf{Pass} & \textbf{Fail} & \textbf{N/A} &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-\textbf{Comments}} \\
+compass.}   \\ \hline
+
+\textbf{Step} & \textbf{Action} &  \textbf{Expected Result} & 
+\textbf{Pass} & \textbf{Fail} & \multicolumn{2}{l}{ \textbf{Comments} }\\  \hline
+
+
 1 & Compile compass.c in /test directory & IDE should generate no
-warnings or errors. & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
-2 & Download & MCU should report ``download successful'' & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
+warnings or errors. & & & & \multicolumn{2}{l}{}\\ \hline
+
+2 & Download & MCU should report ``download successful'' & & & & \multicolumn{2}{l}{}\\ \hline
+
 3 & Execute & MCU should display compass splash screen on terminal
-interface. & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
+interface. & & & & \multicolumn{2}{l}{}\\ \hline
+
 4 & Orientate compass to 0 degrees. & Terminal interface should display
-0 degrees +/- 10 degrees. & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
+0 degrees +/- 10 degrees. & & & & \multicolumn{2}{l}{}\\ \hline
+
 5 & Orientate compass to 30 degrees. & Terminal interface should display
-30 degrees +/- 10 degrees. & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
+30 degrees +/- 10 degrees. & & & & \multicolumn{2}{l}{}\\ \hline
+
 6 & Orientate compass to 45 degrees. & Terminal interface should display
-45 degrees +/- 10 degrees. & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
-\ldots{} & \ldots{} & \ldots{} & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
+45 degrees +/- 10 degrees. & & & & \multicolumn{2}{l}{}\\ \hline
+
+\ldots{} & \ldots{} & \ldots{} & & & &  \multicolumn{2}{l}{}\\ \hline
+
 12 & Orientate compass to 315degrees. & Terminal interface should
-display 315 degrees +/- 10 degrees. & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
-~ &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.5266} + 2\tabcolsep}}{%
-\textbf{Overall test result:}} & & & &
-\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.3388} + 4\tabcolsep}@{}}{%
-} \\
-\end{longtable}
+display 315 degrees +/- 10 degrees. & & & & \multicolumn{2}{l}{}\\ \hline
+\multicolumn{3}{l}{\textbf{Overall test result:}} &   &  &  &  \multicolumn{2}{l}{}\\ \hline
+\end{tabular}
+\end{table}
 
 \section{Guidance}
 \label{section:guidance}
