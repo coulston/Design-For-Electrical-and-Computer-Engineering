@@ -854,7 +854,7 @@ heat sink added.}
 Let's now apply these results. Manufacturer datasheets typically
 identify the absolute maximum power dissipation and note that the device
 should be derated if operated at ambient conditions above room
-temperature (\includegraphics{Fig/media/image96.wmf}). The datasheets
+temperature ($T_A = 25^circ C$). The datasheets
 also supply a maximum junction temperature for the device. It is clear
 from the resistive model that, for a fixed power dissipation, the
 junction temperature increases along with ambient temperature. If the
@@ -910,8 +910,10 @@ the BJT is within this derated limit.
 (b) To compute the failure rate the junction temperature and
 $\pi_\tau$ are re-computed.
 
-$$T_J = T_A + P_D\Theta_{JA} = 120^\circ C + (125x10^{-3} W) \[ \frac{200^\circ C}{W} = 145\circ C \\
-\pi_T = exp\[ -2114 \[ \fradc{1}{145+273} - \frac{1}{298} \] \] = 7.66$$
+$$T_J = T_A + P_D\Theta_{JA} = 120^\circ C + (125x10^{-3} W) \big[ \frac{200^\circ C}{W} \big]= 145\circ C $$\\
+$$\pi_T = exp\big[ -2114 \big[ \frac{1}{145+273} - \frac{1}{298} \big] \big] = 7.66$$
+\end{tabular}
+\end{table}
 
 With this new value, the value of $\lambda=7.00x10^{-3}/10^6 hours$, and 
 the reliability is reduced slightly to \ul{99.88\%}. Note, however, the junction 
@@ -929,14 +931,15 @@ are put under stress beyond normal operating conditions, and from these
 the failure rates are estimated. (Nobody sits around waiting 20 years
 for the devices to fail!) The tests are based upon mathematical models
 for the failure rate and the device lifetime. Secondly, there are other
-factors that influence reliability that are not addressed by \emph{λ},
+factors that influence reliability that are not addressed by $\lambda$,
 such as the manufacturing processes used, the quality of manufacturing
 technologies, shock, and corrosion. Part of the value of reliability
 estimation is for comparative purposes when evaluating different design
 options. Applying these methods forces the designer to consider the
 operating conditions and factor them into the design.
 
-\section{System Reliability}\label{system-reliability-1}
+\section{System Reliability}
+\label{section:system-reliability-1}
 
 The previous section focused on determining the reliability of a single
 device. It is natural to ask, ``\emph{How can the reliability of a
@@ -944,57 +947,69 @@ system consisting of many devices be determined?}'' In order to derive
 the overall reliability of a multi-component system, it is necessary to
 take into account the overall system structure.
 
-\subsection{Series Systems}\label{series-systems}
+\subsection{Series Systems}
+\label{subsection:series-systems}
 
 Consider the inverter circuit in Example 8.4---failure of any one
 component in the circuit would lead to the failure of the overall system
 or circuit. Conceptually, a system in which the failure of a single
 component (or subsystem) leads to failure of the overall system is known
-as a \emph{\textbf{series system}}. Figure 8.11 shows a block diagram of
-a series system composed of boxes
-\includegraphics{Fig/media/image106.wmf},
-\includegraphics{Fig/media/image107.wmf}, ...,
-\includegraphics{Fig/media/image108.wmf} that represent the components,
+as a \emph{\textbf{series system}}. Figure~\ref{figure:seriesSystems}
+shows a block diagram of a series system composed of boxes
+$S_1, S_2, \ldots S_n$ that represent the components,
 or the subsystems, of a larger system.
 
-\includegraphics[width=3.20833in,height=0.44792in]{Fig/media/image109.emf}
+\begin{figure}
+\includegraphics[width=3.21in,height=0.45in]{./image109}
+\caption{A series system consisting of components, or subsystems $S_1, S_2, \ldots S_n$.}
+\label{figure:seriesSystems}
+\end{figure}
 
-\textbf{Figure 8.11} A series system consisting of components, or
-subsystems \includegraphics{Fig/media/image106.wmf},
-\includegraphics{Fig/media/image107.wmf}, \ldots,
-\includegraphics{Fig/media/image108.wmf}.
-
-To compute the overall reliability of a series system,
-\includegraphics{Fig/media/image110.wmf}, it is assumed that the failure
+To compute the overall reliability of a series system, $R_s(t)$, 
+it is assumed that the failure
 of subsystems or components are independent events. The system is
-operable only if subsystems \includegraphics{Fig/media/image106.wmf} and
-\includegraphics{Fig/media/image107.wmf} \ldots{} and
-\includegraphics{Fig/media/image108.wmf} are all simultaneously
+operable only if subsystems $S_1 and S_2 \ldots S_n$ are all simultaneously
 operating. Therefore, the probability of the overall system operating is
 given by the product of reliabilities for all of the subsystems as
 follows
 
-\includegraphics{Fig/media/image111.wmf}. (30)
+\begin{equation}
+\label{equ:seriesProbability}
+R_s(t) = R_1(t)R_2(t)\ldots R_n(t) = \prod_{i=1}^n R_i(t) 
+\end{equation}
 
 It is important to remember that failures are assumed to be independent
 events, just as flipping a coin twice is considered two independent
 events. The overall system reliability is less than or equal to that of
-any single subsystem, since all reliability values are ≤1. Thus
-\includegraphics{Fig/media/image112.wmf} decreases as the number of
+any single subsystem, since all reliability values are $\leq 1$. Thus
+$R_s$ decreases as the number of
 subsystems increases. Assuming a constant failure rate for all system
 components gives the following result for the overall system reliability
 
-\includegraphics{Fig/media/image113.wmf}. (31)
+\begin{equation}
+\label{equ:seriesProbabilityConstantErrorRate}
+R_s(t) = e^{-\lambda_1t}e^{-\lambda_2t}\cdots e^{-\lambda_nt} = exp(-\sum_{i-1}^n \lambda_i t
+\end{equation}
 
 This leads to a series system failure rate and MTTF of
 
-\includegraphics{Fig/media/image114.wmf}. (32)
+
+\begin{equation}
+\label{equ:seriesProbabilityMttf}
+\lambda_s = \sum_{i=1}^n \lambda_i
+MTTF = \frac{1}{\lambda_s}
+\end{equation}
 
 Example 8.6 revisits the inverter problem where the failure rates of all
 components are considered for system reliability estimation.
 
-\textbf{\hfill\break
-Example 8.6} Inverter circuit reliability.
+
+\begin{table}
+\caption{}
+\label{table:<context>}
+\begin{tabular}{|m{15cm}|}
+\textbf{\hfill\break Example 8.6} 
+Inverter circuit reliability.
 
 \emph{\textbf{\ul{Problem:}}} For the system in Example 8.4 estimate (a)
 the overall system reliability in 20 years, and (b) the MTTF. Assume
@@ -1010,42 +1025,45 @@ dissipated in each resistor, which is 125mW and 0.9mW for the collector
 and base resistors respectively. The failure rate for a fixed
 composition resistor from MIL-HDBK-217F is
 
-\includegraphics{Fig/media/image115.wmf}
+$$\lambda_{resistor1} = \lambda_b \pi_R \pi_Q \pi_E failures/10^6 hours$$
 
-For the collector resistor, R\textsubscript{C}, the base failure rate is
+For the collector resistor, $R_C$, the base failure rate is
 computed as
 
-\includegraphics{Fig/media/image116.wmf}
+$$ \lambda_b = 4.5x10^{-9} exp \big[ 12 \big[\frac{T+273}{343} \big] \big] exp\big[ \frac{S}{0.6} \ frac{T+273}{273}\big] \big]$$
+$$  = 4.5x10^{-9} exp \big[ 12 \big[\frac{25+273}{343} \big] \big] exp\big[ \frac{0.125/0.25}{0.6} \ frac{25+273}{273}\big] \big]$$
+$$ = 3.77x10^{-4}$$
 
-The \emph{S} term is the ratio of power dissipated to the maximum power
-rating. The values \includegraphics{Fig/media/image117.wmf},
-\includegraphics{Fig/media/image118.wmf}, and
-\includegraphics{Fig/media/image119.wmf} are directly read from tables.
+The $S$ term is the ratio of power dissipated to the maximum power
+rating. The values $\pi_R=1.0$, $\pi_Q=15.0$, and $\pi_E = 27.0$ 
+are directly read from tables.
 Thus the overall failure rate for the collector resistor is
 
-\includegraphics{Fig/media/image120.wmf}\includegraphics{Fig/media/image121.wmf}.
+$$\lambda{resistor2} = (3.77x10^{-4}(1.0)(15.0)(27.0) = 1.53x10^{-1} failure/10^6 hours$$
 
-The process for the base resistor, R\textsubscript{B}, is similar, and
-results in
+The process for the base resistor, $R_B$, is similar, and results in
 
-\includegraphics{Fig/media/image122.wmf}\includegraphics{Fig/media/image123.wmf}.
+$$\lambda{resistor2} = 6.1x10^{-2} failure/10^6 hours$$
 
-The total failure rate is given from (32) as
+The total failure rate is given from equation~\ref{equ:seriesProbabilityMttf} as
 
-\includegraphics{Fig/media/image124.wmf}
+$$\lambda_s = \lambda_{BJT} + \lambda{resistor1} + \lambda{resistor2} = 0.215 failures/10^6 hours$$
 
-\includegraphics{Fig/media/image125.wmf}
-
-= \ul{96.3\%}.
+$$R_s(t) =exp(-\lambda_s t) = exp \big( -\frac{0.215}{10^6 hours} x \frac{24 hours}{day} x \frac{365 days}{year} x 20 years \big)$$
+$$96.3 \%$$
 
 Since resistors are pretty reliable devices, the overall system
 reliability decreases only a small amount relative to that of the BJT
 itself.
 
-(b) The MTTF is given by \includegraphics{Fig/media/image126.wmf} which
-in this case is \ul{531 years}.
+(b) The MTTF is given by $1/\lambda_s$ which in this case is \ul{531 years}.
+\end{tabular}
+\end{table}
 
-\subsection{Parallel Systems}\label{parallel-systems}
+
+
+\subsection{Parallel Systems}
+\label{subsection:parallel-systems}
 
 From (30) it is clear that as more components are added to a series
 system, the reliability decreases. It is natural to ask if the
@@ -1055,46 +1073,48 @@ contains multiple modules performing the same function where a single
 module would suffice. By its very nature redundancy allows improperly
 functioning modules to be switched out of the system without affecting
 its behavior. With redundancy the overall system functions correctly
-when any one of the submodules is functioning. Figure 8.12 shows a
+when any one of the submodules is functioning. 
+Figure~\ref{figure:parallelSystem} shows a
 simplified view of a \emph{\textbf{parallel system}} with subsystems
-\includegraphics{Fig/media/image127.wmf},
-\includegraphics{Fig/media/image107.wmf}, \ldots,
-\includegraphics{Fig/media/image128.wmf}.
+$S_1, S_2, \ldots S_n$.
 
-\includegraphics[width=1.51042in,height=2.03125in]{Fig/media/image129.emf}
-
-\textbf{Figure 8.12} A parallel, or redundant, system consisting of
-subsystems \includegraphics{Fig/media/image106.wmf},
-\includegraphics{Fig/media/image130.wmf}, \ldots,
-\includegraphics{Fig/media/image108.wmf}
+\begin{figure}
+\includegraphics[width=1.5in,height=2in]{./image129}
+\caption{A parallel, or redundant, system consisting of
+subsystems $S_1, S_2, \ldots S_n$}
+\label{figure:parallelSystem}
+\end{figure}
 
 In order to compute the reliability of a parallel system, note that a
-parallel system functions correctly when
-\includegraphics{Fig/media/image131.wmf} is functioning correctly, or
-\includegraphics{Fig/media/image132.wmf} is functioning correctly,
-\ldots{} or \includegraphics{Fig/media/image133.wmf} is functioning
+parallel system functions correctly when $S_1$ is functioning correctly, or
+$S_2$ is functioning correctly, $\ldots or S_n$ is functioning
 correctly. It would be nice if it were possible to write an equation
-stating that \includegraphics{Fig/media/image134.wmf}\emph{,} where + is
+stating that 
+$R_s(t) = R_1(t) + R_2(t) + \ldots R_n(t)$ where + is
 the logical OR operator. Unfortunately, there is no direct way to
 realize the OR operation in probability theory. This is resolved by
-working with failure function, \emph{F(t)}, instead. The probability
-that the system will fail by time \emph{t},
-\includegraphics{Fig/media/image135.wmf}, is equal to the probability
-that subsystem \includegraphics{Fig/media/image136.wmf} will fail and
-\includegraphics{Fig/media/image137.wmf} will fail and \ldots{}
-\includegraphics{Fig/media/image138.wmf} will fail. This probability is
-expressed mathematically as
+working with failure function, $F(t)$, instead. The probability
+that the system will fail by time $t, F_s(t)$, is equal to the probability
+that subsystem $S_1$ will fail and $S_2$ will fail and $\ldots S_n$
+will fail. This probability is expressed mathematically as
 
-\includegraphics[width=2.77083in,height=0.33333in]{Fig/media/image139.wmf}.
-(33)
+
+\begin{equation}
+\label{equ:parallelFailureRate}
+F_s(T) = F_1(t)F_2(t) \ldots F_n(t) = \prod_{i=1}^nF_i(t) = \prod_{i=1}^n(1-R_i(t))
+\end{equation}
+
 
 The overall system reliability of the parallel system is found from this
 as
 
-\includegraphics{Fig/media/image140.wmf} . (34)
+\begin{equation}
+\label{equ:parallelReliability}
+R_s(t) = 1-F_S(t) = 1 - \prod_{i=1}^n \big[ 1-R_i(t) \big]
+\end{equation}
 
 As more redundant components are added to a parallel system, additional
-\includegraphics{Fig/media/image141.wmf} terms are introduced into the
+$1-R_i(t)$ terms are introduced into the
 product term. This decreases the value of the product, hence the overall
 system reliability is increased as more redundant systems are added.
 
@@ -1106,28 +1126,44 @@ Special care must be paid to the switching circuit itself, as
 malfunction of this circuit could lead to an overall system failure. An
 example of parallel system reliability is given in Example 8.7.
 
-\textbf{Example 8.7} Reliability of a Redundant Array of Independent
-Disks (RAID).
+
+\begin{table}
+\begin{tabular}{m{15cm}|}
+\textbf{Example 8.7} 
+Reliability of a Redundant Array of Independent Disks (RAID).\\
 
 \emph{\textbf{\ul{Problem:}}} In a RAID, multiple hard drives are used
 to store the same data, thus achieving redundancy and increased
 reliability. One or more of the disks in the system can fail and the
 data can still be recovered. However, if all disks fail, then the data
 is lost. For this problem, assume that the individual disk drives have a
-failure rate of \includegraphics{Fig/media/image142.wmf}. How many disks
+failure rate of $\lambda = 10 failuresx/10^6 hours$. How many disks
 must the system have to achieve a reliability of 98\% in 10 years?
 
 \emph{\textbf{\ul{Solution:}}} The reliability of a parallel system with
-redundancy is given by (34). Since all of the disks are identical, the
-expression simplifies to
+redundancy is given by equation~\ref{equ:parallelReliability}. 
+Since all of the disks are identical, the expression simplifies to
 
-\includegraphics{Fig/media/image143.wmf}.
+$$R_s(t) = 1 - \left[ 1 - R_i(t) \right]^n$$
+
+$$0.98 \leq 1 - \big[ 1 - exp\big( - \frac {10}{10^ hours} x \frac{24 hours}{day} x \frac{365 days}{year} x 10 years \big) \big]^n$$
+
+$$0.98 \leq 1 - \left[1-0.42\right]^n$$
+
+$$0.02 \leq (0.58)^n$$
+
+$$log(0.02) \leq nlog(0.58)$$
+
+$$n \geq 7.2$$
+\end{tabular}
+\end{table}
 
 In order to achieve this reliability, \ul{n=8} disks are required. The
 reliability of each individual disk is low at 42\%, but using
 redundancy, the overall system reliability is quite high.
 
-\subsection{Combination Systems}\label{combination-systems}
+\subsection{Combination Systems}
+\label{subsection:combination-systems}
 
 Many real systems do not fit neatly into either parallel or series
 reliability models as shown in Figure 8.13. Rather, they may be a
@@ -1144,63 +1180,71 @@ reliability is known from all of the subsystem combinations.
 
 To illustrate this, consider the system in Figure 8.13. To determine the
 reliability, start by combining the three parallel systems
-\includegraphics{Fig/media/image144.wmf},
-\includegraphics{Fig/media/image145.wmf}, and
-\includegraphics{Fig/media/image146.wmf}\textsubscript{,} whose
-reliability is determined by application of (34) to be
-\includegraphics{Fig/media/image147.wmf}. The result is then combined
-with \includegraphics{Fig/media/image106.wmf} in series to give the
-overall system reliability, \includegraphics{Fig/media/image148.wmf}.
+$S_2, S_3, and S_4$ whose
+reliability is determined by application of (34) to be 
+$R_{s_{2-4}}(t) = 1- (1-R_2(t))(1-R_3(t))(1-R_4(t)))$.
+The result is then combined with $S_1$ in series to give the
+overall system reliability, 
+
+$R_{s}(t) = R_1(t) \left[ 1- (1-R_2(t))(1-R_3(t))(1-R_4(t))) \right]$.
+
+
+\begin{figure}
+\includegraphics[width=2.35in,height=1.72in]{./image149}
+\caption{A combination series-parallel system. $S_2, S_3, and S_4$
+are redundant parallel systems.}
+\label{figure:}
+\end{figure}
+
+
 The chapter concludes with Example 8.8 that addresses combination system
 reliability.
 
-\includegraphics[width=2.35417in,height=1.71875in]{Fig/media/image149.emf}
 
-\textbf{Figure 8.13} A combination series-parallel system.
-S\textsubscript{2}, S\textsubscript{3}, and S\textsubscript{4} are
-redundant parallel systems.
-
-\textbf{Example 8.8} Combination system reliability.
+\begin{table}
+\caption{}
+\label{table:<context>}
+\begin{tabular}{m{15cm}|}
+\textbf{Example 8.8} 
+Combination system reliability. \\
 
 \emph{\textbf{\ul{Problem:}}} Consider the system shown below with the
-following reliabilities at a fixed time \emph{t},
-\includegraphics{Fig/media/image150.wmf}. Determine the reliability that
-subsystems \includegraphics{Fig/media/image151.wmf} and
-\includegraphics{Fig/media/image152.wmf} must have so that the overall
-system reliability is greater than 95\%.
+following reliabilities at a fixed time $t, R_1=R_2= 80\%$. 
+Determine the reliability that subsystems $R_3, and R_4$
+must have so that the overall system reliability is greater than 95\%.
 
-\includegraphics[width=2.78125in,height=1.08333in]{Fig/media/image153.emf}
+\includegraphics[width=2.8in,height=1.1in]{./image153}
 
 \emph{\textbf{\ul{Solution:}}} The parallel systems can combined into
 single systems whose reliabilities are
 
-\includegraphics{Fig/media/image154.wmf}
+$$R_{s_{1,2}} = 1 - (1-R_1)(1-R_2) $$
+
+$$R_{s_{3,4}} = 1 - (1-R_3)(1-R_4)$$
 
 They are combined in series to give the overall system reliability
 
-\includegraphics{Fig/media/image155.wmf}.
+$$R_s = \left[ 1 - (1-R_1)(1-R_2) \right] x \left[ 1 - (1-R_2)(1-R_3) \right]$$
 
-Substituting values and assuming
-\includegraphics{Fig/media/image156.wmf} gives
+Substituting values and assuming $R_3 = R_4$ gives
 
-\includegraphics{Fig/media/image157.wmf}.
+$$0.95 = \left[ 1-0.2^2 \right] \left[1 - (1-R_{3,4})^2 \right]$$.
 
 Solving for the reliabilities gives the final result
 
-\includegraphics{Fig/media/image158.wmf}.
+$$R_3 = R_4 = 0.90$$
+\end{tabular}
+\end{table}
 
 This example demonstrates the power of redundant systems.
-\includegraphics{Fig/media/image106.wmf} and
-\includegraphics{Fig/media/image159.wmf} have somewhat low reliabilities
+$S_1 and S_2$ have somewhat low reliabilities
 relative to the overall system goal, but the reliability of the parallel
-combination of \includegraphics{Fig/media/image106.wmf} and
-\includegraphics{Fig/media/image160.wmf} is 96\%. It requires a
-reliability for systems 3 and 4 of
-\includegraphics{Fig/media/image161.wmf}\ul{90\%}, while the combined
+combination of $S_1$ and $S_2$ is 96\%. It requires a
+reliability for systems 3 and 4 of $R_3 = R_4 = 90\%$, while the combined
 reliability of systems 3 and 4 is 99\%.
 
-\section{Summary and Further
-Reading}\label{summary-and-further-reading}
+\section{Summary and Further Reading}
+\label{section:summary-and-further-reading}
 
 This chapter presented the basics of probability theory and methods for
 estimating the reliability of components and systems. Failure rate is an
