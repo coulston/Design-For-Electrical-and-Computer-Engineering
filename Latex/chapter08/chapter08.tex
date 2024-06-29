@@ -148,7 +148,7 @@ Figure~\ref{figure:probabilityDensityFunction}.
 \includegraphics[width=3.5in,height=1.53in]{./image10}
 \caption{ A probability density function. The area under the
 curve represents the probability that the random variable $X$ lies
-in the interval $\[ a,b \]$.
+in the interval $[ a,b ]$}.
 \label{figure:probabilityDensityFunction}
 \end{figure}
 
@@ -178,7 +178,7 @@ probability a random variable can take on a particular value is zero.
 Does this make any sense? Consider an experiment where the objective is
 to measure a voltage value for a random variable $V$. Now consider
 the question, ``\emph{What is the probability that the result of a
-voltage measurement equals π (the irrational number) volts?}'' In
+voltage measurement equals $\pi$ (the irrational number) volts?}'' In
 practice, this question is impossible to answer because the precision
 required of the meter is infinite and contrary to its construction. So
 the mathematical and practical results are in harmony. There is a way
@@ -188,7 +188,7 @@ follows
 
 \begin{equation}
 \label{equ:integralDeltaSliceOfPDF}
-P(\pi \lt V \lt \pi+\Delta v) = \int^{\pi+\Delta v}_{\pi} p_V dv \approx p_V(\pi) \Delta v
+P(\pi < V < \pi+\Delta v) = \int^{\pi+\Delta v}_{\pi} p_V dv \approx p_V(\pi) \Delta v
 \end{equation}
 
 This means that the probability a random variable is within a small
@@ -238,7 +238,7 @@ follow a normal density. The normal density is defined as
 
 \begin{equation}
 \label{equ:normalDensity}
-p_X(x) = \frac{1}{\sqrt{2\pi\sigma} e^1\frac{1}{2} \ frac{(x-\mu)^2}{\sigma}
+p_X(x) = \frac{1}{\sqrt{2\pi\sigma}} e^1\frac{1}{2} \ frac{(x-\mu)^2}{\sigma}
 \end{equation}
 
 The mean, $\mu$, and standard deviation, $\sigma$, are part of the
@@ -254,7 +254,7 @@ presented shortly.
 
 \begin{figure}
 %\includegraphics[width=2.92708in,height=1.36458in]{Fig/media/image21.emf}
-\caption{A normal density function with the mean ($\mu$})
+\caption{A normal density function with the mean ($\mu$)
 and standard deviation ($\sigma$) shown.}
 \label{figure:normalDensityFunction}
 \end{figure}
@@ -279,7 +279,7 @@ where $a$, $b$ are selected to meet the demands of a particular problem.
 
 \begin{figure}
 %\includegraphics[width=3in,height=1.22917in]{Fig/media/image23.emf}
-\caption{The uniform density on the interval $\[ a,b \]$.}
+\caption{The uniform density on the interval $[ a,b ]$.}
 \label{figure:uniformDensityFunction}
 \end{figure}
 
@@ -299,7 +299,7 @@ mathematical description of an exponential density is
 p_X(x) = \lambda e^{-\lambda x} , x \geq 0, \lambda \geq 0.
 \end{equation}
 
-The PDF is characterized by the parameter \emph{λ,} which affects the
+The PDF is characterized by the parameter $\lambda$ which affects the
 shape of the curve as demonstrated in 
 Figure~\ref{figure:exponentialDensityFunction}.
 
@@ -349,15 +349,16 @@ some related mathematical entities and their meanings. The
 number of failures per unit time. The failure rate is measured by
 operating a batch of devices for a given time interval and noting how
 many fail during that interval. A typical graph of failure rate versus
-time has the bathtub shape shown in Figure 8.6. The high initial failure
+time has the bathtub shape shown in Figure~\ref{figure:bathtubFunction}. 
+The high initial failure
 rate is a result of manufacturing defects often referred to as infant
 mortality. Consequently, many manufactures will ``burn-in'' devices at
 the factory, so that if they fail, they do so before being sold. After
 the infant mortality phase, devices enter a phase of constant failure
-rate, where\emph{~λ(t)=~λ}, known as the service life. Estimates for
-\emph{λ} are determined empirically by testing a large number of
+rate, where $\lambda(t) = \lambda$, known as the service life. Estimates for
+$\lambda$ are determined empirically by testing a large number of
 components. They are usually expressed as a unit failure per a given
-number of hours, for example \includegraphics{Fig/media/image28.wmf}.
+number of hours, for example $\lambda  = failure/10^6 hours$.
 After some period of time, devices start to wear-out and the failure
 rate increases. This usually happens as a result of mechanical wearing
 with age and use. Properly designed electronic devices will not have a
@@ -365,194 +366,262 @@ wear-out region, instead continuing on at a constant failure rate. This
 applies only to the electronic devices themselves, not necessarily to
 complete systems that will likely contain mechanical devices.
 
-\includegraphics[width=5.48958in,height=1.69792in]{Fig/media/image29.emf}
-
-\textbf{Figure 8.6} Failure rate as a function of time, also known as
-the bathtub curve.
+\begin{figure}
+%\includegraphics[width=5.48958in,height=1.69792in]{Fig/media/image29.emf}
+\caption{Failure rate as a function of time, also known as
+the bathtub curve.}
+\label{figure:bathtubFunction}
+\end{figure}
 
 In addition to failure rate, a PDF for the \emph{failure time} of the
-device, \includegraphics{Fig/media/image30.wmf}, is defined, where the
-random variable is time \emph{T}. This function allows the question to
+device, $f_T(t)$ is defined, where the
+random variable is time $T$. This function allows the question to
 be asked ``\emph{What is the probability that a device will fail between
-time t\textsubscript{1} and t\textsubscript{2}?}'' It is important to
-note the difference between \emph{λ(t)} and
-\includegraphics{Fig/media/image30.wmf}. The failure rate tells us the
+time $t_1$ and $t_2$?}'' It is important to
+note the difference between $\lambda(t)$ and
+$f_T(t)$. The failure rate tells us the
 average rate that a collection of identical devices will fail at a given
-time \emph{t}, while \includegraphics{Fig/media/image30.wmf} is a PDF
+time $t$, while $f_T(t)$ is a PDF
 used to determine the probability that a given device will fail within a
-specified time period. A CDF for \includegraphics{Fig/media/image30.wmf}
+specified time period. A CDF for $f_T(t)$
 is determined as
 
-\includegraphics{Fig/media/image31.wmf}. (14)
 
-\emph{F(t)} answers the question ``\emph{What is the probability that
+
+$F(t)$ answers the question ``\emph{What is the probability that
 the device has failed by time t?}'' and it is also known as the
 \emph{\textbf{failure function}}. Take a few seconds to go back and
-review the definition of \emph{R(t)}. It is clear that \emph{R(t)} is
-directly related to \emph{F(t)} and is its complement. The relationship
+review the definition of $R(t)$. It is clear that $R(t)$ is
+directly related to $F(t)$ and is its complement. The relationship
 between the two is
 
-\includegraphics{Fig/media/image32.wmf}. (15)
+\begin{equation}
+\label{equ:integralDeltaSliceOfPDF}
+R(t) = 1 - F(t)
+\end{equation}
 
-Since \emph{F(t)} is a CDF, it increases monotonically from an initial
-value of 0 to a maximum value of 1 as time goes to ∞ as shown in Figure
-8.7. Conversely, \emph{R(t)} starts at a value of 1 at time zero and
+
+Since $F(t)$ is a CDF, it increases monotonically from an initial
+value of 0 to a maximum value of 1 as time goes to $\infty$ as shown in Figure
+8.7. Conversely, $R(t)$ starts at a value of 1 at time zero and
 decreases monotonically to a value of 0.
 
-\includegraphics[width=2.76042in,height=1.5625in]{Fig/media/image33.emf}
 
-\textbf{Figure 8.7} Example reliability and failure functions.
+\begin{figure}
+%\includegraphics[width=2.76042in,height=1.5625in]{Fig/media/image33.emf}
+\caption{Example reliability and failure functions.}
+\label{figure:reliabilityAndFailure}
+\end{figure}
 
-Since \emph{λ(t)} represents data that is measured empirically, it is
-useful to establish a relationship between \emph{λ(t)} and the ultimate
-goal of reliability, \emph{R(t)}. To do so, a relationship between
-\emph{λ(t)}, \emph{R(t)}, and \includegraphics{Fig/media/image30.wmf} is
-established as follows. Consider a small period of time between \emph{t}
-and \includegraphics{Fig/media/image34.wmf}, and determine the
+Since $\lambda(t)$ represents data that is measured empirically, it is
+useful to establish a relationship between $\lambda(t)$ and the ultimate
+goal of reliability, $R(t)$. To do so, a relationship between
+$\lambda(t)$, $R(t)$, and  is
+established as follows. Consider a small period of time between $t$
+and $\Delta 4$, and determine the
 probability of device failure during this period. From the approximation
-developed in (7), this probability is given by
+developed in 
+equation~\ref{equ:integralDeltaSliceOfPDF}, this probability is given by
 
-\includegraphics{Fig/media/image35.wmf}. (16)
+\begin{equation}
+\label{equ:failureBetweenUsingT}
+P(failure between t and \Delta t) \approx f_T(t) \Delta t
+\end{equation}
 
-How is this probability related to \emph{R(t)} and \emph{λ(t)}?
-\emph{R(t)} provides the probability that the device is working at time
-\emph{t} and \emph{λ(t)~}gives the probability that the device will fail
-at time \emph{t}. The product of \emph{R(t), λ(t)}, and ∆\emph{t} gives
-the same probability of failure in (16)
+How is this probability related to $R(t)$ and $\lambda(t)$?
+$R(t)$ provides the probability that the device is working at time $t$
+and $\lambda(t)$ gives the probability that the device will fail
+at time $t$. The product of $R(t), \lambda(t)$, and $\Delta t$ gives
+the same probability of failure in equation~\ref{equ:failureBetweenUsingT}.
 
-\includegraphics{Fig/media/image36.wmf}. (17)
+\begin{equation}
+\label{equ:failureBetweenUsingR}
+P(failure between t and \Delta t) \approx R(t) \lambda(t) \Delta t
+\end{equation}
 
-Equating (16) and (17) provides the desired relationship between the
-three quantities
+Setting equations~\ref{equ:failureBetweenUsingT} and  {equ:failureBetweenUsingR} 
+provides the desired relationship between the three quantities
 
-\includegraphics{Fig/media/image37.wmf}, (18)
+\begin{equation}
+\label{equ:failureBetweenUsingR}
+f_T(t) = R(t) \lambda(t) ,
+\end{equation}
 
-that is fundamental in establishing the connection between \emph{R(t)}
-and \emph{λ(t)}. However, the PDF
-\includegraphics{Fig/media/image30.wmf} needs to be eliminated from
-(18). This is accomplished through its relationship to the CDF
-\emph{F(t)}, and thus \emph{R(t)}, as follows
+that is fundamental in establishing the connection between $R(t)$
+and $\lambda(t)$. However, the PDF $f_T(t)$ needs to be eliminated 
+from equation~\ref{equ:failureBetweenUsingR}. This is accomplished 
+through its relationship to the CDF
+$F(t)$, and thus $R(t)$, as follows
 
-\includegraphics{Fig/media/image38.wmf}. (19)
+\begin{equation}
+\label{equ:cdfOfF}
+f_T(t) = \frac{d}{dt}F(t) = \frac{d}{dt}\big[1-R(t)\big] = -\frac{d}{dt}R(t)
+\end{equation}
 
-Equating this result with (18) produces
+Equating this result with equation~\ref{equ:failureBetweenUsingR}
+produces
 
-\includegraphics{Fig/media/image39.wmf}. (20)
+\begin{equation}
+\label{equ:cdfOfF}
+f_T(t) = \frac{d}{dt}F(t) = \frac{d}{dt}\big[1-R(t)\big] = -\frac{d}{dt}R(t)
+\end{equation}
 
 Integrating both sides gives
 
-\includegraphics{Fig/media/image40.wmf} (21)
+\begin{equation}
+\label{equ:bigIntegral}
+\int^{t}_0 \big[  \frac{ - \frac{d}{dt}}{R(\tau)} R(\tau) \big] \delta \tau = \int^t_0 \lambda(\tau) \delta \tau \Rightarrow -ln(R(t)) = \int^t_0\lambda(\tau)\delta \tau
+\end{equation}
 
-and solving for \emph{R(t)} produces the final result for reliability as
-a function of\emph{λ(t)}
+and solving for $R(t)$ produces the final result for reliability as
+a function of $\lambda(t)$ 
 
-\includegraphics{Fig/media/image41.wmf}. (22)
+\begin{equation}
+\label{equ:rAsFunctionOfLambda}
+R(t) = exp \big[ - \int^t_0\lambda(\tau)\delta \tau \big]
+\end{equation}
 
 During the service lifetime phase, the failure rate is constant, which
 simplifies to
 
-\includegraphics{Fig/media/image42.wmf}. (23)
+\begin{equation}
+\label{equ:rAsFailureConstant}
+R(t) = exp (- \lambda(t))
+\end{equation}
 
 This important result is now applied in Example 8.1.
 
+\begin{table}
+\begin{tabular}{m{15cm}||}
+\textbf{\hfill\break{Example 8.1}}
+Transistor Reliability
+
 \emph{\textbf{\ul{Problem:}}} Consider a transistor with a constant
-failure rate of \includegraphics{Fig/media/image43.wmf}. What is the
-probability that the transistor will be operable in 5 years?
+failure rate of $\lambda = 1/10^6 hours$. What is the
+probability that the transistor will be operable in 5 years? \\
 
 \emph{\textbf{\ul{Solution:}}} This solution is found using the
-reliability function for a constant failure rate in (23) as follows.
+reliability function for a constant failure rate in 
+equation~\ref{equ:rAsFailureConstant} as follows.
 
-\includegraphics{Fig/media/image44.wmf}
+$$R(t) = exp(-\lambda t)  $$\\
+$$R(5 years) = exp\big( - \frac{1}{10^6 hours} x \frac{24 hours}{day} X \frac{365 days}{year} X 5 years \big) = $$\\
+$$			= exp(-0.0438) $$ \\
+$$			= 0.957 $$\\
+$$			= 95.6 \% $$
+\end{tabular}
+\end{table}
 
-= \ul{95.7\%}.
-
-\subsection{\texorpdfstring{\hfill\break
-Mean Time to
-Failure}{ Mean Time to Failure}}\label{mean-time-to-failure}
+\subsection{Mean Time to Failure}
+\label{subsection:mean-time-to-failure}
 
 The \emph{\textbf{mean time to failure}} (MTTF) is a quantity which
 answers the question, ``\emph{On average how long does it take for a
 device to fail?}'' From its definition, it is apparent that the MTTF is
-the mean value of the random variable \emph{T} (failure time). It is
+the mean value of the random variable $T$ (failure time). It is
 determined from the PDF and the definition of the mean in (8) as follows
 
-\includegraphics{Fig/media/image45.wmf}. (24)
+\begin{equation}
+\label{equ:mttfIntegral}
+MTTF = \int^\infty_0 t f_T(t) dt 
+\end{equation}
 
-At this point the form of the PDF for
-\includegraphics{Fig/media/image30.wmf} is not known, but it can be
-found from (19) since it is the negative derivative of \emph{R(t).}
-Assuming the form of \emph{R(t)} found in (23) for a constant failure
-rate gives
+At this point the form of the PDF for $f_T(t)$ is not known, but it can be
+found from equation~\ref{equ:cdfOfF} since it is the negative derivative 
+of $R(t)$. Assuming the form of $R(t)$ found in 
+equation~\ref{equ:rAsFailureConstant} for a constant failure rate gives
 
-\includegraphics{Fig/media/image46.wmf}. (25)
+\begin{equation}
+\label{equ:mttfConstantFailureRate}
+f_T(t) = -\frac{d}{dt}R(t) = \lambda e^{-\lambda t}
+\end{equation}
 
 This means that under the condition of a constant failure rate, the
 failure PDF follows an exponential density. The MTTF is found from
-\includegraphics{Fig/media/image30.wmf} via integration by parts to be
+$f_T(t)$ via integration by parts to be
 
-\includegraphics{Fig/media/image47.wmf}. (26)
+\begin{equation}
+\label{equ:mttfConstantFailureRate}
+MTTS = -\int^\infty_0 t e^{-\lambda t} = \frac{1}{\lambda}
+\end{equation}
 
-This makes intuitive sense because \emph{λ} is the expected number of
+This makes intuitive sense because $\lambda$ is the expected number of
 failures per unit time for a device. Consequently, the reciprocal of
-\emph{λ} is the expected time between failures or MTTF. Let's consider a
+$\lambda$ is the expected time between failures or MTTF. Let's consider a
 few examples.
+
+\begin{table}
+\begin{tabular}{m{15cm}||}
+\textbf{\hfill\break{Example 8.2}}
+Transistor MTTF\\
 
 \emph{\textbf{\ul{Problem:}}} Consider the transistor in Example 8.1.
 (a) Determine the MTTF, and (b) the reliability at the MTTF.
 
 \emph{\textbf{\ul{Solution:}}}
 
-(a) From (26) the MTTF = \includegraphics{Fig/media/image48.wmf}
+(a) From equation~\ref{equ:mttfConstantFailureRate} the 
+$$MTTF =\frac{1}{\lambda} = \frac{1}{1/10^6 hours} = 10^6 hours $$\\
+$$		= 114 years $$.\\
 
-= \ul{114 years}.
+(b) From equation~\ref{equ:rAsFailureConstant} the reliability at 114 years is
 
-(b) From (23) the reliability at 114 years is
-
-\includegraphics{Fig/media/image49.wmf}
-
-= \ul{36.8\%}.
+$$R(t) = exp(-\lambda t) $$\\
+$$	R(114 years) = exp\big( -\frac{10^6 hours}{10^6 hours}\big) = exp(-1) = 0.368 $$\\
+$$	= 36.8\%$$.
+\end{tabular}
+\end{table}
 
 This is a bit counterintuitive. Although the average time between
 transistor failures is 114 years, an individual transistor has only a
 36.8\% chance of surviving to 114 years. It would seem logical that the
 reliability at 114 years should be 50\% and that the transistor would
-have a 50-50 chance of failing. This would be true if
-\includegraphics{Fig/media/image30.wmf}were symmetric about its mean,
+have a 50-50 chance of failing. This would be true if $f_T(t)$
+were symmetric about its mean,
 but that is not the case for the exponential density.
 
-\textbf{Example 8.3} Human lifespan estimation.
+\begin{table}
+\begin{tabular}{m{15cm}||}
+\textbf{\hfill\break{Example 8.3}}
+Human lifespan estimation.\\
 
 \emph{\textbf{\ul{Problem:}}} Data shows that for a 30 year old
 population, the failure (death) rate is constant with approximately 1.1
 deaths per 1000 people per year. Given this data, estimate the MTTF of
 humans.
 
-\emph{\textbf{\ul{Solution:}}} In order to find MTTF, λ is needed. From
-the information given it is
+\emph{\textbf{\ul{Solution:}}} In order to find MTTF, $\lambda$ is 
+needed. From the information given it is
 
-\includegraphics{Fig/media/image50.wmf}
+$$\lambda = \frac{(1.1/1000) failures}{1 year} = \frac{1.1 failure}{10^3 years}=\frac{1 failure}{909 years}$$
 
 From this MTTF is computed as
 
-\includegraphics{Fig/media/image51.wmf} = \ul{909 years}!
+$$MTTF  = \frac{1}{\lambda} = 909 years!$$
+
+\end {tabular}
+\end{table}
+
 
 While great news for those of us seeking longevity, this calculation is
 clearly wrong since the upper limit on human lifespan is empirically
 known to be about 120 years. Why is this so? Serious problems arise if
-\emph{R(t)} is used in situations where the underlying assumption is
-invalid. The results in (23) and (26) apply only if the failure rate is
+$R(t)$ is used in situations where the underlying assumption is
+invalid. The results in equations~\ref{equ:rAsFailureConstant} and 
+\ref{equ:mttfConstantFailureRate} apply only if the failure rate is
 constant. Although that is nearly true for people in their 20s and 30s,
 it is not true as people age. People do wear out and the failure rate
 increases with age.
 
-\subsection{Failure Rate Estimates}\label{failure-rate-estimates}
+\subsection{Failure Rate Estimates}
+\label{subsection:failure-rate-estimates}
 
 The overriding objective of this chapter is to estimate the future
 behavior of devices that are used in electrical and computer systems.
 The particular behavior of interest is the state of a device's
 functionality---the reliability, is it working or has it failed?
 Equation (23) indicates that it is fairly straightforward to determine
-reliability, if the failure rate (\emph{λ}) is known and is constant.
+reliability, if the failure rate ($\lambda$) is known and is constant.
 One question to consider is what factors influence the failure rate of a
 device. Many of us probably have had experiences in the laboratory where
 we have caused devices to fail by subjecting them to conditions outside
@@ -561,7 +630,7 @@ heat. In those cases the devices probably failed, or burned up, due to
 the operating conditions outside of the allowed bounds for the device.
 However, even when operated within the allowable norms of a device's
 operating conditions, variations in factors such as power, operating
-voltages, and temperatures impact \emph{λ}.
+voltages, and temperatures impact $\lambda$.
 
 The United States Military has kept copious records of device failures
 in the field and the conditions under which they operated. These records
@@ -580,23 +649,22 @@ is used here since it is freely available in the public domain.
 
 Failure rates for resistors, capacitors, transistors, and integrated
 circuits from MIL-HDBK-217F are included in Appendix C. For each device,
-a base failure rate is given, \emph{λ\textsubscript{b}}, and multiplied
+a base failure rate is given, $\lambda_b$, and multiplied
 by a number of adjustment factors, denoted by the symbol
-\includegraphics{Fig/media/image52.wmf}, to estimate the device failure
-rate \emph{λ}. Each adjustment factor has a unique subscript and their
+$\pi$, to estimate the device failure
+rate $\lambda$. Each adjustment factor has a unique subscript and their
 values are found from tables or equations in the handbook.
 
 For example, consider the low frequency field effect transistor in
 Appendix C. The overall failure rate is given by the equation
-\includegraphics{Fig/media/image53.wmf}.
-\includegraphics{Fig/media/image54.wmf} is the base failure rate that is
-directly read from a table, \includegraphics{Fig/media/image55.wmf}is a
-temperature factor which is computed from an exponential equation (be
-careful to use the junction temperature as indicated in Appendix C),
-\includegraphics{Fig/media/image56.wmf} is an application factor that
-depends upon how the device will be used,
-\includegraphics{Fig/media/image57.wmf} is a quality factor, and
-\includegraphics{Fig/media/image58.wmf} is an environmental factor. The
+$\lambda=\lambda_b \pi_tau \pi_A \pi_Q \pi_E failures /10^6 hours$.
+$\lambda_b$  is the base failure rate that is directly read from a table, 
+ $\pi_\tau$ is a temperature factor which is computed from an 
+ exponential equation (be careful to use the junction temperature 
+ as indicated in Appendix C),
+$\pi_A$ is an application factor that depends upon how the device 
+will be used, $\pi_Q$ is a quality factor, and $\pi_E$ is an 
+environmental factor. The
 quality factor table lists some strange names and values from 0.7 to
 8.0. The quality factor describes the level of burn-in and screening
 each device receives before leaving the factory. Joint Army/Navy (JAN,
@@ -609,7 +677,7 @@ practice to always round parameters or values pessimistically so that
 the evaluation is a worst case analysis of its performance. That way the
 device should perform with a higher reliability when embedded into a
 system, hopefully causing only pleasant surprises in operation. Finally,
-the factor \includegraphics{Fig/media/image59.wmf} is based upon the
+the factor $\pi_E$ is based upon the
 different operating environments that are identified in Appendix C.
 Example 8.4 demonstrates the application of the MIL-HDBK-217F standard
 for reliability estimation.
@@ -623,18 +691,20 @@ that this can become a rather time-consuming process if there are many
 components in a system, and thus the use of reliability software
 packages may be warranted.
 
-\textbf{\hfill\break
-Example 8.4} Reliability estimation using the MIL-HDBK 217F.
+\begin{table}
+\begin{tabular}{m{15cm}|}
+\textbf{\hfill\break Example 8.4}
+Reliability estimation using the MIL-HDBK 217F. \\
 
 \emph{\textbf{\ul{Problem:}}} Consider the circuit below that contains a
 bipolar junction transistor (BJT). This electronic circuit is a simple
-digital logic inverter. When the input voltage
-\includegraphics{Fig/media/image60.wmf} is 0, the BJT is off, no current
+digital logic inverter. When the input voltage $V_I$ is 0, 
+the BJT is off, no current
 flows through any branches of the device, and the output voltage,
-\includegraphics{Fig/media/image61.wmf}, is 5V. When the input is 5V
+$V_O$, is 5V. When the input is 5V
 (high) the BJT goes into saturation due to the high base current (low
-\includegraphics{Fig/media/image62.wmf}), producing a 50mA collector
-current, a large voltage drop across R\textsubscript{C}, and an output
+$R_B$), producing a 50mA collector
+current, a large voltage drop across $R_C$, and an output
 voltage close to 0V. The average collector current for the two states is
 25mA, producing an average power of 125mW (25mA×5V). Assume that the
 circuit is used in a missile launcher, the ambient temperature is 25°C,
@@ -642,81 +712,83 @@ and that JANTX quality parts are used. Determine the MTTF and
 reliability for the 2N3904 BJT (a low power, low frequency BJT) in 20
 years.
 
-\includegraphics[width=4.25in,height=1.73958in]{Fig/media/image63.emf}
+%\includegraphics[width=4.25in,height=1.74in]{./image63}
+
 
 \emph{\textbf{\ul{Solution:}}} The objective of this problem is to
 determine the failure rate, from which the MTTF and reliability are
 estimated. From the MIL-HDBK-217F data in Appendix C, the failure rate
 is
 
-\includegraphics{Fig/media/image64.wmf}
+
+$$\lambda=\lambda_b \pi_tau \pi_A \pi_R \pi_S \pi_Q \pi_E \frac{failures}{10^6 hours}$$
+
 
 The base failure rate is given directly as
-\includegraphics{Fig/media/image65.wmf}.
-\includegraphics{Fig/media/image55.wmf} is the temperature factor and
+$\lambda_b = 0.00074$.   $\pi_\tau$ is the temperature factor and
 its value is determined from the relationship
 
-\includegraphics{Fig/media/image66.wmf}.
+$$\pi_\tau = exp \big[-2114 \big[ \frac{1}{T_j + 273} - \frac{1}{298} \big] \big]$$
 
-where \emph{T\textsubscript{J}} is the junction temperature. As
+where $T_j$ is the junction temperature. As
 indicated in Appendix C, it is computed as
 
-\includegraphics{Fig/media/image67.wmf}
+$$T_j = T_A + \Theta_{jA}P_D = $$ \\
+$$		25^\circ C \big( 200 \frac{^\circ C}{W} \big) \big(125 X 10^{-3}W \big) = 50^\circ C $$
 
-The thermal resistance, \includegraphics{Fig/media/image68.wmf}, is read
+The thermal resistance, $\Theta_JA$, is read
 from the 2N3904 datasheet (Appendix D) and will be examined in more
 detail shortly. The temperature factor is
 
-\includegraphics{Fig/media/image69.wmf}
+$$\pi_\tau = exp \big[-2114 \big[ \frac{1}{50 + 273} - \frac{1}{298} \big] \big] = 1.73$$
 
-\includegraphics{Fig/media/image70.wmf} is an application factor
+$\pi_A$ is an application factor
 (switched or linear amplification), and the value for the switched logic
-inverter is \includegraphics{Fig/media/image71.wmf}.
-\includegraphics{Fig/media/image72.wmf} is a power rating factor that is
+inverter is $\pi_A = 0.70$.  $\pi_R$ is a power rating factor that is
 computed based upon the maximum rated power dissipation of the 2N3904
-(625mW from the component datasheet in Appendix D) as follows
+(625mW from the component datasheet in Appendix D) as follows:
+$$\pi_R = P_R^{0.37} = 0.625^{0.37} = 0.84$$
 
-\includegraphics{Fig/media/image73.wmf}.
 
-\includegraphics{Fig/media/image74.wmf} is a stress factor that is
+$\pi_S$ is a stress factor that is
 computed from the ratio of the maximum collector-emitter voltage over
 the maximum rated value of the device. In this circuit, the maximum
-value of \includegraphics{Fig/media/image75.wmf} is 5V (when the device
+value of $V_{CE}$ is 5V (when the device
 is off and no current flows), while the maximum rated value of
-\includegraphics{Fig/media/image76.wmf} from the 2N3904 datasheet is
-40V.
+$V_{CE}$ from the 2N3904 datasheet is 40V.
 
-\includegraphics{Fig/media/image77.wmf}
+$V_S = \frac{applied V_{CE}}{rated V_{CE}} = \frac{5}{40} = 0.225$
 
-\includegraphics{Fig/media/image78.wmf} is the quality factor, and based
-upon the fact that a JANTX part is used
-\includegraphics{Fig/media/image79.wmf}.
-\includegraphics{Fig/media/image80.wmf} is the environmental factor, and
-for the missile launch application,
-\includegraphics{Fig/media/image81.wmf}.
+$\pi_Q$ is the quality factor, and based upon the fact that a JANTX part is 
+$\pi_Q = 1.0$.  $\pi_E$ is the environmental factor, and
+for the missile launch application, $\pi_E = 32.0$.
 
 All of this is brought together to compute the failure rate. The product
 of the adjustment factors is computed as
 
-\includegraphics{Fig/media/image82.wmf}
+$$\lambda=\lambda_b \pi_tau \pi_A \pi_R \pi_S \pi_Q \pi_E \frac{failures}{10^6 hours} = $$\\
+$$	= \big( \frac{7.4x10^{-4}}{10^6 hours} (1.73)(0.7)(0.84)(0.066)(1.0)(32.0) \big) $$\\
+$$	= \frac{1.59x10^{-3} failures}{10^6 hours}$$
 
 This allows estimation of the MTTF and requested reliability
-
-\includegraphics{Fig/media/image83.wmf} = \ul{71,804 years.}
-
-\includegraphics{Fig/media/image84.wmf}
-
-= \ul{99.97\%}.
+$$	MTTF = \frac{1}{\lambda} = 6.3x10^8 hours = 71,804 years. $$\\
+$$	R(20 years) = exp \big( -\frac{20 years}{71,804 years} \big) = 0.9997 $$\\
+$$	= 99.97\%$$
 
 In conclusion, the BJT is estimated to be highly reliable in 20 years.
 
-\subsection{Thermal Management and Power
-Derating}\label{thermal-management-and-power-derating}
+\end{tabular}
+\end{table}
+
+
+
+\subsection{Thermal Management and Power Derating}
+\label{subsection:thermal-management-and-power-derating}
 
 One of the quantities computed in Example 8.4 was the junction
-temperature, \emph{T\textsubscript{J}}, which was computed from the
+temperature, $T_J$, which was computed from the
 power dissipated in the device and a quantity known as thermal
-resistance, \emph{θ}. It is important to understand this in more detail,
+resistance, $\theta$. It is important to understand this in more detail,
 since it impacts the reliability of microelectronic devices.
 Furthermore, if the junction temperature exceeds a certain value, the
 device will fail. Thus, thermal management issues need to be taken into
@@ -727,12 +799,14 @@ conditions. In part (b) a heat sink is included which aids in thermal
 transfer. Each element has associated with it a quantity known as
 thermal resistance that measures the ability of that particular element
 to transfer heat to another element. A result from heat transfer for
-electronics is that changes in temperature (∆\emph{T}) are proportional
-to the product of power dissipation
-(\includegraphics{Fig/media/image85.wmf}) and the thermal resistance.
+electronics is that changes in temperature ($\Delta T$) are proportional
+to the product of power dissipation ($P_D$) and the thermal resistance.
 This relationship is
 
-\includegraphics{Fig/media/image86.wmf}. (27)
+\begin{equation}
+\label{equ:thermalHeatFlow}
+\Delta T = P_D \Theta
+\end{equation}
 
 It is similar to Ohm's Law where the change in temperature, power, and
 thermal resistance (units = °C/W) are analogous to voltage, current, and
@@ -740,33 +814,42 @@ electrical resistance respectively. The total thermal resistance between
 two elements, such as between ambient and the junction, is the sum of
 all thermal resistances between them. In the case with no heat sink,
 this produces a junction to ambient resistance of
-\includegraphics{Fig/media/image87.wmf}, while in the case with a heat
-sink, \includegraphics{Fig/media/image88.wmf}. In the case of the heat
-sink, \includegraphics{Fig/media/image89.wmf} is replaced by the sum
-\includegraphics{Fig/media/image90.wmf}, which has a lower combined
+$\Theta_{JA} =  \Theta_{JC} + \Theta_{CA}$, while in the case with a heat
+sink, 
+$\Theta_{JA} = \Theta_{JC} + \Theta_{CA} + \Theta_{SA}$. In the case 
+of the heat sink, $\Theta_{CA}$ is replaced by the sum
+$\Theta_{CS} + \Theta_{SA}$, which has a lower combined
 thermal resistance and greater ability to dissipate heat.
 
-\includegraphics[width=2.09375in,height=1.29167in]{Fig/media/image91.emf}
-\includegraphics[width=3.01042in,height=1.5625in]{Fig/media/image92.emf}
-
-\textbf{Figure 8.8} Physical model of microelectronic devices with
+\begin{figure}
+\includegraphics[width=2.1in,height=1.3in]{./image91}
+\includegraphics[width=3in,height=1.56in]{./image92}
+\caption{Physical model of microelectronic devices with
 thermal junctions and temperatures indicated. (a) Device inside casing.
-(b) Device inside casing with a heat sink added.
+(b) Device inside casing with a heat sink added.}
+\label{figure:thermalModelsBJT}
+\end{figure}
 
 This Ohm's Law type of relationship means that thermal transfer can be
-modeled using familiar resistive circuits as shown in Figure 8.9. Based
+modeled using familiar resistive circuits as shown in 
+Figure~\ref{figure:thermalModelAsCircuit}. Based
 upon this circuit model, the temperature can be found at different
 points from the thermal resistance and power dissipation. Most
 importantly the junction temperature is found as
 
-\includegraphics{Fig/media/image93.wmf}. (28)
+\begin{equation}
+\label{equ:thermalHeatFlow}
+T_J = T_A + P_D \Theta_{JA}
+\end{equation}
 
-\includegraphics[width=1.84375in,height=1.46875in]{Fig/media/image94.emf}
-\includegraphics[width=1.83333in,height=1.47917in]{Fig/media/image95.emf}
-
-\textbf{Figure 8.9} Resistive models for thermal transfer in
+\begin{figure}
+\includegraphics[width=1.84in,height=1.49in]{./image94}
+\includegraphics[width=1.8in,height=1.48in]{./image95}
+\caption{Resistive models for thermal transfer in
 microelectronic devices. (a) Device with no heat sink. (b) Device with a
-heat sink added.
+heat sink added.}
+\label{figure:thermalModelAsCircuit}
+\end{figure}
 
 Let's now apply these results. Manufacturer datasheets typically
 identify the absolute maximum power dissipation and note that the device
@@ -779,55 +862,65 @@ maximum junction temperature is exceeded, the device will be destroyed.
 Another way to look at this is that as ambient temperature increases,
 the maximum amount of power a device can dissipate decreases. This
 decrease in maximum power dissipation is known as
-\emph{\textbf{derating}}. From (28) the maximum power that can be
+\emph{\textbf{derating}}. From equation~\ref{equ:thermalHeatFlow}
+ the maximum power that can be
 dissipated in a device at a given ambient temperature is
 
-\includegraphics{Fig/media/image97.wmf} . (29)
+\begin{equation}
+\label{equ:powerFunctionTemperature}
+P_{D,max} = \frac{T_{J,max}  - T_A}{\Theta_{JA}}
+\end{equation}
 
-From this relationship, a power derating curve is plotted in Figure 8.10
+From this relationship, a power derating curve is plotted in 
+Figure~\ref{figure:typicalDeratingCurve}
 showing the maximum power versus ambient temperature. Example 8.5
 demonstrates the application of this to the inverter in Example 8.4.
 
-\includegraphics[width=3.36458in,height=2.09375in]{Fig/media/image98.emf}
+\begin{figure}
+\includegraphics[width=3.36in,height=2.1in]{./image98}
+\caption{Typical power derating curves.}
+\label{figure:typicalDeratingCurve}
+\end{figure}
 
-\textbf{Figure 8.10} Typical power derating curves.
-
-\textbf{Example 8.5} Power Derating for the Inverter Circuit.
+\begin{table}
+\begin{tabular}{m{15cm}|}
+\textbf{Example 8.5} 
+Power Derating for the Inverter Circuit.\\
 
 \emph{\textbf{\ul{Problem:}}} Assume the circuit in Example 8.4 is
-operating at an ambient temperature
-\includegraphics{Fig/media/image99.wmf} and that no heat sink is used.
+operating at an ambient temperature $T_A = 120^\circ C$ and 
+that no heat sink is used.
 (a) Determine the derated power and if the design is within the
 manufacturer's limits for power dissipation at this temperature and, (b)
 re-compute the reliability at 20 years based upon this elevated
 operating temperature.
 
 \emph{\textbf{\ul{Solution:}}}
-
 (a) From the manufacturer datasheet in Appendix D, the 2N3904 BJT has a
-thermal resistance of \includegraphics{Fig/media/image100.wmf} and a
+thermal resistance of $\Theta_{JA} = 200^\circ C/W$ and a
 maximum junction temperature of 150°C. From this the maximum power is
-computed from (29) as
+computed from equation~\ref{figure:typicalDeratingCurve} as
 
-\includegraphics{Fig/media/image101.wmf}.
+$$P_{D,max} = \frac{(150 - 120)^\circ C}{200^\circ C/W} = 150mW$$
 
 The derated, or maximum, power at this temperature is \ul{150mW}.
 Clearly, the 125mW of power dissipated as determined in Example 8.4 for
 the BJT is within this derated limit.
 
 (b) To compute the failure rate the junction temperature and
-\includegraphics{Fig/media/image102.wmf}are re-computed.
+$\pi_\tau$ are re-computed.
 
-\includegraphics{Fig/media/image103.wmf}\includegraphics{Fig/media/image104.wmf}
+$$T_J = T_A + P_D\Theta_{JA} = 120^\circ C + (125x10^{-3} W) \[ \frac{200^\circ C}{W} = 145\circ C \\
+\pi_T = exp\[ -2114 \[ \fradc{1}{145+273} - \frac{1}{298} \] \] = 7.66$$
 
-With this new value, the value of
-\includegraphics{Fig/media/image105.wmf}, and the reliability is reduced
-slightly to \ul{99.88\%}. Note, however, the junction temperature is
+With this new value, the value of $\lambda=7.00x10^{-3}/10^6 hours$, and 
+the reliability is reduced slightly to \ul{99.88\%}. Note, however, the junction 
+temperature is
 quite high at 145°C and further increases in temperature would likely
 destroy the device.
 
-\subsection{Limits of Reliability
-Estimation}\label{limits-of-reliability-estimation}
+\subsection{Limits of Reliability Estimation}
+\label{subsection:limits-of-reliability-estimation}
 
 It must be kept in mind that the reliability estimates are just that,
 estimates, and there are limitations in their use. First, realize that
