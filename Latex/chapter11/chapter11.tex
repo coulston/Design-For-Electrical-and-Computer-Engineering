@@ -1,7 +1,10 @@
 \chapter{ Ethical and Legal Issues}
+\graphicspath{ {./chapter11/Fig} }
 
+\begin{itquote}
 A man without ethics is a wild beast loosed upon this world.---Albert
 Camus
+\end{itquote}
 
 In your professional career you are going to face ethical dilemmas, and
 how you respond to them will affect your reputation, your employability,
@@ -21,8 +24,8 @@ apply ethics throughout the design process, and guidance for handling
 ethical dilemmas. The chapter concludes with case studies that provide
 an opportunity to apply ethical decision-making skills.
 
-Learning Objectives
-
+\section*{Learning Objectives}
+\noindent\rule{\linewidth}{1pt}
 By the end of this chapter, the reader should:
 
 \begin{itemize}
@@ -47,8 +50,8 @@ By the end of this chapter, the reader should:
   dilemmas that they embody.
 \end{itemize}
 
-\subsection{Ethical Theory in a
-Nutshell}\label{ethical-theory-in-a-nutshell}
+\section{Ethical Theory in a Nutshell}
+\label{section:ethical-theory-in-a-nutshell}
 
 Here is an ethical dilemma to consider as we start our discussion. Let's
 assume that you are conducting a job search during your senior year in
@@ -160,7 +163,8 @@ they design. Was the decision of the company ethical? Returning to the
 original case, is it ethical for the student to rescind their acceptance
 of the original job offer and then accept the other?
 
-\subsection{The IEEE Code of Ethics}\label{the-ieee-code-of-ethics}
+\section{The IEEE Code of Ethics}
+\label{section:the-ieee-code-of-ethics}
 
 Most engineering disciplines have associated with them a professional
 society or organization. In electrical and computer engineering two
@@ -173,50 +177,57 @@ financial services. They also define accepted practices of their members
 that are embodied in an ethical code. In fact, professional societies
 were originally created to provide guidance for ethical practices in
 their field and to ensure the safety of the public. The IEEE Code of
-Ethics, shown in Table 11.1, applies broadly to the electrical,
+Ethics, shown in Table~\ref{table:IEEEcodeOfEthics}, 
+applies broadly to the electrical,
 computing, and software fields.
 
-\textbf{Table 11.1} The IEEE Code of Ethics.
+\begin{table}
+\caption{ The IEEE Code of Ethics.}
+\label{table:IEEEcodeOfEthics}
+\begin{tabular}{|m{15cm}|}
+\hline
 
 \textbf{We, the members of the IEEE,} in recognition of the importance
 of our technologies in affecting the quality of life throughout the
 world, and in accepting a personal obligation to our profession, its
 members and the communities we serve, do hereby commit ourselves to the
-highest ethical and professional conduct and agree:
+highest ethical and professional conduct and agree:\\
 
 1. to accept responsibility in making engineering decisions consistent
 with the safety, health and welfare of the public, and to disclose
-promptly factors that might endanger the public or the environment;
+promptly factors that might endanger the public or the environment;\\
 
 2. to avoid real or perceived conflicts of interest whenever possible,
-and to disclose them to affected parties when they do exist;
+and to disclose them to affected parties when they do exist;\\
 
 3. to be honest and realistic in stating claims or estimates based on
-available data;
+available data;\\
 
-4. to reject bribery in all its forms;
+4. to reject bribery in all its forms;\\
 
 5. to improve the understanding of technology, its appropriate
-application, and potential consequences;
+application, and potential consequences;\\
 
 6. to maintain and improve our technical competence and to undertake
 technological tasks for others only if qualified by training or
-experience, or after full disclosure of pertinent limitations;
+experience, or after full disclosure of pertinent limitations;\\
 
 7. to seek, accept, and offer honest criticism of technical work, to
 acknowledge and correct errors, and to credit properly the contributions
-of others;
+of others;\\
 
 8. to treat fairly all persons regardless of such factors as race,
-religion, gender, disability, age, or national origin;
+religion, gender, disability, age, or national origin;\\
 
 9. to avoid injuring others, their property, reputation, or employment
-by false or malicious action;
+by false or malicious action;\\
 
 10. to assist colleagues and co-workers in their professional
-development and to support them in following this code of ethics.
+development and to support them in following this code of ethics.\\
 
 \emph{Approved by the IEEE Board of Directors, August 1990}
+\end{tabular}
+\end{table}
 
 Some of the values embodied in the code are that of treating others with
 fairness and respect (8--10), honesty and trustworthiness (2--4), and
@@ -225,8 +236,8 @@ public is clearly identified in the first and ninth items of the code.
 The code provides a common basis for analyzing ethical cases studies and
 is applied for these purposes in subsequent sections.
 
-\subsection{Intellectual Property and Legal
-Issues}\label{intellectual-property-and-legal-issues}
+\section{Intellectual Property and Legal Issues}
+\label{section:intellectual-property-and-legal-issues}
 
 It is important to understand some legal issues, particularly as they
 impact product design and development. The first considered is
@@ -234,7 +245,8 @@ intellectual property, which seeks to answer the question of who owns an
 idea or invention. The second is that of legal liability, which comes
 into play if somebody is injured or harmed by a product or system.
 
-\subsubsection{Intellectual Property}\label{intellectual-property}
+\subsection{Intellectual Property}
+\label{subsection:intellectual-property}
 
 The intent of designing a new product is usually to sell it for a
 profit, which leads to the issue of ownership of both the intellectual
@@ -253,13 +265,13 @@ monetary compensation. The two types of patents are utility and design
 patents. The United States Patent and Trademark Office (USPTO) defines
 the difference between the two as follows:
 
-\begin{quote}
+\begin{itquote}
 A utility patent may be granted to anyone who invents or discovers any
 new and useful process, machine, article of manufacture, compositions of
 matter, or any new useful improvement thereof. A design patent may be
 granted to anyone who invents a new, original, and ornamental design for
 an article of manufacture.
-\end{quote}
+\end{itquote}
 
 The one that is of most interest for this discussion is the utility
 patent, as the design patent focuses on aesthetic design issues.
@@ -314,7 +326,8 @@ attorney, make sure that he/she has a good track record and reputation.
 
 An example patent for a hardware design of a fast floating point
 overflow and sign detection unit (US Patent \#6,779,013) is shown in
-Figure 11.1. The patent is owned by Intel Corporation and the inventor
+Figure~\ref{figure:patentFloatingPoint}.
+The patent is owned by Intel Corporation and the inventor
 was one of their employees. The first page identifies prior art that
 relates to this patent. This includes previous patents related to this
 technology, which in this case goes back to 1991. It is not unusual to
@@ -322,25 +335,28 @@ cite prior patents that go back 50 or 100 years. In addition to patents,
 prior art in publicly available literature is identified. The first page
 also identifies the number of claims and supporting figures, and shows
 the high-level design architecture. A description of the system starts
-on the second page as shown in Figure 11.1 (b). The complete description
+on the second page as shown in 
+Figure~\ref{figure:patentFloatingPoint} (b). The complete description
 is fairly lengthy and only the first page is shown. It is similar to a
 technical report in that it provides background on the technology and
 describes the invention and its operation in detail. The final page of
-the patent (Figure 11.1 (c)) identifies the legal claims that make the
-invention unique.
+the patent (Figure~\ref{figure:patentFloatingPoint} (c)) 
+identifies the legal claims that make the invention unique.
 
-\includegraphics[width=4.69792in,height=7.23958in]{Fig/media/image1.png}
+\begin{figure}
+\includegraphics[width=4.7in,height=7.24in]{./image1.png}
+\caption{(a) Example of a US patent for a floating point
+overflow and sign detection unit.}
+\label{figure:patentFloatingPoint}
 
-\textbf{Figure 11.1} (a) Example of a US patent for a floating point
-overflow and sign detection unit.
+\includegraphics[width=4.71in,height=7.26in]{./image2.png}
+\caption{(b) First page of the patent description.}
 
-\includegraphics[width=4.70833in,height=7.26042in]{Fig/media/image2.png}
+\includegraphics[width=4.8in,height=7.25in]{./image3.png}
+\caption{(c) Conclusion of the patent and its claims.}
 
-\textbf{Figure 11.1} (b) First page of the patent description.
+\end{figure}
 
-\includegraphics[width=4.79167in,height=7.25in]{Fig/media/image3.png}
-
-\textbf{Figure 11.1} (c) Conclusion of the patent and its claims.
 
 In the United States, patents are granted based upon the concept of
 first to conceive the invention, not first to file the patent
@@ -405,7 +421,8 @@ or publishing music. Registering provides a stronger legal basis for
 pursuing claims. Copyrights are good for the lifetime of the holder plus
 50 years, while for a company they are good for 75 years.
 
-\subsubsection{Liability and Negligence}\label{liability-and-negligence}
+\subsection{Liability and Negligence}
+\label{subsection:liability-and-negligence}
 
 Civil lawsuits, which are those that are relevant for our discussion,
 are those in which one party sues another. They involve something that
@@ -465,7 +482,8 @@ incorporated, or if the user was warned of potential dangers. If the
 product had a defect or was dangerous when it left the hands of the
 manufacturer, the manufacturer may be liable.
 
-\subsection{Handling Ethical Dilemmas}\label{handling-ethical-dilemmas}
+\section{Handling Ethical Dilemmas}
+\label{section:handling-ethical-dilemmas}
 
 You are going to encounter ethical dilemmas in your career, both
 technical and based upon interpersonal relations. Ethical dilemmas are
@@ -482,11 +500,13 @@ enough that we could certify it? It really meets the needs and the
 standard has a margin of error built in to it."}
 
 \textbf{DILBERT\textsuperscript{®} by Scott Adams}
+\begin{figure}
+\includegraphics[width=5.5in,height=1.9in]{./image4.png}
+\caption{Dilbert's ethical dilemma. (Dilbert © United
+Feature Syndicate. Reprinted by permission.)}
+\label{figure:dilberEthics}
+\end{figure}
 
-\includegraphics[width=5.5in,height=1.89583in]{Fig/media/image4.png}
-
-\textbf{Figure 11.2} Dilbert's ethical dilemma. (Dilbert © United
-Feature Syndicate. Reprinted by permission.)
 
 A framework for considering decisions is shown in the 2x2 matrix shown
 in Figure 11.3 {[}Die00{]}. The idea is that decisions have both ethical
@@ -507,10 +527,12 @@ address than the immediate dilemma, but have the potential for high
 payoff. Clearly, quadrant IV decisions are best and the goal in the
 decision process.
 
-\includegraphics[width=2.48958in,height=2.29167in]{Fig/media/image5.emf}
-
-\textbf{Figure 11.3} A 2x2 matrix for ethical decision making
-{[}Die00{]}.
+\begin{figure}
+\includegraphics[width=2.5in,height=2.3in]{./image5}
+\caption{A 2x2 matrix for ethical decision making
+{[}Die00{]}.}
+\label{figure:dilberEthics}
+\end{figure}
 
 One way to evaluate a decision is through what is known as the
 \emph{newspaper test}. The idea is to ask whether you would be
@@ -558,7 +580,8 @@ may be well worth it. The Sarbanes-Oxley Act of 2002 improved federal
 protection of whistleblowers in the wake of corporate scandals in the
 1990s.
 
-\subsection{Case Study Analysis}\label{case-study-analysis}
+\section{Case Study Analysis}
+\label{section:case-study-analysis}
 
 A good way to develop decision-making skills is by examining case
 studies. We now go through the steps of analyzing a case study,
@@ -592,9 +615,12 @@ Example 11.1 demonstrates the application of this paradigm to a case
 study for a flawed chip design. More case studies are provided in the
 end of chapter problems.
 
+\begin{table}
+\begin{tabular}{m{15cm}|}
+
 \textbf{Example 11.1} Ethics case study for a flawed chip design. (Texas
 A\&M Ethics Case studies, \url{http://ethics.tamu.edu}. Reprinted by
-permission.)
+permission.)\\
 
 Your company has designed a chip for a new scientific calculator that
 features high-precision floating-point accuracy to 17 significant digits
@@ -618,7 +644,7 @@ table errors, the only mathematical results affected will occur in the
 13\textsuperscript{th} to the 17\textsuperscript{th} significant digits
 for the double­ precision floating point operations. Your management is
 applying subtle pressure to release the chips due to the time and money
-invested in the project so far. Identify a plan of action.
+invested in the project so far. Identify a plan of action.\\
 
 \emph{\textbf{\ul{Discussion:}}}
 
@@ -697,9 +723,11 @@ safety critical applications. That is a risky assumption and the
 potential negative effects are great. Also note that the ideal situation
 would have been to develop a test plan (Chapter 7) that would have
 caught this error before release.
+\end{tabular}
+\end{table}
 
-\subsection{Project Application: Incorporating Ethics in the Design
-Process}\label{project-application-incorporating-ethics-in-the-design-process}
+\section{Project Application: Incorporating Ethics in the Design Process}
+\label{setion:project-application-incorporating-ethics-in-the-design-process}
 
 There are good design practices that can be followed to minimize the
 chances that a product will be unsafe. The first and most important
@@ -781,8 +809,8 @@ ethical considerations are included throughout the design process are:
   tests and finish the project.
 \end{itemize}
 
-\subsection{Summary and Further
-Reading}\label{summary-and-further-reading}
+\section{Summary and Further Reading}
+\label{section:summary-and-further-reading}
 
 This chapter provided a brief overview of ethics, morality, and
 different ethical decision making systems. The IEEE Code of Ethics was

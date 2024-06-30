@@ -1,7 +1,9 @@
 \chapter{ Project Management}
+\graphicspath{ {./chapter10/Fig} }
 
-
+\begin{itquote}
 If you fail to plan, then you plan to fail.---Anonymous
+\end{itquote}
 
 The engineering community has led in the development of project
 management practices because building complex systems is a tremendous
@@ -30,8 +32,8 @@ the Gantt chart, are introduced. These visual depictions show
 dependencies between tasks and allow for a quantitative analysis of the
 project plan. The chapter concludes with methods of cost estimation.
 
-Learning Objectives
-
+\section*{Learning Objectives}
+\noindent\rule{\linewidth}{1pt}
 By the end of this chapter, the reader should:
 
 \begin{itemize}
@@ -47,8 +49,8 @@ By the end of this chapter, the reader should:
   methods of cost estimation.
 \end{itemize}
 
-\subsection{The Work Breakdown
-Structure}\label{the-work-breakdown-structure}
+\section{The Work Breakdown Structure}
+\label{section:the-work-breakdown-structure}
 
 The \emph{\textbf{work breakdown structure}} (WBS) is a hierarchical
 breakdown of the tasks and deliverables that need to be completed in
@@ -112,185 +114,74 @@ WBS table. The rows of the WBS table represent the project activities.
 These activities are arranged in a hierarchical fashion; each major
 activity is followed by its constituent sub-activities. The columns of
 the WBS table are the activity attributes proposed by Gray and Larson.
-Table 10.1 contains the WBS table for the temperature monitoring design
+Table~\ref{table:workBreakDownStructureExample}
+contains the WBS table for the temperature monitoring design
 examined in Chapter 5 (Section 5.7).
 
-\textbf{Table 10.1} Example work breakdown structure for the design of a
-temperature monitoring system.
+\begin{table}
+\caption{Example work breakdown structure for the design of a
+temperature monitoring system.}
+\label{table:workBreakDownStructureExample}
+\begin{tabular}{|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|   }
+\hline
+\textbf{ID} & \textbf{Activity} & \textbf{Description} & \textbf{Deliverables / Checkpoints} & \textbf{Duration (days)} & \textbf{People} & \textbf{Resources} & \textbf{Predecessors} \\ \hline
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0610}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1829}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1504}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1829}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1057}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0976}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1301}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0894}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{ID}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Activity}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Description}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Deliverables / Checkpoints}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Duration (days)}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{People}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Resources}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Predecessors
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
 1 & \textbf{Interface Circuitry} & & & & & & \\
-1.1 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Design Circuitry
-\end{quote}
-\end{minipage} & Complete the detailed design and verify it in
-simulation. & • Circuit schematic
+1.1 & Design Circuitry & Complete the detailed design and verify it in simulation. & 
+	\begin{itemize} 	\item Circuit schematic 	\item Simulation verification 	\end{itemize}
+	& 14 & Rob (1) Jana (1) & 
+	\begin{itemize} \item PC \item SPICE simulator \end{itemize} & \\ \hline
 
-• Simulation verification & 14 & Rob (1)
+1.2 & Purchase Components & & 
+	\begin{itemize} \item Identify parts \item Place order \item Receive parts \end{itemize}
+	& 10 & Rob & & 1.1 \\ \hline
 
-Jana (1) & • PC
+1.3 &  \textbf{Construct \& Test Circuits} & Build and test. & & & & & \\ \hline
 
-• SPICE simulator & \\
-1.2 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Purchase
+1.3.1 & Current Driver Circuitry & Test of circuit with sensing device. & 
+	\begin{itemize} \item Test data  \item Measurement of linearity \end{itemize}
+	& 2 & Jana (1) Rob (2) & 
+	\begin{itemize} \item Test bench \item Thermometer \end{itemize} & 1.2 \\ \hline
 
-Components
-\end{quote}
-\end{minipage} & & • Identify parts
+1.3.2 & Level Offset \& Gain Circuitry & Test of circuit with voltage inputs. & 
+	\begin{itemize} \item Test data  \item Measurement of linearity \end{itemize}
+	& 3 & Rob (1) Jana (2) & 
+	\begin{itemize} \item Test bench \end{itemize} & 1.2 \\ \hline
 
-• Place order
+1.3.3 & Integrate Components & Integrate the current driver and offset circuits. & 
+	\begin{itemize} \item Test data \item verifying functionality and linearity requirement \end{itemize} 
+	&  5 & Rob (1) Jana (1) & 
+	\begin{itemize} \item Test bench \item Thermometer \end{itemize} & 1.3.1 1.3.2 \\ \hline
 
-• Receive parts & 10 & Rob & & 1.1 \\
-1.3 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-\textbf{Construct \& Test Circuits}
-\end{quote}
-\end{minipage} & Build and test. & & & & & \\
-1.3.1 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Current Driver
+2 & \textbf{LED \& Driver Circuitry} & & & & & & \\ \hline
 
-Circuitry
-\end{quote}
-\end{minipage} & Test of circuit with sensing device. & • Test data
+2.1 & Research A/D Converters & Make selection of A/D converter. &
+	\begin{itemize} \item Identify types, cost, and performance \item Identify two potential converters for purchase  \end{itemize}
+	& 1 & Alex & \begin{itemize} \item Internet \end{itemize} & \\ \hline
 
-• Measurement of
+2.2 & Complete Hardware Design  & Design conversion hardware. & 
+	\begin{itemize} \item Circuit schematic \item Simulation verification \end{itemize}
+	& 7 & Ryan (1) Alex (2) & 
+	\begin{itemize} \item Digital circuit simulator \end{itemize} & 2.1 \\ \hline
 
-linearity & 2 & Jana (1)
+2.3 &  Purchase LED \& Driver Components & & 
+	\begin{itemize} \item Identify parts \item Place order \item Receive parts \end{itemize}
+	& 10 & Rob & & 2.2 \\ \hline
 
-Rob (2) & • Test bench
+2.4 & Construct \& Test & Test with supply voltage input. & 
+	\begin{itemize} \item Test data showing digital output vs. voltage inputs \end{itemize}
+	& 5 & Alex (1) Ryan (2) & \begin{itemize} \item Test bench \item Logic analyzer \end{itemize}
+	& 2.3 \\ \hline
 
-• Thermo-
+3 & System Integration \& Test & Complete integration of front-end and LED driver circuitry. & 
+	\begin{itemize} \item Test data demonstrating functionality from temp input to LED output
+					\item System linearity measurement \end{itemize}
+	 & 7 & Alex (1) Rob (1) Jana (1) Ryan (1) & 
+	\begin{itemize} \item Test bench \item Digital logic analyzer \item Thermometer \end{itemize}
+	& 1.3.3 2.4 (or 1 and 2) \\ \hline
+\end{tabular}
+\end{table}
 
-meter & 1.2 \\
-1.3.2 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Level Offset \& Gain
-
-Circuitry
-\end{quote}
-\end{minipage} & Test of circuit with voltage inputs. & • Test data
-
-• Measurement of
-
-linearity & 3 & Rob (1)
-
-Jana (2) & • Test bench & 1.2 \\
-1.3.3 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Integrate Components
-\end{quote}
-\end{minipage} & Integrate the current driver and offset
-
-circuits. & • Test data verifying functionality and linearity
-requirement & 5 & Rob (1)
-
-Jana (1) & • Test bench • Thermo-
-
-meter & 1.3.1
-
-1.3.2 \\
-2 & \textbf{LED \& Driver Circuitry} & & & & & & \\
-2.1 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Research A/D Converters
-\end{quote}
-\end{minipage} & Make selection of A/D converter. & • Identify types,
-cost, and performance
-
-• Identify two potential converters for purchase & 1 & Alex & • Internet
-& \\
-2.2 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Complete
-
-Hardware Design
-\end{quote}
-\end{minipage} & Design
-
-conversion hardware. & •Circuit schematic
-
-• Simulation verification & 7 & Ryan (1)
-
-Alex (2) & • Digital
-
-circuit simulator & 2.1 \\
-2.3 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Purchase LED \& Driver
-
-Components
-\end{quote}
-\end{minipage} & & • Identify parts
-
-• Place order
-
-• Receive parts & 10 & Rob & & 2.2 \\
-2.4 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Construct \& Test
-\end{quote}
-\end{minipage} & Test with supply voltage input. & • Test data showing
-digital output vs. voltage inputs & 5 & Alex (1) Ryan (2) & • Test bench
-
-• Logic analyzer & 2.3 \\
-3 & System Integration \& Test & Complete
-
-integration of front-end and LED driver circuitry. & • Test data
-demonstrating functionality from temp input to LED output
-
-• System linearity measurement & 7 & Alex (1)
-
-Rob (1)
-
-Jana (1)
-
-Ryan (1) & • Test bench
-
-• Digital
-
-logic analyzer
-
-• Thermo-
-
-meter & 1.3.3
-
-2.4
-
-(or 1 and 2) \\
-\end{longtable}
 
 Each activity is assigned an identification number (ID) and a name. The
 hierarchical nature of the activities is reflected in the ID numbering
@@ -329,11 +220,14 @@ the 1950s. Empirical studies show that durations typically follow a Beta
 probability density. Based upon this model, the duration of an activity
 is estimated as
 
-\includegraphics{Fig/media/image1.wmf}, (1)
+\begin{equation}
+\label{equ:projectTimeEstimate}
+t_e = \frac{t_a + 4t_m + t_b}{6}
+\end{equation}
 
-where \includegraphics{Fig/media/image2.wmf} is the most optimistic time
-estimate, \includegraphics{Fig/media/image3.wmf} is the most pessimistic
-time estimate, and \includegraphics{Fig/media/image4.wmf} is the most
+where $t_a$ is the most optimistic time
+estimate, $t_b$ is the most pessimistic
+time estimate, and $t_m$ is the most
 realistic time estimate. The advantage of this is that it forces one to
 consider best and worst-case scenarios in the plan.
 
@@ -359,7 +253,8 @@ before the given activity can begin. Identifying predecessors is
 necessary for determining the sequencing of the activities and the time
 to complete the project.
 
-\subsection{Network Diagrams}\label{network-diagrams}
+\section{Network Diagrams}
+\label{section:network-diagrams}
 
 A \emph{\textbf{network diagram}} is a directed graph representation of
 the activities and dependencies between them for a project. Activity B
@@ -368,50 +263,54 @@ started. The network diagram allows a graphic visualization of the
 project that also allows for quantitative analysis. In the
 \emph{\textbf{Activity on Node}} (AON) form, the activities are
 represented by nodes and the dependencies by arrows. Examples of the
-basic connections allowed in the AON representation are shown in Figure
-10.1.
+basic connections allowed in the AON representation are shown in 
+Figure~\ref{figure:activityOnNode}.
 
-\includegraphics[width=1.27083in,height=0.97917in]{Fig/media/image5.emf}\includegraphics[width=1.17708in,height=0.97917in]{Fig/media/image6.emf}\includegraphics[width=1.2in,height=0.4125in]{Fig/media/image7.emf}
 
-(a) (b) (c)
+\begin{figure}
+\begin{tabular}{m{8cm}m{8cm}m{8cm}}
+\includegraphics[width=1.3in,height=1in]{./image5} &
+\includegraphics[width=1.2in,height=1in]{./image6} & 
+\includegraphics[width=1.2in,height=0.41in]{./image7} \\
+a & b & c \\
+\end{tabular}
 
-\textbf{Figure 10.1} Activity on Node (AON) representations of
+\caption{Activity on Node (AON) representations of
 activities. (a) Activity 1 must be completed before activity 2 can
 begin. (b) Activities 1 and 2 must be completed before activity 3 can
 begin. (c) Activity 1 and 2 must be completed before activities 3 and 4
-can begin.
+can begin.}
+\label{figure:activityOnNode}
+\end{figure}
 
-An example network diagram for a simple project is shown in Figure 10.2.
+
+An example network diagram for a simple project is shown in 
+Figure~\ref{figure:exampleNetworkDiagram}.
 Dummy activity nodes for the start and end of the project have been
 included. The ID number and estimated duration in days are indicated
 inside each node. A given network diagram will have multiple paths from
 the start to the end of the project. A path is any connected sequence of
 activities from the start node to the end node. In this example, there
 are four paths to completion:
-\includegraphics{Fig/media/image8.wmf}=\{1,4\},
-\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image9.wmf}=\{1,5\},
-\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image10.wmf}=\{2,3,4\},
-and
-\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image11.wmf}=\{2,3,5\}.
+$P_1 = \{1,4\} , P_2 = \{1,5\}, P_3 = \{2,3,4\}, P_4 = \{2,3,5\}$.
 The completion of an individual path does not result in completion of
 the project---all paths (and consequently all activities) must be
 completed for the entire project to finish.
 
-\includegraphics[width=3.41667in,height=0.95833in]{Fig/media/image12.emf}
-
-\textbf{Figure 10.2} Example network diagram. Each activity contains the
-activity ID and the estimated duration in days.
+\begin{figure}
+\includegraphics[width=3.4in,height=0.96in]{./image12}
+\caption{Example network diagram. Each activity contains the
+activity ID and the estimated duration in days.}
+\label{figure:exampleNetworkDiagram}
+\end{figure}
 
 The duration of each path is determined by summing the duration of all
 activities on the path, which in this case is 20, 26, 28, and 34 days
-for paths
-\includegraphics[width=0.16667in,height=0.20833in]{Fig/media/image13.wmf}
-to
-\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image11.wmf}
+for paths $P_1$ to $P_4$
 respectively. The path with the longest duration is known as the
 \emph{\textbf{critical path}} since it represents the minimum time
 required to complete the project. In this example the critical path is
-\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image11.wmf}.
+$P_4$.
 Activities on the critical path are of particular interest, since, if
 they fall behind schedule, or experience \emph{\textbf{slippage}}, the
 overall completion time of the project is delayed. The other paths can
@@ -429,22 +328,28 @@ following method is utilized to determine the float for activities:
   path.
 \item
   The path with the longest duration is the critical path. Label the
-  critical path duration as
-  \includegraphics[width=0.17708in,height=0.22917in]{Fig/media/image14.wmf}.
+  critical path duration as $t_{cp}$
   All activities on the critical path have zero float.
 \item
   To determine the float for an activity that is not on the critical
   path, find all paths that the activity lies on and identify the one
-  with the longest duration. Label this as
-  \includegraphics{Fig/media/image15.wmf}\emph{.} The float for the
+  with the longest duration. Label this as $t_{lp}$ The float for the
   activity is calculated as
 \end{enumerate}
 
-\includegraphics[width=0.875in,height=0.23958in]{Fig/media/image16.wmf}\emph{.}
-(2)
+
+\begin{equation}
+\label{equ:floatTime}
+Float = t_{cp} - t_{lp}
+\end{equation}
+
+
 
 Examples 10.1 and 10.2 examine float time computation.
 
+
+\begin{table}
+\begin{tabular}{m{15cm}||}
 \textbf{Example 10.1} Float time calculation.
 
 \emph{\textbf{\ul{Problem:}}} Calculate the float for activities in the
@@ -453,76 +358,63 @@ network diagram shown in Figure 10.2.
 \emph{\textbf{\ul{Solution:}}} The first two steps of the process have
 already been completed, which are the identification of the paths, their
 duration, and the critical path. To summarize, the paths are
-\includegraphics[width=0.16667in,height=0.20833in]{Fig/media/image13.wmf}=\{1,4\},
-\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image9.wmf}=\{1,5\},
-\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image10.wmf}=\{2,3,4\},
-and
-\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image11.wmf}=\{2,3,5\}
-with durations of 20, 26, 28, and 34 days. The critical path is
-\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image11.wmf}
-and
-\includegraphics[width=0.17708in,height=0.22917in]{Fig/media/image14.wmf}=34
-days, so activities 2, 3, and 5 have zero float. Thus
+$P_1 = \{1,4\}, P_2=\{1,5\}, P_3 =\{2,3,4\}, and P_4 =\{2,3,5\}$
+with durations of 20, 26, 28, and 34 days. The critical path is$P_4$
+and $t_{cp}=34$ days, so activities 2, 3, and 5 have zero float. Thus
 
-\includegraphics[width=0.53125in,height=0.21875in]{Fig/media/image17.wmf}
-= \ul{0 days}.
+$$Float_{2,3,5} = 0 days$$
 
 The only two activities that are not on the critical path are 1 and 4.
-Let's examine activity 1 first. It lies on paths
-\includegraphics[width=0.16667in,height=0.20833in]{Fig/media/image13.wmf}
-and
-\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image9.wmf}with
-durations 20 and 26 days, thus the longest path to completion,
-\includegraphics[width=0.20833in,height=0.23958in]{Fig/media/image18.wmf},
-for activity 1 is 26 days. The float is calculated from (2) as
+Let's examine activity 1 first. It lies on paths $P_1$ and $P_2$
+durations 20 and 26 days, thus the longest path to completion
+$t_{lp1}$, for activity 1 is 26 days. The float is calculated from 
+equation~\ref{equ:floatTime} as 
+$Float_{1} =t_{cp} - t_{lp1} = 34-26 days = 8 days$.
 
-\includegraphics[width=0.96875in,height=0.23958in]{Fig/media/image19.wmf}=
-34-26 days = \ul{8 days}.
+Activity 4 lies on $P_1$ and $P_3$, so $t_{lp4} = 28$ days and the float is
 
-Activity 4 lies on
-\includegraphics[width=0.16667in,height=0.20833in]{Fig/media/image13.wmf}
-and
-\includegraphics[width=0.17708in,height=0.20833in]{Fig/media/image10.wmf},
-so \includegraphics{Fig/media/image20.wmf} = 28 days and the float is
-
-\includegraphics{Fig/media/image21.wmf}= 34-28 days = \ul{6 days}.
+$$Float_{4} = t_{cp} - t_{lp4} = 34 -28 days = 6 days$$
 
 This means that activity 1 can slip by 8 days and activity 4 can slip by
 6 days without impacting the time to complete the project.
+\end{tabular}
+\end{table}
 
+
+\begin{table}
+\begin{tabular}{m{15cm}||}
 \textbf{Example 10.2} Network diagram construction and float time
-calculation for the temperature display.
+calculation for the temperature display.\\
 
 \emph{\textbf{\ul{Problem:}}} For the example WBS in Table 10.1, (a)
 create a network diagram, (b) determine the critical path and project
 completion time, and (c) determine the float for all activities not on
-the critical path.
+the critical path.\\
 
 \textbf{\ul{\emph{Solution:}}}
-
 (a) The network diagram is constructed from the dependencies identified
 in Table 10.1 and is shown below.
 
-\includegraphics[width=4.20833in,height=1.73958in]{Fig/media/image22.emf}
+\includegraphics[width=4.2in,height=1.74in]{./image22} \\
 
 (b) The three paths from start to end are:
-\includegraphics{Fig/media/image23.wmf}= \{1.1, 1.2, 1.3.1, 1.3.3, 3\},
-\includegraphics{Fig/media/image24.wmf} = \{1.1, 1.2, 1.3.2, 1.3.3, 3\},
-and \includegraphics{Fig/media/image25.wmf} = \{2.1, 2.2, 2.3, 2.4, 3\}
+$P_1 = \{1.1, 1.2, 1.3.1, 1.3.3, 3\}, P_2 = \{1.1, 1.2, 1.3.2, 1.3.3, 3\}, and
+P_3 = \{2.1, 2.2, 2.3, 2.4, 3\}$
 which have durations of 38, 39, and 30 days respectively. Thus the
-\ul{critical path is \emph{P\textsubscript{2,}}} and its duration is
+\ul{critical path} is $P_2$ and its duration is
 
-\includegraphics[width=0.17708in,height=0.22917in]{Fig/media/image14.wmf}\emph{=}\ul{39
-days}.
+$$t_{cp} = 39 days$$ \\
 
-(c) All activities on path \emph{P\textsubscript{1}} are also part of
+(c) All activities on path $P_1$ are also part of
 the critical path, with the exception of activity 1.3.2, which has
 
-\includegraphics{Fig/media/image26.wmf}\emph{=}39-38 days = \ul{1 day}.
+$$Float_{1.3.2} = 39 - 38 days = 1 day$$
 
 Activities 2.1-2.4 have the collective float
 
-\includegraphics{Fig/media/image27.wmf}= 39-30 days = \ul{9 days}.
+$$Float_{2.1-2.4} = 39 - 30 days = 9 days$$
+\end{tabular}
+\end{table}
 
 The strength of the network diagram is that it provides an intuitive
 graphical representation of activities and their dependencies on one
@@ -533,7 +425,8 @@ network diagram is that it may be difficult to encapsulate the amount of
 information required for an in-depth project on a single page in an easy
 to read format.
 
-\subsection{Gantt Charts}\label{gantt-charts}
+\section{Gantt Charts}
+\label{section:gantt-charts}
 
 \emph{\textbf{Gantt charts}}, developed by a mechanical engineer named
 Henry Gantt (1861-1919), are a bar graph representation of activities on
@@ -545,12 +438,16 @@ activities. However, as seen in this example, this has been remedied by
 modern project management software where the dependencies are indicated
 by the connecting arrows between tasks.
 
-\includegraphics[width=5.52083in,height=3.80208in]{Fig/media/image28.emf}
+\begin{figure}
+\includegraphics[width=5.5in,height=3.8in]{./image28}
+\caption{Gantt chart for the temperature display project
+created using Microsoft Visio\textsuperscript{TM}}
+\label{figure:ghantChart}
+\end{figure}
 
-\textbf{Figure 10.3} Gantt chart for the temperature display project
-created using Microsoft Visio\textsuperscript{TM}.
 
-\subsection{Cost Estimation}\label{cost-estimation}
+\section{Cost Estimation}
+\label{section:cost-estimation}
 
 The second main objective of this chapter is to address how to complete
 projects within budget. In order to do this, the costs associated with
@@ -558,7 +455,8 @@ the design, development, and manufacture of the system need to be
 estimated. This section describes break-even cost analysis and economic
 considerations followed by methods of cost estimation.
 
-\subsubsection{Break-Even Analysis}\label{break-even-analysis}
+\subsection{Break-Even Analysis}
+\label{subsection:break-even-analysis}
 
 A break-even analysis aims to determine the number of units that must be
 sold for costs and revenues to be equal---in other words, for there to
@@ -581,18 +479,28 @@ from the total costs and revenue. The total cost required to produce a
 product is the sum of fixed and variable costs. Assuming \emph{n} units
 are sold, the total cost is
 
-\includegraphics{Fig/media/image29.wmf}. (3)
+\begin{equation}
+\label{equ:totalCost}
+Total cost = fixed cost + n x\frac{variable cost}{unit}
+\end{equation}
 
 The total revenue generated by the sale of the \emph{n} units is
 directly related to the sale price
 
-\includegraphics{Fig/media/image30.wmf}. (4)
+\begin{equation}
+\label{equ:Revenue}
+Reveneu = n x\frac{sales price}{unit}
+\end{equation}
 
 The break-even point is where the revenue and total costs are equal
 
-\includegraphics{Fig/media/image31.wmf}. (5)
+\begin{equation}
+\label{equ:breakEven}
+n x \frac{sales price cost}{unit} = fixed cost + n x \frac{variable cost}{unit}
+\end{equation}
 
-The break-even analysis is shown graphically in Figure 10.4 with the
+The break-even analysis is shown graphically in 
+Figure~\ref{figure:breakEvenGraph} with the
 costs and revenue plotted as a function of units sold. Equation (5)
 allows different scenarios to be examined. For example, based upon a
 certain cost structure and sales price, the volume of sales necessary to
@@ -601,12 +509,18 @@ projected number of units sold, a target sales price can be selected.
 Example 10.3 demonstrates the application of break-even analysis for the
 development of the Hewlett-Packard (HP) DeskJet printer.
 
-\includegraphics[width=4.80208in,height=3.36458in]{Fig/media/image32.emf}
+\begin{figure}
+\includegraphics[width=4.8in,height=3.36in]{./image32}
+\caption{Graphical representation of the break-even
+analysis.}
+\label{figure:breakEvenGraph}
+\end{figure}
 
-\textbf{Figure 10.4} Graphical representation of the break-even
-analysis.
 
-\textbf{Example 10.3} Break-even analysis for the HP DeskJet printer.
+
+\begin{table}
+\begin{tabular}{m{15cm}||}
+\textbf{Example 10.3} Break-even analysis for the HP DeskJet printer.\\
 
 \emph{\textbf{\ul{Problem:}}} The following data has been publicly
 reported for the development and sale of the HP DeskJet {[}Ulr03{]}:
@@ -615,7 +529,7 @@ investment = \$25 million, annual production (sales) volume = 4 million
 units per year, and the sales lifetime is 2 years. Assuming a fictitious
 variable production cost of \$225/unit, determine: (a) the number of
 units that must be sold to break even, and (b) the profit expected over
-an estimated sales lifetime of 2 years.
+an estimated sales lifetime of 2 years.\\
 
 \emph{\textbf{\ul{Solution:}}}
 
@@ -623,37 +537,40 @@ an estimated sales lifetime of 2 years.
 to break even. The fixed costs are the sum of the development costs and
 production investment. So
 
-fixed costs = \$(50+25) million = \$75 million.
+$$Fixed costs = \$(50+25) million = \$75 million$$.
 
 This leads to a total cost for \emph{n} units sold of
 
-\includegraphics{Fig/media/image33.wmf}.
+$$Totalcost = \$75 million + n x \$225$$.
 
 The revenue is
 
-\includegraphics[width=1.14583in,height=0.1875in]{Fig/media/image34.wmf}.
+$$Revenue = n x 300$$.
 
 Setting the revenue and total cost each equal at the break-even point
 produces
 
-\includegraphics{Fig/media/image35.wmf}.
+$$n x \$400 = \$75 million + n x \$225$$
 
 Solving for the final number of units gives
 
-\emph{n} = \ul{1 million units}.
+$$N = 1 million$$\\
 
 (b) Profit is the differential between the total revenue and the total
 cost and is expressed as
 
-profit = total revenue -- total costs.
+$$ Profit = total revenue - total costs$$
 
 For an expected volume of 4 million units per year over 2 years
 
-\includegraphics{Fig/media/image36.wmf}
+$$Profit = n x \$300 - (\$ 75 million + n x \$225$$
+$$   = 8 million x \$300 - (\$ 75 million + 8 million x \$225$$
+$$Profit = \$525 million$$
+\end{tabular}
+\end{table}
 
-profit = \ul{\$525 million}.
-
-\subsubsection{Cost Models}\label{cost-models}
+\subsection{Cost Models}
+\label{subsection:cost-models}
 
 The costs must be accurately estimated in order to realize the expected
 profit. The goal here is not to address the complete subject of cost
@@ -675,11 +592,14 @@ expert opinion. This means asking others to estimate the cost and use it
 as a guide. The estimation formula in (1) for activity duration can be
 applied for costs as
 
-\includegraphics{Fig/media/image37.wmf}, (6)
+\begin{equation}
+\label{equ:integralDeltaSliceOfPDF}
+Cost \frac{cost_a +4 cost_m + cost_b}{6}
+\end{equation}
 
-where \includegraphics{Fig/media/image38.wmf} is the most optimistic
-cost estimate, \includegraphics{Fig/media/image39.wmf} is the most
-likely cost estimate, and \includegraphics{Fig/media/image40.wmf} is the
+where $cost_a$ is the most optimistic
+cost estimate, $cost_m$ is the most
+likely cost estimate, and $cost_b$ is the
 most pessimistic cost estimate.
 
 A more formal approach for estimating labor costs is to use empirical
@@ -693,12 +613,15 @@ easier to find and a better indicator of the cost. The output of the
 model is the cost or another quantity that is directly related to it,
 such as the estimated number of person-hours.
 
-The simplest example is a linear model (\emph{y=mx+b}) for estimating an
-output \emph{y} (cost or person-hours) based upon an input \emph{x}. For
+The simplest example is a linear model $y=mx+b$ for estimating an
+output $y$ (cost or person-hours) based upon an input $x$. For
 example, IBM modeled software development project costs using the number
 of lines of code as the input {[}Jal97{]} as
 
-\includegraphics{Fig/media/image41.wmf}. (7)
+\begin{equation}
+\label{equ:softwareEffortIBM}
+Effort = a x KLOC + b
+\end{equation}
 
 The output is an estimate of the effort in person-months and the input
 is the projected number of lines of code, KLOC. KLOC, pronounced
@@ -707,14 +630,19 @@ was found to work well for relatively small development projects with
 between 4 and 10 KLOC. As the complexity increased, an exponential model
 was found to be more realistic where
 
-\includegraphics{Fig/media/image42.wmf}. (8)
+\begin{equation}
+\label{equ:softwareEffortExp}
+Effort = a(KLOC)^b
+\end{equation}
 
 By observation of 60 software development projects at IBM, the
 exponential model was fit to observed data and the parameters were
-estimated to be \emph{a=5.2} and \emph{b = 0.91}. The KLOC model is
+estimated to be $a=5.2$ and $b = 0.91$. The KLOC model is
 applied in Example 10.4.
 
-\textbf{Example 10.4} Effort estimation using KLOC.
+\begin{table}
+\begin{tabular}{m{15cm}|}
+\textbf{Example 10.4} Effort estimation using KLOC. \\
 
 \emph{\textbf{\ul{Problem:}}} Consider a software development project
 that has a team of 10 software development engineers. The team has
@@ -722,28 +650,32 @@ proposed a design and estimates that it will require 50,000 lines of
 code to complete the project. The average cost to the company for an
 engineer is \$100,000 per year, including salary, benefits, and
 overhead. Estimate (a) the time required to the complete the project and
-(b) the labor costs.
+(b) the labor costs. \\
 
 \emph{\textbf{\ul{Solution:}}}
 
-(a) Based upon the projected value KLOC, the exponential model in (8) is
+(a) Based upon the projected value KLOC, the exponential model in
+equation~\ref{equ:softwareEffortExp} is
 most appropriate
 
-\includegraphics{Fig/media/image43.wmf}.
+$$Effort = 5.2(50)^{0.91} = 183 worker months$$
 
 Since there are 10 developers on the project, the estimated time is
 determined by dividing the effort by 10, to produce an estimated time of
-\ul{18.3 months}.
+\ul{18.3 months}.\\
 
 (b) The labor costs for development are determined from the number of
 person-months and the average monthly salary of a development engineer
 as
 
-\includegraphics{Fig/media/image44.wmf}
+$$Labor cost = 183 worker-months  x \frac{\$100,000}{year} x \frac{1 year}{12 months}$$
+$$Labor cost = \$1.53 million$$
+\end{tabular}
+\end{table}
 
-labor cost = \ul{\$1.53 million}.
-
-The models in (7) and (8) are simplistic in that there is a single input
+The models in 
+equations~\ref{equ:softwareEffortIBM} and {equ:softwareEffortExp}
+ are simplistic in that there is a single input
 to the estimator. For example, what if there were 100 engineers assigned
 to the project in Example 10.4? The model indicates that the project
 would be completed in 1.83 months at the same cost. Common sense
@@ -771,7 +703,8 @@ board may have as inputs the size of the board, the number of layers,
 and the type of technology used (such as through-hole vs. surface
 mount).
 
-\subsection{The Project Manager}\label{the-project-manager}
+\section{The Project Manager}
+\label{section:the-project-manager}
 
 Many engineering teams have a project manager responsible for planning
 and organizing the project. The project manager may take primary
@@ -789,7 +722,8 @@ viewed as member of the team. As such, it is important for the project
 manager to also be responsible for completing project deliverables in
 addition to the project management tasks.
 
-\subsection{Guidance}\label{guidance}
+\section{Guidance}
+\label{section:guidance}
 
 The following is guidance to consider when creating the project
 management plan, and is particularly relevant for those working on
@@ -850,9 +784,8 @@ capstone design projects:
   experience by creating a plan for your project.
 \end{itemize}
 
-\subsection{\texorpdfstring{\hfill\break
-Project Application: The Project
-Plan}{ Project Application: The Project Plan}}\label{project-application-the-project-plan}
+\section{Project Application: The Project Plan}
+\label{section:project-application-the-project-plan}
 
 A project plan should contain the following:
 
@@ -860,7 +793,9 @@ A project plan should contain the following:
 \item
   \emph{Work Breakdown Structure}. Identify the activities,
   deliverables, responsibilities, duration, resources, and dependencies
-  as demonstrated in Table 10.1. Be sure to provide sufficient detail in
+  as demonstrated in 
+
+Table 10.1. Be sure to provide sufficient detail in
   the structure and identify clear deliverables.
 \item
   \emph{Gantt Chart and/or Network Diagram.} Provide a graphical
@@ -878,8 +813,8 @@ A project plan should contain the following:
   actual at the end of the project.
 \end{itemize}
 
-\subsection{Summary and Further
-Reading}\label{summary-and-further-reading}
+\section{Summary and Further Reading}
+\label{section:summary-and-further-reading}
 
 Three main objectives of project management are to complete projects
 that are on-time, within budget, and meet the needs of the user. This
