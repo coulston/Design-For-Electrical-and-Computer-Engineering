@@ -1,0 +1,27 @@
+%%------------------------------------------------------
+%% Document formatting standards.
+%% references labels		figure:<camelCase>
+%%						table:<camelCase>
+%%						section:<dash seperated>
+%%						index:<camelCase>
+%%------------------------------------------------------
+
+
+\usepackage{graphicx}
+\usepackage{imakeidx}			% Enables Index functionality
+\usepackage{hyperref}			% Enable hyperlinks to email and URLs
+
+%% Lots of packages needed for tables
+\usepackage{xcolor,colortbl}	% Enable colors in tables
+\usepackage{multirow}
+\usepackage{longtable}		%Enables multiplage tables
+
+\usepackage{amsmath}
+
+\newcommand{\ul}{\underline}
+\definecolor{Gray}{gray}{0.85}
+
+% I want all quotes to be in italics
+\newenvironment{itquote}
+{\begin{quote}\itshape}
+{\end{quote}}

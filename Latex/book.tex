@@ -2,33 +2,16 @@
 %% Conversion of Ford and Coulston to LaTEX
 %%------------------------------------------------------
 
-%%------------------------------------------------------
-%% Document formatting standards.
-%% references labels		figure:<camelCase>
-%%						table:<camelCase>
-%%						section:<dash seperated>
-%%------------------------------------------------------
 
+% Excellent reference to the memoir package: https://www.ctan.org/pkg/memoir
+\documentclass[letterpaper, 10pt]{memoir}
+\chapterstyle{ger}
+\settrims{0pt}{0pt}
+\semiisopage[9]		% [N] is spine margin is 1/Nth pf page 
 
-\documentclass[11pt]{book}
-\usepackage{graphicx}
-\usepackage{imakeidx}			% Enables Index functionality
-\usepackage{hyperref}			% Enable hyperlinks to email and URLs
-
-%% Lots of packages needed for tables
-\usepackage{xcolor,colortbl}	% Enable colors in tables
-\usepackage{multirow}
-\usepackage{longtable}		%Enables multiplage tables
-
-\usepackage{amsmath}
-
-\newcommand{\ul}{\underline}
-\definecolor{Gray}{gray}{0.85}
-
-% I want all quotes to be in italics
-\newenvironment{itquote}
-{\begin{quote}\itshape}
-{\end{quote}}
+% To keep the book.tex file clean, I pulled all the formating and package 
+% includes into the preamble.tex file
+\include{preamble}
 
 \makeindex
 
@@ -43,12 +26,15 @@
 
 
 \include{copyright}
-\include{aboutAuthors}
+%%\include{aboutAuthors}
 
 \tableofcontents
-\include{preface}
+%% \include{preface}
 
 \mainmatter 					% Now Use Arabic numerals for page numbers
+
+\addcontentsline{toc}{chapter}{Part I - The Engineering Design Process }
+\chapter*{Part I - The Engineering Design Process }
 
 %\include{./chapter01/chapter01}
 %\include{./chapter01/problemSet01}
@@ -59,8 +45,12 @@
 %\include{./chapter03/chapter03}
 %\include{./chapter03/problemSet03}
 
-%\include{./chapter04/chapter04}
-%\include{./chapter04/problemSet04}
+\include{./chapter04/chapter04}
+\include{./chapter04/problemSet04}
+
+
+%\addcontentsline{toc}{chapter}{Part II - Design Tools}
+%\chapter*{Part II - Design Tools}
 
 %\include{./chapter05/chapter05}
 %\include{./chapter05/problemSet05}
@@ -74,6 +64,9 @@
 %\include{./chapter08/chapter08}
 %\include{./chapter08/problemSet08}
 
+%\addcontentsline{toc}{chapter}{Part III - Professional Skills}
+%\chapter*{Part III - Professional Skills}
+
 %\include{./chapter09/chapter09}
 %\include{./chapter09/problemSet09}
 
@@ -83,9 +76,9 @@
 %\include{./chapter11/chapter11}
 %\include{./chapter11/problemSet11}
 
-\include{./chapter12/chapter12}
+%\include{./chapter12/chapter12}
 
-\include{./appendixA/appendixA}
+%\include{./appendixA/appendixA}
 
 \printindex
 
