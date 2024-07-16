@@ -136,7 +136,7 @@ practices are followed, leading to better and more innovative solutions,
 and 2) they keep all members of the team synchronized in terms of
 understanding where they are in the design process.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=3.8in,height=1.27in]{image1}
 \caption{A prescriptive design process for problem
 identification and requirements selection.}
@@ -154,7 +154,7 @@ team alternates between different phases as necessary. Consequently,
 links are inserted that allow transitions between all the different
 phases of the
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=5in,height=4.7in]{image2}
 \caption{ A descriptive overview of the design process.}
 \label{figure:overviewDesignProcess}
@@ -174,7 +174,7 @@ at a substantial cost in time and money. Studies have shown that the
 cost required to correct errors or make changes increases exponentially
 as the project lifetime increases, as presented in Figure~\ref{figure:costVsLife}.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=3in,height=2in]{image3}
 \caption{The cost to implement design changes increases exponentially with project lifetime.}
 \label{figure:costVsLife}
@@ -275,7 +275,7 @@ demonstration of the divide-and-conquer approach to design, where a
 complex system is broken down into lower levels of abstraction and each
 of these is further broken down until the design objectives are met.
 
-\begin{figure}
+\begin{figure}[h]
  \includegraphics[width=5.5in,height=0.60417in]{image4}
 \caption{A process for integrated circuit (VLSI) design {[}Wol02{]}.}
 \label{figure:VLSIdesign}
@@ -294,7 +294,7 @@ gathering, specifications, and architectural design. The process
 reflects the unique nature of embedded systems with separate software
 and hardware design blocks, married together by the interface design.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=3.8in,height=3.8in]{image5}
 \caption{An embedded system design process {[}Ern97{]}.}
 \label{figure:embedded DesignProcess}
@@ -328,7 +328,7 @@ small teams of software developers rapidly develop software following
 some strict rules. Both the spiral model and Extreme Programming are
 examined in more detail in the end of chapter problems.
 
-\begin{figure}
+\begin{figure}[h]
  \includegraphics[width=4.6in,height=3.1in]{image6}
 \caption{Waterfall software development process. In this
 model, development proceeds linearly from requirements analysis, through
@@ -358,40 +358,26 @@ be versatile, innovative, understand ethical principles, and be
 customer-oriented, important themes that are stressed throughout this
 book.
 
-\section{Book Overview}\label{book-overview}
-
-Consider the digital camera, the cellular phone, and the space shuttle,
-all complex systems that integrate a variety of technologies. A digital
-camera is the synthesis of an embedded electronics system, optics, a
-mechanical lens assembly, and the camera package itself. The embedded
-electronics contain an imaging sensor, a digital display, digital
-interface circuitry, flash memory storage, system control software, and
-the user interface. The challenges of integrating the components of such
-a system and having it record and transfer huge amounts of image data,
-within an acceptable timeframe, are immense. Cellular phones are another
-good example of a complex system that represents a technology that has
-shrunk in size, but increased tremendously in functionality at the same
-time. They encompass digital data communications, antenna design,
-encryption for secure data transmission, a user interface display, and
-Internet connectivity. At the other end of the spectrum are large-scale
-space and military systems, such as the space shuttle. Despite the two
-shuttle accidents, the safety and reliability requirements of the space
-shuttle are incredibly high. Realizing such a system is accomplished by
-a tremendous number of people from many disciplines working for
-different organizations. All three of these technologies were developed
-by large teams that encompass multiple disciplines. The processes and
-practices employed in their development represent application of the
-fundamentals that this book hopes to cover. While you won't be building
-complete space shuttles by the end of this design course, you can expect
-to apply design principles that allow you to design and integrate a
-relatively complex system, maybe even a part of the space shuttle.
-
 \footnotesize
-\begin{longtable}[c]{|m{18cm}|}
+\begin{longtable}[c]{|m{14cm}|}
 \caption{The World-Class Engineer (Copyright the Leonhard
 Center for the Advancement of Engineering Education, The Pennsylvania
 State University. Reprinted by permission.) 
 \label{table:worldClassEngineer}}\\
+
+
+\hline
+\rowcolor{Gray}
+\textbf{World Class Engineer} \\ \hline
+\endfirsthead
+
+\hline
+\rowcolor{Gray}
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\ \hline
+\rowcolor{Gray}
+\textbf{World Class Engineer} \\ \hline
+\endhead
+\endfoot
 
 \hline
 
@@ -470,23 +456,40 @@ State University. Reprinted by permission.)
   cost-effectiveness in the global marketplace
 \end{itemize}
 \end{enumerate}
+\\ \hline
 \end{longtable}
 \normalsize
 
 
-\begin{figure}
-\includegraphics[width=2.875in,height=2.625in]{image7}
-\caption{The guiding philosophy of this book. In order to
-achieve success in executing engineering and design projects, it takes
-an understanding of the design process, strong technical design tools,
-and professional skills.}
-\label{table:bookPhilosophy}
-\end{figure}
 
 
+\section{Book Overview}\label{book-overview}
 
-
-
+Consider the digital camera, the cellular phone, and the space shuttle,
+all complex systems that integrate a variety of technologies. A digital
+camera is the synthesis of an embedded electronics system, optics, a
+mechanical lens assembly, and the camera package itself. The embedded
+electronics contain an imaging sensor, a digital display, digital
+interface circuitry, flash memory storage, system control software, and
+the user interface. The challenges of integrating the components of such
+a system and having it record and transfer huge amounts of image data,
+within an acceptable timeframe, are immense. Cellular phones are another
+good example of a complex system that represents a technology that has
+shrunk in size, but increased tremendously in functionality at the same
+time. They encompass digital data communications, antenna design,
+encryption for secure data transmission, a user interface display, and
+Internet connectivity. At the other end of the spectrum are large-scale
+space and military systems, such as the space shuttle. Despite the two
+shuttle accidents, the safety and reliability requirements of the space
+shuttle are incredibly high. Realizing such a system is accomplished by
+a tremendous number of people from many disciplines working for
+different organizations. All three of these technologies were developed
+by large teams that encompass multiple disciplines. The processes and
+practices employed in their development represent application of the
+fundamentals that this book hopes to cover. While you won't be building
+complete space shuttles by the end of this design course, you can expect
+to apply design principles that allow you to design and integrate a
+relatively complex system, maybe even a part of the space shuttle.
 
 
 The intention is to teach the application of design principles to
@@ -515,6 +518,16 @@ design, including functional decomposition, description of system
 behavior, reliability, and testing. Part III addresses professional
 skills, including teamwork principles, project planning, ethics in
 design and the profession, and oral communication skills.
+
+\begin{figure}[h]
+\includegraphics[width=2.875in,height=2.625in]{image7}
+\caption{The guiding philosophy of this book. In order to
+achieve success in executing engineering and design projects, it takes
+an understanding of the design process, strong technical design tools,
+and professional skills.}
+\label{table:bookPhilosophy}
+\end{figure}
+
 
 Here are a few thoughts to conclude the chapter and get started on the
 path to great designs. You are embarking on what will likely be a fun,

@@ -78,7 +78,7 @@ based upon the knowledge of engineers who are primarily responsible for
 design, implementation, testing, manufacturing, and maintenance of the
 system.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=4.6in,height=1.7in]{image1.pdf}
 \caption{Requirements Specification development processes
 from IEEE Std. 1233-1998. The three input sources to the process are the
@@ -1020,15 +1020,23 @@ amplifier. This simple example was selected because of the relative ease
 of understanding, broad familiarity with this type of device, and it
 will be expanded upon later.
 
-\begin{table}
-\centering
-\caption{Requirements Specification for an audio amplifier for
-use in an automobile.}
-\label{table:audioRequireSpec}
-\begin{tabular}{ |p{2cm}|p{5cm}|p{5cm}|} 
+\begin{longtable}{ |p{2.5cm}|p{5cm}|p{5cm}|} 
+\caption{Requirements Specification for an audio amplifier for use in an automobile.}
+\label{table:audioRequireSpec} \\
+
 \hline
 \rowcolor{Gray}
 \textbf{Marketing Requirements} & \textbf{Engineering Requirements} & \textbf{Justification} \\ \hline
+\endfirsthead
+
+\hline
+\rowcolor{Gray}
+\multicolumn{3}{|c|}
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\ \hline
+\rowcolor{Gray}
+\textbf{Marketing Requirements} & \textbf{Engineering Requirements} & \textbf{Justification} \\ \hline
+\endhead
+\endfoot
                            
 1, 2, 4 &
 1.  The \emph{total harmonic distortion} should be \textless0.1\%. &
@@ -1070,8 +1078,7 @@ This is based upon competitive market analysis and previous system designs. \\ \
 3.  The system should be easy to install.\newline
 4.   The system should have low cost.
 } \\ \hline
-\end{tabular}
-\end{table}
+\end{longtable}
 
 Audio power amplifiers are widely available devices, so the requirements
 were determined through competitive benchmarks and knowledge of
@@ -1107,16 +1114,25 @@ device whose intent is to allow a driver to communicate with an
 iPod\textsuperscript{TM} audio player while driving. The Problem
 Statement was presented in Chapter 2 (Section 2.6).
 
-\begin{table}
-\centering
-\caption{Requirements Specification for the
-iPod\textsuperscript{TM} Hands-Free Device.}
-\label{table:ipod}
 
-\begin{tabular}{ |p{2cm}|p{5cm}|p{5cm}|} 
+
+\begin{longtable}{ |p{2.5cm}|p{5cm}|p{5cm}|} 
+\caption{Requirements Specification for the iPod\textsuperscript{TM} Hands-Free Device.}
+\label{table:ipod}\\
+
 \hline
 \rowcolor{Gray}
 \textbf{Marketing Requirements} & \textbf{Engineering Requirements} & \textbf{Justification} \\ \hline
+\endfirsthead
+
+\hline
+\rowcolor{Gray}
+\multicolumn{3}{|c|}
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\ \hline
+\rowcolor{Gray}
+\textbf{Marketing Requirements} & \textbf{Engineering Requirements} & \textbf{Justification} \\ \hline
+\endhead
+\endfoot
 
 4, 6 & 
 1.  System will i\emph{mplement nine voice command} functions ( menu,
@@ -1164,8 +1180,7 @@ calculation using typical parts. \\ \hline
 6.  Should be easy to use.\newline
 7.  Should be portable.
 } \\ \hline
-\end{tabular}
-\end{table}
+\end{longtable}
 
 To develop the marketing requirements, this team conducted an informal
 survey of students on campus, asking the target group what their desires
@@ -1191,16 +1206,22 @@ temperature and vibration variations on the optical power margin, both
 of which impact the bit-error rate and the system performance, were
 determined.
 
-\begin{table}
-\centering
-\caption{System Requirements for a Gigabit Ethernet card
-testing project.}
-\label{table:gigabit}
-
-\begin{tabular}{ |p{2cm}|p{5cm}|p{5cm}|} 
+\begin{longtable}{ |p{2.5cm}|p{5cm}|p{5cm}|} 
+\caption{System Requirements for a Gigabit Ethernet card testing project.}
+\label{table:gigabit}\\
 \hline
 \rowcolor{Gray}
 \textbf{Marketing Requirements} & \textbf{Engineering Requirements} & \textbf{Justification} \\ \hline
+\endfirsthead
+
+\hline
+\rowcolor{Gray}
+\multicolumn{3}{|c|}
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\ \hline
+\rowcolor{Gray}
+\textbf{Marketing Requirements} & \textbf{Engineering Requirements} & \textbf{Justification} \\ \hline
+\endhead
+\endfoot
 
 1 & Must be able to measure the \emph{optical power output} with an
 \emph{accuracy} of ± 0.5dB. & This is based upon commercially available
@@ -1233,8 +1254,7 @@ the resonant frequency. \\ \hline
 2.  It should measure the effects of temperature variations on optical power.\newline
 3.  It should measure effects of vibration on the fiber optic connector
   and optical power output.}  \\ \hline
-\end{tabular}
-\end{table}
+\end{longtable}
 
 The marketing requirements were quite brief and direct, and not
 surprising due to the fact the customer in this case was group of
@@ -1257,16 +1277,23 @@ System (Problem Statement presented in Chapter 2) is shown in Table~\ref{table:p
 This system is intended to provide police and emergency responders with
 a low-cost easy to deploy aerial surveillance system.
 
-\begin{table}
-\centering
-\caption{System Requirements for the Portable Aerial
-Surveillance System.}
-\label{table:portableAerial}
+\begin{longtable}{ |p{2.5cm}|p{5cm}|p{5cm}|} 
+\caption{System Requirements for the Portable Aerial Surveillance System.}
+\label{table:portableAerial}\\
 
-\begin{tabular}{ |p{2cm}|p{5cm}|p{5cm}|} 
 \hline
 \rowcolor{Gray}
 \textbf{Marketing Requirements} & \textbf{Engineering Requirements} & \textbf{Justification} \\ \hline
+\endfirsthead
+
+\hline
+\rowcolor{Gray}
+\multicolumn{3}{|c|}
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\ \hline
+\rowcolor{Gray}
+\textbf{Marketing Requirements} & \textbf{Engineering Requirements} & \textbf{Justification} \\ \hline
+\endhead
+\endfoot
 
 6 & 
  System will provide visual recognition of license plate text from a
@@ -1329,8 +1356,7 @@ expense. \\ \hline
 10.  Should be able to operate at an altitude above most buildings.\newline
 11.  Should meet any applicable governmental regulations (such as FAA).\newline
 12.  Should be able to operate in typical winter conditions.}  \\ \hline
-\end{tabular}
-\end{table}
+\end{longtable}
 
 This project was developed in conjunction with Penn State Behrend and
 the Mercyhurst College's Institute for Intelligence Studies to meet a
@@ -1367,7 +1393,7 @@ is shown in Table~\ref{table:engMarketingMatrix}, where the marketing
 requirements constitute the
 row headings and the engineering requirements the column headings.
 
-\begin{table}
+\begin{table}[h]
 \centering
 \caption{Engineering-marketing tradeoff matrix for the audio
 amplifier. ↑=positive correlation, ↑↑=strong positive correlation,
@@ -1467,7 +1493,7 @@ greater surface area aid in dissipating more power. Finally, there is a
 negative correlation between the output power and cost because of the
 greater size and number of parts needed to achieve higher power.
 
-\begin{table}
+\begin{table}[h]
 \centering
 \caption{The engineering tradeoff matrix for the audio
 amplifier. ↑=positive correlation, ↓=negative correlation.}
@@ -1504,7 +1530,7 @@ outperform the competition. The benchmark table lists the requirements
 in the row headings and the competitors in the column headings as shown
 in Table~\ref{table:benchmarkAudio}.
 
-\begin{table}
+\begin{table}[h]
 \centering
 \caption{Competitive benchmarks for the audio amplifier.}
 \label{table:benchmarkAudio}
@@ -1534,6 +1560,17 @@ effective for communicating between different units in an organization.
 There are houses for different phases of product development, but here
 the focus is on using the HOQ for the Requirements Specification. A HOQ
 for the audio amplifier example is shown in Figure~\ref{figure:houseOfQuality}. 
+
+\begin{figure}[h]
+\centering
+\caption{The complete House of Quality for the audio
+amplifier example. This integrates the information in Tables 
+\ref{table:engMarketingMatrix}, \ref{table:engTradeOff}, and \ref{table:benchmarkAudio}.}
+\label{figure:houseOfQuality}
+
+\includegraphics[width=3in]{houseOfQuality}
+\end{figure}
+
 It contains all
 of the elements that we have addressed so far---marketing requirements,
 engineering requirements, engineering-marketing tradeoffs, engineering
@@ -1543,38 +1580,6 @@ all of the information already presented in Tables \ref{table:engMarketingMatrix
 also becomes visually overwhelming and hard to read as problem
 complexity grows.
 
-
-\begin{figure}
-\centering
-\caption{The complete House of Quality for the audio
-amplifier example. This integrates the information in Tables 
-\ref{table:engMarketingMatrix}, \ref{table:engTradeOff}, and \ref{table:benchmarkAudio}.}
-\label{figure:houseOfQuality}
-
-\begin{tabular}{ |p{5cm}|l|l|l|l|l|l|l|} 
-\hline
-\rowcolor{Gray}
-      &   & \rotatebox[origin=c]{90}{THD} & 
-  			\rotatebox[origin=c]{90}{Output Power} & 
-  			\rotatebox[origin=c]{90}{$\eta$, Efficiency} & 
-  			\rotatebox[origin=c]{90}{Install Time} & 
-  			\rotatebox[origin=c]{90}{Dimensions} & 
-  			\rotatebox[origin=c]{90}{Cost} \\ \hline
- \rowcolor{Gray}
-  &   &  -      &  +                     & +               & -                   & -                    &  - \\ \hline
-1) Sound Quality & + & ↑↑ & ↓ & & & ↓↓ & ↓↓ \\ \hline
-2) High Power & + & ↓ & ↑ & ↑↑ & & ↓↓ & ↓ \\ \hline
-3) Install Ease & + & & ↓ & & ↑↑ & ↑ & ↓ \\ \hline
-4) Cost & - & ↓↓ & ↓ & ↓ & & ↓ & ↑↑ \\ \hline
-\multicolumn{2}{|c|}{\textbf{Targets for Engineering Requirements}} &
-		\rotatebox[origin=c]{90}{\textless0.1\%} &
-		\rotatebox[origin=c]{90}{35 Watts} &
-		\rotatebox[origin=c]{90}{\textgreater{} 40\%} &
-		\rotatebox[origin=c]{90}{$\leq 5$ minutes} &
-		\rotatebox[origin=c]{90}{6 x 8 x 3 inches} &
-		\rotatebox[origin=c]{90}{$\leq \$100$} \\  \hline
-\end{tabular}
-\end{figure}
 
 \section{Project Application: The Requirement Specification}
 \label{section:project-application-the-requirements-specification}
@@ -1596,7 +1601,7 @@ integrates the Problem Statement from Chapter 2.
 Table~\ref{table:benchmarkAudio} presents a self-assessment checklist for the Requirements
  Specification.
   
-\begin{table}
+\begin{table}[h]
 \centering
 \caption{Self-assessment checklist for the Requirements
 Specification. 1 = Strongly Disagree, 2 = Disagree, 3 = Neutral, 4 =
