@@ -281,10 +281,9 @@ scale of relative importance:
 1 = equal, 3 = moderate, 5 = strong, 7 = very strong, 9 = extreme.
 
 Again, details of pairwise comparison are outlined in Appendix B and the
-results are below.
+results are below. \\
 
 
-\begin{table}
 \begin{tabular}{ |> {\columncolor{Gray}} c  |c|c|c|c|c|c|} 
 \hline
 \rowcolor{Gray}
@@ -301,9 +300,7 @@ D & 1/3 & 3 & 1 & 1 & 5 & 0.18 \\
 E & 1/3 & 3 & 1/3 & 1/5 & 1 & 0.09 \\
 \hline
 \end{tabular}
-\caption{Weighting for selection criteria.}
-\label{table:criteriaWeighting}
-\end{table}
+\\
 
 This is an important step and one often overlooked -- the team has
 identified what is important to it in project selection. It is clear
@@ -325,32 +322,22 @@ next step.
 The decision matrix below is constructed and the scores for the
 alternatives determined.
 
-\begin{table}
-\centering
+
 \begin{tabular}{|l|c|c|c|c|}
 \hline
 \rowcolor{Gray}
-\multirow{2}{5em}{Selection Criteria} & \multirow{2}{5em}{Weights} & \multicolumn{3} {|c|} {Alternatives} \\
+\multirow{ 2}{*}{Selection Criteria} & \multirow{ 2}{*}{Weights} & \multicolumn{3} {|c|} {Alternatives} \\ \hline
 
 \rowcolor{Gray}
-                           &                & Project 1 & Project 2 & Project 3 \\
-\hline
-A (Match to skills) & 0.52 & 0.40 & 0.20 & 0.40 \\
-\hline
-B (Technical Complexity) & 0.12 & 0.40 & 0.30 & 0.30 \\
-\hline
-C (Creativity) & 0.09 & 0.45 & 0.20 & 0.35 \\
-\hline
-D (Market potential) & 0.18 & 0.05 & 0.35 & 0.60 \\
-\hline
-E (Industry sponsorship) & 0.09 & 0.00 & 1.0 & 0.00 \\
-\hline
-Score & & 0.31 & 0.31 & 0.38 \\
-\hline
+                                                           &                                              & Project 1 & Project 2 & Project 3 \\ \hline
+A (Match to skills) & 0.52 & 0.40 & 0.20 & 0.40 \\  \hline
+B (Technical Complexity) & 0.12 & 0.40 & 0.30 & 0.30 \\ \hline
+C (Creativity) & 0.09 & 0.45 & 0.20 & 0.35 \\ \hline
+D (Market potential) & 0.18 & 0.05 & 0.35 & 0.60 \\ \hline
+E (Industry sponsorship) & 0.09 & 0.00 & 1.0 & 0.00 \\ \hline
+Score & & 0.31 & 0.31 & 0.38 \\ \hline
 \end{tabular}
-\caption{Weighted score for the selection criteria.}
-\label{table:weightedScoreSelectionCriteria}
-\end{table}
+
 
 \ul{Step 5: Review the decision}
 
@@ -419,7 +406,7 @@ following sections.
 
 \textbf{DILBERT\textsuperscript{®} by Scott Adams}
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=5.5in,height=1.9in]{image1.png}
 \caption{ The difficulties of communicating with the customer. (Dilbert © United Feature Syndicate. Reprinted by
 permission.)}
@@ -500,7 +487,7 @@ lightweight, small, ergonomic, and the ability to operate in the
 environment. The environmental need is further expanded into needs that
 support it.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=5.2in,height=5.6in]{image2}
 \caption{Objective tree for a portable audio device to be
 used by runners. The weights reflect the relative importance of needs at
@@ -527,7 +514,7 @@ the hierarchy are compared, the results of which are reflected in
 Figure~\ref{figure:audioPortable}. The rankings are used in later chapters to compare design
 alternatives.
 
-\begin{table}
+\begin{table}[h]
 \centering
 \begin{tabular} {|> {\columncolor{Gray}} l|c|c|c||c|}
 \hline
@@ -786,6 +773,7 @@ sentences to one or two paragraphs in and should:
 Example needs and objectives statements are provided in Examples
 2.2--2.4.
 
+\cbstart
 \textbf{Example 2.2} iPod Hands-Free Device Needs and Objectives.
 \emph{Abstracted from the iPod Hands-Free Device Design Report by
 Al-Busaidi, Bellavia, and Roseborough {[}Alb06{]}.}
@@ -812,6 +800,11 @@ able to issue simple voice commands to the device to control the
 operation of the iPod. In turn, the device will communicate information
 verbally, such as song titles that are displayed on the iPod screen, to
 the user.
+\cbend
+
+\hphantom  \\
+
+\cbstart
 
 \textbf{Example 2.3} Experimental Design Problem Needs and Objectives.
 \emph{Abstracted from the Intel Pro 1000XF Server Testing Design Report
@@ -830,6 +823,11 @@ card and associated connectors and cabling.
 equipment and test procedures to determine the effects of temperature
 variations and vibration on the optical power margin and the operating
 lifespan of the system.
+\cbend
+
+\hphantom  \\
+
+\cbstart
 
 \textbf{Example 2.4} Portable Aerial Surveillance Needs and Objectives.
 \emph{Abstracted from the PASS Design Report by Andre, Kolb, and Thaler
@@ -863,6 +861,7 @@ a cost that small municipalities can afford. The device will deploy
 rapidly and record and log video. The camera will also include pan and
 zoom functionality to make identification of victims and suspects
 easier.
+\cbend
 
 \section{Project Application: The Problem Statement}
 \label{section:project-application-the-problem-statement}

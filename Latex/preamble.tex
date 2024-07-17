@@ -19,8 +19,11 @@
 \usepackage{amsmath}
 
 % Enables bars in teh margin to follow example/solutions
+%% Use 			\hphantom  \\		to insert a space between consectutive bars
 \usepackage[color]{changebar}
-\cbcolor{blue}					
+\cbcolor{black}				
+\setlength{\changebarwidth}{0.2cm}
+
 
 \newcommand{\ul}{\underline}
 \definecolor{Gray}{gray}{0.85}
@@ -29,3 +32,5 @@
 \newenvironment{itquote}
 {\begin{quote}\itshape}
 {\end{quote}}
+
+
