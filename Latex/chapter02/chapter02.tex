@@ -1,4 +1,5 @@
 \chapter{Project Selection and Needs Identification}
+\label{chapter:projectSelection}
 \graphicspath{ {./chapter02/Fig} }
 
 \begin{itquote}
@@ -162,7 +163,6 @@ for project ideas:
 
 \section{Project Feasibility and Selection Criteria}
 \label{section:project-feasibility-and-selection-criteria}
-
 This section provides questions to consider when examining the
 feasibility of a project. George H. Heilmeier (an electrical engineer
 who has held positions as Chief Technology Officer of Texas Instruments,
@@ -236,15 +236,14 @@ for project selection:
   realistically can be completed in the given timeframe.
 \end{itemize}
 
-The following example demonstrates how to apply a project selection
+Example~\ref{example:projectSelectionModel} demonstrates how to apply a project selection
 model using a method known as the Analytical Hierarchy Process. AHP is a
 decision making method that is described in Appendix B and is utilized
 frequently throughout the text -- \textbf{the reader should read
 Appendix B prior to proceeding with this example}.
 
-\cbstart
-
-\textbf{Example 2.1} A project selection model for capstone design.
+\begin{example}{ A project selection model for capstone design.}
+\label{example:projectSelectionModel}
 
 Assume that you are part of a capstone design team that has the
 opportunity to select their project from competing project ideas. The
@@ -326,17 +325,16 @@ alternatives determined.
 \begin{tabular}{|l|c|c|c|c|}
 \hline
 \rowcolor{Gray}
-\multirow{ 2}{*}{Selection Criteria} & \multirow{ 2}{*}{Weights} & \multicolumn{3} {|c|} {Alternatives} \\ \hline
-
+ & & \multicolumn{3} {c|} {Alternatives} \\ \hhline{|~|~|-|-|-|}
 \rowcolor{Gray}
-                                                           &                                              & Project 1 & Project 2 & Project 3 \\ \hline
+ \multirow{-2}{*}{Selection Criteria} & \multirow{-2}{*}{Weights}  & Project 1 & Project 2 & Project 3 \\ \hline
 A (Match to skills) & 0.52 & 0.40 & 0.20 & 0.40 \\  \hline
 B (Technical Complexity) & 0.12 & 0.40 & 0.30 & 0.30 \\ \hline
 C (Creativity) & 0.09 & 0.45 & 0.20 & 0.35 \\ \hline
 D (Market potential) & 0.18 & 0.05 & 0.35 & 0.60 \\ \hline
 E (Industry sponsorship) & 0.09 & 0.00 & 1.0 & 0.00 \\ \hline
 Score & & 0.31 & 0.31 & 0.38 \\ \hline
-\end{tabular}
+\end{tabular}\\
 
 
 \ul{Step 5: Review the decision}
@@ -346,7 +344,8 @@ based upon the weights determined by the team members. It is a good
 match to the team skills, but also matches their desire to solve a
 problem with good market potential. The remaining two projects are rated
 about equal.
-\cbend
+
+\end{example}
 
 \section{Needs Identification}
 \label{section:needs-identification}
@@ -771,13 +770,12 @@ sentences to one or two paragraphs in and should:
 \end{itemize}
 
 Example needs and objectives statements are provided in Examples
-2.2--2.4.
+\ref{example:iPodNeeds}, \ref{example:intelProNeeds}, and \ref{example:aerialSurveillanceNeeds}.
 
-\cbstart
-\textbf{Example 2.2} iPod Hands-Free Device Needs and Objectives.
+\begin{example}{iPod Hands-Free Device Needs and Objectives.
 \emph{Abstracted from the iPod Hands-Free Device Design Report by
-Al-Busaidi, Bellavia, and Roseborough {[}Alb06{]}.}
-
+Al-Busaidi, Bellavia, and Roseborough {[}Alb06{]}. }}
+\label{example:iPodNeeds}
 \ul{Need:} According to AppleInsider, approximately 10.3 million people
 owned iPods at the end of 2004 and many of the owners used them while
 operating their automobiles. The National Highway Traffic Safety
@@ -800,16 +798,12 @@ able to issue simple voice commands to the device to control the
 operation of the iPod. In turn, the device will communicate information
 verbally, such as song titles that are displayed on the iPod screen, to
 the user.
-\cbend
+\end{example}
 
-\hphantom  \\
-
-\cbstart
-
-\textbf{Example 2.3} Experimental Design Problem Needs and Objectives.
+\begin{example}{Experimental Design Problem Needs and Objectives.
 \emph{Abstracted from the Intel Pro 1000XF Server Testing Design Report
-by Esek, Hunt, and Lewis. {[}Ese03{]}.}
-
+by Esek, Hunt, and Lewis. {[}Ese03{]}. }}
+\label{example:intelProNeeds}
 \ul{Need:} Our industry sponsor is investigating the performance of
 commercial grade gigabit Ethernet fiber optic equipment for computer
 data communications in a military environment. The proposed system will
@@ -823,16 +817,12 @@ card and associated connectors and cabling.
 equipment and test procedures to determine the effects of temperature
 variations and vibration on the optical power margin and the operating
 lifespan of the system.
-\cbend
+\end{example}
 
-\hphantom  \\
-
-\cbstart
-
-\textbf{Example 2.4} Portable Aerial Surveillance Needs and Objectives.
+\begin{example}{Portable Aerial Surveillance Needs and Objectives.
 \emph{Abstracted from the PASS Design Report by Andre, Kolb, and Thaler
-{[}And06{]}.}
-
+{[}And06{]}. }}
+\label{example:aerialSurveillanceNeeds}
 \ul{Need:} Emergencies happen all across the world, all of the time.
 There are nearly 2,000,000 reported fires in the United States every
 year, and over 90 tactical activations of Pennsylvania's Special
@@ -861,7 +851,7 @@ a cost that small municipalities can afford. The device will deploy
 rapidly and record and log video. The camera will also include pan and
 zoom functionality to make identification of victims and suspects
 easier.
-\cbend
+\end{example}
 
 \section{Project Application: The Problem Statement}
 \label{section:project-application-the-problem-statement}

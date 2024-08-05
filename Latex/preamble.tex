@@ -1,9 +1,12 @@
 %%------------------------------------------------------
 %% Document formatting standards.
-%% references labels		figure:<camelCase>
-%%						table:<camelCase>
-%%						section:<dash seperated>
-%%						index:<camelCase>
+%% references labels			figure:<camelCase>
+%%								\tableofcontents:<camelCase>
+%%								section:<dash seperated>
+%%								index:<camelCase>
+%%								example:<camelCase> 
+%%
+%%								\hphantom 
 %%------------------------------------------------------
 
 
@@ -14,12 +17,14 @@
 %% Lots of packages needed for tables
 \usepackage{xcolor,colortbl}	% Enable colors in tables
 \usepackage{multirow}
-\usepackage{longtable}		%Enables multiplage tables
+\usepackage{hhline}				% allows partial hlines in multirow tables
+\usepackage{longtable}			%Enables multiplage tables
+
 
 \usepackage{amsmath}
 
 % Enables bars in teh margin to follow example/solutions
-%% Use 			\hphantom  \\		to insert a space between consectutive bars
+
 \usepackage[color]{changebar}
 \cbcolor{black}				
 \setlength{\changebarwidth}{0.2cm}
@@ -33,4 +38,31 @@
 {\begin{quote}\itshape}
 {\end{quote}}
 
+\newcounter{example}
+\renewcommand{\theexample}{\thechapter.\arabic{example}}
+
+\newenvironment{example}[1]% environment name
+{% begin code
+  \par\vspace{\baselineskip}\noindent
+  \refstepcounter{example}%
+  \cbstart%
+  \textbf{Example \theexample} #1  %
+  \par\vspace{\baselineskip}%
+  \noindent\ignorespaces
+}%
+{% end code
+  \cbend%
+  \par\vspace{\baselineskip}%
+  \noindent\ignorespacesafterend
+}
+
+%%------------------------------------------------------
+%%				Lessons Learned
+%% If you want to use multirow with rowcolor:
+%%		Color rows as usual
+%%		Use multirow on the last row with negative row values
+%%		You will need to use hhline for non-multirows
+%%
+%% Use 			\hphantom  \\		to insert a space between things
+%%------------------------------------------------------
 
