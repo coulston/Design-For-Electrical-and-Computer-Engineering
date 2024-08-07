@@ -1,8 +1,11 @@
-\section{\texorpdfstring{Decision Making with Analytical Hierarchy
-Process
-}{Decision Making with Analytical Hierarchy Process }}\label{decision-making-with-analytical-hierarchy-process}
 
+\chapter{Decision Making with Analytical Hierarchy Process}
+\label{appendix:DecisionMakingAHP}
+\graphicspath{ {./appendixB/Fig} }
+
+\begin{itquote}
 Making good decisions is a crucial skill at every level.---Peter Drucker
+\end{itquote}
 
 A hallmark of design is that many decisions must be made throughout the
 process. Typically, there are alternative solutions to a problem from
@@ -17,65 +20,41 @@ summary of AHP is provided at the conclusion of the appendix.
 To apply AHP there must be a decision to be made, criteria against which
 the decision is based, and a set of competing decisions from which one
 must be selected. This process is encapsulated in the decision matrix
-shown in Table B.1 and as such the process is sometimes referred to as
+shown in Table~\ref{table:abstractDecisionMatrix} and as such the process is sometimes referred to as
 the \emph{\textbf{decision-matrix method}}. The row headings are the
 criteria against which the decision is made and the column headings
 represent the alternatives. The criteria can have differing levels of
 importance and their relative weightings are reflected by
-\includegraphics{Fig/media/image1.wmf} values in the matrix. The entries
-in the matrix, \includegraphics{Fig/media/image2.wmf}, are ratings for
-each \emph{j\textsuperscript{th}} alternative relative to
-\emph{i\textsuperscript{th}} criterion. Each alternative receives a
-score, \emph{S\textsubscript{j}}, which is a weighted sum of the ratings
+$\omega_{i}$ values in the matrix. The entries
+in the matrix, $\alpha_{ij}$, are ratings for each $j$th alternative relative to
+$i$th criterion. Each alternative receives a score, $S_{j}$, which is a weighted sum of the ratings
 that is computed as
 
-\includegraphics{Fig/media/image3.wmf}. (1)
+\begin{equation}
+\label{equ:decisionMatrix}
+S_{j} = \sum_{i=1}^{m} \omega_{i}\alpha{ij}
+\end{equation}
 
-\textbf{Table B.1} A decision matrix.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1377}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0975}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2085}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2111}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1341}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2111}}@{}}
-\toprule\noalign{}
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2352} + 2\tabcolsep}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Alternative 1}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Alternative 2}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Alternative n}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\textbf{Criteria 1} & \includegraphics{Fig/media/image4.wmf} &
-\emph{α\textsubscript{11}} & \emph{α\textsubscript{12}} &
-\includegraphics{Fig/media/image5.wmf} & \emph{α\textsubscript{1n}} \\
-\textbf{Criteria 2} & \includegraphics{Fig/media/image6.wmf} &
-\emph{α\textsubscript{21}} & \emph{α\textsubscript{22}} &
-\includegraphics{Fig/media/image7.wmf} & \emph{α\textsubscript{2n}} \\
-\includegraphics{Fig/media/image8.wmf} &
-\includegraphics{Fig/media/image8.wmf} &
-\includegraphics{Fig/media/image8.wmf} &
-\includegraphics{Fig/media/image8.wmf} &
-\includegraphics{Fig/media/image7.wmf} &
-\includegraphics{Fig/media/image8.wmf} \\
-\textbf{Criteria \emph{m}} & \includegraphics{Fig/media/image9.wmf} &
-\emph{α\textsubscript{m1}} & \emph{α\textsubscript{m2}} &
-\includegraphics{Fig/media/image7.wmf} & \emph{α\textsubscript{mn}} \\
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2352} + 2\tabcolsep}}{%
-\textbf{Score}} & \includegraphics{Fig/media/image10.wmf} &
-\includegraphics{Fig/media/image11.wmf} &
-\includegraphics{Fig/media/image7.wmf} &
-\includegraphics{Fig/media/image12.wmf} \\
-\end{longtable}
+\begin{table}[h]
+\caption{A decision matrix.}
+\label{table:abstractDecisionMatrix}
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\rowcolor{Gray}
+\multicolumn{2}{|c|}{} & \textbf{Alternative 1}  & \textbf{Alternative 2} &   & \textbf{Alternative n} \\ \hline
+\textbf{Criteria 1} & $\omega_{1}$ & $\alpha_{11}$ & $\alpha_{12}$ & $\hdots$ & $\alpha_{m1}$ \\ \hline
+\textbf{Criteria 2} & $\omega_{2}$ & $\alpha_{11}$ & $\alpha_{22}$ & $\hdots$ & $\alpha_{m2}$ \\ \hline
+$\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\hdots$ & $\vdots$ \\ \hline
+\textbf{Criteria m} & $\omega_{m}$ & $\alpha_{1n}$ & $\alpha_{2n}$ & $\hdots$ & $\alpha_{mn}$ \\ \hline
+\multicolumn{2}{|c|} {\textbf{Score}} & 
+			$S_{1} = \sum_{i=1}^{m}\omega_{i}\alpha_{i1}$  & 
+			$S_{2} = \sum_{i=1}^{m}\omega_{i}\alpha_{i2}$  & 
+			$\hdots$ & 
+			$S_{n} = \sum_{i=1}^{m}\omega_{i}\alpha_{im}$    \\ \hline
+\end{tabular}
+\end{table}
 
 The steps of AHP are to:
 
@@ -101,16 +80,13 @@ is extensible to design problems. The first example demonstrates a
 straightforward set of criteria, while the second extends to
 hierarchical criteria.
 
-\subsection{Applying AHP for Car
-Selection}\label{applying-ahp-for-car-selection}
+\section{Applying AHP for Car Selection}
+\label{section:applying-ahp-for-car-selection}
 
 AHP is demonstrated in this section by examining the decision to
 purchase an automobile.
 
-\subsubsection*{Step 1: Determine the Selection
-Criteria}\label{step-1-determine-the-selection-criteria}
-\addcontentsline{toc}{subsubsection}{Step 1: Determine the Selection
-Criteria}
+\subsection*{Step 1: Determine the Selection Criteria}
 
 The first step is to brainstorm to identify the criteria against which
 the decision is made -- ideally it is done prior to identification of
@@ -129,63 +105,47 @@ Assume that the criteria determined are:
   Brand-name recognition
 \end{itemize}
 
-\subsubsection*{Step 2: Determine the Criteria
-Weightings}\label{step-2-determine-the-criteria-weightings}
-\addcontentsline{toc}{subsubsection}{Step 2: Determine the Criteria
-Weightings}
+\subsection*{Step 2: Determine the Criteria Weightings}
 
-To determine the weights, \includegraphics{Fig/media/image1.wmf}\emph{,}
+To determine the weights, $\omega_{ij}$,
 a method known as \emph{\textbf{pairwise comparison}} is applied, where
 each criterion is systematically compared to all others. For example,
 the purchase cost is compared to safety, design, and brand-name.
 Likewise, safety is compared to the remaining criteria and so on. A
 common practice in AHP to apply the following scale for pairwise
 comparison and it is used throughout the book for consistency
-
+\begin{center}
 1 = equal, 3 = moderate, 5 = strong, 7 = very strong, 9 = extreme.
-
+\end{center}
 For example, if one criterion is deemed strongly more important than
 another, it is assigned a score of `5', while if it is deemed strongly
 less important, it is assigned the reciprocal value `1/5'.
 
-Example comparisons are captured in the comparison matrix in Table B.2.
+Example comparisons are captured in the comparison matrix in 
+Table~\ref{table:pairwiseCompareSelection}.
 For each cell, the corresponding row criterion is compared to the column
 criterion. From the first row of the table it is apparent that purchase
 cost is considered of equal importance to safety, moderately more
 important than design, and very strongly more important than brand-name.
 By definition, the diagonal elements are assigned values of 1 since each
 is equally important to itself. The matrix should have the following
-relationship about the diagonal,
-\includegraphics{Fig/media/image13.wmf}.
+relationship about the diagonal, $x_{ij} = 1/x_{ji}$.
 
-\textbf{Table B.2} Pairwise comparison of the selection criteria.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2316}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2079}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1739}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1894}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1973}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Purchase cost}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Safety}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Design}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Brand-name}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\textbf{Purchase cost} & 1 & 1 & 3 & 7 \\
-\textbf{Safety} & 1 & 1 & 5 & 9 \\
-\textbf{Design} & 1/3 & 1/5 & 1 & 3 \\
-\textbf{Brand-name} & 1/7 & 1/9 & 1/3 & 1 \\
-\end{longtable}
+\begin{table}[h]
+\caption{Pairwise comparison of the selection criteria.}
+\label{table:pairwiseCompareSelection}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\rowcolor{Gray}
+			 & \textbf{Purchase cost}  & \textbf{Safety} & \textbf{Design} & \textbf{Brand name} \\ \hline
+\textbf{Purchase cost} & 1 & 1 & 3 & 7 \\ \hline
+\textbf{Safety} & 1 & 1 & 5 & 9 \\ \hline
+\textbf{Design} & 1/3 & 1/5 & 1 & 3 \\ \hline
+\textbf{Brand-name} & 1/7 & 1/9 & 1/3 & 1 \\ \hline
+\end{tabular}
+\end{table}
 
 People often make comparisons that are inconsistent. Look at the first
 row -- purchase cost and safety are deemed to be equally important,
@@ -203,136 +163,57 @@ is and the higher the weight it achieves. However, the problem of
 inconsistency needs to be addressed. There are a number of approaches
 that can be shown mathematically to reduce the inconsistency in the
 matrix. A simple method is to take the geometric mean of each row. The
-geometric mean of a series of numbers,
-\includegraphics{Fig/media/image14.wmf}, is computed as
+geometric mean of a series of numbers, $a_{1}, a_{2}, \hdots a_{n}$
+, is computed as
 
-\includegraphics{Fig/media/image15.wmf}. (2)
+\begin{equation}
+\label{equ:geometricMean}
+Geometric mean = \sqrt[n]{a_{1} a_{2}, \hdots a_{n}}.
+\end{equation}
 
-The geometric mean is often used to reduce bias in skewed data. Table
-B.3 demonstrates how the weights are computed. First, the geometric mean
+The geometric mean is often used to reduce bias in skewed data. 
+Table~\ref{table:weightedValuesFromPairwiseCompareSelection}
+ demonstrates how the weights are computed. First, the geometric mean
 of each row is computed and then the sum of the geometric means is
 found. The mean values are divided by the sum to produce a normalized
-set of weights (\includegraphics{Fig/media/image16.wmf}). No matter what
+set of weights; that is,
+
+$$\sum_{i} \omega_{i} = 1.$$
+
+No matter what
 method is applied to find the weights, they should be normalized to a
 sum of one.
 
-\textbf{Table B.3} Weight values computed from the pairwise comparison.
+\begin{table}[h]
+\caption{Weight values computed from the pairwise comparison.}
+\label{table:weightedValuesFromPairwiseCompareSelection}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1278}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1217}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1199}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1478}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1400}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Purchase cost}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Safety}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Design}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Brand-name}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Geometric}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\rowcolor{Gray}
+			 & \textbf{Purchase cost}  & \textbf{Safety} & \textbf{Design} & \textbf{Brand name} & {Geometric Mean} & {Weights}\\ \hline
+\textbf{Purchase cost} & 1 & 1 & 3 & 7 & 2.1 & 0.37 \\ \hline
+\textbf{Safety} & 1 & 1 & 5 & 9 & 2.6 & 0.46 \\ \hline
+\textbf{Design} & 1/3 & 1/5 & 1 & 3 & 0.7 & 0.12 \\ \hline
+\textbf{Brand-name} & 1/7 & 1/9 & 1/3 & 1 & 0.3 & 0.05 \\ \hline
+\end{tabular}
+\end{table}
 
-\textbf{Mean}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Weights}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\textbf{Purchase cost} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-3
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-7
-\end{quote}
-\end{minipage} & 2.1 & 0.37 \\
-\textbf{Safety} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-5
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-9
-\end{quote}
-\end{minipage} & 2.6 & 0.46 \\
-\textbf{Design} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1/3
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1/5
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-3
-\end{quote}
-\end{minipage} & 0.7 & 0.12 \\
-\textbf{Brand-name} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1/7
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1/9
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1/3
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} & 0.3 & 0.05 \\
-\end{longtable}
 
 The criteria have the following weights
-\includegraphics{Fig/media/image17.wmf}=0.37,
-\includegraphics{Fig/media/image18.wmf}=0.46,
-\includegraphics{Fig/media/image19.wmf}=0.12, and
-\includegraphics{Fig/media/image20.wmf}=0.05. These calculations are
+$\omega_{1} =0.37$,
+$\omega_{1} =0.46$,
+$\omega_{1} =0.12$, and
+$\omega_{1} =0.05$. These calculations are
 easily automated with spreadsheet software.
 
-\subsubsection*{Step 3: Identify and Rate Alternatives Relative to the
-Criteria}\label{step-3-identify-and-rate-alternatives-relative-to-the-criteria}
-\addcontentsline{toc}{subsubsection}{Step 3: Identify and Rate
-Alternatives Relative to the Criteria}
+\subsection*{Step 3: Identify and Rate Alternatives Relative to the Criteria}
+
 
 The three competing alternatives to be evaluated are the 2006 model year
 Honda CR-V, Hyundai Tucson, and Toyota RAV4, which are all small
 sport-utility vehicles. The ratings of each alternative relative to each
-criterion, \includegraphics{Fig/media/image2.wmf}, that make up the body
+criterion, $\alpha_{ij}$, that make up the body
 of the decision matrix are determined next. Ideally, quantitative
 ratings are determined, but in many cases it is necessary to use a more
 qualitative approach. Higher ratings should reflect a better match to
@@ -348,234 +229,115 @@ metric is needed. A metric that works when the objective is to minimize
 a criterion is to compare it to the minimum of all values using the
 following ratio
 
-\includegraphics{Fig/media/image21.wmf}. (3)
+\begin{equation}
+\label{equ:costRatio}
+\alpha = \frac{min[cost]}{cost}
+\end{equation}
 
 This assigns a maximum value of 1 to the lowest cost option, which in
 this case is the Hyundai. The cost ratings are computed to be
-\includegraphics{Fig/media/image22.wmf}= 0.86,
-\includegraphics{Fig/media/image23.wmf}= 1, and
-\includegraphics{Fig/media/image24.wmf}= 0.83. It is important that the
+$\alpha{11} = 0.86$,
+$\alpha{12} =  1$, and
+$\alpha{13} =  0.83$. It is important that the
 ratings relative to each criteria be normalized so that their sum is
 one. If not, the sum of ratings for each criterion will be different.
 This would introduce bias by altering the relative weights of the
 criteria. The normalized ratings are
-\includegraphics{Fig/media/image22.wmf}= 0.32,
-\includegraphics{Fig/media/image23.wmf}= 0.37, and
-\includegraphics{Fig/media/image24.wmf}= 0.31.
+$\alpha{11} =  0.32$,
+$\alpha{12} =  0.37$, and
+$\alpha{13} =  0.31$.
 
 Next, a metric for safety is needed. Fortunately, there is real data to
 draw upon from the US National Highway Transportation Safety Association
 (\href{http://www.safercar.gov}{www.safercar.gov}) which rates vehicles
 in multiple categories on a five-point scale. The average rating for
-each car is \includegraphics{Fig/media/image25.wmf}= 4.8 (Honda),
-\includegraphics{Fig/media/image26.wmf}=4.8 (Hyundai), and
-\includegraphics{Fig/media/image27.wmf}= 4.6 (Toyota), producing the
-following normalized values \includegraphics{Fig/media/image28.wmf}=
-0.34, \includegraphics{Fig/media/image29.wmf}= 0.34, and
-\includegraphics{Fig/media/image30.wmf}= 0.32.
+each car is 
+$\alpha{21} =  4.8$ (Honda),
+$\alpha{22} =4.8$ (Hyundai), and
+$\alpha{23} = 4.6$ (Toyota), 
+producing the following normalized values 
+$\alpha{21} = 0.34$, 
+$\alpha{21} = 0.34$, and
+$\alpha{21} = 0.32$.
 
 The rating of the cars relative to the design styling criterion is
 considered next. This requires a more subjective approach than the
 previous two criteria. To quantify the subjective evaluation pairwise
 comparison is again applied to determine the relative value of one
 automobile's design to another. Pairwise comparison for the design
-styling criteria is shown in Table B.4. The 2006 CR-V is has older
-styling, resulting in a much lower design styling rating than the
-others.
+styling criteria is shown in Table~\ref{table:pairwiseCompareDesignRatings}. 
+The 2006 CR-V is has older styling, resulting in a much lower design
+styling rating than the others.
 
-\textbf{Table B.4} Pairwise comparison of design styling to determine
-ratings.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2716}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1764}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1842}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1728}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1950}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Honda CRV
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Hyundai
 
-Tucson
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Toyota
+\begin{table}[h]
+\caption{Pairwise comparison of design styling to determine ratings.}
+\label{table:pairwiseCompareDesignRatings}
 
-RAV4
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Design Rating
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Honda CRV & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1/3
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1/5
-\end{quote}
-\end{minipage} & 0.11 \\
-Hyundai Tucson & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-3
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-½
-\end{quote}
-\end{minipage} & 0.31 \\
-Toyota RAV4 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-5
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-2
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} & 0.58 \\
-\end{longtable}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\rowcolor{Gray}
+			 & \textbf{Honda CRV}  & \textbf{Hyundai Tucson} & \textbf{Toyota RAV4} & \textbf{Design Rating}\\ \hline
+
+\textbf{Honda CRV} 			& 1 & 1/3 & 1/5 & 0.11 \\ \hline
+\textbf{Hyundai Tucson} 	& 3 & 1 & 1/2 & 0.31 \\ \hline
+\textbf{Toyota RAV4}		& 5 & 2 & 1 & 0.58 \\ \hline
+\end{tabular}
+\end{table}
 
 Finally, the ratings for brand-name recognition are determined using
-pairwise comparison as shown in Table B.5.
+pairwise comparison as shown in Table~\ref{table:pairwiseCompareNameRatings}.
 
-\textbf{Table B.5} Pairwise comparison of brand-name to determine
-ratings.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2836}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1762}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1673}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1620}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2110}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Honda}
+\begin{table}[h]
+\caption{Pairwise comparison of brand-name to determine ratings.}
+\label{table:pairwiseCompareNameRatings}
 
-\textbf{CRV}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Hyundai Tucson}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Toyota}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\rowcolor{Gray}
+			 & \textbf{Honda CRV}  & \textbf{Hyundai Tucson} & \textbf{Toyota RAV4} & \textbf{Design Rating}\\ \hline
 
-\textbf{RAV4}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Brand-name rating}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\textbf{Honda CRV} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-4
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} & 0.44 \\
-\textbf{Hyundai Tucson} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-¼
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-¼
-\end{quote}
-\end{minipage} & 0.12 \\
-\textbf{Toyota RAV4} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-4
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} & 0.44 \\
-\end{longtable}
+\textbf{Honda CRV} 			& 1 & 4 & 1 & 0.44 \\ \hline
+\textbf{Hyundai Tucson} 	& 1/4 & 1 & 1/4 & 0.12 \\ \hline
+\textbf{Toyota RAV4}		& 1 & 4 & 1 & 0.44 \\ \hline
+\end{tabular}
+\end{table}
+
 
 Note that the pairwise comparison method can be somewhat time-consuming
 since many comparisons must be made. When making subjective estimates, a
 faster approach is to use scoring rubric that reflects how well each of
 the alternatives meet the criterion, for example
 
-1 = does not meet criterion, 5 = partially meets criterion, 9 =
-completely meets criterion.
+1 = does not meet criterion, 5 = partially meets criterion, 9 = completely meets criterion.
 
 Keep in mind that pairwise comparison has the advantage of a systematic
 comparison of alternatives and this reduces inconsistency in ratings.
 
-\subsubsection*{Step 4: Compute Scores for the
-Alternatives}\label{step-4-compute-scores-for-the-alternatives}
-\addcontentsline{toc}{subsubsection}{Step 4: Compute Scores for the
-Alternatives}
+\subsection*{Step 4: Compute Scores for the Alternatives}
 
 The decision matrix is built and the overall weighted scores for the
-alternatives are computed as shown in Table B.6.
+alternatives are computed as shown in Table~\ref{table:decisionMatrix}.
 
-\textbf{Table B.6} The decision matrix.
+\begin{table}[h]
+\caption{The decision matrix.}
+\label{table:decisionMatrix}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2276}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1099}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2212}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2240}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2173}}@{}}
-\toprule\noalign{}
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3375} + 2\tabcolsep}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Honda CR-V}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Hyundai Tucson}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Toyota RAV4}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\textbf{Cost} & 0.37 & 0.32 & 0.37 & 0.31 \\
-\textbf{Safety} & 0.46 & 0.34 & 0.34 & 0.32 \\
-\textbf{Design styling} & 0.12 & 0.11 & 0.31 & 0.58 \\
-\textbf{Brand-name} & 0.05 & 0.44 & 0.12 & 0.44 \\
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3375} + 2\tabcolsep}}{%
-\textbf{Score}} & \textbf{0.31} & \textbf{0.34} & \textbf{0.35} \\
-\end{longtable}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\rowcolor{Gray}
+\multicolumn{2}{|c|}{}	 & \textbf{Honda CRV}  & \textbf{Hyundai Tucson} & \textbf{Toyota RAV4} \\ \hline
+\textbf{Cost} & 0.37 & 0.32 & 0.37 & 0.31 \\ \hline
+\textbf{Safety} & 0.46 & 0.34 & 0.34 & 0.32 \\ \hline
+\textbf{Design styling} & 0.12 & 0.11 & 0.31 & 0.58 \\ \hline
+\textbf{Brand-name} & 0.05 & 0.44 & 0.12 & 0.44 \\ \hline
+\multicolumn{2}{|c|}{\textbf{Score}}	&  \textbf{0.31} & \textbf{0.34} & \textbf{0.35} \\ \hline
+\end{tabular}
+\end{table}
 
-\subsubsection*{Step 5: Review the
-Decision}\label{step-5-review-the-decision}
-\addcontentsline{toc}{subsubsection}{Step 5: Review the Decision}
+\subsubsection*{Step 5: Review the Decision}
 
 The result is a set of numerical scores for the alternatives and if all
 work is done properly the final scores should sum to one. In this case
@@ -591,8 +353,8 @@ The RAV4 barely beats out the Tucson, so if cost and safety are truly
 more important, the Tucson is a better decision as it beats the RAV4 in
 both of those categories.
 
-\subsection{Hierarchical Decision
-Criteria}\label{hierarchical-decision-criteria}
+\section{Hierarchical Decision Criteria}
+\label{section:hierarchical-decision-criteria}
 
 The example in the previous section had fairly simple selection criteria
 and it arguably missed some important ones, such as the operating costs.
@@ -603,45 +365,30 @@ and exterior design. Thus there is a hierarchy in the criteria, giving
 rise to the name Analytical Hierarchy Process. The following extends the
 previous example to include the use of hierarchical criteria.
 
-\subsubsection*{Step 1: Determine the Selection
-Criteria}\label{step-1-determine-the-selection-criteria-1}
-\addcontentsline{toc}{subsubsection}{Step 1: Determine the Selection
-Criteria}
+\subsection*{Step 1: Determine the Selection Criteria}
 
 Assume that the criteria have been expanded to be more realistic as
 shown below:
 
 \begin{itemize}
-\item
-  Purchase cost
-\item
-  Operating costs
+\item   Purchase cost
+\item   Operating costs
 
   \begin{itemize}
-  \item
-    Fuel
-  \item
-    Insurance
+  \item     Fuel
+  \item     Insurance
   \end{itemize}
-\item
-  Safety
-\item
-  Design styling
+\item   Safety
+\item   Design styling
 
   \begin{itemize}
-  \item
-    Interior
-  \item
-    Exterior
+  \item     Interior
+  \item     Exterior
   \end{itemize}
-\item
-  Brand-name recognition
+\item   Brand-name recognition
 \end{itemize}
 
-\subsubsection*{Step 2: Determine the Criteria
-Weightings}\label{step-2-determine-the-criteria-weightings-1}
-\addcontentsline{toc}{subsubsection}{Step 2: Determine the Criteria
-Weightings}
+\subsubsection*{Step 2: Determine the Criteria Weightings}
 
 Pairwise comparison is again used to determine the weights. The
 difference now is that this comparison is done at each level in the
@@ -652,36 +399,24 @@ the hierarchy, as are exterior and interior design. Assume that the
 pairwise comparisons produce the following criteria weights:
 
 \begin{itemize}
-\item
-  Purchase cost (0.33)
-\item
-  Operating Costs (0.11)
+\item   Purchase cost (0.33)
+\item   Operating Costs (0.11)
 
   \begin{itemize}
-  \item
-    MPG (0.67)
-  \item
-    Insurance (0.33)
+  \item    MPG (0.67)
+  \item    Insurance (0.33)
   \end{itemize}
-\item
-  Safety (0.40)
-\item
-  Design Styling (0.12)
+\item  Safety (0.40)
+\item  Design Styling (0.12)
 
   \begin{itemize}
-  \item
-    Interior (0.50)
-  \item
-    Exterior (0.50)
+  \item    Interior (0.50)
+  \item    Exterior (0.50)
   \end{itemize}
-\item
-  Brand-name recognition (0.04)
+\item  Brand-name recognition (0.04)
 \end{itemize}
 
-\subsubsection*{Step 3: Identify and Rate Alternatives Relative to the
-Criteria}\label{step-3-identify-and-rate-alternatives-relative-to-the-criteria-1}
-\addcontentsline{toc}{subsubsection}{Step 3: Identify and Rate
-Alternatives Relative to the Criteria}
+\subsection*{Step 3: Identify and Rate Alternatives Relative to the Criteria}
 
 Utilizing the results from the previous section, it is only necessary to
 compute scores relative to the new criteria. Using mileage per gallon as
@@ -702,14 +437,11 @@ metric in equation (3) is used. This produces normalized ratings of
 
 Styling is subjective and ratings could be determined using a scoring
 rubric or the pairwise comparison method. Assume that this produces the
-scores shown in Table B.7.
+scores shown in Table~\ref{table:decisionMatrixCarPurchase}.
 
-\subsubsection*{Step 4: Compute Scores for the
-Alternatives}\label{step-4-compute-scores-for-the-alternatives-1}
-\addcontentsline{toc}{subsubsection}{Step 4: Compute Scores for the
-Alternatives}
+\subsection*{Step 4: Compute Scores for the Alternatives}
 
-The decision-matrix shown in Table B.7 reflects the hierarchical
+The decision-matrix shown in Table~\ref{table:decisionMatrixCarPurchase} reflects the hierarchical
 criteria. The scores are computed slightly differently when sub-criteria
 are involved. For example, the score for operating costs of the Honda is
 computed based upon the two sub-criteria as (0.67x0.33 + 0.33x0.36) =
@@ -718,124 +450,29 @@ operating costs of this vehicle. Then to get the weighted score for
 operating costs, this result of 0.33 is multiplied by the weight of
 0.11, exactly as in the previous example.
 
-\textbf{Table B.7} The decision matrix.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2231}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1372}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2135}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2162}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2100}}@{}}
-\toprule\noalign{}
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3602} + 2\tabcolsep}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Honda CR-V}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Hyundai Tucson}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Toyota RAV4}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\textbf{Purchase Cost} & 0.33 & 0.32 & 0.37 & 0.31 \\
-\textbf{Operating Cost} & 0.11 & 0.34 & 0.32 & 0.33 \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Fuel
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.67
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.33
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.32
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.35
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Insurance
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.33
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.36
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.34
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.30
-\end{quote}
-\end{minipage} \\
-\textbf{Safety} & 0.40 & 0.34 & 0.34 & 0.32 \\
-\textbf{Design Styling} & 0.12 & 0.20 & 0.40 & 0.40 \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Interior
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.60
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.20
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.40
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.40
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Exterior
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.40
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.20
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.40
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.40
-\end{quote}
-\end{minipage} \\
-\textbf{Brand-name} & 0.04 & 0.44 & 0.12 & 0.44 \\
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3602} + 2\tabcolsep}}{%
-\textbf{Score}} & 0.32 & 0.35 & 0.33 \\
-\end{longtable}
+\begin{table}[h]
+\caption{The decision matrix.}
+\label{table:decisionMatrixCarPurchase}
 
-\subsubsection*{Step 5: Review the
-Decision}\label{step-5-review-the-decision-1}
-\addcontentsline{toc}{subsubsection}{Step 5: Review the Decision}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\rowcolor{Gray}
+\multicolumn{2}{|c|}{}	 & \textbf{Honda CRV}  & \textbf{Hyundai Tucson} & \textbf{Toyota RAV4} \\ \hline
+\textbf{Purchase Cost} & 0.33 & 0.32 & 0.37 & 0.31 \\ \hline
+\textbf{Operating Cost} & 0.11 & 0.34 & 0.32 & 0.33 \\ \hline
+\hspace{1em}Fuel & 0.67 &0.33 &0.32 &0.35 \\ \hline
+\hspace{1em}Insurance & 0.33 & 0.36 & 0.34 & 0.30 \\ \hline
+\textbf{Safety} & 0.40 & 0.34 & 0.34 & 0.32 \\ \hline
+\textbf{Design Styling} & 0.12 & 0.20 & 0.40 & 0.40 \\ \hline
+\hspace{1em}Interior & 0.60& 0.20 & 0.40 & 0.40 \\ \hline
+\hspace{1em}Exterior & 0.40 &  0.20 & 0.40& 0.40 \\ \hline
+\textbf{Brand-name} & 0.04 & 0.44 & 0.12 & 0.44 \\ \hline
+\multicolumn{2}{|c|}{Score} & 0.32 & 0.35 & 0.33 \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection*{Step 5: Review the Decision}
 
 With this expanded set of criteria, there is a shift in the overall
 ranking and the Hyundai Tucson edges out the Toyota RAV4. Frankly, all
@@ -844,8 +481,7 @@ comparison of vehicles across classes, such as sport-utility, mid-size,
 and a luxury car would likely results in a much larger differential in
 the scoring, based upon the weighted criteria used here.
 
-\subsection{\texorpdfstring{Summary and Further Reading
-}{Summary and Further Reading }}\label{summary-and-further-reading}
+\section{Summary and Further Reading}
 
 The Analytical Hierarchy Process is an effective tool for comparing
 competing alternatives that integrates both quantitative and qualitative

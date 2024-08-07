@@ -1,14 +1,12 @@
 %%------------------------------------------------------
 %% Document formatting standards.
 %% references labels			figure:<camelCase>
-%%								\tableofcontents:<camelCase>
-%%								section:<dash seperated>
-%%								index:<camelCase>
-%%								example:<camelCase> 
-%%
-%%								\hphantom 
+%%						\tableofcontents:<camelCase>
+%%						section:<dash seperated>
+%%						index:<camelCase>
+%%						example:<camelCase> 
+%%						equ:<camelCase>
 %%------------------------------------------------------
-
 
 \usepackage{graphicx}
 \usepackage{imakeidx}			% Enables Index functionality
@@ -23,12 +21,10 @@
 
 \usepackage{amsmath}
 
-% Enables bars in teh margin to follow example/solutions
-
+% Enables bars in the margin to follow example/solutions
 \usepackage[color]{changebar}
 \cbcolor{black}				
 \setlength{\changebarwidth}{0.2cm}
-
 
 \newcommand{\ul}{\underline}
 \definecolor{Gray}{gray}{0.85}
@@ -55,6 +51,19 @@
   \par\vspace{\baselineskip}%
   \noindent\ignorespacesafterend
 }
+
+
+%%		CHAPTER FORMATTING
+%%  \chapter{The Engineering Design Process}
+%% \label{chapter:engineeringDesignProcess}
+%% \graphicspath{ {./chapter01/Fig} }
+%% \begin{itquote}
+%% \end{itquote}
+
+
+%%		LONG TABLE FORMATTING
+
+
 
 %%------------------------------------------------------
 %%				Lessons Learned
