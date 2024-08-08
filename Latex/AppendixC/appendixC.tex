@@ -1,5 +1,6 @@
-\section{\texorpdfstring{Component Failure Rate Data
-}{Component Failure Rate Data }}\label{component-failure-rate-data}
+\chapter{Component Failure Rate Data}
+\label{appendix:componentFailureRate}
+\graphicspath{ {./appendixC/Fig} }
 
 This appendix contains failure rate data for selected electronic
 components in support of Chapter 8. The information was abstracted from
@@ -14,615 +15,432 @@ of presentation, and is readily obtained from the formulas supplied.
 Data is presented for the following devices:
 
 \begin{itemize}
-\item
-  Analog components: resistors and capacitors.
-\item
-  Discrete semiconductors: diodes, bipolar transistors, and field effect
-  transistors.
-\item
-  Microcircuits: gate/logic arrays and microprocessors.
+\item  Analog components: resistors and capacitors.
+\item  Discrete semiconductors: diodes, bipolar transistors, and field effect  transistors.
+\item  Microcircuits: gate/logic arrays and microprocessors.
 \end{itemize}
 
-\subsection{Environmental Use}\label{environmental-use}
+\section{Environmental Use}
+\label{section:environmental-use}
 
 All of the devices presented in this appendix have an environmental
 factor that is used to estimate the failure rate. The environmental
 factors are based on the 14 categories in Table C.1.
 
-\textbf{Table C.1} Environmental symbols and descriptions taken directly
-from MIL-HDBK-217F.
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2477}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7523}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Environment}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Description}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-G\textsubscript{B} -- Ground, Benign & Nonmobile, temperature and
+\textbf{Table C.1}
+\begin{table}
+\caption{ Environmental symbols and descriptions taken directly
+from MIL-HDBK-217F.}
+\label{table:envSymbols}
+\begin{tabular}{|l|m{10cm}|}
+\hline
+$G_{B}$ -- Ground, Benign & Nonmobile, temperature and
 humidity controlled environments readily accessible to maintenance;
 includes laboratory instruments and test equipment, medical electronic
 equipment, business and scientific computer complexes, and missile and
-support equipment in ground silos. \\
-G\textsubscript{F} -- Ground, Fixed & Moderately controlled environments
+support equipment in ground silos. \\ \hline
+$G_{F}$ -- Ground, Fixed & Moderately controlled environments
 such as installation in permanent racks with adequate cooling air and
 possible installation in unheated buildings; includes permanent
 installation of air traffic control radar and communication
-facilities. \\
-G\textsubscript{M} -- Ground, Mobile & Equipment installed in wheeled or
+facilities. \\ \hline
+$G_{M}$ -- Ground, Mobile & Equipment installed in wheeled or
 tracked vehicles and equipment manually transported; includes tactical
 missile ground support equipment, mobile communication equipment,
 tactical fire direction systems, handheld communications equipment,
-laser designations and range finders. \\
-\end{longtable}
-
-\textbf{Table C.1} Environmental symbols and descriptions taken directly
-from MIL-HDBK-217F, cont'd.
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2477}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7523}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Environment}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Description}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-N\textsubscript{S} -- Naval, Sheltered & Includes sheltered or below
+laser designations and range finders. \\ \hline
+$N_{S}$-- Naval, Sheltered & Includes sheltered or below
 deck conditions on surface ships and equipment installed in
-submarines. \\
-N\textsubscript{U} -- Naval, Unsheltered & Unprotected surface shipborne
+submarines. \\ \hline
+$N_{U}$ -- Naval, Unsheltered & Unprotected surface shipborne
 equipment exposed to weather conditions and equipment immersed in salt
 water. Includes sonar equipment and equipment installed on hydrofoil
-vessels. \\
-A\textsubscript{IC} -- Airborne, Inhabited Cargo & Typical conditions in
+vessels. \\ \hline
+$A_{IC}$-- Airborne, Inhabited Cargo & Typical conditions in
 cargo compartments that can be occupied by an aircrew. Environment
 extremes of pressure, temperature, shock, and vibration are minimal.
 Examples include long mission aircraft such as the C130, C5, B52, and
 C141. This category also applies to inhabited areas in lower performance
-smaller aircraft such as the T38. \\
-A\textsubscript{IF} -- Airborne, Inhabited Fighter & Same as
-A\textsubscript{IC} but installed on high performance aircraft such as
+smaller aircraft such as the T38. \\ \hline
+$A_{IF}$ -- Airborne, Inhabited Fighter & Same as 
+$A_{IC}$ but installed on high performance aircraft such as
 fighters and interceptors. Examples include the F15, F16, F111, F/A 18
-and A10 aircraft. \\
-A\textsubscript{UC} - Airborne, Uninhabited Cargo & Environmentally
+and A10 aircraft. \\ \hline
+$A_{UC}$ - Airborne, Uninhabited Cargo & Environmentally
 uncontrolled areas that cannot be inhabited by crew during flight.
 Environmental extremes of pressure, temperature, and shock may be
 severe. Examples include uninhabited areas of long aircraft such as the
 C130, C5, B52, and C141. This category also applies to uninhabited areas
 in lower performance smaller aircraft such as the T38. \\
-A\textsubscript{UF} - Airborne, Uninhabited Fighter & Same as
-A\textsubscript{UC} but installed on high performance aircraft such as
+$A_{UF}$ - Airborne, Uninhabited Fighter & Same as
+$A_{UC}$but installed on high performance aircraft such as
 fighters and interceptors. Examples include the F15, F16, F111, and A10
 aircraft. \\
-A\textsubscript{RW} -- Airborne, Rotary Winged & Equipment installed on
+$A_{RW}$-- Airborne, Rotary Winged & Equipment installed on
 helicopters. Applies to both internally and externally mounted equipment
 such as laser designators, fire control systems, and communications
 equipment. \\
-S\textsubscript{F} -- Space, Flight & Earth orbital. Approaches benign
+$S_{F}$ -- Space, Flight & Earth orbital. Approaches benign
 ground conditions. Vehicle neither under powered flight nor in
 atmospheric re-entry; includes satellites and shuttles. \\
-M\textsubscript{F} -- Missile, Flight & Conditions related to powered
+$M_{F}$ -- Missile, Flight & Conditions related to powered
 flight of air breathing missiles, cruise missiles, and missiles in
 unpowered free flight. \\
-M\textsubscript{L} -- Missile, Launch & Severe conditions related to
+$M_{L}$ -- Missile, Launch & Severe conditions related to
 missile launch (air, ground, and sea), space vehicle boost into orbit,
 and vehicle re-entry and landing by parachute. Also applies to solid
 rocket motor propulsion powered flight, and torpedo and missile launch
 from submarines. \\
-C\textsubscript{L} -- Cannon, Launch & Extremely severe conditions
+$C_{L}$ -- Cannon, Launch & Extremely severe conditions
 related to cannon launching of 155 mm and 5 inch guided projectiles.
 Conditions apply to the projectile from launch to target impact. \\
-\end{longtable}
+\end{tabular}
+\end{table}
 
-\subsection{Analog Components: Resistors and
-Capacitors}\label{analog-components-resistors-and-capacitors}
+\section{Analog Components: Resistors and Capacitors}
+\label{section:analog-components-resistors-and-capacitors}
 
 This section contains failure rate data for resistors and capacitors.
 
-\subsubsection{Resistors: Fixed Composition, Fixed Film, and
-Wirewound}\label{resistors-fixed-composition-fixed-film-and-wirewound}
+\subsection{Resistors: Fixed Composition, Fixed Film, and Wirewound}
+\label{section:resistors-fixed-composition-fixed-film-and-wirewound}
 
 The failure rate is given by the following relationship
 
-\includegraphics{Fig/media/image1.wmf}.
+$$\lambda = \lambda_{b} \pi_{R} \pi_{Q} \pi_{E} \frac{failures}{10^{6} hours}$$.
 
-\includegraphics{Fig/media/image2.wmf} \textbf{- Base Failure Rate}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2913}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7087}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Resistor Type}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image3.wmf}
 
-\includegraphics{Fig/media/image4.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Fixed Composition & \includegraphics{Fig/media/image5.wmf} \\
-Fixed Film & \includegraphics{Fig/media/image6.wmf} \\
-Wirewound & \includegraphics{Fig/media/image7.wmf} \\
-\end{longtable}
 
-\textbf{Resistance Factor -} \includegraphics{Fig/media/image8.wmf}
+\begin{table}
+\caption{$\lambda_{b} = $ \textbf{Base Failure Rate}}
+\label{table:baseFailureRate}
+\begin{tabular}{|l|m{10cm}|} \hline
+\rowcolor{Gray}
+\textbf{Resistor Type} &
+$\lambda_b$ 
+$(T = ambient temperatire in ^\circ C, S = \frac{operating power}{device power rating})$ \\ \hline
+Fixed Composition & 
+$\lambda_b = 4.5x10^{-9} exp [12(\frac{T+273}{343})] exp[\frac{S}{0.6}(\frac{T+273}{273})]$ \\ \hline
+Fixed Film &
+$\lambda_b = 3.25x10^{-4} exp [12(\frac{T+273}{343})^3] exp[S(\frac{T+273}{273})]$ \\ \hline
+Wirewound &
+$\lambda_b = 0.0031 exp [12(\frac{T+273}{343})^{10}] exp\{[\frac{S}{0.6}(\frac{T+273}{273})]^{1.5}\}$ \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2684}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2332}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2653}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2332}}@{}}
-\toprule\noalign{}
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.5015} + 2\tabcolsep}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Fixed Composition or Fixed Film Resistors}
-\end{minipage}} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.4985} + 2\tabcolsep}@{}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Wirewound Resistors}
-\end{minipage}} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\textbf{Resistance Range} & \includegraphics{Fig/media/image9.wmf} &
-\textbf{Resistance Range} & \includegraphics{Fig/media/image10.wmf} \\
-\includegraphics{Fig/media/image11.wmf} & 1.0 &
-\includegraphics{Fig/media/image12.wmf} & 1.0 \\
-\includegraphics{Fig/media/image13.wmf} & 1.1 &
-\includegraphics{Fig/media/image14.wmf} & 1.7 \\
-\includegraphics{Fig/media/image15.wmf} & 1.6 &
-\includegraphics{Fig/media/image16.wmf} & 3.0 \\
-\includegraphics{Fig/media/image17.wmf} & 2.5 &
-\includegraphics{Fig/media/image18.wmf} & 5.0 \\
-\end{longtable}
 
-\textbf{\hfill\break
-Quality Factor -} \includegraphics{Fig/media/image19.wmf}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Quality}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image20.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-S & 0.03 \\
-R & 0.1 \\
-P & 0.3 \\
-M & 1.0 \\
-MIL-R & 5.0 \\
-Lower & 15 \\
-\end{longtable}
 
-\textbf{Environmental factor -} \includegraphics{Fig/media/image21.wmf}
+\begin{table}
+\caption{\textbf{Resistance Factor -} $\pi_{R}$}
+\label{table:resistanceFactor}
+\begin{tabular}{|c|c|c|c|} \hline
+\rowcolor{Gray}
+\multicolumn{2}{|l|}{\textbf{Fixed Composition or Fixed Film Resistors}} &  \multicolumn{2}{|l|}{\textbf{Wirewound Resistors}} \\ \hline
+\textbf{Resistance Range} & $\pi_{R}$ & \textbf{Resistance Range} & $\pi_{R}$ \\ \hline
+$ \leq 100k\Omega$                            & 1.0 & $ \leq 10k\Omega$                                     & 1.0 \\ \hline
+$ 100k\Omega$ to $\leq 1M\omega$ & 1.1 & $ 10k\Omega$ to $\leq 100k\omega$  & 1.7 \\ \hline
+$ 1M\Omega$ to $\leq 10M\omega$  & 1.6 & $ 100k\Omega$ to $\leq 1M\omega$  & 3.0 \\ \hline
+$ > 10M\Omega$                                 & 2.5 & $ > 1M\Omega$                                     & 5.0 \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2144}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3119}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2423}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2315}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Environment}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image22.wmf}\textbf{-}
 
-\textbf{Fixed Composition}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image23.wmf}\textbf{-}
 
-\textbf{Fixed Film}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image24.wmf}\textbf{-}
+\begin{table}
+\caption{\textbf{Quality Factor -} $\pi_{Q}$}
+\label{table:qualityFactor}
+\begin{tabular}{|c|c|} \hline
+\textbf{Quality} & $\pi_{Q}$ \\ \hline
+S & 0.03 \\ \hline
+R & 0.1 \\ \hline
+P & 0.3 \\ \hline
+M & 1.0 \\ \hline
+MIL-R & 5.0 \\ \hline
+Lower & 15 \\ \hline
+\end{tabular}
+\end{table}
 
-\textbf{Wirewound}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-G\textsubscript{B} & 1 & 1 & 1 \\
-G\textsubscript{F} & 3 & 2 & 2 \\
-G\textsubscript{M} & 8 & 8 & 11 \\
-N\textsubscript{S} & 5 & 4 & 5 \\
-N\textsubscript{U} & 13 & 14 & 18 \\
-A\textsubscript{IC} & 4 & 4 & 15 \\
-A\textsubscript{IF} & 5 & 8 & 18 \\
-A\textsubscript{UC} & 7 & 10 & 28 \\
-A\textsubscript{UF} & 11 & 18 & 35 \\
-A\textsubscript{RW} & 19 & 19 & 27 \\
-S\textsubscript{F} & 0.50 & 0.20 & 0.80 \\
-M\textsubscript{F} & 11 & 10 & 14 \\
-M\textsubscript{L} & 27 & 28 & 38 \\
-C\textsubscript{L} & 490 & 510 & 610 \\
-\end{longtable}
 
-\subsubsection{Capacitors: Fixed, Ceramic, and General
-Purpose}\label{capacitors-fixed-ceramic-and-general-purpose}
+\begin{table}
+\caption{\textbf{Environmental factor -} $\pi_{E}$}
+\label{table:environmentalFactor}
+\begin{tabular}{|c|c|c|c|} \hline
+\textbf{Environment} & $\pi_{E}$ \textbf{Fixed Composition} & $\pi_{E}$ \textbf{Fixed Film} & $\pi_{E}$ \textbf{Wirewound} \\ \hline
+$G_{B}$ & 1 & 1 & 1 \\  \hline
+$G_{F}$ & 3 & 2 & 2 \\ \hline
+$G_{M}$ & 8 & 8 & 11 \\ \hline
+$N_{S}$ & 5 & 4 & 5 \\ \hline
+$N_{U}$ & 13 & 14 & 18 \\ \hline
+$A_{IC}$ & 4 & 4 & 15 \\ \hline
+$A_{IF}$ & 5 & 8 & 18 \\ \hline
+$A_{UC}$ & 7 & 10 & 28 \\ \hline
+$A_{UF}$ & 11 & 18 & 35 \\ \hline
+$A_{RW}$ & 19 & 19 & 27 \\ \hline
+$S_{F}$ & 0.50 & 0.20 & 0.80 \\ \hline
+$M_{F}$ & 11 & 10 & 14 \\ \hline
+$M_{L}$ & 27 & 28 & 38 \\ \hline
+$C_{L}$ & 490 & 510 & 610 \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Capacitors: Fixed, Ceramic, and General Purpose}
+\label{subsection:capacitors-fixed-ceramic-and-general-purpose}
 
 The failure rate is given by the following relationship
+$$\lambda = \lambda{b} \Pi_{CV} \Pi_{Q} \Pi_{E} \frac{failures}{10^{6} hours}$$
 
-\includegraphics{Fig/media/image25.wmf} .
-
-For all factors \includegraphics{Fig/media/image26.wmf}ambient
-temperature (°C) and \includegraphics{Fig/media/image27.wmf}, where the
+For all factors $T$ = ambient temperature ($^\circ$C) and 
+$S=\frac{operating voltage}{rated voltage}$, where the
 operating voltage is the sum of the DC and peak AC voltage.
 
-\textbf{Base Failure Rate -} \includegraphics{Fig/media/image28.wmf}
+\begin{table}
+\caption{\textbf{Base Failure Rate -} $\lambda_{b}$}
+\label{table:baseFailureRate}
+\begin{tabular}{l}
+$\lambda_b = 0.0003 [\frac{S}{0.3}^{3}] exp [\frac{T+273}{358}]$ for T=85$^{circ}$C max rated \\ 
+$\lambda_b = 0.0003 [\frac{S}{0.3}^{3}] exp [\frac{T+273}{398}]$ for T=125$^{circ}$C max rated \\ 
+$\lambda_b = 0.0003 [\frac{S}{0.3}^{3}] exp [\frac{T+273}{423}]$ for T=150$^{circ}$C max rated \\ 
+\end{tabular}
+\end{table}
 
-\includegraphics{Fig/media/image29.wmf}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4619}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0807}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4574}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Capacitance Factor -} \includegraphics{Fig/media/image30.wmf}
+\begin{table}
+\caption{\textbf{Capacitance Factor -} $\Pi_{CV}$}
+\label{table:capacitanceFactor}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Quality} & $\Pi_{Q}$ \\ \hline
+S & 0.030 \\ \hline
+R & 0.10 \\ \hline
+P & 0.30 \\ \hline
+M & 1.0 \\ \hline
+L & 3.0 \\ \hline
+MIL & 3.0 \\ \hline
+Lower & 10 \\ \hline
+\end{tabular}
+\end{table}
 
-\includegraphics{Fig/media/image31.wmf}
+\begin{table}
+\caption{\textbf{Environmental Factor -} $\Pi_{E}$}
+\label{table:capacitanceFactor}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Environment} & $\Pi_{E}$ \\ \hline
+$G_{B}$ & 1 \\ \hline
+$G_{F}$ & 2 \\ \hline
+$G_{M}$ & 9 \\ \hline
+$N_{S}$ & 5 \\ \hline
+$N_{U}$ & 15 \\ \hline
+$A_{IC}$ & 4 \\ \hline
+$A_{IF}$ & 4 \\ \hline
+$A_{UC}$ & 8 \\ \hline
+$A_{UF}$ & 12 \\ \hline
+$A_{RW}$ & 20 \\ \hline
+$S_{F}$ & 0.40 \\ \hline
+$M_{F}$ & 13 \\ \hline
+$M_{L}$ & 34 \\ \hline
+$C_{L}$ & 610 \\ \hline
+\end{tabular}
+\end{table}
 
-\textbf{Quality Factor -} \includegraphics{Fig/media/image32.wmf}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5574}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4426}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Quality}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image33.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-S & 0.030 \\
-R & 0.10 \\
-P & 0.30 \\
-M & 1.0 \\
-L & 3.0 \\
-MIL & 3.0 \\
-Lower & 10 \\
-\end{longtable}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Environmental Factor -} \includegraphics{Fig/media/image34.wmf}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6519}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3481}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Environment}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image35.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-G\textsubscript{B} & 1 \\
-G\textsubscript{F} & 2 \\
-G\textsubscript{M} & 9 \\
-N\textsubscript{S} & 5 \\
-N\textsubscript{U} & 15 \\
-A\textsubscript{IC} & 4 \\
-A\textsubscript{IF} & 4 \\
-A\textsubscript{UC} & 8 \\
-A\textsubscript{UF} & 12 \\
-A\textsubscript{RW} & 20 \\
-S\textsubscript{F} & 0.40 \\
-M\textsubscript{F} & 13 \\
-M\textsubscript{L} & 34 \\
-C\textsubscript{L} & 610 \\
-\end{longtable}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
-
-\subsection{\texorpdfstring{\hfill\break
-Microelectronic
-Devices}{ Microelectronic Devices}}\label{microelectronic-devices}
+\section{Microelectronic Devices}
+\label{section:microelectronic-devices}
 
 For all microelectronic devices it is necessary to compute the junction
-temperature (\includegraphics{Fig/media/image36.wmf}) of the silicon in
-order to determine the temperature factor. The junction temperature is
-determined as follows:
+temperature ($T_{j}$) of the silicon in order to determine the temperature 
+factor. The junction temperature is determined as follows:
 
-\includegraphics{Fig/media/image37.wmf}
+$$T_{j} = T_{A} \theta_{jA} P_{D}$$
+$$T_A = $$ ambient temperature
+$$\theta_{jA} = $$junction to ambient thermal resistance (obtained from manufacture data sheet.)
+$$P_{D} = $$power dissipated inm the device
 
 \textbf{Author's Note:} The equations above are slightly different than
 those found in MIL-HDBK-217F. The junction to ambient thermal resistance
 is used here, instead of junction to case as in the original. In
 addition, the ambient temperature is used in place of the case
 temperature. This is more general and is consistent with the
-presentation in Chapter 8. The junction to case resistance could be
-used, along with the case temperature. See Section 8.2 for more detailed
+presentation in Chapter~\ref{chapter:systemReliability}. The junction to case 
+resistance could be used, along with the case temperature. See 
+Section~\ref{section:reliability-prediction} for more detailed
 coverage of this thermal model.
 
-The part quality descriptors in Table C.2 are used to find the quality
+The part quality descriptors in Table~\ref{table:partsQualityDescriptors} are used to find the quality
 factors.
 
-\textbf{Table C.2} Part quality descriptors for microelectronic devices.
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2140}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7860}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{JANTXV}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{table}
+\caption{Part quality descriptors for microelectronic devices.}
+\label{table:partsQualityDescriptors}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{JANTXV} & 
 Full device testing as specified by the MIL-S-19500 specification,
-including Screening and Groups A, B, and C.
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+including Screening and Groups A, B, and C. \\ \hline
 \textbf{JANTX} & Identical to JANTXV, except does not include the 100\%
-precap visual inspection contained in Screening. \\
+precap visual inspection contained in Screening. \\ \hline
 \textbf{JAN} & Testing as defined by MIL-S-19500, including Groups A, B,
-and C, but not including Screening. \\
-\textbf{Lower} & All hermetically packaged devices. \\
-\textbf{Plastic} & All devices encapsulated with organic materials. \\
-\end{longtable}
+and C, but not including Screening. \\ \hline
+\textbf{Lower} & All hermetically packaged devices. \\ \hline
+\textbf{Plastic} & All devices encapsulated with organic materials. \\ \hline
+\end{tabular}
+\end{table}
 
-\subsubsection{\texorpdfstring{\hfill\break
-Diodes: Low
-Frequency}{ Diodes: Low Frequency}}\label{diodes-low-frequency}
+
+\subsection{Diodes: Low Frequency}
+\label{subsection:diodes-low-frequency}
 
 The failure rate is given by the following relationship
 
-\includegraphics{Fig/media/image38.wmf}.
+$$\lambda = \lambda{b} \Pi_{R} \Pi_{Q} \Pi_{E} \frac{failures}{10^{6} hours}$$
 
-\textbf{Base Failure Rate -} \includegraphics{Fig/media/image39.wmf}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6494}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3506}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Diode Type/Application}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image40.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-General purpose analog & 0.0038 \\
-Switching & 0.0010 \\
-Power rectifier, fast recovery & 0.069 \\
-Power rectifier, Schottky power diode & 0.0030 \\
-Power rectifier with high voltage stacks & 0.0050/Junction \\
-Transient suppressor/varistor & 0.0013 \\
-Current regulator & 0.0034 \\
+\begin{table}
+\caption{\textbf{Base Failure Rate -} $\lambda_{b}$}
+\label{table:baseFailRateDiodeLow}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Diode Type/Application} & $\lambda_{b}$ \\ \hline
+General purpose analog & 0.0038 \\ \hline
+Switching & 0.0010 \\ \hline
+Power rectifier, fast recovery & 0.069 \\ \hline
+Power rectifier, Schottky power diode & 0.0030 \\ \hline
+Power rectifier with high voltage stacks & 0.0050/Junction \\ \hline
+Transient suppressor/varistor & 0.0013 \\ \hline
+Current regulator & 0.0034 \\ \hline
 Voltage regulator and voltage reference (avalanche and zener) &
-0.0020 \\
-\end{longtable}
+0.0020 \\ \hline
+\end{tabular}
+\end{table}
 
-\textbf{Temperature Factor -} \includegraphics{Fig/media/image41.wmf}
+\textbf{Temperature Factor -} $\Pi_{T}$
 
 For general purpose analog, switching, fast recovery, power rectifier,
 and transient suppressor applications
 
-\includegraphics{Fig/media/image42.wmf}.
+$$\Pi_{T} = exp[-3091(\frac{1}{T_{j} + 273} - \frac{1}{298})].$$
 
 For voltage regulator, voltage reference, and current regulator
 applications
 
-\includegraphics{Fig/media/image43.wmf}.
+$$\Pi_{T} = exp[-1925(\frac{1}{T_{j} + 273} - \frac{1}{298})].$$
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5899}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0590}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3510}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Electrical Stress Factor -}
-\includegraphics{Fig/media/image44.wmf}
 
-\includegraphics{Fig/media/image45.wmf}
+\begin{table}
+\caption{\textbf{Electrical Stress Factor -} $\Pi_{S}$}
+\label{table:electicalStressFactor}
+\begin{tabular}{|l|l|}
+$\Pi_s = 0.054$ 		& $V_{S} \leq 0.3$ \\ 
+$\Pi_s = V^{2.43}_{S}$ & $0.3 < V_{S} \leq 1$ \\
+\end{tabular}
+\end{table}
 
-\textbf{Quality Factor -} \includegraphics{Fig/media/image46.wmf}
+\begin{table}
+\caption{\textbf{Quality Factor -} $\Pi_{Q}$}
+\label{table:qualityFactorDiode}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Quality} & $\Pi_{Q}$ \\ \hline
+JANTXV & 0.7 \\ \hline
+JANTX & 1.0 \\ \hline
+JAN & 2.4 \\ \hline
+Lower & 5.5 \\ \hline
+Plastic & 8.0 \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5574}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4426}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Quality}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image47.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-JANTXV & 0.7 \\
-JANTX & 1.0 \\
-JAN & 2.4 \\
-Lower & 5.5 \\
-Plastic & 8.0 \\
-\end{longtable}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Contact Construction Factor -}
-\includegraphics{Fig/media/image48.wmf}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6690}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3310}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Contact Construction}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image49.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Metallurgically bonded & 1.0 \\
-Non-metallurgically bonded and spring loaded contacts & 2.0 \\
-\end{longtable}
+\begin{table}
+\caption{\textbf{Contact Construction Factor -} $\Pi_{C}$}
+\label{table:<context>}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Contact Construction} & $\Pi_{C}$ \\ \hline
+Metallurgically bonded & 1.0 \\ \hline
+Non-metallurgically bonded and spring loaded contacts & 2.0 \\ \hline\end{tabular}
+\end{table}
 
-\textbf{Environmental Factor -} \includegraphics{Fig/media/image50.wmf}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6519}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3481}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Environment}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image51.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-G\textsubscript{B} & 1 \\
-G\textsubscript{F} & 6 \\
-G\textsubscript{M} & 9 \\
-N\textsubscript{S} & 9 \\
-N\textsubscript{U} & 19 \\
-A\textsubscript{IC} & 13 \\
-A\textsubscript{IF} & 29 \\
-A\textsubscript{UC} & 20 \\
-A\textsubscript{UF} & 43 \\
-A\textsubscript{RW} & 24 \\
-S\textsubscript{F} & 0.50 \\
-M\textsubscript{F} & 14 \\
-M\textsubscript{L} & 32 \\
-C\textsubscript{L} & 320 \\
-\end{longtable}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
+\begin{table}
+\caption{
+\textbf{Environmental Factor -} $\Pi_{E}$}
+\label{table:enviroFactorDiode}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Environment} & $\Pi_{E}$ \\ \hline
+$G_{B}$ & 1 \\ \hline
+$G_{F}$ & 6 \\ \hline
+$G_{M}$ & 9 \\ \hline
+$N_{S}$ & 9 \\ \hline
+$N_{U}$ & 19 \\ \hline
+$A_{IC}$ & 13 \\ \hline
+$A_{IF}$ & 29 \\ \hline
+$A_{UC}$ & 20 \\ \hline
+$A_{UF}$ & 43 \\ \hline
+$A_{RW}$ & 24 \\ \hline
+$S_{F}$ & 0.50 \\ \hline
+$M_{F}$ & 14 \\ \hline
+$M_{L}$ & 32 \\ \hline
+$C_{L}$ & 320 \\ \hline
+\end{tabular}
+\end{table}
 
-\subsubsection{\texorpdfstring{\hfill\break
-Diodes: High Frequency (microwave,
-RF)}{ Diodes: High Frequency (microwave, RF)}}\label{diodes-high-frequency-microwave-rf}
+
+
+\subsection{Diodes: High Frequency (microwave, RF)}
+\label{subsection:diodes-high-frequency-microwave-rf}
 
 The failure rate is given by the following relationship
 
-\includegraphics{Fig/media/image52.wmf}.
+$$\lambda = \lambda{b} \Pi_{R} \Pi_{Q} \Pi_{E} \frac{failures}{10^{6} hours}$$
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4766}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0720}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4514}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Base Failure Rate -} \includegraphics{Fig/media/image53.wmf}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6964}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3036}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Diode Type}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image54.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Si IMPATT (\includegraphics{Fig/media/image55.wmf}GHz) & 0.22 \\
-Gunn/Bulk Effect & 0.18 \\
-Tunnel and Back & 0.0023 \\
-PIN & 0.0081 \\
-Schottky Barrier & 0.027 \\
-Varactor and Step Recovery & 0.0025 \\
-\end{longtable}
+\begin{table}
+\caption{\textbf{Base Failure Rate} - $\lambda_{b}$}
+\label{table:baseFailureRateDiodeHigh}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Diode Type} & $\lambda_{b}$ \\ \hline
+Si IMPATT $\leq 35$GHz) & 0.22 \\ \hline
+Gunn/Bulk Effect & 0.18 \\ \hline
+Tunnel and Back & 0.0023 \\ \hline
+PIN & 0.0081 \\ \hline
+Schottky Barrier & 0.027 \\ \hline
+Varactor and Step Recovery & 0.0025 \\ \hline
+\end{tabular}
+\end{table}
 
-\textbf{Application Factor -} \includegraphics{Fig/media/image56.wmf}
+\begin{table}
+\caption{\textbf{Application Factor -} $\Pi_{A}$}
+\label{table:applicationFactorHigh}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Application} & $\Pi_{A}$ \\ \hline
+Varactor, voltage control & 0.50 \\ \hline
+Varactor, multiplier & 2.5 \\ \hline
+All other diodes & 1.0 \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6865}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3135}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Application}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image57.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Varactor, voltage control & 0.50 \\
-Varactor, multiplier & 2.5 \\
-All other diodes & 1.0 \\
-\end{longtable}
+\begin{table}
+\caption{\textbf{Quality Factor -} $\Pi_{Q}$}
+\label{table:applicationFactorHigh}
+\begin{tabular}{|c|c|c|} \hline
+\textbf{Quality} & \textbf{Not Shottky} & \textbf{Shottky} \\ \hline
+JANTXV & 0.5 & 0.5 \\ \hline
+JANTX & 1.0 & 1.0 \\ \hline
+JAN & 5.0 & 1.8 \\ \hline
+Lower & 25.0 & 2.5 \\ \hline
+Plastic & 50.0 & - \\ \hline
+\end{tabular}
+\end{table}
 
-\textbf{Quality Factor -} \includegraphics{Fig/media/image58.wmf}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3200}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3800}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3000}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Quality}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image59.wmf}
+\begin{table}
+\caption{\textbf{Temperature Factor -} $\Pi_{T}$  }
+\label{table:temperatureFactorHigh}
+\begin{tabular}{l l}  
+All types except IMPATT & and for IMPATT \\
+$\Pi_{T} = exp[-2100(\frac{1}{T_{J}} - \frac{1}{298})]$ & 
+$\Pi_{T} = exp[-5260(\frac{1}{T_{J}} - \frac{1}{298})]$ \\ 
+\end{tabular}
+\end{table}
 
-\textbf{Not Shottky}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image60.wmf}
 
-\textbf{Shottky}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-JANTXV & 0.5 & 0.5 \\
-JANTX & 1.0 & 1.0 \\
-JAN & 5.0 & 1.8 \\
-Lower & 25.0 & 2.5 \\
-Plastic & 50.0 & - \\
-\end{longtable}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Temperature Factor -} \includegraphics{Fig/media/image61.wmf}
 
-All types except IMPATT
 
-\includegraphics{Fig/media/image62.wmf},
-
-and for IMPATT
 
 \includegraphics{Fig/media/image63.wmf}.
 
