@@ -439,849 +439,482 @@ $\Pi_{T} = exp[-5260(\frac{1}{T_{J}} - \frac{1}{298})]$ \\
 \end{table}
 
 
+\begin{table}
+\caption{\textbf{Power Rating Factor -} $\Pi_{R}$}
+\label{table:powerRatingFactorFast}
+\begin{tabular}{l} 
+$\Pi_{R} = 0.326ln(P)-0.25$ for PIN diodes
+$\Pi_{R} = 1.0$ for all other diodes
+\end{tabular}
+\end{table}
 
+\begin{table}
+\caption{\textbf{Environmental Factor -} $\Pi_{R}$}
+\label{table:environmentalFactorFast}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Environmental Factor -} & $\Pi_{E}$ \\ \hline
+$G_{B}$ & 1 \\ \hline
+$G_{F}$ & 2 \\ \hline
+$G_{M}$ & 5 \\ \hline
+$N_{S}$ & 4 \\ \hline
+$N_{U}$ & 11 \\ \hline
+$A_{IC}$ & 4 \\ \hline
+$A_{IF}$ & 5 \\ \hline
+$A_{UC}$ & 7 \\ \hline
+$A_{UF}$ & 12 \\ \hline
+$A_{RW}$ & 16 \\ \hline
+$S_{F}$ & 0.5 \\ \hline
+$M_{F}$ & 9 \\ \hline
+$M_{L}$ & 24 \\ \hline
+$C_{L}$ & 250 \\ \hline
+\end{tabular}
+\end{table}
 
-
-\includegraphics{Fig/media/image63.wmf}.
-
-\textbf{Power Rating Factor -} \includegraphics{Fig/media/image64.wmf}
-
-\includegraphics{Fig/media/image65.wmf}
-
-\textbf{Environmental Factor -} \includegraphics{Fig/media/image66.wmf}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6675}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3325}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Environment}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image67.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-G\textsubscript{B} & 1 \\
-G\textsubscript{F} & 2 \\
-G\textsubscript{M} & 5 \\
-N\textsubscript{S} & 4 \\
-N\textsubscript{U} & 11 \\
-A\textsubscript{IC} & 4 \\
-A\textsubscript{IF} & 5 \\
-A\textsubscript{UC} & 7 \\
-A\textsubscript{UF} & 12 \\
-A\textsubscript{RW} & 16 \\
-S\textsubscript{F} & 0.5 \\
-M\textsubscript{F} & 9 \\
-M\textsubscript{L} & 24 \\
-C\textsubscript{L} & 250 \\
-\end{longtable}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
-
-\subsubsection{\texorpdfstring{\hfill\break
-Transistors: Bipolar Junction, Low Frequency (≤
-200MHz)}{ Transistors: Bipolar Junction, Low Frequency (≤ 200MHz)}}\label{transistors-bipolar-junction-low-frequency-200mhz}
+\subsection{Transistors: Bipolar Junction, Low Frequency ($leq 200$MHz)}
+\label{subsection:transistors-bipolar-junction-low-frequency-200mhz}
 
 The failure rate is given by the following relationship
 
-\includegraphics{Fig/media/image68.wmf}.
+$$\lambda_{b} \Pi_T \Pi_A \Pi_R \Pi_S \Pi_Q \Pi_E \frac{failures}{10^6 hours}$$.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5301}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0689}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4010}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Base Failure Rate -} \includegraphics{Fig/media/image69.wmf}
+\begin{table}
+\caption{\textbf{Base Failure Rate -} $\lambda_{b}$}
+\label{table:baseFailureRateTransSlow}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Type} & $\lambda_{b}$ \\ \hline
+NPN or PNP & 0.00074 \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6164}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3836}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Type}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image70.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-NPN or PNP & 0.00074 \\
-\end{longtable}
+\begin{table}
+\caption{\textbf{Temperature Factor -} $\Pi_{T}$}
+\label{table:tempFactorTransSlow}
+\begin{tabular}{l} 
+$\Pi_{T} = exp[-2114(\frac{1}{T_{j} + 273} - frac{1}{298})]$
+\end{tabular}
+\end{table}
 
-\textbf{Temperature Factor -} \includegraphics{Fig/media/image71.wmf}
+\begin{table}
+\caption{\textbf{Voltage Stress Factor -} $\Pi_{S}$}
+\label{table:voltStressFactorTransSlow}
+\begin{tabular}{l} 
+$\Pi_{S} = 0.045exp(3/1V_{S}) 0 \leq V_{S} \leq 1$
+$V_{S} = \frac{applied V_{CE}}{rated V_{CEO}}$
+$V_{CE} =$ voltage collector to emitter
+$V_{CEO} = $ voltage collector to emitter, base open
+\end{tabular}
+\end{table}
 
-\includegraphics{Fig/media/image72.wmf}
+\begin{table}
+\caption{\textbf{Part Quality Factor -} $\Pi_{R}$}
+\label{table:partQualityFactorTransSlow}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Quality} & $\Pi_{Q}$ \\ \hline
+JANTXV & 0.7 \\ \hline
+JANTX & 1.0 \\ \hline
+JAN & 2.4 \\ \hline
+Lower & 5.5 \\ \hline
+Plastic & 8.0 \\ \hline
+\end{tabular}
+\end{table}
 
-\textbf{Application Factor -} \includegraphics{Fig/media/image73.wmf}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7360}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2640}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Application}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image74.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Linear Amplification & 1.50 \\
-Switching & 0.70 \\
-\end{longtable}
+\begin{table}
+\caption{\textbf{Environmental Factor -} $\Pi_{E}$}
+\label{table:enviroFactorTranSlow}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Environment} & $\Pi_{E}$ \\ \hline
+$G_{B}$ & 1 \\ \hline
+$G_{F}$ & 6 \\ \hline
+$G_{M}$ & 9 \\ \hline
+$N_{S}$ & 9 \\ \hline
+$N_{U}$ & 19 \\ \hline
+$A_{IC}$ & 13 \\ \hline
+$A_{IF}$ & 29 \\ \hline
+$A_{UC}$ & 20 \\ \hline
+$A_{UF}$ & 43 \\ \hline
+$A_{RW}$ & 24 \\ \hline
+$S_{F}$ & 0.50 \\ \hline
+$M_{F}$ & 14 \\ \hline
+$M_{L}$ & 32 \\ \hline
+$C_{L}$ & 320 \\ \hline
+\end{tabular}
+\end{table}
 
-\textbf{Power Rating Factor -} \includegraphics{Fig/media/image75.wmf}
-
-\includegraphics{Fig/media/image76.wmf}
-
-\textbf{Voltage Stress Factor -} \includegraphics{Fig/media/image77.wmf}
-
-\includegraphics{Fig/media/image78.wmf}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Part Quality Factor -} \includegraphics{Fig/media/image79.wmf}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6364}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3636}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Quality}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image80.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-JANTXV & 0.7 \\
-JANTX & 1.0 \\
-JAN & 2.4 \\
-Lower & 5.5 \\
-Plastic & 8.0 \\
-\end{longtable}
-
-\textbf{Environmental Factor -} \includegraphics{Fig/media/image81.wmf}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7079}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2921}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Environment}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image82.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-G\textsubscript{B} & 1 \\
-G\textsubscript{F} & 6 \\
-G\textsubscript{M} & 9 \\
-N\textsubscript{S} & 9 \\
-N\textsubscript{U} & 19 \\
-A\textsubscript{IC} & 13 \\
-A\textsubscript{IF} & 29 \\
-A\textsubscript{UC} & 20 \\
-A\textsubscript{UF} & 43 \\
-A\textsubscript{RW} & 24 \\
-S\textsubscript{F} & 0.50 \\
-M\textsubscript{F} & 14 \\
-M\textsubscript{L} & 32 \\
-C\textsubscript{L} & 320 \\
-\end{longtable}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
-
-\subsubsection{\texorpdfstring{\hfill\break
-Transistors: Bipolar Junction, High Frequency (\textgreater{} 200MHz),
-Low Noise (Power ≤
-1W)}{ Transistors: Bipolar Junction, High Frequency (\textgreater{} 200MHz), Low Noise (Power ≤ 1W)}}\label{transistors-bipolar-junction-high-frequency-200mhz-low-noise-power-1w}
+\subsection{Transistors: Bipolar Junction, High Frequency ($\leq 200$MHz), Low Noise (Power $\leq 1$W}
+\label{subsection:transistors-bipolar-junction-high-frequency-200mhz-low-noise-power-1w}
 
 The failure rate is given by the following relationship
 
-\includegraphics{Fig/media/image83.wmf}.
+$$\lambda{b} \Pi_{T} \Pi_{R} \Pi_{S} \Pi_{Q} \Pi_{E} \frac{failures}{10^{6} hours}$$
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4076}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0623}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5301}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Base Failure Rate -} \includegraphics{Fig/media/image69.wmf}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6196}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3804}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Type}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image84.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-All types & 0.18 \\
-\end{longtable}
 
-\textbf{Power Rating Factor -} \includegraphics{Fig/media/image75.wmf}
+\begin{table}
+\caption{\textbf{Base Failure Rate -} $\lambda_{b}$}
+\label{table:baseFaileRateBjtHigh}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Type} & $\lambda_{b}$ \\ \hline
+All types & 0.18 \\ \hline
+\end{tabular}
+\end{table}
 
-\includegraphics{Fig/media/image85.wmf}
+\begin{table}
+\caption{\textbf{Power Rating Factor -} $\Pi_{R}$}
+\label{table:powerRateFactorBjtHigh}
+\begin{tabular}{l} \hline
+$\Pi_{R} = 0.43$ if $P_{R} \leq 0.1W$ \\
+$\Pi_{R} = P^{0.37}_{R}$ if $P_{R} \leq 0.1W$ \\
+where $P_{R} = $ rated power
+\end{tabular}
+\end{table}
 
-\textbf{Part Quality Factor -} \includegraphics{Fig/media/image79.wmf}
+\begin{table}
+\caption{\textbf{Part Quality Factor -} $\Pi_{Q}$}
+\label{table:baseFaileRateBjtHigh}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Quality} & $\Pi_{Q}$ \\ \hline
+JANTXV & 0.5 \\ \hline
+JANTX & 1.0 \\ \hline
+JAN & 2.0 \\ \hline
+Lower & 5.0 \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6364}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3636}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Quality}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image80.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-JANTXV & 0.5 \\
-JANTX & 1.0 \\
-JAN & 2.0 \\
-Lower & 5.0 \\
-\end{longtable}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Temperature Factor -} \includegraphics{Fig/media/image86.wmf}
 
-\includegraphics{Fig/media/image87.wmf}
+\begin{table}
+\caption{\textbf{Temperature Factor -} $\Pi_{T}$}
+\label{table:tempFactorBjtHigh}
+\begin{tabular}{l} \hline
+$\Pi_{T} = exp[-2114(\frac{1}{T_j + 273} - \frac{1}{298})]$
+\end{tabular}
+\end{table}
 
-\textbf{Voltage Stress Factor -} \includegraphics{Fig/media/image77.wmf}
 
-\includegraphics{Fig/media/image88.wmf}
+\begin{table}
+\caption{\textbf{Voltage Stress Factor -} $\Pi_{S}$}
+\label{table:voltStressFactorTransHigh}
+\begin{tabular}{l} 
+$\Pi_{S} = 0.045exp(3/1V_{S}) 0 \leq V_{S} \leq 1$
+$V_{S} = \frac{applied V_{CE}}{rated V_{CEO}}$
+$V_{CE} =$ voltage collector to emitter
+$V_{CEO} = $ voltage collector to emitter, base open
+\end{tabular}
+\end{table}
 
-\textbf{Environmental Factor -} \includegraphics{Fig/media/image89.wmf}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7079}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2921}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Environment}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image90.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-G\textsubscript{B} & 1 \\
-G\textsubscript{F} & 2 \\
-G\textsubscript{M} & 5 \\
-N\textsubscript{S} & 4 \\
-N\textsubscript{U} & 11 \\
-A\textsubscript{IC} & 4 \\
-A\textsubscript{IF} & 5 \\
-A\textsubscript{UC} & 7 \\
-A\textsubscript{UF} & 12 \\
-A\textsubscript{RW} & 16 \\
-S\textsubscript{F} & 0.50 \\
-M\textsubscript{F} & 9 \\
-M\textsubscript{L} & 24 \\
-C\textsubscript{L} & 250 \\
-\end{longtable}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
+\begin{table}
+\caption{\textbf{Environmental Factor -} $\Pi_{E}$}
+\label{table:enviroFactorTransHigh}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Environment} & $\Pi_{E}$ \\ \hline
+$G_{B}$ & 1 \\ \hline
+$G_{F}$ & 2 \\ \hline
+$G_{M}$ & 5 \\ \hline
+$N_{S}$ & 4 \\ \hline
+$N_{U}$ & 11 \\ \hline
+$A_{IC}$ & 4 \\ \hline
+$A_{IF}$ & 5 \\ \hline
+$A_{UC}$ & 7 \\ \hline
+$A_{UF}$ & 12 \\ \hline
+$A_{RW}$ & 16 \\ \hline
+$S_{F}$ & 0.50 \\ \hline
+$M_{F}$ & 9 \\ \hline
+$M_{L}$ & 24 \\ \hline
+$C_{L}$ & 250 \\ \hline
+\end{tabular}
+\end{table}
 
-\subsubsection{\texorpdfstring{\hfill\break
-Transistors: Field Effect, Low Frequency (≤
-400MHz)}{ Transistors: Field Effect, Low Frequency (≤ 400MHz)}}\label{transistors-field-effect-low-frequency-400mhz}
+
+
+
+\subsection{Transistors: Field Effect, Low Frequency ($\leq 400$Hz)}
+\label{subsection:transistors-field-effect-low-frequency-400mhz}
 
 The failure rate is given by the following relationship
 
-\includegraphics{Fig/media/image91.wmf}.
+$$\lambda = \lambda{b} \Pi_{T} \Pi_{A} \Pi_{Q} \Pi_{E} \frac{failures}{10^{6} hours}$$
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4619}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0807}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4574}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Base Failure Rate -} \includegraphics{Fig/media/image92.wmf}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5528}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4472}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Type}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image93.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-MOSFET & 0.012 \\
-JFET & 0.0045 \\
-\end{longtable}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Temperature Factor -} \includegraphics{Fig/media/image94.wmf}
+\begin{table}
+\caption{\textbf{Base Failure Rate -} $\lambda_{b}$}
+\label{table:baseFailRateMosLow}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Type} & $\lambda_{b}$ \\ \hline
+MOSFET & 0.012 \\ \hline
+JFET & 0.0045 \\ \hline
+\end{tabular}
+\end{table}
 
-\includegraphics{Fig/media/image95.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3743}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2665}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3592}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Application Factor -} \includegraphics{Fig/media/image96.wmf}
+\begin{table}
+\caption{\textbf{Temperature Factor -} $\Pi_{T}$}
+\label{table:tempFactorMosLow}
+\begin{tabular}{l} \hline
+$\Pi_{T} = exp[-1925(\frac{1}{T_j + 273} - \frac{1}{298})]$ \\
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6948}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3052}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Application (}\includegraphics{Fig/media/image97.wmf}rated
-output power)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image98.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Linear Amplification (\includegraphics{Fig/media/image99.wmf}\textbf{)}
 
-Small Signal
+\begin{table}
+\caption{\textbf{Application Factor -}  $Pi_{A}$}
+\label{table:baseFailRateMosLow}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Application} ($P_{R} = $ rated output power) & $\Pi_{A}$ \\ \hline
+Linear Amplification  ($P_{R} < 2$W) & 1.50 \\
+Small Signal Switching & 0.70 \\ \hline
+Power FETs (Non-linear, $P_{R} < 2$W) & \\
+$2 \leq P_{R} < 5$W & 2.0 \\ 
+$5 \leq P_{R} < 50$W & 4.0 \\ 
+$50 \leq P_{R} < 250$W & 8.0 \\ 
+$P_{R} < 250$W & 10.0 \\ 
+\end{tabular}
+\end{table}
 
-Switching & 1.50
 
-0.70 \\
-Power FETs
+\begin{table}
+\caption{\textbf{Part Quality  Factor -}  $Pi_{Q}$}
+\label{table:baseFailRateMosLow}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Quality} & $\Pi_{Q}$ \\ \hline
+JANTXV & 0.7 \\ \hline
+JANTX & 1.0 \\ \hline
+JAN & 2.4 \\ \hline
+Lower & 5.5 \\ \hline
+Plastic & 8.0 \\ \hline
+\end{tabular}
+\end{table}
 
-(Non-linear, \includegraphics{Fig/media/image100.wmf}\textbf{)}
 
-\includegraphics{Fig/media/image101.wmf} &
-\includegraphics{Fig/media/image102.wmf} \\
-\end{longtable}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Part Quality Factor -} \includegraphics{Fig/media/image103.wmf}
+\begin{table}
+\caption{\textbf{Environmental Factor -} $\Pi_{E}$}
+\label{table:envFactorMosLow}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Environment} & $\Pi_{E}$ \\ \hline
+$G_{B}$ & 1 \\ \hline
+$G_{F}$ & 6 \\ \hline
+$G_{M}$ & 9 \\ \hline
+$N_{S}$ & 9 \\ \hline
+$N_{U}$ & 19 \\ \hline
+$A_{IC}$ & 13 \\ \hline
+$A_{IF}$ & 29 \\ \hline
+$A_{UC}$ & 20 \\ \hline
+$A_{UF}$ & 43 \\ \hline
+$A_{RW}$ & 24 \\ \hline
+$S_{F}$ & 0.50 \\ \hline
+$M_{F}$ & 14 \\ \hline
+$M_{L}$ & 32 \\ \hline
+$C_{L}$ & 320 \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6539}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3461}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Quality}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image104.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-JANTXV & 0.7 \\
-JANTX & 1.0 \\
-JAN & 2.4 \\
-Lower & 5.5 \\
-Plastic & 8.0 \\
-\end{longtable}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Environmental Factor -} \includegraphics{Fig/media/image105.wmf}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7079}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2921}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Environment}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image106.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-G\textsubscript{B} & 1 \\
-G\textsubscript{F} & 6 \\
-G\textsubscript{M} & 9 \\
-N\textsubscript{S} & 9 \\
-N\textsubscript{U} & 19 \\
-A\textsubscript{IC} & 13 \\
-A\textsubscript{IF} & 29 \\
-A\textsubscript{UC} & 20 \\
-A\textsubscript{UF} & 43 \\
-A\textsubscript{RW} & 24 \\
-S\textsubscript{F} & 0.50 \\
-M\textsubscript{F} & 14 \\
-M\textsubscript{L} & 32 \\
-C\textsubscript{L} & 320 \\
-\end{longtable}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
 
-\subsubsection{\texorpdfstring{\hfill\break
-Transistors: Field Effect, High Frequency (\textgreater{} 400MHz), Low
-Power (≤
-300mW)}{ Transistors: Field Effect, High Frequency (\textgreater{} 400MHz), Low Power (≤ 300mW)}}\label{transistors-field-effect-high-frequency-400mhz-low-power-300mw}
+\subsection{Transistors: Field Effect, High Frequency ($> 400$MHz), Low Power ($\leq 300$mW)}
+\label{subsection:transistors-field-effect-high-frequency-400mhz-low-power-300mw}
 
-The failure rate is given by the following relationship
+$$\lambda = \lambda{b} \Pi_{T} \Pi_{Q} \Pi_{E} \frac{failures}{10^{6} hours}$$
 
-\includegraphics{Fig/media/image107.wmf}.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4619}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0807}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4574}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Base Failure Rate -} \includegraphics{Fig/media/image108.wmf}
+\begin{table}
+\caption{\textbf{Base Failure Rate -} $\lambda_{b}$}
+\label{table:baseFailRateMosHigh}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Type} & $\lambda_{b}$ \\ \hline
+MOSFET & 0.060 \\ \hline
+JFET & 0.023 \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7071}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2929}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Type}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image109.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-MOSFET & 0.060 \\
-JFET & 0.023 \\
-\end{longtable}
 
-\textbf{Temperature Factor -} \includegraphics{Fig/media/image110.wmf}
+\begin{table}
+\caption{\textbf{Temperature Factor -} $\Pi_{T}$}
+\label{table:tempFactorMosHigh}
+\begin{tabular}{l} \hline
+$\Pi_{T} = exp[-1925(\frac{1}{T_j + 273} - \frac{1}{298})]$ \\
+\end{tabular}
+\end{table}
 
-\includegraphics{Fig/media/image111.wmf}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Part Quality Factor -} \includegraphics{Fig/media/image112.wmf}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6488}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3512}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Quality}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image113.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-JANTXV & 0.5 \\
-JANTX & 1.0 \\
-JAN & 2.0 \\
-Lower & 5.0 \\
-\end{longtable}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
 
-\textbf{Environmental Factor -} \includegraphics{Fig/media/image114.wmf}
+\begin{table}
+\caption{\textbf{Part Quality  Factor -}  $Pi_{Q}$}
+\label{table:baseFailRateMosHigh}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Quality} & $\Pi_{Q}$ \\ \hline
+JANTXV & 0.5 \\ \hline
+JANTX & 1.0 \\ \hline
+JAN & 2.0 \\ \hline
+Lower & 5.0 \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7079}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2921}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Environment}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image115.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-G\textsubscript{B} & 1 \\
-G\textsubscript{F} & 2 \\
-G\textsubscript{M} & 5 \\
-N\textsubscript{S} & 4 \\
-N\textsubscript{U} & 11 \\
-A\textsubscript{IC} & 4 \\
-A\textsubscript{IF} & 5 \\
-A\textsubscript{UC} & 7 \\
-A\textsubscript{UF} & 12 \\
-A\textsubscript{RW} & 16 \\
-S\textsubscript{F} & 0.50 \\
-M\textsubscript{F} & 9 \\
-M\textsubscript{L} & 24 \\
-C\textsubscript{L} & 250 \\
-\end{longtable}
 
-\subsubsection{Microcircuits: Gate/Logic Arrays and
-Microprocessors}\label{microcircuits-gatelogic-arrays-and-microprocessors}
+\begin{table}
+\caption{\textbf{Environmental Factor -} $\Pi_{E}$}
+\label{table:envFactorMosLow}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Environment} & $\Pi_{E}$ \\ \hline
+$G_{B}$ & 1 \\ \hline
+$G_{F}$ & 2 \\ \hline
+$G_{M}$ & 5 \\ \hline
+$N_{S}$ & 4 \\ \hline
+$N_{U}$ & 11 \\ \hline
+$A_{IC}$ & 4 \\ \hline
+$A_{IF}$ & 5 \\ \hline
+$A_{UC}$ & 7 \\ \hline
+$A_{UF}$ & 12 \\ \hline
+$A_{RW}$ & 16 \\ \hline
+$S_{F}$ & 0.50 \\ \hline
+$M_{F}$ & 9 \\ \hline
+$M_{L}$ & 24 \\ \hline
+$C_{L}$ & 250 \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Microcircuits: Gate/Logic Arrays and Microprocessors}
+\label{subsection:microcircuits-gatelogic-arrays-and-microprocessors}
 
 Includes the following devices:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\item
-  Bipolar devices, Digital and Linear Gate/Logic Arrays
-\item
-  MOS Devices, Digital and Linear Gate/Logic Arrays
-\item
-  Field Programmable Logic Array (PLA) and Programmable Array Logic
-  (PAL)
-\item
-  Microprocessors
+\item  Bipolar devices, Digital and Linear Gate/Logic Arrays
+\item  MOS Devices, Digital and Linear Gate/Logic Arrays
+\item  Field Programmable Logic Array (PLA) and Programmable Array Logic (PAL)
+\item  Microprocessors
 \end{enumerate}
 
 The failure rate is given by the following relationship
 
-\includegraphics{Fig/media/image116.wmf} .
-
-\includegraphics{Fig/media/image117.wmf} = \textbf{Complexity Failure
-Rate for Bipolar Devices (Digital and Linear Gate/Logic)}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2212}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1152}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1935}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1106}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1843}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1751}}@{}}
-\toprule\noalign{}
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3364} + 2\tabcolsep}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Digital}
-\end{minipage}} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3041} + 2\tabcolsep}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Linear}
-\end{minipage}} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3594} + 2\tabcolsep}@{}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{PLA/PAL}
-\end{minipage}} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-No. Gates & \includegraphics{Fig/media/image118.wmf} & No. Transistors &
-\includegraphics{Fig/media/image119.wmf} & No. Gates &
-\includegraphics{Fig/media/image120.wmf} \\
-1 to 100
+$$\lambda = (C_{1}\Pi_{T} + C_{2}\Pi_{E}) \Pi_{Q} \Pi_{L} \frac{failures}{10^6 hours}$$
+
+
+
+\begin{table}
+\caption{ $C_{1} = $ \textbf{Complexity Failure Rate for Bipolar Devices (Digital and Linear Gate/Logic)}}
+\label{table:complexFailureRateBjt}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+\multicolumn{2}{|c|}{\textbf{Digital}} 	& \multicolumn{2}{|c|}{\textbf{Linear}} & \multicolumn{2}{|c|}{\textbf{PLA/PAL}} \\ \hline
+No. Gates & $C_{1}$ & No. Transistors &$C_{1}$ & No. Gates & $C_{1}$ \\ \hline
+1 to 100 			& 0.0025 			& 1 to 100 		& 0.010 		& Up to 200 		& 0.010 		\\ \hline
+101 to 1,000		& 0.0050 			& 101 to 100 		& 0.020 		& 201 to 1,000 	& 0.010 		\\ \hline
+1,001 to 3,000		& 0.010				& 301 to 100 		& 0.040 		& 1,001 to 5,000 	& 0.010 		\\ \hline
+3,001 to 10,000 	& 0.020 				& 1,001 to 100 	& 0.080 		& 				&			\\ \hline
+10,001 to 30,000	& 0.040 				& 							& 				&			\\ \hline
+30,001 to 60,000	& 0.080 				& 							& 				&			\\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+\begin{table}
+\caption{ $C_{1} = $  \textbf{Complexity Failure Rate for MOS Devices (Digital and Linear Gate/Logic)}}
+\label{table:complexFailureRateIc}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+\multicolumn{2}{|c|}{\textbf{Digital}} & \multicolumn{2}{|c|}{\textbf{Linear}} & \multicolumn{2}{|c|}{\textbf{PLA/PAL}} \\ \hline
+No. Gates & $C_{1}$ & No. Transistors &$C_{1}$ & No. Gates & $C_{1}$ \\ \hline
+1 to 100 			& 0.010 			& 1 to 100 		& 0.010 		& Up to 500 			& 0.00085 	\\ \hline
+101 to 1,000		& 0.020 			& 101 to 100 		& 0.020 		& 501 to 1,000 		& 0.0017 	\\ \hline
+1,001 to 3,000		& 0.040			& 301 to 100 		& 0.040 		& 1,001 to 5,000 		& 0.0034 	\\ \hline
+3,001 to 10,000 	& 0.080 			& 1,001 to 100 	& 0.060 		& 5,000 to 20,000		& 0.0068		\\ \hline
+10,001 to 30,000	& 0.16 			& 							&					&			 \\ \hline
+30,001 to 60,000	& 0.29 			& 							& 					&			\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{ $C_{1} = $  \textbf{Complexity Failure Rate for Microprocessors}}
+\label{table:complexFailureRateMicro}
+\begin{tabular}{|c|c|c||} \hline
+\textbf{Number of Bits} & $C_{1}$ \textbf{- Bipolar} & $C_{1}$  \textbf{- MOS} \\ \hline
+Up to 8 		& 0.060		&	0.14 		\\ \hline
+Up to 16		& 0.12		& 	0.28		\\	\hline
+Up to 32 		& 0.24		&	0.56		\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{ $C_{2} =$ \textbf{Package Failure Rate for all microcircuits.} $N_{p}$ \textbf{= number of pins on package.}}
+\label{table:packageFailRateIc}
+\begin{tabular}{|l|} \hline
+$C_{2} = 2.8 x 10^{-4} (N_{p})^1.08$, Hermetic: DIPs with solder or weld seal, SMT 			\\
+$C_{2} = 9.0 x 10^{-5} (N_{p})^1.51$, DIPs with glass seal		\\
+$C_{2} = 3.0 x 10^{-5} (N_{p})^1.82$, Flatpacks with axial leads on 50 mil centers		\\
+$C_{2} = 2.8 x 10^{-4} (N_{p})^2.01$, Cans			\\
+$C_{2} = 3.0 x 10^{-5} (N_{p})^1.08$,Nonhermetic: DIPs PGA, SMT (leaded and nonleaded)			\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{\textbf{Temperature Factor -} $\Pi_{T}$}
+\label{table:tempFactorIc}
+\begin{tabular}{l} \hline
+$\Pi_{T} = 0.1xexp[-(\frac{E_{a}}{8.617x10^{-5}} (\frac{1}{T_j + 273} - \frac{1}{298})]$ \\
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{ The activation energy ($E_{a}$) for different technologies are given in the table below.}
+\label{activationEnergyIc}
+\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+\textbf{Technology}& 
+\textbf{TTL, ASTLL, CML, HTTL, FTLL, DTL, ECL, ALSTTL} &
+\textbf{F, LTTL, STTL} &
+\textbf{BiCMOS LSTTL} &
+\textbf{Digital MOS, VHSIC CMOS} &
+\textbf{Linear (Bipolar and MOS)}& 
+\textbf{Memories (Bipolar and MOS), NMOS} \\ \hline
+$E_{a}$ & 0.4 & 0.45 & 0.5 & 0.35 & 0.65 & 0.6 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{\textbf{Learning Factor -} $\Pi_{L}$}
+\label{table:learningFactorIc}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Years in Production} & $\Pi_{L}$ \\ \hline
+$\leq 0.1$ & 2.0 \\ \hline
+0.5 & 1.8 \\ \hline
+1.0 & 1.5 \\ \hline
+1.5 & 1.2 \\ \hline
+$\geq 2.0$ & 1.0 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}
+\caption{\textbf{Part Quality  Factor -} $\Pi_{Q}$}
+\label{table:partQualityFactorIc}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Quality} & $\Pi_{Q}$ \\ \hline
+S & 0.25 \\ \hline
+B & 1.0 \\ \hline
+B-1 & 2.0 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}
+\caption{\textbf{Environmental Factor -} $\Pi_{E}$}
+\label{table:envFactorIc}
+\begin{tabular}{|l|m{10cm}|} \hline
+\textbf{Environment} & $\Pi_{E}$ \\ \hline
+$G_{B}$ & 0.50 \\ \hline
+$G_{F}$ & 2 \\ \hline
+$G_{M}$ & 4 \\ \hline
+$N_{S}$ & 4 \\ \hline
+$N_{U}$ & 6 \\ \hline
+$A_{IC}$ & 4 \\ \hline
+$A_{IF}$ & 5 \\ \hline
+$A_{UC}$ & 5 \\ \hline
+$A_{UF}$ & 8 \\ \hline
+$A_{RW}$ & 8 \\ \hline
+$S_{F}$ & 0.50 \\ \hline
+$M_{F}$ & 5 \\ \hline
+$M_{L}$ & 12 \\ \hline
+$C_{L}$ & 220 \\ \hline
+\end{tabular}
+\end{table}
 
-101 to 1,000
-
-1,001 to 3,000
-
-3,001 to 10,000
-
-10,001 to 30,000
-
-30,001 to 60,000 & 0.0025
-
-0.0050
-
-0.010
-
-0.020
-
-0.040
-
-0.080 & 1 to 100
-
-101 to 300
-
-301 to 1,000
-
-1,001 to 10,000 & 0.010
-
-0.020
-
-0.040
-
-0.060 & Up to 200
-
-201 to 1,000
-
-1,001 to 5,000 & 0.010
-
-0.021
-
-0.042 \\
-\end{longtable}
-
-\includegraphics{Fig/media/image121.wmf} = \textbf{Complexity Failure
-Rate for MOS Devices (Digital and Linear Gate/Logic)}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2192}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1142}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1918}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1096}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1826}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1826}}@{}}
-\toprule\noalign{}
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3333} + 2\tabcolsep}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Digital}
-\end{minipage}} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3014} + 2\tabcolsep}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Linear}
-\end{minipage}} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3653} + 2\tabcolsep}@{}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{MOS}
-\end{minipage}} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-No. Gates & \includegraphics{Fig/media/image122.wmf} & No. Transistors &
-\includegraphics{Fig/media/image122.wmf} & No. Gates &
-\includegraphics{Fig/media/image122.wmf} \\
-1 to 100
-
-101 to 1,000
-
-1,001 to 3,000
-
-3,001 to 10,000
-
-10,001 to 30,000
-
-30,001 to 60,000 & 0.010
-
-0.020
-
-0.040
-
-0.080
-
-0.16
-
-0.29 & 1 to 100
-
-101 to 300
-
-301 to 1,000
-
-1,001 to 10,000 & 0.010
-
-0.020
-
-0.040
-
-0.060 & Up to 500
-
-501 to 1,000
-
-1,001 to 5,000
-
-5,001 to 20,000 & 0.00085
-
-0.0017
-
-0.0034
-
-0.0068 \\
-\end{longtable}
-
-\includegraphics{Fig/media/image123.wmf} = \textbf{Complexity Failure
-Rate for Microprocessors}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3354}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3165}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3481}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Number of Bits}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image123.wmf} \textbf{- Bipolar}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image123.wmf} \textbf{- MOS}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Up to 8
-
-Up to 16
-
-Up to 32 & 0.060
-
-0.12
-
-0.24 & 0.14
-
-0.28
-
-0.56 \\
-\end{longtable}
-
-\includegraphics{Fig/media/image124.wmf} = \textbf{Package Failure Rate
-for all microcircuits.} \includegraphics{Fig/media/image125.wmf}
-\textbf{= number of pins on package.}
-
-\includegraphics{Fig/media/image126.wmf}
-
-\textbf{Temperature Factor -} \includegraphics{Fig/media/image127.wmf}
-
-\includegraphics{Fig/media/image128.wmf}
-
-The activation energy (\includegraphics{Fig/media/image129.wmf}) for
-different technologies are given in the table below.
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1461}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1545}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1385}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1392}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1295}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1497}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1425}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Technology}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{TTL, ASTLL, CML, HTTL, FTLL, DTL, ECL, ALSTTL}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{F, LTTL, STTL}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{BiCMOS LSTTL}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Digital MOS, VHSIC CMOS}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Linear (Bipolar and MOS)}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Memories (Bipolar and MOS), NMOS}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\includegraphics{Fig/media/image130.wmf} & 0.4 & 0.45 & 0.5 & 0.35 &
-0.65 & 0.6 \\
-\end{longtable}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4619}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0807}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4574}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Learning Factor -} \includegraphics{Fig/media/image131.wmf}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6944}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3056}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Years in Production}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image132.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\includegraphics{Fig/media/image133.wmf}.1 & 2.0 \\
-0.5 & 1.8 \\
-1.0 & 1.5 \\
-1.5 & 1.2 \\
-\includegraphics{Fig/media/image134.wmf} & 1.0 \\
-\end{longtable}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Part Quality Factor -} \includegraphics{Fig/media/image135.wmf}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6050}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3950}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Quality}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image136.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-S & 0.25 \\
-B & 1.0 \\
-B-1 & 2.0 \\
-\end{longtable}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
-
-\textbf{Environmental Factor -} \includegraphics{Fig/media/image137.wmf}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7079}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2921}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Environment}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\includegraphics{Fig/media/image138.wmf}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-G\textsubscript{B} & 0.50 \\
-G\textsubscript{F} & 2 \\
-G\textsubscript{M} & 4 \\
-N\textsubscript{S} & 4 \\
-N\textsubscript{U} & 6 \\
-A\textsubscript{IC} & 4 \\
-A\textsubscript{IF} & 5 \\
-A\textsubscript{UC} & 5 \\
-A\textsubscript{UF} & 8 \\
-A\textsubscript{RW} & 8 \\
-S\textsubscript{F} & 0.50 \\
-M\textsubscript{F} & 5 \\
-M\textsubscript{L} & 12 \\
-C\textsubscript{L} & 220 \\
-\end{longtable}
