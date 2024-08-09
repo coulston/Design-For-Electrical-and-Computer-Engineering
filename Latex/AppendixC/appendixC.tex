@@ -25,14 +25,29 @@ Data is presented for the following devices:
 
 All of the devices presented in this appendix have an environmental
 factor that is used to estimate the failure rate. The environmental
-factors are based on the 14 categories in Table C.1.
+factors are based on the 14 categories in Table~\ref{table:envSymbols}.
 
-\textbf{Table C.1}
-\begin{table}
-\caption{ Environmental symbols and descriptions taken directly
-from MIL-HDBK-217F.}
-\label{table:envSymbols}
-\begin{tabular}{|l|m{10cm}|}
+
+
+\footnotesize
+\begin{longtable}{|m{4cm}|m{10cm}|}
+\caption{Environmental symbols and descriptions taken directly from MIL-HDBK-217F.} 
+\label{table:envSymbols}\\
+
+
+\hline
+\rowcolor{Gray}
+\textbf{Environment} &  \textbf{Description}  \\ \hline
+\endfirsthead
+
+\hline
+\rowcolor{Gray}
+\multicolumn{2}{l}{{{\bfseries \tablename\ \thetable{} -- continued from previous page}}} \\ \hline
+\rowcolor{Gray}
+\textbf{Environment} &  \textbf{Description}  \\ \hline
+\endhead
+\endfoot
+
 \hline
 $G_{B}$ -- Ground, Benign & Nonmobile, temperature and
 humidity controlled environments readily accessible to maintenance;
@@ -71,31 +86,33 @@ uncontrolled areas that cannot be inhabited by crew during flight.
 Environmental extremes of pressure, temperature, and shock may be
 severe. Examples include uninhabited areas of long aircraft such as the
 C130, C5, B52, and C141. This category also applies to uninhabited areas
-in lower performance smaller aircraft such as the T38. \\
+in lower performance smaller aircraft such as the T38. \\ \hline
 $A_{UF}$ - Airborne, Uninhabited Fighter & Same as
 $A_{UC}$but installed on high performance aircraft such as
 fighters and interceptors. Examples include the F15, F16, F111, and A10
-aircraft. \\
+aircraft. \\ \hline
 $A_{RW}$-- Airborne, Rotary Winged & Equipment installed on
 helicopters. Applies to both internally and externally mounted equipment
 such as laser designators, fire control systems, and communications
-equipment. \\
+equipment. \\ \hline
 $S_{F}$ -- Space, Flight & Earth orbital. Approaches benign
 ground conditions. Vehicle neither under powered flight nor in
-atmospheric re-entry; includes satellites and shuttles. \\
+atmospheric re-entry; includes satellites and shuttles. \\ \hline
 $M_{F}$ -- Missile, Flight & Conditions related to powered
 flight of air breathing missiles, cruise missiles, and missiles in
-unpowered free flight. \\
+unpowered free flight. \\ \hline
 $M_{L}$ -- Missile, Launch & Severe conditions related to
 missile launch (air, ground, and sea), space vehicle boost into orbit,
 and vehicle re-entry and landing by parachute. Also applies to solid
 rocket motor propulsion powered flight, and torpedo and missile launch
-from submarines. \\
+from submarines. \\ \hline
 $C_{L}$ -- Cannon, Launch & Extremely severe conditions
 related to cannon launching of 155 mm and 5 inch guided projectiles.
-Conditions apply to the projectile from launch to target impact. \\
-\end{tabular}
-\end{table}
+Conditions apply to the projectile from launch to target impact. \\ \hline
+\end{longtable}
+\normalsize
+
+\newpage
 
 \section{Analog Components: Resistors and Capacitors}
 \label{section:analog-components-resistors-and-capacitors}
@@ -107,51 +124,52 @@ This section contains failure rate data for resistors and capacitors.
 
 The failure rate is given by the following relationship
 
-$$\lambda = \lambda_{b} \pi_{R} \pi_{Q} \pi_{E} \frac{failures}{10^{6} hours}$$.
+$$\lambda = \lambda_{b} \pi_{R} \pi_{Q} \pi_{E} \frac{\text{failures}}{10^{6} \text{hours}}$$.
 
 
-
-
-\begin{table}
-\caption{$\lambda_{b} = $ \textbf{Base Failure Rate}}
+\begin{table}[h]
+\caption{$\lambda_{b} $ \textbf{- Base Failure Rate}}
 \label{table:baseFailureRate}
 \begin{tabular}{|l|m{10cm}|} \hline
 \rowcolor{Gray}
 \textbf{Resistor Type} &
 $\lambda_b$ 
-$(T = ambient temperatire in ^\circ C, S = \frac{operating power}{device power rating})$ \\ \hline
+(T = ambient temperatire in $^\circ$ C, 
+S = $\frac{\text{operating power}}{\text{device power rating}})$ \\ \hline
 Fixed Composition & 
-$\lambda_b = 4.5x10^{-9} exp [12(\frac{T+273}{343})] exp[\frac{S}{0.6}(\frac{T+273}{273})]$ \\ \hline
+$\lambda_b = 4.5*10^{-9} exp [12(\frac{T+273}{343})] exp[\frac{S}{0.6}(\frac{T+273}{273})]$ \\ \hline
 Fixed Film &
-$\lambda_b = 3.25x10^{-4} exp [12(\frac{T+273}{343})^3] exp[S(\frac{T+273}{273})]$ \\ \hline
+$\lambda_b = 3.25*10^{-4} exp [12(\frac{T+273}{343})^3] exp[S(\frac{T+273}{273})]$ \\ \hline
 Wirewound &
-$\lambda_b = 0.0031 exp [12(\frac{T+273}{343})^{10}] exp\{[\frac{S}{0.6}(\frac{T+273}{273})]^{1.5}\}$ \\ \hline
+$\lambda_b = 0.0031 exp [12(\frac{T+273}{343})^{10}] exp\{[S(\frac{T+273}{273})]^{1.5}\}$ \\ \hline
 \end{tabular}
 \end{table}
 
 
 
 
-\begin{table}
+\begin{table}[h]
 \caption{\textbf{Resistance Factor -} $\pi_{R}$}
 \label{table:resistanceFactor}
 \begin{tabular}{|c|c|c|c|} \hline
 \rowcolor{Gray}
 \multicolumn{2}{|l|}{\textbf{Fixed Composition or Fixed Film Resistors}} &  \multicolumn{2}{|l|}{\textbf{Wirewound Resistors}} \\ \hline
+\rowcolor{Gray}
 \textbf{Resistance Range} & $\pi_{R}$ & \textbf{Resistance Range} & $\pi_{R}$ \\ \hline
 $ \leq 100k\Omega$                            & 1.0 & $ \leq 10k\Omega$                                     & 1.0 \\ \hline
-$ 100k\Omega$ to $\leq 1M\omega$ & 1.1 & $ 10k\Omega$ to $\leq 100k\omega$  & 1.7 \\ \hline
-$ 1M\Omega$ to $\leq 10M\omega$  & 1.6 & $ 100k\Omega$ to $\leq 1M\omega$  & 3.0 \\ \hline
+$ 100k\Omega$ to $\leq 1M\Omega$ & 1.1 & $ 10k\Omega$ to $\leq 100k\Omega$  & 1.7 \\ \hline
+$ 1M\Omega$ to $\leq 10M\Omega$  & 1.6 & $ 100k\Omega$ to $\leq 1M\Omega$  & 3.0 \\ \hline
 $ > 10M\Omega$                                 & 2.5 & $ > 1M\Omega$                                     & 5.0 \\ \hline
 \end{tabular}
 \end{table}
 
 
 
-\begin{table}
+\begin{table}[h]
 \caption{\textbf{Quality Factor -} $\pi_{Q}$}
 \label{table:qualityFactor}
 \begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
 \textbf{Quality} & $\pi_{Q}$ \\ \hline
 S & 0.03 \\ \hline
 R & 0.1 \\ \hline
@@ -163,11 +181,12 @@ Lower & 15 \\ \hline
 \end{table}
 
 
-\begin{table}
+\begin{table}[h]
 \caption{\textbf{Environmental factor -} $\pi_{E}$}
 \label{table:environmentalFactor}
 \begin{tabular}{|c|c|c|c|} \hline
-\textbf{Environment} & $\pi_{E}$ \textbf{Fixed Composition} & $\pi_{E}$ \textbf{Fixed Film} & $\pi_{E}$ \textbf{Wirewound} \\ \hline
+\rowcolor{Gray}
+\textbf{Environment} & $\pi_{E}$  \textbf{Fixed Composition} & $\pi_{E}$  \textbf{Fixed Film} & $\pi_{E}$  \textbf{Wirewound} \\ \hline
 $G_{B}$ & 1 & 1 & 1 \\  \hline
 $G_{F}$ & 3 & 2 & 2 \\ \hline
 $G_{M}$ & 8 & 8 & 11 \\ \hline
@@ -185,32 +204,45 @@ $C_{L}$ & 490 & 510 & 610 \\ \hline
 \end{tabular}
 \end{table}
 
+\newpage
+
 \subsection{Capacitors: Fixed, Ceramic, and General Purpose}
 \label{subsection:capacitors-fixed-ceramic-and-general-purpose}
 
 The failure rate is given by the following relationship
-$$\lambda = \lambda{b} \Pi_{CV} \Pi_{Q} \Pi_{E} \frac{failures}{10^{6} hours}$$
+$$\lambda = \lambda{b} \pi_{CV} \pi_{Q} \pi_{E} \frac{\text{failures}}{10^{6} \text{hours}}$$
 
 For all factors $T$ = ambient temperature ($^\circ$C) and 
-$S=\frac{operating voltage}{rated voltage}$, where the
+$S=\frac{\text{operating voltage}}{\text{rated voltage}}$, where the
 operating voltage is the sum of the DC and peak AC voltage.
 
-\begin{table}
+\begin{table}[h]
 \caption{\textbf{Base Failure Rate -} $\lambda_{b}$}
 \label{table:baseFailureRate}
 \begin{tabular}{l}
-$\lambda_b = 0.0003 [\frac{S}{0.3}^{3}] exp [\frac{T+273}{358}]$ for T=85$^{circ}$C max rated \\ 
-$\lambda_b = 0.0003 [\frac{S}{0.3}^{3}] exp [\frac{T+273}{398}]$ for T=125$^{circ}$C max rated \\ 
-$\lambda_b = 0.0003 [\frac{S}{0.3}^{3}] exp [\frac{T+273}{423}]$ for T=150$^{circ}$C max rated \\ 
+$\lambda_b = 0.0003 [(\frac{S}{0.3}^{3})+1] exp [\frac{T+273}{358}]$ for T=85$^{\circ}$C max rated \\ 
+$\lambda_b = 0.0003 [(\frac{S}{0.3}^{3})+1] exp [\frac{T+273}{398}]$ for T=125$^{\circ}$C max rated \\ 
+$\lambda_b = 0.0003 [(\frac{S}{0.3}^{3})+1] exp [\frac{T+273}{423}]$ for T=150$^{\circ}$C max rated \\ 
 \end{tabular}
 \end{table}
 
 
-\begin{table}
-\caption{\textbf{Capacitance Factor -} $\Pi_{CV}$}
+\begin{table}[h]
+\caption{\textbf{Capacitance Factor -} $\pi_{CV}$}
 \label{table:capacitanceFactor}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Quality} & $\Pi_{Q}$ \\ \hline
+\begin{tabular}{l} 
+$\pi_{CV} = 0.41*C^{0.01}$ \\
+$C = $ capacitance \\
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\caption{\textbf{Quality Factor -} $\pi_{Q}$}
+\label{table:capacitanceQualityFactor}
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Quality} & $\pi_{Q}$ \\ \hline
 S & 0.030 \\ \hline
 R & 0.10 \\ \hline
 P & 0.30 \\ \hline
@@ -221,11 +253,12 @@ Lower & 10 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
-\caption{\textbf{Environmental Factor -} $\Pi_{E}$}
+\begin{table}[h]
+\caption{\textbf{Environmental Factor -} $\pi_{E}$}
 \label{table:capacitanceFactor}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Environment} & $\Pi_{E}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Environment} & $\pi_{E}$ \\ \hline
 $G_{B}$ & 1 \\ \hline
 $G_{F}$ & 2 \\ \hline
 $G_{M}$ & 9 \\ \hline
@@ -243,6 +276,7 @@ $C_{L}$ & 610 \\ \hline
 \end{tabular}
 \end{table}
 
+\newpage
 
 \section{Microelectronic Devices}
 \label{section:microelectronic-devices}
@@ -251,10 +285,12 @@ For all microelectronic devices it is necessary to compute the junction
 temperature ($T_{j}$) of the silicon in order to determine the temperature 
 factor. The junction temperature is determined as follows:
 
-$$T_{j} = T_{A} \theta_{jA} P_{D}$$
-$$T_A = $$ ambient temperature
-$$\theta_{jA} = $$junction to ambient thermal resistance (obtained from manufacture data sheet.)
-$$P_{D} = $$power dissipated inm the device
+\begin{description}
+\item $T_{j} = T_{A} +  \theta_{jA} P_{D}$
+\item $T_A = $ ambient temperature
+\item $\theta_{jA} = $ junction to ambient thermal resistance (obtained from manufacture data sheet.)
+\item $P_{D} = $power dissipated inm the device
+\end{description}
 
 \textbf{Author's Note:} The equations above are slightly different than
 those found in MIL-HDBK-217F. The junction to ambient thermal resistance
@@ -269,10 +305,10 @@ coverage of this thermal model.
 The part quality descriptors in Table~\ref{table:partsQualityDescriptors} are used to find the quality
 factors.
 
-\begin{table}
+\begin{table}[h]
 \caption{Part quality descriptors for microelectronic devices.}
 \label{table:partsQualityDescriptors}
-\begin{tabular}{|l|m{10cm}|} \hline
+\begin{tabular}{|>{\columncolor{Gray}}l|m{10cm}|} \hline
 \textbf{JANTXV} & 
 Full device testing as specified by the MIL-S-19500 specification,
 including Screening and Groups A, B, and C. \\ \hline
@@ -285,24 +321,26 @@ and C, but not including Screening. \\ \hline
 \end{tabular}
 \end{table}
 
+\newpage
 
 \subsection{Diodes: Low Frequency}
 \label{subsection:diodes-low-frequency}
 
 The failure rate is given by the following relationship
 
-$$\lambda = \lambda{b} \Pi_{R} \Pi_{Q} \Pi_{E} \frac{failures}{10^{6} hours}$$
+$$\lambda = \lambda_{b} \pi_{R} \pi_{Q} \pi_{E} \frac{\text{failures}}{10^{6} \text{hours}}$$
 
-\begin{table}
+\begin{table}[h]
 \caption{\textbf{Base Failure Rate -} $\lambda_{b}$}
 \label{table:baseFailRateDiodeLow}
-\begin{tabular}{|l|m{10cm}|} \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
 \textbf{Diode Type/Application} & $\lambda_{b}$ \\ \hline
 General purpose analog & 0.0038 \\ \hline
 Switching & 0.0010 \\ \hline
 Power rectifier, fast recovery & 0.069 \\ \hline
 Power rectifier, Schottky power diode & 0.0030 \\ \hline
-Power rectifier with high voltage stacks & 0.0050/Junction \\ \hline
+Power rectifier with high voltage stacks & 0.0050/junction \\ \hline
 Transient suppressor/varistor & 0.0013 \\ \hline
 Current regulator & 0.0034 \\ \hline
 Voltage regulator and voltage reference (avalanche and zener) &
@@ -310,33 +348,36 @@ Voltage regulator and voltage reference (avalanche and zener) &
 \end{tabular}
 \end{table}
 
-\textbf{Temperature Factor -} $\Pi_{T}$
+\textbf{Temperature Factor -} $\pi_{T}$
 
 For general purpose analog, switching, fast recovery, power rectifier,
 and transient suppressor applications
 
-$$\Pi_{T} = exp[-3091(\frac{1}{T_{j} + 273} - \frac{1}{298})].$$
+$$\pi_{T} = exp[-3091(\frac{1}{T_{j} + 273} - \frac{1}{298})].$$
 
 For voltage regulator, voltage reference, and current regulator
 applications
 
-$$\Pi_{T} = exp[-1925(\frac{1}{T_{j} + 273} - \frac{1}{298})].$$
+$$\pi_{T} = exp[-1925(\frac{1}{T_{j} + 273} - \frac{1}{298})].$$
 
 
-\begin{table}
-\caption{\textbf{Electrical Stress Factor -} $\Pi_{S}$}
+\begin{table}[h]
+\caption{\textbf{Electrical Stress Factor -} $\pi_{S}$}
 \label{table:electicalStressFactor}
-\begin{tabular}{|l|l|}
-$\Pi_s = 0.054$ 		& $V_{S} \leq 0.3$ \\ 
-$\Pi_s = V^{2.43}_{S}$ & $0.3 < V_{S} \leq 1$ \\
+\begin{tabular}{ll}
+$\pi_s = 0.054$ 		& $V_{S} \leq 0.3$ \\ 
+$\pi_s = V^{2.43}_{S}$ & $0.3 < V_{S} \leq 1$ \\
+$V_S$ = voltage  stress ratio = $\frac{\text{applied voltage}}{\text{applied voltage}}$ \\
+Applied voltage is the diode reverse voltage \\
 \end{tabular}
 \end{table}
 
-\begin{table}
-\caption{\textbf{Quality Factor -} $\Pi_{Q}$}
+\begin{table}[h]
+\caption{\textbf{Quality Factor -} $\pi_{Q}$}
 \label{table:qualityFactorDiode}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Quality} & $\Pi_{Q}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Quality} & $\pi_{Q}$ \\ \hline
 JANTXV & 0.7 \\ \hline
 JANTX & 1.0 \\ \hline
 JAN & 2.4 \\ \hline
@@ -346,22 +387,24 @@ Plastic & 8.0 \\ \hline
 \end{table}
 
 
-\begin{table}
-\caption{\textbf{Contact Construction Factor -} $\Pi_{C}$}
+\begin{table}[h]
+\caption{\textbf{Contact Construction Factor -} $\pi_{C}$}
 \label{table:<context>}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Contact Construction} & $\Pi_{C}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Contact Construction} & $\pi_{C}$ \\ \hline
 Metallurgically bonded & 1.0 \\ \hline
 Non-metallurgically bonded and spring loaded contacts & 2.0 \\ \hline\end{tabular}
 \end{table}
 
 
-\begin{table}
+\begin{table}[h]
 \caption{
-\textbf{Environmental Factor -} $\Pi_{E}$}
+\textbf{Environmental Factor -} $\pi_{E}$}
 \label{table:enviroFactorDiode}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Environment} & $\Pi_{E}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Environment} & $\pi_{E}$ \\ \hline
 $G_{B}$ & 1 \\ \hline
 $G_{F}$ & 6 \\ \hline
 $G_{M}$ & 9 \\ \hline
@@ -379,20 +422,21 @@ $C_{L}$ & 320 \\ \hline
 \end{tabular}
 \end{table}
 
-
+\newpage
 
 \subsection{Diodes: High Frequency (microwave, RF)}
 \label{subsection:diodes-high-frequency-microwave-rf}
 
 The failure rate is given by the following relationship
 
-$$\lambda = \lambda{b} \Pi_{R} \Pi_{Q} \Pi_{E} \frac{failures}{10^{6} hours}$$
+$$\lambda = \lambda_{b} \pi_{T} \pi_{A} \pi_{R} \pi_{Q} \pi_{E} \frac{\text{failures}}{10^{6} \text{hours}}$$
 
 
-\begin{table}
+\begin{table}[h]
 \caption{\textbf{Base Failure Rate} - $\lambda_{b}$}
 \label{table:baseFailureRateDiodeHigh}
-\begin{tabular}{|l|m{10cm}|} \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
 \textbf{Diode Type} & $\lambda_{b}$ \\ \hline
 Si IMPATT $\leq 35$GHz) & 0.22 \\ \hline
 Gunn/Bulk Effect & 0.18 \\ \hline
@@ -403,21 +447,23 @@ Varactor and Step Recovery & 0.0025 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
-\caption{\textbf{Application Factor -} $\Pi_{A}$}
+\begin{table}[h]
+\caption{\textbf{Application Factor -} $\pi_{A}$}
 \label{table:applicationFactorHigh}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Application} & $\Pi_{A}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Application} & $\pi_{A}$ \\ \hline
 Varactor, voltage control & 0.50 \\ \hline
 Varactor, multiplier & 2.5 \\ \hline
 All other diodes & 1.0 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
-\caption{\textbf{Quality Factor -} $\Pi_{Q}$}
+\begin{table}[h]
+\caption{\textbf{Quality Factor -} $\pi_{Q}$}
 \label{table:applicationFactorHigh}
 \begin{tabular}{|c|c|c|} \hline
+\rowcolor{Gray}
 \textbf{Quality} & \textbf{Not Shottky} & \textbf{Shottky} \\ \hline
 JANTXV & 0.5 & 0.5 \\ \hline
 JANTX & 1.0 & 1.0 \\ \hline
@@ -428,31 +474,32 @@ Plastic & 50.0 & - \\ \hline
 \end{table}
 
 
-\begin{table}
-\caption{\textbf{Temperature Factor -} $\Pi_{T}$  }
+\begin{table}[h]
+\caption{\textbf{Temperature Factor -} $\pi_{T}$  }
 \label{table:temperatureFactorHigh}
 \begin{tabular}{l l}  
 All types except IMPATT & and for IMPATT \\
-$\Pi_{T} = exp[-2100(\frac{1}{T_{J}} - \frac{1}{298})]$ & 
-$\Pi_{T} = exp[-5260(\frac{1}{T_{J}} - \frac{1}{298})]$ \\ 
+$\pi_{T} = exp[-2100(\frac{1}{T_{J}+273} - \frac{1}{298})]$ & 
+$\pi_{T} = exp[-5260(\frac{1}{T_{J}+273} - \frac{1}{298})]$ \\ 
 \end{tabular}
 \end{table}
 
 
-\begin{table}
-\caption{\textbf{Power Rating Factor -} $\Pi_{R}$}
+\begin{table}[h]
+\caption{\textbf{Power Rating Factor -} $\pi_{R}$}
 \label{table:powerRatingFactorFast}
 \begin{tabular}{l} 
-$\Pi_{R} = 0.326ln(P)-0.25$ for PIN diodes
-$\Pi_{R} = 1.0$ for all other diodes
+$\pi_{R} = 0.326ln(P_{R})-0.25$ for PIN diodes \\
+$\pi_{R} = 1.0$ for all other diodes
 \end{tabular}
 \end{table}
 
-\begin{table}
-\caption{\textbf{Environmental Factor -} $\Pi_{R}$}
+\begin{table}[h]
+\caption{\textbf{Environmental Factor -} $\pi_{R}$}
 \label{table:environmentalFactorFast}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Environmental Factor -} & $\Pi_{E}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Environmental Factor -} & $\pi_{E}$ \\ \hline
 $G_{B}$ & 1 \\ \hline
 $G_{F}$ & 2 \\ \hline
 $G_{M}$ & 5 \\ \hline
@@ -470,46 +517,74 @@ $C_{L}$ & 250 \\ \hline
 \end{tabular}
 \end{table}
 
-\subsection{Transistors: Bipolar Junction, Low Frequency ($leq 200$MHz)}
+
+\newpage
+
+\subsection{Transistors: Bipolar Junction, Low Frequency ($\leq 200$MHz)}
 \label{subsection:transistors-bipolar-junction-low-frequency-200mhz}
 
 The failure rate is given by the following relationship
 
-$$\lambda_{b} \Pi_T \Pi_A \Pi_R \Pi_S \Pi_Q \Pi_E \frac{failures}{10^6 hours}$$.
+$$\lambda = \lambda_{b} \pi_T \pi_A \pi_R \pi_S \pi_Q \pi_E \frac{\text{failures}}{10^6 \text{hours}}$$.
 
-\begin{table}
+\begin{table}[h]
 \caption{\textbf{Base Failure Rate -} $\lambda_{b}$}
 \label{table:baseFailureRateTransSlow}
-\begin{tabular}{|l|m{10cm}|} \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
 \textbf{Type} & $\lambda_{b}$ \\ \hline
 NPN or PNP & 0.00074 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
-\caption{\textbf{Temperature Factor -} $\Pi_{T}$}
+\begin{table}[h]
+\caption{\textbf{Temperature Factor -} $\pi_{T}$}
 \label{table:tempFactorTransSlow}
 \begin{tabular}{l} 
-$\Pi_{T} = exp[-2114(\frac{1}{T_{j} + 273} - frac{1}{298})]$
+$\pi_{T} = exp[-2114(\frac{1}{T_{j} + 273} - \frac{1}{298})]$
 \end{tabular}
 \end{table}
 
-\begin{table}
-\caption{\textbf{Voltage Stress Factor -} $\Pi_{S}$}
+\begin{table}[h]
+\caption{\textbf{Application Factor -} $\pi_{A}$}
+\label{table:applicationFactorTransSlow}
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Application} & $\pi_{A}$ \\ \hline
+Linear Amplification & 1.50 \\ \hline
+Switching & 0.70 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\caption{\textbf{Power Rating Factor -} $\pi_{R}$}
+\label{table:[powerRateStressFactorTransSlow}
+\begin{tabular}{l l} 
+$\pi_{R} = 0.043$ 						&	if $P_{R} \leq 0.1$W \\
+$\pi_{R} = P^{0.37}_{R}$				&	if $P_{R} > 0.1$W \\
+where $P_{R} = $ rated power
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\caption{\textbf{Voltage Stress Factor -} $\pi_{S}$}
 \label{table:voltStressFactorTransSlow}
-\begin{tabular}{l} 
-$\Pi_{S} = 0.045exp(3/1V_{S}) 0 \leq V_{S} \leq 1$
-$V_{S} = \frac{applied V_{CE}}{rated V_{CEO}}$
-$V_{CE} =$ voltage collector to emitter
-$V_{CEO} = $ voltage collector to emitter, base open
+\begin{tabular}{l l} 
+$\pi_{S} = 0.045 exp(3.1V_{S})$ 						&	$0 \leq V_{S} \leq 1$  \\
+$V_{S} = \frac{\text{applied} V_{CE}}{\text{rated} V_{CEO}}$	&				\\
+$V_{CE} =$ voltage collector to emitter			&				\\
+$V_{CEO} = $ voltage collector to emitter, base open &			\\
 \end{tabular}
 \end{table}
 
-\begin{table}
-\caption{\textbf{Part Quality Factor -} $\Pi_{R}$}
+\begin{table}[h]
+\caption{\textbf{Part Quality Factor -} $\pi_{R}$}
 \label{table:partQualityFactorTransSlow}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Quality} & $\Pi_{Q}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Quality} & $\pi_{Q}$ \\ \hline
 JANTXV & 0.7 \\ \hline
 JANTX & 1.0 \\ \hline
 JAN & 2.4 \\ \hline
@@ -519,11 +594,12 @@ Plastic & 8.0 \\ \hline
 \end{table}
 
 
-\begin{table}
-\caption{\textbf{Environmental Factor -} $\Pi_{E}$}
+\begin{table}[h]
+\caption{\textbf{Environmental Factor -} $\pi_{E}$}
 \label{table:enviroFactorTranSlow}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Environment} & $\Pi_{E}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Environment} & $\pi_{E}$ \\ \hline
 $G_{B}$ & 1 \\ \hline
 $G_{F}$ & 6 \\ \hline
 $G_{M}$ & 9 \\ \hline
@@ -541,39 +617,41 @@ $C_{L}$ & 320 \\ \hline
 \end{tabular}
 \end{table}
 
-\subsection{Transistors: Bipolar Junction, High Frequency ($\leq 200$MHz), Low Noise (Power $\leq 1$W}
+\newpage
+
+\subsection{Transistors: Bipolar Junction, High Frequency ($> 200$MHz), Low Noise (Power $\leq 1$W}
 \label{subsection:transistors-bipolar-junction-high-frequency-200mhz-low-noise-power-1w}
 
 The failure rate is given by the following relationship
 
-$$\lambda{b} \Pi_{T} \Pi_{R} \Pi_{S} \Pi_{Q} \Pi_{E} \frac{failures}{10^{6} hours}$$
+$$\lambda = \lambda_{b} \pi_{T} \pi_{R} \pi_{S} \pi_{Q} \pi_{E} \frac{\text{failures}}{10^{6} \text{hours}}$$
 
-
-
-\begin{table}
+\begin{table}[h]
 \caption{\textbf{Base Failure Rate -} $\lambda_{b}$}
 \label{table:baseFaileRateBjtHigh}
-\begin{tabular}{|l|m{10cm}|} \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
 \textbf{Type} & $\lambda_{b}$ \\ \hline
 All types & 0.18 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
-\caption{\textbf{Power Rating Factor -} $\Pi_{R}$}
+\begin{table}[h]
+\caption{\textbf{Power Rating Factor -} $\pi_{R}$}
 \label{table:powerRateFactorBjtHigh}
-\begin{tabular}{l} \hline
-$\Pi_{R} = 0.43$ if $P_{R} \leq 0.1W$ \\
-$\Pi_{R} = P^{0.37}_{R}$ if $P_{R} \leq 0.1W$ \\
-where $P_{R} = $ rated power
+\begin{tabular}{ll} 
+$\pi_{R} = 0.43$ 			& if $P_{R} \leq 0.1W$ \\
+$\pi_{R} = P^{0.37}_{R}$ 	& if $P_{R} \leq 0.1W$ \\
+\multicolumn{2}{l}{where $P_{R} = $ rated power }  \\ 
 \end{tabular}
 \end{table}
 
-\begin{table}
-\caption{\textbf{Part Quality Factor -} $\Pi_{Q}$}
+\begin{table}[h]
+\caption{\textbf{Part Quality Factor -} $\pi_{Q}$}
 \label{table:baseFaileRateBjtHigh}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Quality} & $\Pi_{Q}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Quality} & $\pi_{Q}$ \\ \hline
 JANTXV & 0.5 \\ \hline
 JANTX & 1.0 \\ \hline
 JAN & 2.0 \\ \hline
@@ -582,32 +660,33 @@ Lower & 5.0 \\ \hline
 \end{table}
 
 
-\begin{table}
-\caption{\textbf{Temperature Factor -} $\Pi_{T}$}
+\begin{table}[h]
+\caption{\textbf{Temperature Factor -} $\pi_{T}$}
 \label{table:tempFactorBjtHigh}
-\begin{tabular}{l} \hline
-$\Pi_{T} = exp[-2114(\frac{1}{T_j + 273} - \frac{1}{298})]$
-\end{tabular}
-\end{table}
-
-
-\begin{table}
-\caption{\textbf{Voltage Stress Factor -} $\Pi_{S}$}
-\label{table:voltStressFactorTransHigh}
 \begin{tabular}{l} 
-$\Pi_{S} = 0.045exp(3/1V_{S}) 0 \leq V_{S} \leq 1$
-$V_{S} = \frac{applied V_{CE}}{rated V_{CEO}}$
-$V_{CE} =$ voltage collector to emitter
-$V_{CEO} = $ voltage collector to emitter, base open
+$\pi_{T} = exp[-2114(\frac{1}{T_j + 273} - \frac{1}{298})]$
 \end{tabular}
 \end{table}
 
 
-\begin{table}
-\caption{\textbf{Environmental Factor -} $\Pi_{E}$}
+\begin{table}[h]
+\caption{\textbf{Voltage Stress Factor -} $\pi_{S}$}
+\label{table:voltStressFactorTransHigh}
+\begin{tabular}{ll} 
+$\pi_{S} = 0.045exp(3/1V_{S})$ 					& $0 \leq V_{S} \leq 1$		\\
+$V_{S} = \frac{\text{applied} V_{CE}}{\text{rated} V_{CEO}}$			& 	\\
+$V_{CE} =$ voltage collector to emitter								&	\\
+$V_{CEO} = $ voltage collector to emitter, base open					& \\
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\caption{\textbf{Environmental Factor -} $\pi_{E}$}
 \label{table:enviroFactorTransHigh}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Environment} & $\Pi_{E}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Environment} & $\pi_{E}$ \\ \hline
 $G_{B}$ & 1 \\ \hline
 $G_{F}$ & 2 \\ \hline
 $G_{M}$ & 5 \\ \hline
@@ -625,21 +704,21 @@ $C_{L}$ & 250 \\ \hline
 \end{tabular}
 \end{table}
 
-
-
+\newpage
 
 \subsection{Transistors: Field Effect, Low Frequency ($\leq 400$Hz)}
 \label{subsection:transistors-field-effect-low-frequency-400mhz}
 
 The failure rate is given by the following relationship
 
-$$\lambda = \lambda{b} \Pi_{T} \Pi_{A} \Pi_{Q} \Pi_{E} \frac{failures}{10^{6} hours}$$
+$$\lambda = \lambda_{b} \pi_{T} \pi_{A} \pi_{Q} \pi_{E} \frac{\text{failures}}{10^{6} \text{hours}}$$
 
 
 \begin{table}
 \caption{\textbf{Base Failure Rate -} $\lambda_{b}$}
 \label{table:baseFailRateMosLow}
-\begin{tabular}{|l|m{10cm}|} \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
 \textbf{Type} & $\lambda_{b}$ \\ \hline
 MOSFET & 0.012 \\ \hline
 JFET & 0.0045 \\ \hline
@@ -648,35 +727,37 @@ JFET & 0.0045 \\ \hline
 
 
 \begin{table}
-\caption{\textbf{Temperature Factor -} $\Pi_{T}$}
+\caption{\textbf{Temperature Factor -} $\pi_{T}$}
 \label{table:tempFactorMosLow}
-\begin{tabular}{l} \hline
-$\Pi_{T} = exp[-1925(\frac{1}{T_j + 273} - \frac{1}{298})]$ \\
+\begin{tabular}{l} 
+$\pi_{T} = exp[-1925(\frac{1}{T_j + 273} - \frac{1}{298})]$ \\
 \end{tabular}
 \end{table}
 
 
-\begin{table}
-\caption{\textbf{Application Factor -}  $Pi_{A}$}
+\begin{table}[h]
+\caption{\textbf{Application Factor -}  $pi_{A}$}
 \label{table:baseFailRateMosLow}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Application} ($P_{R} = $ rated output power) & $\Pi_{A}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Application} ($P_{R} = $ rated output power) & $\pi_{A}$ \\ \hline
 Linear Amplification  ($P_{R} < 2$W) & 1.50 \\
 Small Signal Switching & 0.70 \\ \hline
 Power FETs (Non-linear, $P_{R} < 2$W) & \\
 $2 \leq P_{R} < 5$W & 2.0 \\ 
 $5 \leq P_{R} < 50$W & 4.0 \\ 
 $50 \leq P_{R} < 250$W & 8.0 \\ 
-$P_{R} < 250$W & 10.0 \\ 
+$P_{R} < 250$W & 10.0 \\  \hline
 \end{tabular}
 \end{table}
 
 
-\begin{table}
-\caption{\textbf{Part Quality  Factor -}  $Pi_{Q}$}
+\begin{table}[h]
+\caption{\textbf{Part Quality  Factor -}  $\pi_{Q}$}
 \label{table:baseFailRateMosLow}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Quality} & $\Pi_{Q}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Quality} & $\pi_{Q}$ \\ \hline
 JANTXV & 0.7 \\ \hline
 JANTX & 1.0 \\ \hline
 JAN & 2.4 \\ \hline
@@ -686,11 +767,12 @@ Plastic & 8.0 \\ \hline
 \end{table}
 
 
-\begin{table}
-\caption{\textbf{Environmental Factor -} $\Pi_{E}$}
+\begin{table}[h]
+\caption{\textbf{Environmental Factor -} $\pi_{E}$}
 \label{table:envFactorMosLow}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Environment} & $\Pi_{E}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Environment} & $\pi_{E}$ \\ \hline
 $G_{B}$ & 1 \\ \hline
 $G_{F}$ & 6 \\ \hline
 $G_{M}$ & 9 \\ \hline
@@ -708,18 +790,19 @@ $C_{L}$ & 320 \\ \hline
 \end{tabular}
 \end{table}
 
-
+\newpage
 
 \subsection{Transistors: Field Effect, High Frequency ($> 400$MHz), Low Power ($\leq 300$mW)}
 \label{subsection:transistors-field-effect-high-frequency-400mhz-low-power-300mw}
 
-$$\lambda = \lambda{b} \Pi_{T} \Pi_{Q} \Pi_{E} \frac{failures}{10^{6} hours}$$
+$$\lambda = \lambda_{b} \pi_{T} \pi_{Q} \pi_{E} \frac{\text{failures}}{10^{6} \text{hours}}$$
 
 
-\begin{table}
+\begin{table}[h]
 \caption{\textbf{Base Failure Rate -} $\lambda_{b}$}
 \label{table:baseFailRateMosHigh}
-\begin{tabular}{|l|m{10cm}|} \hline
+\begin{tabular}{|l|c|c|} \hline
+\rowcolor{Gray}
 \textbf{Type} & $\lambda_{b}$ \\ \hline
 MOSFET & 0.060 \\ \hline
 JFET & 0.023 \\ \hline
@@ -727,21 +810,22 @@ JFET & 0.023 \\ \hline
 \end{table}
 
 
-\begin{table}
-\caption{\textbf{Temperature Factor -} $\Pi_{T}$}
+\begin{table}[h]
+\caption{\textbf{Temperature Factor -} $\pi_{T}$}
 \label{table:tempFactorMosHigh}
-\begin{tabular}{l} \hline
-$\Pi_{T} = exp[-1925(\frac{1}{T_j + 273} - \frac{1}{298})]$ \\
+\begin{tabular}{l}
+$\pi_{T} = exp[-1925(\frac{1}{T_j + 273} - \frac{1}{298})]$ \\
 \end{tabular}
 \end{table}
 
 
 
-\begin{table}
-\caption{\textbf{Part Quality  Factor -}  $Pi_{Q}$}
+\begin{table}[h]
+\caption{\textbf{Part Quality  Factor -}  $pi_{Q}$}
 \label{table:baseFailRateMosHigh}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Quality} & $\Pi_{Q}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Quality} & $\pi_{Q}$ \\ \hline
 JANTXV & 0.5 \\ \hline
 JANTX & 1.0 \\ \hline
 JAN & 2.0 \\ \hline
@@ -751,10 +835,11 @@ Lower & 5.0 \\ \hline
 
 
 \begin{table}
-\caption{\textbf{Environmental Factor -} $\Pi_{E}$}
+\caption{\textbf{Environmental Factor -} $\pi_{E}$}
 \label{table:envFactorMosLow}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Environment} & $\Pi_{E}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Environment} & $\pi_{E}$ \\ \hline
 $G_{B}$ & 1 \\ \hline
 $G_{F}$ & 2 \\ \hline
 $G_{M}$ & 5 \\ \hline
@@ -771,6 +856,8 @@ $M_{L}$ & 24 \\ \hline
 $C_{L}$ & 250 \\ \hline
 \end{tabular}
 \end{table}
+
+\newpage
 
 \subsection{Microcircuits: Gate/Logic Arrays and Microprocessors}
 \label{subsection:microcircuits-gatelogic-arrays-and-microprocessors}
@@ -787,47 +874,52 @@ Includes the following devices:
 
 The failure rate is given by the following relationship
 
-$$\lambda = (C_{1}\Pi_{T} + C_{2}\Pi_{E}) \Pi_{Q} \Pi_{L} \frac{failures}{10^6 hours}$$
+$$\lambda = (C_{1}\pi_{T} + C_{2}\pi_{E}) \pi_{Q} \pi_{L} \frac{\text{failures}}{10^6 \text{hours}}$$
 
 
 
-\begin{table}
+\begin{table}[h]
 \caption{ $C_{1} = $ \textbf{Complexity Failure Rate for Bipolar Devices (Digital and Linear Gate/Logic)}}
 \label{table:complexFailureRateBjt}
 \begin{tabular}{|c|c|c|c|c|c|} \hline
+\rowcolor{Gray}
 \multicolumn{2}{|c|}{\textbf{Digital}} 	& \multicolumn{2}{|c|}{\textbf{Linear}} & \multicolumn{2}{|c|}{\textbf{PLA/PAL}} \\ \hline
+\rowcolor{Gray}
 No. Gates & $C_{1}$ & No. Transistors &$C_{1}$ & No. Gates & $C_{1}$ \\ \hline
-1 to 100 			& 0.0025 			& 1 to 100 		& 0.010 		& Up to 200 		& 0.010 		\\ \hline
-101 to 1,000		& 0.0050 			& 101 to 100 		& 0.020 		& 201 to 1,000 	& 0.010 		\\ \hline
-1,001 to 3,000		& 0.010				& 301 to 100 		& 0.040 		& 1,001 to 5,000 	& 0.010 		\\ \hline
-3,001 to 10,000 	& 0.020 				& 1,001 to 100 	& 0.080 		& 				&			\\ \hline
-10,001 to 30,000	& 0.040 				& 							& 				&			\\ \hline
-30,001 to 60,000	& 0.080 				& 							& 				&			\\ \hline
+1 to 100 			& 0.0025 			& 1 to 100 				& 0.010 		& Up to 200 		& 0.010 		\\ \hline
+101 to 1,000		& 0.0050 			& 101 to 300 			& 0.020 		& 201 to 1,000 		& 0.021 		\\ \hline
+1,001 to 3,000		& 0.010				& 301 to 1,000 		& 0.040 		& 1,001 to 5,000 	& 0.042 		\\ \hline
+3,001 to 10,000 	& 0.020 				& 1,001 to 10,000 	& 0.060 		& 					&			\\ \hline
+10,001 to 30,000	& 0.040 				& 					& 				&					&		\\ \hline
+30,001 to 60,000	& 0.080 				& 					& 				&					&		\\ \hline
 \end{tabular}
 \end{table}
 
 
 
 
-\begin{table}
+\begin{table}[h]
 \caption{ $C_{1} = $  \textbf{Complexity Failure Rate for MOS Devices (Digital and Linear Gate/Logic)}}
 \label{table:complexFailureRateIc}
 \begin{tabular}{|c|c|c|c|c|c|} \hline
+\rowcolor{Gray}
 \multicolumn{2}{|c|}{\textbf{Digital}} & \multicolumn{2}{|c|}{\textbf{Linear}} & \multicolumn{2}{|c|}{\textbf{PLA/PAL}} \\ \hline
+\rowcolor{Gray}
 No. Gates & $C_{1}$ & No. Transistors &$C_{1}$ & No. Gates & $C_{1}$ \\ \hline
-1 to 100 			& 0.010 			& 1 to 100 		& 0.010 		& Up to 500 			& 0.00085 	\\ \hline
-101 to 1,000		& 0.020 			& 101 to 100 		& 0.020 		& 501 to 1,000 		& 0.0017 	\\ \hline
+1 to 100 			& 0.010 			& 1 to 100 			& 0.010 		& Up to 500 			& 0.00085 	\\ \hline
+101 to 1,000		& 0.020 			& 101 to 300 		& 0.020 		& 501 to 1,000 			& 0.0017 	\\ \hline
 1,001 to 3,000		& 0.040			& 301 to 100 		& 0.040 		& 1,001 to 5,000 		& 0.0034 	\\ \hline
-3,001 to 10,000 	& 0.080 			& 1,001 to 100 	& 0.060 		& 5,000 to 20,000		& 0.0068		\\ \hline
-10,001 to 30,000	& 0.16 			& 							&					&			 \\ \hline
-30,001 to 60,000	& 0.29 			& 							& 					&			\\ \hline
+3,001 to 10,000 	& 0.080 			& 1,001 to 10,000 	& 0.060 		& 5,000 to 20,000		& 0.0068		\\ \hline
+10,001 to 30,000	& 0.16 				& 					&				&			 			&				\\ \hline
+30,001 to 60,000	& 0.29 				& 					& 				&						&			\\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
+\begin{table}[h]
 \caption{ $C_{1} = $  \textbf{Complexity Failure Rate for Microprocessors}}
 \label{table:complexFailureRateMicro}
-\begin{tabular}{|c|c|c||} \hline
+\begin{tabular}{|c|c|c|} \hline
+\rowcolor{Gray}
 \textbf{Number of Bits} & $C_{1}$ \textbf{- Bipolar} & $C_{1}$  \textbf{- MOS} \\ \hline
 Up to 8 		& 0.060		&	0.14 		\\ \hline
 Up to 16		& 0.12		& 	0.28		\\	\hline
@@ -835,46 +927,47 @@ Up to 32 		& 0.24		&	0.56		\\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
-\caption{ $C_{2} =$ \textbf{Package Failure Rate for all microcircuits.} $N_{p}$ \textbf{= number of pins on package.}}
+\begin{table}[h]
+\caption{ $C_{2} =$ \textbf{Package Failure Rate for all microcircuits.} \\ $N_{p}$ \textbf{= number of pins on package.}}
 \label{table:packageFailRateIc}
 \begin{tabular}{|l|} \hline
-$C_{2} = 2.8 x 10^{-4} (N_{p})^1.08$, Hermetic: DIPs with solder or weld seal, SMT 			\\
-$C_{2} = 9.0 x 10^{-5} (N_{p})^1.51$, DIPs with glass seal		\\
-$C_{2} = 3.0 x 10^{-5} (N_{p})^1.82$, Flatpacks with axial leads on 50 mil centers		\\
-$C_{2} = 2.8 x 10^{-4} (N_{p})^2.01$, Cans			\\
-$C_{2} = 3.0 x 10^{-5} (N_{p})^1.08$,Nonhermetic: DIPs PGA, SMT (leaded and nonleaded)			\\ \hline
+$C_{2} = 2.8 x 10^{-4} (N_{p})^{1.08}$, Hermetic: DIPs with solder or weld seal, SMT 			\\
+$C_{2} = 9.0 x 10^{-5} (N_{p})^{1.51}$, DIPs with glass seal		\\
+$C_{2} = 3.0 x 10^{-5} (N_{p})^{1.82}$, Flatpacks with axial leads on 50 mil centers		\\
+$C_{2} = 2.8 x 10^{-4} (N_{p})^{2.01}$, Cans			\\
+$C_{2} = 3.0 x 10^{-5} (N_{p})^{1.08}$,Nonhermetic: DIPs PGA, SMT (leaded and nonleaded)			\\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
-\caption{\textbf{Temperature Factor -} $\Pi_{T}$}
+\begin{table}[h]
+\caption{\textbf{Temperature Factor -} $\pi_{T}$}
 \label{table:tempFactorIc}
-\begin{tabular}{l} \hline
-$\Pi_{T} = 0.1xexp[-(\frac{E_{a}}{8.617x10^{-5}} (\frac{1}{T_j + 273} - \frac{1}{298})]$ \\
+\begin{tabular}{l} 
+$\pi_{T} = 0.1 exp[-\frac{E_{a}}{8.617x10^{-5}} (\frac{1}{T_j + 273} - \frac{1}{298})]$ \\
 \end{tabular}
 \end{table}
 
-\begin{table}
+\begin{table}[h]
 \caption{ The activation energy ($E_{a}$) for different technologies are given in the table below.}
 \label{activationEnergyIc}
-\begin{tabular}{|c|c|c|c|c|c|c|} \hline
-\textbf{Technology}& 
-\textbf{TTL, ASTLL, CML, HTTL, FTLL, DTL, ECL, ALSTTL} &
-\textbf{F, LTTL, STTL} &
-\textbf{BiCMOS LSTTL} &
-\textbf{Digital MOS, VHSIC CMOS} &
-\textbf{Linear (Bipolar and MOS)}& 
-\textbf{Memories (Bipolar and MOS), NMOS} \\ \hline
-$E_{a}$ & 0.4 & 0.45 & 0.5 & 0.35 & 0.65 & 0.6 \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Technology}& $E_{a}$ \\ \hline
+\textbf{TTL, ASTLL, CML, HTTL, FTLL, DTL, ECL, ALSTTL} & 0.4 \\ \hline
+\textbf{F, LTTL, STTL} & 0.45 \\ \hline
+\textbf{BiCMOS LSTTL} & 0.5 \\ \hline
+\textbf{Digital MOS, VHSIC CMOS} & 0.35 \\ \hline
+\textbf{Linear (Bipolar and MOS)}&  0.65 \\ \hline
+\textbf{Memories (Bipolar and MOS), NMOS}  0.6 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
-\caption{\textbf{Learning Factor -} $\Pi_{L}$}
+\begin{table}[h]
+\caption{\textbf{Learning Factor -} $\pi_{L}$}
 \label{table:learningFactorIc}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Years in Production} & $\Pi_{L}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Years in Production} & $\pi_{L}$ \\ \hline
 $\leq 0.1$ & 2.0 \\ \hline
 0.5 & 1.8 \\ \hline
 1.0 & 1.5 \\ \hline
@@ -884,11 +977,12 @@ $\geq 2.0$ & 1.0 \\ \hline
 \end{table}
 
 
-\begin{table}
-\caption{\textbf{Part Quality  Factor -} $\Pi_{Q}$}
+\begin{table}[h]
+\caption{\textbf{Part Quality  Factor -} $\pi_{Q}$}
 \label{table:partQualityFactorIc}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Quality} & $\Pi_{Q}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Quality} & $\pi_{Q}$ \\ \hline
 S & 0.25 \\ \hline
 B & 1.0 \\ \hline
 B-1 & 2.0 \\ \hline
@@ -896,11 +990,12 @@ B-1 & 2.0 \\ \hline
 \end{table}
 
 
-\begin{table}
-\caption{\textbf{Environmental Factor -} $\Pi_{E}$}
+\begin{table}[h]
+\caption{\textbf{Environmental Factor -} $\pi_{E}$}
 \label{table:envFactorIc}
-\begin{tabular}{|l|m{10cm}|} \hline
-\textbf{Environment} & $\Pi_{E}$ \\ \hline
+\begin{tabular}{|c|c|} \hline
+\rowcolor{Gray}
+\textbf{Environment} & $\pi_{E}$ \\ \hline
 $G_{B}$ & 0.50 \\ \hline
 $G_{F}$ & 2 \\ \hline
 $G_{M}$ & 4 \\ \hline

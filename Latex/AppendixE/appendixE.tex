@@ -1,31 +1,21 @@
-\section{\texorpdfstring{Design Project Case Study
-}{Design Project Case Study }}\label{design-project-case-study}
+\chapter{Design Project Case Study}
+\label{chapter:appendixE}
+\graphicspath{ {./appendixE/Fig} }
 
 This appendix contains a highly condensed case study of a capstone
 design project that was developed by a team of students utilizing the
-principles of this textbook. The complete project report can be
-downloaded from the McGraw-Hill website for the textbook, along with a
-number of other case studies.
+principles of this textbook. 
 
 \textbf{The Visual Aid}
-
-Ryan Andrus, Luis Catoni, Carl Schnur, and Freddy Chiu
-
-A Senior Project Report Submitted to the Faculty of
-
-Electrical, Computer, and Software Engineering
-
-Penn State Erie, The Behrend College
-
+Ryan Andrus, Luis Catoni, Carl Schnur, and Freddy Chiu \\
+A Senior Project Report Submitted to the Faculty of \\
+Electrical, Computer, and Software Engineering \\
+Penn State Erie, The Behrend College \\
 April 2006
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \textbf{Problem Statement}
-\end{enumerate}
+\textbf{1 Problem Statement}\\
+\textbf{1.1 Need}
 
-\subsection{Need}\label{need}
 
 Visually impaired people often have mobility difficulties due to limited
 spatial sensing---determining where objects are. Although many receive
@@ -42,19 +32,14 @@ mobility resources are guide dogs, canes, and electronic travel aid
 expensive. There is a need for a device to provide an effective way to
 detect objects and be cost-efficient.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \textbf{Objective}
-\end{enumerate}
 
+\textbf{1.2 Objective}\\
 The goal is to design and implement a digital system that give visually
 impaired an enhanced awareness of their surroundings. The system will
 detect objects and provide real-time feedback to the user according to
 the size, position, and distance of the object.
 
-\textbf{1.3 Research Survey}
-
+\textbf{1.3 Research Survey} \\
 For over 30 years, people have been attempting to invent an electronic
 device to help the blind navigate. According to the American Foundation
 for the Blind {[}1{]}, there are about 10 million blind and visually
@@ -106,19 +91,15 @@ Finally, the system must be affordable. Research shows that no single
 device meets all these needs and has been widely accepted by the blind
 community.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\item
-  \textbf{User Needs and Objective Tree}
-\end{enumerate}
-
+\textbf{1.4 User Needs and Objective Tree}\\
 The team interviewed a number of sources to identify the objectives in
 the tree below.
 
-\includegraphics[width=3.80278in,height=3.76528in]{Fig/media/image1.jpeg}
-
-\textbf{Figure 1} -- The needs and objective tree.
+\begin{figure}
+\includegraphics[width=3.80278in,height=3.76528in]{./image1.jpeg}
+\caption{The needs and objective tree.}
+\label{figure:caseStudyNeedsObjective}
+\end{figure}
 
 Weightings of the objectives were determined using the pairwise
 comparison method for all levels of the objective tree. The results for
@@ -130,157 +111,99 @@ same lines the device should create a minimum amount of disturbance to
 the user's environment. Finally, while important portability is the
 least of the three concerns.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \textbf{The Requirements Specification}
-\end{enumerate}
 
-\textbf{Table 1 -} Requirements Specification for the Visual Aid.
+\textbf{2 The Requirements Specification}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1727}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3909}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4364}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
+
+\begin{table}
+\caption{Requirements Specification for the Visual Aid.}
+\label{table:caseStudyRequirements}
+\begin{tabular}{|m{3cm}|m{3cm}|m{3cm}|} \hline
+\textbf{Marketing Requirements} & \textbf{Engineering Requirements} & \textbf{Justification} \\ \hline
+
+1, 2, 10, 13 & 
+		1. The system's total weight will not exceed 5 lbs. & 
+		Based on the weight of other portable devices, such as
+		laptops, and the weight of book bags. \\ \hline
+		
+7, 8, 13 & 
+		2. The system will have a single control to turn it on/off.  & 
+		Based on the user's need for the system to be as simple
+		and intuitive as possible and the average person's familiarity with
+		technology. \\ \hline
+		
+5, 13 & 
+		3. The system will operate on full charge for at least 3 hours. &
+		Based on the expected daily use by considering average
+		daily walking time (2.1 miles at 3.3MPH is about 38 minutes/day) by a factor of
+		approximately 5. \\ \hline
+		
+6 & 
+		4. The system should not exceed \$600.		&
+		Based on the cost of competing products {[}6{]}, such
+		as the LaserCane. \\ \hline
+		
+11 & 
+		5. Uneven surfaces (steps, rocks) of at least ±1.25in high will be
+		  detected at a distance of at least 3 ft away from the user. &
+		Based on the size of possible hazards, such as rocks,
+		bottles, sign posts, stairs, etc. \\ \hline
+		
+11, 14 & 
+		6. The system will detect objects that are at least 1in wide and 2in high
+		  at a distance of at least 3 ft from the user and as far as 7 ft in an
+		  area 2 ft wide, and provide sensory feedback. Also, the system should
+		  detect street signs and posts.		&
+		Based on the user's need to timely and intuitively be
+		notified of hazards. \\ \hline
+		
+		
+12 &
+		7. The system should not produce noise exceeding 40dB.	&
+		Based on comparisons of sound levels at an office,
+		bedroom and living room environment {[}7{]}. \\ \hline
+
+3 & 
+		8.  The system will be built with components that can operate in
+		  temperatures ranging from 0$^\circ$F to 120$^\circ$F.		&
+		Based on the expected range of temperatures the user
+		might operate the device in. \\	\hline
+
+3, 4, 9 & 
+		9. The system components will be enclosed to be water-resistant.	&
+		Based on outdoor environments and its conditions (snow,
+		rain, humidity) the user might face and the need for the user to be 
+		protected from electrical shock. \\ \hline
+
+14 & 
+		10. The system will refresh its output according to sensor readings 5
+		  times per second. &
+		Based on the average reaction time of humans (0.33 seconds) {[}8{]}. \\ \hline
+
+\multicolumn{3}{l}{
 \textbf{Marketing Requirements}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Engineering Requirements}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Justification}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-1, 2, 10, 13 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  The system's total weight will not exceed 5 lbs.
-\end{enumerate}
-\end{minipage} & Based on the weight of other portable devices, such as
-laptops, and the weight of book bags. \\
-7, 8, 13 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\item
-  The system will have a single control to turn it on/off.
-\end{enumerate}
-\end{minipage} & Based on the user's need for the system to be as simple
-and intuitive as possible and the average person's familiarity with
-technology. \\
-5, 13 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\item
-  The system will operate on full charge for at least 3 hours.
-\end{enumerate}
-\end{minipage} & Based on the expected daily use by considering average
-daily walking time (2.1 miles at 3.3MPH≈38 minutes/day) by a factor of
-approximately 5. \\
-6 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\item
-  The system should not exceed \$600.
-\end{enumerate}
-\end{minipage} & Based on the cost of competing products {[}6{]}, such
-as the LaserCane. \\
-11 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{4}
-\item
-  Uneven surfaces (steps, rocks) of at least ±1.25in high will be
-  detected at a distance of at least 3 ft away from the user.
-\end{enumerate}
-\end{minipage} & Based on the size of possible hazards, such as rocks,
-bottles, sign posts, stairs, etc. \\
-11, 14 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{5}
-\item
-  The system will detect objects that are at least 1in wide and 2in high
-  at a distance of at least 3 ft from the user and as far as 7 ft in an
-  area 2 ft wide, and provide sensory feedback. Also, the system should
-  detect street signs and posts.
-\end{enumerate}
-\end{minipage} & Based on the user's need to timely and intuitively be
-notified of hazards. \\
-12 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{6}
-\item
-  The system should not produce noise exceeding 40db.
-\end{enumerate}
-\end{minipage} & Based on comparisons of sound levels at an office,
-bedroom and living room environment {[}7{]}. \\
-3 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{7}
-\item
-  The system will be built with components that can operate in
-  temperatures ranging from 0˚F to 120˚F.
-\end{enumerate}
-\end{minipage} & Based on the expected range of temperatures the user
-might operate the device in. \\
-3, 4, 9 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{8}
-\item
-  The system components will be enclosed to be water-resistant.
-\end{enumerate}
-\end{minipage} & Based on outdoor environments and its conditions (snow,
-rain, humidity) the user might face and the need for the user to be
-protected from electrical shock. \\
-14 & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{9}
-\item
-  The system will refresh its output according to sensor readings 5
-  times per second.
-\end{enumerate}
-\end{minipage} & Based on the average reaction time of humans (0.33
-seconds) {[}8{]}. \\
-\multicolumn{3}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{1.0000} + 4\tabcolsep}@{}}{%
-\begin{minipage}[t]{\linewidth}\raggedright
-\textbf{Marketing Requirements}
-
-\begin{quote}
 1) Portability, 2) Weight, 3) Operable Environments, 4) Water
 Resistant,5)Operation Time, 6) Cost, 7) Ease of use, 8) Streamlined
 Controls, 9) Safety, 10) Comfortable, 11) Accurate, 12) Noise Level, 13)
-Consumer-Friendly, 14) Intuitive Feedback
-\end{quote}
-\end{minipage}} \\
-\end{longtable}
+Consumer-Friendly, 14) Intuitive Feedback } \\ \hline
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\item
-  \textbf{\hfill\break
-  The Design}
-\end{enumerate}
+\end{tabular}
+\end{table}
+
+
+\textbf{3 The Design}
 
 The Visual Aid device has three major physical components: 1) a set of
 sensors, 2) a matrix of vibrating motors and 3) a processing unit. These
 physical components are interconnected through the processing unit and
 are attached to the user as in Figure 2 below.
 
-\includegraphics[width=4.93194in,height=3.55278in]{Fig/media/image2.png}
 
-\textbf{Figure 2} -- Visual Aid side view.
+\begin{figure}
+\includegraphics[width=4.93194in,height=3.55278in]{./image2.png}
+\caption{Visual Aid side view.}
+\label{figure:caseStudySideView}
+\end{figure}
 
 The set of sensors is distributed in three modules. The head module
 consists of a narrow-beam sensor (represented as a dashed red line)
@@ -295,24 +218,29 @@ location the sensors are arranged such that portions of their beams
 overlap with each other. The sensor matrix is aligned to give a wider
 range in the vertical orientation than the horizontal.
 
-\includegraphics[width=4.50764in,height=2.54514in]{Fig/media/image3.jpeg}
-
-\textbf{Figure 3} -- Wide-beam sensors array.
+\begin{figure}
+\includegraphics[width=4.50764in,height=2.54514in]{./image3.jpeg}
+\caption{Wide-beam sensors array.}
+\label{figure:caseStudyWideBeam}
+\end{figure}
 
 The third module detects objects and steps up or down at the ground
 level. This module consists of a wide-beam sensor and a narrow-beam
 sensor. The wide-beam sensor detects objects and obstructions on the
 ground. The narrow-beam sensor detects uneven surfaces such as steps and
 stairs. This sensor will be positioned as shown in Figure 4 with an
-angle θ. This angle is adjustable to fit user needs. On flat surfaces,
+angle $\theta$. This angle is adjustable to fit user needs. On flat surfaces,
 the sensor will detect a distance x + z. When a step is encountered, the
 distance read by the sensor will be diminished to x. In order to avoid
 ``false'' detection of steps due to the movement of the user's body
 while walking, a digital filter is used.
 
-\includegraphics[width=4.25in,height=2.74236in]{Fig/media/image4.png}
+\begin{figure}
+\includegraphics[width=4.25in,height=2.74236in]{./image4.png}
+\caption{Narrow-beam sensor.}
+\label{figure:caseStudyNarrowBeam}
+\end{figure}
 
-\textbf{Figure 4} -- Narrow-beam sensor.
 
 The second major component of the system consists of 2 motors located in
 the front area of the user (see Figure 5), and 12 vibrating motors
@@ -327,13 +255,18 @@ of the users. For example if an object is detected in the lower right
 corner, then the lower right motor will vibrate. The matrix motors also
 vary their intensity according to the distance of objects detected.
 
-\includegraphics[width=4.54514in,height=3.04514in]{Fig/media/image5.png}
+\begin{figure}
+\includegraphics[width=4.54514in,height=3.04514in]{.//image5.png}
+\caption{Sensors and Front Motors}
+\label{figure:caseStudySensorMotors}
+\end{figure}
 
-\textbf{Figure 5} -- Sensors and Front Motors
 
-\includegraphics[width=4.69722in,height=3.09861in]{Fig/media/image6.png}
-
-\textbf{Figure 6} -- The motors matrix.
+\begin{figure}
+\includegraphics[width=4.69722in,height=3.09861in]{./image6.png}
+\caption{The motors matrix.}
+\label{figure:caseStudyMotorMatrix}
+\end{figure}
 
 The array of motors is mounted on the user with a vest. The array of
 sensors is located on the user's chest and the motor matrix are located
@@ -342,24 +275,27 @@ This consists of the microcontroller unit which will read the inputs
 from all the sensors and will provide corresponding outputs to the user
 by controlling the vibrating motors.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \textbf{The Functional Decomposition}
-\end{enumerate}
+
+\textbf{3.1 The Functional Decomposition}
+
 
 The following sections outline the decomposition of level 0 diagram into
 a level 1 diagram with the design rationale included to provide some
 justification for the decisions made.
+
+
 
 \textbf{Level 0}
 
 The level 0 description of the Visual Aide describes the overall input,
 output, and behavior expected of the device.
 
-\includegraphics[width=3.53056in,height=2.45486in]{Fig/media/image7.png}
+\begin{figure}
+\includegraphics[width=3.53056in,height=2.45486in]{./image7.png}
+\caption{Level 0.}
+\label{figure:caseStudyLevel0}
+\end{figure}
 
-\textbf{Figure 7} -- Level 0.
 
 The rationale for our level 0 design was to keep the system easy to
 control by a non-technical user. Too many buttons would confuse the
@@ -368,42 +304,42 @@ user. The system will take environmental data of the surroundings
 The only control is an on/off switch with everything else automated. The
 object is to provide the user with care-free operation.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2322}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7678}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\emph{Module}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Vision System
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\emph{Inputs} & - User control: on/off
 
+\begin{table}
+
+\label{table:caseStudyLevel0}
+\begin{tabular}{|m{3cm}|m{10cm}|} \hline
+
+\emph{Module} & Vision System \\ \hline
+
+\emph{Inputs} & - User control: on/off
 - Environment (objects): objects at least 1 in. wide and 2 in. high
-found in a 2 ft. wide area in front of the user, including steps. \\
+found in a 2 ft. wide area in front of the user, including steps. \\ \hline
+
 \emph{Outputs} & - Sensorial feedback (vibrations): a 3x3 matrix of
-vibrating motors, plus three additional vibrating motors. \\
+vibrating motors, plus three additional vibrating motors. \\ \hline
+
 \emph{Functionality} & Alerts the user intuitively by means of vibrating
 motors as to what area and distance in front of the user object(s)
 is(are) and/or if there is a step. Detected objects are at least 1 in.
 wide and 2 in. high at a distance of at least 3 ft. from the user and as
 far as 7 ft. in an area 2 ft. wide. Variations of height (steps, rocks)
 of at least ±1.25 in. are detected at a distance of at least 3 ft. away
-from the user. \\
-\end{longtable}
+from the user. \\ \hline
+\end{tabular}
+\end{table}
 
 \textbf{Level 1}
 
 The level 1 diagram reveals what is inside the level 0 box shown in
-Figure 7.
+Figure~\ref{figure:caseStudyLevel0}.
 
-\includegraphics{Fig/media/image8.emf}
+\begin{figure}
+\includegraphics{./image8}
+\caption{ Level 1 system design.}
+\label{figurecaseStudyLevel1:}
+\end{figure}
 
-\textbf{Figure 8} -- Level 1 system design.
 
 There are four main components in this part of our system design: the IR
 sensor bank, ultrasonic sensor bank, PIC18F452, and vibrating motor
@@ -424,185 +360,98 @@ is mounted on the back of the user, provides sensorial feedback to the
 user in the form of vibrations of varying intensity based on the
 proximity of the object and relative to the location of the object.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2281}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7719}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\emph{Module}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Battery
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\emph{Inputs} & - User control: on/off \\
-\emph{Outputs} & - 9.6V DC \\
-\emph{Functionality} & Provide power to all electronics in the
-system. \\
-\end{longtable}
+\begin{table}
+\begin{tabular}{|m{2cm}|m{10cm}|} \\ \hline
+\emph{Module} & Battery \\ \hline
+\emph{Inputs} & - User control: on/off \\ \hline
+\emph{Outputs} & - 9.6V DC \\ \hline
+\emph{Functionality} & Provide power to all electronics in the system. \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2234}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7766}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\emph{Module}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Voltage Regulator
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\emph{Inputs} & - 9.6V DC \\
-\emph{Outputs} & - 5V DC with up to 1A of current. \\
-\emph{Functionality} & Convert the battery's 9.6V DC to 5V DC. \\
-\end{longtable}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2216}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7784}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\emph{Module}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-IR Sensor Bank
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\emph{Inputs} & - 5V DC for power.
+\begin{table}
+\begin{tabular}{|m{2cm}|m{10cm}|} \\ \hline
+\emph{Module} & Voltage Regulator \\  \hline
+\emph{Inputs} & - 9.6V DC \\ \hline
+\emph{Outputs} & - 5V DC with up to 1A of current. \\ \hline
+\emph{Functionality} & Convert the battery's 9.6V DC to 5V DC. \\ \hline
+\end{tabular}
+\end{table}
 
-- Environment (objects): objects at head level and steps. \\
-\emph{Outputs} & - V\textsubscript{0}-V\textsubscript{2}: voltages
-ranging from 0.55V DC to 2.8V DC \\
+\begin{table}
+\begin{tabular}{|m{2cm}|m{10cm}|} \\ \hline
+\emph{Module} & IR Sensor Bank \\ \hline
+\emph{Inputs} & - 5V DC for power. 
+- Environment (objects): objects at head level and steps. \\ \hline
+\emph{Outputs} & - V\textsubscript{0}-V\textsubscript{2}: voltages ranging from 0.55V DC to 2.8V DC \\ \hline
 \emph{Functionality} & One sensor to detect objects at head level and
-another sensor angled to detect uneven surfaces. \\
-\end{longtable}
+another sensor angled to detect uneven surfaces. \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2229}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7771}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\emph{Module}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Ultrasonic Sensor Bank
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+\begin{table}
+\begin{tabular}{|m{2cm}|m{10cm}|} \\ \hline
+\emph{Module} & Ultrasonic Sensor Bank \\ \hline
 \emph{Inputs} & - 5V DC for power.
-
 - Environment (objects): objects at least 1in wide and 2in high found in
 a 2ft wide area in front of the user.
 
 - D\textsubscript{0}-D\textsubscript{7}: forwarded 5V DC 10µs control
-signal from PIC to selected sensor. \\
+signal from PIC to selected sensor. \\ \hline
 \emph{Outputs} & - U\textsubscript{0}-U\textsubscript{7}: 0-5V DC pulse
-signal from 100µs to 18ms corresponding to selected sensor. \\
+signal from 100µs to 18ms corresponding to selected sensor. \\ \hline
 \emph{Functionality} & Detects objects on the floor and in front of the
 user (under head level), and gives feedback regarding location and
-distance to object. \\
-\end{longtable}
+distance to object. \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2232}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7768}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\emph{Module}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Vibrating Motor Bank
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+\begin{table}
+\begin{tabular}{|m{2cm}|m{10cm}|} \\ \hline
+\emph{Module} & Vibrating Motor Bank \\ \hline
 \emph{Inputs} & - 5V DC for power.
-
-- M\textsubscript{0}-M\textsubscript{11}: PWM signals from 0-5V DC \\
+- M\textsubscript{0}-M\textsubscript{11}: PWM signals from 0-5V DC \\ \hline
 \emph{Outputs} & - Sensorial feedback (vibrations): sustained or pulsed
-vibrations with varied intensities. \\
+vibrations with varied intensities. \\ \hline
 \emph{Functionality} & Converts the processed sensor information into
-feedback for the user. \\
-\end{longtable}
+feedback for the user. \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2230}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7770}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\emph{Module}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-PIC 18F452
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+\begin{table}
+\begin{tabular}{|m{2cm}|m{10cm}|} \\ \hline
+\emph{Module} & PIC 18F452 \\ \hline
 \emph{Inputs} & - 5V DC for power.
-
 - R\textsubscript{0}-R\textsubscript{2}: analog voltage feedback from
 0.55Vto 2.8V
-
-- U\textsubscript{X}: 0-5V DC pulse signal from 100µs to 18ms. \\
+- U\textsubscript{X}: 0-5V DC pulse signal from 100µs to 18ms. \\ \hline
 \emph{Outputs} & - S\textsubscript{0}-S\textsubscript{2}: digital select
 lines
-
 - U\textsubscript{C}: 5V DC 10µs pulse
-
 - M\textsubscript{0}-M\textsubscript{11}: PWM signals with \ul{?} period
-and \ul{?}\% duty cycle \\
+and \ul{?}\% duty cycle \\ \hline
 \emph{Functionality} & Gather data from ultrasonic and IR sensors, then
-convert it to PWM signals that drive the vibrating motors. \\
-\end{longtable}
+convert it to PWM signals that drive the vibrating motors. \\ \hline
+\end{tabular}
+\end{table}
 
 The first decision for the design was which method was best to detect
 objects. The following table outlines some of the advantages and
 disadvantages of a few methods.
 
-\textbf{Table 5} -- Sensor selection decision.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2432}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3677}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3892}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\emph{\textbf{Method}}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\emph{\textbf{Advantages}}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\emph{\textbf{Disadvantages}}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Ultrasonic sensor & Wide range
-
-Inexpensive & Less accurate \\
-IR sensor & Accurate
-
-Inexpensive & Limited scope and range \\
-Lasers & Accurate
-
-Long distance detection & Expensive
-
-Limited scope \\
-Radar & Infinite range
-
-Near perfect accuracy & Very expensive
-
-Large and heavy
-
-Expert knowledge required \\
-\end{longtable}
+\begin{table}
+\caption{Sensor selection decision.}
+\label{table:caseStudySensorDecision}
+\begin{tabular}{|m{4cm}|m{4cm}|m{4cm}|} \hline
+\emph{\textbf{Method}} & \emph{\textbf{Advantages}} & \emph{\textbf{Disadvantages}} \\ \hline
+Ultrasonic sensor & Wide range Inexpensive & Less accurate \\ \hline
+IR sensor & Accurate Inexpensive & Limited scope and range \\ \hline
+Lasers & Accurate Long distance detection & Expensive Limited scope \\ \hline
+Radar & Infinite range Near perfect accuracy & Very expensive Large and heavy Expert knowledge required \\ \hline
+\end{tabular}
+\end{table}
 
 Ultrasonic sensors were capable of detecting the area which we required
 (Range: 1'' -- 10', with area of detection growing wider as distance
@@ -621,31 +470,17 @@ The next decision falls in the category of feedback to the user. The
 following table outlines of the advantages and disadvantages of two
 methods.
 
-\textbf{Table 6} -- User feedback selection.
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2421}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3684}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3894}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\emph{\textbf{Method}}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\emph{\textbf{Advantages}}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\emph{\textbf{Disadvantages}}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Vibration & Quiet operation
-
-Inexpensive & May take time for user to get used to this type of
-sensorial feedback \\
+\begin{table}
+\caption{ser feedback selection.}
+\label{table:<context>}
+\begin{tabular}{|m{3cm}|m{3cm}|m{3cm}|} \hline
+\emph{\textbf{Method}} & \emph{\textbf{Advantages}} & \emph{\textbf{Disadvantages}} \\ \hline
+Vibration & Quiet operation Inexpensive & May take time for user to get used to this type of
+sensorial feedback \\ \hline
 Audible & Unlimited capability & Interferes with a blind user's vital
-hearing ability \\
-\end{longtable}
+hearing ability \\ \hline
+\end{tabular}
+\end{table}
 
 The two alternatives to choose from involving feedback to the user were
 either through vibrations or audible sounds. After some interviews and
@@ -665,23 +500,23 @@ an ADC subsystem. Also, our familiarity with this device encouraged us
 to use it for our main control. The PIC also provides many I/O ports,
 plenty of internal flash memory, and is an inexpensive device.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\item
-  \textbf{High Level Software Description}
-\end{enumerate}
+
+ \textbf{3.2 High Level Software Description}
 
 The development of the software system exhibits the same modularity as
-the hardware design shown in Figure 8. Figure 9 shows the overall
+the hardware design shown in Figure~\ref{figurecaseStudyLevel1:}. 
+Figure~\ref{figure:caseStudySoftwareArch} shows the overall
 behavior of the system as a state diagram, listing out the sequence of
 operations that are performed by the MCU.
 
-\includegraphics{Fig/media/image9.emf}
+\begin{figure}
+\includegraphics{./image9}
+\caption{Main state diagram for software.}
+\label{figure:caseStudySoftwareArch}
+\end{figure}
 
-\textbf{Figure 9} -- Main state diagram for software.
-
-In the list that follows, each of the states in Figure 9 is described in
+In the list that follows, each of the states in 
+Figure~\ref{figure:caseStudySoftwareArch} is described in
 more details regarding its functionality.
 
 \begin{itemize}
@@ -716,21 +551,14 @@ more details regarding its functionality.
   program to determine the pattern in which motors should be vibrating.
 \end{itemize}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\item
-  \textbf{Design Verification and Testing}
-\end{enumerate}
+
+\textbf{4 Design Verification and Testing}
+
 
 The design testing is presented in the order that the tests were
 performed, from unit to acceptance tests.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \textbf{Unit Testing}
-\end{enumerate}
+\textbf{4.1 Unit Testing}
 
 The performance of the IR sensor was critical to the success of the
 system as it would be observing the floor and informing the user of any
@@ -794,10 +622,11 @@ data along the flat surface. & \textbf{x} & &
 } & See data on next page for plots with different filters used. \\
 \end{longtable}
 
-\includegraphics[width=5.44722in,height=3.71181in]{Fig/media/image10.emf}
-
-\textbf{Figure 10} -- ADC samples from the narrow beam sensor, raw and
-filtered.
+\begin{figure}
+\includegraphics[width=5.44722in,height=3.71181in]{./image10}
+\caption{ ADC samples from the narrow beam sensor, raw and filtered.}
+\label{figure:caseStudyAdcSamples}
+\end{figure}
 
 The graph above shows the effects of using a digital low-pass filter on
 the readings from an IR sensor mounted at stomach-level on a walking
@@ -806,11 +635,8 @@ to gather the data samples. In comparison with the data obtained from
 the cart, the raw data has more noise, yet the low-pass filter manages
 to stabilize the value considerably.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \textbf{Integration Testing}
-\end{enumerate}
+
+\textbf{4.1.1 Integration Testing}
 
 This integration test checks that individual ultrasonic sensors could
 trigger individual motors. This is critical to insuring that the system
@@ -879,11 +705,7 @@ This testing was performed many times and helped us to determine the
 proper adjustments/angles of the sensors. Performing these tests also
 gave us insight on what to set the sensor thresholds at in the software.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\item
-  \textbf{Acceptance Testing}
+\textbf{4.1.2 Acceptance Testing}
 \end{enumerate}
 
 One of the main engineering requirements is \emph{The system will detect
@@ -969,12 +791,7 @@ different sizes (poles, chairs, etc\ldots) to ensure proper detection. &
 the user had to navigate through. See video for results of this test. \\
 \end{longtable}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\item
-  \textbf{Requirements Verification}
-\end{enumerate}
+\textbf{4.2 Requirements Verification}
 
 Tests were constructed and run for each of the engineering requirements.
 These are enumerated in the following table.
@@ -1066,12 +883,7 @@ Test: Refreshing System Output Test
 Test \#: 309 \\
 \end{longtable}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\item
-  \textbf{Summary and Conclusions}
-\end{enumerate}
+5 \textbf{Summary and Conclusions}
 
 Overall, the project was completed successfully and all the critical
 requirements were met. We had the chance to meet with a visually
@@ -1121,12 +933,7 @@ role in having the system operate correctly.
 Finally, meeting with a blind person made us realize how important and
 useful it is to obtain feedback from the expected users of the system.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{4}
-\item
-  \textbf{References}
-\end{enumerate}
+\textbf{6 References}
 
 {[}1{]} American Foundation for the Blind, ``Blindness Statistics,''
 February 2006, http://www.afb.org.
