@@ -95,7 +95,7 @@ community.
 The team interviewed a number of sources to identify the objectives in
 the tree below.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=3.80278in,height=3.76528in]{./image1.jpeg}
 \caption{The needs and objective tree.}
 \label{figure:caseStudyNeedsObjective}
@@ -114,13 +114,13 @@ least of the three concerns.
 
 \textbf{2 The Requirements Specification}
 
-
-\begin{table}
+\begin{table}[h]
+\small
 \caption{Requirements Specification for the Visual Aid.}
 \label{table:caseStudyRequirements}
-\begin{tabular}{|m{3cm}|m{3cm}|m{3cm}|} \hline
+\begin{tabular}{|p{2cm}|p{5cm}|p{6cm}|} \hline
+\rowcolor{Gray}
 \textbf{Marketing Requirements} & \textbf{Engineering Requirements} & \textbf{Justification} \\ \hline
-
 1, 2, 10, 13 & 
 		1. The system's total weight will not exceed 5 lbs. & 
 		Based on the weight of other portable devices, such as
@@ -180,15 +180,13 @@ least of the three concerns.
 		  times per second. &
 		Based on the average reaction time of humans (0.33 seconds) {[}8{]}. \\ \hline
 
-\multicolumn{3}{l}{
-\textbf{Marketing Requirements}
-1) Portability, 2) Weight, 3) Operable Environments, 4) Water
-Resistant,5)Operation Time, 6) Cost, 7) Ease of use, 8) Streamlined
-Controls, 9) Safety, 10) Comfortable, 11) Accurate, 12) Noise Level, 13)
-Consumer-Friendly, 14) Intuitive Feedback } \\ \hline
-
 \end{tabular}
 \end{table}
+
+The marketing requirements are: (1) Portability, (2) weight, (3) operable enviromnents, 
+(4) water resistance, (5) operation time, (6) cost, (7) east of use, 
+(8) streamlined controls, (9) safety, (10 comforable, (11) accurate, (12) noiuse level, 
+(13) consumer-friendly, (14) intuitive feedback.
 
 
 \textbf{3 The Design}
@@ -199,7 +197,7 @@ physical components are interconnected through the processing unit and
 are attached to the user as in Figure 2 below.
 
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=4.93194in,height=3.55278in]{./image2.png}
 \caption{Visual Aid side view.}
 \label{figure:caseStudySideView}
@@ -218,7 +216,7 @@ location the sensors are arranged such that portions of their beams
 overlap with each other. The sensor matrix is aligned to give a wider
 range in the vertical orientation than the horizontal.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=4.50764in,height=2.54514in]{./image3.jpeg}
 \caption{Wide-beam sensors array.}
 \label{figure:caseStudyWideBeam}
@@ -235,7 +233,7 @@ distance read by the sensor will be diminished to x. In order to avoid
 ``false'' detection of steps due to the movement of the user's body
 while walking, a digital filter is used.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=4.25in,height=2.74236in]{./image4.png}
 \caption{Narrow-beam sensor.}
 \label{figure:caseStudyNarrowBeam}
@@ -255,14 +253,14 @@ of the users. For example if an object is detected in the lower right
 corner, then the lower right motor will vibrate. The matrix motors also
 vary their intensity according to the distance of objects detected.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=4.54514in,height=3.04514in]{.//image5.png}
 \caption{Sensors and Front Motors}
 \label{figure:caseStudySensorMotors}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=4.69722in,height=3.09861in]{./image6.png}
 \caption{The motors matrix.}
 \label{figure:caseStudyMotorMatrix}
@@ -290,7 +288,7 @@ justification for the decisions made.
 The level 0 description of the Visual Aide describes the overall input,
 output, and behavior expected of the device.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=3.53056in,height=2.45486in]{./image7.png}
 \caption{Level 0.}
 \label{figure:caseStudyLevel0}
@@ -305,10 +303,10 @@ The only control is an on/off switch with everything else automated. The
 object is to provide the user with care-free operation.
 
 
-\begin{table}
+\begin{table}[h]
 
 \label{table:caseStudyLevel0}
-\begin{tabular}{|m{3cm}|m{10cm}|} \hline
+\begin{tabular}{|p{2cm}|p{10cm}|} \hline
 
 \emph{Module} & Vision System \\ \hline
 
@@ -334,7 +332,7 @@ from the user. \\ \hline
 The level 1 diagram reveals what is inside the level 0 box shown in
 Figure~\ref{figure:caseStudyLevel0}.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics{./image8}
 \caption{ Level 1 system design.}
 \label{figurecaseStudyLevel1:}
@@ -360,46 +358,48 @@ is mounted on the back of the user, provides sensorial feedback to the
 user in the form of vibrations of varying intensity based on the
 proximity of the object and relative to the location of the object.
 
-\begin{table}
-\begin{tabular}{|m{2cm}|m{10cm}|} \\ \hline
+
+
+
+\begin{table}[h]
+\label{table:caseStudyModuleBattery}
+\begin{tabular}{|p{2cm}|p{10cm}|} \hline
 \emph{Module} & Battery \\ \hline
-\emph{Inputs} & - User control: on/off \\ \hline
-\emph{Outputs} & - 9.6V DC \\ \hline
+\emph{Inputs} &   \tabitem User control: on/off  \\ \hline
+\emph{Outputs} & \tabitem 9.6V DC \\ \hline
 \emph{Functionality} & Provide power to all electronics in the system. \\ \hline
 \end{tabular}
 \end{table}
 
 
-\begin{table}
-\begin{tabular}{|m{2cm}|m{10cm}|} \\ \hline
+\begin{table}[h]
+\begin{tabular}{|m{2cm}|m{10cm}|}  \hline
 \emph{Module} & Voltage Regulator \\  \hline
-\emph{Inputs} & - 9.6V DC \\ \hline
-\emph{Outputs} & - 5V DC with up to 1A of current. \\ \hline
+\emph{Inputs} & \tabitem 9.6V DC \\ \hline
+\emph{Outputs} & \tabitem 5V DC with up to 1A of current. \\ \hline
 \emph{Functionality} & Convert the battery's 9.6V DC to 5V DC. \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
-\begin{tabular}{|m{2cm}|m{10cm}|} \\ \hline
+\begin{table}[h]
+\begin{tabular}{|m{2cm}|m{10cm}|}  \hline
 \emph{Module} & IR Sensor Bank \\ \hline
-\emph{Inputs} & - 5V DC for power. 
-- Environment (objects): objects at head level and steps. \\ \hline
-\emph{Outputs} & - V\textsubscript{0}-V\textsubscript{2}: voltages ranging from 0.55V DC to 2.8V DC \\ \hline
+\emph{Inputs} & \tabitem 5V DC for power. 
+\tabitem Environment (objects): objects at head level and steps. \\ \hline
+\emph{Outputs} & \tabitem V\textsubscript{0}-V\textsubscript{2}: voltages ranging from 0.55V DC to 2.8V DC \\ \hline
 \emph{Functionality} & One sensor to detect objects at head level and
 another sensor angled to detect uneven surfaces. \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
-\begin{tabular}{|m{2cm}|m{10cm}|} \\ \hline
+\begin{table}[h]
+\begin{tabular}{|m{2cm}|m{10cm}|} \hline
 \emph{Module} & Ultrasonic Sensor Bank \\ \hline
-\emph{Inputs} & - 5V DC for power.
-- Environment (objects): objects at least 1in wide and 2in high found in
-a 2ft wide area in front of the user.
-
-- D\textsubscript{0}-D\textsubscript{7}: forwarded 5V DC 10µs control
-signal from PIC to selected sensor. \\ \hline
-\emph{Outputs} & - U\textsubscript{0}-U\textsubscript{7}: 0-5V DC pulse
+\emph{Inputs} & 
+\tabitem 5V DC for power.
+\tabitem Environment (objects): objects at least 1in wide and 2in high found in a 2ft wide area in front of the user.
+\tabitem D\textsubscript{0}-D\textsubscript{7}: forwarded 5V DC 10µs control signal from PIC to selected sensor. \\ \hline
+\emph{Outputs} & \tabitem U\textsubscript{0}-U\textsubscript{7}: 0-5V DC pulse
 signal from 100µs to 18ms corresponding to selected sensor. \\ \hline
 \emph{Functionality} & Detects objects on the floor and in front of the
 user (under head level), and gives feedback regarding location and
@@ -407,30 +407,27 @@ distance to object. \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
-\begin{tabular}{|m{2cm}|m{10cm}|} \\ \hline
+\begin{table}[h]
+\begin{tabular}{|m{2cm}|m{10cm}|}  \hline
 \emph{Module} & Vibrating Motor Bank \\ \hline
-\emph{Inputs} & - 5V DC for power.
-- M\textsubscript{0}-M\textsubscript{11}: PWM signals from 0-5V DC \\ \hline
-\emph{Outputs} & - Sensorial feedback (vibrations): sustained or pulsed
+\emph{Inputs} & \tabitem5V DC for power.
+\tabitem M\textsubscript{0}-M\textsubscript{11}: PWM signals from 0-5V DC \\ \hline
+\emph{Outputs} & \tabitem Sensorial feedback (vibrations): sustained or pulsed
 vibrations with varied intensities. \\ \hline
 \emph{Functionality} & Converts the processed sensor information into
 feedback for the user. \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
-\begin{tabular}{|m{2cm}|m{10cm}|} \\ \hline
+\begin{table}[h]
+\begin{tabular}{|m{2cm}|m{10cm}|} \hline
 \emph{Module} & PIC 18F452 \\ \hline
-\emph{Inputs} & - 5V DC for power.
-- R\textsubscript{0}-R\textsubscript{2}: analog voltage feedback from
-0.55Vto 2.8V
-- U\textsubscript{X}: 0-5V DC pulse signal from 100µs to 18ms. \\ \hline
-\emph{Outputs} & - S\textsubscript{0}-S\textsubscript{2}: digital select
-lines
-- U\textsubscript{C}: 5V DC 10µs pulse
-- M\textsubscript{0}-M\textsubscript{11}: PWM signals with \ul{?} period
-and \ul{?}\% duty cycle \\ \hline
+\emph{Inputs} & \tabitem 5V DC for power.
+\tabitem R\textsubscript{0}-R\textsubscript{2}: analog voltage feedback from 0.55Vto 2.8V
+\tabitem U\textsubscript{X}: 0-5V DC pulse signal from 100µs to 18ms. \\ \hline
+\emph{Outputs} & \tabitem S\textsubscript{0}-S\textsubscript{2}: digital select lines
+\tabitem U\textsubscript{C}: 5V DC 10µs pulse
+\tabitem M\textsubscript{0}-M\textsubscript{11}: PWM signals with \ul{?} period and \ul{?}\% duty cycle \\ \hline
 \emph{Functionality} & Gather data from ultrasonic and IR sensors, then
 convert it to PWM signals that drive the vibrating motors. \\ \hline
 \end{tabular}
@@ -441,7 +438,7 @@ objects. The following table outlines some of the advantages and
 disadvantages of a few methods.
 
 
-\begin{table}
+\begin{table}[h]
 \caption{Sensor selection decision.}
 \label{table:caseStudySensorDecision}
 \begin{tabular}{|m{4cm}|m{4cm}|m{4cm}|} \hline
@@ -470,7 +467,7 @@ The next decision falls in the category of feedback to the user. The
 following table outlines of the advantages and disadvantages of two
 methods.
 
-\begin{table}
+\begin{table}[h]
 \caption{ser feedback selection.}
 \label{table:<context>}
 \begin{tabular}{|m{3cm}|m{3cm}|m{3cm}|} \hline
@@ -509,7 +506,7 @@ Figure~\ref{figure:caseStudySoftwareArch} shows the overall
 behavior of the system as a state diagram, listing out the sequence of
 operations that are performed by the MCU.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics{./image9}
 \caption{Main state diagram for software.}
 \label{figure:caseStudySoftwareArch}
@@ -565,64 +562,39 @@ system as it would be observing the floor and informing the user of any
 upcoming steps. We had to test the sensor to see if it could distinguish
 the height bob of a walker from the drop off of a set of steps.
 
-\textbf{Table 7}---IR sensor test.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0814}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.4525}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0679}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0679}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0455}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0224}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2624}}@{}}
-\toprule\noalign{}
-\multicolumn{5}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.7152} + 8\tabcolsep}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Test Name:} IR Sensor Test
-\end{minipage}} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2848} + 2\tabcolsep}@{}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Test Number:} 101
-\end{minipage}} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\multicolumn{7}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{1.0000} + 12\tabcolsep}@{}}{%
-\textbf{Test Description:} Verify that the IR sensor is correctly
-reading distance without unnecessary noise.} \\
-\multicolumn{7}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{1.0000} + 12\tabcolsep}@{}}{%
-\textbf{Test Information}} \\
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.5339} + 2\tabcolsep}}{%
-\textbf{Name of Tester: Luis}} &
-\multicolumn{4}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2036} + 6\tabcolsep}}{%
-\textbf{Date: 3/18/06}} & \textbf{Time: 2:00PM} \\
-\textbf{\#} & \textbf{Procedure} & \textbf{Pass} & \textbf{Fail} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0679} + 2\tabcolsep}}{%
-\textbf{N/A}} & \textbf{Comments} \\
-\textbf{1} & Mount the IR Sensor and hold it vertically at waist level.
-& \textbf{x} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0679} + 2\tabcolsep}}{%
-} & \\
-\textbf{2} & Start Recording data while walking along a flat,
-obstacle-free path. & \textbf{x} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0679} + 2\tabcolsep}}{%
-} & \\
-\textbf{3} & Analyze that data to ensure that minimal noise is created
-from the up and down movement of walking. & \textbf{x} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0679} + 2\tabcolsep}}{%
-} & Used Luis, Carl, and a rolling cart. \\
-\textbf{4} & Repeat test with stairs along the walking path. &
-\textbf{x} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0679} + 2\tabcolsep}}{%
-} & \\
-\textbf{5} & Analyze the values to ensure that they differ enough from
-data along the flat surface. & \textbf{x} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0679} + 2\tabcolsep}}{%
-} & See data on next page for plots with different filters used. \\
-\end{longtable}
+\begin{table}[h]
+\caption{IR sensor test.}
+\label{table:caseStudyIrSensorTest}
+\begin{tabular}{|p{1cm}|p{6cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{3cm}|} \hline
 
-\begin{figure}
+\multicolumn{1}{|l}{\textbf{\makecell{Test\\Name:}}}    & \multicolumn{1}{l|}{IR Sensor Test} &
+\multicolumn{3}{l}{\textbf{\makecell{Test\\Number:}}} & 101 \\ \hline
+
+\multicolumn{1}{|l} {\textbf{\makecell{Test\\Descr.:}}}&
+\multicolumn{5}{l|} {\makecell[l]{Verify that each bit of the output \\ can be set independently of the other outputs.}} \\ \hline
+
+\multicolumn{6}{|c|} {\textbf{Tester Information}} \\ \hline
+
+\multicolumn{1}{|l} {\textbf{\makecell{Tester\\Name:}}} &
+\multicolumn{1}{l} {Luis } &
+\multicolumn{3}{|l}{\textbf{Date:}} & 
+\multicolumn{1}{l|}{3/18/06}  \\ \hline
+
+\textbf{\#} & \textbf{Procedure} & 
+	\rotatebox[origin=c]{90}{\textbf{Pass}} & 
+	\rotatebox[origin=c]{90}{\textbf{Fail}}& 
+	\rotatebox[origin=c]{90}{\textbf{N/A}} & \textbf{Comments} \\ \hline
+
+\textbf{1} & Mount the IR Sensor and hold it vertically at waist level. & \textbf{x} & & & \\ \hline
+\textbf{2} & Start Recording data while walking along a flat, obstacle-free path. & \textbf{x} & & & \\ \hline
+\textbf{3} & Analyze that data to ensure that minimal noise is created from the up and down movement of walking. & \textbf{x} & &  & Used Luis, Carl, and a rolling cart. \\ \hline
+\textbf{4} & Repeat test with stairs along the walking path. & \textbf{x} & & & \\ \hline
+\textbf{5} & Analyze the values to ensure that they differ enough from data along the flat surface. & \textbf{x} & & & See data on next page for plots with different filters used. \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
 \includegraphics[width=5.44722in,height=3.71181in]{./image10}
 \caption{ ADC samples from the narrow beam sensor, raw and filtered.}
 \label{figure:caseStudyAdcSamples}
@@ -636,77 +608,53 @@ the cart, the raw data has more noise, yet the low-pass filter manages
 to stabilize the value considerably.
 
 
+
+
 \textbf{4.1.1 Integration Testing}
 
 This integration test checks that individual ultrasonic sensors could
 trigger individual motors. This is critical to insuring that the system
 gives proper feedback to the user about their environment.
 
-\textbf{Table 8} -- Integration testing
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0845}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.4695}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0704}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0704}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0472}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0232}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2347}}@{}}
-\toprule\noalign{}
-\multicolumn{5}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.7420} + 8\tabcolsep}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Test Name:} Ultrasonic Sensor/Motor Test
-\end{minipage}} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2580} + 2\tabcolsep}@{}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Test Number:} 200
-\end{minipage}} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\multicolumn{7}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{1.0000} + 12\tabcolsep}@{}}{%
-\textbf{Test Description:}} \\
-\multicolumn{7}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{1.0000} + 12\tabcolsep}@{}}{%
-\textbf{Test Information}} \\
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.5540} + 2\tabcolsep}}{%
-\textbf{Name of Tester: Freddy and Ryan}} &
-\multicolumn{4}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2113} + 6\tabcolsep}}{%
-\textbf{Date: 3/25/06}} & \textbf{Time: 1:00PM} \\
-\textbf{\#} & \textbf{Procedure} & \textbf{Pass} & \textbf{Fail} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0704} + 2\tabcolsep}}{%
-\textbf{N/A}} & \textbf{Comments} \\
-\textbf{1} & The tester should be wearing the visual aid system with the
-ultrasonic sensors and vibrating motors properly installed. & \textbf{x}
-& &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0704} + 2\tabcolsep}}{%
-} & \\
-\textbf{2} & Have someone place and object in the path of each
-individual sensor. & \textbf{x} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0704} + 2\tabcolsep}}{%
-} & \\
-\textbf{3} & Verify that the user is able to identify which position on
-the vibrating motor bank is being activated. Also, ensure the correct
-motor is being activated. & \textbf{x} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0704} + 2\tabcolsep}}{%
-} & \\
-\textbf{4} & Repeat step (3) for each ultrasonic sensor combination in
-order to activate each vibrating motor separately. & \textbf{x} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0704} + 2\tabcolsep}}{%
-} & \\
-\textbf{5} & Next, repeat the same procedure but activate multiple
-ultrasonic sensors and vibrating motors simultaneously and ensure that
-the unit is functioning properly. & \textbf{x} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0704} + 2\tabcolsep}}{%
-} & See conclusions below. \\
-\end{longtable}
+\begin{table}[h]
+\caption{Integration testing.}
+\label{table:caseStudyIntegrationTest}
+\begin{tabular}{|p{1cm}|p{6cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{3cm}|} \hline
+
+\multicolumn{1}{|l} {\textbf{\makecell{Test\\Name:}}} &
+\multicolumn{1}{l|} {\makecell{Ultrasonic Sensor/\\Motion Test}} &
+\multicolumn{3}{l}{\textbf{\makecell{Test\\Number:}}} & 200 \\ \hline
+
+\multicolumn{1}{|l} {\textbf{\makecell{Test\\Descr:}}}&
+\multicolumn{5}{l|} {Verify that the sensor can control the motor.} \\ \hline
+
+\multicolumn{6}{|c|} {\textbf{Tester Information}} \\ \hline
+
+\multicolumn{1}{|l} {\textbf{\makecell{Tester\\Name:}}} &
+\multicolumn{1}{l|} {Freddy and Ryan} &
+\multicolumn{3}{l}{\textbf{Date:}} & 
+\multicolumn{1}{l|}{3/25/06}  \\ \hline
+
+\textbf{\#} & \textbf{Procedure} & 
+	\rotatebox[origin=c]{90}{\textbf{Pass}} & 
+	\rotatebox[origin=c]{90}{\textbf{Fail}}& 
+	\rotatebox[origin=c]{90}{\textbf{N/A}} & \textbf{Comments} \\ \hline
+	
+\textbf{1} & The tester should be wearing the visual aid system with the ultrasonic sensors and vibrating motors properly installed. & \textbf{x} & & & \\ \hline
+\textbf{2} & Have someone place and object in the path of each individual sensor. & \textbf{x} & & & \\ \hline
+\textbf{3} & Verify that the user is able to identify which position on the vibrating motor bank is being activated. Also, ensure the correct motor is being activated. & \textbf{x} & & & \\ \hline
+\textbf{4} & Repeat step (3) for each ultrasonic sensor combination in order to activate each vibrating motor separately. & \textbf{x} & & & \\ \hline
+\textbf{5} & Next, repeat the same procedure but activate multiple ultrasonic sensors and vibrating motors simultaneously and ensure that the unit is functioning properly. & \textbf{x} & & & See conclusions below. \\ \hline
+\end{tabular}
+\end{table}
 
 This testing was performed many times and helped us to determine the
 proper adjustments/angles of the sensors. Performing these tests also
 gave us insight on what to set the sensor thresholds at in the software.
 
 \textbf{4.1.2 Acceptance Testing}
-\end{enumerate}
+
 
 One of the main engineering requirements is \emph{The system will detect
 objects that are at least 1in wide and 2in high at a distance of at
@@ -715,175 +663,161 @@ provide sensory feedback. Also, the system should detect street signs
 and posts.} In order to insure that this requirement was met, the
 following acceptance test was constructed.
 
-\textbf{Table 9} -- Surface test.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0732}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.4065}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0610}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0610}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0409}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0201}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.3374}}@{}}
-\toprule\noalign{}
-\multicolumn{5}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.6425} + 8\tabcolsep}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Test Name:} Object Detection Test
-\end{minipage}} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.3575} + 2\tabcolsep}@{}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Test Number:} 305
-\end{minipage}} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\multicolumn{7}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{1.0000} + 12\tabcolsep}@{}}{%
-\textbf{Test Description:} Verify that the system can detect objects
-that are at least 1in wide and 2in high at a distance of at least 3 ft
-from the user and as far as 7 ft in an area 2 ft wide, and provide
-sensory feedback. Also, the system should detect street signs and
-posts} \\
-\multicolumn{7}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{1.0000} + 12\tabcolsep}@{}}{%
-\textbf{Test Information}} \\
-\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.4797} + 2\tabcolsep}}{%
-\textbf{Name of Tester: Freddy and Ryan}} &
-\multicolumn{4}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1829} + 6\tabcolsep}}{%
-\textbf{Date: 3/18/06}} & \textbf{Time: 12:30PM} \\
-\textbf{\#} & \textbf{Procedure} & \textbf{Pass} & \textbf{Fail} &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0610} + 2\tabcolsep}}{%
-\textbf{N/A}} & \textbf{Comments} \\
+\begin{table}[h]
+\caption{Surface Test.}
+\label{table:caseStudySurfaceTest}
+\begin{tabular}{|p{1cm}|p{6cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{3cm}|} \hline
+
+\multicolumn{1}{|l} {\textbf{\makecell{Test\\Name:}}} &
+\multicolumn{1}{l|} {Object Dection Test} &
+\multicolumn{3}{l}{\textbf{\makecell{Test\\Number:}}} & 305 \\ \hline
+
+\multicolumn{1}{|l} {\textbf{\makecell{Test\\Desc.:}}}&
+\multicolumn{5}{l|} {
+\makecell[l]{
+Verify that the system can detect objects that are at least 1in wide \\
+and 2in high at a distance of at least 3 ft from the user and as far \\
+as 7 ft in an area 2 ft wide, and provide sensory feedback. Also, \\
+the system should detect street signs and posts.}} \\ \hline
+
+\multicolumn{6}{|c|} {\textbf{Tester Information}} \\ \hline
+
+\multicolumn{1}{|l} {\textbf{\makecell{Tester\\Name:}}} &
+\multicolumn{1}{l|} {Freddy and Ryan} &
+\multicolumn{3}{l}{\textbf{Date:}} & 
+\multicolumn{1}{l|}{4/2/06}  \\ \hline
+
+\textbf{\#} & \textbf{Procedure} & 
+	\rotatebox[origin=c]{90}{\textbf{Pass}} & 
+	\rotatebox[origin=c]{90}{\textbf{Fail}}& 
+	\rotatebox[origin=c]{90}{\textbf{N/A}} & \textbf{Comments} \\ \hline
+
 \textbf{1} & On a flat level surface first mark a spot which is where
-the system will take readings from. & \textbf{x} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0610} + 2\tabcolsep}}{%
-} & \\
+the system will take readings from. 
+& x & & & \\ \hline
+
 \textbf{2} & Next, mark out a rectangular box on the floor, starting 3
 feet from the testing position. The box should be centered with the
 testing spot and be 2 feet wide and 4 feet long. This box is used as
-reference for placing objects. (See comments) & \textbf{X} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0610} + 2\tabcolsep}}{%
-} & 3'
+reference for placing objects. (See comments) 
+& x & & & \\ \hline
 
-2'
-
-4'
-
-\textbf{X} \\
 \textbf{3} & Place a small object which is approximately 1'' wide and
 2'' high across the front line (Left Corner, Right Corner and Middle).
 Verify that the object is detected at each position and the appropriate
-motors are activated. & \textbf{X} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0610} + 2\tabcolsep}}{%
-} & x x x \\
-\textbf{4} & Now, repeat step (3) but place the object across the back
-line. & \textbf{X} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0610} + 2\tabcolsep}}{%
-} & x x x \\
-\textbf{5} & Again, repeat step (3) but place the object across the
-center of the box. & \textbf{x} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0610} + 2\tabcolsep}}{%
-} & x x x \\
-\textbf{6} & Record all results and repeat test with objects of
-different sizes (poles, chairs, etc\ldots) to ensure proper detection. &
-\textbf{x} & &
-\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0610} + 2\tabcolsep}}{%
-} & To verify this test we set up an obstacle course with objects which
-the user had to navigate through. See video for results of this test. \\
-\end{longtable}
+motors are activated. 
+& x & & & \\ \hline
+
+\textbf{4} & Now, repeat step (3) but place the object across the back line. 
+& x & & & \\ \hline
+
+\textbf{5} & Again, repeat step (3) but place the object across the center of the box. 
+& x & & & \\ \hline
+
+\textbf{6} & Record all results and repeat test with objects of different sizes (poles, chairs, etc.) to ensure proper detection. 
+& x & & & 
+To verify this test we 
+set up an obstacle course 
+with objects which the 
+user had to navigate 
+through. See video for 
+results of this test. \\ \hline
+\end{tabular}
+\end{table}
 
 \textbf{4.2 Requirements Verification}
 
 Tests were constructed and run for each of the engineering requirements.
 These are enumerated in the following table.
 
-\textbf{\hfill\break
-Table 10} -- Requirements verification reference.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4808}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5192}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Engineering Requirement}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Test Verification}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-The system's total weight will not exceed 5 lbs. & Showed that weight
-did not exceed 5 lbs.
+\begin{table}[h]
+\caption{Requirements verification reference.}
+\label{table:caseStudyRequirementsVerification}
+\begin{tabular}{|m{5cm}|m{8cm}|} \hline
 
-Test: Weight Test
+\textbf{Engineering Requirement} & \textbf{Test Verification} \\ \hline
 
-Test \#: 300 \\
-The system will have a single control to turn it on/off & Showed that
-ON/OFF switch works properly.(Sometimes needs switched twice)
 
-Test: On/Off Switch Test
+The system's total weight will not exceed 5 lbs. & 
+\makecell[l]{
+Showed that weight did not exceed 5 lbs. \\
+Test: Weight Test\\
+Test \#: 300} \\ \hline
 
-Test \#: 301 \\
-The system will operate on full charge for at least 3 hours & Showed
-that the system will operate for at least 3 hours under normal
-conditions.
+The system will have a single control to turn it on/off & 
+\makecell[l]{Showed that ON/OFF switch works \\
+properly.(Sometimes needs switched twice) \\
+Test: On/Off Switch Test\\
+Test \#: 301} \\ \hline
 
-Test: Full Charge Operation Time
+The system will operate on full charge for at least 3 hours & 
+\makecell[l]{Showed that the system will operate for at least \\
+3 hours under normal conditions. \\
+Test: Full Charge Operation Time\\
+Test \#: 302} \\  \hline
 
-Test \#: 302 \\
-The system should not exceed \$600 & Showed that the total expenses to
-construct the system did not exceed \$600 budget.
+The system should not exceed \$600 & 
+\makecell[l]{Showed that the total expenses to construct the \\
+system did not exceed \$600 budget. \\
+Test: Budget Test\\
+Test \#: 303} \\  \hline
 
-Test: Budget Test
-
-Test \#: 303 \\
 Uneven surfaces (steps, rocks) of at least ±1.25in high are detected at
-a distance of at least 3 ft away from the user & Showed that the system
-can properly detect uneven surfaces.
+a distance of at least 3 ft away from the user & 
+\makecell[l]{
+Showed that the system can properly detect uneven \\
+surfaces.\\
+Test: Uneven Surface Test\\
+Test \#: 304} \\ \hline
 
-Test: Uneven Surface Test
-
-Test \#: 304 \\
 The system will detect objects that are at least 1in wide and 2in high
 at a distance of at least 3 ft from the user and as far as 7 ft in an
 area 2 ft wide, and provide sensory feedback. Also, the system should
-detect street signs and posts. & Showed that the system can properly
-detect objects of a minimum size in within the boundaries of the test
-area.
+detect street signs and posts. & 
+\makecell[l]{
+Showed that the system can properly detect objects \\
+of a minimum size in within the boundaries of the \\
+test area.\\
+Test: Object Detection Test\\
+Test \#: 305} \\ \hline
 
-Test: Object Detection Test
+The system should not produce noise exceeding 40db & 
+\makecell[l]{
+Showed that system noise is less than 40db and is not \\
+distracting during quiet conversation.\\
+Test: Sound Level Test\\
+Test \#: 306} \\ \hline
 
-Test \#: 305 \\
-The system should not produce noise exceeding 40db & Showed that system
-noise is \textless{} 40db and is not distracting during quiet
-conversation.
-
-Test: Sound Level Test
-
-Test \#: 306 \\
 The system is built with components that can operate in temperatures
-ranging from 0˚F to 120˚F & Showed that all components of system will
-operate properly with the temperature range.
+ranging from 0$^\circ$F to 120$^\circ$F & 
+\makecell[l]{
+Showed that all components of system will operate \\
+properly with the temperature range.\\
+Test: Operating Environment Temperature\\
+Test \#: 307} \\ \hline
 
-Test: Operating Environment Temperature
+The system components is enclosed to be water-resistant & 
+\makecell[l]{
+Components are not sealed in our prototype. Could \\
+be made water-resistant and tested.\\
+Test: Water Resistant Test\\
+Test \#: 308} \\ \hline
 
-Test \#: 307 \\
-The system components is enclosed to be water-resistant & Components are
-not sealed in our prototype. Could be made water-resistant and tested.
-
-Test: Water Resistant Test
-
-Test \#: 308 \\
 The system will refresh its output according to sensor readings 5 times
-per second & Showed that the system will refresh its output at least 5
-times per second.
+per second & 
+\makecell[l]{
+Showed that the system will refresh its output at \\
+least 5 times per second.\\
+Test: Refreshing System Output Test\\
+Test \#: 309} \\ \hline
+\end{tabular}
+\end{table}
 
-Test: Refreshing System Output Test
 
-Test \#: 309 \\
-\end{longtable}
 
-5 \textbf{Summary and Conclusions}
+\textbf{5 Summary and Conclusions}
 
 Overall, the project was completed successfully and all the critical
 requirements were met. We had the chance to meet with a visually

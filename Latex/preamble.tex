@@ -17,7 +17,7 @@
 \usepackage{multirow}
 \usepackage{hhline}				% allows partial hlines in multirow tables
 \usepackage{longtable}			%Enables multiplage tables
-
+\usepackage{makecell}			% deal with parboxes inside tables
 
 \usepackage{amsmath}
 
@@ -28,6 +28,9 @@
 
 \newcommand{\ul}{\underline}
 \definecolor{Gray}{gray}{0.85}
+
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
 
 % I want all quotes to be in italics
 \newenvironment{itquote}
