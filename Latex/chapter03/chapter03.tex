@@ -72,7 +72,8 @@ Developing System Requirements Specifications} {[}IEEE Std.
 1233-1998{]}. This process is the focus of this chapter and there are
 three stakeholder groups in it -- the customer, the environment, and the
 technical community. The input from the customer includes the marketing
-(raw) requirements that were addressed in Chapter 2. The environment
+(raw) requirements that were addressed in 
+Chapter~\ref{chapter:projectSelection}. The environment
 introduces requirements in the form of constraints and standards that
 impact or limit the design. The input from the technical community is
 based upon the knowledge of engineers who are primarily responsible for
@@ -452,7 +453,8 @@ per second.
 This could be verified by providing an input video stream at the frame
 rate and testing to ensure that proper processing occurs. The test
 procedure would need to specify length and number of videos to test,
-issues that are addressed in Chapter 7. A final example of performance
+issues that are addressed in Chapter~\ref{chapter:testing}. 
+A final example of performance
 is one that could apply to electrical audio amplification
 
 \begin{itquote}
@@ -471,7 +473,8 @@ distortion in the output signal.
 These requirements describe the type of functions that a system should
 perform. Often, they provide inputs, outputs, and the transformation
 that the system will perform on the inputs. This is examined further in
-Chapter 5, which presents functional design techniques. The following is
+Chapter~\ref{chapter:funcDecomp}, 
+which presents functional design techniques. The following is
 an example, where the input is ambient air temperature is converted to a
 digital readout. It also has a performance aspect in that the accuracy
 is specified.
@@ -808,7 +811,8 @@ The software will comply with the Digital Millennium Copyright Act.
 This refers to the expected period of time that a system will operate
 properly. Measures of r\emph{eliability} include failure rates and mean
 time to failure. Estimation of system reliability is given detailed
-coverage in Chapter 8. The following is an example of a reliability
+coverage in Chapter~\ref{chapter:systemReliability}. 
+The following is an example of a reliability
 requirement.
 
 \begin{itquote}
@@ -1021,7 +1025,7 @@ amplifier. This simple example was selected because of the relative ease
 of understanding, broad familiarity with this type of device, and it
 will be expanded upon later.
 
-\begin{longtable}{ |p{2.5cm}|p{5cm}|p{5cm}|} 
+\begin{longtable}{ |p{2.5cm}|p{5cm}|p{5.5cm}|} 
 \caption{Requirements Specification for an audio amplifier for use in an automobile.}
 \label{table:audioRequireSpec} \\
 
@@ -1113,11 +1117,12 @@ need to be installed somewhere in the vehicle.
 Table~\ref{table:ipod} presents the Requirements Specification for a hands-free
 device whose intent is to allow a driver to communicate with an
 iPod\textsuperscript{TM} audio player while driving. The Problem
-Statement was presented in Chapter 2 (Section 2.6).
+Statement was presented in Chapter~\ref{chapter:projectSelection} 
+(Section~\ref{section:needs-and-objectives-statements}).
 
 
 
-\begin{longtable}{ |p{2.5cm}|p{5cm}|p{5cm}|} 
+\begin{longtable}{ |p{2.5cm}|p{5cm}|p{5.5cm}|} 
 \caption{Requirements Specification for the iPod\textsuperscript{TM} Hands-Free Device.}
 \label{table:ipod}\\
 
@@ -1200,14 +1205,15 @@ work in its intended environment.
 
 Table~\ref{table:gigabit} presents an example Requirements Specification developed for
 the design of an experimental test setup {[}Ese03{]}. The Problem
-Statement for this example was presented in Chapter 2, where the
+Statement for this example was presented in 
+Chapter~\ref{chapter:projectSelection}, where the
 objective was to design a system to test a gigabit Ethernet card for use
 in a harsh operating environment. In particular, the effects of
 temperature and vibration variations on the optical power margin, both
 of which impact the bit-error rate and the system performance, were
 determined.
 
-\begin{longtable}{ |p{2.5cm}|p{5cm}|p{5cm}|} 
+\begin{longtable}{ |p{2.5cm}|p{5cm}|p{5.5cm}|} 
 \caption{System Requirements for a Gigabit Ethernet card testing project.}
 \label{table:gigabit}\\
 \hline
@@ -1274,11 +1280,12 @@ resonant frequency.
 \label{subsection:case-study-portable-aerial-surveillance-system}
 
 The Requirements Specification for the Portable Aerial Surveillance
-System (Problem Statement presented in Chapter 2) is shown in Table~\ref{table:portableAerial}.
+System (Problem Statement presented in 
+Chapter~\ref{chapter:projectSelection}) is shown in Table~\ref{table:portableAerial}.
 This system is intended to provide police and emergency responders with
 a low-cost easy to deploy aerial surveillance system.
 
-\begin{longtable}{ |p{2.5cm}|p{5cm}|p{5cm}|} 
+\begin{longtable}{ |p{2.5cm}|p{5cm}|p{5.5cm}|} 
 \caption{System Requirements for the Portable Aerial Surveillance System.}
 \label{table:portableAerial}\\
 
@@ -1401,7 +1408,7 @@ amplifier. ↑=positive correlation, ↑↑=strong positive correlation,
 ↓=negative correlation, ↓↓=strong negative correlation.}
 \label{table:engMarketingMatrix}
 
-\begin{tabular}{|l|l|l|l|l|l|l|l|} 
+\begin{tabular}{|g|g|l|l|l|l|l|l|} 
 \hline
 \rowcolor{Gray}
   &   & \rotatebox[origin=c]{90}{THD} & 
@@ -1512,12 +1519,12 @@ amplifier. ↑=positive correlation, ↓=negative correlation.}
   
  \rowcolor{Gray}
   &   &  -      &  +                     & +               & -                   & -                    &  - \\ \hline
-THD 			& - 		& \cellcolor{blue!25}& ↓ & & & ↓ & ↓ \\ \hline
-Output Power 	& + 	& \cellcolor{blue!25}& \cellcolor{blue!25}& ↑ & & ↓ & ↓ \\ \hline
-$\eta$, Efficiency 		& + 	& \cellcolor{blue!25}& \cellcolor{blue!25}& \cellcolor{blue!25}& & ↑ & ↓ \\ \hline
-Install Time		& - 		& \cellcolor{blue!25}& \cellcolor{blue!25}& \cellcolor{blue!25}& \cellcolor{blue!25}& ↓ & \\ \hline
-Dimensions 		& - 		& \cellcolor{blue!25}& \cellcolor{blue!25}&\cellcolor{blue!25} & \cellcolor{blue!25}& \cellcolor{blue!25}& ↓ \\ \hline
-Cost 			& - 		& \cellcolor{blue!25}& \cellcolor{blue!25}& \cellcolor{blue!25}& \cellcolor{blue!25}& \cellcolor{blue!25}& \cellcolor{blue!25} \\ \hline
+THD 			& - 		& \cellcolor{black}& ↓ & & & ↓ & ↓ \\ \hline
+Output Power 	& + 	& \cellcolor{black}& \cellcolor{black}& ↑ & & ↓ & ↓ \\ \hline
+$\eta$, Efficiency 		& + 	& \cellcolor{black}& \cellcolor{black}& \cellcolor{black}& & ↑ & ↓ \\ \hline
+Install Time		& - 		& \cellcolor{black}& \cellcolor{black}& \cellcolor{black}& \cellcolor{black}& ↓ & \\ \hline
+Dimensions 		& - 		& \cellcolor{black}& \cellcolor{black}&\cellcolor{black} & \cellcolor{black}& \cellcolor{black}& ↓ \\ \hline
+Cost 			& - 		& \cellcolor{black}& \cellcolor{black}& \cellcolor{black}& \cellcolor{black}& \cellcolor{black}& \cellcolor{black} \\ \hline
 \end{tabular}
 \end{table}
 
@@ -1586,12 +1593,12 @@ complexity grows.
 \label{section:project-application-the-requirements-specification}
 
 The following is a recommended format for a Requirements document that
-integrates the Problem Statement from Chapter 2.
+integrates the Problem Statement from Chapter~\ref{chapter:projectSelection}.
 
 \begin{itemize}
 \item
   \emph{Needs, Objectives, and Background.} Include the elements from
-  the Problem Statement in Chapter 2.
+  the Problem Statement in Chapter~\ref{chapter:projectSelection}.
 \item
   \emph{Requirements}. Identify the marketing requirements, engineering
   requirements, and justification in a table format (see Tables~\ref{table:audioRequireSpec} --
@@ -1599,7 +1606,7 @@ integrates the Problem Statement from Chapter 2.
   benchmarks as necessary.
 \end{itemize}
 
-Table~\ref{table:benchmarkAudio} presents a self-assessment checklist for the Requirements
+Table~\ref{table:requirementsCheckList} presents a self-assessment checklist for the Requirements
  Specification.
   
 \begin{table}[h]

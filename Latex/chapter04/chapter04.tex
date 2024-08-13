@@ -63,7 +63,9 @@ puzzles. To get into the creative spirit the reader can try to solve the
 puzzles presented in Figure~\ref{figure:dotsProblems}.
 
 \begin{figure}[h]
+\hspace{2cm}
 \includegraphics[width=0.67in,height=1.3in]{image1.pdf}
+\hspace{4cm}
 \includegraphics[width=1.3in,height=1.3in]{image2.pdf}
 \caption{(a) The shovel problem. Think of this as a shovel
 with a coin on the spade. The ob­jective is to move two lines so that the
@@ -101,9 +103,12 @@ to form a conclusion as to what the content of each one is. Look
 carefully, as each picture has two equally valid interpretations.
 
 \begin{figure}
-\includegraphics[width=1.58in,height=2.2in]{./image3.png}\hfill
-\includegraphics[width=1.59in,height=2.2in]{./image4.png}\hfill
-\includegraphics[width=1.9in,height=2.2in]{./image5.png}\hfill
+\hspace{0.5cm}
+\includegraphics[width=1.58in,height=2.2in]{./image3.png}
+\hspace{0.1cm}
+\includegraphics[width=1.59in,height=2.2in]{./image4.png}
+\hspace{0.1cm}
+\includegraphics[width=1.9in,height=2.2in]{./image5.png}
 \caption{Each of the images shown above has two different
 interpretations. Can you determine what they are?}
 \label{figure:differentInterpertations}
@@ -114,7 +119,8 @@ One of the most common \emph{emotional blocks} is the fear of failure.
 People often have creative ideas, but are afraid to express them since
 they may be criticized or may not have the ``correct'' answer. It is
 cliché to hear that you must fail often to succeed, but true. The highly
-successful product design company, IDEO, that was examined in Chapter 2
+successful product design company, IDEO, that was examined in 
+Chapter~\ref{chapter:projectSelection}
 takes the approach in con­cept generation to ``\emph{fail early and
 often}'' in order to succeed {[}Kel01{]}. Their design teams are
 en­couraged to develop many seemingly outlandish ideas that are often
@@ -149,8 +155,9 @@ languages that de­scribe the characteristics of systems such as
 functional, logical, and state behaviors. Examples in digital design are
 truth tables (input, output behavior) and state diagrams
 (stimulus-response). In the domain of electronics design, a functional
-approach (input, output, and function) is commonly used. Chapters 5 and
-6 present tools for modeling the behavior of ECE systems.
+approach (input, output, and function) is commonly used. 
+Chapters~\ref{chapter:funcDecomp} and \ref{chapter:behaviorModels} 
+present tools for modeling the behavior of ECE systems.
 
 \subsection{Vertical and Lateral Thinking}
 \label{subsection:vertical-and-lateral-thinking}
@@ -324,7 +331,9 @@ identify the following phases of concept generation -- search
 internally, search externally, and systematically explore. Each is
 considered in turn.
 
-External searching was covered to a great extent in Chapters 2 and 3,
+External searching was covered to a great extent in 
+Chapters \ref{chapter:projectSelection} and 
+\ref{chapter:requirementSpec},
 which addressed conducting background research and benchmarking. Methods
 of external searching are:
 
@@ -342,10 +351,12 @@ of external searching are:
 Internal searching is done by the team members via methods such as
 brainstorming. The team members need have to have a common problem
 definition for this to be effective. Understanding the tradeoffs using
-requirement analysis methods in Chapter 3 is also valuable, as
+requirement analysis methods in Chapter~\ref{chapter:requirementSpec} 
+is also valuable, as
 overcoming tradeoffs leads to innovative solutions. Furthermore, the
 team should decompose larger problems into sub-problems and the attack
-the sub-problems individually. Chapter 5 addresses the process of
+the sub-problems individually. 
+Chapter~\ref{chapter:funcDecomp} addresses the process of
 problem decomposition.
 
 \textbf{DILBERT\textsuperscript{®} by Scott Adams}
@@ -459,7 +470,7 @@ from each column.
 computing system. The potential so­lution is identified by the
 combination of circled elements.}
 \label{table:conceptPersonalComputing}
-\begin{tabular}{|p{2cm}|c|p{2cm}|c|p{2cm}|}
+\begin{tabular}{|p{2cm}|p{2cm}|p{2.4cm}|c|p{2cm}|}
 \hline
 \rowcolor{Gray}
 \textbf{User Interface}&
@@ -467,17 +478,41 @@ combination of circled elements.}
 \textbf{Connectivity \& Expansion} &
 \textbf{Power} &
 \textbf{Size}\\ \hline
+\begin{tikzpicture}[overlay]
+\draw[red,ultra thick,rounded corners] 		 (0,0.5) rectangle (2,-0.5);
+\end{tikzpicture}
 Keyboard & CRT & Serial \& Parallel & Battery & Hand-held, Fits in pocket \\ \hline
-Touchpad & Flat Panel & USB & AC Power & Notebook size \\ \hline
-Handwriting Recognition & Plasma & Wireless Ethernet & Solar Power & Wearable \\ \hline
-Video & Heads-up Display & Wired Ethernet & Fuel Cell & Credit Card Size \\ \hline
+Touchpad & Flat Panel & 
+\begin{tikzpicture}[overlay]
+\draw[green,ultra thick,rounded corners] 		(-0.1,0.5) rectangle (2.5,-4.1);
+\end{tikzpicture}
+USB & AC Power & Notebook size \\ \hline
+Handwriting Recognition & Plasma & Wireless Ethernet & 
+\begin{tikzpicture}[overlay]
+\draw[blue,ultra thick,rounded corners] 		(-0.5,0.5) rectangle (2.4,-2.5);
+\end{tikzpicture}
+Solar Power & Wearable \\ \hline
+\begin{tikzpicture}[overlay]
+\draw[orange,ultra thick,rounded corners] 	(-0.1,0.5) rectangle (2.2,-1.3);
+\end{tikzpicture}
+Video & 
+\begin{tikzpicture}[overlay]
+\draw[yellow,ultra thick,rounded corners] 		(-0.1,0.4) rectangle (2.1,-0.5);
+\end{tikzpicture}
+Heads-up Display & Wired Ethernet & Fuel Cell & 
+\begin{tikzpicture}[overlay]
+\draw[purple,ultra thick,rounded corners] 		(-0.1,0.5) rectangle (2.2,-1.5);
+\end{tikzpicture}
+Credit Card Size \\ \hline
 Voice & LCD & PCMCIA & Thermal Transfer & Flexible in shape \\ \hline
 & & Modem / Telephone & & \\ \hline
 \end{tabular}
 \end{table}
 
+
+
 Based on the concepts circled in 
-Table~\ref{table:conceptGeneration}, one can imagine a personal
+Table~\ref{table:conceptPersonalComputing}, one can imagine a personal
 computing system that has the following features: 1) is wearable with
 different credit card size components placed on the body and in clothing
 to make it comfortable to use; 2) is powered by a combina­tion of solar
@@ -580,8 +615,11 @@ Another form of evaluation is to complete a \emph{\textbf{strengths and
 weaknesses analysis}} of the potential solutions. 
 Table~\ref{table:strengthWeakIntel} demonstrates
 the application of this analysis applied to an experi­mental design
-project for testing of the Intel 1000XF card (examined in Chapter 2
-(Example 2.2) and Chapter 3 (Table 3.2)). In order to test the card
+project for testing of the Intel 1000XF card (examined in 
+Chapter~\ref{chapter:projectSelection}
+(Example~\ref{example:iPodNeeds}) and 
+Chapter~\ref{chapter:requirementSpec} 
+(Table~\ref{table:ipod})). In order to test the card
 under different operating temperatures, a method of heating the card and
 holding its temperature fixed during the experiment was needed. The two
 solutions compared were to use a contact heating element or to place the
@@ -637,9 +675,13 @@ methods for heating an Intel 1000XF card to be used in lifetime testing.
 
 In the Analytical Hierarchy Process, design alternatives are compared
 against pre-selected criteria, such as the engineering or marketing
-requirements. AHP is covered in detail in Appendix B and was first
-applied in Chapter 2 for project selection. The reader is encouraged to
-review Appendix B as necessary. The end result of AHP is a decision
+requirements. AHP is covered in detail in 
+Appendix~\ref{appendix:DecisionMakingAHP} and was first
+applied in Chapter~\ref{chapter:projectSelection} 
+for project selection. The reader is encouraged to
+review 
+Appendix~\ref{appendix:DecisionMakingAHP} as 
+necessary. The end result of AHP is a decision
 matrix is shown in 
 Table~\ref{table:decisionMatrixAHP}, where the criteria are listed in the
 leftmost column with the associated weighting factors
@@ -679,6 +721,15 @@ $\alpha_{22}$			&
 $\dots$				&
 $\alpha_{2n}$		 \\ \hline
 
+$\vdots$ 		& 
+$\vdots$ 			&
+$\vdots$ 			&
+$\vdots$ 			&
+$\dots$				&
+$\vdots$ 		 \\ \hline
+
+
+
 \textbf{Criteria \emph{m}} & 
 $\omega_m$ 		&
 $\alpha_{m1}$		&
@@ -691,7 +742,7 @@ $\alpha_{mn}$		 \\ \hline
 $S_1 =  \sum_{i=1}^{m} \omega_i * \alpha_{i1}$    &
 $S_2 = \sum_{i=1}^{m} \omega_i * \alpha_{i2} $   &
 $\dots$							&
-$S_n = \sum_{i=1}^{m} \omega_i * \alpha_{im} $   \\ \hline
+$S_n = \sum_{i=1}^{m} \omega_i * \alpha_{in} $   \\ \hline
 
 \end{tabular}
 \end{table}
@@ -710,7 +761,8 @@ low cost, small size, and availability of parts for manufacture.
 \label{subsection:step-2-determine-the-criteria-weightings}
 
   Assume that the criteria were ranked using pairwise comparison and
-  weights computed (see Appendix B) as shown in 
+  weights computed 
+  (see Appendix~\ref{appendix:DecisionMakingAHP}) as shown in 
   Table~\ref{table:pairwiseCompMatrix}.
 
 \begin{table}
@@ -728,7 +780,7 @@ low cost, small size, and availability of parts for manufacture.
 
 \textbf{Accuracy} & 1 & 5 & 3 & ¼ & 0.42 \\ \hline
 \textbf{Cost} & 1/5 & 1 &  2  & ¼ & 0.12 \\ \hline
-\textbf{Size} & 1/3 & ½ & 1 & 1 & 0.12 \\ \hline
+\textbf{Size} & 1/3 & 1/2 & 1 & 1 & 0.12 \\ \hline
 \textbf{Availability} & 4 & 4 & 1  & 1 & 0.34 \\ \hline
 \end{tabular}
 \end{table}
@@ -757,20 +809,20 @@ deviation of the output volt­age (maximum deviation from nominal) for the
 three designs is 9.2\%, 1.3\%, and 1.9\% respectively. Since the
 objective is to minimize the deviation, the following rating metric is
 used:
-$$ \alpha = \frac{min[deviation]}{deviation}$$
+$$ \alpha = \frac{min[\text{deviation}]}{\text{deviation}}$$
 This produces the following normalize design ratings for accuracy:
-$\alpha{11} = 0.008$, 
-$\alpha{12} = 0.55$, and 
-$\alpha{13} = 0.37$.
+$\alpha_{11} = 0.008$, 
+$\alpha_{12} = 0.55$, and 
+$\alpha_{13} = 0.37$.
 
 The parts costs are the following: resistors = \$0.05, bipolar junction
 transistors (BJTs) = \$0.15, op amps = \$0.35, and RTDs = \$0.25. Using
 a measure for cost similar to (1) gives following normalized cost
 ratings for the three options
 respec­tively:
-$\alpha{21} = 0.31$, 
-$\alpha{22} = 0.28$, and 
-$\alpha{23} = 0.31$.
+$\alpha_{21} = 0.31$, 
+$\alpha_{22} = 0.28$, and 
+$\alpha_{23} = 0.31$.
 
 Assume that to manufacture each circuit on a printed circuit board
 requires the following dimen­sions: design 1 = 1 in\textsuperscript{2},
@@ -778,9 +830,9 @@ design 2 = 1.56 in\textsuperscript{2}, and design 3 = 2.25
 in\textsuperscript{2}. The objective is to minimize size, and againusing
 a measure analogous to (1) for the required space to manufacture each
 produces the following normalized decision ratings:
-$\alpha{31} = 0.48$, 
-$\alpha{32} = 0.31$, and 
-$\alpha{33} = 0.21$.
+$\alpha_{31} = 0.48$, 
+$\alpha_{32} = 0.31$, and 
+$\alpha_{33} = 0.21$.
 
 Assume that the parts have an in-stock availability of 95\%, 70\%, 90\%,
 and 80\% of the time for the resistors, BJTs, RTDs, and op amps
@@ -798,9 +850,9 @@ design:
 \emph{P}(design 3 can be produced) \emph{=} (0.95)(0.90) (0.70)(0.70) = 0.42
 
 This produces the following normalized decision ratings for availability:
-$\alpha{41} = 0.35$, 
-$\alpha{42} = 0.40$, and 
-$\alpha{43} = 0.25$.
+$\alpha_{41} = 0.35$, 
+$\alpha_{42} = 0.40$, and 
+$\alpha_{43} = 0.25$.
 
 \subsection*{Step 4: Compute Scores for the Alternatives}
 \label{subsection:step-4-compute-scores-for-the-alternatives}
@@ -872,11 +924,11 @@ Table~\ref{table:pughConceptSelection}.
 \caption{Pugh Concept Selection matrix.}
 \label{table:pughConceptSelection}
 
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|g|g|c|c|c|c|}
 \hline
 \rowcolor{Gray}
 \multicolumn{2}{c}{}    &
-\textbf{Option 1  (Reference)}  &
+\textbf{\makecell[l]{Option 1 \\(Reference)}}  &
 \textbf{Option 2} &
 \textbf{Option 3} &
 \textbf{Option 4} \\ \hline
@@ -909,7 +961,8 @@ evaluation phase:
   Examine solutions for the entire design, for sub-functions of the
   design, and for individual components (such as integrated circuit
   selection). The tech­niques in this chapter can be combined with design
-  methods presented in Chapters 5 and 6.
+  methods presented in 
+  Chapters~\ref{chapter:funcDecomp}  and \ref{chapter:behaviorModels}.
 \item
   Utilize SCAMPER, concept tables, and concepts fans as tools to
   facilitate and document concept generation.
