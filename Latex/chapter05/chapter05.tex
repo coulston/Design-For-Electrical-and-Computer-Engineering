@@ -87,7 +87,9 @@ subsystems, where it is unlikely that bringing together pieces in an
 ad-hoc fashion will successfully solve the problem. A disadvantage of
 top-down design is that it tends to limit the solution space and
 innovation. Top-down design is inclined to follow a vertical thought
-process (Chapter 4) where the designer starts with a problem and
+process 
+(Chapter~\ref{chapter:conceptGen}) 
+where the designer starts with a problem and
 succes­sively refines the subsystems until a blueprint for solving the
 problem is defined. Further­more, the designer cannot create a top-down
 design in a vacuum without bottom-up knowl­edge of existing technology
@@ -153,7 +155,8 @@ identification of elements such as circuit components, logic gates, or
 software code takes place. The number of levels in the design hierarchy
 depends upon the complexity of the problem.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=5.5in,height=1.7in]{./image2}
 \caption{A process for developing designs using functional decomposition.}
 \label{figure:procFunctionalDecomposition}
@@ -199,8 +202,9 @@ The details are not the details. They make the design.---Charles Eames
   \emph{Look for innovations.} Top-down designs tend to follow a
   vertical thinking process, where the designer proceeds linearly from
   problem to solution. Try to incorporate lateral thinking strategies
-  from Chapter 4 and examine alternative architectures and technologies
-  for the solution.
+  from 
+  Chapter~\ref{chapter:conceptGen} 
+  and examine alternative architectures and technologies for the solution.
 \item
   \emph{Don't take functional requirements to the absurd level.} Common
   elements, such as analog multipliers or digital logic gates, do not
@@ -218,7 +222,7 @@ The details are not the details. They make the design.---Charles Eames
   (stimulus-response), or data flow diagrams. In the digital stopwatch
   example presented later in this chapter, the behavior is defined using
   state diagrams. Other methods for describing system behavior are
-  addressed in Chapter 6.
+  addressed in Chapter~\ref{chapter:behaviorModels}.
 \item
   \emph{Find similar design architectures.} Determine if there exist
   similar designs and how they operate. Realize that this creates a bias
@@ -288,26 +292,25 @@ Figure~\ref{figure:level0PowerAmp},
 which is fairly simple---the inputs are an audio signal, volume control,
 and wall outlet power, and the output is an amplified audio signal.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=4.1in,height=0.81in]{./image3}
 \caption{Level 0 audio power amplifier functionality.}
 \label{figure:level0PowerAmp}
 \end{figure}
 
-
 The system should be described in as much detail as possible for each
 level via the functional requirement. The Level 0 functional requirement
-for this design is as follows.
+for this design is shown in the \textbf{Audio power amplifier Module},
+Table~\ref{table:functionalRequirementsAudioPowerAmplifier}.
 
-\begin{table}
-\caption{A concept table for generating ideas for a personal
-computing system. The potential so­lution is identified by the
-combination of circled elements.}
-\label{table:conceptPersonalComputing}
+\begin{table}[h]
+\phantomcaption
+\label{table:functionalRequirementsAudioPowerAmplifier}
 \begin{tabular}{|l|m{10cm}|}
 \hline
 \emph{Module} &
-Audio Power Amplifier \\ \hline
+Audio power amplifier \\ \hline
 
 \emph{Inputs} & 
 \begin{itemize}
@@ -357,23 +360,24 @@ The last stage in the cascade is the \emph{power output stage}, which
 provides the current needed to drive the speakers, but has no voltage
 amplification.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=5.5in,height=2.5in]{./image6}
 \caption{Level 1 audio amplifier design.}
 \label{figure:level1PowerAmp}
 \end{figure}
 
-
-
 The functional requirements for the Level 1 subsystems are now detailed,
-starting with the buffer amplifier.
+starting with the \textbf{Buffer amplifier Module},
+Table~\ref{table:level1BufferAmplifier}.
 
-\begin{table}
+\begin{table}[h]
+\phantomcaption
 \label{table:level1BufferAmplifier}
 \begin{tabular}{|l|m{10cm}|}
 \hline
 \emph{Module} &
-Buffer Amplifier \\ \hline
+Buffer amplifier \\ \hline
 \emph{Inputs} & 
 \begin{itemize}
 \item
@@ -402,14 +406,17 @@ the technology (bottom-up knowledge). The exact resistance requirements
 are refined later based upon the overall design, taking into account the
 input and output resistances for all stages.
 
-Now consider the functional requirements for the high gain amplifier.
+Now consider the functional requirements shown in the 
+\textbf{High gain amplifier Module}, 
+Table~\ref{table:level1HighGainAmp}.
 
-\begin{table}
+\begin{table}[h]
+\phantomcaption
 \label{table:level1HighGainAmp}
 \begin{tabular}{|l|m{10cm}|}
 \hline
 \emph{Module} &
-High Gain Amplifier \\ \hline
+High gain amplifier \\ \hline
 
 \emph{Inputs} & 
 \begin{itemize}
@@ -436,14 +443,18 @@ The gain of 40 is determined from the overall system power and gain
 requirements (the maximum input voltage of 0.5V must be able to be
 amplified to 20V), while the resistances are again educated guesses.
 
-Now consider the power output stage.
+Now consider the requirements described in the 
+\textbf{Power output stage Module}, 
+Table~\ref{table:level1PowerOutputStage}.
 
-\begin{table}
-\label{table:level1HighGainAmp}
+
+\begin{table}[h]
+\phantomcaption
+\label{table:level1PowerOutputStage}
 \begin{tabular}{|l|m{10cm}|}
 \hline
 \emph{Module} &
-Power Output Stage  \\ \hline
+Power output stage  \\ \hline
 
 \emph{Inputs} & 
 \begin{itemize}
@@ -469,13 +480,20 @@ delivered, but how was the requirement on current determined? The
 current needed to drive the speaker is determined from Ohm's Law as
 $I = V/R = 10V/8\Omega = 2.5A$.
 
-The last module to examine at this level is the power supply.
+The last module to examine at this level is the power supply described in
+the \textbf{Power supply Module}, Table~\ref{table:level1PowerSupplyModule}.
 
-\begin{table}
-\label{table:level1HighGainAmp}
+It is clear that the power supply needs to deliver ± 25V DC, while the
+3.0A current capability was selected to supply the 2.5A needed for the
+peak output power requirement plus the current needed to power the other
+amplifier stages.
+
+\begin{table}[h]
+\phantomcaption
+\label{table:level1PowerSupplyModule}
 \begin{tabular}{|l|m{10cm}|}
 \hline
-\emph{Module} & Power Supply \\ \hline
+\emph{Module} & Power supply \\ \hline
 \emph{Inputs} & 
 \begin{itemize}
 \item
@@ -494,20 +512,14 @@ amplifiers. \\ \hline
 \end{tabular}
 \end{table}
 
-
-It is clear that the power supply needs to deliver ± 25V DC, while the
-3.0A current capability was selected to supply the 2.5A needed for the
-peak output power requirement plus the current needed to power the other
-amplifier stages.
-
 Finally, it is necessary to determine if the values of the input and
 output resistances selected for the stages are realistic. For cascaded
 amplifier stages, the overall voltage gain is given by the product of
 gains multiplied by the voltage divider losses between stages
 {[}Sed04{]}. In this case the overall gain is
 
-%$$Voltage gain = gain_1 * gain_2 * gain_3*\left[ \frac {R_{in2}} {R_{in2}+R_{out1}} \right]  * \left[ \frac{R_{in3}} {R_{in3}+R_{out2}} \right] $$
-%$$= 1 * 40 * 1*\left[ \frac{100k}{100k+100} \right] * \left[ \frac{1M}{1M+100} \right] = 40$$
+$$Voltage gain = gain_1 * gain_2 * gain_3*\left[ \frac {R_{in2}} {R_{in2}+R_{out1}} \right]  * \left[ \frac{R_{in3}} {R_{in3}+R_{out2}} \right] $$
+$$= 1 * 40 * 1*\left[ \frac{100k}{100k+100} \right] * \left[ \frac{1M}{1M+100} \right] = 40$$
 
 So the resistance values selected in the functional requirements satisfy
 the overall system requirements. If not, it would be necessary to go
@@ -525,7 +537,8 @@ Functional decomposition stops at this point---all levels of the
 hierarchy are defined and the next step is the detailed design, where
 the actual circuit components are determined.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=5.5in,height=0.85in]{./image9}
 \caption{Level 2 design of the power supply.}
 \label{figure:level2PowerSupply}
@@ -545,30 +558,33 @@ the following engineering requirements.
 The system must
 
 \begin{itemize}
-\item
-  Have no more than two control buttons.
-\item
-  Implement Run, Stop, and Reset functions.
-\item
-  Output a 16-bit binary number that represents seconds elapsed.
+\item  Have no more than two control buttons.
+\item  Implement Run, Stop, and Reset functions.
+\item  Output a 16-bit binary number that represents seconds elapsed.
 \end{itemize}
 
 \subsection*{Level 0}
 \label{subsection:level-0-1}
 
 
-The Level 0 diagram and functional requirements are shown below.
+The Level 0 diagram and functional requirements are shown in
+Figure~\ref{figure:level0Stopwatch}.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=2.7in,height=0.96in]{./image10}
 \caption{Level 0 digital stopwatch functionality.}
-\label{figure:conceptFan}
+\label{figure:level0Stopwatch}
 \end{figure}
 
+The Level 0 functional requirement
+for this design is shown in the \textbf{Stopwatch Module},
+Table~\ref{table:level0StopWatch}.
 
 
-\begin{table}
-\label{table:level1HighGainAmp}
+\begin{table}[h]
+\phantomcaption
+\label{table:level0StopWatch}
 \begin{tabular}{|l|m{10cm}|}
 \hline
 \emph{Module} & Stopwatch \\ \hline
@@ -608,17 +624,20 @@ seconds counter. The FSM responds to the button press stimuli and
 produces the appropriate control signals for the seconds counter. The
 system clock is included to clock both the FSM and the clock divider.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=5.5in,height=2.95in]{./image11}
 \caption{Level 1 design for the digital stopwatch..}
 \label{figure:level1Stopwatch}
 \end{figure}
 
 The functionality of the Level 1 modules is described as follows,
-starting with the finite state machine.
+starting with 
+the \textbf{Finite state machine Module}, Table~\ref{table:level1FiniteStateMachine}.
 
-\begin{table}
-\label{table:level1HighGainAmp}
+\begin{table}[h]
+\phantomcaption
+\label{table:level1FiniteStateMachine}
 \begin{tabular}{|l|m{10cm}|}
 \hline
 \emph{Module} & Finite State Machine \\ \hline
@@ -646,16 +665,18 @@ starting with the finite state machine.
 
 The functionality of the finite state machine is described with a tool
 that is probably familiar to the reader, the state diagram. State
-diagrams are covered in more detail in Chapter 6. The state diagram
+diagrams are covered in more detail in
+ Chapter~\ref{chapter:behaviorModels}. The state diagram
 describes stimulus-response behavior, and shows how the system
 transitions between states based upon logic signals from the button
 presses.
 
-Next, consider the clock divider.
+Next, consider 
+the \textbf{Clock divider Module}, Table~\ref{table:stopwatchClockDivider}.
 
-
-\begin{table}
-\label{table:level1HighGainAmp}
+\begin{table}[h]
+\phantomcaption
+\label{table:stopwatchClockDivider}
 \begin{tabular}{|l|m{10cm}|}
 \hline
 \emph{Module} & Clock Divider\\ \hline
@@ -681,14 +702,15 @@ circuitry to produce a 1Hz output signal. It is also well above the
 clock rate needed for detecting button presses and there is a wide
 selection of crystals that can meet this requirement.
 
-Finally, consider the seconds counter.
+Finally, consider 
+the \textbf{Second counter Module}, Table~\ref{table:level1stopwatchSecondsCounter}.
 
-
-\begin{table}
-\label{table:level1HighGainAmp}
+\begin{table}[h]
+\phantomcaption
+\label{table:level1stopwatchSecondsCounter}
 \begin{tabular}{|l|m{10cm}|}
 \hline
-\emph{Module} & Seconds Counter\\ \hline
+\emph{Module} & Seconds counter\\ \hline
 \emph{Inputs} & 
 \begin{itemize}
 \item
@@ -754,7 +776,8 @@ information passed between modules. Five basic modules are utilized:
 This approach to software design, also known as \emph{structured
 design}, was formalized in the 1970's by IBM researchers {[}Ste99{]}.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=5.5in,height=1.4in]{./image13}
 \caption{Module types for functional software design. The
 larger arrows indicate connections between modules and the smaller
@@ -802,7 +825,8 @@ and returns the sorted values in the same array. Finally, ComputeMean is
 executed, which accepts the sorted array and the number of elements,
 computes the mean value, and returns it to main.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=4.1in,height=1.9in]{./image14}
 \caption{Structure chart design of sorting and mean
 computation program.}
@@ -837,35 +861,27 @@ engineering requirements.
 The system must
 
 \begin{itemize}
-\item
-  Measure temperature between 0 and 200°C.
-\item
-  Have an accuracy of 0.4\% of full scale.
-\item
-  Display the temperature digitally, including one digit beyond the
+\item  Measure temperature between 0 and 200$^\circ$C.
+\item  Have an accuracy of 0.4\% of full scale.
+\item  Display the temperature digitally, including one digit beyond the
   decimal point.
-\item
-  Be powered by a standard 120V 60Hz AC outlet.
-\item
-  Use an RTD (thermal resistive device) that has an accuracy of 0.55°C
+\item  Be powered by a standard 120V 60Hz AC outlet.
+\item  Use an RTD (thermal resistive device) that has an accuracy of 0.55$^\circ$C
   over the range. The resistance of the RTD varies linearly with
-  temperature from 100Ω at 0°C to 178Ω at 200°C. (Note: this requirement
-  does not meet the abstractness property identified in Chapter 3, since
+  temperature from 100$\omega$ at 0$^\circ$C to 178$\omega$ at 200$^\circ$C. (Note: this requirement
+  does not meet the abstractness property identified in 
+  Chapter~\ref{chapter:requirementSpec}, since
   it identifies part of the solution. This requirement is given to
   provide guidance in this example.)
 \end{itemize}
 
 
 
-\begin{table}
-\caption{Functional design requirements for the number 
-sort  program.}
+\begin{table}[h]
+\small
+\caption{Functional design requirements for the number  sort  program.}
 \label{table:functionalSort}
-\end{table}
 
-
-\fbox{
-\begin{minipage}{15cm}
 \begin{tabular}{|l|m{10cm}|}
 \hline
 \emph{Module name} & main\\ \hline
@@ -879,29 +895,31 @@ requires the user to enter the filename, and the mean value is displayed
 on the screen. \\ \hline
 \emph{Modules invoked} & ReadArray, SortArray, and ComputeMean \\ \hline
 \end{tabular}
-\\
+\vspace{0.2cm}
+
 \begin{tabular}{|l|m{10cm}|}
 \hline
 \emph{Module name} & ReadArray() \\ \hline
-\emph{Module type} & Input and output \\
+\emph{Module type} & Input and output \\ \hline
 \emph{Input arguments} & 
 \begin{itemize}
 \item fname{[}{]}: character array with filename to read from.
-\end{itemize}\\
+\end{itemize} \\ \hline
 \emph{Output Arguments} & 
 \begin{itemize}
 \item numArray{[}{]}: integer array with elements read from file.
 \item  N: number of elements in numArray{[}{]}.
 \end{itemize}\\ \hline
 \emph{Description} & Read data from input data file and store elements
-in array numArray{[}{]}. The number of elements read is placed in N. \\
-\emph{Modules invoked} & None \\
+in array numArray{[}{]}. The number of elements read is placed in N. \\ \hline
+\emph{Modules invoked} & None \\ \hline
 \end{tabular}
-\\
+\vspace{0.2cm}
+
 \begin{tabular}{|l|m{10cm}|}
 \hline
 \emph{Module name} & SortArray() \\ \hline
-\emph{Module type} & Transformation \\
+\emph{Module type} & Transformation \\ \hline
 \emph{Input arguments} & 
 \begin{itemize}
 \item   numArray{[}{]}: integer array of numbers.
@@ -912,14 +930,15 @@ in array numArray{[}{]}. The number of elements read is placed in N. \\
 \item  numArray{[}{]}: sorted array of integer numbers.
 \end{itemize} \\ \hline
 \emph{Description} & Sort elements in array using a shell sort
-algorithm. Saves the the sorted array to disk. \\
-\emph{Modules invoked} & None \\
+algorithm. Saves the the sorted array to disk. \\ \hline
+\emph{Modules invoked} & None \\ \hline
 \end{tabular}
-\\
+\vspace{0.2cm}
+
 \begin{tabular}{|l|m{10cm}|}
 \hline
 \emph{Module name} & ComputeMean()\\ \hline
-\emph{Module type} & Input and output \\
+\emph{Module type} & Input and output \\ \hline
 \emph{Input arguments} & 
 \begin{itemize}
 \item  numArray{[}{]}: integer array of numbers.
@@ -930,11 +949,11 @@ algorithm. Saves the the sorted array to disk. \\
 \item  mean: mean value of the elements in the array.
 \end{itemize} \\ \hline
 \emph{Description} & Computes the mean value of the integer elements in
-the array. \\
-\emph{Modules invoked} & None \\
+the array. \\ \hline
+\emph{Modules invoked} & None \\ \hline
 \end{tabular}
 
-\end{minipage} }
+\end{table}
 
 
 
@@ -942,18 +961,26 @@ the array. \\
 \label{subsection:level-0-2}
 
 The overall goal is to convert a sensed temperature to a digital
-temperature reading. The Level 0 description is as follows.
+temperature reading. The Level 0 description description is 
+shown in Figure~\ref{figure:digitalTermLevel0}.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=3.4in,height=0.88in]{./image15}
 \caption{Level 0 digital thermometer functionality.}
-\label{figure:conceptFan}
+\label{figure:digitalTermLevel0}
 \end{figure}
 
-\begin{table}
+
+The input, output and functioality of the signal in Figure~\ref{figure:digitalTermLevel0} are
+described in the \textbf{Digital thermometer Module}, Table~\ref{table:digitalThermLevel0}.
+
+\begin{table}[h]
+\phantomcaption
+\label{table:digitalThermLevel0}
 \begin{tabular}{|l|m{10cm}|}
 \hline
-\emph{Module name} & Digital Thjermometer \\ \hline
+\emph{Module name} & Digital Thermometer \\ \hline
 \emph{Inputs} & 
 \begin{itemize}
 \item Ambient temperature: 0-200°C.
@@ -998,7 +1025,8 @@ digital components. The overall accuracy that the system must achieve is
 0.4\%, and that translates into 0.8°C of allowable error for the 200°C
 range. Let's now examine the modules.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=5.5in,height=1.8in]{./image16}
 \caption{Level 1 design of the digital thermometer.}
 \label{figure:level1DigitalThermo}
@@ -1006,11 +1034,16 @@ range. Let's now examine the modules.
 
 The functionality of the Level 1 modules is described as follows,
 starting with the temperature conversion unit.
+the \textbf{Temperature conversion unit supply Module}, 
+Table~\ref{table:digitalThermoTempConvUnit}.
 
-\begin{table}
+
+\begin{table}[h]
+\phantomcaption
+\label{table:digitalThermoTempConvUnit}
 \begin{tabular}{|l|m{10cm}|}
 \hline
-\emph{Module} & Temperature Conversion Unit\\ \hline
+\emph{Module} & Temperature conversion unit\\ \hline
 \emph{Inputs} & 
 \begin{itemize}
 \item  Ambient temperature: 0-200°C.
@@ -1036,14 +1069,17 @@ for the temperature unit is 0.6°C. This means that the electronics
 themselves would be required to introduce no more than 0.05°C of error
 due to the 0.55°C of error introduced by the RTD.
 
-Now consider the analog to digital converter.
+Now consider the 
+the \textbf{A/D converter Module}, 
+Table~\ref{table:digitalThermoDigitalConverter}.
 
 
-
-\begin{table}
+\begin{table}[h]
+\phantomcaption
+\label{table:digitalThermoDigitalConverter}
 \begin{tabular}{|l|m{10cm}|}
 \hline
-\emph{Module} & A/D Converter\\ \hline
+\emph{Module} & A/D converter\\ \hline
 \emph{Inputs} & 
 \begin{itemize}
 \item
@@ -1080,12 +1116,17 @@ circuit solution, but the temperature conversion subsystem output should
 be matched to the voltage range so that all bits are effectively
 utilized, otherwise, error is introduced.
 
-Now, consider the BCD conversion unit.
+Now, consider 
+the \textbf{BCD conversion unit Module}, 
+Table~\ref{table:digitalThermoBcdConvUnit}.
 
-\begin{table}
+
+\begin{table}[h]
+\phantomcaption
+\label{table:digitalThermoBcdConvUnit}
 \begin{tabular}{|l|m{10cm}|}
 \hline
-\emph{Module} & BCD Conversion Unit\\ \hline
+\emph{Module} & BCD conversion unit\\ \hline
 \emph{Inputs} & 
 \begin{itemize}
 \item
@@ -1118,13 +1159,17 @@ The objective of the BCD conversion unit is fairly simple, although the
 component level design of the circuitry to accomplish the conversion is
 not.
 
-This leads to the last module, the 7-segment LED driver, whose
-functionality is described as follows.
+This leads to the last module, 
+the \textbf{7-Segment LED driver Module}, 
+Table~\ref{table:digitalThermoSevenSeg}.
 
-\begin{table}
+
+\begin{table}[h]
+\phantomcaption
+\label{table:digitalThermoSevenSeg}
 \begin{tabular}{|l|m{10cm}|}
 \hline
-\emph{Module} & 7-Segment LED Driver\\ \hline
+\emph{Module} & 7-Segment LED driver\\ \hline
 \emph{Inputs} & 
 \begin{itemize}
 \item
@@ -1152,11 +1197,16 @@ second. \\ \hline
 
 
 
-For completeness, the functional requirements of the power supply are
-supplied. They are similar to the power supply requirements utilized in
+For completeness, the functional requirements of
+the \textbf{Power supply Module}, 
+Table~\ref{table:digitalThermoPowerSupply} are supplied. 
+They are similar to the power supply requirements utilized in
 the audio amplifier design in Section~\ref{section:application-electronics-design}.
 
-\begin{table}
+
+\begin{table}[h]
+\phantomcaption
+\label{table:digitalThermoPowerSupply}
 \begin{tabular}{|l|m{10cm}|}
 \hline
 \emph{Module} & Power supply\\ \hline
@@ -1186,8 +1236,9 @@ and ready for design at the component level. Illustration of the
 complete design would require a fair amount of detail, and while it is
 not presented here, some of the issues involved are discussed. First,
 there are a variety of electronic circuits (inverting op amps, single
-BJT configurations, and current mirrors, etc.---see Example 4.1 in
-Chapter 4) that could be utilized as a current source to drive the RTD
+BJT configurations, and current mirrors, etc.---see 
+Section~\ref{subsection:analytical-hierarchy-process-and-decision-matrices} ) 
+that could be utilized as a current source to drive the RTD
 in the temperature conversion subsystem. A midrange resolution A/D
 converter is needed, and its particular input voltage range drives the
 output voltage requirements for the temperature conversion module. The
@@ -1299,23 +1350,17 @@ they may not be best in terms of performance.
 The following is a format for documenting and presenting functional
 designs.
 
-\begin{quote}
-\textbf{Design Level 0}
-\end{quote}
 
+\textbf{Design Level 0}
 \begin{itemize}
-\item
-  Present a single module block diagram with inputs and outputs
+\item  Present a single module block diagram with inputs and outputs
   identified.
-\item
-  Present the functional requirements: inputs, outputs, and
+\item  Present the functional requirements: inputs, outputs, and
   functionality.
 \end{itemize}
 
-\begin{quote}
-\textbf{Design Level 1}
-\end{quote}
 
+\textbf{Design Level 1}
 \begin{itemize}
 \item
   Present the Level 1 diagram (system architecture) with all modules and
@@ -1327,25 +1372,21 @@ designs.
   Present the functional requirements for each module at this level.
 \end{itemize}
 
-\begin{quote}
-\textbf{Design Level N (for N\textgreater1)}
-\end{quote}
 
+\textbf{Design Level N (for N\textgreater1)}
 \begin{itemize}
 \item
   Repeat the process from Design Level 1 for as many levels as
   necessary.
 \end{itemize}
 
-\begin{quote}
 \textbf{Design Alternatives}
-\end{quote}
-
 \begin{itemize}
 \item
   Describe the different alternatives that were considered, the
   tradeoffs, and the rationale for the choices made. This should be
-  based upon concept evaluation methods communicated in Chapter 4.
+  based upon concept evaluation methods communicated in 
+  Chapter~\ref{chapter:conceptGen}.
 \end{itemize}
 
 \section{Summary and Further Reading}

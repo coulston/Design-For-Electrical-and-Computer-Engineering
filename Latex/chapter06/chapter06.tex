@@ -7,7 +7,8 @@ Genius is 1\% inspiration and 99\% perspiration.---Thomas Edison
 \end{itquote}
 
 
-The functional decomposition technique examined in Chapter 5 is a
+The functional decomposition technique examined in 
+Chapter~\ref{chapter:funcDecomp} is a
 powerful modeling tool for system design that is applicable for
 describing input, output, and transform behavior. However, that approach
 by itself is limited in its descriptive ability. This was apparent in
@@ -126,7 +127,8 @@ play represented with resistors and capacitors!
 
 Since models capture the essential details of a system in a standardized
 way then they are an ideal way to describe the functionality of a system
-at all levels of detail. In Chapter 5 the predominate method of
+at all levels of detail. In 
+Chapter~\ref{chapter:funcDecomp} the predominate method of
 describing functionality was with words. However, there are languages
 that describe system behavior. We start by examining state diagrams.
 
@@ -159,7 +161,8 @@ their associated inputs. The outputs are listed directly in the state
 since it is assumed that the outputs are associated with states.
 
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=3.28in,height=1in]{./image1}
 \caption{Symbols used in state diagrams.}
 \label{figure:stateDiagramSymbols}
@@ -174,12 +177,13 @@ deposited so far.
 
 In order to give a more complete description of the vending machine the
 state diagram is embedded into the function table template introduce in
-Chapter 5as shown in Figure~\ref{table:stateVendingMachine}.
+Chapter~\ref{chapter:funcDecomp} as 
+shown in Table~\ref{table:stateVendingMachine}.
  This table lists the inputs and outputs
 of the vending machine along with the behavior represented by a state
 diagram.
 
-\begin{table}
+\begin{table}[h]
 \caption{A state diagram for a simple vending machine.}
 \label{table:stateVendingMachine}
 \begin{tabular}{|l|m{10cm}|}
@@ -251,7 +255,8 @@ arcs leaving the conditional step. As shown in
 Figure~\ref{figure:basicFlowChartSymbols} there are
 multiple ways to indicate data stores for retrieving or saving data.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=4.9in,height=1.56in]{./image3}
 \caption{Basic flowchart symbols.}
 \label{figure:basicFlowChartSymbols}
@@ -259,7 +264,7 @@ multiple ways to indicate data stores for retrieving or saving data.
 
 As an application, consider an embedded computer system that monitors
 the light level of its environment as described by the flowchart in
-Figure~\ref{table:flowchartEmbedded}. 
+Table~\ref{table:flowchartEmbedded}. 
 The algorithmic process of the flowchart is easy and
 intuitive to understand. The system reads the current light value,
 stores it into an array, and then computes an average. In a complete
@@ -271,7 +276,7 @@ key-press. Light levels continue to be monitored in the absence of a
 key-press, otherwise the light monitoring process halts.
 
 
-\begin{table}
+\begin{table}[h]
 \caption{A flowchart for an embedded system.}
 \label{table:flowchartEmbedded}
 \begin{tabular}{|l|m{10cm}|}
@@ -294,11 +299,10 @@ key-press, otherwise the light monitoring process halts.
   Disk: Stores a record of light intensities through time.
 \end{itemize} \\ \hline
 \emph{Functionality} &
-\includegraphics[width=4.7in,height=0.74in]{./image4} \\ \hline
+\includegraphics[width=3.85in,height=0.61in]{./image4} \\ \hline
 \end{tabular}
 \end{table}
 
-\textbf{Figure 6.4} 
 
 Flowcharts are an intuitive way to describe algorithmic processes.
 Limiting the complexity of a flowchart to between 10 and 20 steps
@@ -341,7 +345,8 @@ Figure~\ref{figure:dataFlowSymbols}, that are used in a DFD:
 \end{enumerate}
 
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=4.6in,height=0.71in]{./image5}
 \caption{Data flow diagram symbols.}
 \label{figure:dataFlowSymbols}
@@ -359,7 +364,7 @@ process of refinement continues until a satisfactory level of detail is
 reached.
 
 An example of a Level 1 DFD for a video browsing system is shown in
-Figure~\ref{table:dataflowVideoBrowse}. Video databases are typically 
+Table~\ref{table:dataflowVideoBrowse}. Video databases are typically 
 very large; due to their size,
 it is usually cumbersome to preview videos and extract important
 information. A solution to this problem is to apply image analysis
@@ -379,12 +384,12 @@ view a storyboard, which is retrieved from the annotation database. When
 a shot is selected from the storyboard, the users can preview the
 original shot, which is retrieved from the video database.
 
-\begin{table}
+\begin{table}[h]
 \caption{Level 1 data flow diagram for a video browsing system.}
 \label{table:dataflowVideoBrowse}
 \begin{tabular}{|l|m{10cm}|}
 \hline
-\emph{Module} & Video Browsing System \\ \hline
+\emph{Module} & Video browsing system \\ \hline
 
 \emph{Inputs} & 
 \begin{itemize}
@@ -406,7 +411,7 @@ original shot, which is retrieved from the video database.
   board.
 \end{itemize}\\ \hline
 \emph{Functionality} &
-\includegraphics[width=4.9in,height=3.15in]{./image6} \\
+\includegraphics[width=4in,height=2.58in]{./image6} \\ \hline
 \end{tabular}
 \end{table}
 
@@ -420,15 +425,15 @@ no implied sequencing between when the shot boundary detection process
 is run and the storyboards are previewed. It is clear that the video
 must undergo shot detection prior to viewing its storyboard. This
 information is listed in something known as an \emph{\textbf{event
-table}}. The event table for this example is shown in Table 6.1.
+table}}. The event table for this example is shown in 
+Table~\ref{table:videoBrowsingSystem}.
 
-\textbf{Table 6.1} Event table for the video browsing system.
-
-\begin{table}
-\caption{}
-\label{table:<context>}
+\begin{table}[h]
+\caption{Event table for the video browsing system.}
+\label{table:videoBrowsingSystem}
 \begin{tabular}{|c|c|c|c|}
 \hline
+\rowcolor{Gray}
 \textbf{Event} & \textbf{Trigger}& \textbf{Process} & \textbf{Source} \\ \hline
 Annotate Video & New Video Arrival & Shot Boundary Detection & System \\  \hline
 View Storyboard & Browse Request & Storyboard Preview & User \\ \hline
@@ -497,12 +502,13 @@ between entities. This is similar to the pairwise comparison matrix in
 Chapter 2 where user needs were systematically compared. Relationships
 are bi-directional because they have two participating entities.
 
-\begin{table}
+\begin{table}[h]
 \caption{Entity relationship matrix.}
 \label{table:entityRelationshipMatrix}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|g|p{3cm}|p{3cm}|p{3cm}|}
 \hline
-\textbf{Student} & \textbf{Course} & \textbf{Department} \\ \hline
+\rowcolor{Gray}
+ & \textbf{Student} & \textbf{Course} & \textbf{Department} \\ \hline
 \textbf{Student} & & takes many & majors in one \\ \hline
 \textbf{Course} & has many & can require many / can be the prerequisite
 for many & is offered by one \\ \hline
@@ -543,7 +549,7 @@ For example, the identification number (ID) attribute of a Student is a
 key attribute.
 
 
-\begin{table}
+\begin{table}[h]
 \caption{ERD for the college database system.}
 \label{table:erdCollegeSystem}
 \begin{tabular}{|l|m{10cm}|}
@@ -571,7 +577,7 @@ key attribute.
   Relationship between course and their prerequisite courses.
 \end{itemize} \\ \hline
 \emph{Functionality} &
-\includegraphics[width=4.5in,height=3.1in]{./image7} \\
+\includegraphics[width=3.6in,height=2.5in]{./image7} \\ \hline
 \end{tabular}
 \end{table}
 
@@ -594,7 +600,7 @@ provide an overview of UML and the six different system views that it
 encompasses. A caveat for the reader---UML is complex, and complete
 coverage is beyond the scope of this book. In order to fully understand
 its subtleties and nuances, the reader is advised to consult the
-references provided in Section 6.8.
+references provided in Section~\ref{section:summary-and-further-reading}.
 
 In order to aid in the explanation of the different views we will create
 a UML model of a system called the Virtual Grocer, or v-Grocer for
@@ -637,7 +643,8 @@ ERD, is a generalization of a set of a particular thing or instance. For
 example, the Customer class could have a particular instance called Ms.
 Robinson.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=1.2in,height=0.81in]{./image8}
 \caption{Class diagram notation. The class has a label
 (Customer), attributes (Name, Address, and CustId), and methods
@@ -662,7 +669,8 @@ defined by the rule base. In order to illustrate these points,
 Figure~\ref{figure:classVgrocer} 
 shows the class diagram for a portion of the v-Grocer system.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=3.56in,height=2.6in]{./image9}
 \caption{Class diagram for the v-Grocer.}
 \label{figure:classVgrocer}
@@ -700,7 +708,8 @@ use-cases is enclosed in a rectangle with the actors outside. This
 rectangle represents the system boundary and consequently is labeled
 with the name of the system.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=3.9in,height=2.7in]{./image10}
 \caption{Use-case diagram for the v-Grocer.}
 \label{figure:useCaseVgrocer}
@@ -712,13 +721,11 @@ Database interact when creating a WebOrder. Use-cases are often
 described in a table as shown for this particular example in 
 Table~\ref{table:webOrderUseCase}.
 
-\textbf{Table 6.3} 
 
-
-\begin{table}
+\begin{table}[h]
 \caption{WebOrder use-case description.}
 \label{table:webOrderUseCase}
-\begin{tabular}{|l|m{10cm}|}
+\begin{tabular}{|g|m{10cm}|}
 \hline
 \textbf{Use-Case} & WebOrder \\ \hline
 \textbf{Actors} & Customer, Database, and WebServer \\ \hline
@@ -745,14 +752,16 @@ the development of other UML models.
 \label{subsection:state-machine-view}
 
 The \emph{\textbf{state machine}} \emph{\textbf{view}} is characterized
-by a \emph{state diagram} as was discussed in Section 6.2. Again, the
+by a \emph{state diagram} as was discussed in 
+Section~\ref{section:state-diagrams}. Again, the
 intention of a state diagram is to describe systems with memory. 
 Figure~\ref{figure:stateDiagramVgrocer} shows the state 
 view of a customer logging into the v-Grocer web
 server.
 
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=2in,height=2.in]{./image11}
 \caption{State diagram for the v-Grocer customer login.}
 \label{figure:stateDiagramVgrocer}
@@ -779,7 +788,8 @@ other deliveries. When both of those processes are completed, they are
 joined together and then the delivery run is made.
 
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=5.5in,height=0.9in]{./image12}
 \caption{Activity diagram for order processing and delivery
 for the v-Grocer.}
@@ -810,9 +820,10 @@ Figure~\ref{figure:collaborationDiagramWebOrder}
 shows how the WebOrder use-case is realized using the Customer,
 WebServer, and Database classes. Note, WebServer and Database are
 introduced as new classes and are not shown as part of the class diagram
-in Figure 6.9.
+in Figure~\ref{figure:collaborationDiagramWebOrder}.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=4in,height=1.17in]{./image13}
 \caption{Collaboration diagram for the WebOrder use-case.}
 \label{figure:collaborationDiagramWebOrder}
@@ -842,7 +853,8 @@ the message. The activity diagrams can be applied generally to ECE
 systems to show the interaction between entities, particularly the
 sequencing of messages.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=2.6in,height=2.4in]{./image14}
 \caption{Sequence diagram for the WebOrder use-case.}
 \label{figure:sequenceDiagramWebOrder}
@@ -866,7 +878,8 @@ system. The software files are the Browser, v-Grocer, Apache, and
 Oracle, while the hardware components are the Customer, WebServer, and
 Database.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=4.8in,height=1.4in]{./image15}
 \caption{The combined component and deployment diagram for
 the v-Grocer. The software files are the Browser, v-Grocer, Apache, and
@@ -879,17 +892,16 @@ Database.}
 \section{Project Application: Selecting Models}
 \label{section:project-application-selecting-models}
 
-Chapters 5 and 6 have presented a variety of models for representing the
+Chapters~\ref{chapter:funcDecomp} and \ref{chapter:behaviorModels} 
+have presented a variety of models for representing the
 behavior of systems. The design team needs to select the correct
 combination of tools to properly describe a design for its eventual
-implementation. Table 6.4 provides a summary of the models and their
-different intentions.
+implementation. Table~\ref{table:guidanceModelSelection} 
+provides a summary of the models and their different intentions.
 
-Table 6.4
-
-\begin{table}
+\begin{table}[h]
 \caption{Guidance for model selection.}
-\label{table:<context>}
+\label{table:guidanceModelSelection}
 \begin{tabular}{|l|m{10cm}|}
 \hline
 \textbf{Model} & \textbf{Intention} \\ \hline
@@ -897,29 +909,30 @@ Table 6.4
 functional transformations applied to information (electrical signals,
 bits, energy, etc.) in a system. It is broad in application. This often
 provides a view that is close to the actual system implementation. See
-Chapter 5. \\ \hline
+Chapter~\ref{chapter:funcDecomp}. \\ \hline
 \textbf{State Diagram} & To describe the behavior of systems with
 memory. They are very flexible when it comes to application. They are
 often applied to digital design, but state diagrams can also be used to
 describe the high level behavior of complex systems. The only
-prerequisite on their use is that the system has memory. See Section
-6.2. \\ \hline
+prerequisite on their use is that the system has memory. See 
+Section~\ref{section:state-diagrams}. \\ \hline
 \textbf{Flowchart} & To describe a process or algorithm, including its
 steps and control. They are applicable to many problem domains from
-software to describing business practices. See Section 6.3. \\ \hline
+software to describing business practices. See 
+Section~\ref{section:flowcharts}. \\ \hline
 \textbf{Data Flow Diagram} & To model the processing, transformation, and flow of
 data inside a system. They are typically supplemented by an event table
 describing all possible events and the resulting actions. Creating a DFD
 requires the designer to carefully think about the uses of the system
-and how the system is to react to external users and events. See Section
-6.4. \\  \hline
+and how the system is to react to external users and events. See 
+Section~\ref{section:data-flow-diagrams}. \\  \hline
 \textbf{Entity Relationship Diagram} & To catalog a set of related objects (entities), their
 attributes, and the relationships between them. ERDs capture the
 entities and relationships of a portion of the world into a formal data
 model. The graphical language describes the attributes of the entities
 and the cardinality of the relationships. ERDs are formal enough to be
 unambiguously translated into a complete description of a database
-system. See Section 6.5. \\  \hline
+system. See Section~\ref{section:entity-relationship-diagrams}. \\  \hline
 \textbf{The Unified Modeling Language.} & The intention of UML is to
 describe complex software systems. However, certain views are well
 suited to describing systems at a high level and are applicable to many
@@ -929,22 +942,23 @@ will be overlooked. \\  \hline
 \textbf{Class Diagram} & To describe classes and their relationship in
 an object-oriented software system. Class diagrams are primarily for
 software design and are not easily accessible to a non-technical
-audience. See Section 6.6.1. \\ \hline
+audience. See Section~\ref{subsection:static-view}. \\ \hline
 \textbf{Use-Case Diagram} &  To capture the overall behavior of the system from
 the user's point of view and describe cases in which the system will be
-used. See Section 6.6.2. \\  \hline
+used. See Section~\ref{subsection:use-case-view}. \\  \hline
 \textbf{State Machine} & This is essentially the same as the state
-diagram, but is also a formal UML view. See Sections 6.2 and 6.6.3. \\  \hline
+diagram, but is also a formal UML view. See 
+Sections~\ref{section:state-diagrams} and \ref{subsection:state-machine-view}. \\  \hline
 \textbf{Activity Diagram} &  To describe the sequencing of processes required to
 complete a task. Composed of states, transitions, forks, and joins. Can
-show concurrent processes. See Section 6.6.4. \\  \hline
+show concurrent processes. See Section~\ref{subsection:activity-view}. \\  \hline
 \textbf{Interaction Diagram} & To show the interaction and passing of messages
 between entities in a system. Characterized by both collaboration and
-sequence diagrams. See Section 6.6.5. \\  \hline
+sequence diagrams. See Section~\ref{subsection:interaction-view}. \\  \hline
 \textbf{Physical Diagram} &  To describe the arrangement and connections of the
 physical components that constitute a system. In the case of UML, it is
-characterized by a component and deployment diagram. See Section
-6.6.6. \\  \hline
+characterized by a component and deployment diagram. See 
+Section~\ref{subsection:physical-view}. \\  \hline
 \end{tabular}
 \end{table}
 
@@ -966,9 +980,11 @@ from the highest level down to the detailed design.
 
 This chapter presented a variety of models for describing system
 behavior that included state diagrams, flowcharts, data flow diagrams,
-entity relationship diagrams, and the Unified Modeling Language. Table
-6.4 provides a quick reference that describes the intention and
-application of the models examined in both Chapters 5 and 6.
+entity relationship diagrams, and the Unified Modeling Language. 
+Table~\ref{table:guidanceModelSelection}
+provides a quick reference that describes the intention and
+application of the models examined in both 
+Chapters~\ref{chapter:funcDecomp} and \ref{chapter:behaviorModels}.
 
 Flowcharts have been around for quite some time and an early work
 describing them is \ul{Flowcharts} by Chapin {[}Cha71{]}. The book
@@ -980,5 +996,5 @@ flow diagrams and entity relationship diagrams are common tools used in
 information systems analysis and design and can be further explored in
 \ul{Systems Analysis and Design} {[}Sat02{]} and \ul{Fundamentals of
 Database Systems} {[}Elm94{]}. Two references for UML are \ul{The
-Unified Modeling Language Reference Manual} {[}Rum98{]} and \ul{Schaum's
-Outline of UML} {[}Ben01{]}.
+Unified Modeling Language Reference Manual} {[}Rum98{]} and \\
+\ul{Schaum's Outline of UML} {[}Ben01{]}.
