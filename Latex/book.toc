@@ -1,0 +1,13 @@
+\contentsline {chapter}{Contents}{iii}{section*.2}%
+\contentsline {chapter}{Part I - The Engineering Design Process }{1}{section*.2}%
+\contentsline {chapter}{\chapternumberline {1} Ethical and Legal Issues}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Ethical Theory in a Nutshell}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}The IEEE Code of Ethics}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Intellectual Property and Legal Issues}{6}{section.1.3}%
+\contentsline {subsection}{Intellectual Property}{6}{section*.6}%
+\contentsline {subsection}{Liability and Negligence}{12}{section*.10}%
+\contentsline {section}{\numberline {1.4}Handling Ethical Dilemmas}{12}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Case Study Analysis}{14}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Project Application: Incorporating Ethics in the Design Process}{16}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Summary and Further Reading}{17}{section.1.7}%
+\contentsline {chapter}{\chapternumberline {2}Problems}{19}{chapter.2}%
