@@ -22,7 +22,8 @@ process), initiating (project selection), performance management
 
 The three important objectives of project management are to complete
 projects that are on-time, within budget, and meet the requirements of
-the user. Since user requirements were addressed in Chapters 2 and 3,
+the user. Since user requirements were addressed in 
+Chapters~\ref{chapter:projectSelection} and \ref{chapter:requirementSpec},
 this chapter addresses the remaining two objectives of time and cost
 management. Time management introduces the work breakdown structure,
 which identifies the activities (combined tasks and deliverables)
@@ -117,13 +118,14 @@ activity is followed by its constituent sub-activities. The columns of
 the WBS table are the activity attributes proposed by Gray and Larson.
 Table~\ref{table:workBreakDownStructureExample}
 contains the WBS table for the temperature monitoring design
-examined in Chapter 5 (Section 5.7).
+examined in Chapter~\ref{chapter:funcDecomp} 
+(Section~\ref{section:application-thermometer-design}).
 
 \begin{table}
 \caption{Example work breakdown structure for the design of a
 temperature monitoring system.}
 \label{table:workBreakDownStructureExample}
-\begin{tabular}{|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|   }
+\begin{tabular}{|m{1cm}|m{1.5cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{2.5cm}|m{1cm}|   }
 \hline
 \textbf{ID} & \textbf{Activity} & \textbf{Description} & \textbf{Deliverables / Checkpoints} & \textbf{Duration (days)} & \textbf{People} & \textbf{Resources} & \textbf{Predecessors} \\ \hline
 
@@ -207,7 +209,8 @@ somewhat nebulous, such as Research A/D Converters (2.1). Doing so
 ensures that activities do not become open-ended and have specific
 deliverables for monitoring their progress.
 
-The fifth column in Table 10.1 is the estimated duration for each
+The fifth column in Table~\ref{table:workBreakDownStructureExample} 
+is the estimated duration for each
 activity. The ability to estimate durations is heavily influenced by
 past experience. The general tendency is to underestimate the amount of
 time required. Keep in mind that credibility is lost if delivery of the
@@ -239,7 +242,8 @@ provides a single person who is responsible for it. However, what if
 that person needs additional support or backup? Who is going to help
 them if they are unable to deliver? What if a team member becomes ill?
 It may make sense to assign multiple people to activities based upon
-complexity. In Table 10.1, when a number is placed adjacent to a
+complexity. In Table~\ref{table:workBreakDownStructureExample}, 
+when a number is placed adjacent to a
 person's name, it indicates that the person has primary (1) or secondary
 (2) responsibility for that activity.
 
@@ -268,8 +272,8 @@ basic connections allowed in the AON representation are shown in
 Figure~\ref{figure:activityOnNode}.
 
 
-\begin{figure}
-\begin{tabular}{m{8cm}m{8cm}m{8cm}}
+\begin{figure}[h]
+\begin{tabular}{m{5cm}m{5cm}m{5cm}}
 \includegraphics[width=1.3in,height=1in]{./image5} &
 \includegraphics[width=1.2in,height=1in]{./image6} & 
 \includegraphics[width=1.2in,height=0.41in]{./image7} \\
@@ -298,7 +302,7 @@ The completion of an individual path does not result in completion of
 the project---all paths (and consequently all activities) must be
 completed for the entire project to finish.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=3.4in,height=0.96in]{./image12}
 \caption{Example network diagram. Each activity contains the
 activity ID and the estimated duration in days.}
@@ -346,15 +350,13 @@ Float = t_{cp} - t_{lp}
 
 
 
-Examples 10.1 and 10.2 examine float time computation.
+Examples~\ref{example:projectManagementFloatTime} and 
+\ref{example:projectManagementNetworkDiagram} examine float time computation.
 
-
-\begin{table}
-\begin{tabular}{m{15cm}||}
-\textbf{Example 10.1} Float time calculation.
-
+\begin{example}{ Float time calculation.}
+\label{example:projectManagementFloatTime}
 \emph{\textbf{\ul{Problem:}}} Calculate the float for activities in the
-network diagram shown in Figure 10.2.
+network diagram shown in Figure~\ref{figure:exampleNetworkDiagram}.
 
 \emph{\textbf{\ul{Solution:}}} The first two steps of the process have
 already been completed, which are the identification of the paths, their
@@ -378,23 +380,21 @@ $$Float_{4} = t_{cp} - t_{lp4} = 34 -28 days = 6 days$$
 
 This means that activity 1 can slip by 8 days and activity 4 can slip by
 6 days without impacting the time to complete the project.
-\end{tabular}
-\end{table}
+\end{example}
 
+\begin{example}{Network diagram construction and float time
+calculation for the temperature display.}
+\label{example:projectManagementNetworkDiagram}
 
-\begin{table}
-\begin{tabular}{m{15cm}||}
-\textbf{Example 10.2} Network diagram construction and float time
-calculation for the temperature display.\\
-
-\emph{\textbf{\ul{Problem:}}} For the example WBS in Table 10.1, (a)
+\emph{\textbf{\ul{Problem:}}} For the example WBS in 
+Table~\ref{table:workBreakDownStructureExample}, (a)
 create a network diagram, (b) determine the critical path and project
 completion time, and (c) determine the float for all activities not on
 the critical path.\\
 
 \textbf{\ul{\emph{Solution:}}}
 (a) The network diagram is constructed from the dependencies identified
-in Table 10.1 and is shown below.
+in Table~\ref{table:workBreakDownStructureExample} and is shown below.
 
 \includegraphics[width=4.2in,height=1.74in]{./image22} \\
 
@@ -409,13 +409,12 @@ $$t_{cp} = 39 days$$ \\
 (c) All activities on path $P_1$ are also part of
 the critical path, with the exception of activity 1.3.2, which has
 
-$$Float_{1.3.2} = 39 - 38 days = 1 day$$
+$$Float_{1.3.2} = 39 - 38 \text{days} = 1 \text{day}$$
 
 Activities 2.1-2.4 have the collective float
 
-$$Float_{2.1-2.4} = 39 - 30 days = 9 days$$
-\end{tabular}
-\end{table}
+$$Float_{2.1-2.4} = 39 - 30 \text{days} = 9 \text{days}$$
+\end{example}
 
 The strength of the network diagram is that it provides an intuitive
 graphical representation of activities and their dependencies on one
@@ -431,7 +430,7 @@ to read format.
 
 \emph{\textbf{Gantt charts}}, developed by a mechanical engineer named
 Henry Gantt (1861-1919), are a bar graph representation of activities on
-a timeline. An example Gantt chart is shown in Figure 10.3 for the
+a timeline. An example Gantt chart is shown in Figure~\ref{figure:ghantChart} for the
 temperature display design. The Gantt chart effectively shows the WBS
 and the timeline for completion. A traditional weakness of the Gantt
 chart has been the inability to show the dependencies between
@@ -439,7 +438,7 @@ activities. However, as seen in this example, this has been remedied by
 modern project management software where the dependencies are indicated
 by the connecting arrows between tasks.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=5.5in,height=3.8in]{./image28}
 \caption{Gantt chart for the temperature display project
 created using Microsoft Visio\textsuperscript{TM}}
@@ -482,7 +481,7 @@ are sold, the total cost is
 
 \begin{equation}
 \label{equ:totalCost}
-Total cost = fixed cost + n x\frac{variable cost}{unit}
+\text{Total cost} = \text{fixed cost} + n x\frac{\text{variable cost}}{\text{unit}}
 \end{equation}
 
 The total revenue generated by the sale of the \emph{n} units is
@@ -490,27 +489,29 @@ directly related to the sale price
 
 \begin{equation}
 \label{equ:Revenue}
-Reveneu = n x\frac{sales price}{unit}
+\text{Reveneue} = n x\frac{\text{sales price}}{\text{unit}}
 \end{equation}
 
 The break-even point is where the revenue and total costs are equal
 
 \begin{equation}
 \label{equ:breakEven}
-n x \frac{sales price cost}{unit} = fixed cost + n x \frac{variable cost}{unit}
+n x \frac{\text{sales price cost}}{\text{unit}} = \text{fixed cost} + n x \frac{\text{variable cost}}{\text{unit}}
 \end{equation}
 
 The break-even analysis is shown graphically in 
 Figure~\ref{figure:breakEvenGraph} with the
-costs and revenue plotted as a function of units sold. Equation (5)
+costs and revenue plotted as a function of units sold. 
+Equation~\ref{equ:breakEven}
 allows different scenarios to be examined. For example, based upon a
 certain cost structure and sales price, the volume of sales necessary to
 break-even can be computed. Or, based upon a cost structure and
 projected number of units sold, a target sales price can be selected.
-Example 10.3 demonstrates the application of break-even analysis for the
+Example~\ref{example:projectManagementBreakEvenHpPrinter} 
+demonstrates the application of break-even analysis for the
 development of the Hewlett-Packard (HP) DeskJet printer.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=4.8in,height=3.36in]{./image32}
 \caption{Graphical representation of the break-even
 analysis.}
@@ -519,9 +520,8 @@ analysis.}
 
 
 
-\begin{table}
-\begin{tabular}{m{15cm}||}
-\textbf{Example 10.3} Break-even analysis for the HP DeskJet printer.\\
+\begin{example}{ Break-even analysis for the HP DeskJet printer.}
+\label{example:projectManagementBreakEvenHpPrinter}
 
 \emph{\textbf{\ul{Problem:}}} The following data has been publicly
 reported for the development and sale of the HP DeskJet {[}Ulr03{]}:
@@ -538,37 +538,36 @@ an estimated sales lifetime of 2 years.\\
 to break even. The fixed costs are the sum of the development costs and
 production investment. So
 
-$$Fixed costs = \$(50+25) million = \$75 million$$.
+$$\text{Fixed costs} = \$(50+25) \text{million} = \$75 \text{million}$$.
 
 This leads to a total cost for \emph{n} units sold of
 
-$$Totalcost = \$75 million + n x \$225$$.
+$$\text{Total cost} = \$75 \text{million} + n x \$225$$.
 
 The revenue is
 
-$$Revenue = n x 300$$.
+$$\text{Revenue} = n x 300$$.
 
 Setting the revenue and total cost each equal at the break-even point
 produces
 
-$$n x \$400 = \$75 million + n x \$225$$
+$$n x \$400 = \$75 \text{million} + n x \$225$$
 
 Solving for the final number of units gives
 
-$$N = 1 million$$\\
+$$N = 1 \text{million}$$\\
 
 (b) Profit is the differential between the total revenue and the total
 cost and is expressed as
 
-$$ Profit = total revenue - total costs$$
+$$ \text{Profit = total revenue - total costs}$$
 
 For an expected volume of 4 million units per year over 2 years
 
-$$Profit = n x \$300 - (\$ 75 million + n x \$225$$
-$$   = 8 million x \$300 - (\$ 75 million + 8 million x \$225$$
-$$Profit = \$525 million$$
-\end{tabular}
-\end{table}
+$$\text{Profit} = n x \$300 - (\$ 75 \text{million} + n x \$225$$
+$$   = 8 \text{million} x \$300 - (\$ 75 \text{million} + 8 \text{million} x \$225$$
+$$\text{Profit} = \$525 \text{million}$$
+\end{example}
 
 \subsection{Cost Models}
 \label{subsection:cost-models}
@@ -621,7 +620,7 @@ of lines of code as the input {[}Jal97{]} as
 
 \begin{equation}
 \label{equ:softwareEffortIBM}
-Effort = a x KLOC + b
+\text{Effort} = a * KLOC + b
 \end{equation}
 
 The output is an estimate of the effort in person-months and the input
@@ -633,17 +632,16 @@ was found to be more realistic where
 
 \begin{equation}
 \label{equ:softwareEffortExp}
-Effort = a(KLOC)^b
+\text{Effort} = a(KLOC)^b
 \end{equation}
 
 By observation of 60 software development projects at IBM, the
 exponential model was fit to observed data and the parameters were
 estimated to be $a=5.2$ and $b = 0.91$. The KLOC model is
-applied in Example 10.4.
+applied in Example~\ref{example:projectManagementEffortEstimation}.
 
-\begin{table}
-\begin{tabular}{m{15cm}|}
-\textbf{Example 10.4} Effort estimation using KLOC. \\
+\begin{example}{Effort estimation using KLOC.}
+\label{example:projectManagementEffortEstimation}
 
 \emph{\textbf{\ul{Problem:}}} Consider a software development project
 that has a team of 10 software development engineers. The team has
@@ -659,7 +657,7 @@ overhead. Estimate (a) the time required to the complete the project and
 equation~\ref{equ:softwareEffortExp} is
 most appropriate
 
-$$Effort = 5.2(50)^{0.91} = 183 worker months$$
+$$\text{Effort} = 5.2(50)^{0.91} = 183 \text{worker months}$$
 
 Since there are 10 developers on the project, the estimated time is
 determined by dividing the effort by 10, to produce an estimated time of
@@ -669,10 +667,9 @@ determined by dividing the effort by 10, to produce an estimated time of
 person-months and the average monthly salary of a development engineer
 as
 
-$$Labor cost = 183 worker-months  x \frac{\$100,000}{year} x \frac{1 year}{12 months}$$
-$$Labor cost = \$1.53 million$$
-\end{tabular}
-\end{table}
+$$\text{Labor cost} = \text{183 worker-months}  x \frac{\$100,000}{year} x \frac{\text{1 year}}{\text{12 months}}$$
+$$\text{Labor cost} = \$1.53 \text{million}$$
+\end{example}
 
 The models in 
 equations~\ref{equ:softwareEffortIBM} and {equ:softwareEffortExp}
@@ -745,9 +742,11 @@ capstone design projects:
   envision the steps to completion. The desire to please superiors also
   influences people to underestimate the time to completion. Although it
   may not be necessary to double the time estimates, you can incorporate
-  the most optimistic and pessimistic estimates and apply equation (1).
+  the most optimistic and pessimistic estimates and apply 
+Equation~\ref{equ:projectTimeEstimate}
   Or, if a proven mathematical model exists, such as the KLOC estimator
-  in equations (7) and (8), it can be used to estimate times.
+  in Equations~\ref{equ:softwareEffortIBM} and \ref{equ:softwareEffortExp}, 
+it can be used to estimate times.
 \item
   \emph{Assign a lot of time for testing and integration.} During
   integration many people must work together to integrate components
@@ -770,7 +769,7 @@ capstone design projects:
   work doesn't get done. There needs to be individual accountability for
   all team members. However, it may be a good idea to have more than one
   person responsible for activities for backup support as shown in the
-  WBS in Table 10.1.
+  WBS in Table~\ref{table:workBreakDownStructureExample}.
 \item
   \emph{Track the progress versus the plan.} There is a tendency to
   create the plan and then ignore it. The plan is only valuable if it is
@@ -796,14 +795,16 @@ A project plan should contain the following:
   deliverables, responsibilities, duration, resources, and dependencies
   as demonstrated in 
 
-Table 10.1. Be sure to provide sufficient detail in
+Table~\ref{table:workBreakDownStructureExample}. Be sure to 
+provide sufficient detail in
   the structure and identify clear deliverables.
 \item
   \emph{Gantt Chart and/or Network Diagram.} Provide a graphical
   representation of the project plan. Network diagrams have the
   advantage of showing the dependencies, while Gantt charts show the
   timeframe. Modern software tools allow both to be integrated into the
-  same graph and are a good compromise as demonstrated in Figure 10.3.
+  same graph and are a good compromise as demonstrated in 
+Figure~\ref{figure:ghantChart}.
   The critical path should be identified and the float for non-critical
   path activities understood.
 \item
@@ -839,7 +840,7 @@ Project management is a well developed field and there are many good
 textbooks and online resources available for delving deeper into the
 subject. \ul{Project Management} by Gray and Larson {[}Gra02{]} is a
 comprehensive text on the subject that includes risk management,
-resource scheduling, leadership, and performance measurement.
+resource scheduling, leadership, and performance measurement.\\
 \ul{Planning, Performing, and Controlling Projects} by Angus et al.
 {[}Ang00{]} is written for an engineering and scientific audience, and
 integrates phases of the design process. MindTools

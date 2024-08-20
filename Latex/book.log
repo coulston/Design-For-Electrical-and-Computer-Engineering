@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.21)  20 AUG 2024 15:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.21)  20 AUG 2024 16:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1128,7 +1128,8 @@ Package: changebar 2024/07/17 v3.7e Indicate changes with marginal bars
 
 
 Writing index file book.idx
-(book.aux)
+(book.aux (copyright.aux) (chapter10/chapter10.aux) (chapter10/problemSet10.aux
+))
 \openout1 = `book.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -1211,22 +1212,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--5
 
  []
 
-<./Fig/cc-logo.pdf, id=14, 22.58438pt x 22.58438pt>
+<./Fig/cc-logo.pdf, id=61, 22.58438pt x 22.58438pt>
 File: ./Fig/cc-logo.pdf Graphic file (type pdf)
 <use ./Fig/cc-logo.pdf>
 Package pdftex.def Info: ./Fig/cc-logo.pdf  used on input line 10.
 (pdftex.def)             Requested size: 28.45274pt x 28.45299pt.
-<./Fig/cc-by.pdf, id=15, 22.58438pt x 22.58438pt>
+<./Fig/cc-by.pdf, id=62, 22.58438pt x 22.58438pt>
 File: ./Fig/cc-by.pdf Graphic file (type pdf)
 <use ./Fig/cc-by.pdf>
 Package pdftex.def Info: ./Fig/cc-by.pdf  used on input line 11.
 (pdftex.def)             Requested size: 28.45274pt x 28.45299pt.
-<./Fig/cc-nc.pdf, id=16, 22.58438pt x 22.58438pt>
+<./Fig/cc-nc.pdf, id=63, 22.58438pt x 22.58438pt>
 File: ./Fig/cc-nc.pdf Graphic file (type pdf)
 <use ./Fig/cc-nc.pdf>
 Package pdftex.def Info: ./Fig/cc-nc.pdf  used on input line 12.
 (pdftex.def)             Requested size: 28.45274pt x 28.45299pt.
-<./Fig/cc-sa.pdf, id=17, 22.58438pt x 22.58438pt>
+<./Fig/cc-sa.pdf, id=64, 22.58438pt x 22.58438pt>
 File: ./Fig/cc-sa.pdf Graphic file (type pdf)
 <use ./Fig/cc-sa.pdf>
 Package pdftex.def Info: ./Fig/cc-sa.pdf  used on input line 13.
@@ -1253,136 +1254,1093 @@ fs with page group included in a single page
 ] [1
 
 ]
-\openout2 = `./chapter11/chapter11.aux'.
+\openout2 = `./chapter10/chapter10.aux'.
 
- (chapter11/chapter11.tex [2
-
-
-] [3] [4]
-
-LaTeX Warning: Reference `table:IEEEcodeOfEthics' on page 5 undefined on input 
-line 181.
+ (chapter10/chapter10.tex [2
 
 
-Overfull \hbox (30.0613pt too wide) in paragraph at lines 188--231
+]
+
+LaTeX Warning: Reference `chapter:projectSelection' on page 3 undefined on inpu
+t line 26.
+
+
+LaTeX Warning: Reference `chapter:requirementSpec' on page 3 undefined on input
+ line 26.
+
+[3]
+
+LaTeX Warning: Reference `chapter:funcDecomp' on page 4 undefined on input line
+ 121.
+
+
+LaTeX Warning: Reference `section:application-thermometer-design' on page 4 und
+efined on input line 122.
+
+
+Overfull \hbox (0.9567pt too wide) in paragraph at lines 130--130
+[]|\OT1/cmr/bx/n/10 Description| 
+ []
+
+
+Overfull \hbox (4.31084pt too wide) in paragraph at lines 130--130
+[]|\OT1/cmr/bx/n/10 Deliverables
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+\OT1/cmr/bx/n/10 / Check-
+ []
+
+
+Overfull \hbox (16.88728pt too wide) in paragraph at lines 130--130
+[]|\OT1/cmr/bx/n/10 Duration
+ []
+
+
+Overfull \hbox (2.75677pt too wide) in paragraph at lines 130--130
+\OT1/cmr/bx/n/10 (days)| 
+ []
+
+
+Overfull \hbox (4.96376pt too wide) in paragraph at lines 130--130
+[]|\OT1/cmr/bx/n/10 People| 
+ []
+
+
+Overfull \hbox (35.55109pt too wide) in paragraph at lines 130--130
+[]|\OT1/cmr/bx/n/10 Predecessors| 
+ []
+
+
+Overfull \hbox (1.71648pt too wide) in paragraph at lines 132--132
+[]|\OT1/cmr/bx/n/10 Interface
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+\OT1/cmr/bx/n/10 Cir-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
+[]|\OT1/cmr/m/n/10 Design
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
+[]|\OT1/cmr/m/n/10 Complete
+ []
+
+
+Underfull \hbox (badness 3098) in paragraph at lines 133--133
+\OT1/cmr/m/n/10 the de-tailed
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
+\OT1/cmr/m/n/10 de-sign and
+ []
+
+
+Underfull \hbox (badness 3364) in paragraph at lines 133--133
+\OT1/cmr/m/n/10 ver-ify it in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+[]\OT1/cmr/m/n/10 Circuit
+ []
+
+
+Overfull \hbox (10.65015pt too wide) in paragraph at lines 134--134
+\OT1/cmr/m/n/10 schematic 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+[]
+ []
+
+
+Overfull \hbox (15.03911pt too wide) in paragraph at lines 134--134
+\OT1/cmr/m/n/10 Simulation
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+\OT1/cmr/m/n/10 ver-i-fi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
+[]|\OT1/cmr/m/n/10 Rob
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
+\OT1/cmr/m/n/10 (1)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
+\OT1/cmr/m/n/10 Jana
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+[]\OT1/cmr/m/n/10 SPICE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
+[]|\OT1/cmr/m/n/10 Purchase
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
+\OT1/cmr/m/n/10 Com-po-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--139
+[]
+ []
+
+
+Overfull \hbox (1.9835pt too wide) in paragraph at lines 139--139
+\OT1/cmr/m/n/10 Identify
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--139
+[]\OT1/cmr/m/n/10 Place
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--139
+[]
+ []
+
+
+Overfull \hbox (1.01122pt too wide) in paragraph at lines 139--139
+\OT1/cmr/m/n/10 Receive
+ []
+
+
+Overfull \hbox (7.48172pt too wide) in paragraph at lines 142--142
+[]|\OT1/cmr/bx/n/10 Construct
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+\OT1/cmr/bx/n/10 & Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[]|\OT1/cmr/m/n/10 Build and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+[]|\OT1/cmr/m/n/10 Current
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+\OT1/cmr/m/n/10 Driver
+ []
+
+
+Underfull \hbox (badness 1990) in paragraph at lines 144--144
+[]|\OT1/cmr/m/n/10 Test of cir-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+\OT1/cmr/m/n/10 cuit with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+\OT1/cmr/m/n/10 sens-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]\OT1/cmr/m/n/10 Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]
+ []
+
+
+Overfull \hbox (26.51129pt too wide) in paragraph at lines 145--145
+\OT1/cmr/m/n/10 Measurement
+ []
+
+
+Underfull \hbox (badness 4832) in paragraph at lines 145--145
+\OT1/cmr/m/n/10 of lin-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+[]|\OT1/cmr/m/n/10 Jana
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+\OT1/cmr/m/n/10 (1)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+\OT1/cmr/m/n/10 Rob
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+[]\OT1/cmr/m/n/10 Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+[]
+ []
+
+
+Overfull \hbox (13.36826pt too wide) in paragraph at lines 147--147
+\OT1/cmr/m/n/10 Thermometer 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+[]|\OT1/cmr/m/n/10 Level
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+\OT1/cmr/m/n/10 Off-set
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+\OT1/cmr/m/n/10 & Gain
+ []
+
+
+Underfull \hbox (badness 1990) in paragraph at lines 149--149
+[]|\OT1/cmr/m/n/10 Test of cir-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+\OT1/cmr/m/n/10 cuit with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+\OT1/cmr/m/n/10 volt-age
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
+[]\OT1/cmr/m/n/10 Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
+[]
+ []
+
+
+Overfull \hbox (26.51129pt too wide) in paragraph at lines 150--150
+\OT1/cmr/m/n/10 Measurement
+ []
+
+
+Underfull \hbox (badness 4832) in paragraph at lines 150--150
+\OT1/cmr/m/n/10 of lin-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
+[]|\OT1/cmr/m/n/10 Rob
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
+\OT1/cmr/m/n/10 (1)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
+\OT1/cmr/m/n/10 Jana
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
+[]\OT1/cmr/m/n/10 Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+[]|\OT1/cmr/m/n/10 Integrate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+\OT1/cmr/m/n/10 Com-po-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+[]|\OT1/cmr/m/n/10 Integrate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+\OT1/cmr/m/n/10 the cur-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+\OT1/cmr/m/n/10 rent driver
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+\OT1/cmr/m/n/10 and off-set
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+[]\OT1/cmr/m/n/10 Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+[]
+ []
+
+
+Overfull \hbox (5.90019pt too wide) in paragraph at lines 155--155
+\OT1/cmr/m/n/10 verifying
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\OT1/cmr/m/n/10 func-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\OT1/cmr/m/n/10 tion-al-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\OT1/cmr/m/n/10 lin-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\OT1/cmr/m/n/10 ear-ity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\OT1/cmr/m/n/10 re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\OT1/cmr/m/n/10 quire-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[]|\OT1/cmr/m/n/10 Rob
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+\OT1/cmr/m/n/10 (1)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+\OT1/cmr/m/n/10 Jana
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+[]\OT1/cmr/m/n/10 Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+[]
+ []
+
+
+Overfull \hbox (13.36826pt too wide) in paragraph at lines 157--157
+\OT1/cmr/m/n/10 Thermometer 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+[]|\OT1/cmr/m/n/10 1.3.1
+ []
+
+
+Underfull \hbox (badness 4108) in paragraph at lines 159--159
+[]|\OT1/cmr/bx/n/10 LED &
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\OT1/cmr/bx/n/10 Driver
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\OT1/cmr/bx/n/10 Cir-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+[]|\OT1/cmr/m/n/10 Research
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\OT1/cmr/m/n/10 A/D
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\OT1/cmr/m/n/10 Con-vert-
+ []
+
+
+Underfull \hbox (badness 6125) in paragraph at lines 161--161
+[]|\OT1/cmr/m/n/10 Make se-lec-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+[]
+ []
+
+
+Overfull \hbox (1.9835pt too wide) in paragraph at lines 162--162
+\OT1/cmr/m/n/10 Identify
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+\OT1/cmr/m/n/10 types,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+\OT1/cmr/m/n/10 cost,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+\OT1/cmr/m/n/10 and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+\OT1/cmr/m/n/10 per-for-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+[]
+ []
+
+
+Overfull \hbox (1.9835pt too wide) in paragraph at lines 162--162
+\OT1/cmr/m/n/10 Identify
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+\OT1/cmr/m/n/10 two
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+\OT1/cmr/m/n/10 po-ten-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+\OT1/cmr/m/n/10 tial
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+\OT1/cmr/m/n/10 con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+\OT1/cmr/m/n/10 vert-ers
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+\OT1/cmr/m/n/10 for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+\OT1/cmr/m/n/10 pur-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+[]|\OT1/cmr/m/n/10 Complete
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+\OT1/cmr/m/n/10 Hard-ware
+ []
+
+
+Underfull \hbox (badness 4378) in paragraph at lines 165--165
+[]|\OT1/cmr/m/n/10 Design con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--166
+[]\OT1/cmr/m/n/10 Circuit
+ []
+
+
+Overfull \hbox (10.65015pt too wide) in paragraph at lines 166--166
+\OT1/cmr/m/n/10 schematic 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--166
+[]
+ []
+
+
+Overfull \hbox (15.03911pt too wide) in paragraph at lines 166--166
+\OT1/cmr/m/n/10 Simulation
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--166
+\OT1/cmr/m/n/10 ver-i-fi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--167
+[]|\OT1/cmr/m/n/10 Ryan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--167
+\OT1/cmr/m/n/10 (1)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--167
+\OT1/cmr/m/n/10 Alex
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
+[]\OT1/cmr/m/n/10 Digital
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
+\OT1/cmr/m/n/10 cir-cuit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+[]|\OT1/cmr/m/n/10 Purchase
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+\OT1/cmr/m/n/10 LED &
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+\OT1/cmr/m/n/10 Driver
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+\OT1/cmr/m/n/10 Com-po-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+[]
+ []
+
+
+Overfull \hbox (1.9835pt too wide) in paragraph at lines 171--171
+\OT1/cmr/m/n/10 Identify
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+[]\OT1/cmr/m/n/10 Place
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+[]
+ []
+
+
+Overfull \hbox (1.01122pt too wide) in paragraph at lines 171--171
+\OT1/cmr/m/n/10 Receive
+ []
+
+
+Overfull \hbox (0.73763pt too wide) in paragraph at lines 174--174
+[]|\OT1/cmr/m/n/10 Construct
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+[]|\OT1/cmr/m/n/10 Test with
+ []
+
+
+Underfull \hbox (badness 2547) in paragraph at lines 174--174
+\OT1/cmr/m/n/10 sup-ply volt-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+[]\OT1/cmr/m/n/10 Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+\OT1/cmr/m/n/10 data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+\OT1/cmr/m/n/10 show-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+\OT1/cmr/m/n/10 ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+\OT1/cmr/m/n/10 dig-i-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+\OT1/cmr/m/n/10 out-put
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+\OT1/cmr/m/n/10 vs.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+\OT1/cmr/m/n/10 volt-age
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
+[]|\OT1/cmr/m/n/10 Alex
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
+\OT1/cmr/m/n/10 (1)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
+\OT1/cmr/m/n/10 Ryan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
+[]\OT1/cmr/m/n/10 Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+[]|\OT1/cmr/m/n/10 System
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+\OT1/cmr/m/n/10 In-te-gra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+\OT1/cmr/m/n/10 tion &
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+[]|\OT1/cmr/m/n/10 Complete
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+\OT1/cmr/m/n/10 in-te-gra-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+\OT1/cmr/m/n/10 of front-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+\OT1/cmr/m/n/10 end and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+\OT1/cmr/m/n/10 LED driver
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+[]\OT1/cmr/m/n/10 Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+\OT1/cmr/m/n/10 data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+\OT1/cmr/m/n/10 strat-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+\OT1/cmr/m/n/10 ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+\OT1/cmr/m/n/10 func-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+\OT1/cmr/m/n/10 tion-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+\OT1/cmr/m/n/10 al-ity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+\OT1/cmr/m/n/10 from
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+\OT1/cmr/m/n/10 temp
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+\OT1/cmr/m/n/10 in-put
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+\OT1/cmr/m/n/10 to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+\OT1/cmr/m/n/10 LED
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
+[]\OT1/cmr/m/n/10 System
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
+\OT1/cmr/m/n/10 lin-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
+\OT1/cmr/m/n/10 ear-ity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
+\OT1/cmr/m/n/10 mea-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
+\OT1/cmr/m/n/10 sure-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--182
+[]|\OT1/cmr/m/n/10 Alex
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--182
+\OT1/cmr/m/n/10 (1)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--182
+\OT1/cmr/m/n/10 Rob
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--182
+\OT1/cmr/m/n/10 (1)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--182
+\OT1/cmr/m/n/10 Jana
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--182
+\OT1/cmr/m/n/10 (1)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--182
+\OT1/cmr/m/n/10 Ryan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+[]\OT1/cmr/m/n/10 Test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+[]\OT1/cmr/m/n/10 Digital
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+\OT1/cmr/m/n/10 logic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+[]
+ []
+
+
+Overfull \hbox (13.36826pt too wide) in paragraph at lines 183--183
+\OT1/cmr/m/n/10 Thermometer 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+[]|\OT1/cmr/m/n/10 1.3.3
+ []
+
+
+Underfull \hbox (badness 1389) in paragraph at lines 184--184
+\OT1/cmr/m/n/10 1 and
+ []
+
+
+Overfull \hbox (31.5029pt too wide) in paragraph at lines 128--186
 [][] 
  []
 
-[5] [6]
 
-LaTeX Warning: Reference `figure:patentFloatingPoint' on page 7 undefined on in
-put line 330.
+LaTeX Warning: Float too large for page by 1066.34476pt on input line 186.
+
+[4] [5] [6]
+<./chapter10/Fig/./image5.pdf, id=137, 119.95682pt x 92.8698pt>
+File: ./chapter10/Fig/./image5.pdf Graphic file (type pdf)
+<use ./chapter10/Fig/./image5.pdf>
+Package pdftex.def Info: ./chapter10/Fig/./image5.pdf  used on input line 277.
+(pdftex.def)             Requested size: 93.95213pt x 72.27092pt.
+<./chapter10/Fig/./image6.pdf, id=138, 110.9373pt x 92.8698pt>
+File: ./chapter10/Fig/./image6.pdf Graphic file (type pdf)
+<use ./chapter10/Fig/./image6.pdf>
+Package pdftex.def Info: ./chapter10/Fig/./image6.pdf  used on input line 278.
+(pdftex.def)             Requested size: 86.72879pt x 72.27092pt.
+<./chapter10/Fig/./image7.pdf, id=139, 110.9373pt x 38.6673pt>
+File: ./chapter10/Fig/./image7.pdf Graphic file (type pdf)
+<use ./chapter10/Fig/./image7.pdf>
+Package pdftex.def Info: ./chapter10/Fig/./image7.pdf  used on input line 279.
+(pdftex.def)             Requested size: 86.72879pt x 29.6317pt.
+
+Overfull \hbox (53.2613pt too wide) in paragraph at lines 276--282
+[][] 
+ []
+
+<./chapter10/Fig/./image12.pdf, id=141, 327.74728pt x 92.8698pt>
+File: ./chapter10/Fig/./image12.pdf Graphic file (type pdf)
+<use ./chapter10/Fig/./image12.pdf>
+Package pdftex.def Info: ./chapter10/Fig/./image12.pdf  used on input line 306.
+
+(pdftex.def)             Requested size: 245.72484pt x 69.38008pt.
+[7 <./chapter10/Fig/./image5.pdf> <./chapter10/Fig/./image6.pdf
+
+pdfTeX warning: pdflatex.exe (file ./chapter10/Fig/./image6.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./chapter10/Fig/./image7.pdf
+
+pdfTeX warning: pdflatex.exe (file ./chapter10/Fig/./image7.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./chapter10/Fig/./image12.pdf
+
+pdfTeX warning: pdflatex.exe (file ./chapter10/Fig/./image12.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 389--394
+
+ []
+
+<./chapter10/Fig/./image22.pdf, id=184, 400.01729pt x 165.1398pt>
+File: ./chapter10/Fig/./image22.pdf Graphic file (type pdf)
+<use ./chapter10/Fig/./image22.pdf>
+Package pdftex.def Info: ./chapter10/Fig/./image22.pdf  used on input line 399.
+
+(pdftex.def)             Requested size: 303.54019pt x 125.75449pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
+
+ []
+
+[8]
+Overfull \hbox (79.6265pt too wide) in paragraph at lines 401--406
+[]\OT1/cmr/m/n/10 (b) The three paths from start to end are: $\OML/cmm/m/it/10 
+P[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1
+/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n
+/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 3\OM
+L/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/
+it/10 :\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 ; \
+OT1/cmr/m/n/10 3\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 ; P[] \OT1/cmr/m/n/10 = \OMS
+/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1\OML/cmm/m/it
+/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \O
+T1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 :\OT1/cmr/m/
+n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 3\O
+ML/cmm/m/it/10 :\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 3\OMS/cmsy/
+m/n/10 g\OML/cmm/m/it/10 ; andP[] \OT1/cmr/m/n/10 =
+ []
 
 
-LaTeX Warning: Reference `figure:patentFloatingPoint' on page 7 undefined on in
-put line 340.
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
+ []
 
-LaTeX Warning: Reference `figure:patentFloatingPoint' on page 7 undefined on in
-put line 344.
+<./chapter10/Fig/./image28.pdf, id=196, 409.91887pt x 282.70657pt>
+File: ./chapter10/Fig/./image28.pdf Graphic file (type pdf)
+<use ./chapter10/Fig/./image28.pdf>
+Package pdftex.def Info: ./chapter10/Fig/./image28.pdf  used on input line 442.
 
-<./chapter11/Fig/./image1.png, id=94, 465.1779pt x 713.3049pt>
-File: ./chapter11/Fig/./image1.png Graphic file (type png)
-<use ./chapter11/Fig/./image1.png>
-Package pdftex.def Info: ./chapter11/Fig/./image1.png  used on input line 348.
-(pdftex.def)             Requested size: 339.6835pt x 523.26602pt.
-[7]
-<./chapter11/Fig/./image2.png, id=99, 467.5869pt x 720.5319pt>
-File: ./chapter11/Fig/./image2.png Graphic file (type png)
-<use ./chapter11/Fig/./image2.png>
-Package pdftex.def Info: ./chapter11/Fig/./image2.png  used on input line 355.
-(pdftex.def)             Requested size: 340.40807pt x 524.69757pt.
-<./chapter11/Fig/./image3.png, id=100, 472.4049pt x 713.3049pt>
-File: ./chapter11/Fig/./image3.png Graphic file (type png)
-<use ./chapter11/Fig/./image3.png>
-Package pdftex.def Info: ./chapter11/Fig/./image3.png  used on input line 360.
-(pdftex.def)             Requested size: 346.91429pt x 523.99527pt.
-
-Underfull \vbox (badness 6641) has occurred while \output is active []
-
- [8]
-[9 <./chapter11/Fig/./image1.png>] [10 <./chapter11/Fig/./image2.png>] [11 <./c
-hapter11/Fig/./image3.png>]
-<./chapter11/Fig/./image4.png, id=124, 602.25pt x 207.77625pt>
-File: ./chapter11/Fig/./image4.png Graphic file (type png)
-<use ./chapter11/Fig/./image4.png>
-Package pdftex.def Info: ./chapter11/Fig/./image4.png  used on input line 508.
-(pdftex.def)             Requested size: 397.5046pt x 137.31662pt.
-
+(pdftex.def)             Requested size: 397.49573pt x 274.64346pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[9 <./chapter10/Fig/./image22.pdf>] [10 <./chapter10/Fig/./image28.pdf>]
+<./chapter10/Fig/./image32.pdf, id=247, 483.6684pt x 339.24223pt>
+File: ./chapter10/Fig/./image32.pdf Graphic file (type pdf)
+<use ./chapter10/Fig/./image32.pdf>
+Package pdftex.def Info: ./chapter10/Fig/./image32.pdf  used on input line 515.
 
-LaTeX Warning: Reference `figure:ethics2by2Matrix' on page 12 undefined on inpu
-t line 516.
+(pdftex.def)             Requested size: 346.89778pt x 242.8307pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 526--534
+
+ []
+
+[11 <./chapter10/Fig/./image32.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 558--559
+
+ []
 
 [12]
-<./chapter11/Fig/./image5.pdf, id=139, 235.8449pt x 217.29372pt>
-File: ./chapter11/Fig/./image5.pdf Graphic file (type pdf)
-<use ./chapter11/Fig/./image5.pdf>
-Package pdftex.def Info: ./chapter11/Fig/./image5.pdf  used on input line 535.
-(pdftex.def)             Requested size: 180.67265pt x 166.22914pt.
-
-Underfull \vbox (badness 1472) has occurred while \output is active []
-
- [13 <./chapter11/Fig/./image4.png> <./chapter11/Fig/./image5.pdf>]
-
-LaTeX Warning: Reference `example:ethicsFlawChipDesign' on page 14 undefined on
- input line 617.
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 644--650
+Underfull \hbox (badness 10000) in paragraph at lines 646--653
 
  []
 
-[15]
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 662--665
 
-LaTeX Warning: Reference `chapter:testing' on page 16 undefined on input line 7
-26.
-
-
-LaTeX Warning: Reference `chapter:requirementSpec' on page 16 undefined on inpu
-t line 754.
-
-[16]
-
-LaTeX Warning: Reference `chapter:systemReliability' on page 17 undefined on in
-put line 785.
-
-
-LaTeX Warning: Reference `chapter:requirementSpec' on page 17 undefined on inpu
-t line 811.
-
-) [17] [18]
-\openout2 = `./chapter11/problemSet11.aux'.
-
- (chapter11/problemSet11.tex
-Overfull \hbox (59.24854pt too wide) in paragraph at lines 34--35
-[]$[]$ 
  []
 
-[19
+[14] [15]) [16]
+\openout2 = `./chapter10/problemSet10.aux'.
 
-
-
-
-]
-Overfull \hbox (0.95494pt too wide) in paragraph at lines 69--69
-[][]\OT1/cmr/bx/n/10 Example 2.2 $[]$ \OT1/cmr/m/n/10 (Texas A&M Ethics Case St
-ud-ies, []$\OT1/cmtt/m/n/10 http :
+ (chapter10/problemSet10.tex
+Overfull \hbox (3.1348pt too wide) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/10 A,B| 
  []
 
 
-Overfull \hbox (2.3433pt too wide) in paragraph at lines 111--111
-[][]\OT1/cmr/bx/n/10 Example 2.3 $[]$ \OT1/cmr/m/n/10 (Texas A&M Ethics Case St
-ud-ies, []$\OT1/cmtt/m/n/10 http : / / ethics .
+Overfull \hbox (3.27368pt too wide) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/10 D,B| 
  []
 
-[20]) [21] [22
+
+Overfull \hbox (1.8848pt too wide) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/10 F,E| 
+ []
+
+
+Overfull \hbox (2.85701pt too wide) in paragraph at lines 42--42
+[]|\OT1/cmr/m/n/10 B,C| 
+ []
+
+
+Overfull \hbox (2.71812pt too wide) in paragraph at lines 42--42
+[]|\OT1/cmr/m/n/10 F,D| 
+ []
+
+[17
 
 
 
-]
+]) [18]
 runsystem(makeindex book.idx)...executed safely (allowed).
 
  (book.ind)
@@ -1393,7 +2351,7 @@ Package Changebar Warning: Changebar info has changed.
 \tf@toc=\write9
 \openout9 = `book.toc'.
 
-(book.aux (copyright.aux) (chapter11/chapter11.aux) (chapter11/problemSet11.aux
+(book.aux (copyright.aux) (chapter10/chapter10.aux) (chapter10/problemSet10.aux
 ))
  ***********
 LaTeX2e <2023-11-01>
@@ -1403,44 +2361,36 @@ L3 programming layer <2020/03/25>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `book.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `book.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  37D0CF0E1B51B7B73B19D20E08D00A11;2185.
+Package rerunfilecheck Info: File `book.out' has not changed.
+(rerunfilecheck)             Checksum: E8484074FB4A3F217E9E16732A4CAFB8;1877.
  ) 
 Here is how much of TeX's memory you used:
- 26119 strings out of 474494
- 479974 string characters out of 5743913
- 1941460 words of memory out of 5000000
- 47886 multiletter control sequences out of 15000+600000
- 567557 words of font info for 68 fonts, out of 8000000 for 9000
+ 26185 strings out of 474494
+ 481753 string characters out of 5743913
+ 1972460 words of memory out of 5000000
+ 47949 multiletter control sequences out of 15000+600000
+ 566359 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 91i,12n,136p,503b,595s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx
-0700.pk> <C:\Users\Chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\tcti1000.pk> <C:\Users\Chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\tcrm1000.pk><C:/Users/Chris/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmbx10.pfb><C:/Users/Chris/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Chris/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Chris/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Chris/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Chri
-s/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Us
-ers/Chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb
-><C:/Users/Chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-msl10.pfb><C:/Users/Chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmti10.pfb><C:/Users/Chris/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmtt10.pfb>
-Output written on book.pdf (26 pages, 628118 bytes).
+ 91i,15n,136p,503b,569s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1000.pk><C:/Users/Chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb><C:/Users/Chris/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><C:/Users/Chris/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Chris/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Chris/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Chris/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Chris/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users
+/Chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><
+C:/Users/Chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+7.pfb><C:/Users/Chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmsl10.pfb><C:/Users/Chris/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb><C:/Users/Chris/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Chris/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on book.pdf (22 pages, 448306 bytes).
 PDF statistics:
- 300 PDF objects out of 1000 (max. 8388607)
- 76 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 422 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
+ 164 words of extra memory for PDF output out of 10000 (max. 10000000)
 
