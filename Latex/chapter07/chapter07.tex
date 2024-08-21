@@ -14,7 +14,8 @@ desirable properties of an engineering requirement is that it be
 verifiable, or in other words, testable. The philosophy of testing is
 embodied in the quote above, which means that it is better to correct
 errors early, rather than wait until they become much larger problems
-later. As we saw in Chapter 1, the cost to correct problems increases
+later. As we saw in Chapter~\ref{chapter:engineeringDesignProcess}, 
+the cost to correct problems increases
 exponentially with the lifetime of the project. Thus, testing should be
 considered throughout system development.
 
@@ -67,7 +68,8 @@ An acceptance test plan should be written with the Requirements
 Specification, integration tests defined and written during the system
 design, and so forth.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=2.9in,height=2.4in]{./image1}
 \caption{The Test Vee. Design stages are on the left and
 corresponding tests are on the right.}
@@ -188,7 +190,8 @@ significantly better than in the black box case. This is because the
 internal DC node voltages in the circuit cannot arbitrarily be changed
 without negatively changing the operation of the circuit.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics{./image6}
 \caption{Transistor amplifier design.}
 \label{figure:transAmpDesign}
@@ -220,7 +223,8 @@ resistor and capacitor that models the expected characteristics of the
 final system. The stub on the output side is simply a resistor, whose
 value can be varied over the expected load.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=3.8in,height=1.76in]{./image7}
 \caption{The use of stubs for testing a transistor amplifier
 circuit. The function generator, resistor (R), and capacitor (C) model
@@ -259,7 +263,8 @@ following properties for effective test cases:
 \item
   \emph{Traceable}. The test should verify a specific requirement. The
   corresponding requirements for the different types of test are derived
-  from the associated development stages in the test vee in Figure 7.1.
+  from the associated development stages in the test vee in 
+  Figure~\ref{figure:testVee}.
 \item
   \emph{Self cleaning}. The system should return to the pre-test state
   after the test is complete.
@@ -268,8 +273,9 @@ following properties for effective test cases:
 \section{Constructing Tests}
 \label{section:constructing-tests}
 
-This section presents the four different types of test shown in Figure
-7.1 - debugging, unit testing, integration testing, and acceptance
+This section presents the four different types of test shown in 
+Figure~\ref{figure:testVee} - 
+debugging, unit testing, integration testing, and acceptance
 testing. This is presented in reverse order from the order in which test
 should be created, as the reader is probably most familiar with basic
 test techniques such as debugging. Thus the presentation is from the
@@ -283,7 +289,8 @@ unit testing.
 At some point in the design process, the implementation level must be
 reached, where tasks such as constructing circuits, wiring integrated
 circuits, and writing code are carried out. Applying the functional
-decomposition paradigm introduced in Chapter 5 should provide a clear
+decomposition paradigm introduced in Chapter~\ref{chapter:funcDecomp} 
+should provide a clear
 idea of the inputs, outputs, and behavior of the modules that are being
 built. Inevitably, there will come a point during the construction of a
 component when it will not function as expected. This is commonly
@@ -361,12 +368,14 @@ example, consider a hardware module which converts an input Celsius
 temperature into an output Fahrenheit temperature. Let the operation of
 the module be represented by the following pseudo-code.
 
+\begin{center}
 \begin{verbatim}
 if (16 < input < 32)
-        output = ROM[input -16];
+    output = ROM[input -16];
 else
-        output = (2 * input) + 32;
+    output = (2 * input) + 32;
 \end{verbatim}
+\end{center}
 
 When the input temperature is between 16 and 32, the output is
 determined by a lookup operation in a ROM, otherwise the input is
@@ -415,12 +424,13 @@ test document for the tester to make comments and observations regarding
 the system behavior.
 
 Lets consider a test for the analog-to-digital converter (ADC) that was
-used in the temperature measuring system in Chapter 5 (Section 5.7,
-Figure 5.11). Assume that the ADC's clock frequency is 10 kHz and the
+used in the temperature measuring system described in 
+Table~\ref{table:digitalThermoDigitalConverter}. 
+Assume that the ADC's clock frequency is 10 kHz and the
 input ranges from 0 to 5 volts. The unit test will consist of submitting
 different inputs to the ADC and verifying the outputs. Since each test
 only varies the input, with no change in the testing procedure, the test
-matrix in Table 7.1 was created.
+matrix in Table~\ref{table:adcMatrixTest} was created.
 
 This test case exercises each bit of the ADC's output independent of the
 other output bits. Other test cases should examine extreme inputs as
@@ -428,46 +438,53 @@ well as illegal inputs. Care should be taken that illegal inputs do not
 stress the ADC beyond the manufactures recommendations; otherwise the
 tests might accidentally damage the ADC.
 
-\textbf{\hfill\break
-Table 7.1} A matrix test for an analog-to-digital converter.
-
-\begin{table}
-\caption{}
-\label{table:<context>}
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{2cm}|}
+\begin{table}[h]
+\small
+\caption{A matrix test for an analog-to-digital converter.}
+\label{table:adcMatrixTest}
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{2cm}|m{0.5cm}|m{0.5cm}|m{0.5cm}|m{2cm}|}
 \hline
 
-\multicolumn{8}{l} {\textbf{Test Writer:} Sue L. Engineer}\\ \hline
+\multicolumn{2}{|l} {\textbf{Test Writer:}} & 
+\multicolumn{6}{l|} {Sue L. Engineer} \\ \hline
 
-\multicolumn{2}{l} {\textbf{Test Case Name:}} &
-\multicolumn{2}{l} {ADC unit test} &
-\multicolumn{3}{l}{\textbf{Test ID \#:}} & ADC-UT-01 \\ \hline
+\multicolumn{2}{|l} {\textbf{Test Case Name:}} &
+\multicolumn{2}{l|} {ADC unit test} &
+\multicolumn{2}{l|}{\textbf{Test ID \#:}} & 
+\multicolumn{2}{l|}{ADC-UT-01} \\ \hline
 
-\multicolumn{2}{l} {\textbf{Description:}}&
-\multicolumn{2}{l} {Verify that each bit of the output can be set independently of the other outputs.} &
-\multicolumn{3}{l}{\textbf{Type:}} &  white box or black box \\ \hline
+\multicolumn{2}{|l|} {\textbf{Description:}}&
+\multicolumn{2}{|l|} {
+	\makecell[l]{Verify that each bit of the\\
+			 output can be set independently \\
+			 of the other outputs.}} &
+\multicolumn{2}{l|}{\textbf{Type:}} &  
+\multicolumn{2}{l|}{\makecell{white box or \\black box}} \\ \hline
 
-\multicolumn{8}{l} {\textbf{Tester Information}} \\ \hline
+\multicolumn{8}{|c|} {\textbf{Tester Information}} \\ \hline
 
-\multicolumn{2}{l} {\textbf{Name of Tester:}} &
-\multicolumn{2}{l} { } &
-\multicolumn{3}{l}{\textbf{Date:}} &  \\ \hline
+\multicolumn{2}{|l|} {\textbf{Name of Tester:}} &
+\multicolumn{2}{|l|} { } &
+\multicolumn{2}{l|}{\textbf{Date:}} &  \multicolumn{2}{l|}{}\\ \hline
 
-\multicolumn{2}{l} {\textbf{Hardware Ver:}} &
-\multicolumn{2}{l} { 1.0} &
-\multicolumn{3}{l}{\textbf{Time:}} &  \\ \hline
+\multicolumn{2}{|l|} {\textbf{Hardware Ver:}} &
+\multicolumn{2}{|l|} { 1.0} &
+\multicolumn{2}{l|}{\textbf{Time:}} &  \multicolumn{2}{l|}{} \\ \hline
 
-\multicolumn{2}{l} {\textbf{Setup:}}&
-\multicolumn{6}{l} {Isolate the ADC from the system by removing configuration jumpers.
-Connect the clk input to a 10 KHz clock source and the Din input to a
-high precision voltage course. Connect the output from the ADC to a
-logic analyzer.}   \\ \hline
+\multicolumn{2}{|l|} {\textbf{Setup:}}&
+\multicolumn{6}{|l|} {
+\makecell[l]{Isolate the ADC from the system by removing configuration \\
+		jumpers. Connect the clk input to a 10 KHz clock source and \\
+		the Din input to a high precision voltage course. Connect the \\
+		output from the ADC to a logic analyzer.}}   \\ \hline
 
 
 \textbf{Test} & $V_T$ & 
-\multicolumn{2}{l}{\textbf{Expected output}} & 
-\textbf{Pass} &
-\textbf{Fail} & 
+\multicolumn{2}{|l|}{\textbf{Expected output}} & 
+
+{\rotatebox[origin=c]{-90}{ \textbf{Pass}}} &
+{\rotatebox[origin=c]{-90}{\textbf{Fail}}} & 
+{\rotatebox[origin=c]{-90}{\textbf{N/A}}} & 
 \textbf{Comments} \\  \hline
 
 1 & 0.000 V & 0 & 0x000 & & & & \\ \hline
@@ -477,7 +494,7 @@ logic analyzer.}   \\ \hline
 \ldots{} & \ldots{} & \ldots{} & \ldots{} & & & & \\ \hline
 10 & 2.502 V & 512 & 0x200 & & & & \\ \hline
 
-\multicolumn{3}{l}{\textbf{Overall test result:}} &   &  &  & \\ \hline
+\multicolumn{4}{|l}{\textbf{Overall test result:}} &   &  &  &  \\ \hline
 \end{tabular}
 \end{table}
 
@@ -493,7 +510,8 @@ of a column in the test section describing what action the tester should
 perform at each step in the test process.
 
 As an example, recall the state diagram for the vending machine in
-Chapter 6 (Figure 6.2) that accepts nickels and dimes and dispenses
+Table~\ref{table:stateVendingMachine}
+ that accepts nickels and dimes and dispenses
 candy when a total of \$0.25 (or more) is submitted. The state machine
 has different processing paths, depending upon the combination and order
 of coins deposited. Test cases can be written for each of the processing
@@ -502,45 +520,54 @@ Table~\ref{table:stepByStepTest} for one
 particular processing path.
 
 
-\begin{table}
+\begin{table}[h]
 \caption{A step-by-step test for a vending machine.}
 \label{table:stepByStepTest}
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{2cm}|m{2cm}|}
+\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{0.5cm}|m{0.5cm}|m{0.5cm}|m{2cm}|m{2cm}|}
 \hline
 
-\multicolumn{8}{l} {\textbf{Test Writer:} Sue L. Engineer}\\ \hline
+\multicolumn{2}{|l} {\textbf{Test Writer:}} & 
+\multicolumn{6}{l|} {Sue L. Engineer} \\ \hline
 
-\multicolumn{2}{l} {\textbf{Test Case Name:}} &
-\multicolumn{4}{l} {Finite State Machine Path Test \#1} &
+\multicolumn{2}{|l} {\textbf{Test Case Name:}} &
+\multicolumn{4}{l|} {Finite State Machine Path Test \#1} &
 \multicolumn{1}{l}{\textbf{Test ID \#:}} & FSM-Path-01 \\ \hline
 
-\multicolumn{2}{l} {\textbf{Description:}}&
-\multicolumn{4}{l} {Simulate insertion of money with a mix of nickels and dimes. Verifies
-FSM outputs candy in response to a total deposit of \$0.30.} &
-\multicolumn{1}{l}{\textbf{Type:}} &  white box or black box \\ \hline
+\multicolumn{2}{|l|} {\textbf{Description:}}&
+\multicolumn{4}{|l} {
+\makecell[l]{Simulate insertion of money with a \\
+		mix of nickels and dimes. Verifies \\
+		FSM outputs candy in response \\
+		to a total deposit of \$0.30.}} &
+\multicolumn{1}{|l|}{\textbf{Type:}} &  white box or black box \\ \hline
 
-\multicolumn{8}{l} {\textbf{Tester Information}} \\ \hline
+\multicolumn{8}{|c|} {\textbf{Tester Information}} \\ \hline
 
-\multicolumn{2}{l} {\textbf{Name of Tester:}} &
-\multicolumn{4}{l} { } &
-\multicolumn{1}{l}{\textbf{Date:}} &  \\ \hline
+\multicolumn{2}{|l|} {\textbf{Name of Tester:}} &
+\multicolumn{4}{|l|} { } &
+\multicolumn{1}{l|}{\textbf{Date:}} &  \\ \hline
 
-\multicolumn{2}{l} {\textbf{Hardware Ver:}} &
-\multicolumn{4}{l} { 1.0} &
-\multicolumn{1}{l}{\textbf{Time:}} &  \\ \hline
+\multicolumn{2}{|l|} {\textbf{Hardware Ver:}} &
+\multicolumn{4}{|l|} { 1.0} &
+\multicolumn{1}{l|}{\textbf{Time:}} &  \\ \hline
 
-\multicolumn{2}{l} {\textbf{Setup:}}&
-\multicolumn{6}{l} {Make sure that the system was reset sometime prior and is in state \$0.00}   \\ \hline
+\multicolumn{2}{|l|} {\textbf{Setup:}}&
+\multicolumn{6}{|l|} {Make sure that the system was reset sometime prior and is in state \$0.00}   \\ \hline
 
 \textbf{Step} & \textbf{Action} &  \textbf{Expected Result} & 
-\textbf{Pass} & \textbf{Fail} &  \multicolumn{2}{l}{\textbf{Comments}} \\  \hline
-1 & Strobe Nickel & State should go to \$0.05 & & & & \multicolumn{2}{l}{} \\ \hline
-2 & Strobe Dime & State should go to \$0.15 & & & & \multicolumn{2}{l}{}\\ \hline
-3 & Wait & State should remain \$0.15 & & & & \multicolumn{2}{l}{}\\ \hline
-4 & Strobe Nickel & State should go to \$0.20 & & & & \multicolumn{2}{l}{}\\ \hline
-5 & Strobe Dime & State should go to \$0.25 & & & & \multicolumn{2}{l}{}\\ \hline
-6 & Nothing & State should go to \$0.00 & & & & \multicolumn{2}{l}{}\\ \hline
-\multicolumn{3}{l}{\textbf{Overall test result:}} &   &  &  & \multicolumn{2}{l}{}\\ \hline
+
+{\rotatebox[origin=c]{-90}{ \textbf{Pass}}} &
+{\rotatebox[origin=c]{-90}{\textbf{Fail}}} & 
+{\rotatebox[origin=c]{-90}{\textbf{N/A}}} & 
+\multicolumn{2}{l|} {\textbf{Comments}} \\  \hline
+
+1 & Strobe Nickel & State should go to \$0.05 & & & & \multicolumn{2}{l|}{} \\ \hline
+2 & Strobe Dime & State should go to \$0.15 & & & & \multicolumn{2}{l|}{}\\ \hline
+3 & Wait & State should remain \$0.15 & & & & \multicolumn{2}{l|}{}\\ \hline
+4 & Strobe Nickel & State should go to \$0.20 & & & & \multicolumn{2}{l|}{}\\ \hline
+5 & Strobe Dime & State should go to \$0.25 & & & & \multicolumn{2}{l|}{}\\ \hline
+6 & Nothing & State should go to \$0.00 & & & & \multicolumn{2}{l|}{}\\ \hline
+\multicolumn{3}{|l|}{\textbf{Overall test result:}} &   &  &  & \multicolumn{2}{l|}{}\\ \hline
 \end{tabular}
 \end{table}
 
@@ -679,7 +706,8 @@ fundamental navigational problem.
 This case study explores test cases for the acceptance, integration and
 unit testing related to these two requirements. The development of the
 test cases follows the proper order of test case development illustrated
-in Figure 7.1. That means acceptance tests are developing in conjunction
+in Figure~\ref{figure:testVee}. 
+That means acceptance tests are developing in conjunction
 with the requirements, integration tests are constructed during the
 system design, and unit tests during the system build.
 
@@ -708,7 +736,7 @@ the distance data while traversing the wall. After this data is
 downloaded from the robot it can be analyzed in a spreadsheet program to
 determine the needed metrics and archived for future reference.
 
-\begin{table}
+\begin{table}[h]
 \caption{A step-by-step acceptance test case for the autonomous robot.}
 \label{table:stepByStepAcceptanceTestRobot}
 \begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{2cm}|m{2cm}}
@@ -721,9 +749,10 @@ determine the needed metrics and archived for future reference.
 \multicolumn{1}{l}{\textbf{Test ID \#:}} & Robot-AT-01 \\ \hline
 
 \multicolumn{2}{l} {\textbf{Description:}}&
-\multicolumn{4}{l} {The robot's center must stay
-within 12 to 18 centimeters of the wall over 90\% of the course, while
-traveling parallel to a wall over a 3 meter course.} &
+\multicolumn{4}{l} {
+\makecell{		The robot's center must stay within 12 to 18 centimeters \\
+			of the wall over 90\% of the course, while traveling \\
+			parallel to a wall over a 3 meter course.}} &
 \multicolumn{1}{l}{\textbf{Type:}} &  white box or black box \\ \hline
 
 \multicolumn{8}{l} {\textbf{Tester Information}} \\ \hline
@@ -737,7 +766,9 @@ traveling parallel to a wall over a 3 meter course.} &
 \multicolumn{1}{l}{\textbf{Time:}} &  \\ \hline
 
 \multicolumn{2}{l} {\textbf{Setup:}}&
-\multicolumn{6}{l} {Completed robot should be fully charged and placed on 3 meter test track.}   \\ \hline
+\multicolumn{6}{l} {
+\makecell{	Completed robot should be fully charged \\
+		and placed on 3 meter test track.} }  \\ \hline
 
 \textbf{Step} & \textbf{Action} &  \textbf{Expected Result} & 
 \textbf{Pass} & \textbf{Fail} & \multicolumn{2}{l}{ \textbf{Comments}} \\  \hline
@@ -758,14 +789,16 @@ should be within 12 -- 18 cm 90\% of the time. & & & &\\ \hline
 
 The team, in consultation with the customer, has gone through the
 requirements and created a complete set of acceptance tests in addition
-to the test in Table 7.3. They next turn to developing a high level
+to the test in Table~\ref{table:stepByStepAcceptanceTestRobot}. 
+They next turn to developing a high level
 design architecture that can meet the requirements. The design they
 create is shown in 
 Figure~\ref{figure:level1mobileRobot}, the Level 1 architecture of the
 autonomous robot.
 
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=4.9in,height=2.1in]{./image8}
 \caption{Level 1 design architecture for the mobile robot.}
 \label{figure:level1mobileRobot}
@@ -805,38 +838,41 @@ Table~\ref{table:stepByStepIntegrationTestRobot}
 to test the operation of the motors with the magnetic compass.
 
 
-\begin{table}
+\begin{table}[h]
 \caption{A step-by-step integration test case for the compass and motors.}
 \label{table:stepByStepIntegrationTestRobot}
 \begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{2cm}|m{2cm}|}
 \hline
 
-\multicolumn{8}{l} {\textbf{Test Writer:} Sue L. Engineer}\\ \hline
+\multicolumn{8}{|l|} {\textbf{Test Writer:} Sue L. Engineer}\\ \hline
 
-\multicolumn{2}{l} {\textbf{Test Case Name:}} &
-\multicolumn{4}{l} {Robot Integration Test \#1} &
-\multicolumn{1}{l}{\textbf{Test ID \#:}} & Robot-IT-01 \\ \hline
+\multicolumn{2}{|l|} {\textbf{Test Case Name:}} &
+\multicolumn{4}{|l|} {Robot Integration Test \#1} &
+\multicolumn{1}{|l|}{\textbf{Test ID \#:}} & Robot-IT-01 \\ \hline
 
-\multicolumn{2}{l} {\textbf{Description:}}&
-\multicolumn{4}{l} {Checks interaction of DC motors on the magnetic compass.} &
-\multicolumn{1}{l}{\textbf{Type:}} &  white box or black box \\ \hline
+\multicolumn{2}{|l|} {\textbf{Description:}}&
+\multicolumn{4}{|l|} {
+\makecell{		Checks interaction of DC motors on the \\
+			magnetic compass.}} &
+\multicolumn{1}{|l|}{\textbf{Type:}} &  white box or black box \\ \hline
 
-\multicolumn{8}{l} {\textbf{Tester Information}} \\ \hline
+\multicolumn{8}{|l|} {\textbf{Tester Information}} \\ \hline
 
-\multicolumn{2}{l} {\textbf{Name of Tester:}} &
-\multicolumn{4}{l} { } &
-\multicolumn{1}{l}{\textbf{Date:}} &  \\ \hline
+\multicolumn{2}{|l|} {\textbf{Name of Tester:}} &
+\multicolumn{4}{|l|} { } &
+\multicolumn{1}{|l|}{\textbf{Date:}} &  \\ \hline
 
-\multicolumn{2}{l} {\textbf{Hardware Ver:}} &
-\multicolumn{4}{l} {Robot 1.0} &
-\multicolumn{1}{l}{\textbf{Time:}} &  \\ \hline
+\multicolumn{2}{|l|} {\textbf{Hardware Ver:}} &
+\multicolumn{4}{|l|} {Robot 1.0} &
+\multicolumn{1}{|l|}{\textbf{Time:}} &  \\ \hline
 
-\multicolumn{2}{l} {\textbf{Setup:}}&
-\multicolumn{6}{l} {A wooden turn-table should be placed on top of the cardinal direction
-map. This map should be aligned with a magnetic compass. There should be
-no metal present while the alignment is being performed. Next, the
-partially assembled robot should be placed on the turn-table. The MCU
-should be connected to a terminal to observe and record data.}   \\ \hline
+\multicolumn{2}{|l|} {\textbf{Setup:}}&
+\multicolumn{6}{|l|} {
+\makecell{   A wooden turn-table should be placed on top of the cardinal direction\\
+		map. This map should be aligned with a magnetic compass. There should be\\
+		no metal present while the alignment is being performed. Next, the\\
+		partially assembled robot should be placed on the turn-table. The MCU\\
+		should be connected to a terminal to observe and record data.} }  \\ \hline
 
 \textbf{Step} & \textbf{Action} &  \textbf{Expected Result} & 
 \textbf{Pass} & \textbf{Fail} & \multicolumn{2}{l}{ \textbf{Comments}} \\  \hline
@@ -880,7 +916,7 @@ design requirements for the unit are given in
 Table~\ref{table:functionalDigitalCompass}.
 
 
-\begin{table}
+\begin{table}[h]
 \caption{The functional requirements for the digital compass.}
 \label{table:functionalDigitalCompass}
 \begin{tabular}{|l|m{10cm}|}
@@ -920,8 +956,7 @@ is constructed to configure the
 compass and then reads heading data from it. This unit test looks for
 heading errors greater than 10 degrees.
 
-\textbf{Table 7.6} 
-\begin{table}
+\begin{table}[h]
 \caption{Matrix unit test for the digital compass.}
 \label{table:matrixTestDigitalCompass}
 \begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{2cm}|m{2cm}|}
