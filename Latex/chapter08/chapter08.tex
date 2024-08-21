@@ -1,4 +1,4 @@
-\chapter{System Reliability}
+\chapter{System Reliability}are 
 \label{chapter:systemReliability}
 \graphicspath{ {./chapter08/Fig} }
 
@@ -49,7 +49,8 @@ By the end of this chapter, the reader should:
 \textbf{\hfill\break
 DILBERT\textsuperscript{®} by Scott Adams}
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=5.5in,height=1.77in]{./image1.jpeg}
 \caption{Dogbert's Six Sigma Program. (Dilbert © United Feature Syndicate. Reprinted by
 permission.)}
@@ -86,7 +87,7 @@ union
 
 \begin{equation}
 \label{eventSpaceUnion}
-E = \cup e_i
+E = \bigcup e_i
 \end{equation}
 
 The probability of an event indicates how likely it is for an event to
@@ -145,7 +146,8 @@ Conceptually, this probability represents the area under the PDF between
 the two limits of integration as shown in 
 Figure~\ref{figure:probabilityDensityFunction}.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=3.5in,height=1.53in]{./image10}
 \caption{ A probability density function. The area under the
 curve represents the probability that the random variable $X$ lies
@@ -155,7 +157,7 @@ in the interval $[ a,b ]$}.
 
 Let's examine a few more important properties of probability density
 functions. The first, which is analogous to
-equation~\ref{equ:totalProbabilityEqualOne}, indicates that the
+Equation~\ref{equ:totalProbabilityEqualOne}, indicates that the
 probability of the event space occurring is equal to one. This is known
 as the normalization property and it is expressed as
 
@@ -204,12 +206,12 @@ are the mean ($\mu$) and variance ($\sigma^2$).
 They are found from the PDF as follows
 
 \begin{equation}
-\label{equ:integralDeltaSliceOfPDF}
+\label{equ:systemReliabilityDefinitionMean}
 \mu_x = \int^{\infty}_{-\infty}xp_X(x)dx
 \end{equation}
 
 \begin{equation}
-\label{equ:integralDeltaSliceOfPDF}
+\label{equ:systemReliabilityDefinitionDeviation}
 \sigma^2_x = \int^{\infty}_{-\infty}(x-\mu)^2 p_X(x)dx
 \end{equation}
 
@@ -239,7 +241,7 @@ follow a normal density. The normal density is defined as
 
 \begin{equation}
 \label{equ:normalDensity}
-p_X(x) = \frac{1}{\sqrt{2\pi\sigma}} e^1\frac{1}{2} \ frac{(x-\mu)^2}{\sigma}
+p_X(x) = \frac{1}{\sqrt{2\pi\sigma}} e^{\frac{1}{2} \frac{(x-\mu)^2}{\sigma}}
 \end{equation}
 
 The mean, $\mu$, and standard deviation, $\sigma$, are part of the
@@ -253,7 +255,8 @@ it takes a bit of work mathematically) so they are usually computed from
 something known as the Cumulative Distribution Function that is
 presented shortly.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=2.92708in,height=1.36458in]{./image21}
 \caption{A normal density function with the mean ($\mu$)
 and standard deviation ($\sigma$) shown.}
@@ -272,13 +275,14 @@ PDF for a uniform density is given by
 
 \begin{equation}
 \label{equ:uniformDensity}
-p_X(x) = \frac{1}{b-a}, a \leq x \leq b,
+p_x(x) = \frac{1}{b-a}, a \leq x \leq b,
 \end{equation}
 
 where $a$, $b$ are selected to meet the demands of a particular problem.
 
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=3in,height=1.23in]{./image23}
 \caption{The uniform density on the interval $[ a,b ]$.}
 \label{figure:uniformDensityFunction}
@@ -297,7 +301,7 @@ mathematical description of an exponential density is
 
 \begin{equation}
 \label{equ:exponentialDensity}
-p_X(x) = \lambda e^{-\lambda x} , x \geq 0, \lambda \geq 0.
+p_x(x) = \lambda e^{-\lambda x} , x \geq 0, \lambda \geq 0.
 \end{equation}
 
 The PDF is characterized by the parameter $\lambda$ which affects the
@@ -305,7 +309,8 @@ shape of the curve as demonstrated in
 Figure~\ref{figure:exponentialDensityFunction}.
 
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=3in,height=2.1in]{./image25}
 \caption{The exponential density for two different $\lambda$ values.}
 \label{figure:exponentialDensityFunction}
@@ -329,7 +334,7 @@ function of the PDF and is defined as
 
 \begin{equation}
 \label{equ:exponentialDensity}
-CDF(x) = \int^x_{-\infty} p_X(y)dy.
+\text{CDF}(x) = \int^x_{-\infty} p_x(y)dy.
 \end{equation}
 
 \section{Reliability Prediction}
@@ -359,7 +364,7 @@ the infant mortality phase, devices enter a phase of constant failure
 rate, where $\lambda(t) = \lambda$, known as the service life. Estimates for
 $\lambda$ are determined empirically by testing a large number of
 components. They are usually expressed as a unit failure per a given
-number of hours, for example $\lambda  = failure/10^6 hours$.
+number of hours, for example $\lambda  = \text{failure}/10^6 \text{ hours}$.
 After some period of time, devices start to wear-out and the failure
 rate increases. This usually happens as a result of mechanical wearing
 with age and use. Properly designed electronic devices will not have a
@@ -367,7 +372,8 @@ wear-out region, instead continuing on at a constant failure rate. This
 applies only to the electronic devices themselves, not necessarily to
 complete systems that will likely contain mechanical devices.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=5.5in,height=1.7in]{./image29}
 \caption{Failure rate as a function of time, also known as
 the bathtub curve.}
@@ -387,7 +393,10 @@ used to determine the probability that a given device will fail within a
 specified time period. A CDF for $f_T(t)$
 is determined as
 
-
+\begin{equation}
+\label{equ:integralDeltaSliceOfPDF}
+F(t) = \int_{0}^{t} f_T(\tau) d\tau
+\end{equation}
 
 $F(t)$ answers the question ``\emph{What is the probability that
 the device has failed by time t?}'' and it is also known as the
@@ -403,12 +412,14 @@ R(t) = 1 - F(t)
 
 
 Since $F(t)$ is a CDF, it increases monotonically from an initial
-value of 0 to a maximum value of 1 as time goes to $\infty$ as shown in Figure
-8.7. Conversely, $R(t)$ starts at a value of 1 at time zero and
+value of 0 to a maximum value of 1 as time goes to $\infty$ as shown in 
+Figure~\ref{figure:reliabilityAndFailure}. 
+Conversely, $R(t)$ starts at a value of 1 at time zero and
 decreases monotonically to a value of 0.
 
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=2.76in,height=1.56in]{./image33}
 \caption{Example reliability and failure functions.}
 \label{figure:reliabilityAndFailure}
@@ -422,25 +433,25 @@ established as follows. Consider a small period of time between $t$
 and $\Delta 4$, and determine the
 probability of device failure during this period. From the approximation
 developed in 
-equation~\ref{equ:integralDeltaSliceOfPDF}, this probability is given by
+Equation~\ref{equ:integralDeltaSliceOfPDF}, this probability is given by
 
 \begin{equation}
 \label{equ:failureBetweenUsingT}
-P(failure between t and \Delta t) \approx f_T(t) \Delta t
+P(\text{failure between} t \text{and} \Delta t) \approx f_T(t) \Delta t
 \end{equation}
 
 How is this probability related to $R(t)$ and $\lambda(t)$?
 $R(t)$ provides the probability that the device is working at time $t$
 and $\lambda(t)$ gives the probability that the device will fail
 at time $t$. The product of $R(t), \lambda(t)$, and $\Delta t$ gives
-the same probability of failure in equation~\ref{equ:failureBetweenUsingT}.
+the same probability of failure in Equation~\ref{equ:failureBetweenUsingT}.
 
 \begin{equation}
 \label{equ:failureBetweenUsingR}
-P(failure between t and \Delta t) \approx R(t) \lambda(t) \Delta t
+P(\text{failure between} t \text{ and} \Delta t) \approx R(t) \lambda(t) \Delta t
 \end{equation}
 
-Setting equations~\ref{equ:failureBetweenUsingT} and  {equ:failureBetweenUsingR} 
+Setting Equations~\ref{equ:failureBetweenUsingT} and  \ref{equ:failureBetweenUsingR} 
 provides the desired relationship between the three quantities
 
 \begin{equation}
@@ -450,7 +461,7 @@ f_T(t) = R(t) \lambda(t) ,
 
 that is fundamental in establishing the connection between $R(t)$
 and $\lambda(t)$. However, the PDF $f_T(t)$ needs to be eliminated 
-from equation~\ref{equ:failureBetweenUsingR}. This is accomplished 
+from Equation~\ref{equ:failureBetweenUsingR}. This is accomplished 
 through its relationship to the CDF
 $F(t)$, and thus $R(t)$, as follows
 
@@ -459,19 +470,19 @@ $F(t)$, and thus $R(t)$, as follows
 f_T(t) = \frac{d}{dt}F(t) = \frac{d}{dt}\big[1-R(t)\big] = -\frac{d}{dt}R(t)
 \end{equation}
 
-Equating this result with equation~\ref{equ:failureBetweenUsingR}
+Equating this result with Equation~\ref{equ:failureBetweenUsingR}
 produces
 
 \begin{equation}
 \label{equ:cdfOfF}
-f_T(t) = \frac{d}{dt}F(t) = \frac{d}{dt}\big[1-R(t)\big] = -\frac{d}{dt}R(t)
+-\frac{d}{dt}R(t) = R(t)\lambda(t) \Rightarrow \frac{ - \frac{d}{dt}R(t)} {R(t)} = \lambda(t)
 \end{equation}
 
 Integrating both sides gives
 
 \begin{equation}
 \label{equ:bigIntegral}
-\int^{t}_0 \big[  \frac{ - \frac{d}{dt}}{R(\tau)} R(\tau) \big] \delta \tau = \int^t_0 \lambda(\tau) \delta \tau \Rightarrow -ln(R(t)) = \int^t_0\lambda(\tau)\delta \tau
+\int^{t}_0 [  \frac{ - \frac{d}{dt} R(\tau)}{R(\tau)} ] d\tau = \int^t_0 \lambda(\tau) d\tau \Rightarrow -ln(R(t)) = \int^t_0\lambda(\tau) d\tau
 \end{equation}
 
 and solving for $R(t)$ produces the final result for reliability as
@@ -479,7 +490,7 @@ a function of $\lambda(t)$
 
 \begin{equation}
 \label{equ:rAsFunctionOfLambda}
-R(t) = exp \big[ - \int^t_0\lambda(\tau)\delta \tau \big]
+R(t) = exp [ - \int^t_0\lambda(\tau) d\tau ]
 \end{equation}
 
 During the service lifetime phase, the failure rate is constant, which
@@ -490,28 +501,26 @@ simplifies to
 R(t) = exp (- \lambda(t))
 \end{equation}
 
-This important result is now applied in Example 8.1.
+This important result is now applied in 
+Example~\ref{example:systemReliabilityTransistorReliability}.
 
-\begin{table}
-\begin{tabular}{m{15cm}||}
-\textbf{\hfill\break{Example 8.1}}
-Transistor Reliability
+\begin{example}{Transistor Reliability}
+\label{example:systemReliabilityTransistorReliability}
 
 \emph{\textbf{\ul{Problem:}}} Consider a transistor with a constant
-failure rate of $\lambda = 1/10^6 hours$. What is the
+failure rate of $\lambda = 1/10^6 \text{ hours}$. What is the
 probability that the transistor will be operable in 5 years? \\
 
 \emph{\textbf{\ul{Solution:}}} This solution is found using the
 reliability function for a constant failure rate in 
-equation~\ref{equ:rAsFailureConstant} as follows.
+Equation~\ref{equ:rAsFailureConstant} as follows.
 
-$$R(t) = exp(-\lambda t)  $$\\
-$$R(5 years) = exp\big( - \frac{1}{10^6 hours} x \frac{24 hours}{day} X \frac{365 days}{year} X 5 years \big) = $$\\
-$$			= exp(-0.0438) $$ \\
-$$			= 0.957 $$\\
+$$R(t) = exp(-\lambda t)  $$
+$$R(5 \text{years}) = exp( - \frac{1}{10^6 \text{ hours}} * \frac{24 \text{ hours}}{\text{ day}} * \frac{365 \text{ days}}{\text{ year}} * 5 \text{ years} ) = $$\\
+$$			= exp(-0.0438) $$ 
+$$			= 0.957 $$
 $$			= 95.6 \% $$
-\end{tabular}
-\end{table}
+\end{example}
 
 \subsection{Mean Time to Failure}
 \label{subsection:mean-time-to-failure}
@@ -520,17 +529,18 @@ The \emph{\textbf{mean time to failure}} (MTTF) is a quantity which
 answers the question, ``\emph{On average how long does it take for a
 device to fail?}'' From its definition, it is apparent that the MTTF is
 the mean value of the random variable $T$ (failure time). It is
-determined from the PDF and the definition of the mean in (8) as follows
+determined from the PDF and the definition of the mean in 
+Equation~\ref{equ:systemReliabilityDefinitionMean} as follows
 
 \begin{equation}
 \label{equ:mttfIntegral}
-MTTF = \int^\infty_0 t f_T(t) dt 
+\text{MTTF} = \int^\infty_0 t f_T(t) dt 
 \end{equation}
 
 At this point the form of the PDF for $f_T(t)$ is not known, but it can be
-found from equation~\ref{equ:cdfOfF} since it is the negative derivative 
+found from Equation~\ref{equ:cdfOfF} since it is the negative derivative 
 of $R(t)$. Assuming the form of $R(t)$ found in 
-equation~\ref{equ:rAsFailureConstant} for a constant failure rate gives
+Equation~\ref{equ:rAsFailureConstant} for a constant failure rate gives
 
 \begin{equation}
 \label{equ:mttfConstantFailureRate}
@@ -543,7 +553,7 @@ $f_T(t)$ via integration by parts to be
 
 \begin{equation}
 \label{equ:mttfConstantFailureRate}
-MTTS = -\int^\infty_0 t e^{-\lambda t} = \frac{1}{\lambda}
+\text{MTTF} = -\int^\infty_0 t e^{-\lambda t} = \frac{1}{\lambda}
 \end{equation}
 
 This makes intuitive sense because $\lambda$ is the expected number of
@@ -551,27 +561,25 @@ failures per unit time for a device. Consequently, the reciprocal of
 $\lambda$ is the expected time between failures or MTTF. Let's consider a
 few examples.
 
-\begin{table}
-\begin{tabular}{m{15cm}||}
-\textbf{\hfill\break{Example 8.2}}
-Transistor MTTF\\
+\begin{example}{Transistor MTTF}
+\label{example:systemReliabilityMttf}
 
-\emph{\textbf{\ul{Problem:}}} Consider the transistor in Example 8.1.
+\emph{\textbf{\ul{Problem:}}} Consider the transistor in 
+Example~\ref{example:systemReliabilityTransistorReliability}.
 (a) Determine the MTTF, and (b) the reliability at the MTTF.
 
 \emph{\textbf{\ul{Solution:}}}
 
-(a) From equation~\ref{equ:mttfConstantFailureRate} the 
-$$MTTF =\frac{1}{\lambda} = \frac{1}{1/10^6 hours} = 10^6 hours $$\\
-$$		= 114 years $$.\\
+(a) From Equation~\ref{equ:mttfConstantFailureRate} the 
+$$MTTF =\frac{1}{\lambda} = \frac{1}{1/10^6 \text{ hours}} = 10^6 \text{ hours} $$
+$$		= 114 \text{ years} $$.
 
-(b) From equation~\ref{equ:rAsFailureConstant} the reliability at 114 years is
+(b) From Equation~\ref{equ:rAsFailureConstant} the reliability at 114 years is
 
-$$R(t) = exp(-\lambda t) $$\\
-$$	R(114 years) = exp\big( -\frac{10^6 hours}{10^6 hours}\big) = exp(-1) = 0.368 $$\\
+$$R(t) = exp(-\lambda t) $$
+$$	R(114 years) = exp( -\frac{10^6 \text{ hours}}{10^6 \text{ hours}} ) = exp(-1) = 0.368 $$
 $$	= 36.8\%$$.
-\end{tabular}
-\end{table}
+\end{example}
 
 This is a bit counterintuitive. Although the average time between
 transistor failures is 114 years, an individual transistor has only a
@@ -581,10 +589,8 @@ have a 50-50 chance of failing. This would be true if $f_T(t)$
 were symmetric about its mean,
 but that is not the case for the exponential density.
 
-\begin{table}
-\begin{tabular}{m{15cm}||}
-\textbf{\hfill\break{Example 8.3}}
-Human lifespan estimation.\\
+\begin{example}{Human lifespan estimation.}
+\label{example:systemReliabilityHumanLifeSpan}
 
 \emph{\textbf{\ul{Problem:}}} Data shows that for a 30 year old
 population, the failure (death) rate is constant with approximately 1.1
@@ -594,21 +600,19 @@ humans.
 \emph{\textbf{\ul{Solution:}}} In order to find MTTF, $\lambda$ is 
 needed. From the information given it is
 
-$$\lambda = \frac{(1.1/1000) failures}{1 year} = \frac{1.1 failure}{10^3 years}=\frac{1 failure}{909 years}$$
+$$\lambda = \frac{(1.1/1000) \text{ failures}}{1 \text{ year}} = \frac{1.1 \text{ failure}}{10^3 \text{ years}}=\frac{1 \text{ failure}}{909 \text{ years}}$$
 
 From this MTTF is computed as
 
-$$MTTF  = \frac{1}{\lambda} = 909 years!$$
-
-\end {tabular}
-\end{table}
+$$MTTF  = \frac{1}{\lambda} = 909 \text{ years!}$$
+\end {example}
 
 
 While great news for those of us seeking longevity, this calculation is
 clearly wrong since the upper limit on human lifespan is empirically
 known to be about 120 years. Why is this so? Serious problems arise if
 $R(t)$ is used in situations where the underlying assumption is
-invalid. The results in equations~\ref{equ:rAsFailureConstant} and 
+invalid. The results in Equations~\ref{equ:rAsFailureConstant} and 
 \ref{equ:mttfConstantFailureRate} apply only if the failure rate is
 constant. Although that is nearly true for people in their 20s and 30s,
 it is not true as people age. People do wear out and the failure rate
@@ -621,7 +625,8 @@ The overriding objective of this chapter is to estimate the future
 behavior of devices that are used in electrical and computer systems.
 The particular behavior of interest is the state of a device's
 functionality---the reliability, is it working or has it failed?
-Equation (23) indicates that it is fairly straightforward to determine
+Equation~\ref{equ:rAsFailureConstant} indicates 
+that it is fairly straightforward to determine
 reliability, if the failure rate ($\lambda$) is known and is constant.
 One question to consider is what factors influence the failure rate of a
 device. Many of us probably have had experiences in the laboratory where
@@ -649,7 +654,8 @@ updated to better predict the reliability of components. MIL-HDBK-217F
 is used here since it is freely available in the public domain.
 
 Failure rates for resistors, capacitors, transistors, and integrated
-circuits from MIL-HDBK-217F are included in Appendix C. For each device,
+circuits from MIL-HDBK-217F are included in 
+Appendix~\ref{appendix:componentFailureRate}. For each device,
 a base failure rate is given, $\lambda_b$, and multiplied
 by a number of adjustment factors, denoted by the symbol
 $\pi$, to estimate the device failure
@@ -657,12 +663,13 @@ rate $\lambda$. Each adjustment factor has a unique subscript and their
 values are found from tables or equations in the handbook.
 
 For example, consider the low frequency field effect transistor in
-Appendix C. The overall failure rate is given by the equation
-$\lambda=\lambda_b \pi_tau \pi_A \pi_Q \pi_E failures /10^6 hours$.
+Appendix~\ref{appendix:componentFailureRate}. The 
+overall failure rate is given by the equation
+$\lambda=\lambda_b \pi_tau \pi_A \pi_Q \pi_E \text{failures} /10^6 \text{hours}$.
 $\lambda_b$  is the base failure rate that is directly read from a table, 
  $\pi_\tau$ is a temperature factor which is computed from an 
  exponential equation (be careful to use the junction temperature 
- as indicated in Appendix C),
+ as indicated in Appendix~\ref{appendix:componentFailureRate}),
 $\pi_A$ is an application factor that depends upon how the device 
 will be used, $\pi_Q$ is a quality factor, and $\pi_E$ is an 
 environmental factor. The
@@ -679,8 +686,10 @@ the evaluation is a worst case analysis of its performance. That way the
 device should perform with a higher reliability when embedded into a
 system, hopefully causing only pleasant surprises in operation. Finally,
 the factor $\pi_E$ is based upon the
-different operating environments that are identified in Appendix C.
-Example 8.4 demonstrates the application of the MIL-HDBK-217F standard
+different operating environments that are identified in 
+Appendix~\ref{appendix:componentFailureRate}.
+Example~\ref{example:systemReliabilityEstimationUsingMIL} demonstrates 
+the application of the MIL-HDBK-217F standard
 for reliability estimation.
 
 In summary, it is possible to estimate the reliability of devices if the
@@ -692,10 +701,8 @@ that this can become a rather time-consuming process if there are many
 components in a system, and thus the use of reliability software
 packages may be warranted.
 
-\begin{table}
-\begin{tabular}{m{15cm}|}
-\textbf{\hfill\break Example 8.4}
-Reliability estimation using the MIL-HDBK 217F. \\
+\begin{example}{Reliability estimation using the MIL-HDBK 217F.}
+\label{example:systemReliabilityEstimationUsingMIL}
 
 \emph{\textbf{\ul{Problem:}}} Consider the circuit below that contains a
 bipolar junction transistor (BJT). This electronic circuit is a simple
@@ -707,7 +714,7 @@ $V_O$, is 5V. When the input is 5V
 $R_B$), producing a 50mA collector
 current, a large voltage drop across $R_C$, and an output
 voltage close to 0V. The average collector current for the two states is
-25mA, producing an average power of 125mW (25mA×5V). Assume that the
+25mA, producing an average power of 125mW (25mA*5V). Assume that the
 circuit is used in a missile launcher, the ambient temperature is 25°C,
 and that JANTX quality parts are used. Determine the MTTF and
 reliability for the 2N3904 BJT (a low power, low frequency BJT) in 20
@@ -718,37 +725,41 @@ years.
 
 \emph{\textbf{\ul{Solution:}}} The objective of this problem is to
 determine the failure rate, from which the MTTF and reliability are
-estimated. From the MIL-HDBK-217F data in Appendix C, the failure rate
+estimated. From the MIL-HDBK-217F data in 
+Appendix~\ref{appendix:componentFailureRate}, the failure rate
 is
 
 
-$$\lambda=\lambda_b \pi_tau \pi_A \pi_R \pi_S \pi_Q \pi_E \frac{failures}{10^6 hours}$$
+$$\lambda=\lambda_b \pi_tau \pi_A \pi_R \pi_S \pi_Q \pi_E \frac{\text{failures}}{10^6 \text{hours}}$$
 
 
 The base failure rate is given directly as
 $\lambda_b = 0.00074$.   $\pi_\tau$ is the temperature factor and
 its value is determined from the relationship
 
-$$\pi_\tau = exp \big[-2114 \big[ \frac{1}{T_j + 273} - \frac{1}{298} \big] \big]$$
+$$\pi_\tau = exp [-2114 [ \frac{1}{T_j + 273} - \frac{1}{298} ] ]$$
 
 where $T_j$ is the junction temperature. As
-indicated in Appendix C, it is computed as
+indicated in
+ Appendix~\ref{appendix:componentFailureRate}, it is computed as
 
 $$T_j = T_A + \Theta_{jA}P_D = $$ \\
-$$		25^\circ C \big( 200 \frac{^\circ C}{W} \big) \big(125 X 10^{-3}W \big) = 50^\circ C $$
+$$		25^\circ C \big( 200 \frac{^\circ C}{W} \big) \big(125 * 10^{-3}W \big) = 50^\circ C $$
 
 The thermal resistance, $\Theta_JA$, is read
-from the 2N3904 datasheet (Appendix D) and will be examined in more
+from the 2N3904 datasheet (Appendix~\ref{appendix:manfDatasheet}) and 
+will be examined in more
 detail shortly. The temperature factor is
 
-$$\pi_\tau = exp \big[-2114 \big[ \frac{1}{50 + 273} - \frac{1}{298} \big] \big] = 1.73$$
+$$\pi_\tau = exp [-2114 [ \frac{1}{50 + 273} - \frac{1}{298} ] ] = 1.73$$
 
 $\pi_A$ is an application factor
 (switched or linear amplification), and the value for the switched logic
 inverter is $\pi_A = 0.70$.  $\pi_R$ is a power rating factor that is
 computed based upon the maximum rated power dissipation of the 2N3904
-(625mW from the component datasheet in Appendix D) as follows:
-$$\pi_R = P_R^{0.37} = 0.625^{0.37} = 0.84$$
+(625mW from the component datasheet in Appendix~\ref{appendix:manfDatasheet}) 
+as follows:
+$$\pi_R = (P_R)^{0.37} = (0.625)^{0.37} = 0.84$$
 
 
 $\pi_S$ is a stress factor that is
@@ -758,7 +769,7 @@ value of $V_{CE}$ is 5V (when the device
 is off and no current flows), while the maximum rated value of
 $V_{CE}$ from the 2N3904 datasheet is 40V.
 
-$V_S = \frac{applied V_{CE}}{rated V_{CE}} = \frac{5}{40} = 0.225$
+$V_S = \frac{\text{applied} V_{CE}}{\text{rated} V_{CE}} = \frac{5}{40} = 0.225$
 
 $\pi_Q$ is the quality factor, and based upon the fact that a JANTX part is 
 $\pi_Q = 1.0$.  $\pi_E$ is the environmental factor, and
@@ -767,33 +778,34 @@ for the missile launch application, $\pi_E = 32.0$.
 All of this is brought together to compute the failure rate. The product
 of the adjustment factors is computed as
 
-$$\lambda=\lambda_b \pi_tau \pi_A \pi_R \pi_S \pi_Q \pi_E \frac{failures}{10^6 hours} = $$\\
-$$	= \big( \frac{7.4x10^{-4}}{10^6 hours} (1.73)(0.7)(0.84)(0.066)(1.0)(32.0) \big) $$\\
-$$	= \frac{1.59x10^{-3} failures}{10^6 hours}$$
+$$\lambda=\lambda_b \pi_tau \pi_A \pi_R \pi_S \pi_Q \pi_E \frac{\text{failures}}{10^6 \text{ hours}} = $$\\
+$$	= ( \frac{7.4*10^{-4}}{10^6 \text{ hours}}) (1.73)(0.7)(0.84)(0.066)(1.0)(32.0)  $$\\
+$$	= \frac{1.59*10^{-3} \text{ failures}}{10^6 \text{ hours}}$$
 
 This allows estimation of the MTTF and requested reliability
-$$	MTTF = \frac{1}{\lambda} = 6.3x10^8 hours = 71,804 years. $$\\
-$$	R(20 years) = exp \big( -\frac{20 years}{71,804 years} \big) = 0.9997 $$\\
+$$	\text{MTTF} = \frac{1}{\lambda} = 6.3*10^8 \text{ hours} = 71,804 \text{years}. $$\\
+$$	R(20 \text{ years}) = exp ( -\frac{20 \text{ years}}{71,804 \text{ years}} ) = 0.9997 $$\\
 $$	= 99.97\%$$
 
 In conclusion, the BJT is estimated to be highly reliable in 20 years.
 
-\end{tabular}
-\end{table}
+\end{example}
 
 
 
 \subsection{Thermal Management and Power Derating}
 \label{subsection:thermal-management-and-power-derating}
 
-One of the quantities computed in Example 8.4 was the junction
+One of the quantities computed in 
+Example~\ref{example:systemReliabilityEstimationUsingMIL} was the junction
 temperature, $T_J$, which was computed from the
 power dissipated in the device and a quantity known as thermal
 resistance, $\theta$. It is important to understand this in more detail,
 since it impacts the reliability of microelectronic devices.
 Furthermore, if the junction temperature exceeds a certain value, the
 device will fail. Thus, thermal management issues need to be taken into
-account. We start with a physical model in Figure 8.8 (a), which has a
+account. We start with a physical model in 
+Figure~\ref{figure:thermalModelAsCircuit} (a), which has a
 junction (the integrated circuit or device), enclosed by a case (the
 packaging of the device), surrounded by ambient environmental
 conditions. In part (b) a heat sink is included which aids in thermal
@@ -822,7 +834,8 @@ of the heat sink, $\Theta_{CA}$ is replaced by the sum
 $\Theta_{CS} + \Theta_{SA}$, which has a lower combined
 thermal resistance and greater ability to dissipate heat.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=2.1in,height=1.3in]{./image91}
 \includegraphics[width=3in,height=1.56in]{./image92}
 \caption{Physical model of microelectronic devices with
@@ -843,7 +856,8 @@ importantly the junction temperature is found as
 T_J = T_A + P_D \Theta_{JA}
 \end{equation}
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=1.84in,height=1.49in]{./image94}
 \includegraphics[width=1.8in,height=1.48in]{./image95}
 \caption{Resistive models for thermal transfer in
@@ -855,7 +869,7 @@ heat sink added.}
 Let's now apply these results. Manufacturer datasheets typically
 identify the absolute maximum power dissipation and note that the device
 should be derated if operated at ambient conditions above room
-temperature ($T_A = 25^circ C$). The datasheets
+temperature ($T_A = 25^{circ}C$). The datasheets
 also supply a maximum junction temperature for the device. It is clear
 from the resistive model that, for a fixed power dissipation, the
 junction temperature increases along with ambient temperature. If the
@@ -863,7 +877,7 @@ maximum junction temperature is exceeded, the device will be destroyed.
 Another way to look at this is that as ambient temperature increases,
 the maximum amount of power a device can dissipate decreases. This
 decrease in maximum power dissipation is known as
-\emph{\textbf{derating}}. From equation~\ref{equ:thermalHeatFlow}
+\emph{\textbf{derating}}. From Equation~\ref{equ:thermalHeatFlow}
  the maximum power that can be
 dissipated in a device at a given ambient temperature is
 
@@ -874,21 +888,23 @@ P_{D,max} = \frac{T_{J,max}  - T_A}{\Theta_{JA}}
 
 From this relationship, a power derating curve is plotted in 
 Figure~\ref{figure:typicalDeratingCurve}
-showing the maximum power versus ambient temperature. Example 8.5
-demonstrates the application of this to the inverter in Example 8.4.
+showing the maximum power versus ambient temperature. 
+Example~\ref{example:systemReliabilityPowerDerating}
+demonstrates the application of this to the inverter in 
+Example~\ref{example:systemReliabilityEstimationUsingMIL}.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=3.36in,height=2.1in]{./image98}
 \caption{Typical power derating curves.}
 \label{figure:typicalDeratingCurve}
 \end{figure}
 
-\begin{table}
-\begin{tabular}{m{15cm}|}
-\textbf{Example 8.5} 
-Power Derating for the Inverter Circuit.\\
+\begin{example}{Power Derating for the Inverter Circuit.}
+\label{example:systemReliabilityPowerDerating}
 
-\emph{\textbf{\ul{Problem:}}} Assume the circuit in Example 8.4 is
+\emph{\textbf{\ul{Problem:}}} Assume the circuit in 
+Example~\ref{example:systemReliabilityEstimationUsingMIL} is
 operating at an ambient temperature $T_A = 120^\circ C$ and 
 that no heat sink is used.
 (a) Determine the derated power and if the design is within the
@@ -897,24 +913,25 @@ re-compute the reliability at 20 years based upon this elevated
 operating temperature.
 
 \emph{\textbf{\ul{Solution:}}}
-(a) From the manufacturer datasheet in Appendix D, the 2N3904 BJT has a
+(a) From the manufacturer datasheet in Appendix~\ref{appendix:manfDatasheet}, 
+the 2N3904 BJT has a
 thermal resistance of $\Theta_{JA} = 200^\circ C/W$ and a
 maximum junction temperature of 150°C. From this the maximum power is
-computed from equation~\ref{figure:typicalDeratingCurve} as
+computed from Equation~\ref{figure:typicalDeratingCurve} as
 
 $$P_{D,max} = \frac{(150 - 120)^\circ C}{200^\circ C/W} = 150mW$$
 
 The derated, or maximum, power at this temperature is \ul{150mW}.
-Clearly, the 125mW of power dissipated as determined in Example 8.4 for
+Clearly, the 125mW of power dissipated as determined in 
+Example~\ref{example:systemReliabilityEstimationUsingMIL} for
 the BJT is within this derated limit.
 
 (b) To compute the failure rate the junction temperature and
 $\pi_\tau$ are re-computed.
 
-$$T_J = T_A + P_D\Theta_{JA} = 120^\circ C + (125x10^{-3} W) \big[ \frac{200^\circ C}{W} \big]= 145\circ C $$\\
+$$T_J = T_A + P_D\Theta_{JA} = 120^\circ C + (125*10^{-3} W) \big[ \frac{200^\circ C}{W} \big]= 145\circ C $$\\
 $$\pi_T = exp\big[ -2114 \big[ \frac{1}{145+273} - \frac{1}{298} \big] \big] = 7.66$$
-\end{tabular}
-\end{table}
+\end{example}
 
 With this new value, the value of $\lambda=7.00x10^{-3}/10^6 hours$, and 
 the reliability is reduced slightly to \ul{99.88\%}. Note, however, the junction 
@@ -951,7 +968,8 @@ take into account the overall system structure.
 \subsection{Series Systems}
 \label{subsection:series-systems}
 
-Consider the inverter circuit in Example 8.4---failure of any one
+Consider the inverter circuit in 
+Example~\ref{example:systemReliabilityEstimationUsingMIL}---failure of any one
 component in the circuit would lead to the failure of the overall system
 or circuit. Conceptually, a system in which the failure of a single
 component (or subsystem) leads to failure of the overall system is known
@@ -960,7 +978,8 @@ shows a block diagram of a series system composed of boxes
 $S_1, S_2, \ldots S_n$ that represent the components,
 or the subsystems, of a larger system.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=3.21in,height=0.45in]{./image109}
 \caption{A series system consisting of components, or subsystems $S_1, S_2, \ldots S_n$.}
 \label{figure:seriesSystems}
@@ -975,7 +994,7 @@ given by the product of reliabilities for all of the subsystems as
 follows
 
 \begin{equation}
-\label{equ:seriesProbability}
+\label{equ:systemReliabilitySeriesProbability}
 R_s(t) = R_1(t)R_2(t)\ldots R_n(t) = \prod_{i=1}^n R_i(t) 
 \end{equation}
 
@@ -989,7 +1008,7 @@ components gives the following result for the overall system reliability
 
 \begin{equation}
 \label{equ:seriesProbabilityConstantErrorRate}
-R_s(t) = e^{-\lambda_1t}e^{-\lambda_2t}\cdots e^{-\lambda_nt} = exp(-\sum_{i-1}^n \lambda_i t
+R_s(t) = e^{-\lambda_1t}e^{-\lambda_2t}\cdots e^{-\lambda_nt} = exp(-\sum_{i-1}^n \lambda_i t)
 \end{equation}
 
 This leads to a series system failure rate and MTTF of
@@ -1001,18 +1020,16 @@ This leads to a series system failure rate and MTTF of
 MTTF = \frac{1}{\lambda_s}
 \end{equation}
 
-Example 8.6 revisits the inverter problem where the failure rates of all
+Example~\ref{example:systemReliabilityInverterCircuit} 
+revisits the inverter problem where the failure rates of all
 components are considered for system reliability estimation.
 
 
-\begin{table}
-\caption{}
-\label{table:<context>}
-\begin{tabular}{|m{15cm}|}
-\textbf{\hfill\break Example 8.6} 
-Inverter circuit reliability.
+\begin{example}{Inverter circuit reliability.}
+\label{example:systemReliabilityInverterCircuit}
 
-\emph{\textbf{\ul{Problem:}}} For the system in Example 8.4 estimate (a)
+\emph{\textbf{\ul{Problem:}}} For the system in 
+Example~\ref{example:systemReliabilityEstimationUsingMIL} estimate (a)
 the overall system reliability in 20 years, and (b) the MTTF. Assume
 room temperature and that ¼ watt fixed composition resistors are used.
 
@@ -1026,31 +1043,31 @@ dissipated in each resistor, which is 125mW and 0.9mW for the collector
 and base resistors respectively. The failure rate for a fixed
 composition resistor from MIL-HDBK-217F is
 
-$$\lambda_{resistor1} = \lambda_b \pi_R \pi_Q \pi_E failures/10^6 hours$$
+$$\lambda_{resistor1} = \lambda_b \pi_R \pi_Q \pi_E \text{ failures}/10^6 \text{ hours}$$
 
 For the collector resistor, $R_C$, the base failure rate is
 computed as
 
-$$ \lambda_b = 4.5x10^{-9} exp \big[ 12 \big[\frac{T+273}{343} \big] \big] exp\big[ \frac{S}{0.6} \ frac{T+273}{273}\big] \big]$$
-$$  = 4.5x10^{-9} exp \big[ 12 \big[\frac{25+273}{343} \big] \big] exp\big[ \frac{0.125/0.25}{0.6} \ frac{25+273}{273}\big] \big]$$
-$$ = 3.77x10^{-4}$$
+$$ \lambda_b = 4.5*10^{-9} exp \big[ 12 \big[\frac{T+273}{343} \big] \big] exp\big[ \frac{S}{0.6} \frac{T+273}{273}\big] \big]$$
+$$  = 4.5*10^{-9} exp \big[ 12 \big[\frac{25+273}{343} \big] \big] exp\big[ \frac{0.125/0.25}{0.6} \frac{25+273}{273}\big] \big]$$
+$$ = 3.77*10^{-4}$$
 
 The $S$ term is the ratio of power dissipated to the maximum power
 rating. The values $\pi_R=1.0$, $\pi_Q=15.0$, and $\pi_E = 27.0$ 
 are directly read from tables.
 Thus the overall failure rate for the collector resistor is
 
-$$\lambda{resistor2} = (3.77x10^{-4}(1.0)(15.0)(27.0) = 1.53x10^{-1} failure/10^6 hours$$
+$$\lambda_{R_C} = 3.77*10^{-4}(1.0)(15.0)(27.0) = 1.53*10^{-1} \text{ failure}/10^6 \text{ hours}$$
 
 The process for the base resistor, $R_B$, is similar, and results in
 
-$$\lambda{resistor2} = 6.1x10^{-2} failure/10^6 hours$$
+$$\lambda_{R_B} = 6.1*10^{-2} \text{ failure}/10^6 \text{ hours}$$
 
-The total failure rate is given from equation~\ref{equ:seriesProbabilityMttf} as
+The total failure rate is given from Equation~\ref{equ:seriesProbabilityMttf} as
 
-$$\lambda_s = \lambda_{BJT} + \lambda{resistor1} + \lambda{resistor2} = 0.215 failures/10^6 hours$$
+$$\lambda_s = \lambda_{BJT} + \lambda_{R_C} + \lambda_{R_B} = 0.215 \text{ failures}/10^6 \text{ hours}$$
 
-$$R_s(t) =exp(-\lambda_s t) = exp \big( -\frac{0.215}{10^6 hours} x \frac{24 hours}{day} x \frac{365 days}{year} x 20 years \big)$$
+$$R_s(t) =exp(-\lambda_s t) = exp \big( -\frac{0.215}{10^6 \text{ hours}} * \frac{24 \text{ hours} } {\text{day}} * \frac{365 \text{ days}}{\text{year}} * 20 \text{ years} \big)$$
 $$96.3 \%$$
 
 Since resistors are pretty reliable devices, the overall system
@@ -1058,15 +1075,15 @@ reliability decreases only a small amount relative to that of the BJT
 itself.
 
 (b) The MTTF is given by $1/\lambda_s$ which in this case is \ul{531 years}.
-\end{tabular}
-\end{table}
+\end{example}
 
 
 
 \subsection{Parallel Systems}
 \label{subsection:parallel-systems}
 
-From (30) it is clear that as more components are added to a series
+From~\ref{equ:systemReliabilitySeriesProbability} it 
+is clear that as more components are added to a series
 system, the reliability decreases. It is natural to ask if the
 reliability can be increased. The use of redundancy gives us a method to
 answer in the affirmative. A design has \emph{\textbf{redundancy}} if it
@@ -1079,7 +1096,8 @@ Figure~\ref{figure:parallelSystem} shows a
 simplified view of a \emph{\textbf{parallel system}} with subsystems
 $S_1, S_2, \ldots S_n$.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=1.5in,height=2in]{./image129}
 \caption{A parallel, or redundant, system consisting of
 subsystems $S_1, S_2, \ldots S_n$}
@@ -1110,7 +1128,7 @@ The overall system reliability of the parallel system is found from this
 as
 
 \begin{equation}
-\label{equ:parallelReliability}
+\label{equ:systemReliabilityParallelReliability}
 R_s(t) = 1-F_S(t) = 1 - \prod_{i=1}^n \big[ 1-R_i(t) \big]
 \end{equation}
 
@@ -1125,13 +1143,12 @@ correctly. Developing circuits to detect failures and control the
 switching between subsystems can be complex and is not considered here.
 Special care must be paid to the switching circuit itself, as
 malfunction of this circuit could lead to an overall system failure. An
-example of parallel system reliability is given in Example 8.7.
+example of parallel system reliability is given in 
+Example~\ref{example:systemReliabilityRaidArray}.
 
 
-\begin{table}
-\begin{tabular}{m{15cm}|}
-\textbf{Example 8.7} 
-Reliability of a Redundant Array of Independent Disks (RAID).\\
+\begin{example}{Reliability of a Redundant Array of Independent Disks (RAID).}
+\label{example:systemReliabilityRaidArray}
 
 \emph{\textbf{\ul{Problem:}}} In a RAID, multiple hard drives are used
 to store the same data, thus achieving redundancy and increased
@@ -1142,12 +1159,12 @@ failure rate of $\lambda = 10 failuresx/10^6 hours$. How many disks
 must the system have to achieve a reliability of 98\% in 10 years?
 
 \emph{\textbf{\ul{Solution:}}} The reliability of a parallel system with
-redundancy is given by equation~\ref{equ:parallelReliability}. 
+redundancy is given by Equation~\ref{equ:systemReliabilityParallelReliability}. 
 Since all of the disks are identical, the expression simplifies to
 
 $$R_s(t) = 1 - \left[ 1 - R_i(t) \right]^n$$
 
-$$0.98 \leq 1 - \big[ 1 - exp\big( - \frac {10}{10^ hours} x \frac{24 hours}{day} x \frac{365 days}{year} x 10 years \big) \big]^n$$
+$$0.98 \leq 1 - \big[ 1 - exp\big( - \frac {10}{10^ \text{ hours}} * \frac{24 \text{ hours}}{\text{day}} * \frac{365 \text{ days}}{\text{year}} * 10 \text{ years} \big) \big]^n$$
 
 $$0.98 \leq 1 - \left[1-0.42\right]^n$$
 
@@ -1156,8 +1173,7 @@ $$0.02 \leq (0.58)^n$$
 $$log(0.02) \leq nlog(0.58)$$
 
 $$n \geq 7.2$$
-\end{tabular}
-\end{table}
+\end{example}
 
 In order to achieve this reliability, \ul{n=8} disks are required. The
 reliability of each individual disk is low at 42\%, but using
@@ -1167,22 +1183,31 @@ redundancy, the overall system reliability is quite high.
 \label{subsection:combination-systems}
 
 Many real systems do not fit neatly into either parallel or series
-reliability models as shown in Figure 8.13. Rather, they may be a
+reliability models as shown in Figure~\ref{figure:systemReliabilitySeriesParallel}. 
+Rather, they may be a
 combination of the two, and such systems will be referred to as
 combination systems. One way to determine the reliability of a
 combination system is to utilize the results obtained for series and
-parallel systems in (30) and (34). The system network is reduced by
+parallel systems in 
+Equation~\ref{equ:systemReliabilitySeriesProbability}
+ and ~\ref{equ:systemReliabilityParallelReliability}. The 
+ system network is reduced by
 combining parallel subsystems into a single block, whose reliability is
-given by (34), while series subsystems are reduced to a single block
-whose reliability is given by (30). This is conceptually analogous to
+given by 
+Equation~\ref{equ:systemReliabilityParallelReliability}, while series 
+subsystems are reduced to a single block
+whose reliability is given by 
+Equation~\ref{equ:systemReliabilitySeriesProbability}. This is conceptually analogous to
 combining series and parallel resistances in electrical circuits. The
 network is continually reduced until only a single block remains whose
 reliability is known from all of the subsystem combinations.
 
-To illustrate this, consider the system in Figure 8.13. To determine the
+To illustrate this, consider the system in 
+Figure~\ref{figure:systemReliabilitySeriesParallel}. To determine the
 reliability, start by combining the three parallel systems
 $S_2, S_3, and S_4$ whose
-reliability is determined by application of (34) to be 
+reliability is determined by application of 
+Equation~\ref{equ:systemReliabilityParallelReliability} to be 
 $R_{s_{2-4}}(t) = 1- (1-R_2(t))(1-R_3(t))(1-R_4(t)))$.
 The result is then combined with $S_1$ in series to give the
 overall system reliability, 
@@ -1190,24 +1215,22 @@ overall system reliability,
 $R_{s}(t) = R_1(t) \left[ 1- (1-R_2(t))(1-R_3(t))(1-R_4(t))) \right]$.
 
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=2.35in,height=1.72in]{./image149}
 \caption{A combination series-parallel system. $S_2, S_3, and S_4$
 are redundant parallel systems.}
-\label{figure:}
+\label{figure:systemReliabilitySeriesParallel}
 \end{figure}
 
 
-The chapter concludes with Example 8.8 that addresses combination system
-reliability.
+The chapter concludes with 
+Example~\ref{example:systemReliabilityCombinSystem} that 
+addresses combination system reliability.
 
 
-\begin{table}
-\caption{}
-\label{table:<context>}
-\begin{tabular}{m{15cm}|}
-\textbf{Example 8.8} 
-Combination system reliability. \\
+\begin{example}{Combination system reliability.}
+\label{example:systemReliabilityCombinSystem}
 
 \emph{\textbf{\ul{Problem:}}} Consider the system shown below with the
 following reliabilities at a fixed time $t, R_1=R_2= 80\%$. 
@@ -1225,7 +1248,7 @@ $$R_{s_{3,4}} = 1 - (1-R_3)(1-R_4)$$
 
 They are combined in series to give the overall system reliability
 
-$$R_s = \left[ 1 - (1-R_1)(1-R_2) \right] x \left[ 1 - (1-R_2)(1-R_3) \right]$$
+$$R_s = \left[ 1 - (1-R_1)(1-R_2) \right] * \left[ 1 - (1-R_2)(1-R_3) \right]$$
 
 Substituting values and assuming $R_3 = R_4$ gives
 
@@ -1234,8 +1257,7 @@ $$0.95 = \left[ 1-0.2^2 \right] \left[1 - (1-R_{3,4})^2 \right]$$.
 Solving for the reliabilities gives the final result
 
 $$R_3 = R_4 = 0.90$$
-\end{tabular}
-\end{table}
+\end{example}
 
 This example demonstrates the power of redundant systems.
 $S_1 and S_2$ have somewhat low reliabilities

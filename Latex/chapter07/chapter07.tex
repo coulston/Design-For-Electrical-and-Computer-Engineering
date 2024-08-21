@@ -459,7 +459,7 @@ tests might accidentally damage the ADC.
 			 output can be set independently \\
 			 of the other outputs.}} &
 \multicolumn{2}{l|}{\textbf{Type:}} &  
-\multicolumn{2}{l|}{\makecell{white box or \\black box}} \\ \hline
+\multicolumn{2}{l|}{\makecell{$\square$ white box \\  $\text{\rlap{$\checkmark$}}\square$  black box }} \\ \hline
 
 \multicolumn{8}{|c|} {\textbf{Tester Information}} \\ \hline
 
@@ -494,7 +494,7 @@ tests might accidentally damage the ADC.
 \ldots{} & \ldots{} & \ldots{} & \ldots{} & & & & \\ \hline
 10 & 2.502 V & 512 & 0x200 & & & & \\ \hline
 
-\multicolumn{4}{|l}{\textbf{Overall test result:}} &   &  &  &  \\ \hline
+\multicolumn{4}{|l|}{\textbf{Overall test result:}} &   &  &  &  \\ \hline
 \end{tabular}
 \end{table}
 
@@ -539,7 +539,9 @@ particular processing path.
 		mix of nickels and dimes. Verifies \\
 		FSM outputs candy in response \\
 		to a total deposit of \$0.30.}} &
-\multicolumn{1}{|l|}{\textbf{Type:}} &  white box or black box \\ \hline
+		
+\multicolumn{1}{l|}{\textbf{Type:}} &  
+\multicolumn{1}{l|}{\makecell{ $\text{\rlap{$\checkmark$}}\square$  white box \\ $\square$ black box }} \\ \hline
 
 \multicolumn{8}{|c|} {\textbf{Tester Information}} \\ \hline
 
@@ -737,50 +739,60 @@ downloaded from the robot it can be analyzed in a spreadsheet program to
 determine the needed metrics and archived for future reference.
 
 \begin{table}[h]
+\small
 \caption{A step-by-step acceptance test case for the autonomous robot.}
 \label{table:stepByStepAcceptanceTestRobot}
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{2cm}|m{2cm}}
+\begin{tabular}{|m{1cm}|m{2cm}|m{3cm}|m{0.5cm}|m{0.5cm}|m{0.5cm}|m{1cm}|m{1cm}|}
 \hline
 
-\multicolumn{8}{l} {\textbf{Test Writer:} Sue L. Engineer}\\ \hline
+\multicolumn{8}{|l|} {\textbf{Test Writer:} Sue L. Engineer}\\ \hline
 
-\multicolumn{2}{l} {\textbf{Test Case Name:}} &
-\multicolumn{4}{l} {Robot Acceptance Test \#1} &
-\multicolumn{1}{l}{\textbf{Test ID \#:}} & Robot-AT-01 \\ \hline
+\multicolumn{2}{|l|} {\textbf{Test Case Name:}} &
+\multicolumn{4}{l|} {Robot Acceptance Test \#1} &
+\multicolumn{1}{l|}{\textbf{Test ID \#:}} & Robot-AT-01 \\ \hline
 
-\multicolumn{2}{l} {\textbf{Description:}}&
-\multicolumn{4}{l} {
-\makecell{		The robot's center must stay within 12 to 18 centimeters \\
-			of the wall over 90\% of the course, while traveling \\
+\multicolumn{2}{|l|} {\textbf{Description:}}&
+\multicolumn{4}{l|} {
+\makecell[l]{	The robot's center must stay within \\
+			12 to 18 centimeters of the wall over \\
+			90\% of the course, while traveling \\
 			parallel to a wall over a 3 meter course.}} &
-\multicolumn{1}{l}{\textbf{Type:}} &  white box or black box \\ \hline
 
-\multicolumn{8}{l} {\textbf{Tester Information}} \\ \hline
+\multicolumn{1}{l|}{\textbf{Type:}} &  
+\multicolumn{1}{l|}{\makecell{$\square$ white box \\  $\text{\rlap{$\checkmark$}}\square$  black box }} \\ \hline
 
-\multicolumn{2}{l} {\textbf{Name of Tester:}} &
-\multicolumn{4}{l} { } &
-\multicolumn{1}{l}{\textbf{Date:}} &  \\ \hline
+\multicolumn{8}{|l|} {\textbf{Tester Information}} \\ \hline
 
-\multicolumn{2}{l} {\textbf{Hardware Ver:}} &
-\multicolumn{4}{l} {Robot 1.0} &
-\multicolumn{1}{l}{\textbf{Time:}} &  \\ \hline
+\multicolumn{2}{|l|} {\textbf{Name of Tester:}} &
+\multicolumn{4}{l|} { } &
+\multicolumn{1}{l|}{\textbf{Date:}} &  \\ \hline
 
-\multicolumn{2}{l} {\textbf{Setup:}}&
-\multicolumn{6}{l} {
+\multicolumn{2}{|l|} {\textbf{Hardware Ver:}} &
+\multicolumn{4}{l|} {Robot 1.0} &
+\multicolumn{1}{l|}{\textbf{Time:}} &  \\ \hline
+
+\multicolumn{2}{|l|} {\textbf{Setup:}}&
+\multicolumn{6}{l|} {
 \makecell{	Completed robot should be fully charged \\
 		and placed on 3 meter test track.} }  \\ \hline
 
-\textbf{Step} & \textbf{Action} &  \textbf{Expected Result} & 
-\textbf{Pass} & \textbf{Fail} & \multicolumn{2}{l}{ \textbf{Comments}} \\  \hline
+{\rotatebox[origin=c]{-90}{ \textbf{Step}}} &
+{\rotatebox[origin=c]{-90}{ \textbf{Action}}} &
+{\rotatebox[origin=c]{-90}{ \textbf{Expected Result}}} &
+{\rotatebox[origin=c]{-90}{ \textbf{Pass}}} &
+{\rotatebox[origin=c]{-90}{\textbf{Fail}}} & 
+{\rotatebox[origin=c]{-90}{\textbf{N/A}}} & 
+\multicolumn{2}{l|} {\textbf{Comments}} \\  \hline
+
 1 & Write a program to monitor the robots position from the wall. &
 Program should be statically tested to verify accuracy. Should sample
-wall at a sufficient rate depending on speed. & & & &\multicolumn{2}{l}{}\\ \hline
+wall at a sufficient rate depending on speed. & & & &\multicolumn{2}{l|}{}\\ \hline
 2 & Put robot on test track, run test, and download data. & The robot
-should travel down the entire length of the test track and then stop. &
-& & &\multicolumn{2}{l}{}\\ \hline
+should travel down the entire length of the test track and then stop. & & & &\multicolumn{2}{l|}{}\\ \hline
 3 & Plot test data in a spreadsheet program. & Plot of position vs. time
-should be within 12 -- 18 cm 90\% of the time. & & & &\\ \hline
-\multicolumn{3}{l}{\textbf{Overall test result:}} &   &  &  & \multicolumn{2}{l}{}\\ \hline
+should be within 12 -- 18 cm 90\% of the time. & & & &\multicolumn{2}{l|}{}\\ \hline
+
+\multicolumn{3}{|l|}{\textbf{Overall test result:}} &   &  &  & \multicolumn{2}{l|}{}\\ \hline
 \end{tabular}
 \end{table}
 
@@ -839,55 +851,66 @@ to test the operation of the motors with the magnetic compass.
 
 
 \begin{table}[h]
+\small
 \caption{A step-by-step integration test case for the compass and motors.}
 \label{table:stepByStepIntegrationTestRobot}
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{2cm}|m{2cm}|}
+\begin{tabular}{|m{1cm}|m{2cm}|m{3cm}|m{0.5cm}|m{0.5cm}|m{0.5cm}|m{1cm}|m{1cm}|}
 \hline
 
 \multicolumn{8}{|l|} {\textbf{Test Writer:} Sue L. Engineer}\\ \hline
 
 \multicolumn{2}{|l|} {\textbf{Test Case Name:}} &
 \multicolumn{4}{|l|} {Robot Integration Test \#1} &
-\multicolumn{1}{|l|}{\textbf{Test ID \#:}} & Robot-IT-01 \\ \hline
+\multicolumn{1}{l|}{\textbf{Test ID \#:}} & Robot-IT-01 \\ \hline
 
 \multicolumn{2}{|l|} {\textbf{Description:}}&
 \multicolumn{4}{|l|} {
-\makecell{		Checks interaction of DC motors on the \\
+\makecell[l]{	Checks interaction of DC motors on the \\
 			magnetic compass.}} &
-\multicolumn{1}{|l|}{\textbf{Type:}} &  white box or black box \\ \hline
+
+\multicolumn{1}{l|}{\textbf{Type:}} &  
+\multicolumn{1}{l|}{\makecell{$\square$ white box \\  $\text{\rlap{$\checkmark$}}\square$  black box }} \\ \hline
+
 
 \multicolumn{8}{|l|} {\textbf{Tester Information}} \\ \hline
 
 \multicolumn{2}{|l|} {\textbf{Name of Tester:}} &
 \multicolumn{4}{|l|} { } &
-\multicolumn{1}{|l|}{\textbf{Date:}} &  \\ \hline
+\multicolumn{1}{l|}{\textbf{Date:}} &  \\ \hline
 
 \multicolumn{2}{|l|} {\textbf{Hardware Ver:}} &
 \multicolumn{4}{|l|} {Robot 1.0} &
-\multicolumn{1}{|l|}{\textbf{Time:}} &  \\ \hline
+\multicolumn{1}{l|}{\textbf{Time:}} &  \\ \hline
 
 \multicolumn{2}{|l|} {\textbf{Setup:}}&
 \multicolumn{6}{|l|} {
-\makecell{   A wooden turn-table should be placed on top of the cardinal direction\\
-		map. This map should be aligned with a magnetic compass. There should be\\
-		no metal present while the alignment is being performed. Next, the\\
-		partially assembled robot should be placed on the turn-table. The MCU\\
-		should be connected to a terminal to observe and record data.} }  \\ \hline
+\makecell[l]{
+		A wooden turn-table should be placed on top of the cardinal \\
+		direction	map. This map should be aligned with a magnetic \\
+		compass. There should be no metal present while the alignment \\
+		is being performed. Next, the partially assembled robot should \\
+		be placed on the turn-table. The MCU should be connected to \\
+		a terminal to observe and record data.} }  \\ \hline
 
-\textbf{Step} & \textbf{Action} &  \textbf{Expected Result} & 
-\textbf{Pass} & \textbf{Fail} & \multicolumn{2}{l}{ \textbf{Comments}} \\  \hline
+{\rotatebox[origin=c]{-90}{ \textbf{Step}}} &
+{\rotatebox[origin=c]{-90}{ \textbf{Action}}} &
+{\rotatebox[origin=c]{-90}{\makecell{\textbf{Expected} \\ \textbf{Result}}}} &
+{\rotatebox[origin=c]{-90}{ \textbf{Pass}}} &
+{\rotatebox[origin=c]{-90}{\textbf{Fail}}} & 
+{\rotatebox[origin=c]{-90}{\textbf{N/A}}} & 
+\multicolumn{2}{l|} {\textbf{Comments}} \\  \hline
 
 1 & Write program to spool compass readings while simultaneously driving
 motors. & Program should be statically tested to verify accuracy. Should
-sample compass at a sufficient rate depending on speed. & & & & \multicolumn{2}{l}{} \\ \hline
+sample compass at a sufficient rate depending on speed. & & & & \multicolumn{2}{l|}{} \\ \hline
 2 & Run acceptance test & Test program should prompt user to turn the
 robot to an orientation and then spin the motors will then spin up and
-down. & & & & \multicolumn{2}{l}{}\\ \hline
+down. & & & & \multicolumn{2}{l|}{}\\ \hline
 3 & Plot spooled data in spreadsheet program. & Plots should be analyzed
 to see if compass deviated any more than 10 degrees from set point. & &
-& &\multicolumn{2}{l}{}\\ \hline
+& &\multicolumn{2}{l|}{}\\ \hline
 
-\multicolumn{3}{l}{\textbf{Overall test result:}} &   &  &  & \multicolumn{2}{l}{}\\ \hline
+\multicolumn{3}{|l|}{\textbf{Overall test result:}} &   &  &  & \multicolumn{2}{l|}{}\\ \hline
 \end{tabular}
 \end{table}
 
@@ -957,65 +980,77 @@ compass and then reads heading data from it. This unit test looks for
 heading errors greater than 10 degrees.
 
 \begin{table}[h]
+\small
 \caption{Matrix unit test for the digital compass.}
 \label{table:matrixTestDigitalCompass}
-\begin{tabular}{|m{1cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{2cm}|m{2cm}|}
+\begin{tabular}{|m{1cm}|m{2cm}|m{3.2cm}|m{0.5cm}|m{0.5cm}|m{0.5cm}|m{1cm}|m{1cm}|}
+
 \hline
 
-\multicolumn{8}{l} {\textbf{Test Writer:} Sue L. Engineer}\\ \hline
+\multicolumn{8}{|l|} {\textbf{Test Writer:} Sue L. Engineer}\\ \hline
 
-\multicolumn{2}{l} {\textbf{Test Case Name:}} &
-\multicolumn{4}{l} {Compass Unit Test \#1} &
-\multicolumn{1}{l}{\textbf{Test ID \#:}} & Comp-UT-01 \\ \hline
+\multicolumn{2}{|l|} {\textbf{Test Case Name:}} &
+\multicolumn{4}{|l|} {Compass Unit Test \#1} &
+\multicolumn{1}{l|}{\textbf{Test ID \#:}} & Comp-UT-01 \\ \hline
 
-\multicolumn{2}{l} {\textbf{Description:}}&
-\multicolumn{4}{l} {Checks that the compass returns correct angular measurements to the MCU.
-Test program is in ./test/compass\_unit\_test\_1.c} &
-\multicolumn{1}{l}{\textbf{Type:}} &  white box or black box \\ \hline
+\multicolumn{2}{|l|} {\textbf{Description:}}&
+\multicolumn{4}{|l|} {
+\makecell[l]{ 	Checks that the compass returns correct \\
+			angular measurements to the MCU. Test \\
+			program is in ./test/compass\_unit\_test\_1.c}} &
 
-\multicolumn{8}{l} {\textbf{Tester Information}} \\ \hline
+\multicolumn{1}{l|}{\textbf{Type:}} &  
+\multicolumn{1}{l|}{\makecell{$\square$ white box \\  $\text{\rlap{$\checkmark$}}\square$  black box }} \\ \hline
 
-\multicolumn{2}{l} {\textbf{Name of Tester:}} &
-\multicolumn{4}{l} { } &
-\multicolumn{1}{l}{\textbf{Date:}} &  \\ \hline
+\multicolumn{8}{|l|} {\textbf{Tester Information}} \\ \hline
 
-\multicolumn{2}{l} {\textbf{Hardware Ver:}} &
-\multicolumn{4}{l} {Compass Module - Geosensor version 2.3} &
-\multicolumn{1}{l}{\textbf{Time:}} &  \\ \hline
+\multicolumn{2}{|l|} {\textbf{Name of Tester:}} &
+\multicolumn{4}{|l|} { } &
+\multicolumn{1}{l|}{\textbf{Date:}} &  \\ \hline
 
-\multicolumn{2}{l} {\textbf{Setup:}}&
-\multicolumn{6}{l} {Compass module should be wired to the MCU through the SPI interface
-pins. The MCU should be connected to an RS232 terminal through its SCI
-interface. The terminal should be configured to run at 9600 baud.
-Cardinal directions map should be aligned using the magnetic
-compass.}   \\ \hline
+\multicolumn{2}{|l|} {\textbf{Hardware Ver:}} &
+\multicolumn{4}{|l|} {Compass Module - Geosensor version 2.3} &
+\multicolumn{1}{l|}{\textbf{Time:}} &  \\ \hline
 
-\textbf{Step} & \textbf{Action} &  \textbf{Expected Result} & 
-\textbf{Pass} & \textbf{Fail} & \multicolumn{2}{l}{ \textbf{Comments} }\\  \hline
+\multicolumn{2}{|l|} {\textbf{Setup:}}&
+\multicolumn{6}{|l|} {
+\makecell[l]{
+	Compass module should be wired to the MCU through the SPI interface\\
+	pins. The MCU should be connected to an RS232 terminal through its SCI\\
+	interface. The terminal should be configured to run at 9600 baud.\\
+	Cardinal directions map should be aligned using the magnetic\\
+	compass.}}   \\ \hline
 
+{\rotatebox[origin=c]{-90}{ \textbf{Step}}} &
+{\rotatebox[origin=c]{-90}{ \textbf{Action}}} &
+{\rotatebox[origin=c]{-90}{\makecell{\textbf{Expected} \\ \textbf{Result}}}} &
+{\rotatebox[origin=c]{-90}{ \textbf{Pass}}} &
+{\rotatebox[origin=c]{-90}{\textbf{Fail}}} & 
+{\rotatebox[origin=c]{-90}{\textbf{N/A}}} & 
+\multicolumn{2}{l|} {\textbf{Comments}} \\  \hline
 
 1 & Compile compass.c in /test directory & IDE should generate no
-warnings or errors. & & & & \multicolumn{2}{l}{}\\ \hline
+warnings or errors. & & & & \multicolumn{2}{l|}{}\\ \hline
 
-2 & Download & MCU should report ``download successful'' & & & & \multicolumn{2}{l}{}\\ \hline
+2 & Download & MCU should report ``download successful'' & & & & \multicolumn{2}{|l}{}\\ \hline
 
 3 & Execute & MCU should display compass splash screen on terminal
-interface. & & & & \multicolumn{2}{l}{}\\ \hline
+interface. & & & & \multicolumn{2}{l|}{}\\ \hline
 
 4 & Orientate compass to 0 degrees. & Terminal interface should display
-0 degrees +/- 10 degrees. & & & & \multicolumn{2}{l}{}\\ \hline
+0 degrees +/- 10 degrees. & & & & \multicolumn{2}{l|}{}\\ \hline
 
 5 & Orientate compass to 30 degrees. & Terminal interface should display
-30 degrees +/- 10 degrees. & & & & \multicolumn{2}{l}{}\\ \hline
+30 degrees +/- 10 degrees. & & & & \multicolumn{2}{l|}{}\\ \hline
 
 6 & Orientate compass to 45 degrees. & Terminal interface should display
-45 degrees +/- 10 degrees. & & & & \multicolumn{2}{l}{}\\ \hline
+45 degrees +/- 10 degrees. & & & & \multicolumn{2}{l|}{}\\ \hline
 
-\ldots{} & \ldots{} & \ldots{} & & & &  \multicolumn{2}{l}{}\\ \hline
+\ldots{} & \ldots{} & \ldots{} & & & &  \multicolumn{2}{l|}{}\\ \hline
 
 12 & Orientate compass to 315degrees. & Terminal interface should
-display 315 degrees +/- 10 degrees. & & & & \multicolumn{2}{l}{}\\ \hline
-\multicolumn{3}{l}{\textbf{Overall test result:}} &   &  &  &  \multicolumn{2}{l}{}\\ \hline
+display 315 degrees +/- 10 degrees. & & & & \multicolumn{2}{l|}{}\\ \hline
+\multicolumn{3}{|l|}{\textbf{Overall test result:}} &   &  &  &  \multicolumn{2}{l|}{}\\ \hline
 \end{tabular}
 \end{table}
 
@@ -1117,8 +1152,6 @@ exceptional set of documents and templates are available from the
 Systems Engineering Processing Group of the United States Air Force.
 While intended for software development, the checklists for unit and
 integration testing contain many insightful points. They are accessible
-at
-
-https://ossg.gunter.af.mil/applications/sep/menus/Main.aspx. The list of
-acceptance test items was due in part to the information fond at:
+at https://ossg.gunter.af.mil/applications/sep/menus/Main.aspx. The list of
+acceptance test items was due in part to the information fond at:\\
 http://www.tbs-sct.gc.ca/emf-cag/acceptance/outline/atpo-vper\_e.asp
