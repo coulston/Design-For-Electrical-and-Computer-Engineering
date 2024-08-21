@@ -349,13 +349,16 @@ identifies the legal claims that make the invention unique.
 \caption{(a) Example of a US patent for a floating point
 overflow and sign detection unit.}
 \label{figure:patentFloatingPoint}
+\end{figure}
 
+\begin{figure}
 \includegraphics[width=4.71in,height=7.26in]{./image2.png}
 \caption{(b) First page of the patent description.}
+\end{figure}
 
+\begin{figure}
 \includegraphics[width=4.8in,height=7.25in]{./image3.png}
 \caption{(c) Conclusion of the patent and its claims.}
-
 \end{figure}
 
 
@@ -501,7 +504,7 @@ enough that we could certify it? It really meets the needs and the
 standard has a margin of error built in to it."}
 
 \textbf{DILBERT\textsuperscript{®} by Scott Adams}
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=5.5in,height=1.9in]{./image4.png}
 \caption{Dilbert's ethical dilemma. (Dilbert © United
 Feature Syndicate. Reprinted by permission.)}
@@ -510,7 +513,7 @@ Feature Syndicate. Reprinted by permission.)}
 
 
 A framework for considering decisions is shown in the 2x2 matrix shown
-in Figure 11.3 {[}Die00{]}. The idea is that decisions have both ethical
+in Figure~\ref{figure:ethics2by2Matrix} {[}Die00{]}. The idea is that decisions have both ethical
 and legal dimensions to them. The legality may be in terms of internal
 company policies or local, state, and federal laws. Quadrant I decisions
 are clearly to be avoided as they are not legal or ethical. Quadrant II
@@ -528,11 +531,10 @@ address than the immediate dilemma, but have the potential for high
 payoff. Clearly, quadrant IV decisions are best and the goal in the
 decision process.
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=2.5in,height=2.3in]{./image5}
-\caption{A 2x2 matrix for ethical decision making
-{[}Die00{]}.}
-\label{figure:dilberEthics}
+\caption{A 2x2 matrix for ethical decision making {[}Die00{]}.}
+\label{figure:ethics2by2Matrix}
 \end{figure}
 
 One way to evaluate a decision is through what is known as the
@@ -612,16 +614,15 @@ Martin Corporation in their employee ethics training programs
   interests of the stakeholders and the ethical values.
 \end{enumerate}
 
-Example 11.1 demonstrates the application of this paradigm to a case
+Example~\ref{example:ethicsFlawChipDesign} demonstrates the application 
+of this paradigm to a case
 study for a flawed chip design. More case studies are provided in the
 end of chapter problems.
 
-\begin{table}
-\begin{tabular}{m{15cm}|}
-
-\textbf{Example 11.1} Ethics case study for a flawed chip design. (Texas
+\begin{example}{Ethics case study for a flawed chip design. (Texas
 A\&M Ethics Case studies, \url{http://ethics.tamu.edu}. Reprinted by
-permission.)\\
+permission.)  }
+\label{example:ethicsFlawChipDesign}
 
 Your company has designed a chip for a new scientific calculator that
 features high-precision floating-point accuracy to 17 significant digits
@@ -722,10 +723,11 @@ solution. Option A might be seen as a viable choice, however, since it
 could be reasoned that handheld calculators are not often used for
 safety critical applications. That is a risky assumption and the
 potential negative effects are great. Also note that the ideal situation
-would have been to develop a test plan (Chapter 7) that would have
+would have been to develop a test plan (Chapter~\ref{chapter:testing})
+ that would have
 caught this error before release.
-\end{tabular}
-\end{table}
+
+\end{example}
 
 \section{Project Application: Incorporating Ethics in the Design Process}
 \label{setion:project-application-incorporating-ethics-in-the-design-process}
@@ -748,7 +750,8 @@ ethical considerations are included throughout the design process are:
 \item
   \emph{Make sure that the requirements meet the needs of the
   stakeholders}. If they do not, the wrong system will be designed. This
-  is the concept of validation that was addressed in Chapter 3. Be
+  is the concept of validation that was addressed in 
+Chapter~\ref{chapter:requirementSpec}. Be
   honest and realistic in making claims about what the system can do and
   realize that all have limitations. There is often tension between
   engineering and marketing functions of an organization, with engineers
@@ -779,7 +782,8 @@ ethical considerations are included throughout the design process are:
   understand technology, its application, and potential consequences.
   This can be done formally through the use of techniques such as
   failure mode analysis and the examination of system reliability
-  (Chapter 8). In safety critical systems, the use of redundant systems
+  (Chapter~\ref{chapter:systemReliability}). In safety critical systems, 
+the use of redundant systems
   may be warranted to improve reliability. An excellent example of a
   technical design that incorporates redundancy in a safety critical
   application for a hot tub controller is found in the article
@@ -804,7 +808,8 @@ ethical considerations are included throughout the design process are:
   honest criticism of technical work and acknowledge and correct errors.
 \item
   \emph{Verify the engineering requirements during testing}. We saw in
-  Chapter 3 that verification is the process of showing that the system
+  Chapter~\ref{chapter:requirementSpec} that verification is the 
+process of showing that the system
   is built properly. Verification usually occurs at the end of a project
   at a time that there may be a great deal of pressure to complete the
   tests and finish the project.
