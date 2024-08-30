@@ -9,7 +9,23 @@
 \settrims{0pt}{0pt}
 \semiisopage[9]		% [N] is spine margin is 1/Nth pf page 
 
+%% Definitions used throughout the text for formatting
 \include{preamble}
+
+%% When displayed, the solutions have two arguments:
+%%		#1 The type of problem
+%%				R	Review
+%%				A	Application
+%%				P 	Project
+%%		#2 The text of the solution
+\newenvironment{solution}[2]
+	{ 	
+		\textbf{[#1]}
+		\textit{#2}  }   
+	{}
+
+%% Do not display the solutions - main body of text
+%\newenvironment{solution}[2]{}{}
 
 \begin{document}
 
@@ -55,6 +71,8 @@ using the book.}
 Feedback and suggestions concerning any aspect of this manual, that would likely benefit the
 overall presentation, would be much appreciated. Please send your comments via email to
 Ralph-Ford@psu.edu or coulston@mines.edu
+
+
 
 \include{./chapter01/problemSet01}
 
