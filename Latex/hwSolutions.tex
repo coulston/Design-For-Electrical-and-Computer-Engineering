@@ -1,0 +1,61 @@
+%%------------------------------------------------------
+%% Design for ECE Solutions Manual
+%%------------------------------------------------------
+
+
+% Excellent reference to the memoir package: https://www.ctan.org/pkg/memoir
+\documentclass[letterpaper, 10pt]{memoir}
+\chapterstyle{ger}
+\settrims{0pt}{0pt}
+\semiisopage[9]		% [N] is spine margin is 1/Nth pf page 
+
+\include{preamble}
+
+\begin{document}
+
+\frontmatter
+\title{{\Huge Design for Electrical and Computer Engineers} \\
+				Theory, Concepts, and Practice\\
+				Instructor's Solution Manual}
+\author{Ralph M. Ford and Christopher S. Coulston}
+\date{}
+\maketitle
+
+
+\include{copyright}
+
+\tableofcontents
+
+
+\mainmatter 					% Now Use Arabic numerals for page numbers
+
+\textbf{Preface: How to Use This Manual}\\
+
+This manual provides solutions to the problems found in 
+\ul{Design for Electrical and Computer Engineers: Theory, Concepts, and Practice}. 
+For guidance to instructor’s we identify problems as
+either: review, application, and project. Review-type problems usually ask the student to restate
+an important concept from the text, whereas application problems are those where the students
+are required to solve a more in-depth project that demonstrates an understanding of the concepts
+learned to a new scenario. Project problems are important steps in the completion of a senior
+capstone design project. Each particular problem is categorized in this solutions manual as to the
+type of problem it is by using the key [R], [A], and [P].\\
+
+Furthermore, we also provide our guidance (identified in the manual as Notes), from experience
+teaching the material, with pointers on how we present the material and apply it to student
+projects. Selected project assignments are also supplied.\\
+
+
+\textit{We also ask that instructor’s keep this manual for instructor use only and do not post or
+otherwise distribute our solutions in any form. Unfortunately, it is becoming all too common
+for solutions to be copied and distributed over the Internet, thus hurting other instructors
+using the book.}
+
+\textbf{Feedback}\\
+Feedback and suggestions concerning any aspect of this manual, that would likely benefit the
+overall presentation, would be much appreciated. Please send your comments via email to
+Ralph-Ford@psu.edu or coulston@mines.edu
+
+\include{./chapter01/problemSet01}
+
+\end{document} 
