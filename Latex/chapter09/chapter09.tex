@@ -93,7 +93,8 @@ goals. The goals take time to develop and the team will likely flounder
 in creating them, but without specific goals to achieve there is no need
 for a team. In the context of design, the team's goals are defined by
 the Problem Statement and Requirements Specification developed in
-Chapters 2 and 3 respectively. They collectively state what the team is
+Chapters~\ref{chapter:projectSelection} and \ref{chapter:requirementSpec} 
+respectively. They collectively state what the team is
 trying to achieve and provide a way for the team to verify its
 success---are the requirements met and can the team demonstrate that
 they are?
@@ -164,7 +165,8 @@ assumption that teams will move through these stages as a function of
 the time the team is together. That is certainly a desired goal, but not
 necessarily what the model implies.
 
-\begin{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[width=4.73in,height=3.59in]{./image1.png}
 \caption{The team performance curve proposed by Katzenbach
 and Smith {[}Kat93{]}. This shows the performance impact of teams versus
@@ -241,7 +243,9 @@ team members who are dissatisfied with the project from the outset.
 Teams are created to realize shared goals, and if the goals are not
 well-defined, the motivation for being part of the team is not clear. In
 the context of engineering design, the combined Problem Statement and
-Requirements Specification presented in Chapters 2 and 3 serve that
+Requirements Specification presented in 
+Chapters~\ref{chapter:projectSelection} and \ref{chapter:requirementSpec} 
+serve that
 purpose. The Problem Statement describes what the team is trying to
 achieve, while the Requirements Specification sets verifiable targets
 that define success. Both items are so important, that there should be a
@@ -296,7 +300,8 @@ decision-making are outlined as follows {[}Joh02{]}:
 
 A formal and widely used method for brainstorming and team
 decision-making is known as the \emph{\textbf{Nominal Group Technique}}
-(NGT) {[}Del71{]}. NGT was covered in Chapter 4 and is repeated here. In
+(NGT) {[}Del71{]}. NGT was covered in Chapter~\ref{chapter:conceptGen} 
+and is repeated here. In
 NGT, each team member silently generates solutions to a problem and the
 ideas are then reported out in a round-robin fashion until all ideas are
 exhausted. Then, each member gets to cast a predetermined number of
@@ -423,7 +428,8 @@ Nothing creates problems more than when team members do not have clearly
 defined responsibilities and tasks. The workload needs to be distributed
 in a fair manner and all members must perform real work. Without this,
 one or two people do most of the work, or even worse, nothing gets done.
-Chapter 10 presents project management principles, one of the primary
+Chapter~\ref{chapter:projectManagement} presents project management 
+principles, one of the primary
 aims of which is to develop and assign tasks to team members. Teams may
 consider designating one person as the project manager who is
 responsible for tracking the team's progress and ensuring that members
@@ -473,7 +479,8 @@ other members of your team. Ways to do this are to:
   \emph{Respect those not present.} Nothing creates divisions and
   factions in a team faster than personally criticizing members not
   present. If a team member is not performing, refer to the Team Process
-  Guidelines examined in Section 9.4 for holding them accountable.
+  Guidelines examined in Section~\ref{subsection:manage-conflicts-constructively} 
+  for holding them accountable.
 \item
   \emph{Communicate your ideas.} If you have an idea, clearly state it
   and be prepared to explain what the merits are. Be prepared for
@@ -578,48 +585,18 @@ Process Guidelines include:
 \end{itemize}
 
 This document should be developed early on, referred to regularly
-throughout the project, and updated by the team as necessary. Table 9.1
+throughout the project, and updated by the team as necessary. 
+Table~\ref{table:teamCheckList}
 contains a checklist and self-assessment of the team formation stage and
 processes.
 
-\section{Summary and Further Reading}
-\label{section:summary-and-further-reading}
-
-This chapter touched on some of the fundamental concepts of team
-development that have been reported in the literature. Two well-known
-models of team development were presented. The first is the Tuckman
-model of the forming, storming, norming, performing, and adjourning
-stages. It is important for teams to carefully navigate the formative
-stages, agree upon the objectives, and reach the performing stage. The
-second is the Katzenbach and Smith team performance curve presented in
-Figure 9.1. Selected characteristics of real teams were identified.
-Finally, Team Process Guidelines are a tool for identifying a team's
-norms, problem solving approach, and self governing principles. A format
-for the guidelines was presented.
-
-There are many excellent books and resources available that examine
-teams and teamwork. One that influenced this chapter greatly is \ul{The
-Wisdom of Teams} by Katzenbach and Smith {[}Kat93{]}. It is a seminal
-work in the field and a widely recognized resource that addresses how to
-create effective teams. The forming, storming, norming, performing, and
-adjourning model of team development was proposed by Bruce Tuckman
-{[}Tuc65{]} and is widely documented as a good model for team
-development. \ul{The Team Training Workbook} {[}Bel94{]} is another
-valuable resource developed by Arizona State University engineering
-faculty members. \ul{Teamwork and Project Management} by Karl Smith
-{[}Smi04{]} is a short introduction to both teamwork principles and
-project management for engineering students. Free personality tests and
-temperament sorters can be found online; one example being the Keirsey
-Temperament Sorter at
-\href{http://www.advisorteam.com/}{www.advisorteam.com}.
-
-
-\begin{table}
+\begin{table}[h]
+\small
 \caption{Checklist and self-assessment for team formation and
 processes. 1 = Strongly Disagree, 2 = Disagree, 3 = Neutral, 4= Agree, 5
 = Strongly Agree.}
 \label{table:teamCheckList}
-\begin{tabular}{|m{15cm}|l|}
+\begin{tabular}{|m{12.5cm}|l|}
 \hline
 \rowcolor{Gray}
 \textbf{Team Formation} & \textbf{Score} \\ \hline
@@ -643,3 +620,37 @@ The team members trust each other. & \\ \hline
 The team members demonstrate respect for each others ideas. & \\ \hline
 \end{tabular}
 \end{table}
+
+
+\section{Summary and Further Reading}
+\label{section:summary-and-further-reading}
+
+This chapter touched on some of the fundamental concepts of team
+development that have been reported in the literature. Two well-known
+models of team development were presented. The first is the Tuckman
+model of the forming, storming, norming, performing, and adjourning
+stages. It is important for teams to carefully navigate the formative
+stages, agree upon the objectives, and reach the performing stage. The
+second is the Katzenbach and Smith team performance curve presented in
+Figure~\ref{figure:teamPerformance}. Selected characteristics of real 
+teams were identified.
+Finally, Team Process Guidelines are a tool for identifying a team's
+norms, problem solving approach, and self governing principles. A format
+for the guidelines was presented.
+
+There are many excellent books and resources available that examine
+teams and teamwork. One that influenced this chapter greatly is \ul{The
+Wisdom of Teams} by Katzenbach and Smith {[}Kat93{]}. It is a seminal
+work in the field and a widely recognized resource that addresses how to
+create effective teams. The forming, storming, norming, performing, and
+adjourning model of team development was proposed by Bruce Tuckman
+{[}Tuc65{]} and is widely documented as a good model for team
+development. \ul{The Team Training Workbook} {[}Bel94{]} is another
+valuable resource developed by Arizona State University engineering
+faculty members. \ul{Teamwork and Project Management} by Karl Smith
+{[}Smi04{]} is a short introduction to both teamwork principles and
+project management for engineering students. Free personality tests and
+temperament sorters can be found online; one example being the Keirsey
+Temperament Sorter at
+\href{http://www.advisorteam.com/}{www.advisorteam.com}.
+

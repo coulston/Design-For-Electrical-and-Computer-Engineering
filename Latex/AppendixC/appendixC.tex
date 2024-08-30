@@ -3,7 +3,8 @@
 \graphicspath{ {./appendixC/Fig} }
 
 This appendix contains failure rate data for selected electronic
-components in support of Chapter 8. The information was abstracted from
+components in support of Chapter~\ref{chapter:systemReliability}. 
+The information was abstracted from
 the \ul{Military Handbook for Reliability Prediction}
 {[}MIL-HDBK-217F{]} and contains information for devices that are
 relevant to this book. The information is a close facsimile to
@@ -132,16 +133,16 @@ $$\lambda = \lambda_{b} \pi_{R} \pi_{Q} \pi_{E} \frac{\text{failures}}{10^{6} \t
 \label{table:baseFailureRate}
 \begin{tabular}{|l|m{10cm}|} \hline
 \rowcolor{Gray}
-\textbf{Resistor Type} &
+\T \textbf{Resistor Type} &
 $\lambda_b$ 
-(T = ambient temperatire in $^\circ$ C, 
-S = $\frac{\text{operating power}}{\text{device power rating}})$ \\ \hline
-Fixed Composition & 
-$\lambda_b = 4.5*10^{-9} exp [12(\frac{T+273}{343})] exp[\frac{S}{0.6}(\frac{T+273}{273})]$ \\ \hline
-Fixed Film &
-$\lambda_b = 3.25*10^{-4} exp [12(\frac{T+273}{343})^3] exp[S(\frac{T+273}{273})]$ \\ \hline
-Wirewound &
-$\lambda_b = 0.0031 exp [12(\frac{T+273}{343})^{10}] exp\{[S(\frac{T+273}{273})]^{1.5}\}$ \\ \hline
+(T = ambient temperatire in $^\circ$C, 
+S = $\frac{\text{operating power}}{\text{device power rating}})$ \B \\ \hline
+\T Fixed Composition & 
+$\lambda_b = 4.5*10^{-9} exp [12(\frac{T+273}{343})] exp[\frac{S}{0.6}(\frac{T+273}{273})]$ \B \\ \hline
+\T Fixed Film &
+$\lambda_b = 3.25*10^{-4} exp [12(\frac{T+273}{343})^3] exp[S(\frac{T+273}{273})]$ \B \\ \hline
+\T Wirewound &
+$\lambda_b = 0.0031 exp [12(\frac{T+273}{343})^{10}] exp\{[S(\frac{T+273}{273})]^{1.5}\}$ \B \\ \hline
 \end{tabular}
 \end{table}
 
@@ -220,9 +221,9 @@ operating voltage is the sum of the DC and peak AC voltage.
 \caption{\textbf{Base Failure Rate -} $\lambda_{b}$}
 \label{table:baseFailureRate}
 \begin{tabular}{l}
-$\lambda_b = 0.0003 [(\frac{S}{0.3}^{3})+1] exp [\frac{T+273}{358}]$ for T=85$^{\circ}$C max rated \\ 
-$\lambda_b = 0.0003 [(\frac{S}{0.3}^{3})+1] exp [\frac{T+273}{398}]$ for T=125$^{\circ}$C max rated \\ 
-$\lambda_b = 0.0003 [(\frac{S}{0.3}^{3})+1] exp [\frac{T+273}{423}]$ for T=150$^{\circ}$C max rated \\ 
+\T $\lambda_b = 0.0003 [(\frac{S}{0.3}^{3})+1] exp [\frac{T+273}{358}]$ for T=85$^{\circ}$C max rated  \B \\ 
+\T $\lambda_b = 0.0003 [(\frac{S}{0.3}^{3})+1] exp [\frac{T+273}{398}]$ for T=125$^{\circ}$C max rated \B \\ 
+\T $\lambda_b = 0.0003 [(\frac{S}{0.3}^{3})+1] exp [\frac{T+273}{423}]$ for T=150$^{\circ}$C max rated \B \\ 
 \end{tabular}
 \end{table}
 
@@ -714,7 +715,7 @@ The failure rate is given by the following relationship
 $$\lambda = \lambda_{b} \pi_{T} \pi_{A} \pi_{Q} \pi_{E} \frac{\text{failures}}{10^{6} \text{hours}}$$
 
 
-\begin{table}
+\begin{table}[h]
 \caption{\textbf{Base Failure Rate -} $\lambda_{b}$}
 \label{table:baseFailRateMosLow}
 \begin{tabular}{|c|c|} \hline
@@ -726,7 +727,7 @@ JFET & 0.0045 \\ \hline
 \end{table}
 
 
-\begin{table}
+\begin{table}[h]
 \caption{\textbf{Temperature Factor -} $\pi_{T}$}
 \label{table:tempFactorMosLow}
 \begin{tabular}{l} 
@@ -834,7 +835,7 @@ Lower & 5.0 \\ \hline
 \end{table}
 
 
-\begin{table}
+\begin{table}[h]
 \caption{\textbf{Environmental Factor -} $\pi_{E}$}
 \label{table:envFactorMosLow}
 \begin{tabular}{|c|c|} \hline
@@ -883,7 +884,7 @@ $$\lambda = (C_{1}\pi_{T} + C_{2}\pi_{E}) \pi_{Q} \pi_{L} \frac{\text{failures}}
 \label{table:complexFailureRateBjt}
 \begin{tabular}{|c|c|c|c|c|c|} \hline
 \rowcolor{Gray}
-\multicolumn{2}{|c|}{\textbf{Digital}} 	& \multicolumn{2}{|c|}{\textbf{Linear}} & \multicolumn{2}{|c|}{\textbf{PLA/PAL}} \\ \hline
+\multicolumn{2}{|c|}{\textbf{Digital}} 	& \multicolumn{2}{c|}{\textbf{Linear}} & \multicolumn{2}{c|}{\textbf{PLA/PAL}} \\ \hline
 \rowcolor{Gray}
 No. Gates & $C_{1}$ & No. Transistors &$C_{1}$ & No. Gates & $C_{1}$ \\ \hline
 1 to 100 			& 0.0025 			& 1 to 100 				& 0.010 		& Up to 200 		& 0.010 		\\ \hline
@@ -903,7 +904,7 @@ No. Gates & $C_{1}$ & No. Transistors &$C_{1}$ & No. Gates & $C_{1}$ \\ \hline
 \label{table:complexFailureRateIc}
 \begin{tabular}{|c|c|c|c|c|c|} \hline
 \rowcolor{Gray}
-\multicolumn{2}{|c|}{\textbf{Digital}} & \multicolumn{2}{|c|}{\textbf{Linear}} & \multicolumn{2}{|c|}{\textbf{PLA/PAL}} \\ \hline
+\multicolumn{2}{|c|}{\textbf{Digital}} & \multicolumn{2}{c|}{\textbf{Linear}} & \multicolumn{2}{c|}{\textbf{PLA/PAL}} \\ \hline
 \rowcolor{Gray}
 No. Gates & $C_{1}$ & No. Transistors &$C_{1}$ & No. Gates & $C_{1}$ \\ \hline
 1 to 100 			& 0.010 			& 1 to 100 			& 0.010 		& Up to 500 			& 0.00085 	\\ \hline
@@ -931,11 +932,11 @@ Up to 32 		& 0.24		&	0.56		\\ \hline
 \caption{ $C_{2} =$ \textbf{Package Failure Rate for all microcircuits.} \\ $N_{p}$ \textbf{= number of pins on package.}}
 \label{table:packageFailRateIc}
 \begin{tabular}{|l|} \hline
-$C_{2} = 2.8 x 10^{-4} (N_{p})^{1.08}$, Hermetic: DIPs with solder or weld seal, SMT 			\\
-$C_{2} = 9.0 x 10^{-5} (N_{p})^{1.51}$, DIPs with glass seal		\\
-$C_{2} = 3.0 x 10^{-5} (N_{p})^{1.82}$, Flatpacks with axial leads on 50 mil centers		\\
-$C_{2} = 2.8 x 10^{-4} (N_{p})^{2.01}$, Cans			\\
-$C_{2} = 3.0 x 10^{-5} (N_{p})^{1.08}$,Nonhermetic: DIPs PGA, SMT (leaded and nonleaded)			\\ \hline
+\T$C_{2} = 2.8 x 10^{-4} (N_{p})^{1.08}$, Hermetic: DIPs with solder or weld seal, SMT 			\\
+\T$C_{2} = 9.0 x 10^{-5} (N_{p})^{1.51}$, DIPs with glass seal		\\
+\T$C_{2} = 3.0 x 10^{-5} (N_{p})^{1.82}$, Flatpacks with axial leads on 50 mil centers		\\
+\T$C_{2} = 2.8 x 10^{-4} (N_{p})^{2.01}$, Cans			\\
+\T$C_{2} = 3.0 x 10^{-5} (N_{p})^{1.08}$,Nonhermetic: DIPs PGA, SMT (leaded and nonleaded)			\\ \hline
 \end{tabular}
 \end{table}
 
@@ -958,7 +959,7 @@ $\pi_{T} = 0.1 exp[-\frac{E_{a}}{8.617x10^{-5}} (\frac{1}{T_j + 273} - \frac{1}{
 \textbf{BiCMOS LSTTL} & 0.5 \\ \hline
 \textbf{Digital MOS, VHSIC CMOS} & 0.35 \\ \hline
 \textbf{Linear (Bipolar and MOS)}&  0.65 \\ \hline
-\textbf{Memories (Bipolar and MOS), NMOS}  0.6 \\ \hline
+\textbf{Memories (Bipolar and MOS), NMOS}  & 0.6 \\ \hline
 \end{tabular}
 \end{table}
 

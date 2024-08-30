@@ -40,9 +40,13 @@
 
 
 
-% Draws a item list bullet
+% Draws a item list bullet, helps create fake lists in table (tightens up the list)
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
+%Adding this before the "\\" in a table line will give you some more room below 
+\newcommand\B{\rule[-2.5ex]{0pt}{0pt}} 		% Bottom strut
+%Adding this before the first row item will give you some room above
+\newcommand\T{\rule{0pt}{4ex}}       % Top strut
 
 % I want all quotes to be in italics
 \newenvironment{itquote}

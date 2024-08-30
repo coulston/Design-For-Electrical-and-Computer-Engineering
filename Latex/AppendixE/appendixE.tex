@@ -7,11 +7,13 @@ design project that was developed by a team of students utilizing the
 principles of this textbook. 
 
 \textbf{The Visual Aid}
+\begin{center}
 Ryan Andrus, Luis Catoni, Carl Schnur, and Freddy Chiu \\
 A Senior Project Report Submitted to the Faculty of \\
 Electrical, Computer, and Software Engineering \\
 Penn State Erie, The Behrend College \\
 April 2006
+\end{center}
 
 \textbf{1 Problem Statement}\\
 \textbf{1.1 Need}
@@ -96,6 +98,7 @@ The team interviewed a number of sources to identify the objectives in
 the tree below.
 
 \begin{figure}[h]
+\centering
 \includegraphics[width=3.80278in,height=3.76528in]{./image1.jpeg}
 \caption{The needs and objective tree.}
 \label{figure:caseStudyNeedsObjective}
@@ -194,10 +197,11 @@ The marketing requirements are: (1) Portability, (2) weight, (3) operable enviro
 The Visual Aid device has three major physical components: 1) a set of
 sensors, 2) a matrix of vibrating motors and 3) a processing unit. These
 physical components are interconnected through the processing unit and
-are attached to the user as in Figure 2 below.
+are attached to the user as in Figure~\ref{figure:caseStudySideView} below.
 
 
 \begin{figure}[h]
+\centering
 \includegraphics[width=4.93194in,height=3.55278in]{./image2.png}
 \caption{Visual Aid side view.}
 \label{figure:caseStudySideView}
@@ -217,6 +221,7 @@ overlap with each other. The sensor matrix is aligned to give a wider
 range in the vertical orientation than the horizontal.
 
 \begin{figure}[h]
+\centering
 \includegraphics[width=4.50764in,height=2.54514in]{./image3.jpeg}
 \caption{Wide-beam sensors array.}
 \label{figure:caseStudyWideBeam}
@@ -226,7 +231,8 @@ The third module detects objects and steps up or down at the ground
 level. This module consists of a wide-beam sensor and a narrow-beam
 sensor. The wide-beam sensor detects objects and obstructions on the
 ground. The narrow-beam sensor detects uneven surfaces such as steps and
-stairs. This sensor will be positioned as shown in Figure 4 with an
+stairs. This sensor will be positioned as shown in 
+Figure~\ref{figure:caseStudyNarrowBeam} with an
 angle $\theta$. This angle is adjustable to fit user needs. On flat surfaces,
 the sensor will detect a distance x + z. When a step is encountered, the
 distance read by the sensor will be diminished to x. In order to avoid
@@ -234,6 +240,7 @@ distance read by the sensor will be diminished to x. In order to avoid
 while walking, a digital filter is used.
 
 \begin{figure}[h]
+\centering
 \includegraphics[width=4.25in,height=2.74236in]{./image4.png}
 \caption{Narrow-beam sensor.}
 \label{figure:caseStudyNarrowBeam}
@@ -241,19 +248,24 @@ while walking, a digital filter is used.
 
 
 The second major component of the system consists of 2 motors located in
-the front area of the user (see Figure 5), and 12 vibrating motors
-configured in a 3x3 matrix on the back of the user (see Figure 6). The
+the front area of the user (see Figure~\ref{figure:caseStudySensorMotors}), 
+and 12 vibrating motors
+configured in a 3x3 matrix on the back of the user (see 
+Figure~\ref{figure:caseStudyMotorMatrix}). The
 head unit motor allows the user to scan for objects by moving their
 head; the motor will generate higher intensity for closer objects and
 lower intensity for farther objects. The narrow-beam motor is used to
 provide feedback about an uneven surface detected by the narrow beam
-sensor shown in Figure 4. The 3x3 matrix shown in Figure 6 is mounted on
+sensor shown in Figure~\ref{figure:caseStudyNarrowBeam}. 
+The 3x3 matrix shown in 
+Figure~\ref{figure:caseStudyMotorMatrix} is mounted on
 the users back provides feedback according to objects detected in front
 of the users. For example if an object is detected in the lower right
 corner, then the lower right motor will vibrate. The matrix motors also
 vary their intensity according to the distance of objects detected.
 
 \begin{figure}[h]
+\centering
 \includegraphics[width=4.54514in,height=3.04514in]{.//image5.png}
 \caption{Sensors and Front Motors}
 \label{figure:caseStudySensorMotors}
@@ -261,6 +273,7 @@ vary their intensity according to the distance of objects detected.
 
 
 \begin{figure}[h]
+\centering
 \includegraphics[width=4.69722in,height=3.09861in]{./image6.png}
 \caption{The motors matrix.}
 \label{figure:caseStudyMotorMatrix}
@@ -289,6 +302,7 @@ The level 0 description of the Visual Aide describes the overall input,
 output, and behavior expected of the device.
 
 \begin{figure}[h]
+\centering
 \includegraphics[width=3.53056in,height=2.45486in]{./image7.png}
 \caption{Level 0.}
 \label{figure:caseStudyLevel0}
@@ -333,6 +347,7 @@ The level 1 diagram reveals what is inside the level 0 box shown in
 Figure~\ref{figure:caseStudyLevel0}.
 
 \begin{figure}[h]
+\centering
 \includegraphics{./image8}
 \caption{ Level 1 system design.}
 \label{figurecaseStudyLevel1:}
@@ -384,8 +399,9 @@ proximity of the object and relative to the location of the object.
 \begin{table}[h]
 \begin{tabular}{|m{2cm}|m{10cm}|}  \hline
 \emph{Module} & IR Sensor Bank \\ \hline
-\emph{Inputs} & \tabitem 5V DC for power. 
-\tabitem Environment (objects): objects at head level and steps. \\ \hline
+\emph{Inputs} & \makecell[l]{
+		\tabitem 5V DC for power. \\
+		\tabitem Environment (objects): objects at head \\ level and steps. } \\ \hline
 \emph{Outputs} & \tabitem V\textsubscript{0}-V\textsubscript{2}: voltages ranging from 0.55V DC to 2.8V DC \\ \hline
 \emph{Functionality} & One sensor to detect objects at head level and
 another sensor angled to detect uneven surfaces. \\ \hline
@@ -396,9 +412,12 @@ another sensor angled to detect uneven surfaces. \\ \hline
 \begin{tabular}{|m{2cm}|m{10cm}|} \hline
 \emph{Module} & Ultrasonic Sensor Bank \\ \hline
 \emph{Inputs} & 
-\tabitem 5V DC for power.
-\tabitem Environment (objects): objects at least 1in wide and 2in high found in a 2ft wide area in front of the user.
-\tabitem D\textsubscript{0}-D\textsubscript{7}: forwarded 5V DC 10µs control signal from PIC to selected sensor. \\ \hline
+\makecell[l]{ 
+	\tabitem 5V DC for power.\\
+	\tabitem Environment (objects): objects at least 1in wide and 2in high \\
+			found in a 2ft wide area in front of the user.\\
+	\tabitem D\textsubscript{0}-D\textsubscript{7}: forwarded 5V DC 10µs control signal \\
+			from PIC to selected sensor. } \\ \hline
 \emph{Outputs} & \tabitem U\textsubscript{0}-U\textsubscript{7}: 0-5V DC pulse
 signal from 100µs to 18ms corresponding to selected sensor. \\ \hline
 \emph{Functionality} & Detects objects on the floor and in front of the
@@ -410,8 +429,9 @@ distance to object. \\ \hline
 \begin{table}[h]
 \begin{tabular}{|m{2cm}|m{10cm}|}  \hline
 \emph{Module} & Vibrating Motor Bank \\ \hline
-\emph{Inputs} & \tabitem5V DC for power.
-\tabitem M\textsubscript{0}-M\textsubscript{11}: PWM signals from 0-5V DC \\ \hline
+\emph{Inputs} & \makecell[l]{
+	\tabitem5V DC for power.\\
+	\tabitem M\textsubscript{0}-M\textsubscript{11}: PWM signals from 0-5V DC } \\ \hline
 \emph{Outputs} & \tabitem Sensorial feedback (vibrations): sustained or pulsed
 vibrations with varied intensities. \\ \hline
 \emph{Functionality} & Converts the processed sensor information into
@@ -422,12 +442,14 @@ feedback for the user. \\ \hline
 \begin{table}[h]
 \begin{tabular}{|m{2cm}|m{10cm}|} \hline
 \emph{Module} & PIC 18F452 \\ \hline
-\emph{Inputs} & \tabitem 5V DC for power.
-\tabitem R\textsubscript{0}-R\textsubscript{2}: analog voltage feedback from 0.55Vto 2.8V
-\tabitem U\textsubscript{X}: 0-5V DC pulse signal from 100µs to 18ms. \\ \hline
-\emph{Outputs} & \tabitem S\textsubscript{0}-S\textsubscript{2}: digital select lines
-\tabitem U\textsubscript{C}: 5V DC 10µs pulse
-\tabitem M\textsubscript{0}-M\textsubscript{11}: PWM signals with \ul{?} period and \ul{?}\% duty cycle \\ \hline
+\emph{Inputs} & \makecell[l]{
+	\tabitem 5V DC for power.\\
+	\tabitem R\textsubscript{0}-R\textsubscript{2}: analog voltage feedback from 0.55Vto 2.8V\\
+	\tabitem U\textsubscript{X}: 0-5V DC pulse signal from 100µs to 18ms. }\\ \hline
+\emph{Outputs} & \makecell[l]{
+	\tabitem S\textsubscript{0}-S\textsubscript{2}: digital select lines\\
+	\tabitem U\textsubscript{C}: 5V DC 10µs pulse\\
+	\tabitem M\textsubscript{0}-M\textsubscript{11}: PWM signals with \ul{?} period and \ul{?}\% duty cycle }\\ \hline
 \emph{Functionality} & Gather data from ultrasonic and IR sensors, then
 convert it to PWM signals that drive the vibrating motors. \\ \hline
 \end{tabular}
@@ -468,9 +490,9 @@ following table outlines of the advantages and disadvantages of two
 methods.
 
 \begin{table}[h]
-\caption{ser feedback selection.}
-\label{table:<context>}
-\begin{tabular}{|m{3cm}|m{3cm}|m{3cm}|} \hline
+\caption{User feedback selection.}
+\label{table:appendixEuserFeedback}
+\begin{tabular}{|m{3cm}|m{4cm}|m{5cm}|} \hline
 \emph{\textbf{Method}} & \emph{\textbf{Advantages}} & \emph{\textbf{Disadvantages}} \\ \hline
 Vibration & Quiet operation Inexpensive & May take time for user to get used to this type of
 sensorial feedback \\ \hline
@@ -507,6 +529,7 @@ behavior of the system as a state diagram, listing out the sequence of
 operations that are performed by the MCU.
 
 \begin{figure}[h]
+\centering
 \includegraphics{./image9}
 \caption{Main state diagram for software.}
 \label{figure:caseStudySoftwareArch}
@@ -595,6 +618,7 @@ the height bob of a walker from the drop off of a set of steps.
 \end{table}
 
 \begin{figure}[h]
+\centering
 \includegraphics[width=5.44722in,height=3.71181in]{./image10}
 \caption{ ADC samples from the narrow beam sensor, raw and filtered.}
 \label{figure:caseStudyAdcSamples}

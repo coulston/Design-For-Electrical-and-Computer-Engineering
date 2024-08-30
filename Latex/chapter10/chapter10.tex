@@ -121,66 +121,71 @@ contains the WBS table for the temperature monitoring design
 examined in Chapter~\ref{chapter:funcDecomp} 
 (Section~\ref{section:application-thermometer-design}).
 
-\begin{table}
+\begin{table}[h]
+\tiny
 \caption{Example work breakdown structure for the design of a
 temperature monitoring system.}
 \label{table:workBreakDownStructureExample}
-\begin{tabular}{|m{1cm}|m{1.5cm}|m{2cm}|m{2cm}|m{1cm}|m{1cm}|m{2.5cm}|m{1cm}|   }
+\begin{tabular}{|m{0.5cm}|m{1.5cm}|m{2cm}|m{2.8cm}|m{0.3cm}|m{1cm}|m{2.5cm}|m{0.5cm}|   }
 \hline
-\textbf{ID} & \textbf{Activity} & \textbf{Description} & \textbf{Deliverables / Checkpoints} & \textbf{Duration (days)} & \textbf{People} & \textbf{Resources} & \textbf{Predecessors} \\ \hline
 
-1 & \textbf{Interface Circuitry} & & & & & & \\
+\textbf{ID} & \textbf{Activity} & \textbf{Description} & \textbf{Deliverables / Checkpoints} & 
+\rotatebox[origin=c]{90}{\textbf{Duration (days)}} & \textbf{People} & \textbf{Resources} & 
+\rotatebox[origin=c]{90}{\textbf{Predecessors}} \\ \hline
+
+1 & \textbf{Interface Circuitry} & & & & & & \\ \hline
 1.1 & Design Circuitry & Complete the detailed design and verify it in simulation. & 
-	\begin{itemize} 	\item Circuit schematic 	\item Simulation verification 	\end{itemize}
+\makecell[l]{\tabitem Circuit schematic \\ \tabitem Simulation \\ verification}
 	& 14 & Rob (1) Jana (1) & 
-	\begin{itemize} \item PC \item SPICE simulator \end{itemize} & \\ \hline
+\makecell[l]{\tabitem PC \\ \tabitem SPICE simulator} & \\ \hline
 
 1.2 & Purchase Components & & 
-	\begin{itemize} \item Identify parts \item Place order \item Receive parts \end{itemize}
+\makecell[l]{\tabitem Identify parts \\ \tabitem Place order \\ \tabitem Receive parts}
 	& 10 & Rob & & 1.1 \\ \hline
 
 1.3 &  \textbf{Construct \& Test Circuits} & Build and test. & & & & & \\ \hline
 
 1.3.1 & Current Driver Circuitry & Test of circuit with sensing device. & 
-	\begin{itemize} \item Test data  \item Measurement of linearity \end{itemize}
+\makecell[l]{\tabitem Test data  \\ \tabitem Measurement of \\ linearity}
 	& 2 & Jana (1) Rob (2) & 
-	\begin{itemize} \item Test bench \item Thermometer \end{itemize} & 1.2 \\ \hline
+\makecell[l]{\tabitem  Test bench \\ \tabitem Thermometer} & 1.2 \\ \hline
 
 1.3.2 & Level Offset \& Gain Circuitry & Test of circuit with voltage inputs. & 
-	\begin{itemize} \item Test data  \item Measurement of linearity \end{itemize}
+\makecell[l]{\tabitem  Test data  \\ \tabitem Measurement of \\ linearity}
 	& 3 & Rob (1) Jana (2) & 
-	\begin{itemize} \item Test bench \end{itemize} & 1.2 \\ \hline
+\makecell[l]{\tabitem Test bench} & 1.2 \\ \hline
 
 1.3.3 & Integrate Components & Integrate the current driver and offset circuits. & 
-	\begin{itemize} \item Test data \item verifying functionality and linearity requirement \end{itemize} 
+\makecell[l]{\tabitem  Test data \\ \tabitem verifying functionality \\ and linearity requirement}
 	&  5 & Rob (1) Jana (1) & 
-	\begin{itemize} \item Test bench \item Thermometer \end{itemize} & 1.3.1 1.3.2 \\ \hline
+\makecell[l]{\tabitem Test bench \\ \tabitem Thermometer} & 1.3.1 1.3.2 \\ \hline
 
 2 & \textbf{LED \& Driver Circuitry} & & & & & & \\ \hline
 
 2.1 & Research A/D Converters & Make selection of A/D converter. &
-	\begin{itemize} \item Identify types, cost, and performance \item Identify two potential converters for purchase  \end{itemize}
-	& 1 & Alex & \begin{itemize} \item Internet \end{itemize} & \\ \hline
+\makecell[l]{\tabitem  Identify types, cost, \\ and performance \\ \tabitem Identify two potential \\ converters for purchase}
+	& 1 & Alex & \tabitem Internet  & \\ \hline
 
 2.2 & Complete Hardware Design  & Design conversion hardware. & 
-	\begin{itemize} \item Circuit schematic \item Simulation verification \end{itemize}
+\makecell[l]{\tabitem Circuit schematic \\ \tabitem Simulation verification}
 	& 7 & Ryan (1) Alex (2) & 
-	\begin{itemize} \item Digital circuit simulator \end{itemize} & 2.1 \\ \hline
+\tabitem Digital circuit simulator  & 2.1 \\ \hline
 
 2.3 &  Purchase LED \& Driver Components & & 
-	\begin{itemize} \item Identify parts \item Place order \item Receive parts \end{itemize}
+\makecell[l]{\tabitem Identify parts \\ \tabitem Place order \\ \tabitem Receive parts}
 	& 10 & Rob & & 2.2 \\ \hline
 
 2.4 & Construct \& Test & Test with supply voltage input. & 
-	\begin{itemize} \item Test data showing digital output vs. voltage inputs \end{itemize}
-	& 5 & Alex (1) Ryan (2) & \begin{itemize} \item Test bench \item Logic analyzer \end{itemize}
+\makecell[l]{\tabitem Test data showing \\ digital output vs. \\ voltage inputs}
+	& 5 & Alex (1) Ryan (2) & 
+	\makecell[l]{\tabitem Test bench \\ \tabitem Logic analyzer}
 	& 2.3 \\ \hline
 
 3 & System Integration \& Test & Complete integration of front-end and LED driver circuitry. & 
-	\begin{itemize} \item Test data demonstrating functionality from temp input to LED output
-					\item System linearity measurement \end{itemize}
+\makecell[l]{\tabitem Test data \\ demonstrating \\ functionality  from temp \\ input to LED \\ output \\ 
+					\tabitem System linearity \\ measurement}
 	 & 7 & Alex (1) Rob (1) Jana (1) Ryan (1) & 
-	\begin{itemize} \item Test bench \item Digital logic analyzer \item Thermometer \end{itemize}
+\makecell[l]{\tabitem Test bench \\ \tabitem Digital logic analyzer \\ \tabitem Thermometer}
 	& 1.3.3 2.4 (or 1 and 2) \\ \hline
 \end{tabular}
 \end{table}
@@ -273,6 +278,7 @@ Figure~\ref{figure:activityOnNode}.
 
 
 \begin{figure}[h]
+\centering
 \begin{tabular}{m{5cm}m{5cm}m{5cm}}
 \includegraphics[width=1.3in,height=1in]{./image5} &
 \includegraphics[width=1.2in,height=1in]{./image6} & 
@@ -303,6 +309,7 @@ the project---all paths (and consequently all activities) must be
 completed for the entire project to finish.
 
 \begin{figure}[h]
+\centering
 \includegraphics[width=3.4in,height=0.96in]{./image12}
 \caption{Example network diagram. Each activity contains the
 activity ID and the estimated duration in days.}
@@ -361,22 +368,22 @@ network diagram shown in Figure~\ref{figure:exampleNetworkDiagram}.
 \emph{\textbf{\ul{Solution:}}} The first two steps of the process have
 already been completed, which are the identification of the paths, their
 duration, and the critical path. To summarize, the paths are
-$P_1 = \{1,4\}, P_2=\{1,5\}, P_3 =\{2,3,4\}, and P_4 =\{2,3,5\}$
+$P_1 = \{1,4\}, P_2=\{1,5\}, P_3 =\{2,3,4\}, \text{ and } P_4 =\{2,3,5\}$
 with durations of 20, 26, 28, and 34 days. The critical path is$P_4$
 and $t_{cp}=34$ days, so activities 2, 3, and 5 have zero float. Thus
 
-$$Float_{2,3,5} = 0 days$$
+$$Float_{2,3,5} = 0 \text{ days}$$
 
 The only two activities that are not on the critical path are 1 and 4.
 Let's examine activity 1 first. It lies on paths $P_1$ and $P_2$
 durations 20 and 26 days, thus the longest path to completion
 $t_{lp1}$, for activity 1 is 26 days. The float is calculated from 
 equation~\ref{equ:floatTime} as 
-$Float_{1} =t_{cp} - t_{lp1} = 34-26 days = 8 days$.
+$Float_{1} =t_{cp} - t_{lp1} = 34-26 \text{days} = 8 \text{ days}$.
 
 Activity 4 lies on $P_1$ and $P_3$, so $t_{lp4} = 28$ days and the float is
 
-$$Float_{4} = t_{cp} - t_{lp4} = 34 -28 days = 6 days$$
+$$Float_{4} = t_{cp} - t_{lp4} = 34 -28 \text{ days} = 6 \text{ days}$$
 
 This means that activity 1 can slip by 8 days and activity 4 can slip by
 6 days without impacting the time to complete the project.
@@ -398,22 +405,21 @@ in Table~\ref{table:workBreakDownStructureExample} and is shown below.
 
 \includegraphics[width=4.2in,height=1.74in]{./image22} \\
 
-(b) The three paths from start to end are:
-$P_1 = \{1.1, 1.2, 1.3.1, 1.3.3, 3\}, P_2 = \{1.1, 1.2, 1.3.2, 1.3.3, 3\}, and
-P_3 = \{2.1, 2.2, 2.3, 2.4, 3\}$
+(b) The three paths from start to end are: $P_1 = \{1.1, 1.2, 1.3.1, 1.3.3, 3\}$, \\
+$P_2 = \{1.1, 1.2, 1.3.2, 1.3.3, 3\}$, and $P_3 = \{2.1, 2.2, 2.3, 2.4, 3\}$
 which have durations of 38, 39, and 30 days respectively. Thus the
 \ul{critical path} is $P_2$ and its duration is
 
-$$t_{cp} = 39 days$$ \\
+$$t_{cp} = 39 \text{ days}$$ \\
 
 (c) All activities on path $P_1$ are also part of
 the critical path, with the exception of activity 1.3.2, which has
 
-$$Float_{1.3.2} = 39 - 38 \text{days} = 1 \text{day}$$
+$$Float_{1.3.2} = 39 - 38 \text{ days} = 1 \text{ day}$$
 
 Activities 2.1-2.4 have the collective float
 
-$$Float_{2.1-2.4} = 39 - 30 \text{days} = 9 \text{days}$$
+$$Float_{2.1-2.4} = 39 - 30 \text{ days} = 9 \text{ days}$$
 \end{example}
 
 The strength of the network diagram is that it provides an intuitive
@@ -439,6 +445,7 @@ modern project management software where the dependencies are indicated
 by the connecting arrows between tasks.
 
 \begin{figure}[h]
+\centering
 \includegraphics[width=5.5in,height=3.8in]{./image28}
 \caption{Gantt chart for the temperature display project
 created using Microsoft Visio\textsuperscript{TM}}
@@ -481,7 +488,7 @@ are sold, the total cost is
 
 \begin{equation}
 \label{equ:totalCost}
-\text{Total cost} = \text{fixed cost} + n x\frac{\text{variable cost}}{\text{unit}}
+\text{Total cost} = \text{fixed cost} + n *\frac{\text{variable cost}}{\text{unit}}
 \end{equation}
 
 The total revenue generated by the sale of the \emph{n} units is
@@ -489,14 +496,14 @@ directly related to the sale price
 
 \begin{equation}
 \label{equ:Revenue}
-\text{Reveneue} = n x\frac{\text{sales price}}{\text{unit}}
+\text{Reveneue} = n *\frac{\text{sales price}}{\text{unit}}
 \end{equation}
 
 The break-even point is where the revenue and total costs are equal
 
 \begin{equation}
 \label{equ:breakEven}
-n x \frac{\text{sales price cost}}{\text{unit}} = \text{fixed cost} + n x \frac{\text{variable cost}}{\text{unit}}
+n * \frac{\text{sales price cost}}{\text{unit}} = \text{fixed cost} + n * \frac{\text{variable cost}}{\text{unit}}
 \end{equation}
 
 The break-even analysis is shown graphically in 
@@ -512,6 +519,7 @@ demonstrates the application of break-even analysis for the
 development of the Hewlett-Packard (HP) DeskJet printer.
 
 \begin{figure}[h]
+\centering
 \includegraphics[width=4.8in,height=3.36in]{./image32}
 \caption{Graphical representation of the break-even
 analysis.}
@@ -538,35 +546,24 @@ an estimated sales lifetime of 2 years.\\
 to break even. The fixed costs are the sum of the development costs and
 production investment. So
 
-$$\text{Fixed costs} = \$(50+25) \text{million} = \$75 \text{million}$$.
-
+$$\text{Fixed costs} = \$(50+25) \text{million} = \$75 \text{ million}$$
 This leads to a total cost for \emph{n} units sold of
-
-$$\text{Total cost} = \$75 \text{million} + n x \$225$$.
-
+$$\text{Total cost} = \$75 \text{million} + n x \$225$$
 The revenue is
-
-$$\text{Revenue} = n x 300$$.
-
+$$\text{Revenue} = n * 300$$
 Setting the revenue and total cost each equal at the break-even point
 produces
-
-$$n x \$400 = \$75 \text{million} + n x \$225$$
-
+$$n * \$400 = \$75 \text{ million} + n * \$225$$
 Solving for the final number of units gives
-
-$$N = 1 \text{million}$$\\
+$$N = 1 \text{ million}$$\\
 
 (b) Profit is the differential between the total revenue and the total
 cost and is expressed as
-
 $$ \text{Profit = total revenue - total costs}$$
-
 For an expected volume of 4 million units per year over 2 years
-
-$$\text{Profit} = n x \$300 - (\$ 75 \text{million} + n x \$225$$
-$$   = 8 \text{million} x \$300 - (\$ 75 \text{million} + 8 \text{million} x \$225$$
-$$\text{Profit} = \$525 \text{million}$$
+$$\text{Profit} = n * \$300 - (\$ 75 \text{ million} + n * \$225)$$
+$$   = 8 \text{ million} * \$300 - (\$ 75 \text{ million} + 8 \text{ million} * \$225)$$
+$$\text{Profit} = \$525 \text{ million}$$
 \end{example}
 
 \subsection{Cost Models}
@@ -657,7 +654,7 @@ overhead. Estimate (a) the time required to the complete the project and
 equation~\ref{equ:softwareEffortExp} is
 most appropriate
 
-$$\text{Effort} = 5.2(50)^{0.91} = 183 \text{worker months}$$
+$$\text{Effort} = 5.2(50)^{0.91} = 183 \text{ worker months}$$
 
 Since there are 10 developers on the project, the estimated time is
 determined by dividing the effort by 10, to produce an estimated time of
@@ -667,15 +664,16 @@ determined by dividing the effort by 10, to produce an estimated time of
 person-months and the average monthly salary of a development engineer
 as
 
-$$\text{Labor cost} = \text{183 worker-months}  x \frac{\$100,000}{year} x \frac{\text{1 year}}{\text{12 months}}$$
-$$\text{Labor cost} = \$1.53 \text{million}$$
+$$\text{Labor cost} = \text{183 worker-months}  * \frac{\$100,000}{\text{year}} * \frac{\text{1 year}}{\text{12 months}}$$
+$$\text{Labor cost} = \$1.53 \text{ million}$$
 \end{example}
 
 The models in 
-equations~\ref{equ:softwareEffortIBM} and {equ:softwareEffortExp}
+equations~\ref{equ:softwareEffortIBM} and \ref{equ:softwareEffortExp}
  are simplistic in that there is a single input
 to the estimator. For example, what if there were 100 engineers assigned
-to the project in Example 10.4? The model indicates that the project
+to the project in Example~\ref{example:projectManagementEffortEstimation}? 
+The model indicates that the project
 would be completed in 1.83 months at the same cost. Common sense
 dictates that this is unrealistic; this problem is commonly referred to
 as the ``mythical man-month'' (person-month). The mythical person-month
