@@ -28,6 +28,11 @@
 \usepackage{subcaption}	% Enables tables to not have a caption but to increment the table counter
 
 
+% This allows conditional formating of the problem/solution manual
+%	\showanswers
+%	\hideanswers
+\usepackage{probsoln}		% For problems and solutions
+
 % Enables bars in the margin to follow example/solutions
 \usepackage[color]{changebar}
 \cbcolor{black}				
@@ -53,9 +58,9 @@
 {\begin{quote}\itshape}
 {\end{quote}}
 
+
 \newcounter{example}
 \renewcommand{\theexample}{\thechapter.\arabic{example}}
-
 \newenvironment{example}[1]% environment name
 {% begin code
   \par\vspace{\baselineskip}\noindent

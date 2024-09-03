@@ -1,63 +1,52 @@
 \section{Problems}
 \label{problems}
-\showanswers
-%\hideanswers
 
 \begin{enumerate}
 \itemsep0em 
 \def\labelenumi{\arabic{enumi}.}
 \item
   In your own words, describe the difference between prescriptive and
-  descriptive design processes. Cite examples of each.
+  descriptive design processes. Cite examples of each.\\
   
-\begin{onlysolution}
-\textbf{[R]}
-\itshape
+  \ShowSolutions{1}
+  
+  
+  \begin{ShowSolution}{R}
 Prescriptive design processes “prescribe” an exact sequence of steps and decisions for
 realizing a design. There are often decisions that must be made in prescriptive processes for
 determining whether to move from one stage to the next, or to move to the next phase.
 Descriptive processes describe the general steps needed to achieve a design, but do not
 explicitly layout the steps which should be followed to achieve the design.
-\end{onlysolution}
-
-
+\end{solution}
   
 \item
-Describe the relationship between the Problem Identification,
-Research, and Requirements Specification phases of the design process.
-
-\begin{onlysolution}
-\textbf{[R,A]}
-\itshape
+  Describe the relationship between the Problem Identification,
+  Research, and Requirements Specification phases of the design process.\\
+  \ShowSolutions{0}
+\begin{solution}{R,A}
 Problem Identification, Research, and Requirements Specification are three early phases of
 the design process. The overall objective of these phases is to identify a problem, analyze it,
 and develop requirements for its solution. The Problem ID phase is where the end-user needs
 are determined, while further analysis occurs in the research phase. Both problem and
 research phases are used to develop a Requirements Specification that provides the
 requirements for those elements that must be satisfied in order for a successful design.
-\end{onlysolution}
-
+\end{solution}
+  
 \item
   Describe the relationship between the Concept Generation and Design
-  phases of the design process.
-  
-\begin{onlysolution}
-\textbf{[R,A]}
-\itshape
+  phases of the design process.\\
+\begin{solution}{R,A}
   In Concept Generation, different technical options for solving the design are given – one is
 selected to pursue. In the Design Phase, the option selected from Concept Generation is
 further clarified and the design architecture is more clearly defined.
-\end{onlysolution}
+\end{solution}
   
 \item
   Construct a prescriptive design process for the Problem
   Identification, Research, Specification, Concept, and Design phases of
   the design process. The result should be a flow chart that contains
-  decision blocks and iteration as necessary.
-  
-\begin{onlysolution}
-\textbf{[A]}
-\itshape
+  decision blocks and iteration as necessary.\\
+\begin{solution}{A}
 In the prescriptive design process, shown in the figure below, there are two decision points,
 one of which occurs after the requirements are determined. The objective in this decision is
 to determine whether the requirements satisfy the end-user needs. If not, the needs must be
@@ -66,16 +55,13 @@ customer needs. The other decision occurs after the design is generated. Here, t
 is to determine if the design satisfies the requirements. If not, a new design concept must be
 generated.
 \includegraphics[width=1.6in,height=7.3in]{./chapter01/FigSolutions/image19}
-\end{onlysolution}
+\end{solution}
   
   
 \item
   Describe the main differences between the VLSI and embedded system
-  design processes.
-  
-\begin{onlysolution}
-\textbf{[A]}
-\itshape
+  design processes.\\
+\begin{solution}{A}
   VLSI and embedded systems design share similarities and contain
 differences. They are both similar in that they have phases for
 requirements specifications, system architecture design, and technical
@@ -84,7 +70,7 @@ the steps depend upon the technology that is being developed. In the
 case of VLSI, steps are used to successively refine the design to meet
 develop a layout level circuit; however, embedded design requires that
 the technical design phase consists of software and hardware co-design.
-\end{onlysolution}
+\end{solution}
 
 \item
 Using the library or Internet, conduct research on the spiral software design process.  
@@ -94,13 +80,11 @@ Using the library or Internet, conduct research on the spiral software design pr
 \end{enumerate}
 Cite all reference used.
   
-\begin{onlysolution}
-\textbf{[A]}
-\itshape
+\begin{solution}{A}
 The spiral methodology reflects the relationship of tasks with rapid
 prototyping, increased parallelism, and concurrency in design and build
-activities$^{[1]}$ The spiral process recognizes that errors will occur in all
-stages of the production process and proceeds on this basis$^{[2]}$. It is
+activities.1 The spiral process recognizes that errors will occur in all
+stages of the production process and proceeds on this basis.2 It is
 agreed that the development processes will have to be revisited multiple
 times as the design furthers completion; therefore, unlike the Waterfall
 model, this methodology incorporates an iteration cycle, which is
@@ -109,27 +93,24 @@ diagram can be found at http://www.hyperthot.com/pm\_sdm.htm as
 well at other sites on the Internet.
 Embedded in spiral design is the process of refactoring -- changing
 software in such a way as to improve structure, but not affect the end
-result$^{[3]}$. Overall, the spiral software design model is not as rigid,
+result.3 Overall, the spiral software design model is not as rigid,
 concrete, and strict as the Waterfall model; however, this method should
 still be planned methodically, with tasks and deliverables identified
 for each step within the spiral. The table below lists the advantages
 and disadvantages of the spiral design model in reference to the
 waterfall model.
-
-\begin{tabular}{ll   ll}\\ 
-   & Advantages 						&    & Disadvantages			 \\ \hline
-1 & Increased time-to-market 			& 1 & Revisiting the same stages  	\\
-2 & Incremental \& Iterative 				& 2 & Requirements are not fully identified  \\
-3 & Promotes increase in documentation 		& 3 & Project goal is not initially established  \\
-4 & No set structure or phase routine 		&    &   \\
-5 & Non-idealistic 					&    &   \\
-6 & Not as costly to revisit process steps 		&    &   \\
-7 & Primitive to more intricate design 		&    &  \\
-8 & 
-	\makecell{Allows development to begin \\ w/o full understanding} & &   \\
+\begin{tabular}{lc lc}\\ 
+Advantages & Disadvantages \\ \hline
+1 & Increased time-to-market & 1 & Revisiting the same stages  \\
+2 & Incremental \& Iterative & 2 Requirements are not fully identified  \\
+3 & Promotes increase in documentation & 3 & Project goal is not initially established  \\
+4 & No set structure or phase routine & &   \\
+5 & Non-idealistic &&   \\
+6 & Not as costly to revisit process steps & &   \\
+7 & Primitive to more intricate design & &  \\
+8 & Allows development to begin w/o full understanding & &   \\
 \end{tabular}
-
-\begin{enumerate}[(1.)]
+\begin{itemize}
 \item Chapman, James. ``Spiral Methodology.'' \emph{Software Development
 Methodology.} 2005. 20 May 2005 http://www.hyperthot.com/pm\_sdm.htm 
 \item Culwin, Fintan. ``The Production Process.'' \emph{LAW -- Learn Ada On
@@ -138,10 +119,21 @@ http://www.scism.sbu.ac.uk/law/Section1/chap1/s1c1p3.html
 \item Hean, Daniel. ``Design through to testing.'' \emph{Content \& Document
 Management System.} 2005. 20 May 2005.
 http://www.yedit.com/web-content-management-system/400-design-through-to-testing.html
+\end{itemize}
+ 
+ \end{solution}
+ 
+
+
+\item
+  Using the library or Internet, conduct research on the Extreme
+  Programming design process.
+ \begin{enumerate}
+\item  Outline the significant elements of the Extreme Programming paradigm.
+\item  What are the pro and con arguments for this software development
+  model?
 \end{enumerate}
- 
- \end{onlysolution}
- 
+Be sure to cite references.
 
 \item
   \textbf{Project Application.} In preparation for project and team
@@ -149,10 +141,7 @@ http://www.yedit.com/web-content-management-system/400-design-through-to-testing
   favorite technologies or engineering subjects that you are interested
   in pursuing. Also, list the strengths and weaknesses that you bring to
   a project team.
-  
-  \begin{onlysolution}
- \textbf{[P]}
-\itshape
+  \begin{solution}{P}
 Note: We find this exercise an important step in starting
 students on the path of team formation and project selection and usually
 assign it on the first day of class. We setup an electronic bulletin
@@ -163,6 +152,6 @@ student is required to determine this information and then make a short
 oral presentation (2 minute pitch) to the class, in which they describe
 what types of projects they are interested in and what strengths/skills
 they can bring to a team.
-\end{onlysolution}
+\end{solution}
 
 \end{enumerate}
