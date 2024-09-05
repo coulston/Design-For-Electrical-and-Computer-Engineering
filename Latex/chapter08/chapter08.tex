@@ -511,7 +511,7 @@ Example~\ref{example:systemReliabilityTransistorReliability}.
 failure rate of $\lambda = 1/10^6 \text{ hours}$. What is the
 probability that the transistor will be operable in 5 years? \\
 
-\emph{\textbf{\ul{Solution:}}} This solution is found using the
+\noindent\emph{\textbf{\ul{Solution:}}} This solution is found using the
 reliability function for a constant failure rate in 
 Equation~\ref{equ:rAsFailureConstant} as follows.
 
@@ -531,7 +531,7 @@ device to fail?}'' From its definition, it is apparent that the MTTF is
 the mean value of the random variable $T$ (failure time). It is
 determined from the PDF and the definition of the mean in 
 Equation~\ref{equ:systemReliabilityDefinitionMean} as follows
-
+ 
 \begin{equation}
 \label{equ:mttfIntegral}
 \text{MTTF} = \int^\infty_0 t f_T(t) dt 
@@ -566,10 +566,9 @@ few examples.
 
 \emph{\textbf{\ul{Problem:}}} Consider the transistor in 
 Example~\ref{example:systemReliabilityTransistorReliability}.
-(a) Determine the MTTF, and (b) the reliability at the MTTF.
+(a) Determine the MTTF, and (b) the reliability at the MTTF.\\
 
-\emph{\textbf{\ul{Solution:}}}
-
+\noindent\emph{\textbf{\ul{Solution:}}}
 (a) From Equation~\ref{equ:mttfConstantFailureRate} the 
 $$MTTF =\frac{1}{\lambda} = \frac{1}{1/10^6 \text{ hours}} = 10^6 \text{ hours} $$
 $$		= 114 \text{ years} $$.
@@ -595,9 +594,9 @@ but that is not the case for the exponential density.
 \emph{\textbf{\ul{Problem:}}} Data shows that for a 30 year old
 population, the failure (death) rate is constant with approximately 1.1
 deaths per 1000 people per year. Given this data, estimate the MTTF of
-humans.
+humans.\\
 
-\emph{\textbf{\ul{Solution:}}} In order to find MTTF, $\lambda$ is 
+\noindent\emph{\textbf{\ul{Solution:}}} In order to find MTTF, $\lambda$ is 
 needed. From the information given it is
 
 $$\lambda = \frac{(1.1/1000) \text{ failures}}{1 \text{ year}} = \frac{1.1 \text{ failure}}{10^3 \text{ years}}=\frac{1 \text{ failure}}{909 \text{ years}}$$
@@ -720,10 +719,10 @@ and that JANTX quality parts are used. Determine the MTTF and
 reliability for the 2N3904 BJT (a low power, low frequency BJT) in 20
 years.
 
-\includegraphics[width=4.25in,height=1.74in]{./image63}
+\includegraphics[width=4.25in,height=1.74in]{./image63}\\
 
 
-\emph{\textbf{\ul{Solution:}}} The objective of this problem is to
+\noindent\emph{\textbf{\ul{Solution:}}} The objective of this problem is to
 determine the failure rate, from which the MTTF and reliability are
 estimated. From the MIL-HDBK-217F data in 
 Appendix~\ref{appendix:componentFailureRate}, the failure rate
@@ -910,9 +909,9 @@ that no heat sink is used.
 (a) Determine the derated power and if the design is within the
 manufacturer's limits for power dissipation at this temperature and, (b)
 re-compute the reliability at 20 years based upon this elevated
-operating temperature.
+operating temperature.\\
 
-\emph{\textbf{\ul{Solution:}}}
+\noindent\emph{\textbf{\ul{Solution:}}}
 (a) From the manufacturer datasheet in Appendix~\ref{appendix:manfDatasheet}, 
 the 2N3904 BJT has a
 thermal resistance of $\Theta_{JA} = 200^\circ C/W$ and a
@@ -1031,10 +1030,9 @@ components are considered for system reliability estimation.
 \emph{\textbf{\ul{Problem:}}} For the system in 
 Example~\ref{example:systemReliabilityEstimationUsingMIL} estimate (a)
 the overall system reliability in 20 years, and (b) the MTTF. Assume
-room temperature and that ¼ watt fixed composition resistors are used.
+room temperature and that ¼ watt fixed composition resistors are used.\\
 
-\emph{\textbf{\ul{Solution:}}}
-
+\noindent\emph{\textbf{\ul{Solution:}}}
 (a) Conceptually this is a series system---if any of the individual
 components fail, then the overall system will fail. That means that
 failure rates for the two resistors are needed in addition to the value
@@ -1156,9 +1154,9 @@ reliability. One or more of the disks in the system can fail and the
 data can still be recovered. However, if all disks fail, then the data
 is lost. For this problem, assume that the individual disk drives have a
 failure rate of $\lambda = 10 failuresx/10^6 hours$. How many disks
-must the system have to achieve a reliability of 98\% in 10 years?
+must the system have to achieve a reliability of 98\% in 10 years?\\
 
-\emph{\textbf{\ul{Solution:}}} The reliability of a parallel system with
+\noindent\emph{\textbf{\ul{Solution:}}} The reliability of a parallel system with
 redundancy is given by Equation~\ref{equ:systemReliabilityParallelReliability}. 
 Since all of the disks are identical, the expression simplifies to
 
@@ -1233,37 +1231,38 @@ addresses combination system reliability.
 \label{example:systemReliabilityCombinSystem}
 
 \emph{\textbf{\ul{Problem:}}} Consider the system shown below with the
-following reliabilities at a fixed time $t, R_1=R_2= 80\%$. 
-Determine the reliability that subsystems $R_3, and R_4$
-must have so that the overall system reliability is greater than 95\%.
+following reliabilities at a fixed time $t, R_{s_1}=R_{s_2}= 80\%$. 
+Determine the reliability that subsystems $R_{s_3}, \text{and} R_{s_4}$
+must have so that the overall system reliability is greater than 95\%.  
+You should assume $R_{s_3} = R_{s_4}$.
 
-\includegraphics[width=2.8in,height=1.1in]{./image153}
+\includegraphics[width=2.8in,height=1.1in]{./image153}\\
 
-\emph{\textbf{\ul{Solution:}}} The parallel systems can combined into
+\noindent\emph{\textbf{\ul{Solution:}}} The parallel systems can combined into
 single systems whose reliabilities are
 
-$$R_{s_{1,2}} = 1 - (1-R_1)(1-R_2) $$
+$$R_{s_{1,2}} = 1 - (1-R_{s_1})(1-R_{s_2}) $$
 
-$$R_{s_{3,4}} = 1 - (1-R_3)(1-R_4)$$
+$$R_{s_{3,4}} = 1 - (1-R_{s_3})(1-R_{s_4})$$
 
 They are combined in series to give the overall system reliability
 
-$$R_s = \left[ 1 - (1-R_1)(1-R_2) \right] * \left[ 1 - (1-R_2)(1-R_3) \right]$$
+$$R_s = \left[ 1 - (1-R_{s_1})(1-R_{s_2}) \right] * \left[ 1 - (1-R_{s_2})(1-R_{s_3}) \right]$$
 
-Substituting values and assuming $R_3 = R_4$ gives
+Substituting values and letting $R_{s_3} = R_{s_4}$ gives
 
-$$0.95 = \left[ 1-0.2^2 \right] \left[1 - (1-R_{3,4})^2 \right]$$.
+$$0.95 = \left[ 1-0.2^2 \right] \left[1 - (1-R_{s_{3,4}})^2 \right]$$.
 
 Solving for the reliabilities gives the final result
 
-$$R_3 = R_4 = 0.90$$
+$$R_{s_3} = R_{s_4} = 0.90$$
 \end{example}
 
 This example demonstrates the power of redundant systems.
 $S_1 and S_2$ have somewhat low reliabilities
 relative to the overall system goal, but the reliability of the parallel
 combination of $S_1$ and $S_2$ is 96\%. It requires a
-reliability for systems 3 and 4 of $R_3 = R_4 = 90\%$, while the combined
+reliability for systems 3 and 4 of $R_{s_3} = R_{s_4} = 90\%$, while the combined
 reliability of systems 3 and 4 is 99\%.
 
 \section{Summary and Further Reading}

@@ -10,12 +10,13 @@
 
 \usepackage{graphicx}
 \usepackage{imakeidx}			% Enables Index functionality
-\usepackage{hyperref}			% Enable hyperlinks to email and URLs
 
 %% Lots of packages needed for tables
 \usepackage{xcolor,colortbl}	% Enable colors in tables
+\usepackage{mdframed}
+
 \usepackage{multirow}
-\usepackage{hhline}				% allows partial hlines in multirow tables
+\usepackage{hhline}			% allows partial hlines in multirow tables
 \usepackage{longtable}			%Enables multipage tables
 \usepackage{makecell}			% deal with parboxes inside tables
 
@@ -33,17 +34,18 @@
 %	\hideanswers
 \usepackage{probsoln}		% For problems and solutions
 
-% Enables bars in the margin to follow example/solutions
-\usepackage[color]{changebar}
-\cbcolor{black}				
-\setlength{\changebarwidth}{0.2cm}
+
+\usepackage{hyperref}			% Enable hyperlinks to email and URLs
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,
+    menucolor=blue,
+    pdftitle={Design For Electrical and Computer Engineers}
+}
 
 %\newcommand{\ul}{\underline}	%superceeded by soul package
 \definecolor{Gray}{gray}{0.85}
-
 \newcolumntype {g} {>{\columncolor{Gray}}c}
-
-
 
 % Draws a item list bullet, helps create fake lists in table (tightens up the list)
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
@@ -59,43 +61,27 @@
 {\end{quote}}
 
 
+
+% Based on the ideas: https://tex.stackexchange.com/questions/241013/mdframed-or-shaded-inside-mdframed
 \newcounter{example}
 \renewcommand{\theexample}{\thechapter.\arabic{example}}
-\newenvironment{example}[1]% environment name
-{% begin code
-  \par\vspace{\baselineskip}\noindent
-  \refstepcounter{example}%
-  \cbstart%
-  \textbf{Example \theexample} #1  %
-  \par\vspace{\baselineskip}%
-  \noindent\ignorespaces
-}%
-{% end code
-  \cbend%
-  \par\vspace{\baselineskip}%
-  \noindent\ignorespacesafterend
+\newenvironment{example}[1] 
+{
+\refstepcounter{example}
+\begin{mdframed}[
+    frametitle={ \textbf{Example \theexample} #1 \vspace{12pt} },
+    frametitlerule=false,
+    innertopmargin=-0.7em, innerleftmargin=0.4em,
+    hidealllines=true, leftline=true,
+    linewidth=10pt,
+    linecolor=gray!80,
+    backgroundcolor=blue!10
+]%
+}{%
+\end{mdframed}
 }
 
 
-%%		CHAPTER FORMATTING
-%%  \chapter{The Engineering Design Process}
-%% \label{chapter:engineeringDesignProcess}
-%% \graphicspath{ {./chapter01/Fig} }
-%% \begin{itquote}
-%% \end{itquote}
 
 
-%%		LONG TABLE FORMATTING
-
-
-
-%%------------------------------------------------------
-%%				Lessons Learned
-%% If you want to use multirow with rowcolor:
-%%		Color rows as usual
-%%		Use multirow on the last row with negative row values
-%%		You will need to use hhline for non-multirows
-%%
-%% Use 			\hphantom  \\		to insert a space between things
-%%------------------------------------------------------
 
