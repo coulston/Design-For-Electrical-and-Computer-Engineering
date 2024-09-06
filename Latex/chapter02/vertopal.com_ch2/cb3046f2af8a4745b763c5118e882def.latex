@@ -1,0 +1,1272 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{multirow}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\usepackage[normalem]{ulem}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\emph{\textbf{Chapter 2 -- Project Selection and Needs Identification}}
+
+\textbf{1.In your own words, describe the differences between creative,
+variant, and routine} \textbf{designs. {[}R{]}}
+
+\begin{quote}
+Creative designs are typically new and innovative design ideas -- those
+that did not exist before. Variant designs are variations of existing
+designs, with the intent of improving some aspect of the existing
+system. Routine designs are concerned with fairly well-known artifacts
+for which there is a well-developed design knowledge base.
+\end{quote}
+
+\textbf{2.List three guidelines that should be employed when selecting
+projects in practice. {[}R{]}}
+
+\begin{quote}
+(1) The project must be tied to the mission and vision of the
+organization; (2) The project must have payback; (3) The project should
+be selected with criterion; (4) The project objectives should be SMART
+(Specific, Measurable, Assignable, Realistic, and Time-Related).
+\end{quote}
+
+\textbf{3.Assume a customer comes to you with the following
+request---\emph{Design a mechanical arm to pick apples from a tree}.What
+are the assumptions in this statement? Rewrite the request to eliminate
+the assumptions. (This problem was originally posed by Edward DeBono
+{[}Deb70{]}). {[}A{]}}
+
+\begin{quote}
+This statement contains a solution based on the assumption that a
+mechanical arm (by means of picking) is the best method for removing
+apples off of a tree. Therefore, the design space is immediately and
+needlessly limited. Also, we are unsure if there is a problem with
+current methods of removing apples. Here is a better statement:
+\end{quote}
+
+\emph{\textbf{``Design a device that can improve the current method of
+removing apples from a tree.''}}
+
+\begin{quote}
+This statement is rightly ambiguous in the sense of not specifying how,
+or from what, to build this device. This is the type of question and
+approach that should be sought for establishing a needs statement.
+
+\emph{\textbf{Note:} Including the word ``mechanical'' \uline{may be}
+permissible, as it clearly defines a type of device, but does not
+specify further details or characteristics. This situation poses a}
+
+\emph{fine line between problem and solution.}
+\end{quote}
+
+\textbf{4.Assume a customer comes to you with the following
+request---\emph{Design an RS-232 networked personal computer measurement
+system to transmit voltage measurements from a remote location to a
+central server.} What are the assumptions this statement? Develop a list
+of questions that you might ask the customer to further clarify the
+problem statement. {[}A{]}}
+
+\begin{quote}
+This statement, much like the one confronted in problem 3, is filled
+with numerous assumptions and solutions. The statement proves
+troublesome because both the problem (transmit voltages measurements
+from remote location to central server) and solution (RS-232 networked
+personal computer) are given to together. Furthermore, you -- as the
+Engineer -- are unsure if the prescribed solutions are the best
+decisions for this particular problem. In order to dissect the statement
+and get to the actual problem, a list of questions must be asked.
+
+\emph{\textbf{\uline{Sample Questions}}}
+\end{quote}
+
+1
+
+\begin{quote}
+•What is the purpose of this transmission system?
+
+•Why are voltage measurements currently being sent? What do they
+represent? •How are the measurements currently being made?
+
+•What are the problems with the current system?
+
+•What do you like about the current system?
+
+•What type of atmosphere will this device most likely be engaged in?
+
+•Do you plan to implement multiple measurement systems?
+
+•Why use RS-232?
+
+•What is the purpose of the central server?
+
+•What are the voltage measurements of?
+
+\emph{\textbf{Note:} The questions given here are variations on those
+presented in the book to ask the client when starting into a new
+project. The objective in asking this question is to get practice in
+asking these questions. Students are often hesitant to ask questions,
+particularly if they are working with an industrial sponsor. It help to
+give them practice in do this before they meet with their customer.}
+\end{quote}
+
+\textbf{5.Describe what is meant by a marketing requirement. {[}R{]}}
+
+\begin{quote}
+A marketing requirement is a statement that describes a need in the
+language of the end-user or customer. It should describe what the system
+should do, not necessarily how it will be accomplished.
+\end{quote}
+
+\textbf{6.What is the purpose of an objective tree and how is it
+developed? {[}R/A{]}}
+
+\begin{quote}
+The objective tree is a graphical representation of the
+customer/end-user needs in a hierarchical layout. It is developed by
+determining the customer needs (through interviews, observations, etc.)
+and then translating the results of that into a set of specified needs.
+The needs are categorized into a hierarchy which is represented in the
+objective tree. The categorization is based upon functionality, not
+importance.
+\end{quote}
+
+\textbf{7.The needs for a garage door opener have been determined to be:
+safety, speed, security, reliability, and noise. Create a pairwise
+comparison matrix to determine the scores and rankings of the five
+needs. Apply your own judgment in ranking the needs. {[}A{]}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{DEVICE: NEEDS:}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Garage Door Opener\\
+Safety, Speed, Security, Reliability, and Noise
+\end{quote}\strut
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Safety}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Speed}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Security}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Reliability}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Noise}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{TOTAL}
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Safety}
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+X
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+1
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+1
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.5
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+1
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{3.5}
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Speed}
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+X
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+1
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.5
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{1.5}
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Security}
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+X
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.5
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+1
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{1.5}
+\end{quote}
+\end{minipage} \\
+\textbf{Reliability} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.5
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+1
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.5
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+X
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+1
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{3}
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Noise}
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0.5
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+0
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+X
+\end{quote}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{0.5}
+\end{quote}
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+\textbf{Paired Comparison Matrix}
+
+2
+
+\textbf{\uline{Rankings}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\emph{Most Important:}
+
+\includegraphics[width=0.27778in,height=0.52778in]{vertopal_cb3046f2af8a4745b763c5118e882def/media/image1.png}
+
+\begin{quote}
+\emph{Least Important:}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Safety\\
+Reliability\\
+Security\\
+Speed\\
+Noise
+\end{quote}\strut
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{Note:} There is no single solution, and the results are somewhat
+subjective. However, safety should always be of the highest concern in
+such an application. The objective of this problem is to demonstrate
+that students can create a matrix, make it consistent, and compute the
+scores.
+\end{quote}
+
+\textbf{8.Consider the design of an everyday consumer device such as
+computer printer, digital camera, electric screwdriver, or electric
+toothbrush. Determine the customer needs for the device selected. The
+deliverables should be: 1) marketing requirements, 2) an objective tree,
+and 3) a ranking (pairwise comparison) of the customer needs. {[}A{]}}
+
+\begin{quote}
+\emph{\textbf{Note:} The objective of this question is to give the
+individual (or preferable a small-team) practice in identifying the
+needs. Fairly simple and common products should be used as a first step.
+This can be a very good exercise for the class. Each team could select
+its own product and then some teams can present the results to the
+class. Or several or all teams could work on the same project, with a
+reporting session, where a team presents their findings and the others
+critique them.}
+
+\uline{Consumer Device Selected:}\textbf{Cellular Phone}
+
+\textbf{Need:} With today's high-paced world, immediate contacts are
+essential. Therefore, excellent cell phone design, implementation, and
+construction are a must.
+
+\textbf{1.\uline{Marketing Requirements}}
+
+•The system will be lightweight.
+
+•The system will withstand abusive treatment (dropping, running over,
+etc.) •The system will be comfortable and ergonomic.
+
+•The system will have high-quality audio encoding and decoding.
+
+•The system will not have to be frequently charged.
+
+•The system will have good signal pickup.
+
+•The system will survive from weathering (sun, rain, etc.) •The system
+will be easy-to-use.
+
+•The system will be able to connect to and browse the internet •The
+system will contain as few buttons as possible
+\end{quote}
+
+3
+
+\includegraphics[width=6.51389in,height=3.34722in]{vertopal_cb3046f2af8a4745b763c5118e882def/media/image2.png}
+
+\begin{quote}
+\textbf{2.\uline{Objective Tree}}
+
+Cellular\\
+Phone
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1250}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+State of Art\\
+Technology
+\end{quote}\strut
+\end{minipage} &
+\multirow{7}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+Portable
+\end{minipage}} &
+\multirow{2}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+Lightweight
+\end{minipage}} &
+\multirow{7}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+Durable
+\end{minipage}} &
+\multirow{2}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+Fade Resistant
+\end{minipage}} &
+\multirow{6}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Plastic
+\end{quote}
+\end{minipage}} &
+\multirow{7}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Easy to Use
+\end{quote}
+\end{minipage}} &
+\multirow{2}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Menu Navigation
+\end{quote}
+\end{minipage}} \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Internet
+\end{minipage} \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Instant Messaging
+\end{minipage} & & \begin{minipage}[b]{\linewidth}\raggedright
+Small
+\end{minipage} & & \begin{minipage}[b]{\linewidth}\raggedright
+Water Resistant
+\end{minipage} & & & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Menu Features
+\end{quote}
+\end{minipage} \\
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+High Quality\\
+Encoder/Decoder
+\end{quote}\strut
+\end{minipage} & & \begin{minipage}[b]{\linewidth}\raggedright
+Comfortable
+\end{minipage} & & \begin{minipage}[b]{\linewidth}\raggedright
+Shock Resistant
+\end{minipage} & & & \begin{minipage}[b]{\linewidth}\raggedright
+Phonebook
+\end{minipage} \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Extended Battery Life
+\end{minipage} & &
+\multirow{3}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+Signal Coverage
+\end{minipage}} & &
+\multirow{3}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+Rugged Structure
+\end{minipage}} & & & \begin{minipage}[b]{\linewidth}\raggedright
+Calculator
+\end{minipage} \\
+\multirow{2}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+Camera
+\end{minipage}} & & & & & & &
+\begin{minipage}[b]{\linewidth}\raggedright
+Daily Planner
+\end{minipage} \\
+& & & & & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Rubber
+\end{quote}
+\end{minipage} & & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Limited Controls
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+Display Screen
+
+\begin{quote}
+\textbf{3.\uline{Ranking of Customer Needs}}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Technology}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Portable}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Durable}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Easy-to-Use}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{TOTAL}
+\end{minipage} \\
+\midrule()
+\endhead
+\textbf{Technology} & X & 0.5 & 0.5 & 0.5 & \textbf{1.5} \\
+\textbf{Portable} & 0.5 & X & 0.5 & 0.5 & \textbf{1.5} \\
+\textbf{Durable} & 0.5 & 0.5 & X & 0 & \textbf{1} \\
+\textbf{Easy-to-Use} & 0.5 & 0.5 & 1 & X & \textbf{2} \\
+\bottomrule()
+\end{longtable}
+
+\textbf{Cell Phone Attributes}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Internet}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{IM}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Audio}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Battery}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Camera}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{TOTAL}
+\end{minipage} \\
+\midrule()
+\endhead
+\textbf{Internet} & X & 0.5 & 0 & 0 & 1 & \textbf{1.5} \\
+\textbf{IM} & 0.5 & X & 0 & 0 & 0 & \textbf{0.5} \\
+\textbf{Audio} & 1 & 1 & X & 0.5 & 1 & \textbf{3.5} \\
+\textbf{Battery} & 1 & 1 & 0.5 & X & 1 & \textbf{3.5} \\
+\textbf{Camera} & 0 & 1 & 0 & 0 & X & \textbf{1} \\
+\bottomrule()
+\end{longtable}
+
+\textbf{State of the Art Technology}
+
+4
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Lightweight}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Coverage}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Small}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Comfortable}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{TOTAL}
+\end{minipage} \\
+\midrule()
+\endhead
+\textbf{Lightweight} & X & 0 & 0.5 & 0.5 & \textbf{1} \\
+\textbf{Coverage} & 1 & X & 1 & 1 & \textbf{3} \\
+\textbf{Small} & 0.5 & 0 & X & 0 & \textbf{0.5} \\
+\textbf{Comfortable} & 0.5 & 0 & 1 & X & \textbf{1.5} \\
+\bottomrule()
+\end{longtable}
+
+\textbf{Portable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Fade Res.}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Water Res.}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Shock Res.}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Rugged}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{TOTAL}
+\end{minipage} \\
+\midrule()
+\endhead
+\textbf{Fade Res.} & X & 0 & 0 & 0.5 & \textbf{0.5} \\
+\textbf{Water Res.} & 1 & X & 0.5 & 1 & \textbf{2.5} \\
+\textbf{Shock Res.} & 1 & 0.5 & X & 0.5 & \textbf{2} \\
+\textbf{Rugged} & 0.5 & 0 & 0.5 & X & \textbf{1} \\
+\bottomrule()
+\end{longtable}
+
+\textbf{Durable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Navigation}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Features}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Lim. Ctrls}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Display}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{TOTAL}
+\end{minipage} \\
+\midrule()
+\endhead
+\textbf{Navigation} & X & 0.5 & 0.5 & 0 & \textbf{1} \\
+\textbf{Features} & 0.5 & X & 0.5 & 0 & \textbf{1} \\
+\textbf{Lim. Ctrls} & 0.5 & 0.5 & X & 0 & \textbf{1} \\
+\textbf{Display} & 1 & 1 & 1 & X & \textbf{3} \\
+\bottomrule()
+\end{longtable}
+
+\textbf{Easy to Use}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Phonebook}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Calculator}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Planner}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{TOTAL}
+\end{minipage} \\
+\midrule()
+\endhead
+\textbf{Phonebook} & X & 1 & 1 & \textbf{2} \\
+\textbf{Calculator} & 0 & X & 0 & \textbf{0} \\
+\textbf{Planner} & 0 & 1 & X & \textbf{1} \\
+\bottomrule()
+\end{longtable}
+
+\textbf{Menu Features}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Plastic}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Rubber}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{TOTAL}
+\end{minipage} \\
+\midrule()
+\endhead
+\textbf{Plastic} & X & 0.5 & \textbf{0.5} \\
+\textbf{Rubber} & 0.5 & X & \textbf{0.5} \\
+\bottomrule()
+\end{longtable}
+
+\textbf{Rugged Structure}
+
+5
+
+\begin{quote}
+\textbf{\uline{Rankings}}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\emph{Most Important:}
+
+\begin{quote}
+\emph{Least
+Important:}\includegraphics[width=0.40278in,height=1.80556in]{vertopal_cb3046f2af8a4745b763c5118e882def/media/image3.png}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Extended Battery Life and Audio Encoding/Decoding (\textbf{3.5}) Signal
+Coverage and Display Screen (\textbf{3})\\
+Water Resistant (\textbf{2.5})\\
+Easy to Use, Shock Resistant, and Phone Book Feature (\textbf{2}) State
+of the Art Technology, Internet, Portable, and\\
+Comfortable (\textbf{1.5})\\
+Durable, Camera, Lightweight, Rugged, Menu Navigation, Menu Features,
+Limited Controls, and Daily Planner (\textbf{1}) Instant Messaging,
+Small, Fade Resistant, Plastic, and\\
+Rubber (\textbf{0.5})\\
+Calculator (\textbf{0})
+\end{quote}\strut
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\textbf{HERE IS A SECOND EXAMPLE FOR AN ELECTRIC TOOTHBRUSH}
+
+\textbf{Toothbrush Example}
+
+\uline{Marketing Specifications}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+•\\
+•\\
+•\\
+•\\
+•\\
+•\\
+•\\
+•\\
+•
+\end{quote}\strut
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Should be lightweight\\
+Clean teeth well.
+
+Have a long battery life.
+
+Not shock the user (electric).
+
+Easy to hold\\
+Quiet.
+
+Easy to clean.
+
+Be lightweight.
+
+Allow multiple users.
+\end{quote}\strut
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+6
+
+\includegraphics[width=6.65278in,height=5.01389in]{vertopal_cb3046f2af8a4745b763c5118e882def/media/image4.png}
+
+\begin{quote}
+\uline{Objective Tree}
+
+Electric\\
+Toothbrush
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Clean Well
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ergonomics
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Safety
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\multirow{2}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Remove plaque
+\end{quote}
+\end{minipage}} &
+\multirow{2}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+Lightweight
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+Resistant to
+\end{minipage} \\
+& & \begin{minipage}[b]{\linewidth}\raggedright
+Electric Shock
+\end{minipage} \\
+\midrule()
+\endhead
+\multirow{2}{*}{\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Stimulate gums
+\end{quote}
+\end{minipage}} & Long Battery & Doesn't hurt \\
+& life & gums \\
+\bottomrule()
+\end{longtable}
+
+Quiet
+
+Easy-to-Hold
+
+Multiple Users
+
+\begin{quote}
+\uline{Rankings}
+
+\textbf{Highest Level}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Cleaning Ability}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Ergonomic}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Safety}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Score}
+\end{minipage} \\
+\midrule()
+\endhead
+\textbf{Cleaning Ability} & - & 1 & 1 & 2 \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Ergonomic}
+\end{quote}
+\end{minipage} & 0 & - & 1 & 1 \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Safety}
+\end{quote}
+\end{minipage} & 0 & 0 & - & 0 \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+A = 2, B = 1, C = 0
+
+Rationale: Cleaning would be the main selling point, but ergonomic is
+important too -- if it is clunky, user would not want to use it. Could
+actually make the argument that ergonomic is more important than
+cleaning ability, and that would depend upon the target market (higher
+or lower cost). Safety is important, but electric toothbrushes are
+pretty safe devices that have been around for a long time, so may not be
+the top priority from the user's point of view.
+\end{quote}
+
+7
+
+\begin{quote}
+\textbf{Second-Level: Ergonomics}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{.}
+
+\textbf{Lightweight}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Battery Life}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Quiet}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Easy-to-hold}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbf{Multiple Users}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Score}
+\end{minipage} \\
+\midrule()
+\endhead
+Lightweight & - & 0 & 0 & 0 & 0 & 0 \\
+Battery Life & 1 & - & 1 & 0 & 0 & 2 \\
+Quiet & 1 & 0 & - & 0 & 1 & 2 \\
+Easy-to-hold & 1 & 1 & 1 & - & 0 & 3 \\
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Multiple Users
+\end{quote}
+\end{minipage} & 1 & 1 & 0 & 1 & - & 3 \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{9.Project Application. Select criteria to be applied for
+selecting a project concept as shown in Table 2.1 in Section 2.2.
+Candidate criteria are cost, time, and match with team member skills, to
+name a few. Then brainstorm to generate project concepts. Rank the top
+three to five concepts against the criteria selected as presented in
+Section 2.2. {[}P{]}}
+
+\emph{\textbf{Note:} If the teams are being allowed to select the
+project, this is a good exercise to get them to focus on criteria for
+project selection. Conflict often develops between team members over
+which project to pursue, and this provides an opportunity to examine the
+merits of different projects. Criteria to consider are: cost, time to
+completion, team member skills, probability of success, interest in the
+project, etc.}
+
+\textbf{10.Project Application. Determine the needs for the project
+selected. The result should be list of} \textbf{marketing requirements,
+an objective tree, and a ranking of the needs. {[}P{]}}
+
+\emph{\textbf{Note:} The objective here is the same as question 8, with
+difference being that it is applied to the capstone design project. A
+difficulty here could be that the customer may not be as easily
+identifiable, an example being a design competition. If the team is
+developing a new and creative product idea, they should be able to do
+this. If they are working on an industry sponsored project, they should
+also be able to do this. In the case of design competition or another
+type does not lend itself as well, the team still should be able to
+develop an adequate objective tree based on the project rules and their
+knowledge of the subject. We have had teams be very creative in finding
+ways to identify the customer needs from conducting web-based surveys on
+bulletin boards and to conduct focus groups with other students on
+campus.}
+
+\textbf{11.Project Application. Develop an Extended Problem Statement
+for your project concept as outlined in Section 2.6. Apply the processes
+presented in the chapter as appropriate for the project. {[}P{]}}
+
+\emph{\textbf{Note:} We typically have the teams complete the simple
+\uline{Problem Statement} similar to those in Examples 2.1-2.3 in the
+text. Along with this they submit a justification for the team they have
+selected (\uline{Team Proposal}) that identifies who the members are and
+what objectives/skills they bring to the team.}
+
+\emph{Once the basic Problem Statement and Team Proposal are completed
+and reviewed by the instructor, it is then followed by a more detailed
+submission of the \uline{Extended Problem}}
+\end{quote}
+
+8
+
+\begin{quote}
+\emph{\uline{Statement} that is presented in the Project Application
+Section. This integrates all of the material from Chapter 2. In term of
+research, the goal here is to provoke the team to conduct research
+up-front and show they understand what is going on. In our experience,
+this is often overlooked, and teams regret it later. In our course, we
+typically get a 3-6 page report summarizing their findings. Our goal is
+to determine their level of understanding based upon that. All of this
+makes up part of the final design report submitted at the end of the
+project.}
+\end{quote}
+
+\textbf{Additional In-Class Exercise}
+
+The following exercise is one we use early on in the class to generate
+project ideas. The class is usually capable of generating at least one
+idea per minute, and we often get 40-50 ideas in a session.
+
+As a class, the objectives are as follows:
+
+\begin{quote}
+•Generate a minimum of 40 project ideas.
+
+•Every single student in the class must offer at least on idea.
+
+•If the two above criteria are met, then everyone in class gets a 10
+point (100\%) quiz grade. Otherwise, no grade recorded.
+\end{quote}
+
+\uline{Rules of Brainstorming}
+
+\begin{quote}
+1.No criticism or judgment of idea\\
+2.Wild ideas are encouraged.
+
+3.Quantity is stressed over quality.
+
+4.Build upon and modify the ideas of others.\\
+5.All ideas are recorded.
+\end{quote}
+
+\emph{\textbf{Note:} Another option is to present a particular problem
+or application area and have the teams students generate ideas based
+upon them.}
+
+9
+
+\textbf{CENBD/EE BD 480 - Engineering Design Concepts}\\
+\textbf{\uline{Penn State Erie, The Behrend College Fall Semester 2006}}
+
+\textbf{Background and Technology Survey Instructions}
+
+You should consult with your supervising faculty member when developing
+this section of the report. Each project is unique.
+
+The objectives of this section are to:\\
+•Provide your audience (faculty, project sponsors, other students, etc)
+with sufficient background so that they understand the problem the team
+plans to solve.
+
+\begin{quote}
+•Demonstrate that the team has a sufficient understanding of the problem
+to proceed to the next stage of development.
+
+•Demonstrate that the team has conducted research and understands the
+technology relevant to this project -- namely, related solutions to the
+problem and their limitations.
+
+Depending on the project, you should also conduct searches on the US
+patent database for similar technologies.
+
+•To describe what is new/unique in the proposed design.
+
+•To provide additional supporting information that for the Need and
+Objective statements.
+\end{quote}
+
+Pointers:\\
+•If it is an industry sponsored project, you will need to provide a
+clear overview of the problem and any related processes. You should also
+indicate why it is important to the organization -- what benefit it will
+provide.
+
+\begin{quote}
+•You may provide more detail on the need for the project. For example,
+if this has market potential, indicate what the size of the market is.
+If you are preventing injuries -- how many injuries are there per year?
+Supporting statistics are always great to demonstrate the need.
+
+•If there are similar systems out there, describe limitations of current
+designs or\\
+technology. Benchmarking or strength/weaknesses analyses of existing
+technologies are powerful.
+
+•Describe any basic theory to be described regarding the technology. For
+example, say you are designing a flywheel energy storage system -- you
+should describe the basics of how flywheel energy systems work -- what
+are the major systems, etc.
+
+•Pictures always help - be sure to provide a description of diagrams.
+\end{quote}
+
+On the writing itself:\\
+•This is expected to be well-written prose.
+
+\begin{quote}
+•You \textbf{must} provide a reference section. Reference all sources
+used -- do not plagiarize. If you use a figure that is not yours, you
+must provide a clear reference as to where it came from -- if not it is
+plagiarism (in which case you get a zero and reported for academic
+integrity hearings).
+
+•Follow the same format for references as used in the class textbook.
+Make sure that you reference web pages properly.
+
+•All figures and tables must be labeled. Follow the same format used in
+the book for labeling and referring to figures and tables.
+
+•This should be concise 3-4 pages in length. You cannot exceed 4 pages
+of 11 point with 1'' margins.
+\end{quote}
+
+\textbf{Format for the report}
+
+Use 12 point Times New Roman bold for the headings of the section. 11 pt
+for text, 1.5 spacing between paragraphs.
+
+\textbf{Title}
+
+\textbf{Team Members}
+
+\textbf{1. Need}\\
+Text goes here -- it should be 11 pt, Times- New Roman single spaced.
+Use 1.5 spacing between the paragraphs.
+
+\textbf{2. Objective}\\
+Text goes here -- it should be 11 pt, Times- New Roman single spaced.
+Use 1.5 spacing between the paragraphs.
+
+\textbf{3. Background and Technology Survey}\\
+Text goes here -- it should be 11 pt, Times- New Roman single spaced.
+Use 1.5 spacing between the paragraphs.
+
+\textbf{4. Marketing Requirements and Objective Tree}\\
+List the marketing requirements (numbered), Objective tree, and a
+summary of the ranked needs.
+
+\textbf{References}
+
+\textbf{Appendix -- Ranking of Needs}\\
+List the marketing requirements (numbered), Objective tree, and a
+summary of the ranked needs.
+
+\end{document}
