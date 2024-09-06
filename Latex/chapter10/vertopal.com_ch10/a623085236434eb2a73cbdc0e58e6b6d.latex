@@ -1,0 +1,720 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{multirow}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\usepackage[normalem]{ulem}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\emph{\textbf{Chapter 10 -- The Project Plan}}
+
+\textbf{1.In your own words, describe what is meant by the work
+breakdown structure. {[}R{]}}
+
+\begin{quote}
+A work breakdown structure, or WBS, is a tabular breakdown of the entire
+project that subdivides specific tasks and deliverables that need to be
+completed in order to accomplish the project objectives. The WBS results
+from systems engineering efforts.
+\end{quote}
+
+\textbf{2.Consider the set of activities, duration (in days), and
+predecessors for a project given} \textbf{below. {[}A{]}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 18\tabcolsep) * \real{0.1000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Activity}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+A
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+B
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+C
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+D
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+E
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+F
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+G
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+H
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+I
+\end{minipage} \\
+\midrule()
+\endhead
+\textbf{Duration} & 3 & 9 & 6 & 6 & 6 & 3 & 2 & 6 & 7 \\
+\textbf{Predecessors} & - & - & - & A,B & D,B & C & F,E & G & F \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{a.Develop a network diagram representation for the project.}
+
+\textbf{b.Determine the critical path.}
+
+\textbf{c.Determine the float time for all activities that are not on
+the critical path.}
+
+\includegraphics[width=1.06944in,height=0.30556in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image1.png}
+
+\includegraphics[width=4.68056in,height=2.11111in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image2.png}
+
+\includegraphics[width=3.55556in,height=1.04167in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image3.png}
+
+\includegraphics[width=2.29167in,height=0.90278in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image4.png}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics[width=0.125in,height=0.13889in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image5.png}
+
+\includegraphics[width=0.15278in,height=0.13889in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image6.png}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\includegraphics[width=1.18056in,height=0.36111in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image7.png}
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+1
+
+\textbf{3.Consider the set of activities, duration (in days), and
+predecessors for a project given} \textbf{below. {[}A{]}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 22\tabcolsep) * \real{0.0833}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Activity}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+A
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+B
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+C
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+D
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+E
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+F
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+G
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+H
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+I
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+J
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+K
+\end{minipage} \\
+\midrule()
+\endhead
+\textbf{Duration} & 9 & 12 & 3 & 4 & 5 & 9 & 8 & 3 & 6 & 9 & 1 \\
+\textbf{Predecessors} & - & A & A & B,C & C & B & D & F,D & G & H,I &
+E \\
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{a.Develop a network diagram representation for the project.}
+
+\textbf{b.Determine the critical path.}
+
+\textbf{c.Determine the float time for all activities that are not on
+the critical path.}
+
+\includegraphics[width=6.5in,height=2.29167in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image8.png}
+\end{quote}
+
+\includegraphics{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image9.png}
+
+\begin{quote}
+\includegraphics[width=1.26389in,height=0.40278in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image10.png}
+\includegraphics[width=0.80556in,height=0.31944in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image11.png}
+
+\includegraphics[width=0.88889in,height=0.20833in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image12.png}
+\includegraphics[width=1in,height=0.25in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image13.png}
+
+\includegraphics[width=2.38889in,height=1.18056in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image14.png}
+
+\includegraphics[width=1.40278in,height=0.26389in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image15.png}
+\includegraphics[width=0.40278in,height=0.20833in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image16.png}
+
+\includegraphics[width=1.72222in,height=0.68056in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image17.png}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\multirow{6}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics[width=0.36111in,height=0.33333in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image18.png}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\includegraphics[width=0.70833in,height=0.22222in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image19.png}
+\end{quote}
+\end{minipage} &
+\multirow{3}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\includegraphics[width=1.48611in,height=0.61111in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image20.png}
+\end{quote}
+\end{minipage}} \\
+& \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics[width=0.73611in,height=\textheight]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image21.png}
+\end{minipage} \\
+& \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics[width=0.22222in,height=0.19444in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image22.png}
+\end{minipage} \\
+& \multirow{2}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics[width=0.22222in,height=0.5in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image23.png}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\includegraphics[width=0.38889in,height=0.16667in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image24.png}
+\end{quote}
+\end{minipage} \\
+& & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\includegraphics[width=0.16667in,height=0.25in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image25.png}
+\end{quote}
+\end{minipage} \\
+& \begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics[width=0.16667in,height=0.26389in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image26.png}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\includegraphics[width=0.16667in,height=0.27778in]{vertopal_a623085236434eb2a73cbdc0e58e6b6d/media/image27.png}
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+2
+
+\textbf{4.Explain why a network diagram cannot contain cycles. A cycle
+is a sequence of activities where you can travel back to an activity
+already visited. {[}R{]}}\\
+A network diagram is a directed graph focused on the progression of
+activity paths for the completion of a project. Cycles are prohibited,
+because each of the nodes represents an activity that must be completed
+before continuing on. Therefore, you are unable to travel back to an
+activity once it has been accomplished.
+
+\textbf{5.Describe the advantages and disadvantages of the network
+diagram and the Gantt chart} \textbf{representations for a project.
+{[}R{]}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Network Diagram
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Gantt Chart
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\textbf{(+)} &
+\multirow{2}{*}{\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Allows for a graphical visualization of a project\\
+Allows for a quantitative analysis of a project
+\end{quote}\strut
+\end{minipage}} & \textbf{(+)} &
+\multirow{6}{*}{\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Effectively shows the WBS and timeline for completion\\
+Greater ability to encapsulate amount of info required for an in-depth
+project on a single page\\
+Inability to show dependencies between activities (until current
+software)\\
+Does not identify critical path and float times
+\end{quote}\strut
+\end{minipage}} \\
+\textbf{(+)} & & \textbf{(+)} \\
+\textbf{(+)} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Provides a graphical representation of activities and their dependencies
+\end{quote}
+\end{minipage} & \textbf{(-)} \\
+\textbf{(+)} &
+\multirow{2}{*}{\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+Identifies the critical path and float times for activities\\
+May be difficult to include the amount of info required for an in-depth
+project on a single page
+\end{quote}\strut
+\end{minipage}} & \multirow{3}{*}{\textbf{(-)}} \\
+\textbf{(-)} \\
+\textbf{(-)} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+May be difficult to make a large project in a easy-to-read format
+\end{quote}
+\end{minipage} \\
+\bottomrule()
+\end{longtable}
+
+\textbf{6.Assume that the following data has been determined for the
+development and sale of a} \textbf{new digital thermometer for home use:
+development cost = \$250,000, production} \textbf{investment =
+\$500,000, annual production volume = 20,000 units per year, and the
+sales} \textbf{lifetime is 7 years. Assuming a variable production cost
+of \$5 per unit, determine: (a)} \textbf{the sales price necessary to
+break even within 2 years, and (b) the profit expected over} \textbf{the
+estimated sales lifetime. {[}A{]}}\\
+(a) The objective is to determine the sales price, \emph{n},necessary to
+break even in 2 years. The fixed costs are the sum of the development
+costs and production investment. So \emph{fixed costs =} \$(250,000 +
+500,000) = \$750,000.
+
+\begin{quote}
+This leads to a total cost for 40,000 units sold (2 years) of\\
+\emph{total cost =} \$750,000 + 40,000 * \$5 = \$950,000\\
+The revenue for a sale price of \emph{n} dollars is\\
+\emph{revenue =} 40,000 * \$\emph{n}\\
+Setting the revenue and total cost each equal at the break-even point
+produces\\
+40,000 * \$\emph{n} = \$950,000\\
+Solving for the final sales price gives\\
+\emph{n =} \textbf{\uline{\$23.75}}\\
+(b) Profit is the differential between the total revenue and the total
+cost and is expressed as
+\end{quote}
+
+3
+
+\emph{profit = total revenue -- total costs}.
+
+\begin{quote}
+For an expected volume of 20,000 units per year over 7 years
+\end{quote}
+
+\emph{profit = n} * \$23.75 -- (\$750,000 + \emph{n} * \$5)
+
+= 140,000 * \$23.75 -- (\$750,000 + 140,000 * \$5)
+
+\emph{profit =}\textbf{\uline{\$1.875 million}}.
+
+\textbf{7.Describe the difference between the cost estimation models in
+equations (7) and (8) and} \textbf{the COCOMO cost estimation model.
+{[}R{]}}
+
+\begin{quote}
+The cost estimation models found in equations (7) and (8) as simplistic
+models that offer only one input to the estimator -- the number of lines
+of code (KLOC). This assumes that there is a linear relationship between
+the number of people on a team and the time it will take to develop a
+product. This is referred to a ``mythical man-month.'' In fact, factors
+such as experience, team size, technology used, and the timeframe
+required all have an effect on the overall cost estimation. The
+Constructive Cost Model (COCOMO) takes in consideration all of these
+factors to estimate costs and determine how many engineers are needed to
+complete projects of a given complexity.
+\end{quote}
+
+\textbf{8.Consider a software development project that has a team of 50
+software development engineers. The team has proposed a design and
+estimates that it will require 500,000 lines of code to complete the
+project. The average cost to the company for an engineer is \$90,000 per
+year, including salary, benefits, and overhead. Estimate (a) the time
+required to complete the project, and (b) the labor costs. {[}A{]}}
+
+\begin{quote}
+(a) Based upon the given values, the following model is most
+appropriate:
+
+\emph{effort = a(KLOC)b} = 5.2(500)0.91 = 1486 person - months.
+
+Since there are 50 developers on the project, the estimated time is
+determined by dividing the effort by 50, to produce an estimated time of
+\textbf{\uline{29.7 months}}.
+
+(b) The labor costs for development are determined from the number of
+person-months and the average monthly salary of a development engineer
+as
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\emph{labor cost} = 1486 person -- months * \uline{\$90000} \sout{year}
+* 12 months 1 year
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\emph{labor cost} = \textbf{\uline{\$11.15 million}}.
+
+\textbf{9.Consider a software development project where the team has
+proposed a design and estimates that it will require 200,000 lines of
+code to complete. The average cost to the company for an engineer is
+\$110,000 per year, including salary, benefits, and overhead. Estimate
+(a) the number of engineers needed to complete the project within 18
+months, and (b) the labor costs.{[}A{]}}
+
+\begin{quote}
+(a) Based upon the given values, the following model is most
+appropriate:
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\emph{time = effort}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\emph{persons} = \emph{effort} = \emph{a(KLOC)b}
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+=
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+5 . 2 (
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+200 )
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+0
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+. 91
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+= \textbf{36 engineers}
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+\emph{persons} \emph{time}
+\end{quote}
+\end{minipage} & & & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{quote}
+18
+\end{quote}
+\end{minipage} & & & \\
+\bottomrule()
+\end{longtable}
+
+4
+
+\begin{quote}
+(b) The labor costs for development are determined from the number of
+person-months and the average monthly salary of a development engineer
+as
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\emph{labor cost} = 646 person -- months x \uline{\$110000 year}
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+1 year\\
+x 12 months
+\end{quote}\strut
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\emph{labor cost} = \textbf{\uline{\$5.92 million}}.
+
+\textbf{10.Project Application. Develop a project plan for your project.
+A format and guideline} \textbf{for developing the plan is contained in
+Section 10.7. {[}P{]}}
+
+\begin{quote}
+\textbf{Note:} A good project plan usually comes from a good systems
+engineering effort that identifies clearly the elements of the design.
+Thus the major tasks can be identified and assigned to different team
+members. As indicated in Section 10.7, the major elements are the WBS,
+Gantt chart/network diagram, and cost/resource estimation. We have our
+students develop the WBS and Gantt Chart using Microsoft Project. The
+Gantt Chart capability is nice in that it also shows the dependencies
+(network diagram) in the timeline format.
+\end{quote}
+
+5
+
+\emph{\textbf{The Project Plan}}\\
+\textbf{\uline{CENBD 480/EE BD 480 - Engineering Design Concepts Penn
+State Behrend}}
+
+\textbf{Reading: Chapter 10}\\
+\textbf{This is a team assignment for the project.}
+
+A well developed project plan will help the team in the execution of the
+project next semester. The plan will be utilized to monitor your team's
+progress and to gauge your adherence to schedule. The faculty members
+realize that things can and will change as the project proceeds.
+However, the plan will provide guidance for benchmarking the team's
+progress. Your team must develop a project plan and submit it by Friday
+\textbf{December 15, 2006} at midnight. The elements of the project plan
+for this class are the following:
+
+1) \emph{\textbf{The Work Breakdown Structure (WBS)}}. See Table 10.1 of
+the book for an example. Your WBS should have columns for:
+
+\begin{quote}
+• ID
+
+• Activity Name
+
+• Duration
+
+• Predecessors
+
+• People (Resource column in Microsoft lingo)
+
+• Deliverables
+
+• Lab Resources
+\end{quote}
+
+The WBS will be created from the Microsoft Project \emph{Task Sheet}
+view as demonstrated in class.
+
+You will need to add columns in the \emph{Task Sheet} view for the
+Deliverables and for the Lab Resources. In terms of the people assigned
+to a given task, put those in the Resources column in Microsoft Project
+(that is the unfortunate terminology used by the software). Also, be
+sure to include the following milestones (milestone = a task that has a
+duration of 0 days) in the plan:
+
+\begin{quote}
+• Team Design Review: March 5th - March 9th.
+
+• Final Report Due: April 27st (all work should be complete by this
+time).
+
+• Final Presentations to faculty: April 30th - May 4th.
+
+• Senior Design Conference: May 5th.
+
+• Team Member Evaluations: February 9th, March 9th, April 6th, May 4th.
+\end{quote}
+
+All project timelines should start on January 16, 2007 and end on May 4,
+2007.
+
+2) \emph{\textbf{GANNT Chart.}} A GANNT chart from the GANNT Chart view.
+You will need to edit the timescale so that the major timescale
+(\emph{middle tier} in Microsoft lingo) is months and minor timescale
+(\emph{bottom tier} in Microsoft Lingo) is weeks. You adjust this by
+right clicking the timescale in the GANNT chart view and selecting the
+\emph{timescale} option -- you will then see options for \emph{middle
+tier} and \emph{bottom tier}.
+
+3) \emph{\textbf{Development Cost Estimates.}} In a Microsoft Word
+Document, identify the following 2 items:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+•
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Cost Estimates (parts, components, software, etc.) costs. Include
+\textbf{a table} with all parts needed listed. Include only those parts
+that need to be purchased. There should be a \textbf{sum total estimate}
+of parts costs that need to be purchased.
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+•
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Internal Resources. Please indicate if you will need to use any of the
+following Behrend resources (this helps me get everything setup for next
+semester, so the projects can start smoothly):\\
+o\emph{Printed Circuit Boards.} Do you plan to use them in your design?
+How many?
+
+Estimated dimensions (just a rough idea helps)? When do you estimate
+that you will need them (identify this in the project plan)\\
+o\emph{Mechanical Fixtures.} Will you need any mechanical items built by
+our technicians? If so, what are they? When will you need them (again
+identify in project plan)?
+
+o\emph{Computers.} Will you need any special computer resources in the
+Senior Design Lab? They are typically for doing development work that
+can't be done on the networked computers that are available in the
+senior lab or in the electronics labs (i.e. you need to interface to
+bench-top hardware, have special software, special operating system
+needs).
+
+o\emph{Test \& Measurement Equipment.} Do you need any non-standard
+equipment for the project? (We have basic electronics setup available on
+the senior design benches -- o'scopes, meters, logic analyzers, power
+supplies, etc). Will you be using the senior design room or in the
+electronics labs for the project (or both)?
+\end{quote}\strut
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\begin{quote}
+\textbf{Assignment Submission Instruction:}
+
+Submit the following in an ANGEL Dropbox (I will print out what I need):
+
+1. A softcopy of the Microsoft Project file.
+
+2. A softcopy of the Microsoft Word file that has the development cost
+estimates.
+\end{quote}
+
+\end{document}
