@@ -1,0 +1,35 @@
+%%------------------------------------------------------
+%% Design for ECE Solutions Manual
+%%------------------------------------------------------
+
+
+% Excellent reference to the memoir package: https://www.ctan.org/pkg/memoir
+\documentclass[letterpaper, 10pt]{memoir}
+\chapterstyle{ger}
+\settrims{0pt}{0pt}
+\semiisopage[9]		% [N] is spine margin is 1/Nth pf page 
+
+\include{preamble}
+
+
+\begin{document}
+
+\frontmatter
+\title{{\Huge A textbook!} \\
+		Catchy Paraphrase\\
+		Instructor Manual}
+\author{You & I}
+\date{}
+\maketitle
+
+
+\tableofcontents
+
+\mainmatter 					% Now Use Arabic numerals for page numbers
+
+\textbf{Preface: How to Use This Manual}\\
+
+
+\include{./chapter01/problemSet01}
+
+\end{document} 
