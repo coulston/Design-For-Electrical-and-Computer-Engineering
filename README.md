@@ -27,8 +27,8 @@ engineering.
 
 ## Contribute
 	* Add and Edit to the repository
-	* [Textbook Latex Writing Style Guide ](https://github.com/coulston/Design-For-Electrical-and-Computer-Engineering/blob/main/Latex/howTo/book.tex)
-	* [Homework Latex Writing Style Guide ](https://github.com/coulston/Design-For-Electrical-and-Computer-Engineering/blob/main/Latex/howTo/hwSolutions.tex)
+	* [Textbook Latex Writing Style Guide](https://github.com/coulston/Design-For-Electrical-and-Computer-Engineering/blob/main/Latex/howTo/book.tex)
+	* [Homework Latex Writing Style Guide](https://github.com/coulston/Design-For-Electrical-and-Computer-Engineering/blob/main/Latex/howTo/hwSolutions.tex)
 
 
 
