@@ -1,4 +1,4 @@
-![Design-For-Electrical-and-Computer-Engineering](https://github.com/coulston/.github/blob/main/images/secondEditionBanner.png)
+![Design-For-Electrical-and-Computer-Engineering](https://github.com/coulston/Design-For-Electrical-and-Computer-Engineering/blob/main/images/secondEditionBanner.png)
 
 This book is written for students and teachers engaged in electrical and computer engineering design projects, 
 primarily in the senior year. It guides students and faculty through the steps necessary for the successful 
