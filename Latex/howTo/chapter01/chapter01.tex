@@ -102,10 +102,6 @@ Thankfully figures are a lot easier to incorporate into \LaTeX if you follow a f
 
 With this, let's admire Figure~\ref{table:bookPhilosophy}. 
 
-
-
-
-
 \begin{figure}[h]
 \includegraphics[width=2.9in,height=2.6in]{image7}
 
@@ -125,43 +121,46 @@ from being squished next to one another.
 \hspace{1cm}
 \includegraphics[width=1cm]{cc-logo}
 \hspace{1cm}
-\includegraphics[width=1cm]{cc-sa}
-\hspace{1cm}
 \includegraphics[width=1cm]{cc-by}
 \hspace{1cm}
 \includegraphics[width=1cm]{cc-nc}
+\hspace{1cm}
+\includegraphics[width=1cm]{cc-sa}
 \caption{(a) .}
 \label{figure:howToCommonCollectiveLicense}
 \end{figure}
 
-
-
 \section{Equations}
 \label{section:howToEquations}
 
-
-A reference to Equation~\ref{equ:simpleEquation}.
-\lipsum[12]
-
+Being a design textbook, I didn't think that there would be many equations.  Boy, was
+I wrong.  The chapter on reliability was chock-full of equations.  Thank goodness, \LaTeX
+is a master of equations.  So writing them will be one of the more plesant and straightforward
+tasks. For example, let's look at Equation~\ref{equ:simpleEquation}.
 
 \begin{equation}
 \label{equ:simpleEquation}
 x = \int v(t) dt
 \end{equation}
 
-\lipsum[12]
+Notice the reference to "equation" starts with a captial letter "E".  Not all equations will
+need a number, in which case use the \$\$ delimiters when you want the equation to
+float centered in the page.  For in-line equations use a single \$ at the start and end
+of the equations.  Pretty standard \LaTeX stuff.
 
 \section{Examples}
 \label{section:howToExamples}
 
+I wanted the examples to standout in the text.  The \verb+example+ environment allows
+you to put a numbered, referencable, example in a shaded box.  Most examples will have
+a problem and solution.  When they do, put these terms in bold.
 
 \begin{example}{A Simple Example}
 \label{example:aSimpleExample}
-\emph{\textbf{\ul{Problem:}}} Consider.... \\	% Force line break for spacing
-\noindent\emph{\textbf{\ul{Solution:}}} The parallel systems...
+\emph{\textbf{\ul{Problem:}}} Choosing a senior design textbook for ECE. \\	% Force line break for spacing
+\noindent\emph{\textbf{\ul{Solution:}}} Look at a bunch of textbooks and 
+consider a variety of factors.  It is a very individual decision.
 \end{example}
-
-\lipsum[13]
 
 \section{Linking}
 \label{section:howToLinking}
@@ -192,5 +191,5 @@ breaks before and after URL references.
 
 \section{Summary and Further Reading}
 \label{section:summary-and-further-reading}
-
-\lipsum[30-31]
+Thanks for tking the time to review this How-To guide.  I appreciate your contributions to the text and any of the 
+associated materials.
