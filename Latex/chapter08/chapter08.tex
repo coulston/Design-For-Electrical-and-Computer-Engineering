@@ -46,18 +46,6 @@ By the end of this chapter, the reader should:
   configurations.
 \end{itemize}
 
-\textbf{\hfill\break
-DILBERT\textsuperscript{®} by Scott Adams}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=5.5in,height=1.77in]{./image1.jpeg}
-\caption{Dogbert's Six Sigma Program. (Dilbert © United Feature Syndicate. Reprinted by
-permission.)}
-\label{figure:dilbert6sigma}
-\end{figure}
-
-
 \section{Probability Theory Review}
 \label{section:probability-theory-review}
 
@@ -333,7 +321,7 @@ of the random variable. This produces a new function, known as the
 function of the PDF and is defined as
 
 \begin{equation}
-\label{equ:exponentialDensity}
+\label{equ:cumulativeDensity}
 \text{CDF}(x) = \int^x_{-\infty} p_x(y)dy.
 \end{equation}
 
@@ -394,7 +382,7 @@ specified time period. A CDF for $f_T(t)$
 is determined as
 
 \begin{equation}
-\label{equ:integralDeltaSliceOfPDF}
+\label{equ:failureWithingTime}
 F(t) = \int_{0}^{t} f_T(\tau) d\tau
 \end{equation}
 
@@ -406,7 +394,7 @@ directly related to $F(t)$ and is its complement. The relationship
 between the two is
 
 \begin{equation}
-\label{equ:integralDeltaSliceOfPDF}
+\label{equ:reliabilityAndFailure}
 R(t) = 1 - F(t)
 \end{equation}
 
@@ -455,13 +443,13 @@ Setting Equations~\ref{equ:failureBetweenUsingT} and  \ref{equ:failureBetweenUsi
 provides the desired relationship between the three quantities
 
 \begin{equation}
-\label{equ:failureBetweenUsingR}
+\label{equ:failureReliabilityLambda}
 f_T(t) = R(t) \lambda(t) ,
 \end{equation}
 
 that is fundamental in establishing the connection between $R(t)$
 and $\lambda(t)$. However, the PDF $f_T(t)$ needs to be eliminated 
-from Equation~\ref{equ:failureBetweenUsingR}. This is accomplished 
+from Equation~\ref{equ:failureReliabilityLambda}. This is accomplished 
 through its relationship to the CDF
 $F(t)$, and thus $R(t)$, as follows
 
@@ -470,11 +458,11 @@ $F(t)$, and thus $R(t)$, as follows
 f_T(t) = \frac{d}{dt}F(t) = \frac{d}{dt}\big[1-R(t)\big] = -\frac{d}{dt}R(t)
 \end{equation}
 
-Equating this result with Equation~\ref{equ:failureBetweenUsingR}
+Equating this result with Equation~\ref{equ:failureReliabilityLambda}
 produces
 
 \begin{equation}
-\label{equ:cdfOfF}
+\label{equ:cdfOfFinTermsOfR}
 -\frac{d}{dt}R(t) = R(t)\lambda(t) \Rightarrow \frac{ - \frac{d}{dt}R(t)} {R(t)} = \lambda(t)
 \end{equation}
 
@@ -543,7 +531,7 @@ of $R(t)$. Assuming the form of $R(t)$ found in
 Equation~\ref{equ:rAsFailureConstant} for a constant failure rate gives
 
 \begin{equation}
-\label{equ:mttfConstantFailureRate}
+\label{equ:mttfVariableFailureRate}
 f_T(t) = -\frac{d}{dt}R(t) = \lambda e^{-\lambda t}
 \end{equation}
 
@@ -851,7 +839,7 @@ points from the thermal resistance and power dissipation. Most
 importantly the junction temperature is found as
 
 \begin{equation}
-\label{equ:thermalHeatFlow}
+\label{equ:junctionTemperature}
 T_J = T_A + P_D \Theta_{JA}
 \end{equation}
 
@@ -876,7 +864,7 @@ maximum junction temperature is exceeded, the device will be destroyed.
 Another way to look at this is that as ambient temperature increases,
 the maximum amount of power a device can dissipate decreases. This
 decrease in maximum power dissipation is known as
-\emph{\textbf{derating}}. From Equation~\ref{equ:thermalHeatFlow}
+\emph{\textbf{derating}}. From Equation~\ref{equ:junctionTemperature}
  the maximum power that can be
 dissipated in a device at a given ambient temperature is
 
@@ -1266,7 +1254,7 @@ reliability for systems 3 and 4 of $R_{s_3} = R_{s_4} = 90\%$, while the combine
 reliability of systems 3 and 4 is 99\%.
 
 \section{Summary and Further Reading}
-\label{section:summary-and-further-reading}
+\label{section:reliabilitySummary-and-further-reading}
 
 This chapter presented the basics of probability theory and methods for
 estimating the reliability of components and systems. Failure rate is an

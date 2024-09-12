@@ -30,22 +30,49 @@ empowered to make it better.
 \noindent\rule{\linewidth}{1pt}
 By the end of this chapter, the reader should:
 \begin{itemize}
-\item 	Understand some of my motivations in this project.
-\item 	Understand the general philosophy of writing \LaTeX for this text.
+\item Understand some of my motivations in this project.
+\item Understand the general philosophy of writing \LaTeX for this text.
 \item Know how to create common structures like table, figure, examples.
 \item Know how to use the Example environment.
 \item Know how to create references to structures.
 \end{itemize}
 
-\section{Tables}
-\label{section:howToTables}
-When deciding on a methodology to implement some text formatting question,
+
+\section{General Information}
+\label{section:howGeneralInformation}
+How to navigate this project will probably be one of your first challenges.
+The directory structure is fairly straightforward.  All the \LaTeX files are contained
+in the ``Latex'' a directory as shown below.
+
+
+\ldots{} \begin{minipage}[t]{10cm} xxx{.}	\end{minipage}.
+
+\dirtree{%
+	.1 /.
+	.2 book.tex\hspace{2.4cm} \begin{minipage}[t]{8cm} Typeset this file to create the textbook PDF{.}	\end{minipage}.
+	.2 preamble.tex \hspace{1.5cm} \begin{minipage}[t]{8cm} Invokes packages, setup general formatting and create environments{.}	\end{minipage}.
+	.2 chapterxx.
+	.3 chapterxx.tex\hspace{1.0cm} \begin{minipage}[t]{8cm} The content of each chapter is found here{.}	\end{minipage}.
+	.3 Fig.
+	.4 image1.pdf\hspace{1.1cm} \begin{minipage}[t]{8cm} Art work used in chapterxx.tex{.}	\end{minipage}.
+	.3 problemSetxx.tex\hspace{0.5cm} \begin{minipage}[t]{8cm} The homework problems and solutions for each chapter are here{.}	\end{minipage}.
+	.3 FigSolutions.
+	.4 image1.pdf\hspace{1.1cm} \begin{minipage}[t]{8cm} Art work used in problemSetxx.tex{.}	\end{minipage}.
+	.2 hwSolutions.tex\hspace{1.2cm} \begin{minipage}[t]{8cm} Typeset this file to create the solutions manual{.}	\end{minipage}.
+}
+\vspace{0.5cm}
+
+When deciding on a methodology to implement a text formatting question,
 my preference is to work with the existing \LaTeX packages before adding new
 packages because every additional package adds additional time to build the
 text.  All things being equal, I will always prefer a Minimum Working Example 
 (MWE) over something more complex.  As a consequence of these two preferences,
 when you inevitably need to search for a way to complete some text formatting
-goal, I generally preface "MWE" in front of the thing I am trying to accomplish.
+goal, I generally preface "MWE" in front of the thing I am trying to accomplish
+some typesetting goal.
+
+\section{Tables}
+\label{section:howToTables}
 
 While tables are an incredibly important tool to communicate a lot of information 
 in a structured format, they can be a challenge to tame.  As a result, I'll introduce

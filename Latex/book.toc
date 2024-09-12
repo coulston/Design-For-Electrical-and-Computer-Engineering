@@ -1,14 +1,173 @@
-\contentsline {chapter}{Contents}{iii}{section*.2}%
-\contentsline {chapter}{Part I - The Engineering Design Process }{1}{section*.2}%
-\contentsline {chapter}{\chapternumberline {1} Project Management}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}The Work Breakdown Structure}{4}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Network Diagrams}{7}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Gantt Charts}{9}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Cost Estimation}{10}{section.1.4}%
-\contentsline {subsection}{Break-Even Analysis}{10}{section*.9}%
-\contentsline {subsection}{Cost Models}{12}{section*.11}%
-\contentsline {section}{\numberline {1.5}The Project Manager}{14}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Guidance}{15}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Project Application: The Project Plan}{15}{section.1.7}%
-\contentsline {section}{\numberline {1.8}Summary and Further Reading}{16}{section.1.8}%
-\contentsline {section}{\numberline {1.9}Problems}{17}{section.1.9}%
+\contentsline {section}{About the Authors}{iii}{section*.2}%
+\contentsline {chapter}{Contents}{iv}{section*.3}%
+\contentsline {section}{Preface}{vii}{section*.4}%
+\contentsline {chapter}{Part I - The Engineering Design Process }{1}{section*.4}%
+\contentsline {chapter}{\chapternumberline {1}The Engineering Design Process}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}The Engineering Design Process}{4}{section.1.1}%
+\contentsline {subsection}{Elements of the Design Process}{6}{section*.10}%
+\contentsline {subsection}{Technology Specific Design Processes}{8}{section*.11}%
+\contentsline {section}{\numberline {1.2}The World-Class Engineer}{9}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Book Overview}{11}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Summary and Further Reading}{13}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Problems}{14}{section.1.5}%
+\contentsline {chapter}{\chapternumberline {2}Project Selection and Needs Identification}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Engineering Design Projects}{16}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Sources of Project Ideas}{17}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Project Feasibility and Selection Criteria}{17}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Needs Identification}{19}{section.2.4}%
+\contentsline {section}{\numberline {2.5}The Research Survey}{23}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Needs and Objectives Statements}{25}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Project Application: The Problem Statement}{27}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Summary and Further Reading}{27}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Problems}{29}{section.2.9}%
+\contentsline {chapter}{\chapternumberline {3}The Requirements Specification}{31}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Overview of the Requirements Setting Process}{32}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Engineering Requirements}{32}{section.3.2}%
+\contentsline {subsection}{Properties of an Engineering Requirement}{33}{section*.26}%
+\contentsline {subsection}{A Fifth Property -- Realism}{34}{section*.27}%
+\contentsline {subsection}{Constraints}{34}{section*.28}%
+\contentsline {subsection}{Standards}{35}{section*.29}%
+\contentsline {subsection}{Identifying Engineering Requirements}{36}{section*.30}%
+\contentsline {section}{\numberline {3.3}Developing the Requirements Specification}{44}{section.3.3}%
+\contentsline {subsection}{Properties of the Requirements Specification}{44}{section*.45}%
+\contentsline {subsection}{Requirements Validation}{44}{section*.46}%
+\contentsline {section}{\numberline {3.4}Requirements Case Studies}{45}{section.3.4}%
+\contentsline {subsection}{Case Study: Car Audio Amplifier}{45}{section*.47}%
+\contentsline {subsection}{Case Study: iPod\textsuperscript {TM} Hands-Free Device}{46}{section*.48}%
+\contentsline {subsection}{Case Study: Gigabit Ethernet Card Testing}{48}{section*.49}%
+\contentsline {subsection}{Case Study: Portable Aerial Surveillance System}{49}{section*.50}%
+\contentsline {section}{\numberline {3.5}Advanced Requirements Analysis}{50}{section.3.5}%
+\contentsline {subsection}{The Engineering-Marketing Tradeoff Matrix}{51}{section*.51}%
+\contentsline {subsection}{The Engineering Tradeoff Matrix}{52}{section*.53}%
+\contentsline {subsection}{Competitive Benchmarks}{52}{section*.55}%
+\contentsline {subsection}{The House of Quality}{52}{section*.57}%
+\contentsline {section}{\numberline {3.6}Project Application: The Requirement Specification}{54}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Summary and Further Reading }{54}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Problems}{56}{section.3.8}%
+\contentsline {chapter}{\chapternumberline {4}Concept Generation and Evaluation}{57}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Creativity}{58}{section.4.1}%
+\contentsline {subsection}{Barriers to Creativity}{58}{section*.62}%
+\contentsline {subsection}{Vertical and Lateral Thinking}{59}{section*.64}%
+\contentsline {subsection}{Strategies to Enhance Creativity}{61}{section*.65}%
+\contentsline {section}{\numberline {4.2}Concept Generation}{62}{section.4.2}%
+\contentsline {subsection}{Concept Evaluation}{65}{section*.69}%
+\contentsline {subsection}{Initial Evaluation}{66}{section*.71}%
+\contentsline {subsection}{Strengths and Weaknesses Analysis}{66}{section*.72}%
+\contentsline {subsection}{Analytical Hierarchy Process and Decision Matrices}{66}{section*.74}%
+\contentsline {subsection}{Pugh Concept Selection}{69}{section*.84}%
+\contentsline {section}{\numberline {4.3}Project Application: Concept Generation and Evaluation}{69}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Summary and Further Reading}{70}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Problems}{71}{section.4.5}%
+\contentsline {chapter}{Part II - Design Tools}{73}{Item.77}%
+\contentsline {chapter}{\chapternumberline {5}System Design I: Functional Decomposition}{75}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Bottom-Up and Top-Down Design}{76}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Functional Decomposition}{77}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Guidance}{77}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Application: Electronics Design}{79}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Application: Digital Design}{82}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Application: Software Design}{84}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Application: Thermometer Design}{87}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Coupling and Cohesion}{91}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Project Application: The Functional Design}{92}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Summary and Further Reading}{93}{section.5.10}%
+\contentsline {section}{\numberline {5.11}Problems}{94}{section.5.11}%
+\contentsline {chapter}{\chapternumberline {6}System Design II: Behavior Models}{97}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Models}{98}{section.6.1}%
+\contentsline {section}{\numberline {6.2}State Diagrams}{99}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Flowcharts}{100}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Data Flow Diagrams}{101}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Entity Relationship Diagrams}{104}{section.6.5}%
+\contentsline {section}{\numberline {6.6}The Unified Modeling Language}{105}{section.6.6}%
+\contentsline {subsection}{Static View}{106}{section*.133}%
+\contentsline {subsection}{Use-Case View}{107}{section*.136}%
+\contentsline {subsection}{State Machine View}{109}{section*.139}%
+\contentsline {subsection}{Activity View}{109}{section*.141}%
+\contentsline {subsection}{Interaction View}{110}{section*.143}%
+\contentsline {subsection}{Physical View}{111}{section*.146}%
+\contentsline {section}{\numberline {6.7}Project Application: Selecting Models}{112}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Summary and Further Reading}{112}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Problems}{114}{section.6.9}%
+\contentsline {chapter}{\chapternumberline {7}Testing}{119}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Testing Principles}{120}{section.7.1}%
+\contentsline {subsection}{Types of Testing, Observability, and Controllability}{121}{section*.151}%
+\contentsline {subsection}{Stubs}{122}{section*.153}%
+\contentsline {subsection}{Test Case Properties}{123}{section*.155}%
+\contentsline {section}{\numberline {7.2}Constructing Tests}{123}{section.7.2}%
+\contentsline {subsection}{Debugging}{124}{section*.156}%
+\contentsline {subsection}{Unit Testing}{125}{section*.157}%
+\contentsline {subsection}{Integration Testing}{127}{section*.163}%
+\contentsline {subsection}{Acceptance Testing}{128}{section*.164}%
+\contentsline {section}{\numberline {7.3}Case Study: Security Robot Design}{129}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Guidance}{131}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Summary and Further Reading}{133}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Problems}{136}{section.7.6}%
+\contentsline {chapter}{\chapternumberline {8}System Reliability}{137}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Probability Theory Review}{138}{section.8.1}%
+\contentsline {subsection}{Probability Density Functions}{138}{section*.174}%
+\contentsline {subsection}{Mean and Variance}{140}{section*.176}%
+\contentsline {subsection}{Common Probability Density Functions}{140}{section*.177}%
+\contentsline {subsection}{Cumulative Distribution Functions}{142}{section*.184}%
+\contentsline {section}{\numberline {8.2}Reliability Prediction}{142}{section.8.2}%
+\contentsline {subsection}{Mean Time to Failure}{144}{section*.187}%
+\contentsline {subsection}{Failure Rate Estimates}{146}{section*.188}%
+\contentsline {subsection}{Thermal Management and Power Derating}{149}{section*.189}%
+\contentsline {subsection}{Limits of Reliability Estimation}{151}{section*.193}%
+\contentsline {section}{\numberline {8.3}System Reliability}{152}{section.8.3}%
+\contentsline {subsection}{Series Systems}{152}{section*.194}%
+\contentsline {subsection}{Parallel Systems}{153}{section*.196}%
+\contentsline {subsection}{Combination Systems}{155}{section*.198}%
+\contentsline {section}{\numberline {8.4}Summary and Further Reading}{156}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Problems}{158}{section.8.5}%
+\contentsline {chapter}{Part III - Professional Skills}{161}{Item.136}%
+\contentsline {chapter}{\chapternumberline {9}Teams and Teamwork}{163}{chapter.9}%
+\contentsline {section}{\numberline {9.1}What is a Team?}{164}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Models of Team Development}{164}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Characteristics of Real Teams}{166}{section.9.3}%
+\contentsline {subsection}{Select Members Based Upon Skills}{166}{section*.203}%
+\contentsline {subsection}{Identify Objectives}{167}{section*.204}%
+\contentsline {subsection}{Develop Decision-Making Guidelines}{167}{section*.205}%
+\contentsline {subsection}{Hold Effective Meetings}{168}{section*.206}%
+\contentsline {subsection}{Develop Team Roles}{169}{section*.207}%
+\contentsline {subsection}{Assign Tasks and Responsibilities}{169}{section*.208}%
+\contentsline {subsection}{Spend a Lot of Time Together}{170}{section*.209}%
+\contentsline {subsection}{Respect Each Other}{170}{section*.210}%
+\contentsline {subsection}{Manage Conflicts Constructively}{170}{section*.211}%
+\contentsline {section}{\numberline {9.4}Project Application: Team Process Guidelines}{171}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Summary and Further Reading}{172}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Problems}{173}{section.9.6}%
+\contentsline {chapter}{\chapternumberline {10} Project Management}{175}{chapter.10}%
+\contentsline {section}{\numberline {10.1}The Work Breakdown Structure}{176}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Network Diagrams}{178}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Gantt Charts}{181}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Cost Estimation}{181}{section.10.4}%
+\contentsline {subsection}{Break-Even Analysis}{181}{section*.218}%
+\contentsline {subsection}{Cost Models}{184}{section*.220}%
+\contentsline {section}{\numberline {10.5}The Project Manager}{186}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Guidance}{186}{section.10.6}%
+\contentsline {section}{\numberline {10.7}Project Application: The Project Plan}{187}{section.10.7}%
+\contentsline {section}{\numberline {10.8}Summary and Further Reading}{187}{section.10.8}%
+\contentsline {section}{\numberline {10.9}Problems}{189}{section.10.9}%
+\contentsline {chapter}{\chapternumberline {11} Ethical and Legal Issues}{191}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Ethical Theory in a Nutshell}{192}{section.11.1}%
+\contentsline {section}{\numberline {11.2}The IEEE Code of Ethics}{193}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Intellectual Property and Legal Issues}{194}{section.11.3}%
+\contentsline {subsection}{Intellectual Property}{194}{section*.225}%
+\contentsline {subsection}{Liability and Negligence}{200}{section*.229}%
+\contentsline {section}{\numberline {11.4}Handling Ethical Dilemmas}{200}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Case Study Analysis}{202}{section.11.5}%
+\contentsline {section}{\numberline {11.6}Project Application: Incorporating Ethics in the Design Process}{204}{section.11.6}%
+\contentsline {section}{\numberline {11.7}Summary and Further Reading}{205}{section.11.7}%
+\contentsline {section}{\numberline {11.8}Problems}{206}{section.11.8}%
+\contentsline {chapter}{\chapternumberline {12}Oral Presentations}{209}{chapter.12}%
+\contentsline {section}{\numberline {12.1}How People Evaluate Presentations}{210}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Preparing the Presentation}{210}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Project Application: Design Presentations}{213}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Summary and Further Reading}{213}{section.12.4}%
+\contentsline {appendix}{\chapternumberline {A}Glossary}{217}{appendix.A}%
+\contentsline {chapter}{Appendix}{217}{section.12.4}%
+\contentsline {appendix}{\chapternumberline {B}Decision Making with Analytical Hierarchy Process}{229}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Applying AHP for Car Selection}{230}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Hierarchical Decision Criteria}{233}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Summary and Further Reading}{235}{section.B.3}%
+\contentsline {appendix}{\chapternumberline {C}Manufacturer Datasheets}{239}{appendix.C}%
+\contentsline {appendix}{\chapternumberline {D}Design Project Case Study}{249}{appendix.D}%

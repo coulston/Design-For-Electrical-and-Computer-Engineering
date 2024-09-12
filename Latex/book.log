@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.2)  15 AUG 2024 13:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.2)  12 SEP 2024 12:47
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **C:/Users/coulston/Documents/GitHub/Design-For-Electrical-and-Computer-Enginee
 ring/Latex/book.tex
@@ -13,8 +12,8 @@ L3 programming layer <2024-05-27>
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/memoir\memoir.cls
 Document Class: memoir 2024/01/26 v3.8.2 configurable book, report, article doc
 ument class
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty (C
-:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2024-05-27 L3 programming layer (loader) 
 
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-
@@ -39,11 +38,13 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \xlvchars=\skip51
 \@memcnta=\count196
 \c@@memmarkcntra=\count197
+
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 )
 \trimtop=\skip52
 \trimedge=\skip53
+
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/memoir\mem10.clo
 File: mem10.clo 2022/07/29 v0.5 memoir class 10pt size option
 )
@@ -134,6 +135,7 @@ File: mem10.clo 2022/07/29 v0.5 memoir class 10pt size option
 \beforePoemTitleskip=\skip114
 \midPoemTitleskip=\skip115
 \afterPoemTitleskip=\skip116
+
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2024/06/14 v2.6d Tabular extension package (FMi)
 \col@sep=\dimen146
@@ -143,11 +145,14 @@ Package: array 2024/06/14 v2.6d Tabular extension package (FMi)
 \extratabsurround=\skip117
 \backup@length=\skip118
 \ar@cellbox=\box54
-) (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/tools\dcolumn.sty
+)
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/tools\dcolumn.sty
 Package: dcolumn 2023/07/08 v1.06 decimal alignment package (DPC)
-) (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/tools\delarray.sty
+)
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/tools\delarray.sty
 Package: delarray 2014/10/28 v1.01 array delimiter package (DPC)
-) (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+)
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@col@width=\dimen148
 \TX@old@table=\dimen149
@@ -237,6 +242,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.
 sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks21
@@ -315,6 +321,7 @@ LaTeX Info: Redefining \flushbottom on input line 7939.
 \c@pagenote=\count297
 \c@pagenoteshadow=\count298
 \mem@pn@lastkern=\skip181
+
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks23
@@ -323,6 +330,7 @@ Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 )
 \verbatimindent=\skip182
 \verbatim@out=\write3
+
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/base\shortvrb.sty
 Package: shortvrb 2024/04/26 v3.0p Standard LaTeX documentation package V3 (FMi
 )
@@ -400,9 +408,7 @@ Package verse [2008/07/23] emulated by memoir.
 LaTeX Warning: \include should only be used after \begin{document} on input lin
 e 14.
 
-
-(C:/Users/coulston/Documents/GitHub/Design-For-Electrical-and-Computer-Engineer
-ing/Latex\preamble.tex
+(preamble.tex
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.st
 y
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -410,7 +416,7 @@ Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.st
 y
 Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+ (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphic
@@ -430,6 +436,7 @@ File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 y
 Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchro
 nous mode
+
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
@@ -442,8 +449,8 @@ ex
 )
 \XKV@depth=\count320
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.s
-ty
+))
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
@@ -517,127 +524,7 @@ Package: multicol 2024/05/23 v1.9h multicolumn formatting (FMi)
 \mult@nat@firstbox=\box102
 \colbreak@box=\box103
 \mc@col@check@num=\count330
-))
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.st
-y
-Package: hyperref 2024-07-10 v7.01j Hypertext links for LaTeX
-
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdef
-inekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescap
-e.sty
-Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexc
-mds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)) (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.s
-ty
-Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringen
-c.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
-)
-)
-\@linkdim=\dimen197
-\Hy@linkcounter=\count331
-\Hy@pagecounter=\count332
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2024-07-10 v7.01j Hyperref: PDFDocEncoding definition (HO)
-Now handling font encoding PD1 ...
-... no UTF-8 mapping file for font encoding PD1
-)
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.st
-y
-Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-\Hy@SavedSpaceFactor=\count333
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2024-07-10 v7.01j Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
-)
-Package hyperref Info: Hyper figures OFF on input line 4157.
-Package hyperref Info: Link nesting OFF on input line 4162.
-Package hyperref Info: Hyper index ON on input line 4165.
-Package hyperref Info: Plain pages OFF on input line 4172.
-Package hyperref Info: Backreferencing OFF on input line 4177.
-Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count334
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
-\Urlmuskip=\muskip17
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen198
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
-Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintc
-alc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
-))
-\Fld@menulength=\count335
-\Field@Width=\dimen199
-\Fld@charsize=\dimen256
-Package hyperref Info: Hyper figures OFF on input line 6042.
-Package hyperref Info: Link nesting OFF on input line 6047.
-Package hyperref Info: Hyper index ON on input line 6050.
-Package hyperref Info: backreferencing OFF on input line 6057.
-Package hyperref Info: Link coloring OFF on input line 6062.
-Package hyperref Info: Link coloring with OCG OFF on input line 6067.
-Package hyperref Info: PDF/A mode OFF on input line 6072.
-
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.st
-y
-Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
-package with kernel methods
-)
-\Hy@abspage=\count336
-\c@Item=\count337
-\c@Hfootnote=\count338
-)
-Package hyperref Info: Driver (autodetected): hpdftex.
-
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2024-07-10 v7.01j Hyperref driver for pdfTeX
-
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.s
-ty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
-kage
-with kernel methods
-)
-\Fld@listcount=\count339
-\c@bookmark@seq@number=\count340
-
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerun
-filecheck.sty
-Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
-
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniq
-uecounter.sty
-Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
-)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-85.
-)
-\Hy@SectionHShift=\skip193
-) (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/memoir\memhfixc.st
-y
-Package: memhfixc 2023/09/10 v1.22 hyperref package fixes for memoir class
-\c@memhycontfloat=\count341
-\c@Hpagenote=\count342
-) (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+)) (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
 
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.c
@@ -662,110 +549,276 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 y
 Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
 \everycr=\toks27
-\minrowclearance=\skip194
-\rownum=\count343
+\minrowclearance=\skip193
+\rownum=\count331
+)
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\mdframed.st
+y
+Package: mdframed 2013/07/01 1.9b: mdframed
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-abspage.st
+y
+Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
+ (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-base.sty
+Package: zref-base 2023-09-14 v2.35 Module base for zref (HO)
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdef
+inekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexc
+mds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.
+sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+\c@abspage=\count332
+Package zref Info: New property: abspage on input line 67.
+)
+\mdf@templength=\skip194
+\c@mdf@globalstyle@cnt=\count333
+\mdf@skipabove@length=\skip195
+\mdf@skipbelow@length=\skip196
+\mdf@leftmargin@length=\skip197
+\mdf@rightmargin@length=\skip198
+\mdf@innerleftmargin@length=\skip199
+\mdf@innerrightmargin@length=\skip256
+\mdf@innertopmargin@length=\skip257
+\mdf@innerbottommargin@length=\skip258
+\mdf@splittopskip@length=\skip259
+\mdf@splitbottomskip@length=\skip260
+\mdf@outermargin@length=\skip261
+\mdf@innermargin@length=\skip262
+\mdf@linewidth@length=\skip263
+\mdf@innerlinewidth@length=\skip264
+\mdf@middlelinewidth@length=\skip265
+\mdf@outerlinewidth@length=\skip266
+\mdf@roundcorner@length=\skip267
+\mdf@footenotedistance@length=\skip268
+\mdf@userdefinedwidth@length=\skip269
+\mdf@needspace@length=\skip270
+\mdf@frametitleaboveskip@length=\skip271
+\mdf@frametitlebelowskip@length=\skip272
+\mdf@frametitlerulewidth@length=\skip273
+\mdf@frametitleleftmargin@length=\skip274
+\mdf@frametitlerightmargin@length=\skip275
+\mdf@shadowsize@length=\skip276
+\mdf@extratopheight@length=\skip277
+\mdf@subtitleabovelinewidth@length=\skip278
+\mdf@subtitlebelowlinewidth@length=\skip279
+\mdf@subtitleaboveskip@length=\skip280
+\mdf@subtitlebelowskip@length=\skip281
+\mdf@subtitleinneraboveskip@length=\skip282
+\mdf@subtitleinnerbelowskip@length=\skip283
+\mdf@subsubtitleabovelinewidth@length=\skip284
+\mdf@subsubtitlebelowlinewidth@length=\skip285
+\mdf@subsubtitleaboveskip@length=\skip286
+\mdf@subsubtitlebelowskip@length=\skip287
+\mdf@subsubtitleinneraboveskip@length=\skip288
+\mdf@subsubtitleinnerbelowskip@length=\skip289
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\md-frame-0.
+mdf
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box104
+\mdf@footnotebox=\box105
+\mdf@splitbox@one=\box106
+\mdf@splitbox@two=\box107
+\mdf@splitbox@save=\box108
+\mdfsplitboxwidth=\skip290
+\mdfsplitboxtotalwidth=\skip291
+\mdfsplitboxheight=\skip292
+\mdfsplitboxdepth=\skip293
+\mdfsplitboxtotalheight=\skip294
+\mdfframetitleboxwidth=\skip295
+\mdfframetitleboxtotalwidth=\skip296
+\mdfframetitleboxheight=\skip297
+\mdfframetitleboxdepth=\skip298
+\mdfframetitleboxtotalheight=\skip299
+\mdffootnoteboxwidth=\skip300
+\mdffootnoteboxtotalwidth=\skip301
+\mdffootnoteboxheight=\skip302
+\mdffootnoteboxdepth=\skip303
+\mdffootnoteboxtotalheight=\skip304
+\mdftotallinewidth=\skip305
+\mdfboundingboxwidth=\skip306
+\mdfboundingboxtotalwidth=\skip307
+\mdfboundingboxheight=\skip308
+\mdfboundingboxdepth=\skip309
+\mdfboundingboxtotalheight=\skip310
+\mdf@freevspace@length=\skip311
+\mdf@horizontalwidthofbox@length=\skip312
+\mdf@verticalmarginwhole@length=\skip313
+\mdf@horizontalspaceofbox=\skip314
+\mdfsubtitleheight=\skip315
+\mdfsubsubtitleheight=\skip316
+\c@mdfcountframes=\count334
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count335
+\c@mdf@env@i=\count336
+\c@mdf@env@ii=\count337
+\c@mdf@zref@counter=\count338
+Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.st
 y
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip195
-\multirow@cntb=\count344
-\multirow@dima=\skip196
-\bigstrutjot=\dimen257
+\multirow@colwidth=\skip317
+\multirow@cntb=\count339
+\multirow@dima=\skip318
+\bigstrutjot=\dimen197
 ) (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/tools\hhline.sty
 Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
 ) (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.st
 y
 Package: longtable 2024-04-26 v4.20 Multi-page Table package (DPC)
-\LTleft=\skip197
-\LTright=\skip198
-\LTpre=\skip199
-\LTpost=\skip256
-\LTchunksize=\count345
-\LTcapwidth=\dimen258
-\LT@head=\box104
-\LT@firsthead=\box105
-\LT@foot=\box106
-\LT@lastfoot=\box107
-\LT@gbox=\box108
-\LT@cols=\count346
-\LT@rows=\count347
-\c@LT@tables=\count348
-\c@LT@chunks=\count349
+\LTleft=\skip319
+\LTright=\skip320
+\LTpre=\skip321
+\LTpost=\skip322
+\LTchunksize=\count340
+\LTcapwidth=\dimen198
+\LT@head=\box109
+\LT@firsthead=\box110
+\LT@foot=\box111
+\LT@lastfoot=\box112
+\LT@gbox=\box113
+\LT@cols=\count341
+\LT@rows=\count342
+\c@LT@tables=\count343
+\c@LT@chunks=\count344
 \LT@p@ftn=\toks28
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.st
 y
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen259
-\c@nlinenum=\count350
+\rotheadsize=\dimen199
+\c@nlinenum=\count345
 \TeXr@lab=\toks29
-) (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.st
+)
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.st
 y
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks30
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2024/05/23 v2.17q AMS math features
-\@mathmargin=\skip257
+\@mathmargin=\skip323
+
 For additional information on amsmath, use the `?' option.
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
+
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks30
-\ex@=\dimen260
+\@emptytoks=\toks31
+\ex@=\dimen256
 )) (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.st
 y
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen261
+\pmbraise@=\dimen257
 ) (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count351
+\inf@bad=\count346
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count352
-\leftroot@=\count353
+\uproot@=\count347
+\leftroot@=\count348
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count354
-\DOTSCASE@=\count355
+\classnum@=\count349
+\DOTSCASE@=\count350
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box109
-\strutbox@=\box110
+\Mathstrutbox@=\box114
+\strutbox@=\box115
 LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen262
+\big@size=\dimen258
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count356
+\macc@depth=\count351
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count357
-\dotsspace@=\muskip18
-\c@parentequation=\count358
-\dspbrk@lvl=\count359
-\tag@help=\toks31
-\row@=\count360
-\column@=\count361
-\maxfields@=\count362
-\andhelp@=\toks32
-\eqnshift@=\dimen263
-\alignsep@=\dimen264
-\tagshift@=\dimen265
-\tagwidth@=\dimen266
-\totwidth@=\dimen267
-\lineht@=\dimen268
-\@envbody=\toks33
-\multlinegap=\skip258
-\multlinetaggap=\skip259
-\mathdisplay@stack=\toks34
+\c@MaxMatrixCols=\count352
+\dotsspace@=\muskip17
+\c@parentequation=\count353
+\dspbrk@lvl=\count354
+\tag@help=\toks32
+\row@=\count355
+\column@=\count356
+\maxfields@=\count357
+\andhelp@=\toks33
+\eqnshift@=\dimen259
+\alignsep@=\dimen260
+\tagshift@=\dimen261
+\tagwidth@=\dimen262
+\totwidth@=\dimen263
+\lineht@=\dimen264
+\@envbody=\toks34
+\multlinegap=\skip324
+\multlinetaggap=\skip325
+\mathdisplay@stack=\toks35
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-)
+) (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
+Package: soul 2023-06-14 v3.1 Permit use of UTF-8 characters in soul (HO)
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul-ori.sty
+Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
+\SOUL@word=\toks36
+\SOUL@lasttoken=\toks37
+\SOUL@syllable=\toks38
+\SOUL@cmds=\toks39
+\SOUL@buffer=\toks40
+\SOUL@token=\toks41
+\SOUL@syllgoal=\dimen265
+\SOUL@syllwidth=\dimen266
+\SOUL@charkern=\dimen267
+\SOUL@hyphkern=\dimen268
+\SOUL@dimen=\dimen269
+\SOUL@dimeni=\dimen270
+\SOUL@minus=\count358
+\SOUL@comma=\count359
+\SOUL@apo=\count360
+\SOUL@grave=\count361
+\SOUL@spaceskip=\skip326
+\SOUL@ttwidth=\dimen271
+\SOUL@uldp=\dimen272
+\SOUL@ulht=\dimen273
+))
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\ti
 kz.sty
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.s
@@ -774,13 +827,13 @@ ty
 .sty
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfu
 til-common.tex
-\pgfutil@everybye=\toks35
-\pgfutil@tempdima=\dimen269
-\pgfutil@tempdimb=\dimen270
+\pgfutil@everybye=\toks42
+\pgfutil@tempdima=\dimen274
+\pgfutil@tempdimb=\dimen275
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfu
 til-latex.def
-\pgfutil@abb=\box111
+\pgfutil@abb=\box116
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfr
 cs.code.tex
@@ -800,33 +853,33 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfk
 eys.code.tex
-\pgfkeys@pathtoks=\toks36
-\pgfkeys@temptoks=\toks37
+\pgfkeys@pathtoks=\toks43
+\pgfkeys@temptoks=\toks44
 
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfk
 eyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks38
+\pgfkeys@tmptoks=\toks45
 ))
-\pgf@x=\dimen271
-\pgf@y=\dimen272
-\pgf@xa=\dimen273
-\pgf@ya=\dimen274
-\pgf@xb=\dimen275
-\pgf@yb=\dimen276
-\pgf@xc=\dimen277
-\pgf@yc=\dimen278
-\pgf@xd=\dimen279
-\pgf@yd=\dimen280
+\pgf@x=\dimen276
+\pgf@y=\dimen277
+\pgf@xa=\dimen278
+\pgf@ya=\dimen279
+\pgf@xb=\dimen280
+\pgf@yb=\dimen281
+\pgf@xc=\dimen282
+\pgf@yc=\dimen283
+\pgf@xd=\dimen284
+\pgf@yd=\dimen285
 \w@pgf@writea=\write4
 \r@pgf@reada=\read3
-\c@pgf@counta=\count363
-\c@pgf@countb=\count364
-\c@pgf@countc=\count365
-\c@pgf@countd=\count366
-\t@pgf@toka=\toks39
-\t@pgf@tokb=\toks40
-\t@pgf@tokc=\toks41
-\pgf@sys@id@count=\count367
+\c@pgf@counta=\count362
+\c@pgf@countb=\count363
+\c@pgf@countc=\count364
+\c@pgf@countd=\count365
+\t@pgf@toka=\toks46
+\t@pgf@tokb=\toks47
+\t@pgf@tokc=\toks48
+\pgf@sys@id@count=\count366
 
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pg
 f.cfg
@@ -845,8 +898,8 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pg
 fsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count368
-\pgfsyssoftpath@bigbuffer@items=\count369
+\pgfsyssoftpath@smallbuffer@items=\count367
+\pgfsyssoftpath@bigbuffer@items=\count368
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pg
 fsysprotocol.code.tex
@@ -862,12 +915,12 @@ ode.tex
 il.code.tex)
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpa
 rser.code.tex
-\pgfmath@dimen=\dimen281
-\pgfmath@count=\count370
-\pgfmath@box=\box112
-\pgfmath@toks=\toks42
-\pgfmath@stack@operand=\toks43
-\pgfmath@stack@operation=\toks44
+\pgfmath@dimen=\dimen286
+\pgfmath@count=\count369
+\pgfmath@box=\box117
+\pgfmath@toks=\toks49
+\pgfmath@stack@operand=\toks50
+\pgfmath@stack@operation=\toks51
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfu
 nctions.code.tex)
@@ -891,59 +944,59 @@ nctions.integerarithmetics.code.tex)
 lc.code.tex)
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfl
 oat.code.tex
-\c@pgfmathroundto@lastzeros=\count371
+\c@pgfmathroundto@lastzeros=\count370
 ))
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.co
 de.tex)
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
 corepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen282
-\pgf@picmaxx=\dimen283
-\pgf@picminy=\dimen284
-\pgf@picmaxy=\dimen285
-\pgf@pathminx=\dimen286
-\pgf@pathmaxx=\dimen287
-\pgf@pathminy=\dimen288
-\pgf@pathmaxy=\dimen289
-\pgf@xx=\dimen290
-\pgf@xy=\dimen291
-\pgf@yx=\dimen292
-\pgf@yy=\dimen293
-\pgf@zx=\dimen294
-\pgf@zy=\dimen295
+\pgf@picminx=\dimen287
+\pgf@picmaxx=\dimen288
+\pgf@picminy=\dimen289
+\pgf@picmaxy=\dimen290
+\pgf@pathminx=\dimen291
+\pgf@pathmaxx=\dimen292
+\pgf@pathminy=\dimen293
+\pgf@pathmaxy=\dimen294
+\pgf@xx=\dimen295
+\pgf@xy=\dimen296
+\pgf@yx=\dimen297
+\pgf@yy=\dimen298
+\pgf@zx=\dimen299
+\pgf@zy=\dimen300
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
 corepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen296
-\pgf@path@lasty=\dimen297
+\pgf@path@lastx=\dimen301
+\pgf@path@lasty=\dimen302
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
 corepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen298
-\pgf@shorten@start@additional=\dimen299
+\pgf@shorten@end@additional=\dimen303
+\pgf@shorten@start@additional=\dimen304
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
 corescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box113
-\pgf@hbox=\box114
-\pgf@layerbox@main=\box115
-\pgf@picture@serial@count=\count372
+\pgfpic=\box118
+\pgf@hbox=\box119
+\pgf@layerbox@main=\box120
+\pgf@picture@serial@count=\count371
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
 coregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen300
+\pgflinewidth=\dimen305
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
 coretransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen301
-\pgf@pt@y=\dimen302
-\pgf@pt@temp=\dimen303
+\pgf@pt@x=\dimen306
+\pgf@pt@y=\dimen307
+\pgf@pt@temp=\dimen308
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
 corequick.code.tex
@@ -960,14 +1013,14 @@ File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
 corearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen304
+\pgfarrowsep=\dimen309
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
 coreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen305
-\pgf@sys@shading@range@num=\count373
-\pgf@shadingcount=\count374
+\pgf@max=\dimen310
+\pgf@sys@shading@range@num=\count372
+\pgf@shadingcount=\count373
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
 coreimage.code.tex
@@ -976,7 +1029,7 @@ File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
 coreexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box116
+\pgfexternal@startupbox=\box121
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
 corelayers.code.tex
@@ -997,7 +1050,7 @@ File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmod
 uleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box117
+\pgfnodeparttextbox=\box122
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmod
 uleplot.code.tex
@@ -1006,8 +1059,8 @@ File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pg
 fcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen306
-\pgf@nodesepend=\dimen307
+\pgf@nodesepstart=\dimen311
+\pgf@nodesepend=\dimen312
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pg
 fcomp-version-1-18.sty
@@ -1026,10 +1079,10 @@ ode.tex))
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgff
 or.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen308
-\pgffor@skip=\dimen309
-\pgffor@stack=\toks45
-\pgffor@toks=\toks46
+\pgffor@iter=\dimen313
+\pgffor@skip=\dimen314
+\pgffor@stack=\toks52
+\pgffor@toks=\toks53
 ))
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/
 tikz\tikz.code.tex
@@ -1038,34 +1091,34 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfl
 ibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count375
-\pgfplotmarksize=\dimen310
+\pgf@plot@mark@count=\count374
+\pgfplotmarksize=\dimen315
 )
-\tikz@lastx=\dimen311
-\tikz@lasty=\dimen312
-\tikz@lastxsaved=\dimen313
-\tikz@lastysaved=\dimen314
-\tikz@lastmovetox=\dimen315
-\tikz@lastmovetoy=\dimen316
-\tikzleveldistance=\dimen317
-\tikzsiblingdistance=\dimen318
-\tikz@figbox=\box118
-\tikz@figbox@bg=\box119
-\tikz@tempbox=\box120
-\tikz@tempbox@bg=\box121
-\tikztreelevel=\count376
-\tikznumberofchildren=\count377
-\tikznumberofcurrentchild=\count378
-\tikz@fig@count=\count379
+\tikz@lastx=\dimen316
+\tikz@lasty=\dimen317
+\tikz@lastxsaved=\dimen318
+\tikz@lastysaved=\dimen319
+\tikz@lastmovetox=\dimen320
+\tikz@lastmovetoy=\dimen321
+\tikzleveldistance=\dimen322
+\tikzsiblingdistance=\dimen323
+\tikz@figbox=\box123
+\tikz@figbox@bg=\box124
+\tikz@tempbox=\box125
+\tikz@tempbox@bg=\box126
+\tikztreelevel=\count375
+\tikznumberofchildren=\count376
+\tikznumberofcurrentchild=\count377
+\tikz@fig@count=\count378
 
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmod
 ulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count380
-\pgfmatrixcurrentcolumn=\count381
-\pgf@matrix@numberofcolumns=\count382
+\pgfmatrixcurrentrow=\count379
+\pgfmatrixcurrentcolumn=\count380
+\pgf@matrix@numberofcolumns=\count381
 )
-\tikz@expandcount=\count383
+\tikz@expandcount=\count382
 
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/
 tikz/libraries\tikzlibrarytopaths.code.tex
@@ -1074,19 +1127,20 @@ File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.s
 ty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen319
-\captionmargin=\dimen320
-\caption@leftmargin=\dimen321
-\caption@rightmargin=\dimen322
-\caption@width=\dimen323
-\caption@indent=\dimen324
-\caption@parindent=\dimen325
-\caption@hangindent=\dimen326
+\caption@tempdima=\dimen324
+\captionmargin=\dimen325
+\caption@leftmargin=\dimen326
+\caption@rightmargin=\dimen327
+\caption@width=\dimen328
+\caption@indent=\dimen329
+\caption@parindent=\dimen330
+\caption@hangindent=\dimen331
 Package caption Info: memoir document class detected.
 
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-memo
@@ -1094,12 +1148,11 @@ ir.sto
 File: caption-memoir.sto 2023/09/08 v2.2c Adaption of the caption package to th
 e memoir document class (AR)
 ))
-\c@caption@flags=\count384
-\c@continuedfloat=\count385
+\c@caption@flags=\count383
+\c@continuedfloat=\count384
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen327
-\caption@adjustwidth@linewidth=\dimen328
-Package caption Info: hyperref package is loaded.
+\caption@adjustwidth@hsize=\dimen332
+\caption@adjustwidth@linewidth=\dimen333
 Package caption Info: longtable package is loaded.
 
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.st
@@ -1107,48 +1160,168 @@ y
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 ))
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count386
+\c@subfigure=\count385
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count387
+\c@subtable=\count386
 )
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/changebar\changebar.
-sty
-Package: changebar 2024/07/17 v3.7e Indicate changes with marginal bars
-\cb@nextpoint=\count388
-\cb@topleft=\count389
-\cb@topright=\count390
-\cb@botleft=\count391
-\cb@botright=\count392
-\cb@cnta=\count393
-\cb@cntb=\count394
-\cb@dima=\dimen329
-\cb@curbarwd=\dimen330
-\cb@page=\count395
-\cb@pagecount=\count396
-\cb@odd@left=\dimen331
-\cb@odd@right=\dimen332
-\cb@even@left=\dimen333
-\cb@even@right=\dimen334
-\cb@writexy=\write5
-\cb@readxy=\read4
-\openout5 = `book.cb2'.
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/probsoln\probsoln.st
+y
+Package: probsoln 2017/07/10 v3.05 (NLCT)
+ (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\probsoln@write=\write5
+\probsoln@startyear=\count387
+\probsoln@startmonth=\count388
+\probsoln@prev=\write6
+\probsoln@used=\write7
+\probsoln@prev@cutoff=\count389
+\@probN=\count390
+\@probselN=\count391
+\@rndselctr=\count392
+\r@ndcur=\count393
+\@ps@randtmp=\count394
+\@shfctr=\count395
+\@shfA=\count396
+\@shfB=\count397
+\@ps@forrand=\count398
+\@ps@forrand@level=\count399
+)
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.st
+y
+Package: hyperref 2024-07-10 v7.01j Hypertext links for LaTeX
 
-\changebarwidth=\skip260
-\deletebarwidth=\skip261
-\changebarsep=\skip262
-\c@changebargrey=\count397
-\cb@write=\write6
-\cb@read=\read5
-\openout6 = `book.cb'.
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescap
+e.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringen
+c.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen334
+\Hy@linkcounter=\count400
+\Hy@pagecounter=\count401
 
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2024-07-10 v7.01j Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
 )
-\c@example=\count398
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.st
+y
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\book@idxfile=\write7
-\openout7 = `book.idx'.
+\Hy@SavedSpaceFactor=\count402
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2024-07-10 v7.01j Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count403
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen335
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintc
+alc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count404
+\Field@Width=\dimen336
+\Fld@charsize=\dimen337
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.st
+y
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count405
+\c@Item=\count406
+\c@Hfootnote=\count407
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2024-07-10 v7.01j Hyperref driver for pdfTeX
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.s
+ty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\HyAnn@Count=\count408
+\Fld@listcount=\count409
+\c@bookmark@seq@number=\count410
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerun
+filecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniq
+uecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip327
+)
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/memoir\memhfixc.sty
+Package: memhfixc 2023/09/10 v1.22 hyperref package fixes for memoir class
+\c@memhycontfloat=\count411
+\c@Hpagenote=\count412
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 44.
+\c@example=\count413
+)
+\book@idxfile=\write8
+\openout8 = `book.idx'.
+
 
 Writing index file book.idx
-No file book.aux.
+(book.aux (copyright.aux) (aboutAuthors.aux) (preface.aux)
+(chapter01/chapter01.aux) (chapter01/problemSet01.aux) (chapter02/chapter02.aux
+) (chapter02/problemSet02.aux) (chapter03/chapter03.aux)
+(chapter03/problemSet03.aux) (chapter04/chapter04.aux)
+(chapter04/problemSet04.aux) (chapter05/chapter05.aux)
+(chapter05/problemSet05.aux) (chapter06/chapter06.aux)
+(chapter06/problemSet06.aux) (chapter07/chapter07.aux)
+(chapter07/problemSet07.aux) (chapter08/chapter08.aux)
+(chapter08/problemSet08.aux) (chapter09/chapter09.aux)
+(chapter09/problemSet09.aux) (chapter10/chapter10.aux)
+(chapter10/problemSet10.aux) (chapter11/chapter11.aux)
+(chapter11/problemSet11.aux) (chapter12/chapter12.aux) (appendixA/appendixA.aux
+) (appendixB/appendixB.aux) (appendixD/appendixD.aux) (appendixE/appendixE.aux)
+)
 \openout1 = `book.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -1173,42 +1346,48 @@ LaTeX Font Info:    ... okay on input line 18.
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf
 .mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count399
-\scratchdimen=\dimen335
-\scratchbox=\box122
-\nofMPsegments=\count400
-\nofMParguments=\count401
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count402
-\MPscratchDim=\dimen336
-\MPnumerator=\count403
-\makeMPintoPDFobject=\count404
-\everyMPtoPDFconversion=\toks48
+\scratchcounter=\count414
+\scratchdimen=\dimen338
+\scratchbox=\box127
+\nofMPsegments=\count415
+\nofMParguments=\count416
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count417
+\MPscratchDim=\dimen339
+\MPnumerator=\count418
+\makeMPintoPDFobject=\count419
+\everyMPtoPDFconversion=\toks55
 )
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopd
 f-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sy
 s.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 18.
-\@outlinefile=\write8
-\openout8 = `book.out'.
-
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 18.
+ (book.out) (book.out)
+\@outlinefile=\write9
+\openout9 = `book.out'.
 
+LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
+
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
+
+
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 
 [1
 
@@ -1217,8 +1396,7 @@ Package caption Info: End \AtBeginDocument code.
 \openout2 = `copyright.aux'.
 
 
-(C:/Users/coulston/Documents/GitHub/Design-For-Electrical-and-Computer-Engineer
-ing/Latex\copyright.tex
+(copyright.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--5
 
  []
@@ -1233,22 +1411,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--5
 
  []
 
-<./Fig/cc-logo.pdf, id=14, 22.58438pt x 22.58438pt>
+<./Fig/cc-logo.pdf, id=456, 22.58438pt x 22.58438pt>
 File: ./Fig/cc-logo.pdf Graphic file (type pdf)
 <use ./Fig/cc-logo.pdf>
 Package pdftex.def Info: ./Fig/cc-logo.pdf  used on input line 10.
 (pdftex.def)             Requested size: 28.45274pt x 28.45299pt.
-<./Fig/cc-by.pdf, id=15, 22.58438pt x 22.58438pt>
+<./Fig/cc-by.pdf, id=457, 22.58438pt x 22.58438pt>
 File: ./Fig/cc-by.pdf Graphic file (type pdf)
 <use ./Fig/cc-by.pdf>
 Package pdftex.def Info: ./Fig/cc-by.pdf  used on input line 11.
 (pdftex.def)             Requested size: 28.45274pt x 28.45299pt.
-<./Fig/cc-nc.pdf, id=16, 22.58438pt x 22.58438pt>
+<./Fig/cc-nc.pdf, id=458, 22.58438pt x 22.58438pt>
 File: ./Fig/cc-nc.pdf Graphic file (type pdf)
 <use ./Fig/cc-nc.pdf>
 Package pdftex.def Info: ./Fig/cc-nc.pdf  used on input line 12.
 (pdftex.def)             Requested size: 28.45274pt x 28.45299pt.
-<./Fig/cc-sa.pdf, id=17, 22.58438pt x 22.58438pt>
+<./Fig/cc-sa.pdf, id=459, 22.58438pt x 22.58438pt>
 File: ./Fig/cc-sa.pdf Graphic file (type pdf)
 <use ./Fig/cc-sa.pdf>
 Package pdftex.def Info: ./Fig/cc-sa.pdf  used on input line 13.
@@ -1257,96 +1435,1255 @@ Package pdftex.def Info: ./Fig/cc-sa.pdf  used on input line 13.
 
 [2
 
- <C:/Users/coulston/Documents/GitHub/Design-For-Electrical-and-Computer-Enginee
-ring/Latex/Fig/cc-logo.pdf> <C:/Users/coulston/Documents/GitHub/Design-For-Elec
-trical-and-Computer-Engineering/Latex/Fig/cc-by.pdf
+ <./Fig/cc-logo.pdf> <./Fig/cc-by.pdf
 
-pdfTeX warning: pdflatex (file C:/Users/coulston/Documents/GitHub/Design-For-El
-ectrical-and-Computer-Engineering/Latex/Fig/cc-by.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <C:/Users/coulston/Documents/GitHub/Design-For-Electrical-and-Computer-Engine
-ering/Latex/Fig/cc-nc.pdf
+pdfTeX warning: pdflatex (file ./Fig/cc-by.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+> <./Fig/cc-nc.pdf
 
-pdfTeX warning: pdflatex (file C:/Users/coulston/Documents/GitHub/Design-For-El
-ectrical-and-Computer-Engineering/Latex/Fig/cc-nc.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <C:/Users/coulston/Documents/GitHub/Design-For-Electrical-and-Computer-Engine
-ering/Latex/Fig/cc-sa.pdf
+pdfTeX warning: pdflatex (file ./Fig/cc-nc.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+> <./Fig/cc-sa.pdf
 
-pdfTeX warning: pdflatex (file C:/Users/coulston/Documents/GitHub/Design-For-El
-ectrical-and-Computer-Engineering/Latex/Fig/cc-sa.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
+pdfTeX warning: pdflatex (file ./Fig/cc-sa.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
 >]
-No file book.toc.
+\openout2 = `aboutAuthors.aux'.
 
+ (aboutAuthors.tex
+<./Fig/Ford.jpg, id=472, 481.8pt x 602.25pt>
+File: ./Fig/Ford.jpg Graphic file (type jpg)
+<use ./Fig/Ford.jpg>
+Package pdftex.def Info: ./Fig/Ford.jpg  used on input line 3.
+(pdftex.def)             Requested size: 72.26999pt x 90.33359pt.
+<./Fig/Coulston.jpg, id=473, 2807.48875pt x 2806.485pt>
+File: ./Fig/Coulston.jpg Graphic file (type jpg)
+<use ./Fig/Coulston.jpg>
+Package pdftex.def Info: ./Fig/Coulston.jpg  used on input line 29.
+(pdftex.def)             Requested size: 72.26999pt x 72.24316pt.
+)
 
 [3
 
 
-]
+
+ <./Fig/Ford.jpg> <./Fig/Coulston.jpg>] (book.toc
 
 [4
 
+
 ]
+Overfull \hbox (1.74986pt too wide) detected at line 90
+ \OT1/cmr/bx/n/10 119
+ []
+
+
+Overfull \hbox (1.74986pt too wide) detected at line 104
+ \OT1/cmr/bx/n/10 137
+ []
+
+
+Overfull \hbox (1.74986pt too wide) detected at line 121
+ \OT1/cmr/bx/n/10 161
+ []
+
+
+Overfull \hbox (1.74986pt too wide) detected at line 122
+ \OT1/cmr/bx/n/10 163
+ []
+
+
+
+[5]
+Overfull \hbox (1.74986pt too wide) detected at line 138
+ \OT1/cmr/bx/n/10 175
+ []
+
+
+Overfull \hbox (1.74986pt too wide) detected at line 150
+ \OT1/cmr/bx/n/10 191
+ []
+
+
+Overfull \hbox (1.74986pt too wide) detected at line 161
+ \OT1/cmr/bx/n/10 209
+ []
+
+
+Overfull \hbox (1.74986pt too wide) detected at line 166
+ \OT1/cmr/bx/n/10 217
+ []
+
+
+Overfull \hbox (1.74986pt too wide) detected at line 167
+ \OT1/cmr/bx/n/10 217
+ []
+
+
+Overfull \hbox (1.74986pt too wide) detected at line 168
+ \OT1/cmr/bx/n/10 229
+ []
+
+
+Overfull \hbox (1.74986pt too wide) detected at line 172
+ \OT1/cmr/bx/n/10 239
+ []
+
+
+Overfull \hbox (1.74986pt too wide) detected at line 173
+ \OT1/cmr/bx/n/10 249
+ []
+
+)
+
+[6]
+\openout2 = `preface.aux'.
+
+ (preface.tex
+
+[7
+
+]
+
+[8]
+
+[9])
+
+[10]
 
 [1
 
+
+
+
 ]
-\openout2 = `./chapter07/chapter07.aux'.
+\openout2 = `./chapter01/chapter01.aux'.
 
-
-(C:/Users\coulston\Documents\GitHub\Design-For-Electrical-and-Computer-Engineer
-ing\Latex\chapter07\chapter07.tex
+ (chapter01/chapter01.tex
 
 [2
 
 
 ]
-
-LaTeX Warning: Reference `chapter:engineeringDesignProcess' on page 3 undefined
- on input line 17.
-
-
-LaTeX Warning: Reference `figure:testVee' on page 3 undefined on input line 57.
-
+Underfull \vbox (badness 2020) has occurred while \output is active []
 
 
 
 [3]
-<./chapter07/Fig/./image1.pdf, id=58, 241.67772pt x 189.46689pt>
+
+[4]
+<./chapter01/Fig/image1.pdf, id=643, 336.653pt x 113.18506pt>
+File: ./chapter01/Fig/image1.pdf Graphic file (type pdf)
+<use ./chapter01/Fig/image1.pdf>
+Package pdftex.def Info: ./chapter01/Fig/image1.pdf  used on input line 139.
+(pdftex.def)             Requested size: 274.64459pt x 91.78645pt.
+<./chapter01/Fig/image2.pdf, id=645, 403.46008pt x 379.87273pt>
+File: ./chapter01/Fig/image2.pdf Graphic file (type pdf)
+<use ./chapter01/Fig/image2.pdf>
+Package pdftex.def Info: ./chapter01/Fig/image2.pdf  used on input line 157.
+(pdftex.def)             Requested size: 361.36848pt x 339.69125pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./chapter01/Fig/image3.pdf, id=647, 259.34688pt x 169.91986pt>
+File: ./chapter01/Fig/image3.pdf Graphic file (type pdf)
+<use ./chapter01/Fig/image3.pdf>
+Package pdftex.def Info: ./chapter01/Fig/image3.pdf  used on input line 177.
+(pdftex.def)             Requested size: 216.80911pt x 144.54922pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[5 <./chapter01/Fig/image1.pdf>]
+
+[6 <./chapter01/Fig/image2.pdf>]
+
+[7 <./chapter01/Fig/image3.pdf>]
+<./chapter01/Fig/image4.pdf, id=697, 517.44182pt x 56.7348pt>
+File: ./chapter01/Fig/image4.pdf Graphic file (type pdf)
+<use ./chapter01/Fig/image4.pdf>
+Package pdftex.def Info: ./chapter01/Fig/image4.pdf  used on input line 278.
+(pdftex.def)             Requested size: 397.48396pt x 43.6634pt.
+<./chapter01/Fig/image5.pdf, id=699, 363.8823pt x 363.8823pt>
+File: ./chapter01/Fig/image5.pdf Graphic file (type pdf)
+<use ./chapter01/Fig/image5.pdf>
+Package pdftex.def Info: ./chapter01/Fig/image5.pdf  used on input line 297.
+(pdftex.def)             Requested size: 274.62672pt x 274.62672pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./chapter01/Fig/image6.pdf, id=701, 463.23932pt x 309.6798pt>
+File: ./chapter01/Fig/image6.pdf Graphic file (type pdf)
+<use ./chapter01/Fig/image6.pdf>
+Package pdftex.def Info: ./chapter01/Fig/image6.pdf  used on input line 331.
+(pdftex.def)             Requested size: 332.45058pt x 224.04192pt.
+
+
+[8 <./chapter01/Fig/image4.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.60854pt too wide) in alignment at lines 363--373
+ [] 
+ []
+
+
+Overfull \hbox (1.60854pt too wide) in alignment at lines 373--380
+ [] 
+ []
+
+
+Overfull \hbox (1.60854pt too wide) in alignment at lines 380--381
+ [] 
+ []
+
+
+Overfull \hbox (1.60854pt too wide) in alignment at lines 381--461
+ [] 
+ []
+
+
+
+[9 <./chapter01/Fig/image5.pdf>] [10 <./chapter01/Fig/image6.pdf>]
+
+[11]
+Overfull \hbox (2.08179pt too wide) in paragraph at lines 504--520
+[]\OT1/cmr/m/n/10 The book is di-vided into three parts: I--Design Pro-cess, II
+--Design Tools, and III--Professional
+ []
+
+<./chapter01/Fig/image7.pdf, id=787, 237.4098pt x 221.76079pt>
+File: ./chapter01/Fig/image7.pdf Graphic file (type pdf)
+<use ./chapter01/Fig/image7.pdf>
+Package pdftex.def Info: ./chapter01/Fig/image7.pdf  used on input line 522.
+(pdftex.def)             Requested size: 207.77652pt x 189.71571pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[12])
+
+[13 <./chapter01/Fig/image7.pdf>]
+\openout2 = `./chapter01/problemSet01.aux'.
+
+ (chapter01/problemSet01.tex)
+
+[14
+
+
+
+]
+\openout2 = `./chapter02/chapter02.aux'.
+
+ (chapter02/chapter02.tex
+Overfull \hbox (2.93764pt too wide) in paragraph at lines 6--8
+[]\OT1/cmr/m/it/10 For ev-ery prob-lem there is a so-lu-tion that is sim-ple, n
+eat, and wrong.---H.L. Mencken 
+ []
+
+
+
+[15
+
+
+
+
+]
+
+[16]
+Overfull \hbox (6.94865pt too wide) in paragraph at lines 142--146
+[]\OT1/cmr/m/it/10 Engineers with-out Bor-ders ([][]www.ewb-usa.org[][])\OT1/cm
+r/m/n/10 . This or-ga-ni-za-tion spon-sors stu-dent projects
+ []
+
+
+
+[17]
+Package mdframed Info: mdframed works in twoside mode on input line 246.
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--283
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--302
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--338
+
+ []
+
+
+
+[18]
+
+[19]
+
+[20]
+<./chapter02/Fig/image2.pdf, id=867, 422.182pt x 452.00047pt>
+File: ./chapter02/Fig/image2.pdf Graphic file (type pdf)
+<use ./chapter02/Fig/image2.pdf>
+Package pdftex.def Info: ./chapter02/Fig/image2.pdf  used on input line 480.
+(pdftex.def)             Requested size: 375.82454pt x 404.73447pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[21]
+Underfull \vbox (badness 2318) has occurred while \output is active []
+
+
+
+[22 <./chapter02/Fig/image2.pdf>]
+
+[23]
+
+[24]
+Overfull \hbox (31.0807pt too wide) in paragraph at lines 715--720
+[]\OT1/cmr/m/n/10 IEEE (In-sti-tute of Elec-tri-cal and Elec-tron-ics En-gi-nee
+rs) Xplore Elec-tronic Li-brary, [][]www.ieee.org[][].
+ []
+
+
+
+[25]
+Package mdframed Info: mdframed works in twoside mode on input line 768.
+Package mdframed Info: mdframed works in twoside mode on input line 796.
+Package mdframed Info: mdframed works in twoside mode on input line 815.
+
+
+[26])
+
+[27]
+
+[28]
+\openout2 = `./chapter02/problemSet02.aux'.
+
+ (chapter02/problemSet02.tex)
+
+[29
+
+
+
+]
+\openout2 = `./chapter03/chapter03.aux'.
+
+ (chapter03/chapter03.tex
+
+[30
+
+
+
+
+]
+
+[31]
+<./chapter03/Fig/image1.pdf, id=981, 436.15228pt x 162.49368pt>
+File: ./chapter03/Fig/image1.pdf Graphic file (type pdf)
+<use ./chapter03/Fig/image1.pdf>
+Package pdftex.def Info: ./chapter03/Fig/image1.pdf  used on input line 84.
+(pdftex.def)             Requested size: 332.45747pt x 122.85925pt.
+
+
+[32 <./chapter03/Fig/image1.pdf>]
+
+[33]
+
+[34]
+
+[35]
+
+[36]
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 498--500
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--518
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--531
+
+ []
+
+
+Overfull \hbox (5.14526pt too wide) in paragraph at lines 544--546
+[]\OT1/cmr/m/it/10 The sys-tem will op-er-ate for a min-i-mum of three hours wi
+th-out need-ing to be recharged. 
+ []
+
+
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 611--614
+
+ []
+
+
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 626--631
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 668--673
+
+ []
+
+
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 717--720
+
+ []
+
+
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 803--806
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 834--836
+
+ []
+
+
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 874--880
+
+ []
+
+
+
+[43]
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 1034--1034
+[]|\OT1/cmr/bx/n/10 Marketing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1042--1042
+[]|\OT1/cmr/bx/n/10 Marketing
+ []
+
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
+047.
+(C:\Users\coulston\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1047.
+
+
+Underfull \hbox (badness 5302) in paragraph at lines 1048--1050
+[]|\OT1/cmr/m/n/10 Based upon com-pet-i-tive bench-
+ []
+
+
+Underfull \hbox (badness 1377) in paragraph at lines 1055--1057
+[]|\OT1/cmr/m/n/10 This power range pro-vides more
+ []
+
+
+Underfull \hbox (badness 2401) in paragraph at lines 1061--1061
+[]|\OT1/cmr/m/n/10 Achievable with sev-eral dif-fer-ent
+ []
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1131
+[]|\OT1/cmr/bx/n/10 Marketing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1139--1139
+[]|\OT1/cmr/bx/n/10 Marketing
+ []
+
+
+Underfull \hbox (badness 5359) in paragraph at lines 1144--1146
+[]|\OT1/cmr/m/n/10 1. Sys-tem will i\OT1/cmr/m/it/10 mplement
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 1151--1152
+[]|\OT1/cmr/m/n/10 2. The \OT1/cmr/m/it/10 time to re-spond \OT1/cmr/m/n/10 to
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 1169--1171
+\OT1/cmr/m/n/10 A cur-rent draw bud-get es-ti-mate
+ []
+
+
+
+[46]
+
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 1221--1221
+[]|\OT1/cmr/bx/n/10 Marketing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1229
+[]|\OT1/cmr/bx/n/10 Marketing
+ []
+
+
+Underfull \hbox (badness 2401) in paragraph at lines 1234--1235
+\OT1/cmr/m/n/10 avail-able op-ti-cal power mea-sure-
+ []
+
+
+Underfull \hbox (badness 3525) in paragraph at lines 1245--1245
+[]|\OT1/cmr/m/n/10 The \OT1/cmr/m/it/10 peak vi-bra-tion am-pli-tude
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 1254--1255
+[]|\OT1/cmr/m/n/10 The ex-per-i-ment should de-ter-
+ []
+
+
+
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 1294--1294
+[]|\OT1/cmr/bx/n/10 Marketing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1302--1302
+[]|\OT1/cmr/bx/n/10 Marketing
+ []
+
+
+Underfull \hbox (badness 1019) in paragraph at lines 1307--1308
+\OT1/cmr/m/n/10 dur-ing day-time and night-time
+ []
+
+
+Underfull \hbox (badness 1377) in paragraph at lines 1320--1320
+[]|\OT1/cmr/m/n/10 This de-vice must re-main air-
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 1320--1320
+\OT1/cmr/m/n/10 borne for a min-i-mum of two
+ []
+
+
+Underfull \hbox (badness 1681) in paragraph at lines 1339--1340
+[]|\OT1/cmr/m/n/10 Will be trans-ported in a po-lice
+ []
+
+[49]
+Underfull \vbox (badness 2512) has occurred while \output is active []
+
+
+
+[50]
+
+[51]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[52]
+<./chapter03/Fig/houseOfQuality.pdf, id=1152, 597.50786pt x 714.16414pt>
+File: ./chapter03/Fig/houseOfQuality.pdf Graphic file (type pdf)
+<use ./chapter03/Fig/houseOfQuality.pdf>
+Package pdftex.def Info: ./chapter03/Fig/houseOfQuality.pdf  used on input line
+ 1579.
+(pdftex.def)             Requested size: 216.81pt x 259.13667pt.
+
+Underfull \vbox (badness 5388) has occurred while \output is active []
+
+
+
+[53 <./chapter03/Fig/houseOfQuality.pdf>]
+
+[54])
+
+[55]
+\openout2 = `./chapter03/problemSet03.aux'.
+
+ (chapter03/problemSet03.tex)
+
+[56
+
+
+
+]
+\openout2 = `./chapter04/chapter04.aux'.
+
+ (chapter04/chapter04.tex
+
+[57
+
+
+
+
+]
+<./chapter04/Fig/image1.pdf, id=1216, 77.67603pt x 149.94603pt>
+File: ./chapter04/Fig/image1.pdf Graphic file (type pdf)
+<use ./chapter04/Fig/image1.pdf>
+Package pdftex.def Info: ./chapter04/Fig/image1.pdf  used on input line 67.
+(pdftex.def)             Requested size: 48.42056pt x 93.9494pt.
+<./chapter04/Fig/image2.pdf, id=1217, 132.95973pt x 132.95973pt>
+File: ./chapter04/Fig/image2.pdf Graphic file (type pdf)
+<use ./chapter04/Fig/image2.pdf>
+Package pdftex.def Info: ./chapter04/Fig/image2.pdf  used on input line 69.
+(pdftex.def)             Requested size: 93.95369pt x 93.95369pt.
+<./chapter04/Fig/./image3.png, id=1220, 281.05pt x 391.4625pt>
+File: ./chapter04/Fig/./image3.png Graphic file (type png)
+<use ./chapter04/Fig/./image3.png>
+Package pdftex.def Info: ./chapter04/Fig/./image3.png  used on input line 107.
+(pdftex.def)             Requested size: 114.18484pt x 158.9954pt.
+<./chapter04/Fig/./image4.png, id=1221, 174.6525pt x 240.9pt>
+File: ./chapter04/Fig/./image4.png Graphic file (type png)
+<use ./chapter04/Fig/./image4.png>
+Package pdftex.def Info: ./chapter04/Fig/./image4.png  used on input line 109.
+(pdftex.def)             Requested size: 114.91122pt x 158.99815pt.
+<./chapter04/Fig/./image5.png, id=1222, 276.03125pt x 319.1925pt>
+File: ./chapter04/Fig/./image5.png Graphic file (type png)
+<use ./chapter04/Fig/./image5.png>
+Package pdftex.def Info: ./chapter04/Fig/./image5.png  used on input line 111.
+(pdftex.def)             Requested size: 137.3161pt x 158.99191pt.
+
+
+[58 <./chapter04/Fig/image1.pdf> <./chapter04/Fig/image2.pdf
+
+pdfTeX warning: pdflatex (file ./chapter04/Fig/image2.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>]
+
+[59 <./chapter04/Fig/./image3.png> <./chapter04/Fig/./image4.png> <./chapter04/
+Fig/./image5.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 188--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--194
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--194
+
+ []
+
+
+
+[60]
+
+[61]
+
+[62]
+
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 470--470
+[]|\OT1/cmr/bx/n/10 Connectivity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 476--476
+[]|\OT1/cmr/m/n/10 Hand-held,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 476--476
+\OT1/cmr/m/n/10 Fits in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 481--481
+[]|\OT1/cmr/m/n/10 Notebook
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--482
+[]|\OT1/cmr/m/n/10 Handwriting
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
+[]|[] \OT1/cmr/m/n/10 Heads-up
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+[]|\OT1/cmr/m/n/10 Flexible in
+ []
+
+
+
+[64]
+<./chapter04/Fig/./image7.pdf, id=1279, 716.7534pt x 418.0848pt>
+File: ./chapter04/Fig/./image7.pdf Graphic file (type pdf)
+<use ./chapter04/Fig/./image7.pdf>
+Package pdftex.def Info: ./chapter04/Fig/./image7.pdf  used on input line 559.
+(pdftex.def)             Requested size: 397.48567pt x 231.2615pt.
+<./chapter04/Fig/./image8.pdf, id=1281, 307.00525pt x 118.22119pt>
+File: ./chapter04/Fig/./image8.pdf Graphic file (type pdf)
+<use ./chapter04/Fig/./image8.pdf>
+Package pdftex.def Info: ./chapter04/Fig/./image8.pdf  used on input line 584.
+(pdftex.def)             Requested size: 242.10518pt x 79.4982pt.
+
+
+[65 <./chapter04/Fig/./image7.pdf> <./chapter04/Fig/./image8.pdf
+
+pdfTeX warning: pdflatex (file ./chapter04/Fig/./image8.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 1117) in paragraph at lines 646--647
+[]\OT1/cmr/m/n/10 Does not cre-ate uni-form
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 650--650
+[]|\OT1/cmr/bx/n/10 Temperature
+ []
+
+
+
+[66]
+<./chapter04/Fig/./image20.pdf, id=1326, 370.39796pt x 156.12027pt>
+File: ./chapter04/Fig/./image20.pdf Graphic file (type pdf)
+<use ./chapter04/Fig/./image20.pdf>
+Package pdftex.def Info: ./chapter04/Fig/./image20.pdf  used on input line 793.
+
+(pdftex.def)             Requested size: 397.50313pt x 166.2323pt.
+
+
+[67]
+
+[68 <./chapter04/Fig/./image20.pdf>]
+
+[69])
+
+[70]
+\openout2 = `./chapter04/problemSet04.aux'.
+
+ (chapter04/problemSet04.tex
+<./chapter04/Fig/image34.pdf, id=1377, 222.21602pt x 149.94603pt>
+File: ./chapter04/Fig/image34.pdf Graphic file (type pdf)
+<use ./chapter04/Fig/image34.pdf>
+Package pdftex.def Info: ./chapter04/Fig/image34.pdf  used on input line 20.
+(pdftex.def)             Requested size: 144.5472pt x 97.56442pt.
+
+
+[71
+
+
+
+ <./chapter04/Fig/image34.pdf>])
+
+[72]
+
+[73
+
+
+
+]
+\openout2 = `./chapter05/chapter05.aux'.
+
+ (chapter05/chapter05.tex
+
+[74
+
+
+]
+
+[75]
+
+[76]
+<./chapter05/Fig/./image2.pdf, id=1424, 564.01897pt x 174.1593pt>
+File: ./chapter05/Fig/./image2.pdf Graphic file (type pdf)
+<use ./chapter05/Fig/./image2.pdf>
+Package pdftex.def Info: ./chapter05/Fig/./image2.pdf  used on input line 160.
+(pdftex.def)             Requested size: 397.49573pt x 122.85938pt.
+
+
+[77 <./chapter05/Fig/./image2.pdf>]
+
+[78]
+<./chapter05/Fig/./image3.pdf, id=1445, 375.66174pt x 74.80229pt>
+File: ./chapter05/Fig/./image3.pdf Graphic file (type pdf)
+<use ./chapter05/Fig/./image3.pdf>
+Package pdftex.def Info: ./chapter05/Fig/./image3.pdf  used on input line 297.
+(pdftex.def)             Requested size: 296.31094pt x 58.53842pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[79 <./chapter05/Fig/./image3.pdf>]
+<./chapter05/Fig/./image6.pdf, id=1472, 604.08044pt x 278.95082pt>
+File: ./chapter05/Fig/./image6.pdf Graphic file (type pdf)
+<use ./chapter05/Fig/./image6.pdf>
+Package pdftex.def Info: ./chapter05/Fig/./image6.pdf  used on input line 365.
+(pdftex.def)             Requested size: 397.48683pt x 180.68167pt.
+
+
+[80 <./chapter05/Fig/./image6.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[81]
+<./chapter05/Fig/./image9.pdf, id=1506, 595.317pt x 92.8698pt>
+File: ./chapter05/Fig/./image9.pdf Graphic file (type pdf)
+<use ./chapter05/Fig/./image9.pdf>
+Package pdftex.def Info: ./chapter05/Fig/./image9.pdf  used on input line 542.
+(pdftex.def)             Requested size: 397.47958pt x 61.43028pt.
+<./chapter05/Fig/./image10.pdf, id=1508, 208.78632pt x 74.80229pt>
+File: ./chapter05/Fig/./image10.pdf Graphic file (type pdf)
+<use ./chapter05/Fig/./image10.pdf>
+Package pdftex.def Info: ./chapter05/Fig/./image10.pdf  used on input line 575.
+
+(pdftex.def)             Requested size: 195.13138pt x 69.38391pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[82 <./chapter05/Fig/./image9.pdf>]
+<./chapter05/Fig/./image11.pdf, id=1535, 426.8767pt x 228.36183pt>
+File: ./chapter05/Fig/./image11.pdf Graphic file (type pdf)
+<use ./chapter05/Fig/./image11.pdf>
+Package pdftex.def Info: ./chapter05/Fig/./image11.pdf  used on input line 629.
+
+(pdftex.def)             Requested size: 397.47975pt x 213.19664pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./chapter05/Fig/./image12.pdf, id=1537, 158.39648pt x 95.08911pt>
+File: ./chapter05/Fig/./image12.pdf Graphic file (type pdf)
+<use ./chapter05/Fig/./image12.pdf>
+Package pdftex.def Info: ./chapter05/Fig/./image12.pdf  used on input line 662.
+
+(pdftex.def)             Requested size: 144.54463pt x 86.72563pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[83 <./chapter05/Fig/./image10.pdf>]
+
+[84 <./chapter05/Fig/./image11.pdf> <./chapter05/Fig/./image12.pdf
+
+pdfTeX warning: pdflatex (file ./chapter05/Fig/./image12.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>]
+<./chapter05/Fig/./image13.pdf, id=1579, 436.15228pt x 111.30717pt>
+File: ./chapter05/Fig/./image13.pdf Graphic file (type pdf)
+<use ./chapter05/Fig/./image13.pdf>
+Package pdftex.def Info: ./chapter05/Fig/./image13.pdf  used on input line 781.
+
+(pdftex.def)             Requested size: 397.5048pt x 101.17928pt.
+
+
+[85 <./chapter05/Fig/./image13.pdf>]
+<./chapter05/Fig/./image14.pdf, id=1598, 352.95647pt x 162.12381pt>
+File: ./chapter05/Fig/./image14.pdf Graphic file (type pdf)
+<use ./chapter05/Fig/./image14.pdf>
+Package pdftex.def Info: ./chapter05/Fig/./image14.pdf  used on input line 830.
+
+(pdftex.def)             Requested size: 296.31982pt x 137.32347pt.
+
+
+[86 <./chapter05/Fig/./image14.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./chapter05/Fig/./image15.pdf, id=1616, 290.10431pt x 74.80229pt>
+File: ./chapter05/Fig/./image15.pdf Graphic file (type pdf)
+<use ./chapter05/Fig/./image15.pdf>
+Package pdftex.def Info: ./chapter05/Fig/./image15.pdf  used on input line 969.
+
+(pdftex.def)             Requested size: 245.7222pt x 63.5982pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[87 <./chapter05/Fig/./image15.pdf>]
+<./chapter05/Fig/./image16.pdf, id=1639, 682.26862pt x 228.36183pt>
+File: ./chapter05/Fig/./image16.pdf Graphic file (type pdf)
+<use ./chapter05/Fig/./image16.pdf>
+Package pdftex.def Info: ./chapter05/Fig/./image16.pdf  used on input line 1030
+.
+(pdftex.def)             Requested size: 397.48587pt x 130.08395pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[88]
+
+[89 <./chapter05/Fig/./image16.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[90]
+
+[91]
+
+[92]
+LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <10> not available
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 1376.
+
+)
+
+[93]
+\openout2 = `./chapter05/problemSet05.aux'.
+
+ (chapter05/problemSet05.tex
+
+[94
+
+
+
+])
+
+[95]
+\openout2 = `./chapter06/chapter06.aux'.
+
+ (chapter06/chapter06.tex
+
+[96
+
+
+
+
+]
+
+[97]
+
+[98]
+<./chapter06/Fig/./image1.pdf, id=1732, 254.9936pt x 78.89949pt>
+File: ./chapter06/Fig/./image1.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image1.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image1.pdf  used on input line 166.
+(pdftex.def)             Requested size: 237.0521pt x 72.27055pt.
+<./chapter06/Fig/./image2.pdf, id=1735, 223.58176pt x 318.4717pt>
+File: ./chapter06/Fig/./image2.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image2.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image2.pdf  used on input line 208.
+(pdftex.def)             Requested size: 144.54175pt x 216.81058pt.
+
+
+[99 <./chapter06/Fig/./image1.pdf>]
+
+[100 <./chapter06/Fig/./image2.pdf>]
+<./chapter06/Fig/./image3.pdf, id=1765, 420.33257pt x 133.52878pt>
+File: ./chapter06/Fig/./image3.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image3.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image3.pdf  used on input line 260.
+(pdftex.def)             Requested size: 354.13521pt x 112.74408pt.
+<./chapter06/Fig/./image4.pdf, id=1767, 612.3033pt x 83.90717pt>
+File: ./chapter06/Fig/./image4.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image4.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image4.pdf  used on input line 302.
+(pdftex.def)             Requested size: 278.24341pt x 44.08391pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[101 <./chapter06/Fig/./image3.pdf>]
+<./chapter06/Fig/./image5.pdf, id=1783, 349.5421pt x 53.34892pt>
+File: ./chapter06/Fig/./image5.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image5.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image5.pdf  used on input line 350.
+(pdftex.def)             Requested size: 332.44713pt x 51.31287pt.
+
+
+[102 <./chapter06/Fig/./image4.pdf> <./chapter06/Fig/./image5.pdf
+
+pdfTeX warning: pdflatex (file ./chapter06/Fig/./image5.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>]
+<./chapter06/Fig/./image6.pdf, id=1810, 429.03908pt x 255.59111pt>
+File: ./chapter06/Fig/./image6.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image6.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image6.pdf  used on input line 414.
+(pdftex.def)             Requested size: 289.07825pt x 186.46295pt.
+
+Overfull \hbox (4.55069pt too wide) in paragraph at lines 414--414
+[]|[]| 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[103 <./chapter06/Fig/./image6.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[104]
+<./chapter06/Fig/./image7.pdf, id=1836, 409.03679pt x 263.50098pt>
+File: ./chapter06/Fig/./image7.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image7.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image7.pdf  used on input line 580.
+(pdftex.def)             Requested size: 260.17236pt x 180.67398pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `section:summary-and-further-reading' on page 105 unde
+fined on input line 603.
+
+
+
+[105]
+
+[106 <./chapter06/Fig/./image7.pdf>]
+<./chapter06/Fig/./image8.pdf, id=1864, 101.91777pt x 69.65234pt>
+File: ./chapter06/Fig/./image8.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image8.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image8.pdf  used on input line 648.
+(pdftex.def)             Requested size: 86.72536pt x 58.54156pt.
+<./chapter06/Fig/./image9.pdf, id=1866, 304.15996pt x 221.41936pt>
+File: ./chapter06/Fig/./image9.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image9.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image9.pdf  used on input line 674.
+(pdftex.def)             Requested size: 257.27942pt x 187.91002pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[107 <./chapter06/Fig/./image8.pdf>]
+<./chapter06/Fig/./image10.pdf, id=1890, 331.73068pt x 230.21126pt>
+File: ./chapter06/Fig/./image10.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image10.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image10.pdf  used on input line 713.
+
+(pdftex.def)             Requested size: 281.86104pt x 195.1325pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[108 <./chapter06/Fig/./image9.pdf> <./chapter06/Fig/./image10.pdf
+
+pdfTeX warning: pdflatex (file ./chapter06/Fig/./image10.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>]
+<./chapter06/Fig/./image11.pdf, id=1934, 192.39754pt x 194.5315pt>
+File: ./chapter06/Fig/./image11.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image11.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image11.pdf  used on input line 765.
+
+(pdftex.def)             Requested size: 144.54439pt x 144.55063pt.
+<./chapter06/Fig/./image12.pdf, id=1936, 541.1714pt x 86.89471pt>
+File: ./chapter06/Fig/./image12.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image12.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image12.pdf  used on input line 793.
+
+(pdftex.def)             Requested size: 397.48784pt x 65.04489pt.
+
+
+[109 <./chapter06/Fig/./image11.pdf>]
+<./chapter06/Fig/./image13.pdf, id=1955, 301.11554pt x 87.8052pt>
+File: ./chapter06/Fig/./image13.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image13.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image13.pdf  used on input line 827.
+
+(pdftex.def)             Requested size: 289.09978pt x 84.55595pt.
+
+
+[110 <./chapter06/Fig/./image12.pdf> <./chapter06/Fig/./image13.pdf
+
+pdfTeX warning: pdflatex (file ./chapter06/Fig/./image13.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>]
+<./chapter06/Fig/./image14.pdf, id=1979, 201.50241pt x 187.0484pt>
+File: ./chapter06/Fig/./image14.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image14.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image14.pdf  used on input line 858.
+
+(pdftex.def)             Requested size: 187.90262pt x 173.44803pt.
+<./chapter06/Fig/./image15.pdf, id=1981, 412.65033pt x 114.18091pt>
+File: ./chapter06/Fig/./image15.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image15.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image15.pdf  used on input line 883.
+
+(pdftex.def)             Requested size: 346.91354pt x 101.17815pt.
+
+
+[111 <./chapter06/Fig/./image14.pdf> <./chapter06/Fig/./image15.pdf
+
+pdfTeX warning: pdflatex (file ./chapter06/Fig/./image15.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>]
+Overfull \hbox (65.84938pt too wide) in paragraph at lines 905--963
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 21.3949pt on input line 963.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[112]
+
+[113]
+\openout2 = `./chapter06/problemSet06.aux'.
+
+ (chapter06/problemSet06.tex
+
+[114
+
+
+
+]
+<./chapter06/Fig/./image16.pdf, id=2046, 104.9053pt x 92.75598pt>
+File: ./chapter06/Fig/./image16.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image16.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image16.pdf  used on input line 134.
+
+(pdftex.def)             Requested size: 91.06517pt x 78.056pt.
+<./chapter06/Fig/./image17.pdf, id=2047, 62.76678pt x 115.31902pt>
+File: ./chapter06/Fig/./image17.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image17.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image17.pdf  used on input line 135.
+
+(pdftex.def)             Requested size: 53.98602pt x 97.56938pt.
+<./chapter06/Fig/./image18.pdf, id=2048, 194.70221pt x 122.09077pt>
+File: ./chapter06/Fig/./image18.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image18.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image18.pdf  used on input line 136.
+
+(pdftex.def)             Requested size: 156.11253pt x 94.96585pt.
+
+Overfull \hbox (42.30151pt too wide) in paragraph at lines 136--137
+[]|[]| 
+ []
+
+
+
+[115]
+<./chapter06/Fig/./image19.pdf, id=2057, 74.80229pt x 97.39378pt>
+File: ./chapter06/Fig/./image19.pdf Graphic file (type pdf)
+<use ./chapter06/Fig/./image19.pdf>
+Package pdftex.def Info: ./chapter06/Fig/./image19.pdf  used on input line 149.
+
+(pdftex.def)             Requested size: 72.27391pt x 96.84367pt.
+
+
+[116 <./chapter06/Fig/./image16.pdf> <./chapter06/Fig/./image17.pdf
+
+pdfTeX warning: pdflatex (file ./chapter06/Fig/./image17.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+> <./chapter06/Fig/./image18.pdf
+
+pdfTeX warning: pdflatex (file ./chapter06/Fig/./image18.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+> <./chapter06/Fig/./image19.pdf
+
+pdfTeX warning: pdflatex (file ./chapter06/Fig/./image19.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>])
+
+[117]
+\openout2 = `./chapter07/chapter07.aux'.
+
+ (chapter07/chapter07.tex
+
+[118
+
+
+
+
+]
+
+[119]
+<./chapter07/Fig/./image1.pdf, id=2115, 241.67772pt x 189.46689pt>
 File: ./chapter07/Fig/./image1.pdf Graphic file (type pdf)
 <use ./chapter07/Fig/./image1.pdf>
 Package pdftex.def Info: ./chapter07/Fig/./image1.pdf  used on input line 73.
 (pdftex.def)             Requested size: 209.58673pt x 173.45879pt.
 
 
-[4 <C:/Users/coulston/Documents/GitHub/Design-For-Electrical-and-Computer-Engin
-eering/Latex/chapter07/Fig/image1.pdf>]
+[120 <./chapter07/Fig/./image1.pdf>]
 
-LaTeX Warning: Reference `figure:transAmpDesign' on page 5 undefined on input l
-ine 164.
-
-
-
-[5]
-<./chapter07/Fig/./image6.pdf, id=89, 168.7189pt x 178.94157pt>
+[121]
+<./chapter07/Fig/./image6.pdf, id=2143, 168.7189pt x 178.94157pt>
 File: ./chapter07/Fig/./image6.pdf Graphic file (type pdf)
 <use ./chapter07/Fig/./image6.pdf>
 Package pdftex.def Info: ./chapter07/Fig/./image6.pdf  used on input line 195.
 (pdftex.def)             Requested size: 168.71848pt x 178.94113pt.
-
-LaTeX Warning: Reference `figure:transAmpDesign' on page 6 undefined on input l
-ine 214.
-
-
-LaTeX Warning: Reference `figure:usingStubs' on page 6 undefined on input line 
-219.
-
-<./chapter07/Fig/./image7.pdf, id=90, 161.38405pt x 74.4324pt>
+<./chapter07/Fig/./image7.pdf, id=2146, 161.38405pt x 74.4324pt>
 File: ./chapter07/Fig/./image7.pdf Graphic file (type pdf)
 <use ./chapter07/Fig/./image7.pdf>
 Package pdftex.def Info: ./chapter07/Fig/./image7.pdf  used on input line 228.
 (pdftex.def)             Requested size: 274.6398pt x 127.19894pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1355,2055 +2692,2223 @@ Underfull \vbox (badness 4899) has occurred while \output is active []
 
 
 
-[6 <C:/Users/coulston/Documents/GitHub/Design-For-Electrical-and-Computer-Engin
-eering/Latex/chapter07/Fig/image6.pdf>]
+[122 <./chapter07/Fig/./image6.pdf>]
 
-LaTeX Warning: Reference `figure:testVee' on page 7 undefined on input line 267
-.
+[123 <./chapter07/Fig/./image7.pdf>]
 
+[124]
 
-LaTeX Warning: Reference `figure:testVee' on page 7 undefined on input line 277
-.
-
-
-LaTeX Warning: Reference `chapter:funcDecomp' on page 7 undefined on input line
- 292.
+[125]
+Overfull \hbox (4.12878pt too wide) in paragraph at lines 445--499
+[][] 
+ []
 
 
-
-[7 <C:/Users/coulston/Documents/GitHub/Design-For-Electrical-and-Computer-Engin
-eering/Latex/chapter07/Fig/image7.pdf>]
-
-[8]
-
-LaTeX Warning: Reference `table:digitalThermoDigitalConverter' on page 9 undefi
-ned on input line 428.
+Underfull \hbox (badness 10000) in paragraph at lines 534--534
+[]|\OT1/cmr/m/n/10 FSM-Path-
+ []
 
 
-LaTeX Warning: Reference `table:adcMatrixTest' on page 9 undefined on input lin
-e 433.
+Underfull \hbox (badness 10000) in paragraph at lines 559--559
+[]|\OT1/cmr/bx/n/10 Expected
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 566--566
+[]|\OT1/cmr/m/n/10 Strobe
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 569--569
+[]|\OT1/cmr/m/n/10 Strobe
+ []
+
+
+Overfull \hbox (34.66077pt too wide) in paragraph at lines 526--574
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[9])
-Runaway argument?
-{ \makecell { Verify that each bit of the\\ output can be set indepen\ETC.
-C:/Users/coulston/Documents/GitHub/Design-For-Electrical-and-Computer-Engineeri
-ng/Latex/book.tex:60: File ended while scanning use of \multicolumn.
-<inserted text> 
-                \par 
-l.60 \include{./chapter07/chapter07}
-                                    
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+[126]
 
+[127]
+
+[128]
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
+[]|\OT1/cmr/m/n/9 Robot-
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 787--787
+[]|\OT1/cmr/m/n/9 Write a pro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 788--789
+[]|\OT1/cmr/m/n/9 Program should
+ []
+
+
+Underfull \hbox (badness 2221) in paragraph at lines 788--789
+\OT1/cmr/m/n/9 be stat-i-cally tested
+ []
+
+
+Underfull \hbox (badness 4927) in paragraph at lines 788--789
+\OT1/cmr/m/n/9 to ver-ify ac-cu-racy.
+ []
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 788--789
+\OT1/cmr/m/n/9 Should sam-ple wall
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 788--789
+\OT1/cmr/m/n/9 at a suf-fi-cient rate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 790--790
+\OT1/cmr/m/n/9 test track,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 790--790
+\OT1/cmr/m/n/9 down-load
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 790--791
+[]|\OT1/cmr/m/n/9 The robot should
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 790--791
+\OT1/cmr/m/n/9 travel down the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--792
+[]|\OT1/cmr/m/n/9 Plot test
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--792
+\OT1/cmr/m/n/9 data in a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--792
+\OT1/cmr/m/n/9 spread-sheet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 792--793
+[]|\OT1/cmr/m/n/9 Plot of po-si-tion
+ []
+
+
+Overfull \hbox (4.23767pt too wide) in paragraph at lines 745--797
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./chapter07/Fig/./image8.pdf, id=2232, 381.94981pt x 162.49368pt>
+File: ./chapter07/Fig/./image8.pdf Graphic file (type pdf)
+<use ./chapter07/Fig/./image8.pdf>
+Package pdftex.def Info: ./chapter07/Fig/./image8.pdf  used on input line 814.
+(pdftex.def)             Requested size: 354.13145pt x 151.77461pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[129]
+
+[130]
+Underfull \hbox (badness 10000) in paragraph at lines 864--864
+[]|\OT1/cmr/m/n/9 Robot-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 903--904
+[]|\OT1/cmr/m/n/9 Write pro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 903--904
+\OT1/cmr/m/n/9 ings while
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 903--904
+\OT1/cmr/m/n/9 si-mul-ta-ne-
+ []
+
+
+Underfull \hbox (badness 2343) in paragraph at lines 903--904
+\OT1/cmr/m/n/9 ously driv-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 904--905
+[]|\OT1/cmr/m/n/9 Program should
+ []
+
+
+Underfull \hbox (badness 2221) in paragraph at lines 904--905
+\OT1/cmr/m/n/9 be stat-i-cally tested
+ []
+
+
+Underfull \hbox (badness 4927) in paragraph at lines 904--905
+\OT1/cmr/m/n/9 to ver-ify ac-cu-racy.
+ []
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 904--905
+\OT1/cmr/m/n/9 pass at a suf-fi-cient
+ []
+
+
+Underfull \hbox (badness 6032) in paragraph at lines 904--905
+\OT1/cmr/m/n/9 rate de-pend-ing on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
+[]|\OT1/cmr/m/n/9 Run ac-cep-
+ []
+
+
+Underfull \hbox (badness 7012) in paragraph at lines 909--909
+[]|\OT1/cmr/m/n/9 Plot spooled
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 909--909
+\OT1/cmr/m/n/9 data in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 909--909
+\OT1/cmr/m/n/9 spread-sheet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 909--910
+[]|\OT1/cmr/m/n/9 Plots should be
+ []
+
+
+Underfull \hbox (badness 3690) in paragraph at lines 909--910
+\OT1/cmr/m/n/9 an-a-lyzed to see if
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 909--910
+\OT1/cmr/m/n/9 com-pass de-vi-ated
+ []
+
+
+Underfull \hbox (badness 2707) in paragraph at lines 909--910
+\OT1/cmr/m/n/9 any more than 10
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 909--910
+\OT1/cmr/m/n/9 de-grees from set
+ []
+
+
+Overfull \hbox (4.23767pt too wide) in paragraph at lines 857--915
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 994--994
+[]|\OT1/cmr/m/n/9 Comp-
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 1032--1033
+[]|\OT1/cmr/m/n/9 IDE should gen-er-ate
+ []
+
+
+Underfull \hbox (badness 5274) in paragraph at lines 1035--1035
+[]|\OT1/cmr/m/n/9 MCU should re-port
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 1037--1038
+[]|\OT1/cmr/m/n/9 MCU should dis-play
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1040--1040
+[]|\OT1/cmr/m/n/9 Orientate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1040--1041
+[]|\OT1/cmr/m/n/9 Terminal in-ter-face
+ []
+
+
+Underfull \hbox (badness 1092) in paragraph at lines 1040--1041
+\OT1/cmr/m/n/9 should dis-play 0 de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1043--1043
+[]|\OT1/cmr/m/n/9 Orientate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1043--1044
+[]|\OT1/cmr/m/n/9 Terminal in-ter-face
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1046--1046
+[]|\OT1/cmr/m/n/9 Orientate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1046--1047
+[]|\OT1/cmr/m/n/9 Terminal in-ter-face
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
+[]|\OT1/cmr/m/n/9 Orientate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
+\OT1/cmr/m/n/9 com-pass to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1052
+[]|\OT1/cmr/m/n/9 Terminal in-ter-face
+ []
+
+
+Overfull \hbox (19.41287pt too wide) in paragraph at lines 986--1055
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[131 <./chapter07/Fig/./image8.pdf>]
+
+[132]
+
+[133])
+Underfull \vbox (badness 5802) has occurred while \output is active []
+
+
+
+[134]
+
+[135]
 \openout2 = `./chapter07/problemSet07.aux'.
 
+ (chapter07/problemSet07.tex)
 
-(C:/Users\coulston\Documents\GitHub\Design-For-Electrical-and-Computer-Engineer
-ing\Latex\chapter07\problemSet07.tex
-Overfull \hbox (29.31535pt too wide) in paragraph at lines 1--1
-|[]\OT1/cmr/bx/n/12 Problems  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-[]
- []
-
-
-Overfull \hbox (1.84464pt too wide) in paragraph at lines 7--9
-\OT1/cmr/m/n/10 Explain
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-\OT1/cmr/m/n/10 the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-\OT1/cmr/m/n/10 dif-fer-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-\OT1/cmr/m/n/10 ences
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-\OT1/cmr/m/n/10 be-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-\OT1/cmr/m/n/10 tween
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-\OT1/cmr/m/n/10 black
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-\OT1/cmr/m/n/10 box
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-\OT1/cmr/m/n/10 and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-\OT1/cmr/m/n/10 white
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-\OT1/cmr/m/n/10 box
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-\OT1/cmr/m/n/10 test-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-[]
- []
-
-
-Overfull \hbox (1.9835pt too wide) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 Identify
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 a cir-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 cuit
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 sim-u-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 la-tor
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 (ana-
- []
-
-
-Underfull \hbox (badness 7012) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 log or
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 dig-i-tal)
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 that
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 you
- []
-
-
-Underfull \hbox (badness 1205) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 are fa-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 mil-iar
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 with.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 Ex-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 plain
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 fea-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 tures
- []
-
-
-Underfull \hbox (badness 1776) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 of this
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 sim-u-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 la-tor,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 which
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 in-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 crease
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 ob-serv-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 abil-ity
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 trol-la-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 bil-ity
- []
-
-
-Underfull \hbox (badness 6284) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 of the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 cir-cuit
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 be-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-\OT1/cmr/m/n/10 sim-u-
- []
-
-
-Underfull \hbox (badness 1845) in paragraph at lines 13--20
-[]\OT1/cmr/m/n/10 A mo-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 bile
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 robot
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 is be-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 built.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 a two
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 DC
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 mo-tors
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 in a
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 dif-fer-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 en-tial
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 drive
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 fig-u-ra-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 mi-cro-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 troller
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 con-trol
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 move-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 ment
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 ul-tra-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 sonic
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 sen-
- []
-
-
-Underfull \hbox (badness 6842) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 sor to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 de-tect
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 ob-sta-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 cles.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 The
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 robot
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 wan-der
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 around
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 with-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 out
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 bump-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 into
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 ob-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 jects.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 Ex-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 plain
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 how
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 stubs
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 could
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 be
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 test-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 place
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 in-com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 plete
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 sub-sys-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-\OT1/cmr/m/n/10 tems.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-[]
- []
-
-
-Overfull \hbox (6.51126pt too wide) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 Consider
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 that
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 you
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 have
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 an op
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 amp
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 in-te-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 grated
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 cir-cuit
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 pack-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 age,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 such
- []
-
-
-Underfull \hbox (badness 4072) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 as the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 LM741
- []
-
-
-Underfull \hbox (badness 1231) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 in Ap-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 pendix
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 C.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 What
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 test-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 would
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 be
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 ap-pro-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 pri-ate
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 for
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 test-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 this
- []
-
+[136
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 de-vice?
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 Write
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 test
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 plan
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 for
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
-\OT1/cmr/m/n/10 do-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
-[]
- []
-
-
-Overfull \hbox (1.84464pt too wide) in paragraph at lines 24--26
-\OT1/cmr/m/n/10 Explain
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
-\OT1/cmr/m/n/10 un-der
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
-\OT1/cmr/m/n/10 what
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
-\OT1/cmr/m/n/10 sit-u-a-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
-\OT1/cmr/m/n/10 ma-trix
- []
-
-
-Underfull \hbox (badness 3954) in paragraph at lines 24--26
-\OT1/cmr/m/n/10 test is
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
-\OT1/cmr/m/n/10 ap-pro-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-[]
- []
-
-
-Overfull \hbox (1.84464pt too wide) in paragraph at lines 26--28
-\OT1/cmr/m/n/10 Explain
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-\OT1/cmr/m/n/10 un-der
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-\OT1/cmr/m/n/10 what
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-\OT1/cmr/m/n/10 sit-u-a-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-\OT1/cmr/m/n/10 step-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-\OT1/cmr/m/n/10 by-step
- []
-
-
-Underfull \hbox (badness 3954) in paragraph at lines 26--28
-\OT1/cmr/m/n/10 is test
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-\OT1/cmr/m/n/10 ap-pro-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-[]
- []
-
-
-Overfull \hbox (6.51126pt too wide) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 Consider
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 stages
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 test-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 ing,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 in-te-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 gra-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 test-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 ing,
- []
-
+]
+\openout2 = `./chapter08/chapter08.aux'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 ac-cep-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 tance
- []
-
+ (chapter08/chapter08.tex
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 test-
- []
+[137
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 ing.
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 For
- []
+]
 
+[138]
+<./chapter08/Fig/./image10.pdf, id=2319, 400.50096pt x 174.38695pt>
+File: ./chapter08/Fig/./image10.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image10.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image10.pdf  used on input line 139.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 these
- []
+(pdftex.def)             Requested size: 252.9525pt x 110.57481pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 stages,
- []
+[139 <./chapter08/Fig/./image10.pdf>]
+<./chapter08/Fig/./image21.pdf, id=2345, 366.61377pt x 169.86296pt>
+File: ./chapter08/Fig/./image21.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image21.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image21.pdf  used on input line 248.
 
+(pdftex.def)             Requested size: 211.53969pt x 98.61906pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 iden-
- []
 
+[140 <./chapter08/Fig/./image21.pdf>]
+<./chapter08/Fig/./image23.pdf, id=2382, 349.28604pt x 142.77594pt>
+File: ./chapter08/Fig/./image23.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image23.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image23.pdf  used on input line 274.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 cor-re-
- []
+(pdftex.def)             Requested size: 216.81091pt x 88.89268pt.
+<./chapter08/Fig/./image25.pdf, id=2384, 265.91946pt x 185.6827pt>
+File: ./chapter08/Fig/./image25.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image25.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image25.pdf  used on input line 302.
 
+(pdftex.def)             Requested size: 216.8178pt x 151.77345pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 spond-
- []
 
+[141 <./chapter08/Fig/./image23.pdf> <./chapter08/Fig/./image25.pdf
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 ing
- []
+pdfTeX warning: pdflatex (file ./chapter08/Fig/./image25.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>]
+<./chapter08/Fig/./image29.pdf, id=2431, 591.98802pt x 183.34958pt>
+File: ./chapter08/Fig/./image29.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image29.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image29.pdf  used on input line 365.
 
+(pdftex.def)             Requested size: 397.48805pt x 122.86035pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 re-
- []
 
+[142 <./chapter08/Fig/./image29.pdf>]
+<./chapter08/Fig/./image33.pdf, id=2455, 370.82475pt x 210.29433pt>
+File: ./chapter08/Fig/./image33.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image33.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image33.pdf  used on input line 411.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 quire-
- []
+(pdftex.def)             Requested size: 199.46718pt x 112.74219pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 ments
- []
+[143 <./chapter08/Fig/./image33.pdf>]
+Package mdframed Info: mdframed works in twoside mode on input line 495.
 
+Underfull \hbox (badness 10000) in paragraph at lines 498--501
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 that
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 each
- []
-
+Underfull \hbox (badness 10000) in paragraph at lines 507--508
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 test
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 should
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 be
- []
+[144]
+Package mdframed Info: mdframed works in twoside mode on input line 552.
 
+Underfull \hbox (badness 10000) in paragraph at lines 555--558
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 trace-
  []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 able
- []
+Package mdframed Info: mdframed works in twoside mode on input line 579.
 
+Underfull \hbox (badness 10000) in paragraph at lines 582--586
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-[]
  []
 
 
-Overfull \hbox (6.51126pt too wide) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 Consider
- []
 
+[145]
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 the
- []
+LaTeX Warning: Reference `appendix:componentFailureRate' on page 146 undefined 
+on input line 645.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 case
- []
+LaTeX Warning: Reference `appendix:componentFailureRate' on page 146 undefined 
+on input line 653.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 study
- []
+LaTeX Warning: Reference `appendix:componentFailureRate' on page 146 undefined 
+on input line 659.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 robot
- []
+LaTeX Warning: Reference `appendix:componentFailureRate' on page 146 undefined 
+on input line 677.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 de-sign
- []
 
+[146]
+Package mdframed Info: mdframed works in twoside mode on input line 691.
+<./chapter08/Fig/./image63.pdf, id=2523, 322.31284pt x 132.70364pt>
+File: ./chapter08/Fig/./image63.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image63.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image63.pdf  used on input line 710.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 tion
- []
+(pdftex.def)             Requested size: 307.17415pt x 125.74982pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 710--711
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 7.3,
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 which
- []
 
+LaTeX Warning: Reference `appendix:componentFailureRate' on page 147 undefined 
+on input line 716.
 
-Overfull \hbox (3.51123pt too wide) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 presents
- []
 
+LaTeX Warning: Reference `appendix:componentFailureRate' on page 147 undefined 
+on input line 731.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 an
- []
 
+Underfull \hbox (badness 10000) in paragraph at lines 733--734
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 ac-cep-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 tance
- []
 
+Underfull \hbox (badness 10000) in paragraph at lines 768--769
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 test
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 first
- []
-
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 sys-tem
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 re-
- []
 
+Underfull \hbox (badness 10000) in paragraph at lines 773--774
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 quire-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 ment.
- []
-
+Underfull \hbox (badness 10000) in paragraph at lines 774--775
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 De-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 velop
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 an
- []
+[147 <./chapter08/Fig/./image63.pdf>]
 
+[148]
+<./chapter08/Fig/./image91.pdf, id=2546, 233.51176pt x 142.4345pt>
+File: ./chapter08/Fig/./image91.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image91.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image91.pdf  used on input line 826.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 ac-cep-
- []
+(pdftex.def)             Requested size: 151.77371pt x 93.9527pt.
+<./chapter08/Fig/./image92.pdf, id=2547, 319.6098pt x 165.02599pt>
+File: ./chapter08/Fig/./image92.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image92.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image92.pdf  used on input line 827.
 
+(pdftex.def)             Requested size: 216.8197pt x 112.74246pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 tance
- []
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 test
- []
+<./chapter08/Fig/./image94.pdf, id=2549, 127.55371pt x 101.7186pt>
+File: ./chapter08/Fig/./image94.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image94.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image94.pdf  used on input line 848.
 
+(pdftex.def)             Requested size: 132.98164pt x 107.68924pt.
+<./chapter08/Fig/./image95.pdf, id=2550, 127.24072pt x 101.7186pt>
+File: ./chapter08/Fig/./image95.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image95.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image95.pdf  used on input line 849.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 sec-ond
- []
+(pdftex.def)             Requested size: 130.09056pt x 106.96596pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 sys-tem
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 re-
- []
+[149]
+<./chapter08/Fig/./image98.pdf, id=2563, 307.91573pt x 191.48706pt>
+File: ./chapter08/Fig/./image98.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image98.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image98.pdf  used on input line 885.
 
+(pdftex.def)             Requested size: 242.83258pt x 151.76689pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
-\OT1/cmr/m/n/10 quire-
- []
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-[]
- []
+Package mdframed Info: mdframed works in twoside mode on input line 890.
 
+Underfull \hbox (badness 10000) in paragraph at lines 893--901
 
-Overfull \hbox (6.51126pt too wide) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 Consider
  []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 the
- []
 
+Underfull \hbox (badness 10000) in paragraph at lines 919--920
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 case
  []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 study
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 robot
- []
+[150 <./chapter08/Fig/./image91.pdf> <./chapter08/Fig/./image92.pdf
 
+pdfTeX warning: pdflatex (file ./chapter08/Fig/./image92.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+> <./chapter08/Fig/./image94.pdf
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 de-sign
- []
+pdfTeX warning: pdflatex (file ./chapter08/Fig/./image94.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+> <./chapter08/Fig/./image95.pdf
 
+pdfTeX warning: pdflatex (file ./chapter08/Fig/./image95.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>]
+Underfull \vbox (badness 5578) has occurred while \output is active []
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 tion
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 7.3.
- []
+[151 <./chapter08/Fig/./image98.pdf>]
+<./chapter08/Fig/./image109.pdf, id=2691, 273.54478pt x 38.6673pt>
+File: ./chapter08/Fig/./image109.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image109.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image109.pdf  used on input line 970
+.
+(pdftex.def)             Requested size: 231.99658pt x 32.52336pt.
+Package mdframed Info: mdframed works in twoside mode on input line 1015.
 
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1022
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 De-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 velop
- []
 
+[152 <./chapter08/Fig/./image109.pdf>]
+<./chapter08/Fig/./image129.pdf, id=2715, 129.0048pt x 174.1593pt>
+File: ./chapter08/Fig/./image129.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image129.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image129.pdf  used on input line 108
+7.
+(pdftex.def)             Requested size: 108.40855pt x 144.54153pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 an
- []
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 in-te-
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 gra-tion
- []
+[153]
+Package mdframed Info: mdframed works in twoside mode on input line 1136.
 
+Underfull \hbox (badness 10000) in paragraph at lines 1139--1146
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 test
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 that
+Overfull \hbox (0.7275pt too wide) in paragraph at lines 1162--1162
+[] \OT1/cmr/bx/n/10 Ex-am-ple 8.11 Re-li-a-bil-ity of a Re-dun-dant Ar-ray of I
+n-de-pen-dent Disks (RAID).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 strates
- []
 
+[154 <./chapter08/Fig/./image129.pdf>]
+<./chapter08/Fig/./image149.pdf, id=2747, 201.27478pt x 147.07228pt>
+File: ./chapter08/Fig/./image149.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image149.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image149.pdf  used on input line 120
+6.
+(pdftex.def)             Requested size: 169.84052pt x 124.30511pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 the
- []
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 com-
- []
+Package mdframed Info: mdframed works in twoside mode on input line 1218.
+<./chapter08/Fig/./image153.pdf, id=2749, 237.4098pt x 92.8698pt>
+File: ./chapter08/Fig/./image153.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image153.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image153.pdf  used on input line 122
+7.
+(pdftex.def)             Requested size: 202.35715pt x 79.49942pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 1227--1228
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 bined
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 op-er-a-
- []
 
+[155]
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 mo-
- []
+[156 <./chapter08/Fig/./image149.pdf> <./chapter08/Fig/./image153.pdf
 
+pdfTeX warning: pdflatex (file ./chapter08/Fig/./image153.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>])
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 tors,
- []
+[157]
+\openout2 = `./chapter08/problemSet08.aux'.
 
+ (chapter08/problemSet08.tex
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 MCU,
- []
+LaTeX Warning: Reference `appendix:componentFailureRate' on page 158 undefined 
+on input line 34.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 and
- []
+LaTeX Warning: Reference `appendix:componentFailureRate' on page 158 undefined 
+on input line 39.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 range
- []
+LaTeX Warning: Reference `appendix:componentFailureRate' on page 158 undefined 
+on input line 54.
 
+<./chapter08/Fig/./image165.pdf, id=2785, 141.09723pt x 85.64279pt>
+File: ./chapter08/Fig/./image165.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image165.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image165.pdf  used on input line 57.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-[]
- []
+(pdftex.def)             Requested size: 180.67703pt x 108.40704pt.
 
+LaTeX Warning: Reference `appendix:componentFailureRate' on page 158 undefined 
+on input line 61.
 
-Overfull \hbox (6.51126pt too wide) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 Consider
- []
+<./chapter08/Fig/./image166.pdf, id=2787, 206.36783pt x 129.09015pt>
+File: ./chapter08/Fig/./image166.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image166.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image166.pdf  used on input line 73.
 
+(pdftex.def)             Requested size: 202.36188pt x 122.86145pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 the
- []
 
+[158
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 case
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 study
+ <./chapter08/Fig/./image165.pdf>]
+Overfull \hbox (23.9198pt too wide) in paragraph at lines 99--104
+[]$\OML/cmm/m/it/10 S[]$ \OT1/cmr/m/n/10 has a fail-ure prob-a-bil-ity of 2% an
+d $\OML/cmm/m/it/10 S[]$ \OT1/cmr/m/n/10 has a fail-ure prob-a-bil-ity of 3%. $
+\OML/cmm/m/it/10 S[]; S[]; S[]; []S[]$
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 robot
- []
+<./chapter08/Fig/./image174.pdf, id=2810, 147.07228pt x 139.8453pt>
+File: ./chapter08/Fig/./image174.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image174.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image174.pdf  used on input line 105
+.
+(pdftex.def)             Requested size: 151.77562pt x 144.53943pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 de-sign
- []
+[159 <./chapter08/Fig/./image166.pdf> <./chapter08/Fig/./image174.pdf
 
+pdfTeX warning: pdflatex (file ./chapter08/Fig/./image174.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>]
+<./chapter08/Fig/./image175.pdf, id=2834, 357.30972pt x 212.11531pt>
+File: ./chapter08/Fig/./image175.pdf Graphic file (type pdf)
+<use ./chapter08/Fig/./image175.pdf>
+Package pdftex.def Info: ./chapter08/Fig/./image175.pdf  used on input line 125
+.
+(pdftex.def)             Requested size: 303.5566pt x 180.67754pt.
+)
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 tion
- []
+[160 <./chapter08/Fig/./image175.pdf>]
 
+[161
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 7.3.
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 De-
- []
+]
+\openout2 = `./chapter09/chapter09.aux'.
 
+ (chapter09/chapter09.tex
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 velop
- []
+[162
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 an
- []
+]
 
+[163]
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 in-te-
- []
+[164]
+<./chapter09/Fig/./image1.png, id=2868, 341.64pt x 258.858pt>
+File: ./chapter09/Fig/./image1.png Graphic file (type png)
+<use ./chapter09/Fig/./image1.png>
+Package pdftex.def Info: ./chapter09/Fig/./image1.png  used on input line 170.
+(pdftex.def)             Requested size: 341.84767pt x 259.46169pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 gra-tion
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 test
- []
 
+[165]
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 that
- []
+[166 <./chapter09/Fig/./image1.png>]
 
+[167]
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 strates
+[168]
+Overfull \hbox (9.24045pt too wide) in paragraph at lines 401--404
+[]\OT1/cmr/m/it/10 Spokesperson. \OT1/cmr/m/n/10 The spokesper-son ar-tic-u-lat
+es the team's re-sults. The recorder and spokesper-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 the
- []
 
+[169]
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 com-
- []
+[170]
 
+[171])
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 bined
- []
+[172]
+\openout2 = `./chapter09/problemSet09.aux'.
 
+ (chapter09/problemSet09.tex)
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 op-er-
- []
+[173
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 a-tion
- []
 
+]
+\openout2 = `./chapter10/chapter10.aux'.
 
-Underfull \hbox (badness 6284) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 of the
- []
+ (chapter10/chapter10.tex
 
+[174
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 dig-i-tal
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 com-
- []
 
+]
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 pass,
+[175]
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+[]|\OT1/cmr/bx/n/6 Interface
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 MCU,
+Underfull \hbox (badness 10000) in paragraph at lines 137--137
+[]|\OT1/cmr/m/n/6 Design Cir-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\OT1/cmr/m/n/10 and
+Underfull \hbox (badness 2662) in paragraph at lines 139--139
+[]|\OT1/cmr/m/n/6 Rob (1)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-[]
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[]|\OT1/cmr/m/n/6 Purchase
  []
 
 
-Overfull \hbox (6.51126pt too wide) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 Consider
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+[]|\OT1/cmr/bx/n/6 Construct
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 the
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+\OT1/cmr/bx/n/6 & Test
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 case
+Overfull \hbox (0.99564pt too wide) in paragraph at lines 148--148
+[]|\OT1/cmr/m/n/6 1.3.1| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 study
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
+[]|\OT1/cmr/m/n/6 Current
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 robot
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
+\OT1/cmr/m/n/6 Driver Cir-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 de-sign
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
+[]|\OT1/cmr/m/n/6 Test of cir-cuit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 tion
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
+\OT1/cmr/m/n/6 with sens-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 7.3.
+Overfull \hbox (0.99564pt too wide) in paragraph at lines 153--153
+[]|\OT1/cmr/m/n/6 1.3.2| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 De-
+Underfull \hbox (badness 4660) in paragraph at lines 153--153
+[]|\OT1/cmr/m/n/6 Level Off-set
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 velop
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+[]|\OT1/cmr/m/n/6 Test of cir-cuit
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 unit
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\OT1/cmr/m/n/6 with volt-age
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 tests
+Underfull \hbox (badness 2662) in paragraph at lines 155--155
+[]|\OT1/cmr/m/n/6 Rob (1)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 for
+Overfull \hbox (0.99564pt too wide) in paragraph at lines 158--158
+[]|\OT1/cmr/m/n/6 1.3.3| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 range
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
+[]|\OT1/cmr/m/n/6 Integrate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 finder,
+Underfull \hbox (badness 4531) in paragraph at lines 158--158
+\OT1/cmr/m/n/6 rent driver and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 mo-
+Overfull \hbox (2.27563pt too wide) in paragraph at lines 159--160
+|[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 tors,
+Underfull \hbox (badness 2662) in paragraph at lines 160--160
+[]|\OT1/cmr/m/n/6 Rob (1)
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 the H-
+Overfull \hbox (0.99564pt too wide) in paragraph at lines 161--161
+[]|\OT1/cmr/m/n/6 1.3.1
  []
 
 
-Overfull \hbox (2.06682pt too wide) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 bridges,
+Overfull \hbox (0.99564pt too wide) in paragraph at lines 161--161
+\OT1/cmr/m/n/6 1.3.2| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 and
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
+[]|\OT1/cmr/bx/n/6 LED &
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/cmr/m/n/10 the
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
+\OT1/cmr/bx/n/6 Driver
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-[]
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+[]|\OT1/cmr/m/n/6 Research
  []
 
 
-Overfull \hbox (5.44852pt too wide) in paragraph at lines 47--51
-\OT1/cmr/bx/n/10 Project
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+\OT1/cmr/m/n/6 A/D Con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/bx/n/10 Ap-
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
+[]|\OT1/cmr/m/n/6 Complete
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/bx/n/10 pli-ca-
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
+\OT1/cmr/m/n/6 Hard-ware
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/bx/n/10 tion.
+Overfull \hbox (3.19218pt too wide) in paragraph at lines 170--171
+|[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 De-
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+[]|\OT1/cmr/m/n/6 Purchase
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 velop
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\OT1/cmr/m/n/6 LED &
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 an
+Underfull \hbox (badness 1231) in paragraph at lines 178--178
+[]|\OT1/cmr/m/n/6 Construct &
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 ac-cep-
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+[]|\OT1/cmr/m/n/6 System In-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 tance
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+\OT1/cmr/m/n/6 te-gra-tion &
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 test
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+[]|\OT1/cmr/m/n/6 Complete in-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 suite
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+\OT1/cmr/m/n/6 te-gra-tion of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 for
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+\OT1/cmr/m/n/6 front-end and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 your
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+\OT1/cmr/m/n/6 LED driver
  []
 
 
-Overfull \hbox (1.73347pt too wide) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 project.
+Underfull \hbox (badness 2662) in paragraph at lines 187--187
+\OT1/cmr/m/n/6 Rob (1)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 The
+Overfull \hbox (7.5559pt too wide) in paragraph at lines 188--189
+|[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 ac-cep-
+Overfull \hbox (0.99564pt too wide) in paragraph at lines 189--189
+[]|\OT1/cmr/m/n/6 1.3.3
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 tance
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
+\OT1/cmr/m/n/6 2.4
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 tests
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
+\OT1/cmr/m/n/6 (or
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 should
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
+\OT1/cmr/m/n/6 1
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 ap-ply
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
+\OT1/cmr/m/n/6 and
  []
 
 
-Underfull \hbox (badness 4193) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 to the
+Overfull \hbox (5.8956pt too wide) in paragraph at lines 129--191
+[][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 en-gi-
- []
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 neer-ing
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 re-
- []
+[176]
+Underfull \vbox (badness 4819) has occurred while \output is active []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 quire-
- []
 
+[177]
+<./chapter10/Fig/./image5.pdf, id=2982, 119.95682pt x 92.8698pt>
+File: ./chapter10/Fig/./image5.pdf Graphic file (type pdf)
+<use ./chapter10/Fig/./image5.pdf>
+Package pdftex.def Info: ./chapter10/Fig/./image5.pdf  used on input line 283.
+(pdftex.def)             Requested size: 93.95213pt x 72.27092pt.
+<./chapter10/Fig/./image6.pdf, id=2983, 110.9373pt x 92.8698pt>
+File: ./chapter10/Fig/./image6.pdf Graphic file (type pdf)
+<use ./chapter10/Fig/./image6.pdf>
+Package pdftex.def Info: ./chapter10/Fig/./image6.pdf  used on input line 284.
+(pdftex.def)             Requested size: 86.72879pt x 72.27092pt.
+<./chapter10/Fig/./image7.pdf, id=2984, 110.9373pt x 38.6673pt>
+File: ./chapter10/Fig/./image7.pdf Graphic file (type pdf)
+<use ./chapter10/Fig/./image7.pdf>
+Package pdftex.def Info: ./chapter10/Fig/./image7.pdf  used on input line 285.
+(pdftex.def)             Requested size: 86.72879pt x 29.6317pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 ments
+Overfull \hbox (53.2613pt too wide) in paragraph at lines 282--288
+ [][] 
  []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 de-vel-
- []
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 oped
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-\OT1/cmr/m/n/10 sys-
- []
+[178]
+<./chapter10/Fig/./image12.pdf, id=2993, 327.74728pt x 92.8698pt>
+File: ./chapter10/Fig/./image12.pdf Graphic file (type pdf)
+<use ./chapter10/Fig/./image12.pdf>
+Package pdftex.def Info: ./chapter10/Fig/./image12.pdf  used on input line 313.
 
+(pdftex.def)             Requested size: 245.72484pt x 69.38008pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-[]
- []
 
+[179 <./chapter10/Fig/./image5.pdf> <./chapter10/Fig/./image6.pdf
 
-Overfull \hbox (5.44852pt too wide) in paragraph at lines 51--56
-\OT1/cmr/bx/n/10 Project
- []
+pdfTeX warning: pdflatex (file ./chapter10/Fig/./image6.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+> <./chapter10/Fig/./image7.pdf
 
+pdfTeX warning: pdflatex (file ./chapter10/Fig/./image7.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+> <./chapter10/Fig/./image12.pdf
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/bx/n/10 Ap-
- []
+pdfTeX warning: pdflatex (file ./chapter10/Fig/./image12.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>]
+Package mdframed Info: mdframed works in twoside mode on input line 363.
+Package mdframed Info: mdframed works in twoside mode on input line 393.
 
+Underfull \hbox (badness 10000) in paragraph at lines 396--401
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/bx/n/10 pli-ca-
  []
 
+<./chapter10/Fig/./image22.pdf, id=3036, 400.01729pt x 165.1398pt>
+File: ./chapter10/Fig/./image22.pdf Graphic file (type pdf)
+<use ./chapter10/Fig/./image22.pdf>
+Package pdftex.def Info: ./chapter10/Fig/./image22.pdf  used on input line 406.
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/bx/n/10 tion.
- []
+(pdftex.def)             Requested size: 303.54019pt x 125.75449pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 De-
  []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 velop
- []
 
+Underfull \hbox (badness 10000) in paragraph at lines 413--414
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 an
  []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 in-te-
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 gra-tion
- []
+[180 <./chapter10/Fig/./image22.pdf>]
+<./chapter10/Fig/./image28.pdf, id=3053, 409.91887pt x 282.70657pt>
+File: ./chapter10/Fig/./image28.pdf Graphic file (type pdf)
+<use ./chapter10/Fig/./image28.pdf>
+Package pdftex.def Info: ./chapter10/Fig/./image28.pdf  used on input line 449.
 
+(pdftex.def)             Requested size: 397.49573pt x 274.64346pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 test
- []
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 suite
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 for
- []
+[181]
+<./chapter10/Fig/./image32.pdf, id=3063, 483.6684pt x 339.24223pt>
+File: ./chapter10/Fig/./image32.pdf Graphic file (type pdf)
+<use ./chapter10/Fig/./image32.pdf>
+Package pdftex.def Info: ./chapter10/Fig/./image32.pdf  used on input line 523.
 
+(pdftex.def)             Requested size: 346.89778pt x 242.8307pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 your
- []
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Overfull \hbox (1.73347pt too wide) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 project.
- []
+Package mdframed Info: mdframed works in twoside mode on input line 531.
 
+Underfull \hbox (badness 10000) in paragraph at lines 534--542
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 The
  []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 in-te-
- []
 
+Underfull \hbox (badness 10000) in paragraph at lines 558--559
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 gra-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 tests
- []
 
+[182 <./chapter10/Fig/./image28.pdf>]
+Package mdframed Info: Not enough space on this page on input line 567.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 567.
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 should
- []
 
+[183 <./chapter10/Fig/./image32.pdf>]
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 ap-ply
- []
+[184]
+Package mdframed Info: mdframed works in twoside mode on input line 640.
 
+Underfull \hbox (badness 10000) in paragraph at lines 643--650
 
-Underfull \hbox (badness 4193) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 to the
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 higher
- []
 
+Underfull \hbox (badness 10000) in paragraph at lines 659--662
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 lev-els
  []
 
 
-Underfull \hbox (badness 6284) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 of the
- []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 de-sign
- []
+[185]
 
+[186]
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 ar-chi-
- []
+[187])
 
+[188]
+\openout2 = `./chapter10/problemSet10.aux'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 tec-ture
+ (chapter10/problemSet10.tex
+Overfull \hbox (3.1348pt too wide) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/10 A,B| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 and
+Overfull \hbox (3.27368pt too wide) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/10 D,B| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 ad-
+Overfull \hbox (1.8848pt too wide) in paragraph at lines 18--18
+[]|\OT1/cmr/m/n/10 F,E| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 dress
+Overfull \hbox (2.85701pt too wide) in paragraph at lines 42--42
+[]|\OT1/cmr/m/n/10 B,C| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 the
+Overfull \hbox (2.71812pt too wide) in paragraph at lines 42--42
+[]|\OT1/cmr/m/n/10 F,D| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 in-ter-
- []
 
+[189
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 ac-tion
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 be-
- []
+])
 
+[190]
+\openout2 = `./chapter11/chapter11.aux'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 tween
- []
+ (chapter11/chapter11.tex
 
+[191
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 func-
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-\OT1/cmr/m/n/10 tional
- []
 
+]
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-[]
+[192]
+Overfull \hbox (30.0613pt too wide) in paragraph at lines 188--231
+[][] 
  []
 
 
-Overfull \hbox (5.44852pt too wide) in paragraph at lines 56--59
-\OT1/cmr/bx/n/10 Project
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/bx/n/10 Ap-
- []
 
+[193]
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/bx/n/10 pli-ca-
- []
+[194]
+<./chapter11/Fig/./image1.png, id=3217, 465.1779pt x 713.3049pt>
+File: ./chapter11/Fig/./image1.png Graphic file (type png)
+<use ./chapter11/Fig/./image1.png>
+Package pdftex.def Info: ./chapter11/Fig/./image1.png  used on input line 348.
+(pdftex.def)             Requested size: 339.6835pt x 523.26602pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/bx/n/10 tion.
- []
+[195]
+<./chapter11/Fig/./image2.png, id=3224, 467.5869pt x 720.5319pt>
+File: ./chapter11/Fig/./image2.png Graphic file (type png)
+<use ./chapter11/Fig/./image2.png>
+Package pdftex.def Info: ./chapter11/Fig/./image2.png  used on input line 356.
+(pdftex.def)             Requested size: 340.40807pt x 524.69757pt.
+<./chapter11/Fig/./image3.png, id=3225, 472.4049pt x 713.3049pt>
+File: ./chapter11/Fig/./image3.png Graphic file (type png)
+<use ./chapter11/Fig/./image3.png>
+Package pdftex.def Info: ./chapter11/Fig/./image3.png  used on input line 362.
+(pdftex.def)             Requested size: 346.91429pt x 523.99527pt.
 
+Underfull \vbox (badness 6641) has occurred while \output is active []
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 De-
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 velop
- []
+[196]
 
+[197 <./chapter11/Fig/./image1.png>]
 
-Underfull \hbox (badness 4193) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 a unit
- []
+[198 <./chapter11/Fig/./image2.png>]
 
+[199 <./chapter11/Fig/./image3.png>]
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 test
- []
+[200]
+<./chapter11/Fig/./image5.pdf, id=3261, 235.8449pt x 217.29372pt>
+File: ./chapter11/Fig/./image5.pdf Graphic file (type pdf)
+<use ./chapter11/Fig/./image5.pdf>
+Package pdftex.def Info: ./chapter11/Fig/./image5.pdf  used on input line 529.
+(pdftex.def)             Requested size: 180.67265pt x 166.22914pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 quite
- []
+[201 <./chapter11/Fig/./image5.pdf>]
+Package mdframed Info: mdframed works in twoside mode on input line 618.
 
+Underfull \hbox (badness 10000) in paragraph at lines 638--644
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 for
  []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 your
- []
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 724.
 
 
-Overfull \hbox (1.73347pt too wide) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 project.
- []
+[202]
 
+[203]
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 The
- []
+[204])
 
+[205]
+\openout2 = `./chapter11/problemSet11.aux'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 unit
+ (chapter11/problemSet11.tex
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 tests
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
+[][]
  []
-
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 should
- []
 
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 ap-ply
  []
 
 
-Underfull \hbox (badness 4193) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 to the
- []
 
+[206
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 low-est
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 level
+]
+Underfull \hbox (badness 10000) in paragraph at lines 113--115
+[][]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 units
- []
 
 
-Underfull \hbox (badness 5519) in paragraph at lines 56--59
-\OT1/cmr/m/n/10 in the
+[207]
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
+[][]
  []
 
 )
+
+[208]
+\openout2 = `./chapter12/chapter12.aux'.
+
+ (chapter12/chapter12.tex
+
+[209
+
+
+
+
+]
+
+[210]
+
+[211]
+
+[212]
+Overfull \hbox (1.01619pt too wide) in paragraph at lines 315--315
+[]|\OT1/cmr/bx/n/10 Presentation| 
+ []
+
+
+Overfull \hbox (19.69897pt too wide) in paragraph at lines 313--387
+[][] 
+ []
+
+
+
+[213]
+
+[214]
+
+[215])
+
+[216]
+\openout2 = `./appendixA/appendixA.aux'.
+
+ (appendixA/appendixA.tex
+Overfull \hbox (12.80853pt too wide) in alignment at lines 4--7
+ [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]|\OT1/cmr/bx/it/10 Analytical Hi-
+ []
+
+
+Underfull \hbox (badness 5847) in paragraph at lines 28--28
+\OT1/cmr/bx/it/10 er-ar-chy Pro-cess
+ []
+
+
+Underfull \hbox (badness 1067) in paragraph at lines 44--44
+[]|\OT1/cmr/bx/it/10 baseline re-quire-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+[]|\OT1/cmr/bx/it/10 component de-
+ []
+
+
+Underfull \hbox (badness 7047) in paragraph at lines 90--90
+[]|\OT1/cmr/bx/it/10 concept gen-er-a-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--123
+[]|\OT1/cmr/bx/it/10 cross-functional
+ []
+
+
+Underfull \hbox (badness 8170) in paragraph at lines 130--130
+[]|\OT1/cmr/bx/it/10 data flow di-a-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[]|\OT1/cmr/bx/it/10 descriptive de-
+ []
+
+
+Underfull \hbox (badness 5105) in paragraph at lines 146--146
+[]|\OT1/cmr/bx/it/10 design ar-chi-tec-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
+[]|\OT1/cmr/bx/it/10 engineering re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--167
+[]|\OT1/cmr/bx/it/10 entity re-la-tion-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--167
+\OT1/cmr/bx/it/10 ship di-a-gram
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+[]|\OT1/cmr/bx/it/10 entity re-la-tion-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+[]|\OT1/cmr/bx/it/10 functional de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
+[]|\OT1/cmr/bx/it/10 functional re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--214
+[]|\OT1/cmr/bx/it/10 high-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--214
+\OT1/cmr/bx/it/10 performance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--237
+[]|\OT1/cmr/bx/it/10 marketing re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--241
+[]|\OT1/cmr/bx/it/10 maintenance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--247
+[]|\OT1/cmr/bx/it/10 mean time to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
+[]|\OT1/cmr/bx/it/10 multi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
+\OT1/cmr/bx/it/10 disciplinary
+ []
+
+
+Underfull \hbox (badness 5105) in paragraph at lines 266--266
+[]|\OT1/cmr/bx/it/10 Nominal Group
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--266
+\OT1/cmr/bx/it/10 Tech-nique
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--273
+[]|\OT1/cmr/bx/it/10 non-disclosure
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--305
+[]|\OT1/cmr/bx/it/10 path-complete
+ []
+
+
+Underfull \hbox (badness 2027) in paragraph at lines 307--307
+[]|\OT1/cmr/bx/it/10 performance re-
+ []
+
+
+Underfull \hbox (badness 7486) in paragraph at lines 318--318
+[]|\OT1/cmr/bx/it/10 prescriptive de-
+ []
+
+
+Underfull \hbox (badness 4156) in paragraph at lines 330--330
+[]|\OT1/cmr/bx/it/10 prototyping and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
+\OT1/cmr/bx/it/10 con-struc-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
+[]|\OT1/cmr/bx/it/10 Pugh Con-cept
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--357
+[]|\OT1/cmr/bx/it/10 Requirements
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--363
+[]|\OT1/cmr/bx/it/10 reverse-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--377
+[]|\OT1/cmr/bx/it/10 situational
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--391
+[]|\OT1/cmr/bx/it/10 state di-a-gram
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
+[]|\OT1/cmr/bx/it/10 strengths and
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 403--403
+\OT1/cmr/bx/it/10 weak-ness anal-y-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 418--418
+[]|\OT1/cmr/bx/it/10 system in-te-gra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--424
+[]|\OT1/cmr/bx/it/10 Team Pro-cess
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 458--458
+[]|\OT1/cmr/bx/it/10 Unified Mod-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 458--458
+\OT1/cmr/bx/it/10 el-ing Lan-guage
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 499--499
+[]|\OT1/cmr/bx/it/10 work break-down
+ []
+
+
+Overfull \hbox (12.80853pt too wide) in alignment at lines 7--505
+ [] [] 
+ []
+
+[217
+
+
+
+
+] [218] [219] [220] [221] [222] [223] [224] [225] [226])
+
+[227]
+\openout2 = `./appendixB/appendixB.aux'.
+
+ (appendixB/appendixB.tex
+
+[228
+
+
+
+
+]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[229]
+
+[230]
+Overfull \hbox (50.63385pt too wide) in paragraph at lines 190--199
+[][] 
+ []
+
+
+
+[231]
+Overfull \hbox (18.79562pt too wide) in paragraph at lines 277--286
+[][] 
+ []
+
+
+Overfull \hbox (18.79562pt too wide) in paragraph at lines 296--305
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[232]
+
+[233]
+
+[234]
+
+[235])
+
+[236]
+
+[237
+
+
+]
+\openout2 = `./appendixD/appendixD.aux'.
+
+ (appendixD/appendixD.tex
+
+[238
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[239]
+<./appendixD/Fig/./image1.jpeg, id=3676, 397.1565pt x 571.9185pt>
+File: ./appendixD/Fig/./image1.jpeg Graphic file (type jpg)
+<use ./appendixD/Fig/./image1.jpeg>
+Package pdftex.def Info: ./appendixD/Fig/./image1.jpeg  used on input line 17.
+(pdftex.def)             Requested size: 397.51306pt x 572.72868pt.
+
+Overfull \hbox (2.98303pt too wide) in paragraph at lines 17--18
+[][] 
+ []
+
+<./appendixD/Fig/./image2.jpeg, id=3677, 397.8135pt x 561.4065pt>
+File: ./appendixD/Fig/./image2.jpeg Graphic file (type jpg)
+<use ./appendixD/Fig/./image2.jpeg>
+Package pdftex.def Info: ./appendixD/Fig/./image2.jpeg  used on input line 19.
+(pdftex.def)             Requested size: 397.48474pt x 561.22522pt.
+
+Overfull \hbox (2.95471pt too wide) in paragraph at lines 19--20
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[240 <./appendixD/Fig/./image1.jpeg>]
+<./appendixD/Fig/./image3.jpeg, id=3682, 368.2485pt x 542.682pt>
+File: ./appendixD/Fig/./image3.jpeg Graphic file (type jpg)
+<use ./appendixD/Fig/./image3.jpeg>
+Package pdftex.def Info: ./appendixD/Fig/./image3.jpeg  used on input line 21.
+(pdftex.def)             Requested size: 367.94978pt x 542.07617pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[241 <./appendixD/Fig/./image2.jpeg>]
+<./appendixD/Fig/./image4.jpeg, id=3687, 397.485pt x 557.4645pt>
+File: ./appendixD/Fig/./image4.jpeg Graphic file (type jpg)
+<use ./appendixD/Fig/./image4.jpeg>
+Package pdftex.def Info: ./appendixD/Fig/./image4.jpeg  used on input line 23.
+(pdftex.def)             Requested size: 397.49614pt x 557.90546pt.
+
+Overfull \hbox (2.96611pt too wide) in paragraph at lines 23--24
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[242 <./appendixD/Fig/./image3.jpeg>]
+<./appendixD/Fig/./image5.jpeg, id=3692, 398.142pt x 553.851pt>
+File: ./appendixD/Fig/./image5.jpeg Graphic file (type jpg)
+<use ./appendixD/Fig/./image5.jpeg>
+Package pdftex.def Info: ./appendixD/Fig/./image5.jpeg  used on input line 25.
+(pdftex.def)             Requested size: 397.49706pt x 553.55385pt.
+
+Overfull \hbox (2.96703pt too wide) in paragraph at lines 25--26
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[243 <./appendixD/Fig/./image4.jpeg>]
+<./appendixD/Fig/./image6.jpeg, id=3698, 397.485pt x 544.9815pt>
+File: ./appendixD/Fig/./image6.jpeg Graphic file (type jpg)
+<use ./appendixD/Fig/./image6.jpeg>
+Package pdftex.def Info: ./appendixD/Fig/./image6.jpeg  used on input line 27.
+(pdftex.def)             Requested size: 397.49614pt x 544.82216pt.
+
+Overfull \hbox (2.96611pt too wide) in paragraph at lines 27--28
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[244 <./appendixD/Fig/./image5.jpeg>]
+<./appendixD/Fig/./image7.jpeg, id=3703, 397.485pt x 561.735pt>
+File: ./appendixD/Fig/./image7.jpeg Graphic file (type jpg)
+<use ./appendixD/Fig/./image7.jpeg>
+Package pdftex.def Info: ./appendixD/Fig/./image7.jpeg  used on input line 29.
+(pdftex.def)             Requested size: 397.49614pt x 561.23647pt.
+
+Overfull \hbox (2.96611pt too wide) in paragraph at lines 29--30
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[245 <./appendixD/Fig/./image6.jpeg>]
+<./appendixD/Fig/./image8.jpeg, id=3708, 397.485pt x 545.6385pt>
+File: ./appendixD/Fig/./image8.jpeg Graphic file (type jpg)
+<use ./appendixD/Fig/./image8.jpeg>
+Package pdftex.def Info: ./appendixD/Fig/./image8.jpeg  used on input line 31.
+(pdftex.def)             Requested size: 397.49614pt x 545.29579pt.
+
+Overfull \hbox (2.96611pt too wide) in paragraph at lines 31--32
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[246 <./appendixD/Fig/./image7.jpeg>]
+<./appendixD/Fig/./image9.jpeg, id=3713, 397.1565pt x 556.8075pt>
+File: ./appendixD/Fig/./image9.jpeg Graphic file (type jpg)
+<use ./appendixD/Fig/./image9.jpeg>
+Package pdftex.def Info: ./appendixD/Fig/./image9.jpeg  used on input line 33.
+(pdftex.def)             Requested size: 397.51306pt x 556.33034pt.
+)
+Overfull \hbox (2.98303pt too wide) in paragraph at lines 33--89
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[247 <./appendixD/Fig/./image8.jpeg>]
+
+[248 <./appendixD/Fig/./image9.jpeg>]
+\openout2 = `./appendixE/appendixE.aux'.
+
+ (appendixE/appendixE.tex
+
+[249
+
+
+
+
+]
+<./appendixE/Fig/./image1.jpeg, id=3727, 554.07pt x 546.04pt>
+File: ./appendixE/Fig/./image1.jpeg Graphic file (type jpg)
+<use ./appendixE/Fig/./image1.jpeg>
+Package pdftex.def Info: ./appendixE/Fig/./image1.jpeg  used on input line 102.
+
+(pdftex.def)             Requested size: 274.82771pt x 272.11948pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
+[]|\OT1/cmr/bx/n/9 Marketing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
+\OT1/cmr/bx/n/9 Re-quire-
+ []
+
+
+Underfull \hbox (badness 1033) in paragraph at lines 170--171
+\OT1/cmr/m/n/9 com-po-nents that can op-er-ate in
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./appendixE/Fig/./image2.png, id=3729, 1107.13625pt x 797.98125pt>
+File: ./appendixE/Fig/./image2.png Graphic file (type png)
+<use ./appendixE/Fig/./image2.png>
+Package pdftex.def Info: ./appendixE/Fig/./image2.png  used on input line 205.
+(pdftex.def)             Requested size: 356.41942pt x 256.75948pt.
+
+
+[250]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./appendixE/Fig/./image3.jpeg, id=3734, 657.2053pt x 371.13657pt>
+File: ./appendixE/Fig/./image3.jpeg Graphic file (type jpg)
+<use ./appendixE/Fig/./image3.jpeg>
+Package pdftex.def Info: ./appendixE/Fig/./image3.jpeg  used on input line 225.
+
+(pdftex.def)             Requested size: 325.77391pt x 183.93684pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./appendixE/Fig/./image4.png, id=3736, 1020.81375pt x 685.56125pt>
+File: ./appendixE/Fig/./image4.png Graphic file (type png)
+<use ./appendixE/Fig/./image4.png>
+Package pdftex.def Info: ./appendixE/Fig/./image4.png  used on input line 244.
+(pdftex.def)             Requested size: 307.14992pt x 198.19048pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[251 <./appendixE/Fig/./image1.jpeg>]
+<./appendixE/Fig/.//image5.png, id=3750, 1021.8175pt x 681.54625pt>
+File: ./appendixE/Fig/.//image5.png Graphic file (type png)
+<use ./appendixE/Fig/.//image5.png>
+Package pdftex.def Info: ./appendixE/Fig/.//image5.png  used on input line 269.
+
+(pdftex.def)             Requested size: 328.46948pt x 220.07516pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./appendixE/Fig/./image6.png, id=3751, 1019.81pt x 671.50874pt>
+File: ./appendixE/Fig/./image6.png Graphic file (type png)
+<use ./appendixE/Fig/./image6.png>
+Package pdftex.def Info: ./appendixE/Fig/./image6.png  used on input line 277.
+(pdftex.def)             Requested size: 339.4638pt x 223.93474pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[252]
+
+[253 <./appendixE/Fig/./image2.png> <./appendixE/Fig/./image3.jpeg>]
+<./appendixE/Fig/./image7.png, id=3763, 600.2425pt x 417.56pt>
+File: ./appendixE/Fig/./image7.png Graphic file (type png)
+<use ./appendixE/Fig/./image7.png>
+Package pdftex.def Info: ./appendixE/Fig/./image7.png  used on input line 306.
+(pdftex.def)             Requested size: 255.15005pt x 177.41286pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.36217pt too wide) in paragraph at lines 334--334
+[]|\OT1/cmr/m/it/10 Functionality| 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./appendixE/Fig/./image8.pdf, id=3765, 360.49641pt x 270.67105pt>
+File: ./appendixE/Fig/./image8.pdf Graphic file (type pdf)
+<use ./appendixE/Fig/./image8.pdf>
+Package pdftex.def Info: ./appendixE/Fig/./image8.pdf  used on input line 351.
+(pdftex.def)             Requested size: 360.49553pt x 270.67038pt.
+
+
+[254 <./appendixE/Fig/./image4.png> <./appendixE/Fig/.//image5.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[255 <./appendixE/Fig/./image6.png> <./appendixE/Fig/./image7.png>]
+Overfull \hbox (1.36217pt too wide) in paragraph at lines 385--385
+[]|\OT1/cmr/m/it/10 Functionality| 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.36217pt too wide) in paragraph at lines 395--395
+[]|\OT1/cmr/m/it/10 Functionality| 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.36217pt too wide) in paragraph at lines 406--406
+[]|\OT1/cmr/m/it/10 Functionality| 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.36217pt too wide) in paragraph at lines 423--423
+[]|\OT1/cmr/m/it/10 Functionality| 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.36217pt too wide) in paragraph at lines 437--437
+[]|\OT1/cmr/m/it/10 Functionality| 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.36217pt too wide) in paragraph at lines 453--453
+[]|\OT1/cmr/m/it/10 Functionality| 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 470--470
+[]|\OT1/cmr/m/n/10 Accurate Long dis-tance
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[256 <./appendixE/Fig/./image8.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./appendixE/Fig/./image9.pdf, id=3792, 307.5743pt x 392.79031pt>
+File: ./appendixE/Fig/./image9.pdf Graphic file (type pdf)
+<use ./appendixE/Fig/./image9.pdf>
+Package pdftex.def Info: ./appendixE/Fig/./image9.pdf  used on input line 533.
+(pdftex.def)             Requested size: 307.57353pt x 392.78935pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[257]
+
+[258]
+Underfull \hbox (badness 1259) in paragraph at lines 613--613
+[]|\OT1/cmr/m/n/10 Start Record-ing data while walk-ing
+ []
+
+
+Underfull \hbox (badness 5475) in paragraph at lines 614--614
+[]|\OT1/cmr/m/n/10 Used Luis, Carl,
+ []
+
+
+Underfull \hbox (badness 1292) in paragraph at lines 616--616
+[]|\OT1/cmr/m/n/10 See data on next
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 616--616
+\OT1/cmr/m/n/10 dif-fer-ent fil-ters
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./appendixE/Fig/./image10.pdf, id=3809, 685.62607pt x 467.50722pt>
+File: ./appendixE/Fig/./image10.pdf Graphic file (type pdf)
+<use ./appendixE/Fig/./image10.pdf>
+Package pdftex.def Info: ./appendixE/Fig/./image10.pdf  used on input line 622.
+
+(pdftex.def)             Requested size: 393.68791pt x 268.251pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 744--749
+\OT1/cmr/m/n/10 sta-cle course with
+ []
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 744--749
+\OT1/cmr/m/n/10 ob-jects which the
+ []
+
+
+Underfull \hbox (badness 1014) in paragraph at lines 744--749
+\OT1/cmr/m/n/10 user had to nav-i-
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (8.60057pt too wide) in paragraph at lines 815--815
+|[][]
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[259]
+
+[260 <./appendixE/Fig/./image9.pdf>]
+Overfull \hbox (28.44313pt too wide) in paragraph at lines 896--898
+[]\OT1/cmr/m/n/10 [1] Amer-i-can Foun-da-tion for the Blind, ``Blind-ness Stati
+s-tics,'' Febru-ary 2006, http://www.afb.org. 
+ []
+
+
+Overfull \hbox (5.33186pt too wide) in paragraph at lines 899--901
+[]\OT1/cmr/m/n/10 [2] The See-ing Eye Inc, ``About Us,'' Febru-ary 2006, http:/
+/www.seeingeye.org/AboutUs.asp. 
+ []
+
+
+Overfull \hbox (68.74867pt too wide) in paragraph at lines 902--904
+[]\OT1/cmr/m/n/10 [3] Nurion-Raycal, ``Laser-Cane N-2000, Elec-tronic Travel Ai
+ds,'' Febru-ary 2006, http://nurion.net/LC.html. 
+ []
+
+
+
+[261]
+Overfull \hbox (2.08177pt too wide) in paragraph at lines 912--915
+[]\OT1/cmr/m/n/10 [6] D. His Yen (yen@noogenesis.com), ``Cur-rently Avail-able 
+Elec-tronic Travel Aids,'' Septem-
+ []
+
+
+Overfull \hbox (205.55466pt too wide) in paragraph at lines 916--919
+[]\OT1/cmr/m/n/10 [7] F. Mi-yara (fmi-yara@fceia.unr.edu.ar), ``Sound Lev-els,'
+' Febru-ary 2006, http://www.eie.fceia.unr.edu.ar/~acustica/comite/soundlev.htm
+. 
+ []
+
+)
+Overfull \hbox (32.94316pt too wide) in paragraph at lines 924--91
+[]\OT1/cmr/m/n/10 [9] Hong Z. Tan. ``Hap-tic In-ter-faces''. Febru-ary 8, 2006.
+ http://dynamo.ecn.purdue.edu/~hongtan/ 
+ []
+
+
+
+[262 <./appendixE/Fig/./image10.pdf>]
+
+[263]
+
+[264]
+
+[265]
+
+[266
+
+
+
+]
 runsystem(makeindex book.idx)...executed safely (allowed).
 
-(book.ind)
-\tf@toc=\write9
-\openout9 = `book.toc'.
+ (book.ind)
 
+[267
 
-C:/Users/coulston/Documents/GitHub/Design-For-Electrical-and-Computer-Engineeri
-ng/Latex/book.tex:93: LaTeX Error: \begin{tabular} on input line 444 ended by \
-end{document}.
+]
+\tf@toc=\write10
+\openout10 = `book.toc'.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.93 \end{document}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(book.aux (copyright.aux) (chapter07/chapter07.aux) (chapter07/problemSet07.aux
-))
+ (book.aux (copyright.aux) (aboutAuthors.aux) (preface.aux)
+(chapter01/chapter01.aux) (chapter01/problemSet01.aux) (chapter02/chapter02.aux
+) (chapter02/problemSet02.aux) (chapter03/chapter03.aux)
+(chapter03/problemSet03.aux) (chapter04/chapter04.aux)
+(chapter04/problemSet04.aux) (chapter05/chapter05.aux)
+(chapter05/problemSet05.aux) (chapter06/chapter06.aux)
+(chapter06/problemSet06.aux) (chapter07/chapter07.aux)
+(chapter07/problemSet07.aux) (chapter08/chapter08.aux)
+(chapter08/problemSet08.aux) (chapter09/chapter09.aux)
+(chapter09/problemSet09.aux) (chapter10/chapter10.aux)
+(chapter10/problemSet10.aux) (chapter11/chapter11.aux)
+(chapter11/problemSet11.aux) (chapter12/chapter12.aux) (appendixA/appendixA.aux
+) (appendixB/appendixB.aux) (appendixD/appendixD.aux) (appendixE/appendixE.aux)
+)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
 
+
 LaTeX Warning: There were undefined references.
 
+Package rerunfilecheck Info: File `book.out' has not changed.
+(rerunfilecheck)             Checksum: 6CEF03D4CC2CE1DD88496A81519E6F22;20103.
+ )
+(\end occurred inside a group at level 1)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `book.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `book.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  152FBFBE29326EEFD1D92CA2CD78B617;721.
-C:/Users/coulston/Documents/GitHub/Design-For-Electrical-and-Computer-Engineeri
-ng/Latex/book.tex:93: You can't use `\end' in internal vertical mode.
-\enddocument ...cument/end}\deadcycles \z@ \@@end 
-                                                  
-l.93 \end{document}
-                   
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-
-C:/Users/coulston/Documents/GitHub/Design-For-Electrical-and-Computer-Engineeri
-ng/Latex/book.tex:93: LaTeX Error: \begin{tabular} on input line 444 ended by \
-end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.93 \end{document}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
-! Emergency stop.
-<*> ...cal-and-Computer-Engineering/Latex/book.tex
-                                                  
-*** (job aborted, no legal \end found)
-
- 
+### simple group (level 1) entered at line 18 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 26113 strings out of 473904
- 480647 string characters out of 5725185
- 1942908 words of memory out of 5000000
- 48528 multiletter control sequences out of 15000+600000
- 566527 words of font info for 65 fonts, out of 8000000 for 9000
+ 30969 strings out of 473904
+ 598583 string characters out of 5725185
+ 2056908 words of memory out of 5000000
+ 52180 multiletter control sequences out of 15000+600000
+ 574277 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 91i,12n,136p,589b,756s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 91i,29n,136p,614b,973s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\coulston\AppData\Local\MiKTeX\fonts/pk/ljfour/jknapp
+en/ec/dpi600\tcrm0600.pk> <C:\Users\coulston\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\coulston\AppData\Local\MiKTeX\font
+s/pk/ljfour/jknappen/ec/dpi600\tcrm0700.pk> <C:\Users\coulston\AppData\Local\Mi
+KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1000.pk> <C:\Users\coulston\AppData
+\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\coulsto
+n\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users
+/coulston/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.p
+fb><C:/Users/coulston/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb><C:/Users/coulston/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmbx6.pfb><C:/Users/coulston/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/coulston/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/coulston/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/coulsto
+n/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/U
+sers/coulston/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb><C:/Users/coulston/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmmi5.pfb><C:/Users/coulston/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi6.pfb><C:/Users/coulston/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/coulston/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/coulston/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/couls
+ton/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Users/coulston/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+12.pfb><C:/Users/coulston/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr17.pfb><C:/Users/coulston/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr5.pfb><C:/Users/coulston/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/coulston/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/coulston/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/coulston/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/c
+oulston/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb
+><C:/Users/coulston/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><C:/Users/coulston/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmsy5.pfb><C:/Users/coulston/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/coulston/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/coulston/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/coulston/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/
+coulston/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb
+><C:/Users/coulston/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmtt10.pfb><C:/Users/coulston/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/symbols/msam10.pfb>
+Output written on book.pdf (277 pages, 9144063 bytes).
+PDF statistics:
+ 4852 PDF objects out of 5155 (max. 8388607)
+ 937 named destinations out of 1000 (max. 500000)
+ 1451 words of extra memory for PDF output out of 10000 (max. 10000000)
+
