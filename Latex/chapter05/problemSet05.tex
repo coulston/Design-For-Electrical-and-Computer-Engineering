@@ -6,6 +6,18 @@
 \item
   Describe the differences between \emph{bottom-up} and \emph{top-down}
   design.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    In a bottom-up design, the designer begins with basic components and 
+    synthesizes them to create the overall system. However, the top-down 
+    designer has a vision of the overall functionality of the final system 
+    and partitions the problem into components, or subsystems. These components 
+    work together to achieve the overall goal. In essences, bottom-up designers 
+    are given parts and then they build the system, while top-down designers 
+    envision the system and then build the parts.
+  \end{onlysolution}
 \item
   Develop a functional design for an audio graphic equalizer. A graphic
   equalizer decomposes an audio signal into component frequencies bands,
@@ -30,12 +42,24 @@ The system must
 \item
   Operate from standard wall outlet power, 120V rms.
   \end{itemize}
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    \textbf{LEVEL 0}
+
+    The Level 0 functionality for the audio graphic equalizer, shown below, 
+    is fairly simple – the inputs are an audio signal, volume control, and 
+    four frequency band knobs, and the output is a reconstructed audio signal.
+
+    ** Add figures / solution ** 
+  \end{onlysolution}
   
-  \item
-    Develop a functional design for a system that measures and displays
-    the speed of a bicycle. Be sure to clearly identify the design
-    levels, functional requirements, and theory of operation for each
-    level.\\
+\item
+  Develop a functional design for a system that measures and displays
+  the speed of a bicycle. Be sure to clearly identify the design
+  levels, functional requirements, and theory of operation for each
+  level.\\
   The system must
 
 \begin{itemize}
@@ -49,6 +73,16 @@ The system must
   Operate with bicycle tires that have 19, 24, 26, and 27 inch
   diameters.
 \end{itemize}
+
+\begin{onlysolution}
+  \textbf{[R]}
+  \itshape
+  \textbf{LEVEL 0}
+
+  The overall goal is to convert a sensed speed to a digital speed reading 
+  (i.e. speedometer).
+  ** Add figures/Solution **
+\end{onlysolution}
 
   \item
     Draw a structure chart for the following C++ program:
@@ -79,6 +113,15 @@ void Print(int a, int b) {
 }
 \end{verbatim}
 
+\begin{onlysolution}
+  \textbf{[R]}
+  \itshape
+  ** add figure **
+  \begin{center}
+    \textbf{Structural Chart of C++ Program}
+  \end{center}
+\end{onlysolution}
+
 \item
   Develop a functional design for software that meets the following
   requirements. \\
@@ -102,9 +145,42 @@ each module.
 \item
   Describe in your own words what is meant by coupling in design.
   Describe the advantages of both loosely and tightly coupled designs.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    Coupling describes a particular individual module’s dependence upon 
+    the interconnectivity of various modules for proper functionality. 
+    A module can be loosely coupled or tightly coupled. The advantages 
+    of these are as follows:
+
+    \textbf{Loosley Coupled}
+    (+) The maximum degree of impact one module can have is limited 
+    (+) May allow for continued functionality upon module failures
+    (+) Maximizes the cohesion of a design
+    (+) Allows for independent testing of modules
+
+    \textbf{Tightly Coupled}
+    (+) Better performance (i.e. software)
+    (+) Quicker solutions (not necessarily better)
+
+    It should be noted that the number of advantages of a loosely coupled 
+    design usually outweigh that of a tightly coupled design.
+  \end{onlysolution}
+
 \item
   \textbf{Project Application.} Develop a functional design for your
   project. Follow the presentation guidelines in Section 5.9 for
   communicating the results of the design.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    \emph{Note:} this is a major deliverable that is due for the project. 
+    It is also tied closely in with Chapter 6 which also provides modern 
+    design techniques. The information that we use in our assignment is 
+    below.
+  \end{onlysolution}
+
 \end{enumerate}
 
