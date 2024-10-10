@@ -5,59 +5,203 @@
 \def\labelenumi{\arabic{enumi}.}
 \item
   Explain the differences between black box and white box testing.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshapeThe major difference between these types of testing is knowledge of the internal structure of the circuit. 
+    A black box test is performed without knowledge of the system, while white box testing is performed with knowledge 
+    of the systems construction. Consequently, black box tests are generally written to check extreme inputs and outputs, 
+    and transitional behaviors. White box tests are generally written to force internal nodes of the system to specific values.
+  \end{onlysolution}
+
 \item
   Identify a circuit simulator (analog or digital) that you are familiar
   with. Explain the features of this simulator, which increase the
   observability and controllability of the circuit being simulated.
-\item
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    In the VHDL simulator Active HDL a user can explore the design hierarchy during run time and set internal nodes to 
+    user defined values. For example, when simulating an arithmetic and logic unit (ALU), the user can supply the top 
+    level design unit with data input and control. Then while the ALU is operating on the data, the user can halt the 
+    simulator, effectively stopping time. This enhances observability because the user can take their time to observe 
+    the state of the system at any point in time. At each level of the design hierarchy, the user can examine the state 
+    of any node at that design level; giving the user maximum observability. In addition, the users can override a nodes 
+    derived value, giving the user controllability.
+  \end{onlysolution}
+
+  \item
   A mobile robot is being built. It uses a two DC motors in a
   differential drive configuration, a microcontroller to control
   movement and an ultrasonic sensor to detect obstacles. The robot is
   built to wander around without bumping into objects. Explain how stubs
   could be used in testing to take the place of incomplete subsystems.
   Be specific.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    If the DC motors are being controlled using a PWM schema, then when checking the motor control, an O-scope can take 
+    the place of the DC motors. Likewise an O-scope can be used to unit test the ultrasonic range finder. Depending on 
+    the complexity of the range finder, a function generator could supply a suitable signal to the MCU in order to test 
+    the MCU algorithms.
+  \end{onlysolution}
+
 \item
   Consider that you have an op amp integrated circuit package, such as
   the LM741 in Appendix C. What type of testing would be appropriate for
   testing this device? Write a short test plan for doing so.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    This question is asking you to test an individual 741 op-amp, not a circuit which might use a LM741. The LM741 is 
+    encapsulated inside a ceramic package, consequently its internal nodes are not available for inspection or alternation; 
+    it certainly has a low observability. However, its internal organization is given in the technical documentation. 
+    Consequently, you could design tests to assert internal nodes of the circuit to particular values and check to see if 
+    the output behaves the way that it should for this forced value. For example, the Darlington pair consisting of BJTs Q15 
+    and Q17 can be controlled by manipulating a combination of the inverting input (pin 2) and the offset null (pin 5). The 
+    state of the Darlington pair can then be checked to see if it influences the output (via BJT Q20) in the expected way. 
+    Consequently, you would be writing white-box tests for the circuit.
+
+  \end{onlysolution}
+
 \item
   Explain under what situations a matrix test is appropriate.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    A matrix test is appropriate when the tests are structurally similar but differ in their values. For example, imagine 
+    testing a digital adder circuit. You might want to check a few hundred different input combinations. Clearly avoiding 
+    any unnecessary redundancy in the explanation of the tests would be welcome. This can be achieved with a matrix test.
+  \end{onlysolution}
+  
 \item
   Explain under what situations a step-by-step is test appropriate.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    A step-by-step test is appropriate when the set of tests are structurally different. That is a different procedure 
+    must be carried out for each test. For example, you might want to test the avoidance behavior of an autonomous robot 
+    using different obstacles. Each obstacle might require a unique setup of the robot and the obstacles. In addition, 
+    the robot may be designed to respond differently to the various obstacles. In this case it would be wise to give an 
+    explicit step-by-step set of instructions for each test.
+  \end{onlysolution}
+
 \item
   Consider the stages of unit testing, integration testing, and
   acceptance testing. For each of these stages, identify the
   corresponding requirements that each test should be traceable to.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    Each stage of testing is associated with its own portion of the design. This can be seen in the Test Vee shown in 
+    Figure 7.1. For example acceptance testing is associated with the requirements specification. Consequently, the 
+    acceptance test must trace back to the requirements specification developed in section 3.8. Integration testing is 
+    associated with the systems design phase of development. Consequently, the high level design defines the functional 
+    and behavioral requirements for the modules. The unit test is associated with the construction of the individual units 
+    of the system. The requirements for each module are defined in the low level architectural description of the modules 
+    in the functional decomposition.
+  \end{onlysolution}
+
 \item
   Consider the case study robot design in Section~\ref{section:case-study-security-robot-design}, 
-  which presents an
-  acceptance test for the first system requirement. Develop an
+  which presents an acceptance test for the first system requirement. Develop an
   acceptance test for the second system requirement.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    ** Add figure **
+  \end{onlysolution}
+
 \item
   Consider the case study robot design in Section~\ref{section:case-study-security-robot-design}. 
   Develop an
   integration test that demonstrates the combined operation of the DC
   motors, MCU, and range finder.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    ** Add figure ** 
+    Note, that this test is not very formal. You really don’t want to burden your design team with 
+    reams of testing especially when the tests may need to be rerun as a result of design changes 
+    (e.g. regression testing). This test is to make sure there are no surprises later when the 
+    acceptance test for the 1st requirement is run.
+  \end{onlysolution}
+
 \item
   Consider the case study robot design in Section~\ref{section:case-study-security-robot-design}. 
   Develop an
   integration test that demonstrates the combined operation of the
   digital compass, MCU, and LCD.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    ** Add figure **
+  \end{onlysolution}
+
 \item
   Consider the case study robot design in Section~\ref{section:case-study-security-robot-design}. 
-  Develop unit
-  tests for range finder, the DC motors, the H-bridges, and the LCD.
+  Develop unit tests for range finder, the DC motors, the H-bridges, and the LCD.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    ** Add figures **
+  \end{onlysolution}
+
 \item
   \textbf{Project Application.} Develop an acceptance test suite for
   your project. The acceptance tests should apply to the engineering
   requirements developed for the system.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    Getting students to design good unit tests is difficult. They would much rather start in 
+    and build the circuit, considering the time spent up front in designing a test as wasted. 
+    However, by requiring students to write a set of unit tests before they start to build the 
+    circuits you can eliminate time spent building the wrong part. Its important that the 
+    students correctly document the unit tests using the forms shown in Table 7.1 or 7.2. These 
+    tests should be written hand-in-hand with the design of the individual units. Since the students 
+    have knowledge of the internal organization of the units, these tests should be white-box tests.
+  \end{onlysolution}
+
 \item
   \textbf{Project Application.} Develop an integration test suite for
   your project. The integration tests should apply to the higher levels
   of the design architecture and address the interaction between
   functional units.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    Integration tests should be written at the same time as the high level architecture is being 
+    defined. Consequently, the students are writing black-box tests. These tests should be checking 
+    that the interfaces operate correctly with extreme inputs, transitional inputs, and erroneous inputs. 
+    We frequently find that groups have to make significant design changes mid-way through the term, long 
+    after completing their high level design. Having the students work their top-level design by writing 
+    integrations tests helps catch these design snafus earlier in the design cycle.
+  \end{onlysolution}
+
 \item
   \textbf{Project Application.} Develop a unit test quite for your
   project. The unit tests should apply to the lowest level units in the
   design.
+
+  \begin{onlysolution}
+    \textbf{[R]}
+    \itshape
+    The acceptance test should be one of the first steps of the design process because they are the requirements 
+    documentation. However, developing explicit tests on how the students groups will demonstrate these requirements 
+    is an overlooked portion of the design process.
+  \end{onlysolution}
+
 \end{enumerate}
