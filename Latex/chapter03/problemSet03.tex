@@ -5,9 +5,25 @@
 \def\labelenumi{\arabic{enumi}.}
 \item
   Briefly describe the four properties of an engineering requirement.
+  
+  
 \item
   Identify the three levels of standards usage and what is meant by each
   one.
+ \begin{onlysolution}
+ \textbf{[R]}
+ \itshape
+  The three levels of standards usage are user, implementation, and
+development. The \textbf{user level} simply incorporates the standard
+within the design without the need for technical knowledge concerning
+the standard. However, the \textbf{implementation level} requires an
+in-depth knowledge of the standard -- developing hardware drivers and
+ensuring reliability requirements. As with the implementation level, the
+\textbf{development level} also requires knowledge of the standard in
+order to further develop and modify its predecessor.
+\end{onlysolution}
+  
+  
 \item
   For each of the engineering requirements below, determine if it meets
   the properties of abstractness, unambiguous, verifiable, and
@@ -19,38 +35,145 @@
 \def\labelenumi{\alph{enumi})}
 \item
   The TV remote control will be easy to use.
+  
+\begin{onlysolution}
+\textit
+ Abstractness: \textbf{Yes} -- doesn't give details on implementation\\
+Unambiguous: \textbf{Maybe} -- there is not a clear definition of
+easy-to-use. It could be possible to develop some metrics for easy to
+use, such as size of buttons, number of buttons, etc.\\
+Verifiable: \textbf{Maybe -} this relates back to the ambiguity of
+easy-to-use. If the easy-to-use property is defined, then it could be
+verifiable.
+\end{onlysolution}
+  
+  
 \item
   The robot will identify objects in its path using ultrasonic sensors.
+\begin{onlysolution}
+\textit
+Abstractness: \textbf{No} -- provides a solution to the problem (ultrasonic sensors)\\
+Unambiguous: \textbf{No} -- it will identify objects in its path, is
+somewhat clear. However, could be better defined if its path were
+defined, as well as the distance of detection\\
+Verifiable: \textbf{No} (Because it is not unambiguous.)\\
+\textbf{Restatement:} ``The robot will identify objects in its forward
+path within 3 feet of the robot.''
+\end{onlysolution}
+
 \item
   The car audio amplifier will be encased in aluminum and will operate
   in the automobile environment.
+  \begin{onlysolution}
+Abstractness: \textbf{No} -- provides a solution to the problem (aluminum case)\\
+Unambiguous: \textbf{No} -- it will operate in an automobile is not
+quite clear. Where in the automobile and what size should it be?\\
+Verifiable: \textbf{No --} because it is not unambiguous.\\
+\textbf{Restatement:} ``The car audio amplifier will operate in the
+automobile passgenger compartment and not have a size that exceeds
+12''x4''6'' ''
+\end{onlysolution}
+
 \item
   The audio amplifier will have a total harmonic distortion that is less
   than 2\%.
+  \begin{onlysolution}
+Abstractness: \textbf{Yes} -- doesn't give details on implementation \\
+Unambiguous: \textbf{Yes} -- THD \textless{} 2\%  \\
+Verifiable: \textbf{Yes}
+\end{onlysolution}
+
 \item
   The robot will be able to move at speed of 1 foot/sec in any
   direction.
+  \begin{onlysolution}
+Abstractness: \textbf{Yes} -- doesn't give details on implementation \\
+Unambiguous: \textbf{No} -- provides two requirements in one statement \\
+Verifiable: \textbf{Yes} \\
+\textbf{Restatement:} ``The robot will be able to move at a speed of 1 foot/sec.'' or
+``The robot will be able to move in any direction.''
+\end{onlysolution}
+
 \item
   The system will employ smart power monitoring technology to achieve
   ultra-low power consumption.
+  \begin{onlysolution}
+Abstractness: \textbf{No} -- provides a solution to the problem (smart power)\\
+Unambiguous: \textbf{Yes} -- it will achieve ultra-low power consumption \\
+Verifiable: \textbf{No} -- there is no exact target value on the power \\
+\textbf{Restatement:} ``The system will achieve power consumption below XX watts.''
+\end{onlysolution}
+
 \item
   The system shall be easy to use by a 12 year old.
+  \begin{onlysolution}
+Abstractness: \textbf{Yes} -- doesn't give details on implementation\\
+Unambiguous: \textbf{Maybe} -- a 12 year old can use this device is
+clear, but as we saw in an earlier problem it is hard to determine ease
+of use without some sort of definition.\\
+Verifiable: \textbf{Yes}\\
+\end{onlysolution}
+
 \item
   The robot must remain operational for 50 years.
+  \begin{onlysolution}
+Abstractness: \textbf{Yes} -- doesn't give details on implementation\\
+Unambiguous: \textbf{No} -- Failure is a probability-based concept.  A single 
+robot always a non-zero chance of failure over an extended periodn of time.\\
+Verifiable: \textbf{No} - As a practical matter, your design team would not be
+able to perform this test.\\
+\end{onlysolution}
+
 \end{enumerate}
 
   \item
     Provide three example engineering requirements that are technically
     verifiable, but not realistic.
+    
+    
   \item
-    Describe the difference between \emph{verification} and
-    \emph{validation}.
+    Describe the difference between \emph{verification} and  \emph{validation}.
+\begin{onlysolution}
+Validation is the process of determining if the requirements meet the
+needs of the end-user. This answer the question -- are we building the
+right product? Verification is the process of measuring or demonstrating
+that the requirements are met in the final realization. Verification
+answers the question -- are we building the product right (does it meet
+the requirements).
+
+Validation is typically harder to determine.
+\end{onlysolution}    
+    
+    
+    
+    
   \item
-    Explain how \emph{validation} is performed for a Requirements
-    Specification.
+    Explain how \emph{validation} is performed for a Requirements Specification.
+\begin{onlysolution}
+Validation can be performed by being able to answer the following
+questions affirmatively:
+
+\begin{itemize}
+\item \textbf{Is each requirement verifiable?} That is can it be measured or
+shown in the final system implementation.
+\item \textbf{Is each requirement traceable to a user requirement?}
+\item \textbf{Is each requirement realistic and technically feasible?} This
+may be hard to determine. It can be determined based upon benchmarks or
+system prototypes.
+\item \textbf{Is the property of orthogonality met for the Requirements
+Specification?} Are the requirements established with no redundancy?
+\item \textbf{Is the property of completeness met?} Are all the needs of the
+end-user addressed in the Requirements Specification?
+\item \textbf{Is the property of consistency met?} The Requirements
+Specification should not be self-contradictory.
+\end{itemize}
+\end{onlysolution}    
+    
   \item
     Provide an example of a project (real or fictitious) where
     verification is successful, but validation is unsuccessful.
+    
+%Question 3.8 Use PDF 3.6    
   \item
   \label{list:identifyMarkEngr}
     Consider the design of a common device such as an audio CD player,
@@ -62,16 +185,111 @@
     need to select the target values, but should identify the measures
     and units. Present the requirements in a table format as in 
     Table~\ref{table:audioRequireSpec}.
+ \begin{onlysolution}
+ 
+ \textbf{Marketing Requirements}
+\begin{itemize}
+\item Should be lightweight
+\item Clean teeth well.
+\item Have a long battery life.
+\item Not shock the user (electric).
+\item Be easy to hold
+\item Be quiet.
+\item Easy to clean.
+\item Be lightweight.
+\item Allow multiple users.
+\end{itemize} 
+
+\begin{tabular}{l|l}
+Engineering Requirements & Notes \\ \hline
+
+%\multicolumn{2}{l}{Performance} \\ \hline
+
+E1.Have \_\_\_ ft-lbs of torque (or translational force, depending upon design). &
+This addresses how much force it can apply in cleaning the teeth. This
+requirement does require assuming part of the solution.	\\ \hline
+
+E2.Should have a rotational/translational brush speed of \_\_\_
+cycles/minute (Note some of the solution assumed here). &
+This addresses how quickly it the toothbrush operated.				\\ \hline
+
+E3.Must have a reliability of 95\% at 5 years of service. &
+Reliability -- may be a good idea to place an estimate on this. This is
+a real guess, and one would have to do more work to determine this one.	\\ \hline
+
+E4. Should emit \textless{} \_\_\_ dB of noise. &
+User wanted it to be quiet						 \\ \hline
+
+%\multicolumn{2}{l}{Environmental} \\ \hline
+
+E5. Must work in 100\% humidity (could be submersed). &
+Works in a wet environment. Could be submersed.		 \\ \hline
+
+E6.Must be able to withstand \_\_\_ drop from 6 feet and still operate
+motor (not brush head). &
+User could drop it. 6 feet is typical person height.		\\ \hline
+
+E7.Temperature range of \_\_\_ to \_\_\_\_ degrees Celsius.
+
+%\multicolumn{2}{l}{Energy} \\ \hline
+
+E8.Should have an operating lifetime of \textgreater{} \_\_\_ hours on a
+single battery (or charge). &
+How long it will run for.			\\ \hline
+
+%\multicolumn{2}{l}{Packaging/Physical Characteristics} \\ \hline
+E9.Toothbrush should weigh less than \_\_ grams. &
+Do not want it to be too heavy.			\\ \hline
+
+E10. Should be \_\_\_ cm tall. &
+Height should be specified. Should not be too long nor too short.			\\ \hline
+
+%\multicolumn{2}{l}{Cost} \\ \hline
+
+E11. Should cost no more than \$\_\_\_ to produce. &
+Cost is virtually always an issue.			\\ \hline
+\end{tabular}
+
+ \end{onlysolution}    
+    
+    
+    
+    
+%Question 3.9 Use PDF 3.7    
   \item
     Develop a marketing-engineering tradeoff matrix for the device
     selected in Problem~\ref{list:identifyMarkEngr}.
+ \begin{onlysolution}
+ 
+ \end{onlysolution}
+    
+ %Question 3.10 Use PDF 3.8
   \item
     Develop an engineering tradeoff matrix for the device selected in
     Problem~\ref{list:identifyMarkEngr}.
+ \begin{onlysolution}
+ 
+ \end{onlysolution}
+
+ %Question 3.11 Use PDF 3.11
   \item
     Develop a list of potential standards that would apply to one of the
     devices proposed in Problem~\ref{list:identifyMarkEngr}, and for each indicate how it would
     apply to the design.
+    
+\begin{onlysolution}
+
+\textbf{Standards for the Electric Toothbrush}
+Likely standards for this system include:\\
+UL (Underwriters Laboratory) and CE (Common European) safety standards.
+This is very common for consumer devices.\\
+ADA -- American Dental Association. This would likely be a series of
+``standard'' tests before branding ADA approval; therefore, showing that
+this system provides sufficient dental treatment.
+
+\end{onlysolution}    
+
+    
   \item
     \textbf{Project Application.} Develop a complete requirements
     document for your project as outlined in 
@@ -79,4 +297,122 @@
     the engineering requirements meet the five properties identified in
     the chapter. The team should complete the self-assessment checklist
     in Table~\ref{table:requirementsCheckList}.
+    
+    
+\begin{onlysolution}
+    
+    \emph{\textbf{Note:} The \textul{Requirements Specification} is an
+important document in the design. Remember}
+
+\emph{that requirement specifications are ``living'' and evolving
+documents. Thus it is a good}
+
+\emph{idea to provide design teams with the opportunity to resubmit and
+revise the document.}
+
+\emph{We use a two-step submission process. The first submission is
+worth 30\% of the}
+
+\emph{specification grade. This is reviewed and resubmitted to the team,
+who resubmits, and}
+
+\emph{the second submission constitutes the remaining 70\%. Of course,
+if the team gets it right}
+
+\emph{on the first submission, there is no need to resubmit.}
+
+\emph{\textbf{Constraints}}. We have student teams identify at least
+five of eight constraints in their specification. They should be
+realistic. We don't require that they test each one in the final
+
+realization, but ensure that they are considered (this depends upon the
+complexity of the problem). However, the team should be able to that
+their system would meet some of the constraints.
+
+Students may also make the counter argument for a constraint. For
+example, design team may consider a constraint category, and determine
+that it is not applicable. If a clear rationale is given, the team could
+document that. If a project has virtually no constraints, then must
+question whether or not it is an acceptable project.
+
+\emph{\textbf{Standards}}. We have students identify standards that
+may apply to their project. Of course, they may not know all of
+the applicable standards until they get to the design phase.
+However, realistic decisions can be made on the standards that will
+apply to the project. Some of them may be very beneficial to the design
+team. For example, following design standards, such as the IEEE software
+design standards can be of great help to the teams.
+
+\emph{\textbf{Checklist.}} We expect our student teams to also complete
+the self-assessment checklist for requirements provided in Table 3.7.
+
+\emph{\textbf{Oral Presentations.}} After the students complete the
+Requirements Specification, we have them make a presentation to a
+faculty group. This presentation covers the Problem Statement material
+from Chapter 2, the Requirements, Constraints, and Standards. The idea
+is for the faculty to make accept/reject the project idea, or more
+likely, request changes/corrections.
+
+We also pick one or two teams to present theirs to the entire class
+prior to the faculty presentations. This way students can
+critique a presentation before hand.
+
+\emph{\textbf{Note:} The \textul{Requirements Specification} is an
+important document in the design. Remember}
+
+\emph{that requirement specifications are ``living'' and evolving
+documents. Thus it is a good}
+
+\emph{idea to provide design teams with the opportunity to resubmit and
+revise the document.}
+
+\emph{We use a two-step submission process. The first submission is
+worth 30\% of the}
+
+\emph{specification grade. This is reviewed and resubmitted to the team,
+who resubmits, and}
+
+\emph{the second submission constitutes the remaining 70\%. Of course,
+if the team gets it right}
+
+\emph{on the first submission, there is no need to resubmit.}
+
+\emph{\textbf{Constraints}}. We have student teams identify at least
+five of eight constraints in their specification. They should be
+realistic. We don't require that they test each one in the final
+
+realization, but ensure that they are considered (this depends upon the
+complexity of the problem). However, the team should be able to that
+their system would meet some of the constraints.
+
+Students may also make the counter argument for a constraint. For
+example, design team may consider a constraint category, and determine
+that it is not applicable. If a clear rationale is given, the team could
+document that. If a project has virtually no constraints, then must
+question whether or not it is an acceptable project.
+
+\emph{\textbf{Standards}}. We have students identify standards that
+may apply to their project. Of course, they may not know all of
+the applicable standards until they get to the design phase.
+However, realistic decisions can be made on the standards that will
+apply to the project. Some of them may be very beneficial to the design
+team. For example, following design standards, such as the IEEE software
+design standards can be of great help to the teams.
+
+\emph{\textbf{Checklist.}} We expect our student teams to also complete
+the self-assessment checklist for requirements provided in Table 3.7.
+
+\emph{\textbf{Oral Presentations.}} After the students complete the
+Requirements Specification, we have them make a presentation to a
+faculty group. This presentation covers the Problem Statement material
+from Chapter 2, the Requirements, Constraints, and Standards. The idea
+is for the faculty to make accept/reject the project idea, or more
+likely, request changes/corrections.
+
+We also pick one or two teams to present theirs to the entire class
+\textul{prior} to the faculty presentations. This way students can
+critique a presentation beforehand.
+
+\end{onlysolution}
+
 \end{enumerate}
