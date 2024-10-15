@@ -1,5 +1,6 @@
 \section{Problems}
 \label{section:reqSpecProblems}
+\graphicspath{ {./chapter03/FigSolutions} }
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -8,8 +9,8 @@
   
   
 \item
-  Identify the three levels of standards usage and what is meant by each
-  one.
+  Identify the three levels of standards usage and what is meant by each one.
+  
  \begin{onlysolution}
  \textbf{[R]}
  \itshape
@@ -37,7 +38,8 @@ order to further develop and modify its predecessor.
   The TV remote control will be easy to use.
   
 \begin{onlysolution}
-\textit
+\textbf{[A]}
+ \itshape
  Abstractness: \textbf{Yes} -- doesn't give details on implementation\\
 Unambiguous: \textbf{Maybe} -- there is not a clear definition of
 easy-to-use. It could be possible to develop some metrics for easy to
@@ -50,8 +52,10 @@ verifiable.
   
 \item
   The robot will identify objects in its path using ultrasonic sensors.
+  
 \begin{onlysolution}
-\textit
+\textbf{[A]}
+ \itshape
 Abstractness: \textbf{No} -- provides a solution to the problem (ultrasonic sensors)\\
 Unambiguous: \textbf{No} -- it will identify objects in its path, is
 somewhat clear. However, could be better defined if its path were
@@ -64,7 +68,10 @@ path within 3 feet of the robot.''
 \item
   The car audio amplifier will be encased in aluminum and will operate
   in the automobile environment.
+  
   \begin{onlysolution}
+  \textbf{[A]}
+   \itshape
 Abstractness: \textbf{No} -- provides a solution to the problem (aluminum case)\\
 Unambiguous: \textbf{No} -- it will operate in an automobile is not
 quite clear. Where in the automobile and what size should it be?\\
@@ -77,7 +84,10 @@ automobile passgenger compartment and not have a size that exceeds
 \item
   The audio amplifier will have a total harmonic distortion that is less
   than 2\%.
+  
   \begin{onlysolution}
+  \textbf{[A]}
+   \itshape
 Abstractness: \textbf{Yes} -- doesn't give details on implementation \\
 Unambiguous: \textbf{Yes} -- THD \textless{} 2\%  \\
 Verifiable: \textbf{Yes}
@@ -86,7 +96,10 @@ Verifiable: \textbf{Yes}
 \item
   The robot will be able to move at speed of 1 foot/sec in any
   direction.
+  
   \begin{onlysolution}
+  \textbf{[A]}
+   \itshape
 Abstractness: \textbf{Yes} -- doesn't give details on implementation \\
 Unambiguous: \textbf{No} -- provides two requirements in one statement \\
 Verifiable: \textbf{Yes} \\
@@ -97,7 +110,10 @@ Verifiable: \textbf{Yes} \\
 \item
   The system will employ smart power monitoring technology to achieve
   ultra-low power consumption.
+  
   \begin{onlysolution}
+  \textbf{[A]}
+   \itshape
 Abstractness: \textbf{No} -- provides a solution to the problem (smart power)\\
 Unambiguous: \textbf{Yes} -- it will achieve ultra-low power consumption \\
 Verifiable: \textbf{No} -- there is no exact target value on the power \\
@@ -106,7 +122,10 @@ Verifiable: \textbf{No} -- there is no exact target value on the power \\
 
 \item
   The system shall be easy to use by a 12 year old.
+  
   \begin{onlysolution}
+  \textbf{[A]}
+   \itshape
 Abstractness: \textbf{Yes} -- doesn't give details on implementation\\
 Unambiguous: \textbf{Maybe} -- a 12 year old can use this device is
 clear, but as we saw in an earlier problem it is hard to determine ease
@@ -116,7 +135,10 @@ Verifiable: \textbf{Yes}\\
 
 \item
   The robot must remain operational for 50 years.
+  
   \begin{onlysolution}
+  \textbf{[A]}
+   \itshape
 Abstractness: \textbf{Yes} -- doesn't give details on implementation\\
 Unambiguous: \textbf{No} -- Failure is a probability-based concept.  A single 
 robot always a non-zero chance of failure over an extended periodn of time.\\
@@ -130,10 +152,12 @@ able to perform this test.\\
     Provide three example engineering requirements that are technically
     verifiable, but not realistic.
     
-    
   \item
     Describe the difference between \emph{verification} and  \emph{validation}.
+    
 \begin{onlysolution}
+ \textbf{[R]}
+ \itshape
 Validation is the process of determining if the requirements meet the
 needs of the end-user. This answer the question -- are we building the
 right product? Verification is the process of measuring or demonstrating
@@ -149,7 +173,10 @@ Validation is typically harder to determine.
     
   \item
     Explain how \emph{validation} is performed for a Requirements Specification.
+    
 \begin{onlysolution}
+  \textbf{[R]}
+   \itshape
 Validation can be performed by being able to answer the following
 questions affirmatively:
 
@@ -185,8 +212,10 @@ Specification should not be self-contradictory.
     need to select the target values, but should identify the measures
     and units. Present the requirements in a table format as in 
     Table~\ref{table:audioRequireSpec}.
+    
  \begin{onlysolution}
- 
+   \textbf{[A]}
+   \itshape
  \textbf{Marketing Requirements}
 \begin{itemize}
 \item Should be lightweight
@@ -200,7 +229,7 @@ Specification should not be self-contradictory.
 \item Allow multiple users.
 \end{itemize} 
 
-\begin{tabular}{l|l}
+\begin{tabular}{m{6cm}|m{6cm}}
 Engineering Requirements & Notes \\ \hline
 
 %\multicolumn{2}{l}{Performance} \\ \hline
@@ -229,7 +258,7 @@ E6.Must be able to withstand \_\_\_ drop from 6 feet and still operate
 motor (not brush head). &
 User could drop it. 6 feet is typical person height.		\\ \hline
 
-E7.Temperature range of \_\_\_ to \_\_\_\_ degrees Celsius.
+E7.Temperature range of \_\_\_ to \_\_\_\_ degrees Celsius.		\\ \hline
 
 %\multicolumn{2}{l}{Energy} \\ \hline
 
@@ -259,16 +288,72 @@ Cost is virtually always an issue.			\\ \hline
   \item
     Develop a marketing-engineering tradeoff matrix for the device
     selected in Problem~\ref{list:identifyMarkEngr}.
+    
+
+    
  \begin{onlysolution}
- 
+   \textbf{[A]}
+   \itshape
+
+\begin{tabular}{l|l|l|l|l|l|l|l|l|l|l|l|l|} 
+\multicolumn{2}{l|}{} & 
+		 		\rotatebox[origin=c]{90}{E1. Torque} &
+  				\rotatebox[origin=c]{90}{E2. Brush Speed}  &
+  				\rotatebox[origin=c]{90}{E3. Reliability}  &
+  				\rotatebox[origin=c]{90}{E4. Noise}  &
+  				\rotatebox[origin=c]{90}{E5. Humidity}  &
+  				\rotatebox[origin=c]{90}{E6. Shock Res.}  &
+  				\rotatebox[origin=c]{90}{E7. Temp. }  &
+  				\rotatebox[origin=c]{90}{E8. Battery Life }  &
+  				\rotatebox[origin=c]{90}{E9. Weight }  &
+  				\rotatebox[origin=c]{90}{E10. Size }  &
+  				\rotatebox[origin=c]{90}{E11. Cost }  \\ \hline
+  				
+\multicolumn{2}{l|}{}              &  +   & + & +   &  -   & + & +  & + & + & - & -  & -     \\ \hline
+M1. Lightweight 		& - &     $\downarrow$ & 	&     $\downarrow$ &    $\downarrow$  & &     $\uparrow$ & & $\downarrow$ &$\uparrow$   & $\uparrow$  &      $\downarrow$ \\ \hline
+M2. Cleans Well		& + &     &   $\uparrow$ &     &     & &   & & & $\downarrow$  & $\downarrow$ &    \\ \hline
+M3. Long Life		& +&     & 	$\downarrow$ & $\downarrow$     &     & &  $\uparrow$  &$\uparrow$  & $\uparrow$ & $\downarrow$  & &    \\ \hline
+M4. Electric shock		& + &     & 	&     &     &  $\uparrow$ &   & & &  & &    \\ \hline
+M5. Easy to hold		& + &  $\downarrow$   & 	&     &     & & $\downarrow$  & & $\downarrow$ & $\uparrow$ &$\uparrow$ &  $\downarrow$  \\ \hline
+M6. Quiet			& +&  $\downarrow$     &  $\downarrow$ 	&     & $\uparrow$     & &   & & &  &  $\downarrow$  &  $\downarrow$    \\ \hline
+M7. Durable		& + &     & 	& $\uparrow$     &     &$\uparrow$  & $\uparrow$   &$\uparrow$  & &  & &  $\downarrow$   \\ \hline
+\end{tabular}
+
  \end{onlysolution}
     
  %Question 3.10 Use PDF 3.8
   \item
     Develop an engineering tradeoff matrix for the device selected in
     Problem~\ref{list:identifyMarkEngr}.
+    
  \begin{onlysolution}
- 
+    \textbf{[A]}
+   \itshape
+
+\begin{tabular}{l|l|l|l|l|l|l|l|l|l|l|l|l|} 
+\multicolumn{2}{l|}{} & 
+				\rotatebox[origin=c]{90}{E1. Torque} &
+  				\rotatebox[origin=c]{90}{E2. Brush Speed}  &
+  				\rotatebox[origin=c]{90}{E3. Reliability}  &
+  				\rotatebox[origin=c]{90}{E4. Noise Level}  &
+  				\rotatebox[origin=c]{90}{E5. Humidity}  &
+  				\rotatebox[origin=c]{90}{E6. Phys. Shock }  &
+  				\rotatebox[origin=c]{90}{E7. Temp. }  &
+  				\rotatebox[origin=c]{90}{E8. Battery Life }  &
+  				\rotatebox[origin=c]{90}{E9. Weight }  &
+  				\rotatebox[origin=c]{90}{E10. Size }  &
+  				\rotatebox[origin=c]{90}{E11. Cost }  \\ \hline
+\multicolumn{2}{l|}{}       &  +   & + & +   &  -   & + & +  & + & + & - & -  & -     \\ \hline  				
+E1. Torque 		& + &  \cellcolor{lightgray}&  $\downarrow$  & & & & & &  $\downarrow$ & $\downarrow$  & $\downarrow$  &  $\downarrow$  \\ \hline
+E2. Brush Speed	& + &\cellcolor{lightgray} & \cellcolor{lightgray}& &$\downarrow$  & & & & $\downarrow$ &  && $\downarrow$\\ \hline
+E3.  Reliability	& +&   \cellcolor{lightgray}& \cellcolor{lightgray}& \cellcolor{lightgray}& & $\uparrow$& $\uparrow$& $\uparrow$& & $\downarrow$ &$\downarrow$ &$\downarrow$\\ \hline
+E4. Noise Level	& - &  \cellcolor{lightgray}  & \cellcolor{lightgray}& \cellcolor{lightgray}& \cellcolor{lightgray}& & & & & $\downarrow$ & $\downarrow$&$\downarrow$ \\ \hline
+E5. Humidity	& + &  \cellcolor{lightgray}& \cellcolor{lightgray}&\cellcolor{lightgray} & \cellcolor{lightgray}& \cellcolor{lightgray}& & & & $\downarrow$ &   & \\ \hline
+E6. Phys. Shock	& +&  \cellcolor{lightgray}& \cellcolor{lightgray}&\cellcolor{lightgray} &\cellcolor{lightgray} &\cellcolor{lightgray} & \cellcolor{lightgray}& & & $\downarrow$ & $\downarrow$  & \\ \hline
+E7. Temerature	& + & \cellcolor{lightgray}  & \cellcolor{lightgray}&\cellcolor{lightgray} & \cellcolor{lightgray}& \cellcolor{lightgray}& \cellcolor{lightgray}& \cellcolor{lightgray}& \cellcolor{lightgray}& &   & $\downarrow$\\ \hline
+E8. Battery Life	& + &  \cellcolor{lightgray} & \cellcolor{lightgray}&\cellcolor{lightgray} &\cellcolor{lightgray} & \cellcolor{lightgray}& \cellcolor{lightgray}&\cellcolor{lightgray} & \cellcolor{lightgray}& $\downarrow$&  $\downarrow$ & $\downarrow$\\ \hline
+E9. Weight		& - &   \cellcolor{lightgray} &\cellcolor{lightgray}&\cellcolor{lightgray}& \cellcolor{lightgray}& \cellcolor{lightgray}& \cellcolor{lightgray}& \cellcolor{lightgray}& \cellcolor{lightgray}&  \cellcolor{lightgray}& $\downarrow$  & $\downarrow$\\ \hline
+\end{tabular}
  \end{onlysolution}
 
  %Question 3.11 Use PDF 3.11
@@ -278,7 +363,8 @@ Cost is virtually always an issue.			\\ \hline
     apply to the design.
     
 \begin{onlysolution}
-
+    \textbf{[A]}
+   \itshape
 \textbf{Standards for the Electric Toothbrush}
 Likely standards for this system include:\\
 UL (Underwriters Laboratory) and CE (Common European) safety standards.
@@ -286,7 +372,6 @@ This is very common for consumer devices.\\
 ADA -- American Dental Association. This would likely be a series of
 ``standard'' tests before branding ADA approval; therefore, showing that
 this system provides sufficient dental treatment.
-
 \end{onlysolution}    
 
     
@@ -300,28 +385,18 @@ this system provides sufficient dental treatment.
     
     
 \begin{onlysolution}
-    
-    \emph{\textbf{Note:} The \textul{Requirements Specification} is an
-important document in the design. Remember}
+    \textbf{[P]}
+   \itshape    
+   
+\textbf{Note:} The \textul{Requirements Specification} is an
+important document in the design. Remember that requirement specifications are ``living'' and evolving
+documents. Thus it is a good idea to provide design teams with the opportunity to resubmit and
+revise the document. We use a two-step submission process. The first submission is
+worth 30\% of the specification grade. This is reviewed and resubmitted to the team,
+who resubmits, and the second submission constitutes the remaining 70\%. Of course,
+if the team gets it right on the first submission, there is no need to resubmit.
 
-\emph{that requirement specifications are ``living'' and evolving
-documents. Thus it is a good}
-
-\emph{idea to provide design teams with the opportunity to resubmit and
-revise the document.}
-
-\emph{We use a two-step submission process. The first submission is
-worth 30\% of the}
-
-\emph{specification grade. This is reviewed and resubmitted to the team,
-who resubmits, and}
-
-\emph{the second submission constitutes the remaining 70\%. Of course,
-if the team gets it right}
-
-\emph{on the first submission, there is no need to resubmit.}
-
-\emph{\textbf{Constraints}}. We have student teams identify at least
+\textbf{Constraints}. We have student teams identify at least
 five of eight constraints in their specification. They should be
 realistic. We don't require that they test each one in the final
 
@@ -335,7 +410,7 @@ that it is not applicable. If a clear rationale is given, the team could
 document that. If a project has virtually no constraints, then must
 question whether or not it is an acceptable project.
 
-\emph{\textbf{Standards}}. We have students identify standards that
+\textbf{Standards}. We have students identify standards that
 may apply to their project. Of course, they may not know all of
 the applicable standards until they get to the design phase.
 However, realistic decisions can be made on the standards that will
@@ -343,10 +418,10 @@ apply to the project. Some of them may be very beneficial to the design
 team. For example, following design standards, such as the IEEE software
 design standards can be of great help to the teams.
 
-\emph{\textbf{Checklist.}} We expect our student teams to also complete
+\textbf{Checklist.} We expect our student teams to also complete
 the self-assessment checklist for requirements provided in Table 3.7.
 
-\emph{\textbf{Oral Presentations.}} After the students complete the
+\textbf{Oral Presentations.} After the students complete the
 Requirements Specification, we have them make a presentation to a
 faculty group. This presentation covers the Problem Statement material
 from Chapter 2, the Requirements, Constraints, and Standards. The idea
@@ -356,62 +431,6 @@ likely, request changes/corrections.
 We also pick one or two teams to present theirs to the entire class
 prior to the faculty presentations. This way students can
 critique a presentation before hand.
-
-\emph{\textbf{Note:} The \textul{Requirements Specification} is an
-important document in the design. Remember}
-
-\emph{that requirement specifications are ``living'' and evolving
-documents. Thus it is a good}
-
-\emph{idea to provide design teams with the opportunity to resubmit and
-revise the document.}
-
-\emph{We use a two-step submission process. The first submission is
-worth 30\% of the}
-
-\emph{specification grade. This is reviewed and resubmitted to the team,
-who resubmits, and}
-
-\emph{the second submission constitutes the remaining 70\%. Of course,
-if the team gets it right}
-
-\emph{on the first submission, there is no need to resubmit.}
-
-\emph{\textbf{Constraints}}. We have student teams identify at least
-five of eight constraints in their specification. They should be
-realistic. We don't require that they test each one in the final
-
-realization, but ensure that they are considered (this depends upon the
-complexity of the problem). However, the team should be able to that
-their system would meet some of the constraints.
-
-Students may also make the counter argument for a constraint. For
-example, design team may consider a constraint category, and determine
-that it is not applicable. If a clear rationale is given, the team could
-document that. If a project has virtually no constraints, then must
-question whether or not it is an acceptable project.
-
-\emph{\textbf{Standards}}. We have students identify standards that
-may apply to their project. Of course, they may not know all of
-the applicable standards until they get to the design phase.
-However, realistic decisions can be made on the standards that will
-apply to the project. Some of them may be very beneficial to the design
-team. For example, following design standards, such as the IEEE software
-design standards can be of great help to the teams.
-
-\emph{\textbf{Checklist.}} We expect our student teams to also complete
-the self-assessment checklist for requirements provided in Table 3.7.
-
-\emph{\textbf{Oral Presentations.}} After the students complete the
-Requirements Specification, we have them make a presentation to a
-faculty group. This presentation covers the Problem Statement material
-from Chapter 2, the Requirements, Constraints, and Standards. The idea
-is for the faculty to make accept/reject the project idea, or more
-likely, request changes/corrections.
-
-We also pick one or two teams to present theirs to the entire class
-\textul{prior} to the faculty presentations. This way students can
-critique a presentation beforehand.
 
 \end{onlysolution}
 
