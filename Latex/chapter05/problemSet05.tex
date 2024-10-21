@@ -1,5 +1,6 @@
 \section{Problems}
 \label{section:funcDecomProblems}
+\graphicspath{ {./chapter05/FigSolutions} }
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -52,7 +53,173 @@ The system must
     is fairly simple – the inputs are an audio signal, volume control, and 
     four frequency band knobs, and the output is a reconstructed audio signal.
 
-    ** Add figures / solution ** 
+\includegraphics[width=0.8\textwidth]{image1}
+
+\begin{tabular}{|l|m{10cm}|}
+\hline
+\emph{Module} & Audio Graphic Equalizer \\ \hline
+
+\emph{Inputs} & 
+\begin{itemize}
+\item Audio input signal: 1Vpp , 1000$\Omega$
+\item User volume control: variable control
+\item Frequency band knobs: 4 bands (31Hz, 250Hz, 2KHz, 16KHz) , variable control.
+\end{itemize} \\ \hline
+
+\emph{Outputs} & 
+\begin{itemize}
+\item
+  Audio output signal: \textul{?}V peak value.
+\end{itemize}  \\ \hline
+
+\emph{Functionality} & 
+Reconstructs the input audio signal by amplifying and/or deamplifying each
+of the 4 frequency bands to produce a 40W maximum output signal. The
+volume amplification and frequency knobs should have variable user
+control.
+level. \\ \hline
+\end{tabular}
+
+
+
+Not all values can be known on the first pass through the design. However,
+knowing the maximum power allows the maximum output voltage to be
+computed as $V_{peak} = 8\Omega*40W = 17.9V$.
+
+\textbf{Level 1}
+
+\includegraphics[width=0.9\textwidth]{image3}
+
+There are several unknowns at this time, and that will be apparent as we
+investigate the individual modules. The functional requirements for the Level 1
+architecture are as detailed as possible, starting with the buffer amplifier.
+
+
+\begin{tabular}{|l|m{10cm}|}
+\hline
+\emph{Module} &Buffer Amplifier\\ \hline
+
+\emph{Inputs} & 
+\begin{itemize}
+\item Audio input signal: 1Vpp , 1000$\Omega$
+\end{itemize} \\ \hline
+
+\emph{Outputs} & 
+\begin{itemize}
+\item Audio output signal: 1Vpp , 1000$\Omega$
+\end{itemize}  \\ \hline
+
+\emph{Functionality} & 
+Buffer the input signal and provide unity voltage gain. it should have an
+input resistance of > 100k$\Omega$ and an output resistance < 100$\Omega$. \\ \hline
+\end{tabular}
+
+The input resistance is an educated guess, but is a realistically high value that will
+minimize any voltage losses with the source resistance. The output resistance is
+an educated guess, based on knowledge of what is achievable with the technology
+(bottom-up knowledge). These resistance values are later refined and adjusted,
+taking into account the input and output resistances for all stages.
+
+\begin{tabular}{|l|m{10cm}|}
+\hline
+\emph{Module} & Bandpass Filters (0-31Hz, 31-250Hz, 250-2KHz, 2kHz-16KHz)\\ \hline
+
+\emph{Inputs} & 
+\begin{itemize}
+\item Buffered input signal: 1Vpp , 1000$\Omega$
+\end{itemize} \\ \hline
+
+\emph{Outputs} & 
+\begin{itemize}
+\item Audio output signal: 17.9V peak value
+\end{itemize}  \\ \hline
+
+\emph{Functionality} & 
+This filters out each of the desired frequency ranges so that they may be
+adjusted independently. It should have an input resistance of > 1k$\Omega$ 
+and an output resistance < 100$\Omega$. \\ \hline
+\end{tabular}
+
+
+
+\begin{tabular}{|l|m{10cm}|}
+\hline
+\emph{Module} & Frequency Band Amplifiers\\ \hline
+\emph{Inputs} & 
+\begin{itemize}
+\item Filtered audio signals: 1Vpp , 1000$\Omega$
+\item Frequency band knobs: 4 bands (31Hz, 250Hz, 2KHz, 16KHz) , variable control.
+\end{itemize} \\ \hline
+\emph{Outputs} & 
+\begin{itemize}
+\item Audio output signal: 17.9V peak value
+\end{itemize}  \\ \hline
+\emph{Functionality} & 
+Functionality Provide an adjustable voltage gain, between 1 and 35, for each of the 4
+frequency bands, respectively. It should have an input resistance of > 10k$\Omega$ 
+and an output resistance < 100$\Omega$. \\ \hline
+\end{tabular}
+
+
+\begin{tabular}{|l|m{10cm}|}
+\hline
+\emph{Module} & Signal Summation\\ \hline
+\emph{Inputs} & 
+\begin{itemize}
+\item  Audio input signals (31Hz, 250Hz, 2KHz, 16KHz): 1Vpp , 1000$\Omega$
+\end{itemize} \\ \hline
+\emph{Outputs} &  
+\begin{itemize}
+\item Audio output signal: 17.9V peak value
+\end{itemize}  \\ \hline
+\emph{Functionality} & 
+Functionality This recombines each of the 4 frequencies that have be independently
+adjusted into one complete signal.  It should have an input resistance of > 1k$\Omega$ 
+and an output resistance < 100$\Omega$. \\ \hline
+\end{tabular}
+
+
+\begin{tabular}{|l|m{10cm}|}
+\hline
+\emph{Module} & High Gain Amplifier\\ \hline
+\emph{Inputs} & 
+\begin{itemize}
+\item - Audio input signal: 1Vpp , 1000$\Omega$
+\item User volume control: variable control
+\end{itemize} \\ \hline
+\emph{Outputs} &  
+\begin{itemize}
+\item Audio output signal: 17.9V peak value
+\end{itemize}  \\ \hline
+\emph{Functionality} & 
+ It should have an input resistance of > 10k$\Omega$ 
+and an output resistance < 100$\Omega$. \\ \hline
+\end{tabular}
+
+\begin{tabular}{|l|m{10cm}|}
+\hline
+\emph{Module} & Power Output Stage\\ \hline
+\emph{Inputs} & 
+\begin{itemize}
+\item - Audio input signal: : 17.9V peak
+\end{itemize} \\ \hline
+\emph{Outputs} &  
+\begin{itemize}
+\item Audio output signal: 17.9V peak at up to \textul{???}A.
+\end{itemize}  \\ \hline
+\emph{Functionality} & 
+Functionality Provide unity voltage gain with output current as required by a resistive load
+of up to \textul{???}A.  It should have an input resistance of > 1k$\Omega$ 
+and an output resistance < 100$\Omega$. \\ \hline
+\end{tabular}
+
+
+
+Note: there are other architectures that can work here as well. For example, the high
+gain amplifier and power output stage can be combined into a single amplifier. In
+addition, the filter and associated amplifiers might also be combined together,
+depending upon the filter topology used.
+
   \end{onlysolution}
   
 \item
@@ -81,7 +248,9 @@ The system must
 
   The overall goal is to convert a sensed speed to a digital speed reading 
   (i.e. speedometer).
-  ** Add figures/Solution **
+
+%\includegraphics[width=0.8\textwidth]{image4}
+
 \end{onlysolution}
 
   \item
@@ -114,7 +283,7 @@ void Print(int a, int b) {
 \end{verbatim}
 
 \begin{onlysolution}
-  \textbf{[R]}
+  \textbf{[A]}
   \itshape
   ** add figure **
   \begin{center}
