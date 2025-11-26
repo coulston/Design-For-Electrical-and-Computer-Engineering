@@ -1,0 +1,49 @@
+# This file was written by Gemini.
+#
+# Core LaTeX/pdfLaTeX auxiliary files
+*.aux
+*.log
+*.lof
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.synctex.gz
+*.dvi
+*.ps
+# Ignore; produced by building the book/homework solutions.
+*.pdf 
+
+# BibTeX/BibLaTeX files
+*.bbl
+*.blg
+*.acn
+*.acr
+*.alg
+*.glg
+*.gls
+*.ist
+
+# Indexing files
+*.idx
+*.ind
+*.ilg
+
+# Other common auxiliary files
+*.maf
+*.mtc
+*.mtc1
+*.nav
+*.snm
+*.vrb
+*.gz
+
+# Editor/OS specific files (adjust as needed)
+.DS_Store # macOS
+*~ # Emacs/Vim backup files
+\#*# # Emacs temporary files
+*.bak # Generic backup files
+*.swp # Vim swap files
