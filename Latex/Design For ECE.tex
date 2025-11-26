@@ -7,7 +7,20 @@
 \documentclass[letterpaper, 10pt]{memoir}
 \chapterstyle{ger}
 \settrims{0pt}{0pt}
-\semiisopage[9]		% [N] is spine margin is 1/Nth pf page 
+% Since this is a PDF, make verso and recto margins the same.
+\setlrmarginsandblock{1in}{1in}{*}
+\checkandfixthelayout
+%\semiisopage[9]		% [N] is spine margin is 1/Nth pf page 
+
+% Since this is a PDF, center page numbers, instead of placing them on 
+%alternating sides.
+\pagestyle{plain}
+
+% Center all figures by default; copied from 
+% https://tex.stackexchange.com/a/2652.
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
 
 % To keep the book.tex file clean, I pulled all the formating and package 
 % includes into the preamble.tex file
@@ -26,7 +39,7 @@
 
 
 \include{copyright}
-%\include{aboutAuthors}
+\include{aboutAuthors}
 
 \tableofcontents
 \include{preface}
